@@ -278,7 +278,7 @@ ${steps}
       </div>
       <div>
         <h2>Status</h2>
-        <p>${pad(TOOLS.length)} tools · Last updated ${esc(LOG_UPDATED)}</p>
+        <p>Last updated ${esc(LOG_UPDATED)}</p>
       </div>
     </footer>
 
