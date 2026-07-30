@@ -6,8 +6,11 @@
    ============================================================ */
 
 const SITE = {
-  /* ---- CHANGE THIS ONE LINE AFTER YOU DEPLOY ---- */
-  url: "https://ai-resources.vercel.app",
+  /* Live canonical URL. Change this and re-run `node generate-seo.mjs`. */
+  url: "https://xavierairesources.netlify.app",
+
+  /* First published — feeds datePublished in structured data. */
+  published: "2026-07-30",
 
   name: "AI Resources",
   tagline: "AI for the rest of us",

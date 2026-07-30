@@ -82,7 +82,7 @@ function toolNode(t) {
     "@type": "SoftwareApplication",
     "@id": `${toolUrl(t)}#tool`,
     name: t.name,
-    description: t.tagline,
+    description: t.blurb || t.tagline,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Cross-platform",
     url: t.repo,
@@ -104,7 +104,7 @@ function detailPage(t, i) {
   const owner = t.maker || repoOwner(t.repo);
   const url = toolUrl(t);
   const title = `${t.name} — ${t.tagline} | ${SITE.name}`;
-  const desc = `${t.tagline}. ${t.why}`.slice(0, 300);
+  const desc = (t.blurb || `${t.tagline}. ${t.why}`).slice(0, 300);
 
   /* Q&A shaped so answer engines can quote a whole answer verbatim */
   const faq = {
@@ -140,6 +140,7 @@ function detailPage(t, i) {
         about: { "@id": `${url}#tool` },
         reviewedBy: { "@id": `${BASE}/#curator` },
         primaryImageOfPage: `${BASE}/og-image.png`,
+        datePublished: SITE.published,
         dateModified: isoDate(LOG_UPDATED),
       },
       {
@@ -330,6 +331,7 @@ const indexGraph = {
       isPartOf: { "@id": `${BASE}/#website` },
       about: { "@id": `${BASE}/#curator` },
       primaryImageOfPage: `${BASE}/og-image.png`,
+      datePublished: SITE.published,
       dateModified: isoDate(LOG_UPDATED),
     },
     {
@@ -351,6 +353,26 @@ const indexGraph = {
 index = index.replace(
   /(<!-- JSONLD:START -->)[\s\S]*?(<!-- JSONLD:END -->)/,
   `$1\n  ${jsonLd(indexGraph)}\n  $2`
+);
+
+/* Title and descriptions carry the tool count, so the generator owns them —
+   hand-editing these is how the count went stale after tools 11 and 12. */
+const indexTitle = `${SITE.name} — ${TOOLS.length} AI tools I use daily | ${SITE.curator.name}`;
+const indexDesc =
+  `${SITE.tagline}. The ${TOOLS.length} AI tools ${SITE.curator.name} uses every day to ` +
+  `design, build and write: what each one does, when it is worth using, and how to set it up, ` +
+  `explained without jargon.`;
+index = index.replace(
+  /(<!-- META:START -->)[\s\S]*?(<!-- META:END -->)/,
+  `$1
+  <title>${esc(indexTitle)}</title>
+  <meta name="description" content="${esc(indexDesc)}">
+  <meta property="og:title" content="${esc(indexTitle)}">
+  <meta property="og:description" content="${esc(indexDesc)}">
+  <link rel="canonical" href="${BASE}/">
+  <meta property="og:url" content="${BASE}/">
+  <meta property="og:image" content="${BASE}/og-image.png">
+  $2`
 );
 
 writeFileSync(join(ROOT, "index.html"), index);
@@ -422,13 +444,23 @@ Sitemap: ${BASE}/sitemap.xml
 );
 console.log("✓ robots.txt");
 
+/* ---------- 4b. keep the legacy redirect shim's canonical honest ---------- */
+
+const shimPath = join(ROOT, "tool.html");
+let shim = read("tool.html").replace(
+  /<link rel="canonical" href="[^"]*">/,
+  `<link rel="canonical" href="${BASE}/">`
+);
+writeFileSync(shimPath, shim);
+console.log("✓ tool.html — redirect shim canonical");
+
 /* ---------- 5. llms.txt — the whole log, for answer engines ---------- */
 
 const llms = `# ${SITE.name}
 
 > ${SITE.tagline}. ${SITE.description}
 
-Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.worksFor}, AI & Design Leader.
+Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.worksFor}.
 ${SITE.curator.summary}
 
 - Site: ${BASE}/

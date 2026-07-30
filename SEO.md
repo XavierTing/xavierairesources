@@ -6,17 +6,21 @@ What is already built into the site, and what only you can do (accounts, DNS, mo
 
 ## 0. Do this first — one line, then one command
 
-The site currently declares itself as `https://ai-resources.vercel.app`. After you
-deploy, put the real URL in [`site.js`](site.js) and re-run the generator:
+The site is live at **https://xavierairesources.netlify.app** and `site.js` now
+declares that. If the domain ever changes, edit `SITE.url` and re-run the generator:
 
 ```bash
 # 1. edit SITE.url in site.js
 node generate-seo.mjs
 ```
 
-That rewrites canonical tags, `og:url`, `sitemap.xml`, `robots.txt`, `llms.txt`
-and every JSON-LD reference. **A wrong canonical URL actively suppresses ranking**,
-so this is not optional.
+That rewrites every canonical tag, `og:url`, `og:image`, the `sitemap.xml`,
+`robots.txt`, `llms.txt` and all JSON-LD references. **A wrong canonical URL
+actively suppresses ranking** — the site shipped for a day pointing at a dead
+Vercel URL, which is exactly how pages get dropped from an index.
+
+The generator now owns every URL-bearing tag and the tool count in the index
+title, so neither can go stale by hand-editing again.
 
 Re-run the same command any time you edit `tools.js` — it keeps the static pages,
 sitemap and llms.txt in sync with your curation.
@@ -26,7 +30,7 @@ sitemap and llms.txt in sync with your curation.
 ## 1. What was built (SEO)
 
 **The structural fix.** Every tool now has its own real, static, crawlable page at
-`tools/<slug>.html` — ten indexable URLs instead of one JavaScript-rendered page.
+`tools/<slug>.html` — twelve indexable URLs instead of one JavaScript-rendered page.
 The index card grid also ships as real HTML. This matters because Google renders
 JavaScript slowly and most other crawlers don't render it at all.
 
@@ -35,16 +39,16 @@ JavaScript slowly and most other crawlers don't render it at all.
 
 | Item | Where |
 |---|---|
-| Unique `<title>` + meta description per page | all 11 pages |
-| `rel=canonical` on every page | all 11 pages |
-| Open Graph + Twitter card, absolute image URL | all 11 pages |
-| `twitter:creator` / `twitter:site` = `@xaviertingai` | all 11 pages |
-| `sitemap.xml` (11 URLs, lastmod, priority) | generated |
+| Unique `<title>` + meta description per page | all 13 pages |
+| `rel=canonical` on every page | all 13 pages |
+| Open Graph + Twitter card, absolute image URL | all 13 pages |
+| `twitter:creator` / `twitter:site` = `@xaviertingai` | all 13 pages |
+| `sitemap.xml` (13 URLs, lastmod, priority) | generated |
 | `robots.txt` with sitemap reference | generated |
 | Semantic headings — one `<h1>` per page | all pages |
 | `favicon.svg` in brand gold | root |
 
-**Titles are keyword-led, not brand-led** — "AI Resources — 10 AI tools I use
+**Titles are keyword-led, not brand-led** — "AI Resources — 12 AI tools I use
 daily | Xavier Ting" beats "AI Resources" because nobody searches your site name
 before they know it exists.
 
@@ -123,7 +127,8 @@ LinkedIn audience and a "follow me for weekly AI tips" promise.
 **Do these instead, in order:**
 
 1. **Google Search Console** — verify the domain, submit `sitemap.xml`. Free, no
-   site script, and the only way to see real queries. Do this the day you deploy.
+   site script, and the only way to see real queries. The site is live, so this is
+   the highest-value thing you can do today.
 2. **Bing Webmaster Tools** — same, and it feeds ChatGPT's search index.
 3. **Post it on LinkedIn and X yourself.** One post from you, with the
    `og-image.png` card, will outperform any ad budget you'd reasonably spend.
@@ -149,7 +154,7 @@ You chose privacy-friendly analytics, so the colophon now reads "no cookies, no
 ad tracking" — which stays true with either option below. Nothing is installed
 yet; pick one and add the single line before `</head>` in `index.html` **and** in
 the `detailPage` template inside `generate-seo.mjs` (then re-run the generator so
-all ten tool pages get it too).
+all twelve tool pages get it too).
 
 **Option A — Cloudflare Web Analytics** (free, unlimited)
 
@@ -190,8 +195,9 @@ Ads conversion tracking — if you ever want that, you'd need GA4 instead, and t
 
 - **After editing `tools.js`:** run `node generate-seo.mjs`. Skipping it leaves the
   static pages, sitemap and llms.txt stale — the tool would be invisible to search.
-- **`og-image.png` is a rendered PNG** and shows the tool count. Regenerate it when
-  the count changes.
+- **`og-image.png` is a rendered PNG** and shows the tool count and the portrait.
+  Regenerate it when either changes — it went stale at "10 TOOLS" with an old
+  portrait while the site said 12, and that card is what LinkedIn and X display.
 - **Don't add a second `<h1>`** to any page, and keep one canonical URL per tool.
 - **Never** fabricate ratings, review counts, or install numbers in structured
   data. Google penalises it, and the log's whole value is that it's honest.

@@ -33,4 +33,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://ai-resources.vercel.app/sitemap.xml
+Sitemap: https://xavierairesources.netlify.app/sitemap.xml

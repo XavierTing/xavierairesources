@@ -2,10 +2,10 @@
 
 > AI for the rest of us. The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.
 
-Curated by Xavier Ting, Vice President, Customer Experience Design at OCBC, AI & Design Leader.
+Curated by Xavier Ting, Vice President, Customer Experience Design at OCBC.
 AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.
 
-- Site: https://ai-resources.vercel.app/
+- Site: https://xavierairesources.netlify.app/
 - LinkedIn: https://www.linkedin.com/in/xavierting/
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
@@ -21,7 +21,7 @@ Every tool below is in the curator's daily use. Nobody paid to be on this list.
 - **Category:** Design
 - **Made by:** pbakaus
 - **Source:** https://github.com/pbakaus/impeccable
-- **Page:** https://ai-resources.vercel.app/tools/impeccable.html
+- **Page:** https://xavierairesources.netlify.app/tools/impeccable.html
 - **Install / run:** `npx impeccable install`
 
 **Why use Impeccable?**
@@ -44,7 +44,7 @@ Any time you are building a web page or an app with an AI assistant. Check it be
 - **Category:** Workflow
 - **Made by:** obra
 - **Source:** https://github.com/obra/superpowers
-- **Page:** https://ai-resources.vercel.app/tools/superpowers.html
+- **Page:** https://xavierairesources.netlify.app/tools/superpowers.html
 - **Install / run:** `claude plugin install superpowers@claude-plugins-official`
 
 **Why use Superpowers?**
@@ -67,7 +67,7 @@ Anything bigger than a quick fix. It is most useful on projects you are starting
 - **Category:** Workflow
 - **Made by:** github
 - **Source:** https://github.com/github/spec-kit
-- **Page:** https://ai-resources.vercel.app/tools/spec-kit.html
+- **Page:** https://xavierairesources.netlify.app/tools/spec-kit.html
 - **Install / run:** `uvx --from git+https://github.com/github/spec-kit.git specify init`
 
 **Why use Spec-Kit?**
@@ -90,7 +90,7 @@ Projects that run across several sessions, work you share with other people, and
 - **Category:** Agents & MCP
 - **Made by:** ChromeDevTools
 - **Source:** https://github.com/ChromeDevTools/chrome-devtools-mcp
-- **Page:** https://ai-resources.vercel.app/tools/chrome-devtools-mcp.html
+- **Page:** https://xavierairesources.netlify.app/tools/chrome-devtools-mcp.html
 - **Install / run:** `claude mcp add chrome-devtools npx chrome-devtools-mcp@latest`
 
 **Why use Chrome DevTools MCP?**
@@ -113,7 +113,7 @@ Fixing anything that shows up in a browser, making a slow page faster, and any t
 - **Category:** Agents & MCP
 - **Made by:** upstash
 - **Source:** https://github.com/upstash/context7
-- **Page:** https://ai-resources.vercel.app/tools/context7.html
+- **Page:** https://xavierairesources.netlify.app/tools/context7.html
 - **Install / run:** `claude mcp add context7 -- npx -y @upstash/context7-mcp`
 
 **Why use Context7?**
@@ -136,7 +136,7 @@ Working with anything that changes often, such as Next.js, Tailwind or LangChain
 - **Category:** Coding
 - **Made by:** yamadashy
 - **Source:** https://github.com/yamadashy/repomix
-- **Page:** https://ai-resources.vercel.app/tools/repomix.html
+- **Page:** https://xavierairesources.netlify.app/tools/repomix.html
 - **Install / run:** `npx repomix@latest`
 
 **Why use Repomix?**
@@ -159,7 +159,7 @@ Getting a second opinion from a different AI, having code reviewed by a model th
 - **Category:** Agents & MCP
 - **Made by:** Panniantong
 - **Source:** https://github.com/Panniantong/Agent-Reach
-- **Page:** https://ai-resources.vercel.app/tools/agent-reach.html
+- **Page:** https://xavierairesources.netlify.app/tools/agent-reach.html
 - **Install / run:** `Install Agent Reach: https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`
 
 **Why use Agent-Reach?**
@@ -182,7 +182,7 @@ Research where the assistant genuinely needs to read tweets, Reddit discussions 
 - **Category:** Knowledge
 - **Made by:** karpathy
 - **Source:** https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
-- **Page:** https://ai-resources.vercel.app/tools/llm-wiki.html
+- **Page:** https://xavierairesources.netlify.app/tools/llm-wiki.html
 
 **Why use LLM Wiki?**
 The usual way of giving an AI your documents has it search through them fresh for every question. It re-reads everything each time and builds up no understanding at all. Karpathy's approach has the model keep a set of plain text notes instead. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. You pay the reading cost once rather than on every question.
@@ -204,7 +204,7 @@ Building a personal knowledge base out of notes, articles and bookmarks, where y
 - **Category:** Writing
 - **Made by:** blader
 - **Source:** https://github.com/blader/humanizer
-- **Page:** https://ai-resources.vercel.app/tools/humanizer.html
+- **Page:** https://xavierairesources.netlify.app/tools/humanizer.html
 - **Install / run:** `npx skills add blader/humanizer --global`
 
 **Why use Humanizer?**
@@ -227,7 +227,7 @@ The last thing you do before anything goes public: posts, documentation, emails,
 - **Category:** Design
 - **Made by:** Figma
 - **Source:** https://developers.figma.com/docs/figma-mcp-server/
-- **Page:** https://ai-resources.vercel.app/tools/figma-mcp.html
+- **Page:** https://xavierairesources.netlify.app/tools/figma-mcp.html
 - **Install / run:** `claude mcp add --transport http figma https://mcp.figma.com/mcp`
 
 **Why use Figma MCP?**
@@ -250,7 +250,7 @@ Any build that starts from a design file, and any time the live product has drif
 - **Category:** Knowledge
 - **Made by:** kepano
 - **Source:** https://github.com/kepano/obsidian-skills
-- **Page:** https://ai-resources.vercel.app/tools/obsidian-skills.html
+- **Page:** https://xavierairesources.netlify.app/tools/obsidian-skills.html
 - **Install / run:** `npx skills add https://github.com/kepano/obsidian-skills`
 
 **Why use Obsidian Skills?**
@@ -273,7 +273,7 @@ Any time you want an assistant working inside your notes rather than in a chat w
 - **Category:** Workflow
 - **Made by:** Anthropic
 - **Source:** https://claude.com/plugins/ralph-loop
-- **Page:** https://ai-resources.vercel.app/tools/ralph-loop.html
+- **Page:** https://xavierairesources.netlify.app/tools/ralph-loop.html
 - **Install / run:** `claude plugin install ralph-loop@claude-plugins-official`
 
 **Why use Ralph Loop?**
@@ -302,4 +302,4 @@ Work where you can say plainly what finished looks like and something can check 
 
 ## Citation
 
-If you quote this list, please credit Xavier Ting (https://ai-resources.vercel.app/).
+If you quote this list, please credit Xavier Ting (https://xavierairesources.netlify.app/).
