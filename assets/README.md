@@ -3,24 +3,28 @@
 ## portrait.jpg — your profile picture
 
 The site loads exactly one image file for the portrait: **`portrait.jpg`**.
-It appears twice (hero byline at 68px, colophon at 44px) on both `index.html`
-and `tool.html`.
+It appears twice (hero byline at 68px, colophon at 44px) on `index.html` and on
+every page under `tools/`. It is also the `image` on the Person entry in the
+site's structured data.
 
-**To swap in your own photo:** save it over `assets/portrait.jpg`. Nothing else
-to edit — no code, no other files. Square, 640×640 or larger, JPG.
+**To swap in your own photo:** save it over `assets/portrait.jpg`. Square, JPG,
+300×300 or larger.
 
-The current file is a headshot crop of the portrait from www.xavierting.com,
-used as a stand-in.
+### The gold ring is part of the image, not the CSS
 
-### If your photo already has a gold ring drawn into it
+The current file has the gold ring drawn into the photo itself, so `.avatar` in
+`styles.css` carries no border and no padding. It sets `border-radius: 50%`,
+which clips the square to exactly the circle the ring sits on.
 
-The design adds the gold ring in CSS (a 2px `#e0bf91` border with 3px of
-padding), so supply a **plain photo without a ring** for the cleanest result.
-
-If your file already has a ring baked in, delete these two lines from the
-`.avatar` rule in `styles.css` to avoid a double ring:
+**If you supply a plain photo with no ring**, add these two lines back to the
+`.avatar` rule to get the ring from CSS instead:
 
 ```css
 border: 2px solid var(--accent);
 padding: 3px;
 ```
+
+Leave them out for a photo that already has a ring, or you get two.
+
+`.colophon .avatar` needs no changes either way. It sets width and height only
+and inherits the rest.

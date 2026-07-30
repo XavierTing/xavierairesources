@@ -218,13 +218,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .hero-byline a { font-weight: 500; }
 
+/* The gold ring is drawn into portrait.jpg itself, so the CSS border and
+   padding this rule used to carry are gone. Adding them back would read as a
+   double ring. See assets/README.md before swapping the photo. */
 .avatar {
   flex-shrink: 0;
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  border: 2px solid var(--accent);
-  padding: 3px;
   object-fit: cover;
   background: var(--bg-raise);
 }
@@ -286,7 +287,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 /* colophon portrait, smaller */
-.colophon .avatar { width: 44px; height: 44px; padding: 2px; border-width: 1px; }
+.colophon .avatar { width: 44px; height: 44px; }
 .colophon-who {
   display: flex;
   align-items: flex-start;
