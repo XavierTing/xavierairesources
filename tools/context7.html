@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Context7 — Current library docs, injected at generation time | AI Resources</title>
-  <meta name="description" content="Current library docs, injected at generation time. Models memorize last year's APIs and hallucinate the diff. Context7 pulls version-specific, up-to-date documentation straight into the prompt, so generated code compiles against the library you actually installed.">
+  <title>Context7 — Gives the AI today's documentation, not last year's | AI Resources</title>
+  <meta name="description" content="Gives the AI today's documentation, not last year's. An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What i">
   <link rel="canonical" href="https://ai-resources.vercel.app/tools/context7.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Context7 — Current library docs, injected at generation time | AI Resources">
-  <meta property="og:description" content="Current library docs, injected at generation time. Models memorize last year's APIs and hallucinate the diff. Context7 pulls version-specific, up-to-date documentation straight into the prompt, so generated code compiles against the library you actually installed.">
+  <meta property="og:title" content="Context7 — Gives the AI today's documentation, not last year's | AI Resources">
+  <meta property="og:description" content="Gives the AI today's documentation, not last year's. An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What i">
   <meta property="og:url" content="https://ai-resources.vercel.app/tools/context7.html">
   <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
       "@id": "https://ai-resources.vercel.app/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President, Customer Experience Design",
-      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
       "url": "https://ai-resources.vercel.app",
       "worksFor": {
@@ -77,7 +77,7 @@
       "url": "https://ai-resources.vercel.app/",
       "name": "AI Resources",
       "alternateName": "AI for the rest of us",
-      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://ai-resources.vercel.app/#curator"
@@ -90,7 +90,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://ai-resources.vercel.app/tools/context7.html#tool",
       "name": "Context7",
-      "description": "Current library docs, injected at generation time",
+      "description": "Gives the AI today's documentation, not last year's",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/upstash/context7",
@@ -105,8 +105,8 @@
       "@type": "WebPage",
       "@id": "https://ai-resources.vercel.app/tools/context7.html#page",
       "url": "https://ai-resources.vercel.app/tools/context7.html",
-      "name": "Context7 — Current library docs, injected at generation time | AI Resources",
-      "description": "Current library docs, injected at generation time. Models memorize last year's APIs and hallucinate the diff. Context7 pulls version-specific, up-to-date documentation straight into the prompt, so generated code compiles against the library you actually installed.",
+      "name": "Context7 — Gives the AI today's documentation, not last year's | AI Resources",
+      "description": "Gives the AI today's documentation, not last year's. An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What i",
       "isPartOf": {
         "@id": "https://ai-resources.vercel.app/#website"
       },
@@ -155,7 +155,7 @@
       "name": "Why use Context7?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Models memorize last year's APIs and hallucinate the diff. Context7 pulls version-specific, up-to-date documentation straight into the prompt, so generated code compiles against the library you actually installed."
+        "text": "An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What it writes then matches the version you actually have installed."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Context7?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Coding against anything that moves fast: Next.js, Tailwind, LangChain, any SDK younger than the model's training cutoff."
+        "text": "Working with anything that changes often, such as Next.js, Tailwind or LangChain, or with any tool released more recently than the model itself."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Context7?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add the MCP server to your agent. Append “use context7” to a prompt, or let a rule auto-invoke it. Get code written against live docs instead of training-data memories. Command: claude mcp add context7 -- npx -y @upstash/context7-mcp"
+        "text": "Add it to your assistant's connected tools. Add the words use context7 to your request, or set a rule so it happens every time. You get code written against current documentation instead of the model's memory. Command: claude mcp add context7 -- npx -y @upstash/context7-mcp"
       }
     }
   ]
@@ -186,7 +186,7 @@
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page">
+  <div class="page page-detail">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
@@ -203,7 +203,7 @@
       <div class="detail">
         <div class="detail-main">
           <h1 class="detail-title">Context7</h1>
-          <p class="detail-lede">Current library docs, injected at generation time.</p>
+          <p class="detail-lede">Gives the AI today's documentation, not last year's.</p>
         </div>
 
         <aside class="meta">
@@ -212,24 +212,23 @@
           <div><h2>Curator's status</h2><p>In daily use · № 05 of 10</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/upstash/context7" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
-      </div>
 
-      <div class="sections">
+        <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Models memorize last year's APIs and hallucinate the diff. Context7 pulls version-specific, up-to-date documentation straight into the prompt, so generated code compiles against the library you actually installed.</div>
+          <div class="body">An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What it writes then matches the version you actually have installed.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Coding against anything that moves fast: Next.js, Tailwind, LangChain, any SDK younger than the model's training cutoff.</div>
+          <div class="body">Working with anything that changes often, such as Next.js, Tailwind or LangChain, or with any tool released more recently than the model itself.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add the MCP server to your agent.</li>
-            <li>Append “use context7” to a prompt, or let a rule auto-invoke it.</li>
-            <li>Get code written against live docs instead of training-data memories.</li>
+            <li>Add it to your assistant's connected tools.</li>
+            <li>Add the words use context7 to your request, or set a rule so it happens every time.</li>
+            <li>You get code written against current documentation instead of the model's memory.</li>
             </ol>
           <div class="specimen">
             <code>claude mcp add context7 -- npx -y @upstash/context7-mcp</code>
@@ -238,9 +237,8 @@
           </div>
           </div>
         </section>
+        </div>
       </div>
-
-      <p class="fieldnote">Killed my “that method was renamed months ago” class of bugs.</p>
 
       <a class="back-link" href="../index.html">← Back to the log</a>
 
@@ -256,7 +254,7 @@
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
           <div>
-            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. I write these up so the tools stay usable by people who don't ship code for a living.</p>
             <p class="colophon-links m">
               <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
               <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>

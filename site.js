@@ -12,14 +12,14 @@ const SITE = {
   name: "AI Resources",
   tagline: "AI for the rest of us",
   description:
-    "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+    "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
 
   curator: {
     name: "Xavier Ting",
     jobTitle: "Vice President, Customer Experience Design",
     worksFor: "OCBC",
     summary:
-      "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
     linkedin: "https://www.linkedin.com/in/xavierting/",
     x: "https://x.com/xaviertingai",
     xHandle: "@xaviertingai",

@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Repomix — Your whole repo, packed into one AI-readable file | AI Resources</title>
-  <meta name="description" content="Your whole repo, packed into one AI-readable file. Context is the bottleneck. Repomix flattens an entire codebase into one structured file (directory tree, token counts, .gitignore respected, secrets scanned out) sized for pasting into any model.">
+  <title>Repomix — Packs your whole project into one file you can paste | AI Resources</title>
+  <meta name="description" content="Packs your whole project into one file you can paste. Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It leaves out the files your project already ignores, scans out anything that looks like a p">
   <link rel="canonical" href="https://ai-resources.vercel.app/tools/repomix.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Repomix — Your whole repo, packed into one AI-readable file | AI Resources">
-  <meta property="og:description" content="Your whole repo, packed into one AI-readable file. Context is the bottleneck. Repomix flattens an entire codebase into one structured file (directory tree, token counts, .gitignore respected, secrets scanned out) sized for pasting into any model.">
+  <meta property="og:title" content="Repomix — Packs your whole project into one file you can paste | AI Resources">
+  <meta property="og:description" content="Packs your whole project into one file you can paste. Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It leaves out the files your project already ignores, scans out anything that looks like a p">
   <meta property="og:url" content="https://ai-resources.vercel.app/tools/repomix.html">
   <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
       "@id": "https://ai-resources.vercel.app/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President, Customer Experience Design",
-      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
       "url": "https://ai-resources.vercel.app",
       "worksFor": {
@@ -77,7 +77,7 @@
       "url": "https://ai-resources.vercel.app/",
       "name": "AI Resources",
       "alternateName": "AI for the rest of us",
-      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://ai-resources.vercel.app/#curator"
@@ -90,7 +90,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://ai-resources.vercel.app/tools/repomix.html#tool",
       "name": "Repomix",
-      "description": "Your whole repo, packed into one AI-readable file",
+      "description": "Packs your whole project into one file you can paste",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/yamadashy/repomix",
@@ -105,8 +105,8 @@
       "@type": "WebPage",
       "@id": "https://ai-resources.vercel.app/tools/repomix.html#page",
       "url": "https://ai-resources.vercel.app/tools/repomix.html",
-      "name": "Repomix — Your whole repo, packed into one AI-readable file | AI Resources",
-      "description": "Your whole repo, packed into one AI-readable file. Context is the bottleneck. Repomix flattens an entire codebase into one structured file (directory tree, token counts, .gitignore respected, secrets scanned out) sized for pasting into any model.",
+      "name": "Repomix — Packs your whole project into one file you can paste | AI Resources",
+      "description": "Packs your whole project into one file you can paste. Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It leaves out the files your project already ignores, scans out anything that looks like a p",
       "isPartOf": {
         "@id": "https://ai-resources.vercel.app/#website"
       },
@@ -155,7 +155,7 @@
       "name": "Why use Repomix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Context is the bottleneck. Repomix flattens an entire codebase into one structured file (directory tree, token counts, .gitignore respected, secrets scanned out) sized for pasting into any model."
+        "text": "Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It leaves out the files your project already ignores, scans out anything that looks like a password or a key, and tells you how large the result is before you paste it anywhere."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Repomix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Second opinions from web chats, code review by a model with no repo access, onboarding an agent to unfamiliar code."
+        "text": "Getting a second opinion from a different AI, having code reviewed by a model that cannot open your folder, or bringing an assistant up to speed on code it has never seen."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Repomix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run it at the repo root. Grab repomix-output.xml. Paste it into the model of your choice; add --compress for big repos. Command: npx repomix@latest"
+        "text": "Run it in the top folder of your project. Take the repomix-output.xml file it produces. Paste that into whichever AI you want to ask. Add --compress if the project is large. Command: npx repomix@latest"
       }
     }
   ]
@@ -186,7 +186,7 @@
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page">
+  <div class="page page-detail">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
@@ -203,7 +203,7 @@
       <div class="detail">
         <div class="detail-main">
           <h1 class="detail-title">Repomix</h1>
-          <p class="detail-lede">Your whole repo, packed into one AI-readable file.</p>
+          <p class="detail-lede">Packs your whole project into one file you can paste.</p>
         </div>
 
         <aside class="meta">
@@ -212,24 +212,23 @@
           <div><h2>Curator's status</h2><p>In daily use · № 06 of 10</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/yamadashy/repomix" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
-      </div>
 
-      <div class="sections">
+        <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Context is the bottleneck. Repomix flattens an entire codebase into one structured file (directory tree, token counts, .gitignore respected, secrets scanned out) sized for pasting into any model.</div>
+          <div class="body">Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It leaves out the files your project already ignores, scans out anything that looks like a password or a key, and tells you how large the result is before you paste it anywhere.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Second opinions from web chats, code review by a model with no repo access, onboarding an agent to unfamiliar code.</div>
+          <div class="body">Getting a second opinion from a different AI, having code reviewed by a model that cannot open your folder, or bringing an assistant up to speed on code it has never seen.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Run it at the repo root.</li>
-            <li>Grab repomix-output.xml.</li>
-            <li>Paste it into the model of your choice; add --compress for big repos.</li>
+            <li>Run it in the top folder of your project.</li>
+            <li>Take the repomix-output.xml file it produces.</li>
+            <li>Paste that into whichever AI you want to ask. Add --compress if the project is large.</li>
             </ol>
           <div class="specimen">
             <code>npx repomix@latest</code>
@@ -238,9 +237,8 @@
           </div>
           </div>
         </section>
+        </div>
       </div>
-
-      <p class="fieldnote">My “let another model sanity-check this” button.</p>
 
       <a class="back-link" href="../index.html">← Back to the log</a>
 
@@ -256,7 +254,7 @@
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
           <div>
-            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. I write these up so the tools stay usable by people who don't ship code for a living.</p>
             <p class="colophon-links m">
               <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
               <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>

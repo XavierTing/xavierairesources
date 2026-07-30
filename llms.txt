@@ -1,9 +1,9 @@
 # AI Resources
 
-> AI for the rest of us. The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.
+> AI for the rest of us. The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.
 
-Curated by **Xavier Ting** — Vice President, Customer Experience Design at OCBC, AI & Design Leader.
-AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.
+Curated by Xavier Ting, Vice President, Customer Experience Design at OCBC, AI & Design Leader.
+AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.
 
 - Site: https://ai-resources.vercel.app/
 - LinkedIn: https://www.linkedin.com/in/xavierting/
@@ -12,11 +12,11 @@ AI & Design Leader. I build with AI daily and share what I learn, making AI acce
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
 - Tools listed: 10 · Categories: 6 · Last updated: 30.07.2026
 
-Every tool below is in the curator's daily use. No sponsorships, no affiliate links.
+Every tool below is in the curator's daily use. Nobody paid to be on this list.
 
 ---
 
-## 01. Impeccable — Design taste for AI coding agents
+## 01. Impeccable — Stops AI building the same generic website
 
 - **Category:** Design
 - **Made by:** pbakaus
@@ -25,21 +25,21 @@ Every tool below is in the curator's daily use. No sponsorships, no affiliate li
 - **Install / run:** `npx impeccable install`
 
 **Why use Impeccable?**
-Every model ships the same website: cream hero, gradient text, three identical cards. Impeccable gives your agent an actual design education: one skill, 23 commands, and 60 deterministic detectors that catch AI anti-patterns the moment they're written.
+Every AI model builds you the same website: a big pale heading, rainbow gradient text, three identical boxes. Impeccable gives the assistant an actual design education. It adds 23 commands you can run and 60 automatic checks that catch those generic patterns the moment they appear on your page.
 
 **When should you use Impeccable?**
-Any frontend work you do with an agent. Audit before shipping, run polish passes after building, and let its edit-hooks flag design lapses in real time while you work.
+Any time you are building a web page or an app with an AI assistant. Check it before you publish, ask it to improve what it made, or leave the checks running so it flags weak design while you work.
 
 **How do you install and use Impeccable?**
-1. Run the installer in your project — it detects Claude Code, Cursor, Codex and more.
-2. Run /impeccable init once so it learns your product and users.
-3. Build, then finish with /impeccable audit or /impeccable polish.
+1. Run the installer inside your project folder. It works out which AI tool you use, whether that is Claude Code, Cursor, Codex or another.
+2. Run /impeccable init once, so it learns what you are building and who it is for.
+3. Build as normal, then finish with /impeccable audit to check the result or /impeccable polish to improve it.
 
-**Curator's note:** Its detector ran on every edit of this page.
+**Curator's note:** Its checks ran on every edit of this page.
 
 ---
 
-## 02. Superpowers — Engineering discipline for Claude Code
+## 02. Superpowers — Makes Claude Code plan before it builds
 
 - **Category:** Workflow
 - **Made by:** obra
@@ -48,21 +48,21 @@ Any frontend work you do with an agent. Audit before shipping, run polish passes
 - **Install / run:** `claude plugin install superpowers@claude-plugins-official`
 
 **Why use Superpowers?**
-Raw agents jump straight to code and guess. Superpowers makes them work like senior engineers: brainstorm the design first, write the plan, test-drive the implementation, review before merging. The difference shows up in week-two maintainability.
+Left alone, an AI assistant starts writing code straight away and guesses at whatever you did not spell out. Superpowers makes it work the way an experienced engineer does. It thinks through the design first, writes a plan, checks its own work with tests, then reviews before anything is final. You notice the difference a couple of weeks later, when you come back and can still follow what it built.
 
 **When should you use Superpowers?**
-Any feature bigger than a one-liner. It earns its keep on greenfield builds and gnarly debugging, where process beats enthusiasm.
+Anything bigger than a quick fix. It is most useful on projects you are starting from scratch, and on bugs that have already survived a few attempts.
 
 **How do you install and use Superpowers?**
-1. Install the plugin from the official marketplace.
-2. Start any task — it routes through brainstorming and planning skills automatically.
-3. Follow the checkpoints; approve the design before code gets written.
+1. Install the plugin from the official Claude Code marketplace.
+2. Start any task as normal. It brings in the planning steps by itself.
+3. Work through the checkpoints it offers, and approve the design before it writes any code.
 
-**Curator's note:** This site went through its brainstorm → plan → build flow.
+**Curator's note:** This site was built through its plan-first flow.
 
 ---
 
-## 03. Spec-Kit — Spec-driven development, by GitHub
+## 03. Spec-Kit — Write down what you want, so the AI stops drifting
 
 - **Category:** Workflow
 - **Made by:** github
@@ -71,21 +71,21 @@ Any feature bigger than a one-liner. It earns its keep on greenfield builds and 
 - **Install / run:** `uvx --from git+https://github.com/github/spec-kit.git specify init`
 
 **Why use Spec-Kit?**
-Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.
+Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that document rather than from whatever it can still remember of the conversation.
 
 **When should you use Spec-Kit?**
-Multi-session projects, team work, anything where “what we're building” has to outlive a single chat context.
+Projects that run across several sessions, work you share with other people, and anything where the plan has to outlive a single chat.
 
 **How do you install and use Spec-Kit?**
-1. Install the specify CLI (needs uv).
-2. Run specify init inside your project.
-3. Drive with /speckit.specify → /speckit.plan → /speckit.implement in your agent.
+1. Install the specify command line tool. It needs uv, a Python package manager.
+2. Run specify init inside your project folder.
+3. Then work through it in your assistant: /speckit.specify to write the spec, /speckit.plan to plan the work, /speckit.implement to build it.
 
-**Curator's note:** The spec survives. Chat context doesn't.
+**Curator's note:** The written spec is still there long after the chat has gone.
 
 ---
 
-## 04. Chrome DevTools MCP — Gives your coding agent eyes in the browser
+## 04. Chrome DevTools MCP — Lets your AI assistant see the page it built
 
 - **Category:** Agents & MCP
 - **Made by:** ChromeDevTools
@@ -94,21 +94,21 @@ Multi-session projects, team work, anything where “what we're building” has 
 - **Install / run:** `claude mcp add chrome-devtools npx chrome-devtools-mcp@latest`
 
 **Why use Chrome DevTools MCP?**
-An agent that can't see the page is coding blind, claiming fixes it never verified. This official MCP server hands it real Chrome: console errors, network requests, performance traces, screenshots, live DOM.
+An assistant that cannot see the page is working blind, and it will report things as fixed that it never checked. This official tool from Google connects your assistant to a real Chrome browser. It can then read the error messages, watch what the page loads, measure how fast it runs, and take screenshots of what it actually looks like.
 
 **When should you use Chrome DevTools MCP?**
-Debugging web apps, chasing Core Web Vitals, and every “make a change, prove it actually rendered” loop.
+Fixing anything that shows up in a browser, making a slow page faster, and any time you want proof that a change worked rather than a claim that it did.
 
 **How do you install and use Chrome DevTools MCP?**
-1. Add the MCP server to your agent's config.
-2. Ask the agent to open your page and read the console.
-3. Let it trace, screenshot, and verify its own work before it reports done.
+1. Add it to your assistant's connected tools. MCP is simply the agreed standard for plugging outside tools into an AI assistant.
+2. Ask the assistant to open your page and read the errors.
+3. Let it take screenshots and check its own work before it tells you it is finished.
 
-**Curator's note:** The single biggest upgrade to agent frontend work I know.
+**Curator's note:** The single biggest upgrade to how an assistant handles web work.
 
 ---
 
-## 05. Context7 — Current library docs, injected at generation time
+## 05. Context7 — Gives the AI today's documentation, not last year's
 
 - **Category:** Agents & MCP
 - **Made by:** upstash
@@ -117,21 +117,21 @@ Debugging web apps, chasing Core Web Vitals, and every “make a change, prove i
 - **Install / run:** `claude mcp add context7 -- npx -y @upstash/context7-mcp`
 
 **Why use Context7?**
-Models memorize last year's APIs and hallucinate the diff. Context7 pulls version-specific, up-to-date documentation straight into the prompt, so generated code compiles against the library you actually installed.
+An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What it writes then matches the version you actually have installed.
 
 **When should you use Context7?**
-Coding against anything that moves fast: Next.js, Tailwind, LangChain, any SDK younger than the model's training cutoff.
+Working with anything that changes often, such as Next.js, Tailwind or LangChain, or with any tool released more recently than the model itself.
 
 **How do you install and use Context7?**
-1. Add the MCP server to your agent.
-2. Append “use context7” to a prompt, or let a rule auto-invoke it.
-3. Get code written against live docs instead of training-data memories.
+1. Add it to your assistant's connected tools.
+2. Add the words use context7 to your request, or set a rule so it happens every time.
+3. You get code written against current documentation instead of the model's memory.
 
-**Curator's note:** Killed my “that method was renamed months ago” class of bugs.
+**Curator's note:** Killed a whole class of bug where a method had quietly been renamed months earlier.
 
 ---
 
-## 06. Repomix — Your whole repo, packed into one AI-readable file
+## 06. Repomix — Packs your whole project into one file you can paste
 
 - **Category:** Coding
 - **Made by:** yamadashy
@@ -140,21 +140,21 @@ Coding against anything that moves fast: Next.js, Tailwind, LangChain, any SDK y
 - **Install / run:** `npx repomix@latest`
 
 **Why use Repomix?**
-Context is the bottleneck. Repomix flattens an entire codebase into one structured file (directory tree, token counts, .gitignore respected, secrets scanned out) sized for pasting into any model.
+Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It leaves out the files your project already ignores, scans out anything that looks like a password or a key, and tells you how large the result is before you paste it anywhere.
 
 **When should you use Repomix?**
-Second opinions from web chats, code review by a model with no repo access, onboarding an agent to unfamiliar code.
+Getting a second opinion from a different AI, having code reviewed by a model that cannot open your folder, or bringing an assistant up to speed on code it has never seen.
 
 **How do you install and use Repomix?**
-1. Run it at the repo root.
-2. Grab repomix-output.xml.
-3. Paste it into the model of your choice; add --compress for big repos.
+1. Run it in the top folder of your project.
+2. Take the repomix-output.xml file it produces.
+3. Paste that into whichever AI you want to ask. Add --compress if the project is large.
 
-**Curator's note:** My “let another model sanity-check this” button.
+**Curator's note:** My button for letting a second model sanity check the work.
 
 ---
 
-## 07. Agent-Reach — Your agent, unblocked on the real internet
+## 07. Agent-Reach — Gets your AI past sites that block it
 
 - **Category:** Agents & MCP
 - **Made by:** Panniantong
@@ -163,21 +163,21 @@ Second opinions from web chats, code review by a model with no repo access, onbo
 - **Install / run:** `Install Agent Reach: https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`
 
 **Why use Agent-Reach?**
-The useful internet is walled: X wants API fees, Reddit blocks server IPs, video sites geo-fence. Agent-Reach ships the most reliable access path for each platform — chosen, installed, and health-checked — behind one interface.
+Much of the useful internet is closed to automated tools. X charges for access, Reddit blocks the kind of servers that assistants run on, and video sites restrict things by country. Agent-Reach works out which route still works for each site, sets it up, tests that it really is working, and puts them all behind one way of asking.
 
 **When should you use Agent-Reach?**
-Research agents that need to actually read tweets, Reddit threads, and YouTube transcripts, or sweep several platforms in one run.
+Research where the assistant genuinely needs to read tweets, Reddit discussions or video transcripts, or to check several sites in a single run.
 
 **How do you install and use Agent-Reach?**
-1. Paste the install prompt below into your agent — it self-installs.
-2. It detects your environment and reports what's reachable.
-3. Ask for content by URL or search; it picks the working path.
+1. Paste the line below into your assistant. It installs itself.
+2. It checks your setup and reports which sites it can reach.
+3. Ask for a page by its address or by searching, and it picks a route that works.
 
-**Curator's note:** Turns “I can't access that site” into an answer.
+**Curator's note:** Turns a flat refusal to open the page into an actual answer.
 
 ---
 
-## 08. LLM Wiki — A second brain your model maintains for you
+## 08. LLM Wiki — Notes your AI writes and keeps up to date for you
 
 - **Category:** Knowledge
 - **Made by:** karpathy
@@ -185,21 +185,21 @@ Research agents that need to actually read tweets, Reddit threads, and YouTube t
 - **Page:** https://ai-resources.vercel.app/tools/llm-wiki.html
 
 **Why use LLM Wiki?**
-RAG re-reads everything on every question and synthesizes nothing. Karpathy's pattern makes the LLM maintain a persistent markdown wiki over your sources: ingest, cross-link, flag contradictions. Knowledge compiles once and stays current.
+The usual way of giving an AI your documents has it search through them fresh for every question. It re-reads everything each time and builds up no understanding at all. Karpathy's approach has the model keep a set of plain text notes instead. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. You pay the reading cost once rather than on every question.
 
 **When should you use LLM Wiki?**
-Building a durable personal knowledge base out of notes, papers, and bookmarks that should get better with every source you add.
+Building a personal knowledge base out of notes, articles and bookmarks, where you want it to get more useful the more you add to it.
 
 **How do you install and use LLM Wiki?**
-1. Read the gist — it's a pattern, not a package.
-2. Write your schema doc: how pages, entities, and links should be structured.
-3. Point your agent at new sources to ingest; query the wiki, lint it periodically.
+1. Read the gist. It describes an approach to follow, not something you install.
+2. Write down your own structure: what belongs on a page, and how pages should link to each other.
+3. Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then.
 
-**Curator's note:** The rare idea that improves the longer you run it.
+**Curator's note:** One of the rare ideas that gets better the longer you run it.
 
 ---
 
-## 09. Humanizer — Deletes the AI accent from your writing
+## 09. Humanizer — Takes the AI sound out of your writing
 
 - **Category:** Writing
 - **Made by:** blader
@@ -208,21 +208,21 @@ Building a durable personal knowledge base out of notes, papers, and bookmarks t
 - **Install / run:** `npx skills add blader/humanizer --global`
 
 **Why use Humanizer?**
-Em-dash chains, “it's not X, it's Y”, bold on everything: readers smell AI prose instantly. Humanizer strips 33 documented patterns of machine writing and can calibrate to your voice from samples of your own work.
+AI prose has a recognizable accent. Long dashes strung through the sentences, the it is not this, it is that construction, bold text on every other phrase. Most readers pick it up within a sentence or two. Humanizer works through 33 documented habits of machine writing and takes them back out. Give it a few samples of your own writing and it keeps your voice while it does.
 
 **When should you use Humanizer?**
-The last pass before anything goes public: posts, documentation, emails, portfolio copy.
+The last thing you do before anything goes public: posts, documentation, emails, or anything at all with your name on it.
 
 **How do you install and use Humanizer?**
-1. Install it as a skill or Claude Code plugin.
-2. Run /humanizer on pasted text or point it at a file.
-3. Feed it a few writing samples once, so rewrites keep your voice.
+1. Install it as a skill, or as a Claude Code plugin.
+2. Run /humanizer on text you paste in, or point it at a file.
+3. Give it a few samples of your own writing once, so later edits still sound like you.
 
-**Curator's note:** The final gate before anything ships with my name on it.
+**Curator's note:** The last gate before anything ships with my name on it.
 
 ---
 
-## 10. Figma MCP — Your design file, readable by your coding agent
+## 10. Figma MCP — Lets AI read your real design file, not a screenshot
 
 - **Category:** Design
 - **Made by:** Figma
@@ -231,17 +231,17 @@ The last pass before anything goes public: posts, documentation, emails, portfol
 - **Install / run:** `claude mcp add --transport http figma https://mcp.figma.com/mcp`
 
 **Why use Figma MCP?**
-Screenshot handoff makes agents guess: they eyeball spacing, invent hex values, and rebuild components you already shipped. Figma's official MCP server hands the agent the real source instead — variables, components, layout data, and Code Connect mappings — and it writes back to canvas, so the loop runs both directions.
+Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions.
 
 **When should you use Figma MCP?**
-Any build that starts from a design file, and any time production drift needs pulling back to the system. Select a frame, point the agent at it, and review what it generates against the tokens rather than the picture.
+Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture.
 
 **How do you install and use Figma MCP?**
-1. Add the remote server to your agent (or install the Figma plugin, if your client offers one).
-2. Open the Figma desktop or web file and select the frame you want built.
-3. Ask your agent to implement the selection; it reads variables and components instead of pixels.
+1. Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one.
+2. Open the file in Figma and select the frame you want built.
+3. Ask your assistant to build the selection. It reads the real values instead of guessing from pixels.
 
-**Curator's note:** The handoff step I stopped doing by hand.
+**Curator's note:** The handover step I stopped doing by hand.
 
 ---
 

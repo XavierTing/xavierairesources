@@ -33,9 +33,17 @@
   --font-mono: "Fragment Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --pad: clamp(20px, 5vw, 48px);
-  --page-w: 1180px;
+  /* Grows with the viewport instead of stranding the log in a 1180px column
+     on a wide display. Floors at the original 1180 so the desktop rhythm the
+     design was tuned at is unchanged; ceilings at 2000 so line length stays
+     readable on ultrawide. */
+  --page-w: clamp(1180px, 90vw, 2000px);
   --radius: 16px;
   --radius-sm: 10px;
+  /* smallest comfortable hit area for a pointer or thumb */
+  --tap: 44px;
+  /* every mono label reads off this one step, so the phone bump is one line */
+  --m-size: 0.72rem;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -91,7 +99,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   border-radius: var(--radius-sm);
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: top 0.2s var(--ease-out);
@@ -101,7 +109,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* mono label utility — signal voice */
 .m {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -160,6 +168,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   padding: 0 var(--pad);
 }
 
+/* A tool page is one column of prose plus a 300px meta card. The wide
+   container exists for the card grid; here it just pushes the meta card away
+   from the text it belongs to. Cap it so the two columns stay adjacent. */
+.page-detail { max-width: min(var(--page-w), 1280px); }
+
 .strip {
   display: flex;
   justify-content: space-between;
@@ -173,13 +186,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- hero (index) ---------- */
 
+/* Tight to the strip above it: the headline is the first thing on the page,
+   so it sits close to the masthead rather than floating in open space. */
 .hero {
-  padding-block: clamp(56px, 11vh, 120px) clamp(40px, 6vh, 64px);
-}
-
-.hero-kicker {
-  color: var(--accent);
-  margin-bottom: 24px;
+  padding-block: clamp(24px, 4.5vh, 48px) clamp(40px, 6vh, 64px);
 }
 
 .headline {
@@ -247,13 +257,32 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .byline-links,
   .colophon-links { gap: 6px; margin-top: 2px; }
   .byline-links a,
-  .colophon-links a {
+  .colophon-links a,
+  .repo-link,
+  .back-link,
+  .pager a,
+  .crumbs a,
+  .strip a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--tap);
     padding-inline: 10px;
     margin-inline: -10px;
   }
+}
+
+/* WCAG 2.5.8 asks for 24px on any pointer, not just touch. These standalone
+   links render at ~20px from line-height alone. */
+.byline-links a,
+.colophon-links a,
+.repo-link,
+.back-link,
+.pager a,
+.crumbs a,
+.strip a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }
 
 /* colophon portrait, smaller */
@@ -275,13 +304,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* hero load choreography (initial states only exist when JS runs) */
 .js .hero .headline,
-.js .hero .hero-kicker,
 .js .hero .hero-sub,
 .js .hero .hero-byline,
 .js .hero .hero-counts { opacity: 0; transform: translateY(12px); }
 
-.is-loaded .hero .hero-kicker { opacity: 1; transform: none; transition: opacity 0.5s ease-out 0.05s, transform 0.5s var(--ease-out) 0.05s; }
-.is-loaded .hero .headline { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.15s, transform 0.6s var(--ease-out) 0.15s; }
+.is-loaded .hero .headline { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.05s, transform 0.6s var(--ease-out) 0.05s; }
 .is-loaded .hero .hero-sub { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.3s, transform 0.6s var(--ease-out) 0.3s; }
 .is-loaded .hero .hero-byline { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.4s, transform 0.6s var(--ease-out) 0.4s; }
 .is-loaded .hero .hero-counts { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.5s, transform 0.6s var(--ease-out) 0.5s; }
@@ -311,7 +338,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   position: relative;
   padding: 10px 14px 14px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -386,7 +413,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .card-cat {
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   padding: 5px 10px;
   border: 1px solid var(--accent-line);
   border-radius: 999px;
@@ -395,7 +422,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .card-num {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   color: var(--muted);
 }
 
@@ -408,10 +435,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   color: var(--ink);
 }
 
+/* the 3–4 line argument on the card face. Set a touch smaller and tighter
+   than body copy so a four-line blurb doesn't outweigh the tool name. */
 .card-tag {
   color: var(--body-ink);
-  font-size: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
   flex: 1;
+  text-wrap: pretty;
 }
 
 .card-open {
@@ -420,7 +451,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   gap: 6px;
   margin-top: 6px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -432,8 +463,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 /* cards hidden by the active filter */
-.card[data-filtered="out"],
-.grid-note[data-filtered="out"] { display: none; }
+.card[data-filtered="out"] { display: none; }
 
 /* filter re-reveal: surviving cards rise back in */
 .card.refilter { animation: card-in 0.4s var(--ease-out) both; }
@@ -442,18 +472,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   to { opacity: 1; transform: none; }
 }
 
-/* curator asides between cards — the log's voice inside the grid */
-.grid-note {
-  grid-column: 1 / -1;
-  padding: 8px 2px;
-  border-left: 2px solid var(--accent);
-  padding-left: 18px;
-  font-family: var(--font-mono);
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--body-ink);
-}
-.grid-note::before { content: "✎ "; font-style: normal; color: var(--accent); }
 
 /* scroll/load reveal (classes only ever added by JS) */
 .reveal { opacity: 0; transform: translateY(14px); }
@@ -477,12 +495,20 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .crumbs .sep { color: var(--line-bright); }
 .crumbs .here { color: var(--ink); }
 
+/* Two columns, two rows: the head and the sections stack down the left while
+   the meta card spans both on the right. Before this the sections lived
+   outside the grid, so the tall meta card set the row height and left a dead
+   band under the lede. */
 .detail {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
-  gap: clamp(32px, 6vw, 96px);
-  padding-block: clamp(40px, 8vh, 88px) 24px;
+  grid-template-rows: auto auto;
+  column-gap: clamp(28px, 3.5vw, 56px);
+  padding-block: clamp(24px, 4vh, 44px) 24px;
 }
+.detail-main { grid-column: 1; grid-row: 1; }
+.meta { grid-column: 2; grid-row: 1 / span 2; }
+.detail .sections { grid-column: 1; grid-row: 2; margin-top: 34px; }
 
 .detail-title {
   font-family: var(--font-display);
@@ -519,7 +545,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .meta h2 {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -533,7 +559,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .sections {
   border-top: 1px solid var(--line);
   padding-block: 8px 24px;
-  max-width: 72ch;
+  /* was 72ch (~605px). The left column is the constraint below ~1440px, so
+     this only binds on wider screens and keeps the measure sane there. */
+  max-width: 820px;
 }
 
 .section {
@@ -545,7 +573,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .section h2 {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -568,23 +596,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .section ol li::before {
   content: counter(step, decimal-leading-zero);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   color: var(--muted);
   padding-top: 5px;
 }
 
-/* the curator's note — pull-quote voice */
-.fieldnote {
-  margin: 30px 0 6px;
-  padding-left: 18px;
-  border-left: 2px solid var(--accent);
-  font-family: var(--font-mono);
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--ink);
-  max-width: 52ch;
-}
-.fieldnote::before { content: "✎ "; font-style: normal; color: var(--accent); }
 
 /* command block */
 .specimen {
@@ -615,7 +631,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   color: var(--accent);
   padding: 8px 14px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -642,7 +658,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   align-items: center;
   gap: 6px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -653,7 +669,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   gap: 8px;
   margin-top: 34px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -670,7 +686,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .pager a {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -690,7 +706,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .colophon h2 {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--m-size);
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -705,7 +721,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .aurora span { animation: none; }
   .js .hero .headline,
-  .js .hero .hero-kicker,
   .js .hero .hero-sub,
   .js .hero .hero-byline,
   .js .hero .hero-counts,
@@ -719,13 +734,45 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .copy-btn.copied { animation: none; }
 }
 
-/* ---------- responsive ---------- */
+/* ---------- responsive ----------
+   Column tiers are set against --page-w above. The container grows with the
+   viewport, so each tier is chosen to land cards near the ~350px the card
+   design was drawn at rather than to stretch three columns indefinitely:
+
+     ≤ 640      1 col
+     641–1020   2 col
+     1021–1699  3 col   (the original desktop rhythm)
+     1700–2399  4 col
+     ≥ 2400     5 col
+   -------------------------------------------------- */
+
+/* --- wide displays: use the space instead of padding it out --- */
+
+@media (min-width: 1700px) {
+  .grid { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+}
+
+@media (min-width: 2400px) {
+  .grid { grid-template-columns: repeat(5, 1fr); gap: 24px; }
+  /* prose should not track the container this far out */
+  .hero-sub { max-width: 60ch; }
+}
+
+/* --- tablet --- */
 
 @media (max-width: 1020px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
-  .detail { grid-template-columns: 1fr; gap: 36px; }
+  /* one column: head, then meta, then sections, so the explicit placement
+     from the two-column layout has to be released */
+  .detail { grid-template-columns: 1fr; row-gap: 36px; }
+  .detail-main,
+  .meta,
+  .detail .sections { grid-column: 1; grid-row: auto; }
+  .detail .sections { margin-top: 0; }
   .meta { flex-direction: row; flex-wrap: wrap; gap: 26px 40px; }
 }
+
+/* --- phone --- */
 
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; gap: 14px; }
@@ -739,6 +786,29 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .copy-btn { align-self: flex-start; }
   .colophon { grid-template-columns: 1fr; gap: 24px; }
   .meta { flex-direction: column; gap: 22px; }
+
+  /* 11.5px mono is legible on a desktop monitor and not on a phone.
+     Every mono label reads off this, so one line lifts them all to 12.8px. */
+  :root { --m-size: 0.8rem; }
+  /* the blurb goes back to full body size once it has the width to itself */
+  .card-tag { font-size: 1rem; }
+  .hero-counts { gap: 6px 20px; }
+}
+
+/* --- small phones: the log has to survive 320px --- */
+
+@media (max-width: 380px) {
+  .card { padding: 20px 18px 18px; }
+  .card-name { font-size: 1.3rem; }
+  .tab { padding: 10px 10px 14px; }
+  .tab::after { left: 8px; right: 8px; }
+}
+
+/* --- coarse pointers at any width --- */
+
+@media (pointer: coarse) {
+  .tab { min-height: var(--tap); }
+  .copy-btn { min-height: var(--tap); }
 }
 
 /* ---------- print ---------- */

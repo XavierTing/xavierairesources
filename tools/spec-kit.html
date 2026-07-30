@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spec-Kit — Spec-driven development, by GitHub | AI Resources</title>
-  <meta name="description" content="Spec-driven development, by GitHub. Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.">
+  <title>Spec-Kit — Write down what you want, so the AI stops drifting | AI Resources</title>
+  <meta name="description" content="Write down what you want, so the AI stops drifting. Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that docu">
   <link rel="canonical" href="https://ai-resources.vercel.app/tools/spec-kit.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Spec-Kit — Spec-driven development, by GitHub | AI Resources">
-  <meta property="og:description" content="Spec-driven development, by GitHub. Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.">
+  <meta property="og:title" content="Spec-Kit — Write down what you want, so the AI stops drifting | AI Resources">
+  <meta property="og:description" content="Write down what you want, so the AI stops drifting. Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that docu">
   <meta property="og:url" content="https://ai-resources.vercel.app/tools/spec-kit.html">
   <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
       "@id": "https://ai-resources.vercel.app/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President, Customer Experience Design",
-      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
       "url": "https://ai-resources.vercel.app",
       "worksFor": {
@@ -77,7 +77,7 @@
       "url": "https://ai-resources.vercel.app/",
       "name": "AI Resources",
       "alternateName": "AI for the rest of us",
-      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://ai-resources.vercel.app/#curator"
@@ -90,7 +90,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://ai-resources.vercel.app/tools/spec-kit.html#tool",
       "name": "Spec-Kit",
-      "description": "Spec-driven development, by GitHub",
+      "description": "Write down what you want, so the AI stops drifting",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/github/spec-kit",
@@ -105,8 +105,8 @@
       "@type": "WebPage",
       "@id": "https://ai-resources.vercel.app/tools/spec-kit.html#page",
       "url": "https://ai-resources.vercel.app/tools/spec-kit.html",
-      "name": "Spec-Kit — Spec-driven development, by GitHub | AI Resources",
-      "description": "Spec-driven development, by GitHub. Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.",
+      "name": "Spec-Kit — Write down what you want, so the AI stops drifting | AI Resources",
+      "description": "Write down what you want, so the AI stops drifting. Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that docu",
       "isPartOf": {
         "@id": "https://ai-resources.vercel.app/#website"
       },
@@ -155,7 +155,7 @@
       "name": "Why use Spec-Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it."
+        "text": "Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that document rather than from whatever it can still remember of the conversation."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Spec-Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multi-session projects, team work, anything where “what we're building” has to outlive a single chat context."
+        "text": "Projects that run across several sessions, work you share with other people, and anything where the plan has to outlive a single chat."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Spec-Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the specify CLI (needs uv). Run specify init inside your project. Drive with /speckit.specify → /speckit.plan → /speckit.implement in your agent. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
+        "text": "Install the specify command line tool. It needs uv, a Python package manager. Run specify init inside your project folder. Then work through it in your assistant: /speckit.specify to write the spec, /speckit.plan to plan the work, /speckit.implement to build it. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
       }
     }
   ]
@@ -186,7 +186,7 @@
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page">
+  <div class="page page-detail">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
@@ -203,7 +203,7 @@
       <div class="detail">
         <div class="detail-main">
           <h1 class="detail-title">Spec-Kit</h1>
-          <p class="detail-lede">Spec-driven development, by GitHub.</p>
+          <p class="detail-lede">Write down what you want, so the AI stops drifting.</p>
         </div>
 
         <aside class="meta">
@@ -212,24 +212,23 @@
           <div><h2>Curator's status</h2><p>In daily use · № 03 of 10</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
-      </div>
 
-      <div class="sections">
+        <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.</div>
+          <div class="body">Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that document rather than from whatever it can still remember of the conversation.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Multi-session projects, team work, anything where “what we're building” has to outlive a single chat context.</div>
+          <div class="body">Projects that run across several sessions, work you share with other people, and anything where the plan has to outlive a single chat.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install the specify CLI (needs uv).</li>
-            <li>Run specify init inside your project.</li>
-            <li>Drive with /speckit.specify → /speckit.plan → /speckit.implement in your agent.</li>
+            <li>Install the specify command line tool. It needs uv, a Python package manager.</li>
+            <li>Run specify init inside your project folder.</li>
+            <li>Then work through it in your assistant: /speckit.specify to write the spec, /speckit.plan to plan the work, /speckit.implement to build it.</li>
             </ol>
           <div class="specimen">
             <code>uvx --from git+https://github.com/github/spec-kit.git specify init</code>
@@ -238,9 +237,8 @@
           </div>
           </div>
         </section>
+        </div>
       </div>
-
-      <p class="fieldnote">The spec survives. Chat context doesn't.</p>
 
       <a class="back-link" href="../index.html">← Back to the log</a>
 
@@ -256,7 +254,7 @@
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
           <div>
-            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. I write these up so the tools stay usable by people who don't ship code for a living.</p>
             <p class="colophon-links m">
               <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
               <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>

@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# Answer engines are welcome — this log exists to be quoted.
+# Answer engines are welcome. This log exists to be quoted.
 # See /llms.txt for the full content in plain markdown.
 User-agent: GPTBot
 Allow: /

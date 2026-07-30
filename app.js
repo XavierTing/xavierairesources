@@ -119,7 +119,7 @@
 
     card.appendChild(top);
     card.appendChild(el("h2", "card-name", tool.name));
-    card.appendChild(el("p", "card-tag", tool.tagline));
+    card.appendChild(el("p", "card-tag", tool.blurb || tool.tagline));
     card.appendChild(el("span", "card-open", "Read entry"));
     return card;
   }
@@ -135,11 +135,6 @@
       var frag = document.createDocumentFragment();
       TOOLS.forEach(function (tool) {
         frag.appendChild(renderCard(tool));
-        MARGIN_NOTES.forEach(function (note) {
-          if (note.afterNum === tool.num) {
-            frag.appendChild(el("aside", "grid-note", note.text));
-          }
-        });
       });
       grid.appendChild(frag);
     }
@@ -178,11 +173,6 @@
         } else {
           card.dataset.filtered = "out";
         }
-      });
-      /* curator asides read as part of the full log only */
-      grid.querySelectorAll(".grid-note").forEach(function (note) {
-        if (category === "All") note.removeAttribute("data-filtered");
-        else note.dataset.filtered = "out";
       });
       updateCount(shown);
     }
@@ -291,8 +281,6 @@
     how.appendChild(howBody);
     sections.appendChild(how);
 
-    var note = el("p", "fieldnote", tool.note);
-
     var back = el("a", "back-link", "← Back to the log");
     back.href = "index.html";
 
@@ -310,9 +298,8 @@
     pager.appendChild(nextA);
 
     root.appendChild(crumbs);
+    detail.appendChild(sections);
     root.appendChild(detail);
-    root.appendChild(sections);
-    root.appendChild(note);
     root.appendChild(back);
     root.appendChild(pager);
   }

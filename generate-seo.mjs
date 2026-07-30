@@ -33,9 +33,7 @@ function loadGlobals(file, names) {
 }
 
 const { SITE } = loadGlobals("site.js", ["SITE"]);
-const { TOOLS, MARGIN_NOTES, LOG_UPDATED } = loadGlobals("tools.js", [
-  "TOOLS", "MARGIN_NOTES", "LOG_UPDATED",
-]);
+const { TOOLS, LOG_UPDATED } = loadGlobals("tools.js", ["TOOLS", "LOG_UPDATED"]);
 
 const BASE = SITE.url.replace(/\/$/, "");
 const slug = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -202,7 +200,7 @@ function detailPage(t, i) {
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page">
+  <div class="page page-detail">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">${esc(SITE.tagline)}</a></span>
@@ -227,9 +225,8 @@ function detailPage(t, i) {
 ${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>In daily use · № ${esc(t.num)} of ${pad(TOOLS.length)}</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="${escAttr(t.repo)}" target="_blank" rel="noopener">${esc(t.repoLabel)} ↗</a></p></div>
         </aside>
-      </div>
 
-      <div class="sections">
+        <div class="sections">
         <section class="section">
           <h2>Why</h2>
           <div class="body">${esc(t.why)}</div>
@@ -246,9 +243,8 @@ ${steps}
             </ol>${specimen}
           </div>
         </section>
+        </div>
       </div>
-
-      <p class="fieldnote">${esc(t.note)}</p>
 
       <a class="back-link" href="../index.html">← Back to the log</a>
 
@@ -264,7 +260,7 @@ ${steps}
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="${escAttr(SITE.curator.name)}" loading="lazy">
           <div>
-            <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor)}. Making AI accessible for everyone.</p>
+            <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor)}. I write these up so the tools stay usable by people who don't ship code for a living.</p>
             <p class="colophon-links m">
               <a href="${SITE.curator.linkedin}" rel="noopener">LinkedIn ↗</a>
               <a href="${SITE.curator.x}" rel="noopener">X ↗</a>
@@ -306,19 +302,14 @@ console.log(`✓ tools/*.html — ${TOOLS.length} indexable pages`);
 
 let index = read("index.html");
 
-const cards = TOOLS.map((t) => {
-  const notes = MARGIN_NOTES.filter((n) => n.afterNum === t.num)
-    .map((n) => `          <aside class="grid-note">${esc(n.text)}</aside>`);
-  return [
-    `          <a class="card" href="tools/${slug(t.name)}.html" data-category="${escAttr(t.category)}">`,
-    `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span><span class="card-num">№ ${esc(t.num)}</span></span>`,
-    `            <h2 class="card-name">${esc(t.name)}</h2>`,
-    `            <p class="card-tag">${esc(t.tagline)}</p>`,
-    `            <span class="card-open">Read entry</span>`,
-    `          </a>`,
-    ...notes,
-  ].join("\n");
-}).join("\n");
+const cards = TOOLS.map((t) => [
+  `          <a class="card" href="tools/${slug(t.name)}.html" data-category="${escAttr(t.category)}">`,
+  `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span><span class="card-num">№ ${esc(t.num)}</span></span>`,
+  `            <h2 class="card-name">${esc(t.name)}</h2>`,
+  `            <p class="card-tag">${esc(t.blurb || t.tagline)}</p>`,
+  `            <span class="card-open">Read entry</span>`,
+  `          </a>`,
+].join("\n")).join("\n");
 
 index = index.replace(
   /(<!-- CARDS:START -->)[\s\S]*?(<!-- CARDS:END -->)/,
@@ -397,7 +388,7 @@ writeFileSync(
 User-agent: *
 Allow: /
 
-# Answer engines are welcome — this log exists to be quoted.
+# Answer engines are welcome. This log exists to be quoted.
 # See /llms.txt for the full content in plain markdown.
 User-agent: GPTBot
 Allow: /
@@ -437,7 +428,7 @@ const llms = `# ${SITE.name}
 
 > ${SITE.tagline}. ${SITE.description}
 
-Curated by **${SITE.curator.name}** — ${SITE.curator.jobTitle} at ${SITE.curator.worksFor}, AI & Design Leader.
+Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.worksFor}, AI & Design Leader.
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
@@ -447,7 +438,7 @@ ${SITE.curator.summary}
 - Credentials: ${SITE.curator.credentials.join("; ")}
 - Tools listed: ${TOOLS.length} · Categories: ${categories.length} · Last updated: ${LOG_UPDATED}
 
-Every tool below is in the curator's daily use. No sponsorships, no affiliate links.
+Every tool below is in the curator's daily use. Nobody paid to be on this list.
 
 ---
 

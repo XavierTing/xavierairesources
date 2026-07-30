@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Figma MCP — Your design file, readable by your coding agent | AI Resources</title>
-  <meta name="description" content="Your design file, readable by your coding agent. Screenshot handoff makes agents guess: they eyeball spacing, invent hex values, and rebuild components you already shipped. Figma's official MCP server hands the agent the real source instead — variables, components, layout data, and Code Connect mapp">
+  <title>Figma MCP — Lets AI read your real design file, not a screenshot | AI Resources</title>
+  <meta name="description" content="Lets AI read your real design file, not a screenshot. Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you buil">
   <link rel="canonical" href="https://ai-resources.vercel.app/tools/figma-mcp.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Figma MCP — Your design file, readable by your coding agent | AI Resources">
-  <meta property="og:description" content="Your design file, readable by your coding agent. Screenshot handoff makes agents guess: they eyeball spacing, invent hex values, and rebuild components you already shipped. Figma's official MCP server hands the agent the real source instead — variables, components, layout data, and Code Connect mapp">
+  <meta property="og:title" content="Figma MCP — Lets AI read your real design file, not a screenshot | AI Resources">
+  <meta property="og:description" content="Lets AI read your real design file, not a screenshot. Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you buil">
   <meta property="og:url" content="https://ai-resources.vercel.app/tools/figma-mcp.html">
   <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
       "@id": "https://ai-resources.vercel.app/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President, Customer Experience Design",
-      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
       "url": "https://ai-resources.vercel.app",
       "worksFor": {
@@ -77,7 +77,7 @@
       "url": "https://ai-resources.vercel.app/",
       "name": "AI Resources",
       "alternateName": "AI for the rest of us",
-      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://ai-resources.vercel.app/#curator"
@@ -90,7 +90,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://ai-resources.vercel.app/tools/figma-mcp.html#tool",
       "name": "Figma MCP",
-      "description": "Your design file, readable by your coding agent",
+      "description": "Lets AI read your real design file, not a screenshot",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://developers.figma.com/docs/figma-mcp-server/",
@@ -105,8 +105,8 @@
       "@type": "WebPage",
       "@id": "https://ai-resources.vercel.app/tools/figma-mcp.html#page",
       "url": "https://ai-resources.vercel.app/tools/figma-mcp.html",
-      "name": "Figma MCP — Your design file, readable by your coding agent | AI Resources",
-      "description": "Your design file, readable by your coding agent. Screenshot handoff makes agents guess: they eyeball spacing, invent hex values, and rebuild components you already shipped. Figma's official MCP server hands the agent the real source instead — variables, components, layout data, and Code Connect mapp",
+      "name": "Figma MCP — Lets AI read your real design file, not a screenshot | AI Resources",
+      "description": "Lets AI read your real design file, not a screenshot. Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you buil",
       "isPartOf": {
         "@id": "https://ai-resources.vercel.app/#website"
       },
@@ -155,7 +155,7 @@
       "name": "Why use Figma MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Screenshot handoff makes agents guess: they eyeball spacing, invent hex values, and rebuild components you already shipped. Figma's official MCP server hands the agent the real source instead — variables, components, layout data, and Code Connect mappings — and it writes back to canvas, so the loop runs both directions."
+        "text": "Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Figma MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Any build that starts from a design file, and any time production drift needs pulling back to the system. Select a frame, point the agent at it, and review what it generates against the tokens rather than the picture."
+        "text": "Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Figma MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add the remote server to your agent (or install the Figma plugin, if your client offers one). Open the Figma desktop or web file and select the frame you want built. Ask your agent to implement the selection; it reads variables and components instead of pixels. Command: claude mcp add --transport http figma https://mcp.figma.com/mcp"
+        "text": "Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one. Open the file in Figma and select the frame you want built. Ask your assistant to build the selection. It reads the real values instead of guessing from pixels. Command: claude mcp add --transport http figma https://mcp.figma.com/mcp"
       }
     }
   ]
@@ -186,7 +186,7 @@
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page">
+  <div class="page page-detail">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
@@ -203,7 +203,7 @@
       <div class="detail">
         <div class="detail-main">
           <h1 class="detail-title">Figma MCP</h1>
-          <p class="detail-lede">Your design file, readable by your coding agent.</p>
+          <p class="detail-lede">Lets AI read your real design file, not a screenshot.</p>
         </div>
 
         <aside class="meta">
@@ -212,24 +212,23 @@
           <div><h2>Curator's status</h2><p>In daily use · № 10 of 10</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener">VIEW DOCS ↗</a></p></div>
         </aside>
-      </div>
 
-      <div class="sections">
+        <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Screenshot handoff makes agents guess: they eyeball spacing, invent hex values, and rebuild components you already shipped. Figma's official MCP server hands the agent the real source instead — variables, components, layout data, and Code Connect mappings — and it writes back to canvas, so the loop runs both directions.</div>
+          <div class="body">Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Any build that starts from a design file, and any time production drift needs pulling back to the system. Select a frame, point the agent at it, and review what it generates against the tokens rather than the picture.</div>
+          <div class="body">Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add the remote server to your agent (or install the Figma plugin, if your client offers one).</li>
-            <li>Open the Figma desktop or web file and select the frame you want built.</li>
-            <li>Ask your agent to implement the selection; it reads variables and components instead of pixels.</li>
+            <li>Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one.</li>
+            <li>Open the file in Figma and select the frame you want built.</li>
+            <li>Ask your assistant to build the selection. It reads the real values instead of guessing from pixels.</li>
             </ol>
           <div class="specimen">
             <code>claude mcp add --transport http figma https://mcp.figma.com/mcp</code>
@@ -238,9 +237,8 @@
           </div>
           </div>
         </section>
+        </div>
       </div>
-
-      <p class="fieldnote">The handoff step I stopped doing by hand.</p>
 
       <a class="back-link" href="../index.html">← Back to the log</a>
 
@@ -256,7 +254,7 @@
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
           <div>
-            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. I write these up so the tools stay usable by people who don't ship code for a living.</p>
             <p class="colophon-links m">
               <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
               <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
