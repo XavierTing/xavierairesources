@@ -207,6 +207,24 @@ const TOOLS = [
     ],
     command: "claude mcp add --transport http figma https://mcp.figma.com/mcp",
     note: "The handover step I stopped doing by hand."
+  },
+  {
+    num: "11",
+    name: "Obsidian Skills",
+    category: "Knowledge",
+    tagline: "Teaches your AI to work inside your Obsidian notes",
+    blurb: "Obsidian keeps your notes as plain files on your own computer. This teaches an AI assistant to read and write them properly: the links between notes, the canvases, the tables.",
+    repo: "https://github.com/kepano/obsidian-skills",
+    repoLabel: "VIEW REPO",
+    why: "Obsidian stores your notes as ordinary text files on your own machine, which means an assistant can work on them directly. Left to itself though, it writes plain text and misses everything that makes a set of notes worth having: the links between them, the properties at the top of each one, the canvases, the tables. These five skills teach it the real formats, so what it writes behaves like an actual Obsidian note rather than a file that happens to sit in the folder.",
+    when: "Any time you want an assistant working inside your notes rather than in a chat window. Turning research into linked notes, laying out a canvas, or building one of Obsidian's tables without learning the syntax yourself.",
+    how: [
+      "Install the skills into whichever assistant you use. They follow the open Agent Skills standard, so Claude Code, Codex and Open Code all read the same files.",
+      "Point the assistant at your vault, which is simply the folder your notes already live in.",
+      "Ask for what you want in plain words. It handles the links, the properties and the canvas format itself."
+    ],
+    command: "npx skills add https://github.com/kepano/obsidian-skills",
+    note: "Five skills on an open standard, so they are not tied to one assistant."
   }
 ];
 

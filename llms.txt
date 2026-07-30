@@ -10,7 +10,7 @@ AI & Design Leader. I build with AI daily and write up what works, so the tools 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 10 · Categories: 6 · Last updated: 30.07.2026
+- Tools listed: 11 · Categories: 6 · Last updated: 30.07.2026
 
 Every tool below is in the curator's daily use. Nobody paid to be on this list.
 
@@ -245,13 +245,36 @@ Any build that starts from a design file, and any time the live product has drif
 
 ---
 
+## 11. Obsidian Skills — Teaches your AI to work inside your Obsidian notes
+
+- **Category:** Knowledge
+- **Made by:** kepano
+- **Source:** https://github.com/kepano/obsidian-skills
+- **Page:** https://ai-resources.vercel.app/tools/obsidian-skills.html
+- **Install / run:** `npx skills add https://github.com/kepano/obsidian-skills`
+
+**Why use Obsidian Skills?**
+Obsidian stores your notes as ordinary text files on your own machine, which means an assistant can work on them directly. Left to itself though, it writes plain text and misses everything that makes a set of notes worth having: the links between them, the properties at the top of each one, the canvases, the tables. These five skills teach it the real formats, so what it writes behaves like an actual Obsidian note rather than a file that happens to sit in the folder.
+
+**When should you use Obsidian Skills?**
+Any time you want an assistant working inside your notes rather than in a chat window. Turning research into linked notes, laying out a canvas, or building one of Obsidian's tables without learning the syntax yourself.
+
+**How do you install and use Obsidian Skills?**
+1. Install the skills into whichever assistant you use. They follow the open Agent Skills standard, so Claude Code, Codex and Open Code all read the same files.
+2. Point the assistant at your vault, which is simply the folder your notes already live in.
+3. Ask for what you want in plain words. It handles the links, the properties and the canvas format itself.
+
+**Curator's note:** Five skills on an open standard, so they are not tied to one assistant.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP
 - **Workflow**: Superpowers, Spec-Kit
 - **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach
 - **Coding**: Repomix
-- **Knowledge**: LLM Wiki
+- **Knowledge**: LLM Wiki, Obsidian Skills
 - **Writing**: Humanizer
 
 ## Citation
