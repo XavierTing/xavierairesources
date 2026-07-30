@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM Wiki — A second brain your model maintains for you | AI Resources</title>
+  <meta name="description" content="A second brain your model maintains for you. RAG re-reads everything on every question and synthesizes nothing. Karpathy's pattern makes the LLM maintain a persistent markdown wiki over your sources: ingest, cross-link, flag contradictions. Knowledge compiles once and stays current.">
+  <link rel="canonical" href="https://ai-resources.vercel.app/tools/llm-wiki.html">
+  <meta name="author" content="Xavier Ting">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Resources">
+  <meta property="og:title" content="LLM Wiki — A second brain your model maintains for you | AI Resources">
+  <meta property="og:description" content="A second brain your model maintains for you. RAG re-reads everything on every question and synthesizes nothing. Karpathy's pattern makes the LLM maintain a persistent markdown wiki over your sources: ingest, cross-link, flag contradictions. Knowledge compiles once and stays current.">
+  <meta property="og:url" content="https://ai-resources.vercel.app/tools/llm-wiki.html">
+  <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@xaviertingai">
+  <meta name="twitter:site" content="@xaviertingai">
+  <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ai-resources.vercel.app/#curator",
+      "name": "Xavier Ting",
+      "jobTitle": "Vice President, Customer Experience Design",
+      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
+      "url": "https://ai-resources.vercel.app",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OCBC"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/xavierting/",
+        "https://x.com/xaviertingai",
+        "https://www.xavierting.com/"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Generative AI",
+        "AI Agents",
+        "Customer Experience Design",
+        "Product Design",
+        "Design Systems",
+        "Prompt Engineering",
+        "User Experience",
+        "Product Management"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Master Certified Nielsen Norman Group UX Specialist"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Scrum Master and Product Owner"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified LEGO® SERIOUS PLAY® facilitator"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ai-resources.vercel.app/#website",
+      "url": "https://ai-resources.vercel.app/",
+      "name": "AI Resources",
+      "alternateName": "AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      },
+      "creator": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://ai-resources.vercel.app/tools/llm-wiki.html#tool",
+      "name": "LLM Wiki",
+      "description": "A second brain your model maintains for you",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cross-platform",
+      "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "author": {
+        "@type": "Organization",
+        "name": "karpathy"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ai-resources.vercel.app/tools/llm-wiki.html#page",
+      "url": "https://ai-resources.vercel.app/tools/llm-wiki.html",
+      "name": "LLM Wiki — A second brain your model maintains for you | AI Resources",
+      "description": "A second brain your model maintains for you. RAG re-reads everything on every question and synthesizes nothing. Karpathy's pattern makes the LLM maintain a persistent markdown wiki over your sources: ingest, cross-link, flag contradictions. Knowledge compiles once and stays current.",
+      "isPartOf": {
+        "@id": "https://ai-resources.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://ai-resources.vercel.app/tools/llm-wiki.html#tool"
+      },
+      "reviewedBy": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      },
+      "primaryImageOfPage": "https://ai-resources.vercel.app/og-image.png",
+      "dateModified": "2026-07-30"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Resources",
+          "item": "https://ai-resources.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Knowledge",
+          "item": "https://ai-resources.vercel.app/#knowledge"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LLM Wiki",
+          "item": "https://ai-resources.vercel.app/tools/llm-wiki.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why use LLM Wiki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RAG re-reads everything on every question and synthesizes nothing. Karpathy's pattern makes the LLM maintain a persistent markdown wiki over your sources: ingest, cross-link, flag contradictions. Knowledge compiles once and stays current."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should you use LLM Wiki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Building a durable personal knowledge base out of notes, papers, and bookmarks that should get better with every source you add."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you install and use LLM Wiki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read the gist — it's a pattern, not a package. Write your schema doc: how pages, entities, and links should be structured. Point your agent at new sources to ingest; query the wiki, lint it periodically."
+      }
+    }
+  ]
+}
+  </script>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#tool-root">Skip to content</a>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="strip m">
+      <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
+      <span>Est. 07.2026</span>
+    </header>
+
+    <main id="tool-root">
+      <nav class="crumbs m" aria-label="Breadcrumb">
+        <a href="../index.html">The log</a>
+        <span class="sep">/</span>
+        <span class="here">LLM Wiki</span>
+      </nav>
+
+      <div class="detail">
+        <div class="detail-main">
+          <h1 class="detail-title">LLM Wiki</h1>
+          <p class="detail-lede">A second brain your model maintains for you.</p>
+        </div>
+
+        <aside class="meta">
+          <div><h2>Category</h2><p class="meta-cat">Knowledge</p></div>
+          <div><h2>Made by</h2><p>karpathy</p></div>
+          <div><h2>Curator's status</h2><p>In daily use · № 08 of 10</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">VIEW GIST ↗</a></p></div>
+        </aside>
+      </div>
+
+      <div class="sections">
+        <section class="section">
+          <h2>Why</h2>
+          <div class="body">RAG re-reads everything on every question and synthesizes nothing. Karpathy's pattern makes the LLM maintain a persistent markdown wiki over your sources: ingest, cross-link, flag contradictions. Knowledge compiles once and stays current.</div>
+        </section>
+        <section class="section">
+          <h2>When</h2>
+          <div class="body">Building a durable personal knowledge base out of notes, papers, and bookmarks that should get better with every source you add.</div>
+        </section>
+        <section class="section">
+          <h2>How</h2>
+          <div class="body">
+            <ol>
+            <li>Read the gist — it's a pattern, not a package.</li>
+            <li>Write your schema doc: how pages, entities, and links should be structured.</li>
+            <li>Point your agent at new sources to ingest; query the wiki, lint it periodically.</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+
+      <p class="fieldnote">The rare idea that improves the longer you run it.</p>
+
+      <a class="back-link" href="../index.html">← Back to the log</a>
+
+      <nav class="pager" aria-label="More tools">
+        <a href="agent-reach.html">← Agent-Reach</a>
+        <a href="humanizer.html">Humanizer →</a>
+      </nav>
+    </main>
+
+    <footer class="colophon">
+      <div>
+        <h2>Logged &amp; maintained</h2>
+        <div class="colophon-who">
+          <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
+          <div>
+            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p class="colophon-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Credentials</h2>
+        <p>Master Certified Nielsen Norman Group UX Specialist · Certified Scrum Master and Product Owner · Certified LEGO® SERIOUS PLAY® facilitator</p>
+      </div>
+      <div>
+        <h2>Status</h2>
+        <p>10 tools · Last updated 30.07.2026</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../tools.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

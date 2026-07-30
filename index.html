@@ -1,0 +1,486 @@
+<!doctype html>
+<!--
+THESIS: The curator's daily stack as a signal field — a dark instrument
+panel under a drifting aurora. Follows the claude.com/plugins layout
+(card grid + detail pages) the user pinned, without its brand.
+OWN-WORLD: Near-black ground (#0a0b0f), three aurora glow fields drifting
+behind everything; glass-edged rounded cards; pulse blue for information,
+ember for attention; Montserrat display, Poppins body, Fragment Mono for
+labels and commands.
+STORY: A peer lands in atmosphere, scans the cards, filters by tab,
+opens a detail page, copies a command, leaves with the stack.
+FIRST VIEWPORT: Kicker, headline, sub, byline, counts — then tabs and
+the first card row already visible. Aurora breathing behind.
+FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
+— brief beats the roll. Replaces the earlier Field Log world.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Resources — 10 AI tools I use daily | Xavier Ting</title>
+  <meta name="description" content="AI for the rest of us. The 10 AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it. No hype, no affiliate links.">
+  <meta name="author" content="Xavier Ting">
+  <link rel="canonical" href="https://ai-resources.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AI Resources">
+  <meta property="og:title" content="AI Resources — 10 AI tools I use daily | Xavier Ting">
+  <meta property="og:description" content="AI for the rest of us. The AI tools I use daily to design, build, and write — why each one matters, when to reach for it, and how to install it.">
+  <meta property="og:url" content="https://ai-resources.vercel.app/">
+  <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Resources — the tools Xavier Ting uses daily to design, build and write with AI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@xaviertingai">
+  <meta name="twitter:site" content="@xaviertingai">
+  <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- JSONLD:START -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ai-resources.vercel.app/#curator",
+      "name": "Xavier Ting",
+      "jobTitle": "Vice President, Customer Experience Design",
+      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
+      "url": "https://ai-resources.vercel.app",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OCBC"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/xavierting/",
+        "https://x.com/xaviertingai",
+        "https://www.xavierting.com/"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Generative AI",
+        "AI Agents",
+        "Customer Experience Design",
+        "Product Design",
+        "Design Systems",
+        "Prompt Engineering",
+        "User Experience",
+        "Product Management"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Master Certified Nielsen Norman Group UX Specialist"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Scrum Master and Product Owner"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified LEGO® SERIOUS PLAY® facilitator"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ai-resources.vercel.app/#website",
+      "url": "https://ai-resources.vercel.app/",
+      "name": "AI Resources",
+      "alternateName": "AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      },
+      "creator": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://ai-resources.vercel.app/#webpage",
+      "url": "https://ai-resources.vercel.app/",
+      "name": "AI Resources — AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "isPartOf": {
+        "@id": "https://ai-resources.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      },
+      "primaryImageOfPage": "https://ai-resources.vercel.app/og-image.png",
+      "dateModified": "2026-07-30"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://ai-resources.vercel.app/#toollist",
+      "name": "AI Resources: the 10 AI tools Xavier Ting uses daily",
+      "numberOfItems": 10,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://ai-resources.vercel.app/tools/impeccable.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/impeccable.html#tool",
+            "name": "Impeccable",
+            "description": "Design taste for AI coding agents",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/pbakaus/impeccable",
+            "author": {
+              "@type": "Organization",
+              "name": "pbakaus"
+            },
+            "installUrl": "https://github.com/pbakaus/impeccable",
+            "softwareHelp": "https://github.com/pbakaus/impeccable"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://ai-resources.vercel.app/tools/superpowers.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/superpowers.html#tool",
+            "name": "Superpowers",
+            "description": "Engineering discipline for Claude Code",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/obra/superpowers",
+            "author": {
+              "@type": "Organization",
+              "name": "obra"
+            },
+            "installUrl": "https://github.com/obra/superpowers",
+            "softwareHelp": "https://github.com/obra/superpowers"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://ai-resources.vercel.app/tools/spec-kit.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/spec-kit.html#tool",
+            "name": "Spec-Kit",
+            "description": "Spec-driven development, by GitHub",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/github/spec-kit",
+            "author": {
+              "@type": "Organization",
+              "name": "github"
+            },
+            "installUrl": "https://github.com/github/spec-kit",
+            "softwareHelp": "https://github.com/github/spec-kit"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://ai-resources.vercel.app/tools/chrome-devtools-mcp.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/chrome-devtools-mcp.html#tool",
+            "name": "Chrome DevTools MCP",
+            "description": "Gives your coding agent eyes in the browser",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "author": {
+              "@type": "Organization",
+              "name": "ChromeDevTools"
+            },
+            "installUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "softwareHelp": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://ai-resources.vercel.app/tools/context7.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/context7.html#tool",
+            "name": "Context7",
+            "description": "Current library docs, injected at generation time",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/upstash/context7",
+            "author": {
+              "@type": "Organization",
+              "name": "upstash"
+            },
+            "installUrl": "https://github.com/upstash/context7",
+            "softwareHelp": "https://github.com/upstash/context7"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://ai-resources.vercel.app/tools/repomix.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/repomix.html#tool",
+            "name": "Repomix",
+            "description": "Your whole repo, packed into one AI-readable file",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/yamadashy/repomix",
+            "author": {
+              "@type": "Organization",
+              "name": "yamadashy"
+            },
+            "installUrl": "https://github.com/yamadashy/repomix",
+            "softwareHelp": "https://github.com/yamadashy/repomix"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://ai-resources.vercel.app/tools/agent-reach.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/agent-reach.html#tool",
+            "name": "Agent-Reach",
+            "description": "Your agent, unblocked on the real internet",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/Panniantong/Agent-Reach",
+            "author": {
+              "@type": "Organization",
+              "name": "Panniantong"
+            },
+            "installUrl": "https://github.com/Panniantong/Agent-Reach",
+            "softwareHelp": "https://github.com/Panniantong/Agent-Reach"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://ai-resources.vercel.app/tools/llm-wiki.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/llm-wiki.html#tool",
+            "name": "LLM Wiki",
+            "description": "A second brain your model maintains for you",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+            "author": {
+              "@type": "Organization",
+              "name": "karpathy"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://ai-resources.vercel.app/tools/humanizer.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/humanizer.html#tool",
+            "name": "Humanizer",
+            "description": "Deletes the AI accent from your writing",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://github.com/blader/humanizer",
+            "author": {
+              "@type": "Organization",
+              "name": "blader"
+            },
+            "installUrl": "https://github.com/blader/humanizer",
+            "softwareHelp": "https://github.com/blader/humanizer"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://ai-resources.vercel.app/tools/figma-mcp.html",
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://ai-resources.vercel.app/tools/figma-mcp.html#tool",
+            "name": "Figma MCP",
+            "description": "Your design file, readable by your coding agent",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://developers.figma.com/docs/figma-mcp-server/",
+            "author": {
+              "@type": "Organization",
+              "name": "Figma"
+            },
+            "installUrl": "https://developers.figma.com/docs/figma-mcp-server/",
+            "softwareHelp": "https://developers.figma.com/docs/figma-mcp-server/"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- JSONLD:END -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#log">Skip to the log</a>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="strip m">
+      <span class="strip-id">AI for the rest of us</span>
+      <span>Est. 07.2026</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Introduction">
+        <p class="hero-kicker m">Curated field notes · <span data-count="entries">09</span> tools</p>
+
+        <h1 class="headline">AI Resources</h1>
+
+        <p class="hero-sub">
+          I build with AI daily and share what I learn. These are the tools I
+          actually reach for — why each one matters, when to reach for it, and
+          how to run it. No hype, no affiliate links.
+        </p>
+
+        <div class="hero-byline">
+          <img class="avatar" src="assets/portrait.jpg"
+               width="68" height="68" alt="Xavier Ting">
+          <span>
+            <span class="byline-name">Curated by Xavier Ting</span>
+            <span class="byline-role">VP, Customer Experience Design at OCBC · AI &amp; Design Leader</span>
+            <span class="byline-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+            </span>
+          </span>
+        </div>
+
+        <p class="hero-counts m">
+          <span>Tools <b data-count="entries">09</b></span>
+          <span>Categories <b data-count="categories">06</b></span>
+          <span>In daily use <b>All</b></span>
+        </p>
+      </section>
+
+      <section id="log" aria-label="The tools">
+        <div class="tabs-row">
+          <div class="tabs" id="tabs" role="group" aria-label="Filter tools by category"></div>
+          <p class="tab-count m" id="tab-count" aria-live="polite"></p>
+        </div>
+
+        <div class="grid" id="grid">
+        <!-- CARDS:START -->
+          <a class="card" href="tools/impeccable.html" data-category="Design">
+            <span class="card-top"><span class="card-cat m">Design</span><span class="card-num">№ 01</span></span>
+            <h2 class="card-name">Impeccable</h2>
+            <p class="card-tag">Design taste for AI coding agents</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/superpowers.html" data-category="Workflow">
+            <span class="card-top"><span class="card-cat m">Workflow</span><span class="card-num">№ 02</span></span>
+            <h2 class="card-name">Superpowers</h2>
+            <p class="card-tag">Engineering discipline for Claude Code</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/spec-kit.html" data-category="Workflow">
+            <span class="card-top"><span class="card-cat m">Workflow</span><span class="card-num">№ 03</span></span>
+            <h2 class="card-name">Spec-Kit</h2>
+            <p class="card-tag">Spec-driven development, by GitHub</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <aside class="grid-note">No tool lands here on launch-week hype.</aside>
+          <a class="card" href="tools/chrome-devtools-mcp.html" data-category="Agents &amp; MCP">
+            <span class="card-top"><span class="card-cat m">Agents &amp; MCP</span><span class="card-num">№ 04</span></span>
+            <h2 class="card-name">Chrome DevTools MCP</h2>
+            <p class="card-tag">Gives your coding agent eyes in the browser</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/context7.html" data-category="Agents &amp; MCP">
+            <span class="card-top"><span class="card-cat m">Agents &amp; MCP</span><span class="card-num">№ 05</span></span>
+            <h2 class="card-name">Context7</h2>
+            <p class="card-tag">Current library docs, injected at generation time</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/repomix.html" data-category="Coding">
+            <span class="card-top"><span class="card-cat m">Coding</span><span class="card-num">№ 06</span></span>
+            <h2 class="card-name">Repomix</h2>
+            <p class="card-tag">Your whole repo, packed into one AI-readable file</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <aside class="grid-note">Taste is a stack decision.</aside>
+          <a class="card" href="tools/agent-reach.html" data-category="Agents &amp; MCP">
+            <span class="card-top"><span class="card-cat m">Agents &amp; MCP</span><span class="card-num">№ 07</span></span>
+            <h2 class="card-name">Agent-Reach</h2>
+            <p class="card-tag">Your agent, unblocked on the real internet</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/llm-wiki.html" data-category="Knowledge">
+            <span class="card-top"><span class="card-cat m">Knowledge</span><span class="card-num">№ 08</span></span>
+            <h2 class="card-name">LLM Wiki</h2>
+            <p class="card-tag">A second brain your model maintains for you</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/humanizer.html" data-category="Writing">
+            <span class="card-top"><span class="card-cat m">Writing</span><span class="card-num">№ 09</span></span>
+            <h2 class="card-name">Humanizer</h2>
+            <p class="card-tag">Deletes the AI accent from your writing</p>
+            <span class="card-open">Read entry</span>
+          </a>
+          <a class="card" href="tools/figma-mcp.html" data-category="Design">
+            <span class="card-top"><span class="card-cat m">Design</span><span class="card-num">№ 10</span></span>
+            <h2 class="card-name">Figma MCP</h2>
+            <p class="card-tag">Your design file, readable by your coding agent</p>
+            <span class="card-open">Read entry</span>
+          </a>
+        <!-- CARDS:END -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <div>
+        <h2>Logged &amp; maintained</h2>
+        <div class="colophon-who">
+          <img class="avatar" src="assets/portrait.jpg"
+               width="44" height="44" alt="Xavier Ting" loading="lazy">
+          <div>
+            <p>Xavier Ting · VP, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p class="colophon-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Credentials</h2>
+        <p>Master Certified Nielsen Norman Group UX Specialist · Certified Scrum Master and Product Owner · Certified LEGO® SERIOUS PLAY® facilitator</p>
+      </div>
+      <div>
+        <h2>Status</h2>
+        <p><span data-count="entries">09</span> tools · Last updated <span data-updated>30.07.2026</span></p>
+        <p>Built by hand. No frameworks, no cookies, no ad tracking.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="tools.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

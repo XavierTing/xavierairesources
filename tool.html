@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting… | AI Resources</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://ai-resources.vercel.app/">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Legacy URL shape: tool.html?tool=<slug> now lives at tools/<slug>.html */
+    (function () {
+      var s = new URLSearchParams(location.search).get("tool");
+      location.replace(s ? "tools/" + s.replace(/[^a-z0-9-]/gi, "").toLowerCase() + ".html" : "index.html");
+    })();
+  </script>
+</head>
+<body>
+  <div class="page">
+    <p style="padding:64px 0;">
+      This page moved. <a href="index.html">Go to AI Resources →</a>
+    </p>
+  </div>
+</body>
+</html>

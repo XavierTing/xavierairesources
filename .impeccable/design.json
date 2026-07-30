@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-30T10:05:00+08:00",
+  "title": "Design System: AI Resources — Signal Field",
+  "extensions": {
+    "colorMeta": {
+      "accent-gold": {
+        "role": "primary",
+        "displayName": "Brand Gold",
+        "canonical": "#e0bf91",
+        "tonalRamp": [
+          "#2b2318",
+          "#463a26",
+          "#66543a",
+          "#8a7250",
+          "#ad9068",
+          "#c9a97c",
+          "#e0bf91",
+          "#f0dcbe"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Warm Void",
+        "canonical": "#0a0908"
+      },
+      "bg-raise": {
+        "role": "neutral",
+        "displayName": "Raise",
+        "canonical": "#131110"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#f4f2ef"
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "canonical": "#c4bfb6"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#948d82"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Index headline only."
+      },
+      "detail-title": {
+        "displayName": "Detail Title",
+        "purpose": "Tool name on its detail page."
+      },
+      "card-name": {
+        "displayName": "Card Name",
+        "purpose": "Tool names in the grid."
+      },
+      "lede-detail": {
+        "displayName": "Detail Lede",
+        "purpose": "The detail page's opening line."
+      },
+      "lead": {
+        "displayName": "Hero Lead",
+        "purpose": "Index hero subline."
+      },
+      "label": {
+        "displayName": "Signal Label",
+        "purpose": "Tabs, meta, counts, section headings — the single micro size."
+      },
+      "chip": {
+        "displayName": "Chip",
+        "purpose": "Category pill chips only — the one smaller step."
+      },
+      "command": {
+        "displayName": "Command / Notes",
+        "purpose": "Install commands; italic for curator marginalia."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-hover-glow",
+        "value": "0 12px 40px -18px rgba(224,191,145,0.3)",
+        "purpose": "The only card shadow: gold-tinted lift on hover."
+      },
+      {
+        "name": "tab-active-glow",
+        "value": "0 0 12px 1px rgba(224,191,145,0.13)",
+        "purpose": "Soft gold glow under the active tab underline."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every transition. Exponential ease-out only."
+      },
+      {
+        "name": "aurora-drift",
+        "value": "64s / 76s / 88s ease-in-out infinite alternate",
+        "purpose": "Three warm glow fields breathing. Static under reduced motion."
+      },
+      {
+        "name": "copy-pulse",
+        "value": "pulse-ring 0.5s ease-out",
+        "purpose": "One expanding gold ring when a command is copied."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "two-col",
+        "value": "1020px"
+      },
+      {
+        "name": "one-col",
+        "value": "640px"
+      }
+    ],
+    "aurora": [
+      {
+        "name": "aurora-gold",
+        "value": "rgba(224,191,145,0.10)",
+        "purpose": "Brightest, lowest-alpha glow field. Background only."
+      },
+      {
+        "name": "aurora-copper",
+        "value": "rgba(190,130,80,0.14)",
+        "purpose": "Mid warm glow field. Background only."
+      },
+      {
+        "name": "aurora-bronze",
+        "value": "rgba(140,95,55,0.12)",
+        "purpose": "Deepest warm glow field. Background only."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tool Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Index grid card linking to a tool's detail page; glass surface, lifts with a gold glow on hover.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-top\"><span class=\"ds-chip\">DESIGN</span><span class=\"ds-num\">№ 01</span></span><span class=\"ds-card-name\">Impeccable</span><span class=\"ds-card-tag\">Design taste for AI coding agents</span><span class=\"ds-card-open\">READ ENTRY →</span></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 14px; padding: 26px 26px 22px; background: rgba(255,255,255,0.025); border: 1px solid rgba(244,242,239,0.1); border-radius: 16px; text-decoration: none; transition: border-color .25s ease-out, transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s ease-out; } .ds-card:hover { border-color: rgba(244,242,239,0.24); transform: translateY(-3px); box-shadow: 0 12px 40px -18px rgba(224,191,145,.3); } .ds-card-top { display: flex; justify-content: space-between; align-items: center; } .ds-chip { font-family: 'Fragment Mono', monospace; font-size: 0.66rem; letter-spacing: .08em; color: #e0bf91; padding: 5px 10px; border: 1px solid rgba(224,191,145,.3); border-radius: 999px; background: rgba(224,191,145,.13); } .ds-num { font-family: 'Fragment Mono', monospace; font-size: 0.72rem; color: #948d82; } .ds-card-name { font-family: Montserrat, sans-serif; font-weight: 700; font-size: 1.35rem; color: #f4f2ef; } .ds-card-tag { font-family: Poppins, sans-serif; font-size: 1rem; line-height: 1.7; color: #c4bfb6; } .ds-card-open { font-family: 'Fragment Mono', monospace; font-size: 0.72rem; letter-spacing: .08em; color: #948d82; }"
+    },
+    {
+      "name": "Category Tab (active)",
+      "kind": "chip",
+      "description": "Filter tab with animated gold underline and soft glow when active.",
+      "html": "<button class=\"ds-tab\" aria-pressed=\"true\">DESIGN</button>",
+      "css": ".ds-tab { appearance: none; background: transparent; border: none; position: relative; padding: 10px 14px 14px; font-family: 'Fragment Mono', monospace; font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase; color: #f4f2ef; cursor: pointer; } .ds-tab::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: -1px; height: 2px; background: #e0bf91; border-radius: 2px; box-shadow: 0 0 12px 1px rgba(224,191,145,.13); } .ds-tab:focus-visible { outline: 2px solid #e0bf91; outline-offset: 3px; }"
+    },
+    {
+      "name": "Command Block + Copy",
+      "kind": "custom",
+      "description": "Raised command surface with gold copy button; fills and pulse-rings on copy.",
+      "html": "<div class=\"ds-specimen\"><code>npx impeccable install</code><button class=\"ds-copy\">COPY</button></div>",
+      "css": ".ds-specimen { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: #131110; border: 1px solid rgba(244,242,239,0.1); border-radius: 10px; } .ds-specimen code { flex: 1; font-family: 'Fragment Mono', monospace; font-size: 0.875rem; color: #f4f2ef; overflow-wrap: anywhere; } .ds-copy { appearance: none; background: transparent; border: 1px solid #e0bf91; border-radius: 10px; color: #e0bf91; padding: 8px 14px; font-family: 'Fragment Mono', monospace; font-size: 0.72rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: background-color .15s ease-out, color .15s ease-out; } .ds-copy:hover { background: #e0bf91; color: #0a0908; }"
+    },
+    {
+      "name": "Meta Panel",
+      "kind": "card",
+      "description": "Detail-page sidebar: mono micro-labels over ink values on the glass surface.",
+      "html": "<aside class=\"ds-meta\"><div><h2 class=\"ds-meta-h\">CATEGORY</h2><p class=\"ds-meta-v ds-meta-cat\">Design</p></div><div><h2 class=\"ds-meta-h\">MADE BY</h2><p class=\"ds-meta-v\">pbakaus</p></div></aside>",
+      "css": ".ds-meta { display: flex; flex-direction: column; gap: 22px; padding: 26px; background: rgba(255,255,255,0.025); border: 1px solid rgba(244,242,239,0.1); border-radius: 16px; } .ds-meta-h { font-family: 'Fragment Mono', monospace; font-size: 0.66rem; font-weight: 400; letter-spacing: .12em; color: #948d82; margin: 0 0 6px; } .ds-meta-v { font-family: Poppins, sans-serif; font-size: 1rem; color: #f4f2ef; margin: 0; } .ds-meta-cat { color: #e0bf91; }"
+    },
+    {
+      "name": "Curator's Note",
+      "kind": "custom",
+      "description": "Mono italic pull-quote behind a 2px gold rule — the one place ember touches prose. Also appears as full-row grid asides after tools 03 and 06 (unfiltered log only).",
+      "html": "<p class=\"ds-note\">✎ The final gate before anything ships with my name on it.</p>",
+      "css": ".ds-note { padding-left: 18px; border-left: 2px solid #e0bf91; font-family: 'Fragment Mono', monospace; font-style: italic; font-size: 0.875rem; color: #f4f2ef; margin: 0; }"
+    },
+    {
+      "name": "Repo Link",
+      "kind": "custom",
+      "description": "External mono link with ↗; underline on hover only.",
+      "html": "<a class=\"ds-repo\" href=\"#\">VIEW REPO ↗</a>",
+      "css": ".ds-repo { font-family: 'Fragment Mono', monospace; font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase; color: #e0bf91; text-decoration: none; } .ds-repo:hover { text-decoration: underline; text-underline-offset: 3px; }"
+    },
+    {
+      "name": "Portrait",
+      "kind": "custom",
+      "description": "The curator's photo: one square file, circled and gold-ringed in CSS.",
+      "html": "<img class=\"ds-avatar\" src=\"assets/portrait.jpg\" width=\"68\" height=\"68\" alt=\"Xavier Ting\">",
+      "css": ".ds-avatar { width: 68px; height: 68px; border-radius: 50%; border: 2px solid #e0bf91; padding: 3px; object-fit: cover; background: #131110; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signal Field",
+    "overview": "A warm dark instrument panel under a drifting aurora: near-black warm ground with three slow-breathing glow fields (gold, copper, bronze) providing all the atmosphere, glass-edged rounded cards floating above, and one accent doing all the talking — Xavier's brand gold #e0bf91, the same gold as his LinkedIn banner and the ring around his portrait. Layout follows claude.com/plugins: card grid on the index, a full detail page per tool, category tabs kept.",
+    "keyCharacteristics": [
+      "Warm near-black sheet (#0a0908) with a fixed aurora layer drifting behind everything (60–90s cycles)",
+      "Glass cards: 2.5% white fill, 1px warm-white border, 16px radius; hover lifts with a gold-tinted glow",
+      "One accent, two treatments: gold outline = information, gold fill = action",
+      "Warmed neutrals throughout — no cool greys anywhere",
+      "The curator is present: portrait in a gold ring in the hero and colophon"
+    ],
+    "rules": [
+      {
+        "name": "The One-Gold Rule",
+        "body": "Gold is the only non-neutral hue that ever touches content. Differentiate by treatment (outline vs fill), never by adding a colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Atmosphere-Not-Chrome Rule",
+        "body": "Colour lives in the background field and small signals — never in gradient text, coloured panels, or neon outlines.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm-Neutral Rule",
+        "body": "Every grey carries a warm cast. A cool blue-grey next to this gold reads as a mistake.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measured-Mono Rule",
+        "body": "Fragment Mono appears only where the world measures, labels, or codes. Body prose is never mono.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do let the aurora carry all atmosphere — content surfaces stay glass-neutral.",
+      "Do keep hover physics consistent: lift + border-brighten + one soft glow, 0.25s ease-out.",
+      "Do respect prefers-reduced-motion everywhere: static aurora, no lifts, instant reveals.",
+      "Do keep every functional text ≥0.72rem (chips 0.66rem are the single exception)."
+    ],
+    "donts": [
+      "Don't use gradient text, neon outlines, scanlines, or grid/graph backgrounds (user-rejected).",
+      "Don't add a second accent hue or put aurora colours on content elements.",
+      "Don't introduce cool blue-grey neutrals.",
+      "Don't cast shadows except the card hover glow, active-tab glow, and copy pulse-ring.",
+      "Don't hardcode GitHub stars, install counts, or any metric the log cannot verify."
+    ]
+  }
+}

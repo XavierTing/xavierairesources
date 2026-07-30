@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spec-Kit — Spec-driven development, by GitHub | AI Resources</title>
+  <meta name="description" content="Spec-driven development, by GitHub. Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.">
+  <link rel="canonical" href="https://ai-resources.vercel.app/tools/spec-kit.html">
+  <meta name="author" content="Xavier Ting">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Resources">
+  <meta property="og:title" content="Spec-Kit — Spec-driven development, by GitHub | AI Resources">
+  <meta property="og:description" content="Spec-driven development, by GitHub. Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.">
+  <meta property="og:url" content="https://ai-resources.vercel.app/tools/spec-kit.html">
+  <meta property="og:image" content="https://ai-resources.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@xaviertingai">
+  <meta name="twitter:site" content="@xaviertingai">
+  <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ai-resources.vercel.app/#curator",
+      "name": "Xavier Ting",
+      "jobTitle": "Vice President, Customer Experience Design",
+      "description": "AI & Design Leader. I build with AI daily and share what I learn, making AI accessible for everyone.",
+      "image": "https://ai-resources.vercel.app/assets/portrait.jpg",
+      "url": "https://ai-resources.vercel.app",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OCBC"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/xavierting/",
+        "https://x.com/xaviertingai",
+        "https://www.xavierting.com/"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Generative AI",
+        "AI Agents",
+        "Customer Experience Design",
+        "Product Design",
+        "Design Systems",
+        "Prompt Engineering",
+        "User Experience",
+        "Product Management"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Master Certified Nielsen Norman Group UX Specialist"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Scrum Master and Product Owner"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified LEGO® SERIOUS PLAY® facilitator"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ai-resources.vercel.app/#website",
+      "url": "https://ai-resources.vercel.app/",
+      "name": "AI Resources",
+      "alternateName": "AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses daily to design, build, and write — why each one matters, when to reach for it, and how to install it.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      },
+      "creator": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://ai-resources.vercel.app/tools/spec-kit.html#tool",
+      "name": "Spec-Kit",
+      "description": "Spec-driven development, by GitHub",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cross-platform",
+      "url": "https://github.com/github/spec-kit",
+      "author": {
+        "@type": "Organization",
+        "name": "github"
+      },
+      "installUrl": "https://github.com/github/spec-kit",
+      "softwareHelp": "https://github.com/github/spec-kit"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ai-resources.vercel.app/tools/spec-kit.html#page",
+      "url": "https://ai-resources.vercel.app/tools/spec-kit.html",
+      "name": "Spec-Kit — Spec-driven development, by GitHub | AI Resources",
+      "description": "Spec-driven development, by GitHub. Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.",
+      "isPartOf": {
+        "@id": "https://ai-resources.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://ai-resources.vercel.app/tools/spec-kit.html#tool"
+      },
+      "reviewedBy": {
+        "@id": "https://ai-resources.vercel.app/#curator"
+      },
+      "primaryImageOfPage": "https://ai-resources.vercel.app/og-image.png",
+      "dateModified": "2026-07-30"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Resources",
+          "item": "https://ai-resources.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Workflow",
+          "item": "https://ai-resources.vercel.app/#workflow"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Spec-Kit",
+          "item": "https://ai-resources.vercel.app/tools/spec-kit.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why use Spec-Kit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should you use Spec-Kit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multi-session projects, team work, anything where “what we're building” has to outlive a single chat context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you install and use Spec-Kit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Install the specify CLI (needs uv). Run specify init inside your project. Drive with /speckit.specify → /speckit.plan → /speckit.implement in your agent. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
+      }
+    }
+  ]
+}
+  </script>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#tool-root">Skip to content</a>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="strip m">
+      <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
+      <span>Est. 07.2026</span>
+    </header>
+
+    <main id="tool-root">
+      <nav class="crumbs m" aria-label="Breadcrumb">
+        <a href="../index.html">The log</a>
+        <span class="sep">/</span>
+        <span class="here">Spec-Kit</span>
+      </nav>
+
+      <div class="detail">
+        <div class="detail-main">
+          <h1 class="detail-title">Spec-Kit</h1>
+          <p class="detail-lede">Spec-driven development, by GitHub.</p>
+        </div>
+
+        <aside class="meta">
+          <div><h2>Category</h2><p class="meta-cat">Workflow</p></div>
+          <div><h2>Made by</h2><p>github</p></div>
+          <div><h2>Curator's status</h2><p>In daily use · № 03 of 10</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+        </aside>
+      </div>
+
+      <div class="sections">
+        <section class="section">
+          <h2>Why</h2>
+          <div class="body">Vibe-coding drifts: by feature three, the agent is guessing what you meant in feature one. Spec-Kit inverts the relationship: an executable spec becomes the source of truth and implementations are derived from it.</div>
+        </section>
+        <section class="section">
+          <h2>When</h2>
+          <div class="body">Multi-session projects, team work, anything where “what we're building” has to outlive a single chat context.</div>
+        </section>
+        <section class="section">
+          <h2>How</h2>
+          <div class="body">
+            <ol>
+            <li>Install the specify CLI (needs uv).</li>
+            <li>Run specify init inside your project.</li>
+            <li>Drive with /speckit.specify → /speckit.plan → /speckit.implement in your agent.</li>
+            </ol>
+          <div class="specimen">
+            <code>uvx --from git+https://github.com/github/spec-kit.git specify init</code>
+            <button class="copy-btn" type="button" data-command="uvx --from git+https://github.com/github/spec-kit.git specify init"
+                    aria-label="Copy command: uvx --from git+https://github.com/github/spec-kit.git specify init">Copy</button>
+          </div>
+          </div>
+        </section>
+      </div>
+
+      <p class="fieldnote">The spec survives. Chat context doesn't.</p>
+
+      <a class="back-link" href="../index.html">← Back to the log</a>
+
+      <nav class="pager" aria-label="More tools">
+        <a href="superpowers.html">← Superpowers</a>
+        <a href="chrome-devtools-mcp.html">Chrome DevTools MCP →</a>
+      </nav>
+    </main>
+
+    <footer class="colophon">
+      <div>
+        <h2>Logged &amp; maintained</h2>
+        <div class="colophon-who">
+          <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
+          <div>
+            <p>Xavier Ting · Vice President, Customer Experience Design at OCBC. Making AI accessible for everyone.</p>
+            <p class="colophon-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Credentials</h2>
+        <p>Master Certified Nielsen Norman Group UX Specialist · Certified Scrum Master and Product Owner · Certified LEGO® SERIOUS PLAY® facilitator</p>
+      </div>
+      <div>
+        <h2>Status</h2>
+        <p>10 tools · Last updated 30.07.2026</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../tools.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

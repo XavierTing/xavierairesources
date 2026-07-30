@@ -1,0 +1,17 @@
+# Machine-local agent hooks — these hold absolute paths to this Mac and are
+# installed per-machine by `npx impeccable install`, not shared.
+.claude/settings.local.json
+.codex/hooks.json
+.impeccable/config.local.json
+
+# Impeccable caches and transient state
+.impeccable/hook.cache.json
+.impeccable/questions/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# Nothing here needs installing, but just in case
+node_modules/

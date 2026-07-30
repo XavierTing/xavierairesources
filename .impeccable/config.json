@@ -1,0 +1,36 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "montserrat",
+        "createdAt": "2026-07-29T15:52:04.562Z"
+      },
+      {
+        "rule": "overused-font",
+        "value": "poppins",
+        "createdAt": "2026-07-29T16:25:57.777Z"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-07-30T01:02:38.182Z",
+        "reason": "Montserrat+Poppins brand-pinned from xavierting.com"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "tool.html"
+        ],
+        "createdAt": "2026-07-30T01:02:38.216Z",
+        "reason": "Montserrat+Poppins brand-pinned from xavierting.com"
+      }
+    ]
+  }
+}
