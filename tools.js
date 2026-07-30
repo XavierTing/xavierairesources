@@ -225,6 +225,25 @@ const TOOLS = [
     ],
     command: "npx skills add https://github.com/kepano/obsidian-skills",
     note: "Five skills on an open standard, so they are not tied to one assistant."
+  },
+  {
+    num: "12",
+    name: "Ralph Loop",
+    category: "Workflow",
+    tagline: "Runs Claude on the same task until it is done",
+    blurb: "Some jobs do not come right first time. This restarts Claude on the same task over and over, letting it read what it already tried, until it passes your check or runs out of attempts.",
+    repo: "https://claude.com/plugins/ralph-loop",
+    repoLabel: "VIEW PLUGIN",
+    maker: "Anthropic",
+    why: "Some work does not come right on the first attempt, and sitting there restarting the assistant yourself gets old quickly. Ralph Loop catches the moment a session ends and feeds your original request straight back in, keeping every file change and the git history from the run before. Claude reads what it already tried, sees which tests failed, and goes again. It stops when it reports the finish word you picked, or when it reaches the number of attempts you allowed.",
+    when: "Work where you can say plainly what finished looks like and something can check it for you, such as a test suite. The loop needs a finish line it can recognize, so open ended tasks are a poor fit.",
+    how: [
+      "Install the plugin from the official Claude Code marketplace.",
+      "Start a run with /ralph-loop followed by your request, --max-iterations to cap the attempts, and --completion-promise to set the word Claude says when it is finished.",
+      "Leave it to work. Stop it early at any point with /cancel-ralph."
+    ],
+    command: "claude plugin install ralph-loop@claude-plugins-official",
+    note: "Needs a finish line it can check. Without one it just runs until the attempts are gone."
   }
 ];
 
