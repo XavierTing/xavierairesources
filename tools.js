@@ -247,7 +247,7 @@ const TOOLS = [
   },
   {
     num: "13",
-    name: "/watch",
+    name: "Watch",
     category: "Agents & MCP",
     tagline: "Lets Claude actually watch a video and answer",
     blurb: "Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads the video, takes still pictures through it, and turns the speech into text on your own computer.",
