@@ -10,7 +10,7 @@ AI & Design Leader. I build with AI daily and write up what works, so the tools 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 12 · Categories: 6 · Last updated: 30.07.2026
+- Tools listed: 13 · Categories: 6 · Last updated: 02.08.2026
 
 Every tool below is in the curator's daily use. Nobody paid to be on this list.
 
@@ -291,11 +291,34 @@ Work where you can say plainly what finished looks like and something can check 
 
 ---
 
+## 13. /watch — Lets Claude actually watch a video and answer
+
+- **Category:** Agents & MCP
+- **Made by:** Mathias Schusterman
+- **Source:** https://github.com/mathiaschu/watch
+- **Page:** https://xavierairesources.netlify.app/tools/watch.html
+- **Install / run:** `/plugin marketplace add mathiaschu/watch`
+
+**Why use /watch?**
+Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute.
+
+**When should you use /watch?**
+Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down.
+
+**How do you install and use /watch?**
+1. Add the collection it lives in to Claude Code, using the command below.
+2. Install the tool itself with /plugin install watch@claude-video
+3. Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute.
+
+**Curator's note:** It answers from what is on the screen rather than from the title. The difference shows up on the first question.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop
-- **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach
+- **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach, /watch
 - **Coding**: Repomix
 - **Knowledge**: LLM Wiki, Obsidian Skills
 - **Writing**: Humanizer

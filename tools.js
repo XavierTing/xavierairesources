@@ -244,9 +244,28 @@ const TOOLS = [
     ],
     command: "claude plugin install ralph-loop@claude-plugins-official",
     note: "Needs a finish line it can check. Without one it just runs until the attempts are gone."
+  },
+  {
+    num: "13",
+    name: "/watch",
+    category: "Agents & MCP",
+    tagline: "Lets Claude actually watch a video and answer",
+    blurb: "Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads the video, takes still pictures through it, and turns the speech into text on your own computer.",
+    repo: "https://github.com/mathiaschu/watch",
+    repoLabel: "VIEW REPO",
+    maker: "Mathias Schusterman",
+    why: "Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute.",
+    when: "Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down.",
+    how: [
+      "Add the collection it lives in to Claude Code, using the command below.",
+      "Install the tool itself with /plugin install watch@claude-video",
+      "Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute."
+    ],
+    command: "/plugin marketplace add mathiaschu/watch",
+    note: "It answers from what is on the screen rather than from the title. The difference shows up on the first question."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "30.07.2026";
+const LOG_UPDATED = "02.08.2026";
