@@ -263,6 +263,25 @@ const TOOLS = [
     ],
     command: "/plugin marketplace add mathiaschu/watch",
     note: "It answers from what is on the screen rather than from the title. The difference shows up on the first question."
+  },
+  {
+    num: "14",
+    name: "Codex for Claude Code",
+    category: "Coding",
+    tagline: "Brings in OpenAI's Codex to review code or take on jobs",
+    blurb: "A second opinion from a rival company's assistant, without leaving the window you are in. Ask OpenAI's Codex to check what Claude just built, or hand over a job and let it work in the background.",
+    repo: "https://github.com/openai/codex-plugin-cc",
+    repoLabel: "VIEW REPO",
+    maker: "OpenAI",
+    why: "Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own plugin for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and the free tier is enough to start, or an OpenAI key instead. What you use counts towards your Codex limits, so it is worth saving for work that matters.",
+    when: "Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: with an OpenAI key it will call gpt-image-2 and produce actual images for you. There is no button for that, you simply ask.",
+    how: [
+      "Add the collection to Claude Code with the command below.",
+      "Install it with /plugin install codex@openai-codex, then run /reload-plugins",
+      "Run /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work."
+    ],
+    command: "/plugin marketplace add openai/codex-plugin-cc",
+    note: "A review from a model that did not write the code catches what checking your own work never will."
   }
 ];
 

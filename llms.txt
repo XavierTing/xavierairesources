@@ -10,7 +10,7 @@ AI & Design Leader. I build with AI daily and write up what works, so the tools 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 13 · Categories: 6 · Last updated: 02.08.2026
+- Tools listed: 14 · Categories: 6 · Last updated: 02.08.2026
 
 Every tool below is in the curator's daily use. Nobody paid to be on this list.
 
@@ -314,12 +314,35 @@ Any time the answer sits inside a video rather than a page: a product demo you w
 
 ---
 
+## 14. Codex for Claude Code — Brings in OpenAI's Codex to review code or take on jobs
+
+- **Category:** Coding
+- **Made by:** OpenAI
+- **Source:** https://github.com/openai/codex-plugin-cc
+- **Page:** https://xavierairesources.netlify.app/tools/codex-for-claude-code.html
+- **Install / run:** `/plugin marketplace add openai/codex-plugin-cc`
+
+**Why use Codex for Claude Code?**
+Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own plugin for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and the free tier is enough to start, or an OpenAI key instead. What you use counts towards your Codex limits, so it is worth saving for work that matters.
+
+**When should you use Codex for Claude Code?**
+Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: with an OpenAI key it will call gpt-image-2 and produce actual images for you. There is no button for that, you simply ask.
+
+**How do you install and use Codex for Claude Code?**
+1. Add the collection to Claude Code with the command below.
+2. Install it with /plugin install codex@openai-codex, then run /reload-plugins
+3. Run /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work.
+
+**Curator's note:** A review from a model that did not write the code catches what checking your own work never will.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop
 - **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach, Watch
-- **Coding**: Repomix
+- **Coding**: Repomix, Codex for Claude Code
 - **Knowledge**: LLM Wiki, Obsidian Skills
 - **Writing**: Humanizer
 
