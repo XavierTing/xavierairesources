@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLM Wiki — Notes your AI writes and keeps up to date for you | AI Resources</title>
-  <meta name="description" content="The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.">
-  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/llm-wiki.html">
+  <title>Notchi — Shows what Claude Code is doing, up in the notch | AI Resources</title>
+  <meta name="description" content="A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/notchi.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="LLM Wiki — Notes your AI writes and keeps up to date for you | AI Resources">
-  <meta property="og:description" content="The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.">
-  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/llm-wiki.html">
+  <meta property="og:title" content="Notchi — Shows what Claude Code is doing, up in the notch | AI Resources">
+  <meta property="og:description" content="A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/notchi.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -88,28 +88,28 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://xavierairesources.netlify.app/tools/llm-wiki.html#tool",
-      "name": "LLM Wiki",
-      "description": "The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
+      "@id": "https://xavierairesources.netlify.app/tools/notchi.html#tool",
+      "name": "Notchi",
+      "description": "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "url": "https://github.com/sk-ruban/notchi",
       "author": {
         "@type": "Organization",
-        "name": "karpathy"
+        "name": "sk-ruban"
       }
     },
     {
       "@type": "WebPage",
-      "@id": "https://xavierairesources.netlify.app/tools/llm-wiki.html#page",
-      "url": "https://xavierairesources.netlify.app/tools/llm-wiki.html",
-      "name": "LLM Wiki — Notes your AI writes and keeps up to date for you | AI Resources",
-      "description": "The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
+      "@id": "https://xavierairesources.netlify.app/tools/notchi.html#page",
+      "url": "https://xavierairesources.netlify.app/tools/notchi.html",
+      "name": "Notchi — Shows what Claude Code is doing, up in the notch | AI Resources",
+      "description": "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
       "about": {
-        "@id": "https://xavierairesources.netlify.app/tools/llm-wiki.html#tool"
+        "@id": "https://xavierairesources.netlify.app/tools/notchi.html#tool"
       },
       "reviewedBy": {
         "@id": "https://xavierairesources.netlify.app/#curator"
@@ -130,14 +130,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Knowledge",
-          "item": "https://xavierairesources.netlify.app/#knowledge"
+          "name": "Workflow",
+          "item": "https://xavierairesources.netlify.app/#workflow"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "LLM Wiki",
-          "item": "https://xavierairesources.netlify.app/tools/llm-wiki.html"
+          "name": "Notchi",
+          "item": "https://xavierairesources.netlify.app/tools/notchi.html"
         }
       ]
     }
@@ -151,26 +151,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why use LLM Wiki?",
+      "name": "Why use Notchi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The usual way of giving an AI your documents has it search through them fresh for every question. It re-reads everything each time and builds up no understanding at all. Karpathy's approach has the model keep a set of plain text notes instead. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. You pay the reading cost once rather than on every question."
+        "text": "While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines."
       }
     },
     {
       "@type": "Question",
-      "name": "When should you use LLM Wiki?",
+      "name": "When should you use Notchi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Building a personal knowledge base out of notes, articles and bookmarks, where you want it to get more useful the more you add to it."
+        "text": "Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you install and use LLM Wiki?",
+      "name": "How do you install and use Notchi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Read the gist. It describes an approach to follow, not something you install. Write down your own structure: what belongs on a page, and how pages should link to each other. Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then."
+        "text": "Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type. Open it once. It connects itself to Claude Code and Codex, whichever you have. If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it."
       }
     }
   ]
@@ -196,38 +196,38 @@
       <nav class="crumbs m" aria-label="Breadcrumb">
         <a href="../index.html">The log</a>
         <span class="sep">/</span>
-        <span class="here">LLM Wiki</span>
+        <span class="here">Notchi</span>
       </nav>
 
       <div class="detail">
         <div class="detail-main">
-          <h1 class="detail-title">LLM Wiki</h1>
-          <p class="detail-lede">Notes your AI writes and keeps up to date for you.</p>
+          <h1 class="detail-title">Notchi</h1>
+          <p class="detail-lede">Shows what Claude Code is doing, up in the notch.</p>
         </div>
 
         <aside class="meta">
-          <div><h2>Category</h2><p class="meta-cat">Knowledge</p></div>
-          <div><h2>Made by</h2><p>karpathy</p></div>
-          <div><h2>Curator's status</h2><p>In daily use · № 08 of 16</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">VIEW GIST ↗</a></p></div>
+          <div><h2>Category</h2><p class="meta-cat">Workflow</p></div>
+          <div><h2>Made by</h2><p>sk-ruban</p></div>
+          <div><h2>Curator's status</h2><p>In daily use · № 16 of 16</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/sk-ruban/notchi" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">The usual way of giving an AI your documents has it search through them fresh for every question. It re-reads everything each time and builds up no understanding at all. Karpathy's approach has the model keep a set of plain text notes instead. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. You pay the reading cost once rather than on every question.</div>
+          <div class="body">While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Building a personal knowledge base out of notes, articles and bookmarks, where you want it to get more useful the more you add to it.</div>
+          <div class="body">Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Read the gist. It describes an approach to follow, not something you install.</li>
-            <li>Write down your own structure: what belongs on a page, and how pages should link to each other.</li>
-            <li>Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then.</li>
+            <li>Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type.</li>
+            <li>Open it once. It connects itself to Claude Code and Codex, whichever you have.</li>
+            <li>If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it.</li>
             </ol>
           </div>
         </section>
@@ -237,8 +237,8 @@
       <a class="back-link" href="../index.html">← Back to the log</a>
 
       <nav class="pager" aria-label="More tools">
-        <a href="agent-reach.html">← Agent-Reach</a>
-        <a href="humanizer.html">Humanizer →</a>
+        <a href="apple-design.html">← Apple Design</a>
+        <a href="impeccable.html">Impeccable →</a>
       </nav>
     </main>
 

@@ -301,9 +301,27 @@ const TOOLS = [
     ],
     command: "npx skills@latest add emilkowalski/skills",
     note: "The rule about catching an animation mid-flight is the one almost no assistant thinks of on its own."
+  },
+  {
+    num: "16",
+    name: "Notchi",
+    category: "Workflow",
+    tagline: "Shows what Claude Code is doing, up in the notch",
+    blurb: "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
+    repo: "https://github.com/sk-ruban/notchi",
+    repoLabel: "VIEW REPO",
+    why: "While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines.",
+    when: "Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss.",
+    how: [
+      "Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type.",
+      "Open it once. It connects itself to Claude Code and Codex, whichever you have.",
+      "If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it."
+    ],
+    command: null,
+    note: "Ambient rather than useful, strictly speaking. Knowing it is waiting on you without having to look is worth more than it sounds."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "04.08.2026";
+const LOG_UPDATED = "05.08.2026";

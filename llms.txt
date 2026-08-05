@@ -10,7 +10,7 @@ AI & Design Leader. I build with AI daily and write up what works, so the tools 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 15 · Categories: 6 · Last updated: 04.08.2026
+- Tools listed: 16 · Categories: 6 · Last updated: 05.08.2026
 
 Every tool below is in the curator's daily use. Nobody paid to be on this list.
 
@@ -360,10 +360,32 @@ Anything a person touches and drags: panels that slide up from the bottom, side 
 
 ---
 
+## 16. Notchi — Shows what Claude Code is doing, up in the notch
+
+- **Category:** Workflow
+- **Made by:** sk-ruban
+- **Source:** https://github.com/sk-ruban/notchi
+- **Page:** https://xavierairesources.netlify.app/tools/notchi.html
+
+**Why use Notchi?**
+While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines.
+
+**When should you use Notchi?**
+Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss.
+
+**How do you install and use Notchi?**
+1. Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type.
+2. Open it once. It connects itself to Claude Code and Codex, whichever you have.
+3. If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it.
+
+**Curator's note:** Ambient rather than useful, strictly speaking. Knowing it is waiting on you without having to look is worth more than it sounds.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design
-- **Workflow**: Superpowers, Spec-Kit, Ralph Loop
+- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi
 - **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach, Watch
 - **Coding**: Repomix, Codex for Claude Code
 - **Knowledge**: LLM Wiki, Obsidian Skills
