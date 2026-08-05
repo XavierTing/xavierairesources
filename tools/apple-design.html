@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Figma MCP — Lets AI read your real design file, not a screenshot | AI Resources</title>
-  <meta name="description" content="Hand an AI a screenshot of a design and it guesses the spacing and invents the colors. This connects it to the real Figma file, so it reads the actual values. It can write back too.">
-  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/figma-mcp.html">
+  <title>Apple Design — Teaches your AI what makes Apple interfaces feel right | AI Resources</title>
+  <meta name="description" content="Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/apple-design.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Figma MCP — Lets AI read your real design file, not a screenshot | AI Resources">
-  <meta property="og:description" content="Hand an AI a screenshot of a design and it guesses the spacing and invents the colors. This connects it to the real Figma file, so it reads the actual values. It can write back too.">
-  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/figma-mcp.html">
+  <meta property="og:title" content="Apple Design — Teaches your AI what makes Apple interfaces feel right | AI Resources">
+  <meta property="og:description" content="Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/apple-design.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -88,30 +88,30 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://xavierairesources.netlify.app/tools/figma-mcp.html#tool",
-      "name": "Figma MCP",
-      "description": "Hand an AI a screenshot of a design and it guesses the spacing and invents the colors. This connects it to the real Figma file, so it reads the actual values. It can write back too.",
+      "@id": "https://xavierairesources.netlify.app/tools/apple-design.html#tool",
+      "name": "Apple Design",
+      "description": "Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://developers.figma.com/docs/figma-mcp-server/",
+      "url": "https://github.com/emilkowalski/skills/tree/main/skills/apple-design",
       "author": {
         "@type": "Organization",
-        "name": "Figma"
+        "name": "Emil Kowalski"
       },
-      "installUrl": "https://developers.figma.com/docs/figma-mcp-server/",
-      "softwareHelp": "https://developers.figma.com/docs/figma-mcp-server/"
+      "installUrl": "https://github.com/emilkowalski/skills/tree/main/skills/apple-design",
+      "softwareHelp": "https://github.com/emilkowalski/skills/tree/main/skills/apple-design"
     },
     {
       "@type": "WebPage",
-      "@id": "https://xavierairesources.netlify.app/tools/figma-mcp.html#page",
-      "url": "https://xavierairesources.netlify.app/tools/figma-mcp.html",
-      "name": "Figma MCP — Lets AI read your real design file, not a screenshot | AI Resources",
-      "description": "Hand an AI a screenshot of a design and it guesses the spacing and invents the colors. This connects it to the real Figma file, so it reads the actual values. It can write back too.",
+      "@id": "https://xavierairesources.netlify.app/tools/apple-design.html#page",
+      "url": "https://xavierairesources.netlify.app/tools/apple-design.html",
+      "name": "Apple Design — Teaches your AI what makes Apple interfaces feel right | AI Resources",
+      "description": "Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
       "about": {
-        "@id": "https://xavierairesources.netlify.app/tools/figma-mcp.html#tool"
+        "@id": "https://xavierairesources.netlify.app/tools/apple-design.html#tool"
       },
       "reviewedBy": {
         "@id": "https://xavierairesources.netlify.app/#curator"
@@ -138,8 +138,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Figma MCP",
-          "item": "https://xavierairesources.netlify.app/tools/figma-mcp.html"
+          "name": "Apple Design",
+          "item": "https://xavierairesources.netlify.app/tools/apple-design.html"
         }
       ]
     }
@@ -153,26 +153,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why use Figma MCP?",
+      "name": "Why use Apple Design?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions."
+        "text": "An AI assistant has no feel for motion. It will slow an animation down as it arrives when it should speed up, or build one that locks you out until it has finished playing. This hands the assistant Apple's own thinking, taken from their design talks and rewritten for the web. The rules are specific: react the instant a finger goes down rather than when it lifts, keep a dragged thing stuck to the finger the whole way, and let any animation be caught and reversed halfway through. That last one is most of the difference between an interface that feels alive and one that feels like a slideshow. It was written by Emil Kowalski, who says it comes out of his years building interfaces at Vercel and Linear."
       }
     },
     {
       "@type": "Question",
-      "name": "When should you use Figma MCP?",
+      "name": "When should you use Apple Design?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture."
+        "text": "Anything a person touches and drags: panels that slide up from the bottom, side drawers, swipe gestures, anything that should carry momentum. It is also worth reaching for when an animation you already built feels slightly off and you cannot put your finger on why."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you install and use Figma MCP?",
+      "name": "How do you install and use Apple Design?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one. Open the file in Figma and select the frame you want built. Ask your assistant to build the selection. It reads the real values instead of guessing from pixels. Command: claude mcp add --transport http figma https://mcp.figma.com/mcp"
+        "text": "Run the command below. It installs Emil's whole set of nine skills, not this one on its own. Ask your assistant to work to the apple-design skill while it builds or reviews an interface. The rest of the set is worth knowing about: animate builds an animation from scratch, review-animations goes over what you already have. Command: npx skills@latest add emilkowalski/skills"
       }
     }
   ]
@@ -198,43 +198,43 @@
       <nav class="crumbs m" aria-label="Breadcrumb">
         <a href="../index.html">The log</a>
         <span class="sep">/</span>
-        <span class="here">Figma MCP</span>
+        <span class="here">Apple Design</span>
       </nav>
 
       <div class="detail">
         <div class="detail-main">
-          <h1 class="detail-title">Figma MCP</h1>
-          <p class="detail-lede">Lets AI read your real design file, not a screenshot.</p>
+          <h1 class="detail-title">Apple Design</h1>
+          <p class="detail-lede">Teaches your AI what makes Apple interfaces feel right.</p>
         </div>
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Design</p></div>
-          <div><h2>Made by</h2><p>Figma</p></div>
-          <div><h2>Curator's status</h2><p>In daily use · № 10 of 15</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener">VIEW DOCS ↗</a></p></div>
+          <div><h2>Made by</h2><p>Emil Kowalski</p></div>
+          <div><h2>Curator's status</h2><p>In daily use · № 15 of 15</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/emilkowalski/skills/tree/main/skills/apple-design" target="_blank" rel="noopener">VIEW SKILL ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions.</div>
+          <div class="body">An AI assistant has no feel for motion. It will slow an animation down as it arrives when it should speed up, or build one that locks you out until it has finished playing. This hands the assistant Apple's own thinking, taken from their design talks and rewritten for the web. The rules are specific: react the instant a finger goes down rather than when it lifts, keep a dragged thing stuck to the finger the whole way, and let any animation be caught and reversed halfway through. That last one is most of the difference between an interface that feels alive and one that feels like a slideshow. It was written by Emil Kowalski, who says it comes out of his years building interfaces at Vercel and Linear.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture.</div>
+          <div class="body">Anything a person touches and drags: panels that slide up from the bottom, side drawers, swipe gestures, anything that should carry momentum. It is also worth reaching for when an animation you already built feels slightly off and you cannot put your finger on why.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one.</li>
-            <li>Open the file in Figma and select the frame you want built.</li>
-            <li>Ask your assistant to build the selection. It reads the real values instead of guessing from pixels.</li>
+            <li>Run the command below. It installs Emil's whole set of nine skills, not this one on its own.</li>
+            <li>Ask your assistant to work to the apple-design skill while it builds or reviews an interface.</li>
+            <li>The rest of the set is worth knowing about: animate builds an animation from scratch, review-animations goes over what you already have.</li>
             </ol>
           <div class="specimen">
-            <code>claude mcp add --transport http figma https://mcp.figma.com/mcp</code>
-            <button class="copy-btn" type="button" data-command="claude mcp add --transport http figma https://mcp.figma.com/mcp"
-                    aria-label="Copy command: claude mcp add --transport http figma https://mcp.figma.com/mcp">Copy</button>
+            <code>npx skills@latest add emilkowalski/skills</code>
+            <button class="copy-btn" type="button" data-command="npx skills@latest add emilkowalski/skills"
+                    aria-label="Copy command: npx skills@latest add emilkowalski/skills">Copy</button>
           </div>
           </div>
         </section>
@@ -244,8 +244,8 @@
       <a class="back-link" href="../index.html">← Back to the log</a>
 
       <nav class="pager" aria-label="More tools">
-        <a href="humanizer.html">← Humanizer</a>
-        <a href="obsidian-skills.html">Obsidian Skills →</a>
+        <a href="codex-for-claude-code.html">← Codex for Claude Code</a>
+        <a href="impeccable.html">Impeccable →</a>
       </nav>
     </main>
 

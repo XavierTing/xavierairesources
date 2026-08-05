@@ -282,9 +282,28 @@ const TOOLS = [
     ],
     command: "/plugin marketplace add openai/codex-plugin-cc",
     note: "A review from a model that did not write the code catches what checking your own work never will."
+  },
+  {
+    num: "15",
+    name: "Apple Design",
+    category: "Design",
+    tagline: "Teaches your AI what makes Apple interfaces feel right",
+    blurb: "Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.",
+    repo: "https://github.com/emilkowalski/skills/tree/main/skills/apple-design",
+    repoLabel: "VIEW SKILL",
+    maker: "Emil Kowalski",
+    why: "An AI assistant has no feel for motion. It will slow an animation down as it arrives when it should speed up, or build one that locks you out until it has finished playing. This hands the assistant Apple's own thinking, taken from their design talks and rewritten for the web. The rules are specific: react the instant a finger goes down rather than when it lifts, keep a dragged thing stuck to the finger the whole way, and let any animation be caught and reversed halfway through. That last one is most of the difference between an interface that feels alive and one that feels like a slideshow. It was written by Emil Kowalski, who says it comes out of his years building interfaces at Vercel and Linear.",
+    when: "Anything a person touches and drags: panels that slide up from the bottom, side drawers, swipe gestures, anything that should carry momentum. It is also worth reaching for when an animation you already built feels slightly off and you cannot put your finger on why.",
+    how: [
+      "Run the command below. It installs Emil's whole set of nine skills, not this one on its own.",
+      "Ask your assistant to work to the apple-design skill while it builds or reviews an interface.",
+      "The rest of the set is worth knowing about: animate builds an animation from scratch, review-animations goes over what you already have."
+    ],
+    command: "npx skills@latest add emilkowalski/skills",
+    note: "The rule about catching an animation mid-flight is the one almost no assistant thinks of on its own."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "02.08.2026";
+const LOG_UPDATED = "04.08.2026";
