@@ -319,9 +319,100 @@ const TOOLS = [
     ],
     command: null,
     note: "Ambient rather than useful, strictly speaking. Knowing it is waiting on you without having to look is worth more than it sounds."
+  },
+  {
+    num: "17",
+    name: "OmniRoute",
+    category: "Coding",
+    tagline: "Keeps you working when your AI quota runs out",
+    blurb: "Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.",
+    repo: "https://github.com/diegosouzapw/OmniRoute",
+    repoLabel: "VIEW REPO",
+    why: "Running out of quota halfway through a job is a slow way to lose an afternoon. OmniRoute sits between your coding tool and the models as a single address that reaches more than 500 of them across upwards of 290 providers, over 90 of which are free. When the model you are using hits its limit it falls back to another and keeps going. It also compresses what gets sent, which the project measures at anywhere from 15 to 95 percent fewer tokens.",
+    when: "Long sessions where stopping is expensive, and any time you want to try a cheaper or free model without rewiring your setup. It works with Claude Code, Codex, Cursor, OpenCode, Cline and Copilot.",
+    how: [
+      "Install it globally with npm.",
+      "Point your coding tool at OmniRoute rather than at one provider directly.",
+      "Carry on working. When a model runs out of quota it moves you to the next one."
+    ],
+    command: "npm install -g omniroute",
+    note: "MIT licensed and built by a large contributor base, so nothing here is locked behind one vendor."
+  },
+  {
+    num: "18",
+    name: "Claude Mem",
+    category: "Knowledge",
+    tagline: "Lets your assistant remember earlier sessions",
+    blurb: "Close the window and your assistant forgets the lot. Claude Mem records what happened while you worked, condenses it, and feeds the relevant parts back the next time you sit down.",
+    repo: "https://github.com/thedotmack/claude-mem",
+    repoLabel: "VIEW REPO",
+    why: "Every new session starts from nothing. You re-explain the project, the decisions you already settled, and the approaches that did not work. Claude Mem captures what the assistant does as you go, compresses it, then puts the parts that matter back into later sessions. You get an assistant that picks up roughly where you left off instead of asking again.",
+    when: "Projects you return to across days or weeks, and any work where re-explaining the background eats the time you meant to spend building.",
+    how: [
+      "Run the installer. It sets itself up for whichever assistant you use.",
+      "Work as normal. It records and condenses each session in the background.",
+      "Next time you start, the relevant history is already in front of the assistant."
+    ],
+    command: "npx claude-mem install",
+    note: "Reaches past Claude Code to Codex, Gemini and Copilot, so the memory is not stranded in one tool."
+  },
+  {
+    num: "19",
+    name: "Headroom",
+    category: "Coding",
+    tagline: "Shrinks what gets sent to the model, not the answers",
+    blurb: "Much of what an assistant reads is bulk: logs, command output, long files of data. Headroom squeezes that down before it is sent, which the project measures at 20 percent fewer tokens on coding work.",
+    repo: "https://github.com/headroomlabs-ai/headroom",
+    repoLabel: "VIEW REPO",
+    why: "A lot of what your assistant reads is filler. Command output, log files, long stretches of data. You pay for every word of it and almost none of it makes the answer better. Headroom compresses that material before it reaches the model. The project measures around 20 percent fewer tokens on coding work and between 60 and 95 percent on data files, with the same answers coming back.",
+    when: "Work that pushes a lot of output through the assistant: reading logs, handling large data files, or long runs where the context fills up and earlier detail starts falling out.",
+    how: [
+      "Install it with pip. It needs Python 3.10 or newer.",
+      "Pick how to run it: as a library inside your own code, as a proxy in front of the model, or as a connected tool.",
+      "Carry on as normal. It compresses in the middle and the answers come back unchanged."
+    ],
+    command: "pip install \"headroom-ai[all]\"",
+    note: "It compresses what goes in, not what comes back, so nothing about the reply is degraded."
+  },
+  {
+    num: "20",
+    name: "Claude Code Setup",
+    category: "Workflow",
+    tagline: "Reads your project and suggests what to set up",
+    blurb: "Claude Code can be extended about five different ways, which is five ways to not know where to begin. This reads your project and names the one or two worth adding in each.",
+    repo: "https://claude.com/plugins/claude-code-setup",
+    repoLabel: "VIEW PLUGIN",
+    maker: "Anthropic",
+    why: "Claude Code can be extended with hooks, skills, connected tools, specialist reviewers and shortcut commands. Working out which of those your particular project would actually benefit from is the hard part. This reads your codebase and names the top one or two in each category, with its reasoning. It only reads and changes nothing, so running it costs you the time and nothing else.",
+    when: "Setting up a project you have just started working in, or returning to one where you never got round to configuring anything past the defaults.",
+    how: [
+      "Install the plugin from the official Claude Code marketplace.",
+      "Ask for it in plain words, along the lines of recommending automations for this project.",
+      "Read what it suggests and add whichever you want. It will not change anything itself."
+    ],
+    command: "claude plugin install claude-code-setup@claude-plugins-official",
+    note: "Read only, so there is no risk in running it purely to see what it says."
+  },
+  {
+    num: "21",
+    name: "Task Observer",
+    category: "Workflow",
+    tagline: "Watches how you work and improves your skills",
+    blurb: "Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.",
+    repo: "https://github.com/rebelytics/one-skill-to-rule-them-all",
+    repoLabel: "VIEW SKILL",
+    why: "Writing a skill takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep.",
+    when: "Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your library, so with two or three skills, editing them directly is still quicker.",
+    how: [
+      "Download the repo, keeping SKILL.md and the references folder together.",
+      "Install it wherever your assistant reads skills from. The README covers the common setups.",
+      "Work as normal, then read the observations it logs and apply the ones you agree with."
+    ],
+    command: null,
+    note: "Released under CC BY 4.0 rather than a code license, which fits. It is a method as much as a tool."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "05.08.2026";
+const LOG_UPDATED = "07.08.2026";
