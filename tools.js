@@ -410,9 +410,84 @@ const TOOLS = [
     ],
     command: null,
     note: "Released under CC BY 4.0 rather than a code license, which fits. It is a method as much as a tool."
+  },
+  {
+    num: "22",
+    name: "Playwright CLI",
+    category: "Agents & MCP",
+    tagline: "Lets your AI drive a browser without filling up its memory",
+    blurb: "Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.",
+    repo: "https://github.com/microsoft/playwright-cli",
+    repoLabel: "VIEW REPO",
+    maker: "Microsoft",
+    why: "An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is fixed, so the more the page takes the less is left for your code. Microsoft's own command line version is built the other way around. It hands the assistant short commands instead, and does not push page contents at it. On a big codebase that difference is what decides whether the assistant can hold your project and the browser in mind at the same time.",
+    when: "Writing or repairing tests that click through a website, checking a sign-up or checkout flow really works end to end, and any job where you want the assistant working against a real browser rather than guessing from the code.",
+    how: [
+      "Install it globally with the command below. You need Node.js 18 or newer.",
+      "Run playwright-cli install --skills so Claude Code and similar tools learn the commands.",
+      "Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli."
+    ],
+    command: "npm install -g @playwright/cli@latest",
+    note: "The token argument is the whole point. On a large repo it is the difference between the assistant coping and running out of room."
+  },
+  {
+    num: "23",
+    name: "Supabase Plugin",
+    category: "Agents & MCP",
+    tagline: "Lets your AI work directly with your Supabase database",
+    blurb: "Connects your assistant to your own Supabase project so it can look at the database, change its structure and ship functions, instead of guessing at what your tables look like.",
+    repo: "https://supabase.com/docs/guides/ai-tools/plugins",
+    repoLabel: "VIEW DOCS",
+    maker: "Supabase",
+    why: "Supabase is a hosted database and backend, and an assistant that cannot see it will invent table names and write code against a shape that does not exist. This is Supabase's own plugin. It gives the assistant a real connection to your project so it can read the database, write the files that change its structure, and publish small server functions. It also brings two sets of written guidance, one on using Supabase properly and one on Postgres, the database underneath, so the assistant follows the house rules rather than whatever it half remembers.",
+    when: "Any project already using Supabase. It earns its place fastest on database structure changes, where an assistant working blind will happily write something that does not match your real tables.",
+    how: [
+      "Run the command below. It works out which assistants you have and sets them up.",
+      "Add --yes on the end if you would rather it did not stop to ask.",
+      "Sign the assistant in to your Supabase project, then ask it about your data in plain words."
+    ],
+    command: "npx plugins add supabase-community/supabase-plugin",
+    note: "It bundles the connection and the written guidance together, which is why it beats wiring up the connection on its own."
+  },
+  {
+    num: "24",
+    name: "Strix",
+    category: "Coding",
+    tagline: "Sets an AI loose on your own app to find security holes",
+    blurb: "Runs an assistant against an application you own, looking for real weaknesses rather than listing theoretical ones, then helps you close what it finds.",
+    repo: "https://github.com/usestrix/strix",
+    repoLabel: "VIEW REPO",
+    maker: "Strix",
+    why: "Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed container and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area.",
+    when: "Before putting something on the internet, and after any change to the parts that handle logins, payments or user uploads. It is also worth running on an older project you inherited and have never properly looked at.",
+    how: [
+      "Install it with the command below. It downloads a script from the internet and runs it, so read the script first if that matters to you.",
+      "Set the assistant you want it to use and your key for that assistant, as its own page explains. The scanning costs whatever that assistant charges.",
+      "Point it at your project folder with strix --target ./your-app. The first run pulls a Docker image, so give it time."
+    ],
+    command: "curl -sSL https://strix.ai/install | bash",
+    note: "It reports what it actually managed to do, not what it suspects. That is the difference from every scanner that hands you a wall of maybes."
+  },
+  {
+    num: "25",
+    name: "Skill UI",
+    category: "Design",
+    tagline: "Turns a design system into something Claude can build with",
+    blurb: "Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
+    repo: "https://github.com/amaancoderx/npxskillui",
+    repoLabel: "VIEW REPO",
+    why: "Telling an assistant to make something look like your product rarely works, because it has nothing solid to work from and fills the gaps with its own taste. Skill UI goes and looks. It crawls a website, a repository or a folder on your machine and pulls out the actual colours, typefaces, spacing, components and animations, then writes them into a folder that Claude Code reads by itself. Nothing is guessed and no AI is involved in the reading, it is plain inspection of what is there. Point it at your own product or a system you are allowed to use.",
+    when: "Starting a new screen that has to sit alongside an existing product, or handing an assistant a house style it has never seen. It also works on your own site as a quick way to write down a design system nobody ever documented.",
+    how: [
+      "Install it with the command below. You need Node.js 18 or newer.",
+      "Run it against a web address, a repository or a local folder.",
+      "Open the folder it produces, start Claude Code there, and ask for the screen you want. It already knows the style."
+    ],
+    command: "npm install -g skillui",
+    note: "Plain inspection rather than a model guessing, which is why what comes out actually matches."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "07.08.2026";
+const LOG_UPDATED = "09.08.2026";

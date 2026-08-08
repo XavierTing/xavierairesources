@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Notchi — Shows what Claude Code is doing, up in the notch | AI Resources</title>
-  <meta name="description" content="A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.">
-  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/notchi.html">
+  <title>Playwright CLI — Lets your AI drive a browser without filling up its memory | AI Resources</title>
+  <meta name="description" content="Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/playwright-cli.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Notchi — Shows what Claude Code is doing, up in the notch | AI Resources">
-  <meta property="og:description" content="A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.">
-  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/notchi.html">
+  <meta property="og:title" content="Playwright CLI — Lets your AI drive a browser without filling up its memory | AI Resources">
+  <meta property="og:description" content="Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/playwright-cli.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -88,28 +88,30 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://xavierairesources.netlify.app/tools/notchi.html#tool",
-      "name": "Notchi",
-      "description": "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
+      "@id": "https://xavierairesources.netlify.app/tools/playwright-cli.html#tool",
+      "name": "Playwright CLI",
+      "description": "Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://github.com/sk-ruban/notchi",
+      "url": "https://github.com/microsoft/playwright-cli",
       "author": {
         "@type": "Organization",
-        "name": "sk-ruban"
-      }
+        "name": "Microsoft"
+      },
+      "installUrl": "https://github.com/microsoft/playwright-cli",
+      "softwareHelp": "https://github.com/microsoft/playwright-cli"
     },
     {
       "@type": "WebPage",
-      "@id": "https://xavierairesources.netlify.app/tools/notchi.html#page",
-      "url": "https://xavierairesources.netlify.app/tools/notchi.html",
-      "name": "Notchi — Shows what Claude Code is doing, up in the notch | AI Resources",
-      "description": "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
+      "@id": "https://xavierairesources.netlify.app/tools/playwright-cli.html#page",
+      "url": "https://xavierairesources.netlify.app/tools/playwright-cli.html",
+      "name": "Playwright CLI — Lets your AI drive a browser without filling up its memory | AI Resources",
+      "description": "Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
       "about": {
-        "@id": "https://xavierairesources.netlify.app/tools/notchi.html#tool"
+        "@id": "https://xavierairesources.netlify.app/tools/playwright-cli.html#tool"
       },
       "reviewedBy": {
         "@id": "https://xavierairesources.netlify.app/#curator"
@@ -130,14 +132,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Workflow",
-          "item": "https://xavierairesources.netlify.app/#workflow"
+          "name": "Agents & MCP",
+          "item": "https://xavierairesources.netlify.app/#agents-mcp"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Notchi",
-          "item": "https://xavierairesources.netlify.app/tools/notchi.html"
+          "name": "Playwright CLI",
+          "item": "https://xavierairesources.netlify.app/tools/playwright-cli.html"
         }
       ]
     }
@@ -151,26 +153,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why use Notchi?",
+      "name": "Why use Playwright CLI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines."
+        "text": "An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is fixed, so the more the page takes the less is left for your code. Microsoft's own command line version is built the other way around. It hands the assistant short commands instead, and does not push page contents at it. On a big codebase that difference is what decides whether the assistant can hold your project and the browser in mind at the same time."
       }
     },
     {
       "@type": "Question",
-      "name": "When should you use Notchi?",
+      "name": "When should you use Playwright CLI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss."
+        "text": "Writing or repairing tests that click through a website, checking a sign-up or checkout flow really works end to end, and any job where you want the assistant working against a real browser rather than guessing from the code."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you install and use Notchi?",
+      "name": "How do you install and use Playwright CLI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type. Open it once. It connects itself to Claude Code and Codex, whichever you have. If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it."
+        "text": "Install it globally with the command below. You need Node.js 18 or newer. Run playwright-cli install --skills so Claude Code and similar tools learn the commands. Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli. Command: npm install -g @playwright/cli@latest"
       }
     }
   ]
@@ -196,39 +198,44 @@
       <nav class="crumbs m" aria-label="Breadcrumb">
         <a href="../index.html">The log</a>
         <span class="sep">/</span>
-        <span class="here">Notchi</span>
+        <span class="here">Playwright CLI</span>
       </nav>
 
       <div class="detail">
         <div class="detail-main">
-          <h1 class="detail-title">Notchi</h1>
-          <p class="detail-lede">Shows what Claude Code is doing, up in the notch.</p>
+          <h1 class="detail-title">Playwright CLI</h1>
+          <p class="detail-lede">Lets your AI drive a browser without filling up its memory.</p>
         </div>
 
         <aside class="meta">
-          <div><h2>Category</h2><p class="meta-cat">Workflow</p></div>
-          <div><h2>Made by</h2><p>sk-ruban</p></div>
-          <div><h2>Curator's status</h2><p>In daily use · № 16 of 25</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/sk-ruban/notchi" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+          <div><h2>Category</h2><p class="meta-cat">Agents &amp; MCP</p></div>
+          <div><h2>Made by</h2><p>Microsoft</p></div>
+          <div><h2>Curator's status</h2><p>In daily use · № 22 of 25</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/microsoft/playwright-cli" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines.</div>
+          <div class="body">An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is fixed, so the more the page takes the less is left for your code. Microsoft's own command line version is built the other way around. It hands the assistant short commands instead, and does not push page contents at it. On a big codebase that difference is what decides whether the assistant can hold your project and the browser in mind at the same time.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss.</div>
+          <div class="body">Writing or repairing tests that click through a website, checking a sign-up or checkout flow really works end to end, and any job where you want the assistant working against a real browser rather than guessing from the code.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type.</li>
-            <li>Open it once. It connects itself to Claude Code and Codex, whichever you have.</li>
-            <li>If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it.</li>
+            <li>Install it globally with the command below. You need Node.js 18 or newer.</li>
+            <li>Run playwright-cli install --skills so Claude Code and similar tools learn the commands.</li>
+            <li>Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli.</li>
             </ol>
+          <div class="specimen">
+            <code>npm install -g @playwright/cli@latest</code>
+            <button class="copy-btn" type="button" data-command="npm install -g @playwright/cli@latest"
+                    aria-label="Copy command: npm install -g @playwright/cli@latest">Copy</button>
+          </div>
           </div>
         </section>
         </div>
@@ -237,8 +244,8 @@
       <a class="back-link" href="../index.html">← Back to the log</a>
 
       <nav class="pager" aria-label="More tools">
-        <a href="apple-design.html">← Apple Design</a>
-        <a href="omniroute.html">OmniRoute →</a>
+        <a href="task-observer.html">← Task Observer</a>
+        <a href="supabase-plugin.html">Supabase Plugin →</a>
       </nav>
     </main>
 

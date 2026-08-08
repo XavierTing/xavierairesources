@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Notchi — Shows what Claude Code is doing, up in the notch | AI Resources</title>
-  <meta name="description" content="A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.">
-  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/notchi.html">
+  <title>Strix — Sets an AI loose on your own app to find security holes | AI Resources</title>
+  <meta name="description" content="Runs an assistant against an application you own, looking for real weaknesses rather than listing theoretical ones, then helps you close what it finds.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/strix.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Notchi — Shows what Claude Code is doing, up in the notch | AI Resources">
-  <meta property="og:description" content="A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.">
-  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/notchi.html">
+  <meta property="og:title" content="Strix — Sets an AI loose on your own app to find security holes | AI Resources">
+  <meta property="og:description" content="Runs an assistant against an application you own, looking for real weaknesses rather than listing theoretical ones, then helps you close what it finds.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/strix.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -88,28 +88,30 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://xavierairesources.netlify.app/tools/notchi.html#tool",
-      "name": "Notchi",
-      "description": "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
+      "@id": "https://xavierairesources.netlify.app/tools/strix.html#tool",
+      "name": "Strix",
+      "description": "Runs an assistant against an application you own, looking for real weaknesses rather than listing theoretical ones, then helps you close what it finds.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://github.com/sk-ruban/notchi",
+      "url": "https://github.com/usestrix/strix",
       "author": {
         "@type": "Organization",
-        "name": "sk-ruban"
-      }
+        "name": "Strix"
+      },
+      "installUrl": "https://github.com/usestrix/strix",
+      "softwareHelp": "https://github.com/usestrix/strix"
     },
     {
       "@type": "WebPage",
-      "@id": "https://xavierairesources.netlify.app/tools/notchi.html#page",
-      "url": "https://xavierairesources.netlify.app/tools/notchi.html",
-      "name": "Notchi — Shows what Claude Code is doing, up in the notch | AI Resources",
-      "description": "A small character lives in your MacBook's notch and reacts while Claude Code works: thinking, waiting for permission, finished. Only for Macs that have a notch.",
+      "@id": "https://xavierairesources.netlify.app/tools/strix.html#page",
+      "url": "https://xavierairesources.netlify.app/tools/strix.html",
+      "name": "Strix — Sets an AI loose on your own app to find security holes | AI Resources",
+      "description": "Runs an assistant against an application you own, looking for real weaknesses rather than listing theoretical ones, then helps you close what it finds.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
       "about": {
-        "@id": "https://xavierairesources.netlify.app/tools/notchi.html#tool"
+        "@id": "https://xavierairesources.netlify.app/tools/strix.html#tool"
       },
       "reviewedBy": {
         "@id": "https://xavierairesources.netlify.app/#curator"
@@ -130,14 +132,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Workflow",
-          "item": "https://xavierairesources.netlify.app/#workflow"
+          "name": "Coding",
+          "item": "https://xavierairesources.netlify.app/#coding"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Notchi",
-          "item": "https://xavierairesources.netlify.app/tools/notchi.html"
+          "name": "Strix",
+          "item": "https://xavierairesources.netlify.app/tools/strix.html"
         }
       ]
     }
@@ -151,26 +153,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why use Notchi?",
+      "name": "Why use Strix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines."
+        "text": "Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed container and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area."
       }
     },
     {
       "@type": "Question",
-      "name": "When should you use Notchi?",
+      "name": "When should you use Strix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss."
+        "text": "Before putting something on the internet, and after any change to the parts that handle logins, payments or user uploads. It is also worth running on an older project you inherited and have never properly looked at."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you install and use Notchi?",
+      "name": "How do you install and use Strix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type. Open it once. It connects itself to Claude Code and Codex, whichever you have. If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it."
+        "text": "Install it with the command below. It downloads a script from the internet and runs it, so read the script first if that matters to you. Set the assistant you want it to use and your key for that assistant, as its own page explains. The scanning costs whatever that assistant charges. Point it at your project folder with strix --target ./your-app. The first run pulls a Docker image, so give it time. Command: curl -sSL https://strix.ai/install | bash"
       }
     }
   ]
@@ -196,39 +198,44 @@
       <nav class="crumbs m" aria-label="Breadcrumb">
         <a href="../index.html">The log</a>
         <span class="sep">/</span>
-        <span class="here">Notchi</span>
+        <span class="here">Strix</span>
       </nav>
 
       <div class="detail">
         <div class="detail-main">
-          <h1 class="detail-title">Notchi</h1>
-          <p class="detail-lede">Shows what Claude Code is doing, up in the notch.</p>
+          <h1 class="detail-title">Strix</h1>
+          <p class="detail-lede">Sets an AI loose on your own app to find security holes.</p>
         </div>
 
         <aside class="meta">
-          <div><h2>Category</h2><p class="meta-cat">Workflow</p></div>
-          <div><h2>Made by</h2><p>sk-ruban</p></div>
-          <div><h2>Curator's status</h2><p>In daily use · № 16 of 25</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/sk-ruban/notchi" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+          <div><h2>Category</h2><p class="meta-cat">Coding</p></div>
+          <div><h2>Made by</h2><p>Strix</p></div>
+          <div><h2>Curator's status</h2><p>In daily use · № 24 of 25</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/usestrix/strix" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">While an assistant is working you either sit watching the terminal or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines.</div>
+          <div class="body">Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed container and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss.</div>
+          <div class="body">Before putting something on the internet, and after any change to the parts that handle logins, payments or user uploads. It is also worth running on an older project you inherited and have never properly looked at.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Download the disk image from the releases page and drag Notchi into Applications. There is nothing to type.</li>
-            <li>Open it once. It connects itself to Claude Code and Codex, whichever you have.</li>
-            <li>If you want the character to react to the mood of what you wrote, paste an Anthropic or OpenAI key into Settings. That part spends your own credit, and it works fine without it.</li>
+            <li>Install it with the command below. It downloads a script from the internet and runs it, so read the script first if that matters to you.</li>
+            <li>Set the assistant you want it to use and your key for that assistant, as its own page explains. The scanning costs whatever that assistant charges.</li>
+            <li>Point it at your project folder with strix --target ./your-app. The first run pulls a Docker image, so give it time.</li>
             </ol>
+          <div class="specimen">
+            <code>curl -sSL https://strix.ai/install | bash</code>
+            <button class="copy-btn" type="button" data-command="curl -sSL https://strix.ai/install | bash"
+                    aria-label="Copy command: curl -sSL https://strix.ai/install | bash">Copy</button>
+          </div>
           </div>
         </section>
         </div>
@@ -237,8 +244,8 @@
       <a class="back-link" href="../index.html">← Back to the log</a>
 
       <nav class="pager" aria-label="More tools">
-        <a href="apple-design.html">← Apple Design</a>
-        <a href="omniroute.html">OmniRoute →</a>
+        <a href="supabase-plugin.html">← Supabase Plugin</a>
+        <a href="skill-ui.html">Skill UI →</a>
       </nav>
     </main>
 
