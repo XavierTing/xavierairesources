@@ -183,6 +183,19 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 - One square photo, `assets/portrait.jpg`, circled and ringed in CSS: 68px in the hero byline (2px gold border, 3px padding), 44px in the colophon (1px border, 2px padding). Never cropped in code; swap the file to change the photo.
 - Sits beside a three-line byline: name (Ink, plain text — not a link, since two destinations exist), role, then labelled profile links (gold, mono label step, ↗). Name over role (body 1rem, Body Ink). The role is identity content, not a micro-label, so it stays on the body step — putting it on the label step made it illegible, and giving it its own step muddied the ramp.
 
+### Card Illustrations (signature)
+
+- One gold monoline schematic per tool at `assets/cards/<slug>.webp`, 512×512, drawn as an engineering diagram: even delicate stroke, faint dashed construction lines, small registration crosses. They depict the tool's **mechanism**, never a badge or app icon.
+- Generated through Codex's image tool against a single fixed style brief, then post-processed so the black ground becomes alpha — the linework sits *in* the card, with no plate behind it.
+- Displayed at 168px on cards, 132px on detail pages, at 88–90% opacity; hover lifts to full and scales 1.03. Never framed, never on a tinted panel.
+- **The Matched-Set Rule.** Every illustration uses the same brief, one gold, one stroke weight. A one-off in a different style breaks the set and must be regenerated, not patched.
+- No text, letters, numerals or logos inside any illustration — one drifted into letterforms during generation and was regenerated rather than kept.
+
+### Stack Map
+
+- `assets/stack-infographic.png`, 1200×1350, the one full-width image: all tools banded by stage (set up / plan / build / review / ship, plus a dashed "running throughout" band). Built as HTML and rendered, never image-generated, because the tool names must be exact.
+- Sits after the card grid so the grid still leads, and carries a full alt listing every tool by band.
+
 ### Curator's Note
 - Blue-less: ink mono italic behind a 2px ember left rule with an ember ✎ — the one place ember touches prose.
 
@@ -193,6 +206,7 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 
 ### Do:
 - **Do** let the aurora carry all atmosphere — content surfaces stay glass-neutral.
+- **Do** regenerate a card illustration rather than hand-edit it; the set is defined by one shared brief (see `assets/cards`).
 - **Do** keep the portrait as the one human element: a plain square photo, circled and gold-ringed in CSS (see `assets/README.md`).
 - **Do** keep hover physics consistent: lift + border-brighten + one soft glow, 0.25s ease-out.
 - **Do** respect `prefers-reduced-motion` everywhere: static aurora, no lifts, instant reveals.

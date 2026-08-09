@@ -217,6 +217,7 @@ function detailPage(t, i) {
 
       <div class="detail">
         <div class="detail-main">
+          <img class="detail-art" src="../assets/cards/${slug(t.name)}.webp" alt="" width="512" height="512" decoding="async">
           <h1 class="detail-title">${esc(t.name)}</h1>
           <p class="detail-lede">${esc(t.tagline)}.</p>
         </div>
@@ -305,6 +306,7 @@ let index = read("index.html");
 
 const cards = TOOLS.map((t) => [
   `          <a class="card" href="tools/${slug(t.name)}.html" data-category="${escAttr(t.category)}">`,
+  `            <img class="card-art" src="assets/cards/${slug(t.name)}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">`,
   `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span><span class="card-num">№ ${esc(t.num)}</span></span>`,
   `            <h2 class="card-name">${esc(t.name)}</h2>`,
   `            <p class="card-tag">${esc(t.blurb || t.tagline)}</p>`,

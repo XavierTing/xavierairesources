@@ -113,6 +113,13 @@
     card.href = "tool.html?tool=" + slug(tool.name);
     card.dataset.category = tool.category;
 
+    var art = el("img", "card-art");
+    art.src = "assets/cards/" + slug(tool.name) + ".webp";
+    art.alt = "";
+    art.width = 512; art.height = 512;
+    art.loading = "lazy"; art.decoding = "async";
+    card.appendChild(art);
+
     var top = el("div", "card-top");
     top.appendChild(el("span", "card-cat m", tool.category));
     top.appendChild(el("span", "card-num", "№ " + tool.num));

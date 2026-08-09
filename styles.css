@@ -405,6 +405,23 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .card:hover .card-open { color: var(--ink); }
 .card:hover .card-open::after { transform: translateX(4px); }
 
+/* ---------- card illustration ----------
+   Gold monoline schematics on the same warm near-black as the page, so the
+   artwork sits in the card rather than on it — no frame, no plate. */
+.card-art {
+  display: block;
+  width: 100%;
+  max-width: 168px;
+  height: auto;
+  margin: -4px auto 4px;
+  opacity: 0.88;
+  transition: opacity 0.25s ease-out, transform 0.25s var(--ease-out);
+}
+.card:hover .card-art {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
 .card-top {
   display: flex;
   align-items: center;
@@ -510,6 +527,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .detail-main { grid-column: 1; grid-row: 1; }
 .meta { grid-column: 2; grid-row: 1 / span 2; }
 .detail .sections { grid-column: 1; grid-row: 2; margin-top: 34px; }
+
+.detail-art {
+  display: block;
+  width: 132px;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
 
 .detail-title {
   font-family: var(--font-display);
@@ -732,6 +757,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   }
   .reveal { opacity: 1; transform: none; transition: none; }
   .card, .card:hover { transform: none; }
+  .card:hover .card-art { transform: none; }
   .copy-btn.copied { animation: none; }
 }
 
@@ -817,4 +843,38 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media print {
   .aurora, .tabs-row, .skip-link { display: none !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------- the stack map ----------
+   The one full-width image on the page: a summary of where each tool sits,
+   placed after the grid so the cards still lead. */
+.stackmap {
+  margin-top: clamp(56px, 9vh, 96px);
+  padding-top: clamp(40px, 6vh, 64px);
+  border-top: 1px solid var(--line);
+}
+.stackmap h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.stackmap p {
+  max-width: 56ch;
+  margin-top: 12px;
+  color: var(--body-ink);
+}
+.stackmap figure {
+  margin-top: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+}
+.stackmap img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
