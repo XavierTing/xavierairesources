@@ -188,16 +188,18 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
   <div class="page">
 
-    <header class="strip m">
-      <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
-      <span class="strip-right"><button class="theme-toggle m" type="button" aria-label="Switch to dark theme">Dark</button></span>
+    <header class="site-head">
+      <a class="brand" href="../index.html" aria-label="AI Resources — home">
+        <span class="brand-mark">AI Resources</span>
+        <span class="brand-sub m">AI for the rest of us</span>
+      </a>
+      <nav class="site-nav m" aria-label="Site sections">
+        <a href="../index.html" aria-current="true">The log</a>
+        <a href="../ai-101.html">AI 101</a>
+        <a href="../curator.html">The curator</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
+      </nav>
     </header>
-
-    <nav class="site-tabs" aria-label="Site sections">
-      <a class="tab" href="../index.html" aria-current="true"><span class="tab-n">01</span><span class="tab-t">The log</span></a>
-      <a class="tab" href="../ai-101.html"><span class="tab-n">02</span><span class="tab-t">AI 101</span></a>
-      <a class="tab" href="../curator.html"><span class="tab-n">03</span><span class="tab-t">The curator</span></a>
-    </nav>
 
     <main id="tool-root">
       <nav class="crumbs m" aria-label="Breadcrumb">

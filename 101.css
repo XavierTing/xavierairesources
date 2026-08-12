@@ -737,7 +737,7 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
     --ember: #a34a28;
   }
   body { background: #fff; }
-  .aurora, .site-tabs, .skip-link, .theme-toggle,
+  .aurora, .site-nav, .skip-link, .theme-toggle,
   .btn, .btn-row, .chip, .filters, .meter, .meter-read,
   .coursebar, .chapbar, .chapmenu, .chapend, .contents-go, .wordnav,
   .plate-art { display: none !important; }
