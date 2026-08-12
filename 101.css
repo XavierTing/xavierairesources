@@ -415,7 +415,7 @@ body.chaptered .chapter.is-open { display: block; }
 .chapbar a { color: inherit; text-decoration: none; }
 .chapbar a:hover { text-decoration: none; }
 .chapbar-home {
-  font-family: var(--font-mono); font-size: var(--m-size);
+  font-family: var(--font-mono); font-size: var(--nav-size);
   letter-spacing: 0.08em; text-transform: uppercase;
   white-space: nowrap; color: var(--ink);
 }
@@ -431,7 +431,7 @@ body.chaptered .chapter.is-open { display: block; }
 .chapbar-dots a[aria-current]::before { background: var(--accent); box-shadow: 0 0 12px 1px var(--accent-soft); }
 .chapbar-now {
   margin: 0 auto 0 0; display: flex; gap: 10px; align-items: baseline; min-width: 0;
-  font-family: var(--font-mono); font-size: var(--m-size);
+  font-family: var(--font-mono); font-size: var(--nav-size);
   letter-spacing: 0.08em; text-transform: uppercase;
 }
 .chapbar-count { color: var(--accent); flex: 0 0 auto; }
@@ -446,7 +446,7 @@ body.chaptered .chapter.is-open { display: block; }
 .chapbar-a:hover { background: var(--accent-fill); color: var(--on-accent); border-color: var(--accent-fill); }
 .chapbar-a[aria-disabled="true"] { opacity: 0.28; pointer-events: none; }
 .chapbar-menu {
-  font-family: var(--font-mono); font-size: var(--m-size);
+  font-family: var(--font-mono); font-size: var(--nav-size);
   letter-spacing: 0.08em; text-transform: uppercase;
   background: none; border: 1px solid var(--line); border-radius: var(--radius-sm);
   color: var(--body-ink);

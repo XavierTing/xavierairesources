@@ -151,8 +151,9 @@ User-directed (2026-08-12): every page carries both themes, and **Daylight is th
 - **Lede** (400, clamp(1.05–1.3rem), 1.6): the detail page's opening line.
 - **Lead** (400, clamp(1–1.125rem)): index hero subline.
 - **Body** (400, 1rem, 1.7): sections and taglines, 72ch max.
-- **Label** (mono, 0.85rem/13.6px, +0.08em, uppercase; 0.925rem/14.8px at ≤640px): tabs, meta labels, counts, section headings, chips, profile links. **The only micro size** — nothing functional goes below it. Raised from 0.72rem on 2026-08-12: the navigation read too small, and because every label shares this one step the whole micro tier moved with it.
-- **Command** (mono, 1rem): install commands and italic curator notes. Sits on the body step so the ramp stays two literal steps (13.6px label / 16px body) plus the fluid display clamps.
+- **Nav** (mono, 1rem/16px, +0.08em, uppercase): the masthead strip, the section tabs, the category filters and their count, breadcrumbs, back/pager links, and the course's chapter bar. Wayfinding is read before anything else, so it sits a step above the label tier — added 2026-08-12 after the shared label step proved too dense for it. Tab names never break mid-label; the row wraps between them, and phone padding tightens at ≤430px to keep the three sections on one line.
+- **Label** (mono, 0.85rem/13.6px, +0.08em, uppercase; 0.925rem/14.8px at ≤640px): meta labels, hero counts, section headings, chips, profile links. **The only micro size** — nothing functional goes below it. Raised from 0.72rem on 2026-08-12.
+- **Command** (mono, 1rem): install commands and italic curator notes. Sits on the body step, which the nav step also shares, so the ramp stays two literal steps (13.6px label / 16px nav and body) plus the fluid display clamps.
 
 ### Named Rules
 **The Measured-Mono Rule.** Fragment Mono appears only where the world measures, labels, or codes. Body prose is never mono.

@@ -19,7 +19,7 @@
   --bg-raise: #E7DECB;
   --ink: #1A1815;
   --body-ink: #4F473D;   /* 7.76:1 on linen */
-  --muted: #665C4E;      /* 5.57:1 linen, 4.90:1 sand — holds at 11.5px mono */
+  --muted: #665C4E;      /* 5.57:1 linen, 4.90:1 sand — holds at the mono step */
   --line: rgba(26, 24, 21, 0.12);
   --line-bright: rgba(26, 24, 21, 0.28);
 
@@ -58,9 +58,13 @@
   --radius-sm: 10px;
   /* smallest comfortable hit area for a pointer or thumb */
   --tap: 44px;
-  /* every mono label reads off this one step — nav, chips, counts, section
+  /* every mono label reads off this one step — chips, counts, section
      labels — so a size change is one line and nothing drifts out of step */
   --m-size: 0.85rem;
+  /* wayfinding sits a step above the label tier: the masthead, the tabs and
+     the breadcrumbs are read before anything else, where the label step's
+     density is the wrong trade */
+  --nav-size: 1rem;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -228,6 +232,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: var(--nav-size);
   gap: 16px;
   padding: 22px 0 0;
   color: var(--muted);
@@ -236,8 +241,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .strip a { color: var(--muted); }
 .strip a:hover { color: var(--ink); text-decoration: none; }
 .strip-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; white-space: nowrap; }
-/* on narrow phones the date cedes the row to the tagline and the switch */
-@media (max-width: 430px) { .strip-date { display: none; } }
 /* no-JS is always dark; a switch that can't switch doesn't render */
 html:not(.js) .theme-toggle { display: none; }
 
@@ -394,6 +397,7 @@ html:not(.js) .theme-toggle { display: none; }
 
 .site-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   margin-top: 14px;
   border-bottom: 1px solid var(--line);
@@ -436,11 +440,13 @@ html:not(.js) .theme-toggle { display: none; }
   position: relative;
   padding: 10px 14px 14px;
   font-family: var(--font-mono);
-  font-size: var(--m-size);
+  font-size: var(--nav-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
   cursor: pointer;
+  /* a tab name is one unit — the row wraps between tabs, never inside one */
+  white-space: nowrap;
   transition: color 0.15s ease-out;
 }
 .tab:hover { color: var(--ink); }
@@ -463,6 +469,7 @@ html:not(.js) .theme-toggle { display: none; }
 
 .tab-count {
   color: var(--muted);
+  font-size: var(--nav-size);
   padding-bottom: 12px;
 }
 
@@ -606,6 +613,7 @@ html:not(.js) .theme-toggle { display: none; }
 .crumbs {
   display: flex;
   align-items: center;
+  font-size: var(--nav-size);
   gap: 10px;
   padding-top: 34px;
   color: var(--muted);
@@ -797,7 +805,7 @@ html:not(.js) .theme-toggle { display: none; }
   gap: 8px;
   margin-top: 34px;
   font-family: var(--font-mono);
-  font-size: var(--m-size);
+  font-size: var(--nav-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -814,7 +822,7 @@ html:not(.js) .theme-toggle { display: none; }
 }
 .pager a {
   font-family: var(--font-mono);
-  font-size: var(--m-size);
+  font-size: var(--nav-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -923,11 +931,18 @@ html:not(.js) .theme-toggle { display: none; }
 
 /* --- small phones: the log has to survive 320px --- */
 
+/* --- phones: buy the tab row its width back from the padding, so the
+       three section names stay on one line at the nav step --- */
+
+@media (max-width: 430px) {
+  .tab { padding-inline: 8px; }
+  .tab::after { left: 6px; right: 6px; }
+  .site-tabs { gap: 2px; }
+}
+
 @media (max-width: 380px) {
   .card { padding: 20px 18px 18px; }
   .card-name { font-size: 1.3rem; }
-  .tab { padding: 10px 10px 14px; }
-  .tab::after { left: 8px; right: 8px; }
 }
 
 /* --- coarse pointers at any width --- */
