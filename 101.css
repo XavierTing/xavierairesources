@@ -148,6 +148,7 @@ hr.hair { border: 0; border-top: 1px solid var(--line); margin: 0; }
 .plate-art {
   width: clamp(84px, 14vw, 156px); height: auto; aspect-ratio: 1;
   flex: 0 0 auto; display: block;
+  order: 1; /* art sits at the right edge; DOM keeps it first for the tile-on-card framing */
   border-radius: var(--radius-sm);
   opacity: 0.92;
 }
