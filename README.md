@@ -21,9 +21,14 @@ deploy time. Open `index.html` and it works.
 |---|---|
 | `tools.js` | **The curation.** One object per tool — this is the only file to edit to add or change an entry. |
 | `site.js` | Site identity and the canonical URL. One line to change after deploying. |
-| `index.html` | The card grid, category tabs, hero. |
+| `index.html` | The card grid, category tabs, hero. The "The log" tab. |
+| `ai-101.html` | The "AI 101" tab: Xavier's AI 101 course (27 terms, 7 chapters). **Hand-owned** — the generator never touches it. |
+| `curator.html` | The "The curator" tab: bio and why the site exists. **Hand-owned.** |
+| `101.css` / `101.js` | The course page's styles (over `styles.css` tokens) and behaviour (chapter router + interactives). |
+| `theme.js` | The light/dark switch, shared by every page (light default, localStorage, art swap). |
+| `assets/101/` | The course artwork in both palettes: dark recolours + the original light set in `light/`, both emitted by `assets/101/recolor.py`. |
 | `tools/<slug>.html` | One static, indexable page per tool. **Generated — don't hand-edit.** |
-| `styles.css` | The whole visual system. |
+| `styles.css` | The whole visual system, including the shared `.site-tabs` page nav. |
 | `app.js` | Filtering, copy-to-clipboard, motion. Progressive enhancement over static HTML. |
 | `generate-seo.mjs` | Regenerates the static pages, `sitemap.xml`, `robots.txt` and `llms.txt`. |
 

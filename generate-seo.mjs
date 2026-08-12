@@ -184,7 +184,7 @@ function detailPage(t, i) {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="${SITE.curator.xHandle}">
   <meta name="twitter:site" content="${SITE.curator.xHandle}">
-  <meta name="theme-color" content="#0a0908">
+  <meta name="theme-color" content="#F2ECE0">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -192,7 +192,8 @@ function detailPage(t, i) {
   <link rel="stylesheet" href="../styles.css">
   ${jsonLd(graph)}
   ${jsonLd(faq)}
-  <script>document.documentElement.classList.add("js");</script>
+  <script>document.documentElement.classList.add("js");
+try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
 </head>
 <body>
   <a class="skip-link" href="#tool-root">Skip to content</a>
@@ -201,12 +202,18 @@ function detailPage(t, i) {
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page page-detail">
+  <div class="page">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">${esc(SITE.tagline)}</a></span>
-      <span>Est. 07.2026</span>
+      <span class="strip-right"><span class="strip-date">Est. 07.2026</span><button class="theme-toggle m" type="button" aria-label="Switch to dark theme">Dark</button></span>
     </header>
+
+    <nav class="site-tabs m" aria-label="Site sections">
+      <a class="tab" href="../index.html" aria-current="true">The log</a>
+      <a class="tab" href="../ai-101.html">AI 101</a>
+      <a class="tab" href="../curator.html">The curator</a>
+    </nav>
 
     <main id="tool-root">
       <nav class="crumbs m" aria-label="Breadcrumb">
@@ -217,7 +224,7 @@ function detailPage(t, i) {
 
       <div class="detail">
         <div class="detail-main">
-          <img class="detail-art" src="../assets/cards/${slug(t.name)}.webp" alt="" width="512" height="512" decoding="async">
+          <img class="detail-art" src="../assets/cards/light/${slug(t.name)}.webp" alt="" width="512" height="512" decoding="async">
           <h1 class="detail-title">${esc(t.name)}</h1>
           <p class="detail-lede">${esc(t.tagline)}.</p>
         </div>
@@ -282,6 +289,7 @@ ${steps}
 
   </div>
 
+  <script src="../theme.js"></script>
   <script src="../tools.js"></script>
   <script src="../app.js"></script>
 </body>
@@ -306,7 +314,7 @@ let index = read("index.html");
 
 const cards = TOOLS.map((t) => [
   `          <a class="card" href="tools/${slug(t.name)}.html" data-category="${escAttr(t.category)}">`,
-  `            <img class="card-art" src="assets/cards/${slug(t.name)}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">`,
+  `            <img class="card-art" src="assets/cards/light/${slug(t.name)}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">`,
   `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span><span class="card-num">№ ${esc(t.num)}</span></span>`,
   `            <h2 class="card-name">${esc(t.name)}</h2>`,
   `            <p class="card-tag">${esc(t.blurb || t.tagline)}</p>`,
@@ -385,6 +393,9 @@ console.log("✓ index.html — static cards + JSON-LD refreshed");
 const lastmod = isoDate(LOG_UPDATED);
 const urls = [
   { loc: `${BASE}/`, pri: "1.0", freq: "weekly" },
+  /* ai-101.html and curator.html are hand-owned, not generated */
+  { loc: `${BASE}/ai-101.html`, pri: "0.9", freq: "monthly" },
+  { loc: `${BASE}/curator.html`, pri: "0.8", freq: "monthly" },
   ...TOOLS.map((t) => ({ loc: toolUrl(t), pri: "0.8", freq: "monthly" })),
 ];
 writeFileSync(
@@ -466,6 +477,8 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
+- Course: ${BASE}/ai-101.html — Xavier's AI 101, a plain-English short course for people new to AI (27 terms, 7 chapters, ~35 minutes)
+- Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})
 - Portfolio: ${SITE.curator.portfolio}

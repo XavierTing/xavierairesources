@@ -1,0 +1,224 @@
+<!doctype html>
+<!--
+  DIRECTION CONTRACT — The curator tab
+
+  THESIS: The site's proof is a person. One page that says who curates the
+  log and teaches the course, in his own voice — refusing the résumé wall.
+  OWN-WORLD: The Signal Field, inherited whole (both themes via tokens).
+  Reuses the tool-page grammar: title + lede left, glass meta panel right,
+  labelled sections below.
+  STORY: A visitor lands from either tab or LinkedIn, sees who this is,
+  why the site exists, and where to start.
+  FIRST VIEWPORT: strip, tabs, then the ringed portrait, name display,
+  role lede, and the meta panel beside them.
+  FORM: profile page in the detail-page layout; "On this site" closes with
+  two cards into the other tabs.
+
+  HAND-OWNED: generate-seo.mjs does not touch this file. Facts sourced from
+  PRODUCT.md records and Xavier's own first-person passages — nothing invented.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The curator — Xavier Ting | AI Resources</title>
+  <meta name="description" content="Who curates AI Resources: Xavier Ting, VP of Customer Experience Design at OCBC and AI &amp; Design Leader in Singapore. He builds with AI daily and shares what works — the log is his stack, AI 101 is the on-ramp.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/curator.html">
+  <meta name="author" content="Xavier Ting">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="AI Resources">
+  <meta property="og:title" content="The curator — Xavier Ting">
+  <meta property="og:description" content="VP, Customer Experience Design at OCBC · AI &amp; Design Leader. I build with AI daily and share what I learn — making AI accessible for everyone.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/curator.html">
+  <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@xaviertingai">
+  <meta name="twitter:site" content="@xaviertingai">
+  <meta name="theme-color" content="#F2ECE0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://xavierairesources.netlify.app/#curator",
+      "name": "Xavier Ting",
+      "jobTitle": "Vice President, Customer Experience Design",
+      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
+      "image": "https://xavierairesources.netlify.app/assets/portrait.jpg",
+      "url": "https://xavierairesources.netlify.app",
+      "worksFor": { "@type": "Organization", "name": "OCBC" },
+      "sameAs": [
+        "https://www.linkedin.com/in/xavierting/",
+        "https://x.com/xaviertingai",
+        "https://www.xavierting.com/"
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "Master Certified Nielsen Norman Group UX Specialist" },
+        { "@type": "EducationalOccupationalCredential", "name": "Certified Scrum Master and Product Owner" },
+        { "@type": "EducationalOccupationalCredential", "name": "Certified LEGO® SERIOUS PLAY® facilitator" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://xavierairesources.netlify.app/#website",
+      "url": "https://xavierairesources.netlify.app/",
+      "name": "AI Resources",
+      "alternateName": "AI for the rest of us",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://xavierairesources.netlify.app/#curator" },
+      "creator": { "@id": "https://xavierairesources.netlify.app/#curator" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://xavierairesources.netlify.app/curator.html#page",
+      "url": "https://xavierairesources.netlify.app/curator.html",
+      "name": "The curator — Xavier Ting",
+      "mainEntity": { "@id": "https://xavierairesources.netlify.app/#curator" },
+      "isPartOf": { "@id": "https://xavierairesources.netlify.app/#website" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "AI Resources", "item": "https://xavierairesources.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "The curator", "item": "https://xavierairesources.netlify.app/curator.html" }
+      ]
+    }
+  ]
+}
+  </script>
+  <script>document.documentElement.classList.add("js");
+try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#curator-root">Skip to content</a>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="strip m">
+      <span class="strip-id"><a href="index.html">AI for the rest of us</a></span>
+      <span class="strip-right"><span class="strip-date">Est. 07.2026</span><button class="theme-toggle m" type="button" aria-label="Switch to dark theme">Dark</button></span>
+    </header>
+
+    <nav class="site-tabs m" aria-label="Site sections">
+      <a class="tab" href="index.html">The log</a>
+      <a class="tab" href="ai-101.html">AI 101</a>
+      <a class="tab" href="curator.html" aria-current="page">The curator</a>
+    </nav>
+
+    <main id="curator-root">
+
+      <div class="detail">
+        <div class="detail-main">
+          <img class="avatar curator-portrait" src="assets/portrait.jpg"
+               width="96" height="96" alt="Xavier Ting">
+          <h1 class="detail-title">Xavier Ting</h1>
+          <p class="detail-lede">VP, Customer Experience Design at OCBC · AI &amp; Design
+          Leader. I build with AI every day and share what I learn — making AI
+          accessible for everyone.</p>
+        </div>
+
+        <aside class="meta">
+          <div><h2>Role</h2><p>VP, Customer Experience Design<br>OCBC · Singapore</p></div>
+          <div><h2>Credentials</h2><p>Master Certified NN/g UX Specialist · Certified Scrum Master &amp; Product Owner · LEGO® SERIOUS PLAY® facilitator</p></div>
+          <div><h2>Recognition</h2><p>OCBC Business App revamp — Best Corporate Mobile Initiative 2023 (The Asian Banker) · Singapore Good Design Award 2023</p></div>
+          <div><h2>Elsewhere</h2><p>
+            <a class="repo-link" href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a><br>
+            <a class="repo-link" href="https://x.com/xaviertingai" rel="noopener">X ↗</a><br>
+            <a class="repo-link" href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+          </p></div>
+        </aside>
+
+        <div class="sections">
+          <section class="section">
+            <h2>The short version</h2>
+            <div class="body">I lead customer experience design at OCBC in
+            Singapore, working on AI transformation in banking — a place where
+            every clever idea meets a regulator before it meets a customer.
+            The question I ask of every AI feature is the one I'd ask of any
+            design: can the person in front of it actually use it?</div>
+          </section>
+          <section class="section">
+            <h2>How I work</h2>
+            <div class="body">I build with these tools daily, not occasionally.
+            I introduced vibe coding to my design team early last year and it
+            changed how we work: we stopped presenting mockups and started
+            handing people something they could click — and every one of those
+            still went past someone who knew what they were looking at. The
+            barrier to building dropped. The need for judgment didn't.</div>
+          </section>
+          <section class="section">
+            <h2>Why this site</h2>
+            <div class="body">The fastest way to make AI accessible is to show
+            your working. The log is the stack I actually run — every entry in
+            daily use, nobody paid to be listed. AI 101 is the on-ramp: the
+            twenty-seven words that do most of the gatekeeping, decoded in
+            plain English. Start wherever fits.</div>
+          </section>
+        </div>
+      </div>
+
+      <section class="onsite" aria-labelledby="onsite-h">
+        <h2 id="onsite-h">On this site</h2>
+        <p>Two tabs, one goal: AI that stays usable by people who don't ship code for a living.</p>
+        <div class="curator-cards">
+          <a class="card" href="index.html">
+            <span class="card-top"><span class="card-cat m">Tools</span></span>
+            <h3 class="card-name">The log</h3>
+            <p class="card-tag">The AI tools I use daily to design, build and write — what each one does, when it's worth using, and how to set it up.</p>
+            <span class="card-open">Open the log</span>
+          </a>
+          <a class="card" href="ai-101.html">
+            <span class="card-top"><span class="card-cat m">Course</span></span>
+            <h3 class="card-name">Xavier's AI 101</h3>
+            <p class="card-tag">A plain-English short course for people new to AI: twenty-seven words decoded easiest first, in about 35 minutes.</p>
+            <span class="card-open">Start the course</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="colophon">
+      <div>
+        <h2>Logged &amp; maintained</h2>
+        <div class="colophon-who">
+          <img class="avatar" src="assets/portrait.jpg"
+               width="44" height="44" alt="Xavier Ting" loading="lazy">
+          <div>
+            <p>Xavier Ting · VP, Customer Experience Design at OCBC. I write these up so the tools stay usable by people who don't ship code for a living.</p>
+            <p class="colophon-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Credentials</h2>
+        <p>Master Certified Nielsen Norman Group UX Specialist · Certified Scrum Master and Product Owner · Certified LEGO® SERIOUS PLAY® facilitator</p>
+      </div>
+      <div>
+        <h2>Status</h2>
+        <p>Last updated <span data-updated>09.08.2026</span></p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="theme.js"></script>
+  <script src="tools.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -40,6 +40,8 @@ Visitors scan a card grid, filter by category tabs, open a tool's detail page to
 - Credentials on record (from xavierting.com/about, not currently shown on the site): Master Certified NN/g UX Specialist, Certified Scrum Master & Product Owner, LEGO® SERIOUS PLAY® facilitator; OCBC Business App revamp won Best Corporate Mobile Initiative 2023 (Asian Banker) and Singapore Good Design Award 2023.
 - User's binding layout reference (2026-07-30): claude.com/plugins — card grid on the index, a fuller detail page per tool, category tabs kept.
 - User's confirmed visual direction (2026-07-30): dark ground, "modern and futuristic," aurora-drift background. Explicitly rejected: the quad-grid background. Earlier white-minimal pin is superseded for this site.
+- User directive (2026-08-12): the entire site carries **both light and dark themes**, with **light as the default** — toggle in the header strip, choice persisted, dark available on request. The light rendition ("Daylight") derives from the AI 101 course's linen palette; see DESIGN.md.
+- Three surfaces (2026-08-12): The log (index + tool pages), AI 101 (ai-101.html, the course), The curator (curator.html, bio). One shared tab bar; the two hand-owned pages are never touched by the generator.
 - Standing directive: "design wise be as creative as possible — show what the world can do." Craft ambition is a binding brief, not decoration.
 
 ## Evidence on Hand

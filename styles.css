@@ -1,43 +1,59 @@
 /* ============================================================
    SIGNAL FIELD — styles.css
-   World: a warm dark instrument panel under a drifting aurora.
-   Near-black warm ground, glass-edged cards, one accent —
-   Xavier's brand gold (#e0bf91): outline = information,
-   fill = action.
+   World: a warm instrument panel under a drifting aurora, in two
+   renditions. Daylight (the default) sits on warm linen; Night
+   sits on near-black. One accent through both — Xavier's brand
+   gold: outline = information, fill = action.
    Layout follows claude.com/plugins: card grid + detail pages.
-   See DESIGN.md.
+   Default lives on :root, so no-JS and crawlers get it; theme.js
+   opts into Night with html[data-theme="dark"]. See DESIGN.md.
    ============================================================ */
 
 :root {
-  /* warm near-black ground + warmed neutrals, tuned to sit under the gold */
-  --bg: #0a0908;
-  --bg-raise: #131110;
-  --ink: #f4f2ef;
-  --body-ink: #c4bfb6;
-  --muted: #948d82;
-  --line: rgba(244, 242, 239, 0.1);
-  --line-bright: rgba(244, 242, 239, 0.24);
+  /* ---- Daylight: the default rendition ----
+     Warm linen ground from the AI 101 course's printed-paper build.
+     One gold family, two duties: --accent is the text-duty gold
+     (the Night gold reads 1.5:1 on linen), --accent-fill keeps the
+     brand-gold tile with ink text (6.4:1, the course's own pairing). */
+  --bg: #F2ECE0;
+  --bg-raise: #E7DECB;
+  --ink: #1A1815;
+  --body-ink: #4F473D;   /* 7.76:1 on linen */
+  --muted: #665C4E;      /* 5.57:1 linen, 4.90:1 sand — holds at 11.5px mono */
+  --line: rgba(26, 24, 21, 0.12);
+  --line-bright: rgba(26, 24, 21, 0.28);
 
-  /* the single accent: Xavier's brand gold. Outline = information, fill = action. */
-  --accent: #e0bf91;
-  --accent-soft: rgba(224, 191, 145, 0.13);
-  --accent-line: rgba(224, 191, 145, 0.3);
+  --accent: #6F5631;     /* text-duty gold: 5.85:1 linen, 5.15:1 sand */
+  --accent-soft: rgba(111, 86, 49, 0.10);
+  --accent-line: rgba(111, 86, 49, 0.38);
+  --accent-fill: #B6966F;
+  --on-accent: #1A1815;
 
-  /* aurora: warm light pools. Gold is luminous, so alphas run low. */
-  --aurora-gold: rgba(224, 191, 145, 0.1);
-  --aurora-copper: rgba(190, 130, 80, 0.14);
-  --aurora-bronze: rgba(140, 95, 55, 0.12);
+  /* aurora on linen: pools can't lighten a light ground, so they stain it
+     toward sand. Alphas are contrast-capped — the darkest composite
+     ≈#E7DDCC keeps --muted at 4.87:1. Raising them breaks WCAG, not taste. */
+  --aurora-gold: rgba(182, 150, 111, 0.18);
+  --aurora-copper: rgba(190, 130, 80, 0.10);
+  --aurora-bronze: rgba(140, 95, 55, 0.08);
+
+  --glass: rgba(255, 255, 255, 0.55);
+  --glass-hover: rgba(255, 255, 255, 0.75);
+  --card-glow: rgba(111, 86, 49, 0.28);
+  --pulse-rgb: 111, 86, 49;
+  --select: rgba(182, 150, 111, 0.40);
 
   --font-display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "Fragment Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --pad: clamp(20px, 5vw, 48px);
-  /* Grows with the viewport instead of stranding the log in a 1180px column
-     on a wide display. Floors at the original 1180 so the desktop rhythm the
-     design was tuned at is unchanged; ceilings at 2000 so line length stays
-     readable on ultrawide. */
-  --page-w: clamp(1180px, 90vw, 2000px);
+  /* ONE container for every surface — the log, the course and the curator all
+     sit in this width, so the three tabs share their left and right edges and
+     nothing shifts as you cross between them. Floors at the original 1180 so
+     the desktop rhythm the design was tuned at is unchanged; ceilings at 1440,
+     the widest the reading surfaces stay comfortable at (the card grid adds a
+     column there instead of stretching). */
+  --page-w: clamp(1180px, 90vw, 1440px);
   --radius: 16px;
   --radius-sm: 10px;
   /* smallest comfortable hit area for a pointer or thumb */
@@ -48,11 +64,46 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ---------- Signal Field, Night ----------
+   The dark rendition: the warm near-black instrument panel the site was
+   first drawn in. Gold runs luminous here, so the aurora alphas run low
+   and the fill treatment is the pale brand gold on the void.
+   Opt-in — theme.js sets html[data-theme="dark"] from the stored choice. */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0a0908;
+  --bg-raise: #131110;
+  --ink: #f4f2ef;
+  --body-ink: #c4bfb6;
+  --muted: #948d82;
+  --line: rgba(244, 242, 239, 0.1);
+  --line-bright: rgba(244, 242, 239, 0.24);
+
+  --accent: #e0bf91;
+  --accent-soft: rgba(224, 191, 145, 0.13);
+  --accent-line: rgba(224, 191, 145, 0.3);
+  /* on the void the accent needs no darkening, so fill IS the accent */
+  --accent-fill: var(--accent);
+  --on-accent: var(--bg);
+
+  --aurora-gold: rgba(224, 191, 145, 0.1);
+  --aurora-copper: rgba(190, 130, 80, 0.14);
+  --aurora-bronze: rgba(140, 95, 55, 0.12);
+
+  --glass: rgba(255, 255, 255, 0.025);
+  --glass-hover: rgba(255, 255, 255, 0.04);
+  --card-glow: rgba(224, 191, 145, 0.3);
+  --pulse-rgb: 224, 191, 145;
+  --select: rgba(224, 191, 145, 0.3);
+}
+
 /* ---------- base ---------- */
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; color-scheme: dark; }
+html { scroll-behavior: smooth; color-scheme: light; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
@@ -62,12 +113,12 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--body-ink);
-  background-color: #0a0908;
+  background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 
-::selection { background: rgba(224, 191, 145, 0.3); color: var(--ink); }
+::selection { background: var(--select); color: var(--ink); }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -168,14 +219,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   padding: 0 var(--pad);
 }
 
-/* A tool page is one column of prose plus a 300px meta card. The wide
-   container exists for the card grid; here it just pushes the meta card away
-   from the text it belongs to. Cap it so the two columns stay adjacent. */
-.page-detail { max-width: min(var(--page-w), 1280px); }
+/* Detail pages (tools, the curator) share the one container above — no
+   narrower cap, so their masthead and tabs line up with the other tabs'.
+   The prose inside keeps its own measure caps (.detail-lede, .sections). */
 
 .strip {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 16px;
   padding: 22px 0 0;
   color: var(--muted);
@@ -183,6 +234,28 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .strip .strip-id { color: var(--accent); }
 .strip a { color: var(--muted); }
 .strip a:hover { color: var(--ink); text-decoration: none; }
+.strip-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; white-space: nowrap; }
+/* on narrow phones the date cedes the row to the tagline and the switch */
+@media (max-width: 430px) { .strip-date { display: none; } }
+/* no-JS is always dark; a switch that can't switch doesn't render */
+html:not(.js) .theme-toggle { display: none; }
+
+/* the light/dark switch — labelled with the theme it takes you to */
+.theme-toggle {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--m-size);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.15s ease-out, border-color 0.15s ease-out;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--line-bright); }
 
 /* ---------- hero (index) ---------- */
 
@@ -314,6 +387,29 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .is-loaded .hero .hero-byline { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.4s, transform 0.6s var(--ease-out) 0.4s; }
 .is-loaded .hero .hero-counts { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.5s, transform 0.6s var(--ease-out) 0.5s; }
 
+/* ---------- site tabs (page-level: The log / AI 101) ----------
+   Same visual voice as the category tabs below, but these are real
+   links between pages, so state is aria-current, not aria-pressed. */
+
+.site-tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.site-tabs .tab {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.site-tabs .tab:hover { text-decoration: none; }
+/* aria-current="page" on the page itself; "true" on a section's detail pages */
+.site-tabs .tab[aria-current] { color: var(--ink); }
+.site-tabs .tab[aria-current]::after {
+  transform: scaleX(1);
+  box-shadow: 0 0 12px 1px var(--accent-soft);
+}
+
 /* ---------- category tabs ---------- */
 
 .tabs-row {
@@ -384,7 +480,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   flex-direction: column;
   gap: 14px;
   padding: 26px 26px 22px;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--glass);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   color: inherit;
@@ -398,9 +494,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .card:hover {
   text-decoration: none;
   border-color: var(--line-bright);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass-hover);
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px -18px rgba(224, 191, 145, 0.3);
+  box-shadow: 0 12px 40px -18px var(--card-glow);
 }
 .card:hover .card-open { color: var(--ink); }
 .card:hover .card-open::after { transform: translateX(4px); }
@@ -421,6 +517,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   opacity: 1;
   transform: scale(1.03);
 }
+
+/* the monolines exist in two inkings: assets/cards/light/ (re-inked for
+   linen — the default the markup ships) and assets/cards/ (pale gold at low
+   stroke alpha, drawn to glow on the void). theme.js swaps them on toggle;
+   see assets/cards/lighten.py */
 
 .card-top {
   display: flex;
@@ -565,7 +666,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   gap: 22px;
   align-self: start;
   padding: 26px;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--glass);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
@@ -665,18 +766,18 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   flex-shrink: 0;
 }
 .copy-btn:hover {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--accent-fill);
+  color: var(--on-accent);
   box-shadow: 0 0 18px 2px var(--accent-soft);
 }
 .copy-btn.copied {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--accent-fill);
+  color: var(--on-accent);
   animation: pulse-ring 0.5s ease-out;
 }
 @keyframes pulse-ring {
-  0% { box-shadow: 0 0 0 0 rgba(224, 191, 145, 0.6); }
-  100% { box-shadow: 0 0 0 14px rgba(224, 191, 145, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(var(--pulse-rgb), 0.6); }
+  100% { box-shadow: 0 0 0 14px rgba(var(--pulse-rgb), 0); }
 }
 
 .repo-link {
@@ -745,7 +846,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* ---------- reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
-  .aurora span { animation: none; }
+  /* .a1/.a2/.a3 outrank a bare `.aurora span`, so name them */
+  .aurora .a1, .aurora .a2, .aurora .a3 { animation: none; }
   .js .hero .headline,
   .js .hero .hero-sub,
   .js .hero .hero-byline,
@@ -762,25 +864,21 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 /* ---------- responsive ----------
-   Column tiers are set against --page-w above. The container grows with the
-   viewport, so each tier is chosen to land cards near the ~350px the card
-   design was drawn at rather than to stretch three columns indefinitely:
+   Column tiers are set against --page-w above, which tops out at 1440. Past
+   that the container stops growing, so the grid adds a column instead of
+   widening the cards — each tier lands them near the ~350px the card design
+   was drawn at:
 
      ≤ 640      1 col
      641–1020   2 col
-     1021–1699  3 col   (the original desktop rhythm)
-     1700–2399  4 col
-     ≥ 2400     5 col
+     1021–1599  3 col   (the original desktop rhythm)
+     ≥ 1600     4 col   (container is at its 1440 ceiling: ~320px cards)
    -------------------------------------------------- */
 
 /* --- wide displays: use the space instead of padding it out --- */
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .grid { grid-template-columns: repeat(4, 1fr); gap: 22px; }
-}
-
-@media (min-width: 2400px) {
-  .grid { grid-template-columns: repeat(5, 1fr); gap: 24px; }
   /* prose should not track the container this far out */
   .hero-sub { max-width: 60ch; }
 }
@@ -841,9 +939,53 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* ---------- print ---------- */
 
 @media print {
-  .aurora, .tabs-row, .skip-link { display: none !important; }
+  /* print is always paper, whichever theme is active — the attribute
+     selector (0,2,0) outranks the Night block (0,1,1) */
+  :root, :root[data-theme="dark"] {
+    --bg: #fff; --bg-raise: #f4f0e6;
+    --ink: #111; --body-ink: #333; --muted: #555;
+    --line: #bbb; --line-bright: #999;
+    --accent: #8a6a3f; --accent-soft: transparent; --accent-line: #8a6a3f;
+    --accent-fill: #8a6a3f; --on-accent: #fff;
+    --glass: transparent; --glass-hover: transparent;
+  }
+  body { background: #fff; }
+  .aurora, .tabs-row, .site-tabs, .skip-link, .theme-toggle, .copy-btn { display: none !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+/* ---------- the curator page ---------- */
+
+/* the one place the portrait runs large */
+.curator-portrait { width: 96px; height: 96px; margin-bottom: 22px; }
+
+/* "On this site": a titled section after the bio, same register as the
+   stack map's heading block */
+.onsite {
+  margin-top: clamp(48px, 8vh, 80px);
+  padding-top: clamp(36px, 5vh, 56px);
+  border-top: 1px solid var(--line);
+}
+.onsite h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.onsite > p {
+  max-width: 56ch;
+  margin-top: 12px;
+  color: var(--body-ink);
+}
+.curator-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+@media (max-width: 640px) { .curator-cards { grid-template-columns: 1fr; } }
 
 /* ---------- the stack map ----------
    The one full-width image on the page: a summary of where each tool sits,
@@ -871,7 +1013,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--glass);
 }
 .stackmap img {
   display: block;

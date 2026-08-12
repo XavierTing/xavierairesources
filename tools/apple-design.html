@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@xaviertingai">
   <meta name="twitter:site" content="@xaviertingai">
-  <meta name="theme-color" content="#0a0908">
+  <meta name="theme-color" content="#F2ECE0">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,7 +178,8 @@
   ]
 }
   </script>
-  <script>document.documentElement.classList.add("js");</script>
+  <script>document.documentElement.classList.add("js");
+try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
 </head>
 <body>
   <a class="skip-link" href="#tool-root">Skip to content</a>
@@ -187,12 +188,18 @@
     <span class="a1"></span><span class="a2"></span><span class="a3"></span>
   </div>
 
-  <div class="page page-detail">
+  <div class="page">
 
     <header class="strip m">
       <span class="strip-id"><a href="../index.html">AI for the rest of us</a></span>
-      <span>Est. 07.2026</span>
+      <span class="strip-right"><span class="strip-date">Est. 07.2026</span><button class="theme-toggle m" type="button" aria-label="Switch to dark theme">Dark</button></span>
     </header>
+
+    <nav class="site-tabs m" aria-label="Site sections">
+      <a class="tab" href="../index.html" aria-current="true">The log</a>
+      <a class="tab" href="../ai-101.html">AI 101</a>
+      <a class="tab" href="../curator.html">The curator</a>
+    </nav>
 
     <main id="tool-root">
       <nav class="crumbs m" aria-label="Breadcrumb">
@@ -203,7 +210,7 @@
 
       <div class="detail">
         <div class="detail-main">
-          <img class="detail-art" src="../assets/cards/apple-design.webp" alt="" width="512" height="512" decoding="async">
+          <img class="detail-art" src="../assets/cards/light/apple-design.webp" alt="" width="512" height="512" decoding="async">
           <h1 class="detail-title">Apple Design</h1>
           <p class="detail-lede">Teaches your AI what makes Apple interfaces feel right.</p>
         </div>
@@ -276,6 +283,7 @@
 
   </div>
 
+  <script src="../theme.js"></script>
   <script src="../tools.js"></script>
   <script src="../app.js"></script>
 </body>

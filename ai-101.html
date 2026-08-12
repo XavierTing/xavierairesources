@@ -1,0 +1,1142 @@
+<!doctype html>
+<!--
+  DIRECTION CONTRACT — AI 101 tab
+
+  THESIS: The vocabulary is the barrier. Twenty-seven words decoded easiest
+  first, one chapter at a time — refusing the single "ultimate guide" scroll.
+  OWN-WORLD: The Signal Field (see DESIGN.md), inherited whole: warm
+  near-black under the aurora, glass plates, one brand gold. The course keeps
+  its own devices inside it — the 96×4 gold bar, chapter plates, the recap.
+  STORY: "AI is one intimidating blob" becomes "AI is twenty-seven words,
+  and I have them."
+  FIRST VIEWPORT: strip, site tabs, sticky chapter bar, then the cover:
+  masthead, gold bar, lede, the seven-chapter contents. Primary action:
+  Start at the beginning.
+  FORM: chaptered decoder, ported intact; hash router, prev/next, contents
+  menu. Second tab of the log site — two pages, one shared tab bar.
+
+  HAND-OWNED: generate-seo.mjs does not touch this file. Content source:
+  the retired standalone build in xaviers-ai-101/.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Xavier's AI 101 — a plain-English AI course for beginners | AI Resources</title>
+  <meta name="description" content="Twenty-seven words do most of the gatekeeping in AI. Here is what each one actually means, in plain English. Generative AI versus agents, the tools worth trying, and what to do on Monday.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/ai-101.html">
+  <meta name="author" content="Xavier Ting">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Resources">
+  <meta property="og:title" content="Xavier's AI 101 — a plain-English AI course for beginners">
+  <meta property="og:description" content="Twenty-seven words do most of the gatekeeping in AI. Here is what each one actually means, in plain English.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/ai-101.html">
+  <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@xaviertingai">
+  <meta name="twitter:site" content="@xaviertingai">
+  <meta name="theme-color" content="#F2ECE0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="101.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://xavierairesources.netlify.app/#curator",
+      "name": "Xavier Ting",
+      "jobTitle": "Vice President, Customer Experience Design",
+      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
+      "image": "https://xavierairesources.netlify.app/assets/portrait.jpg",
+      "url": "https://xavierairesources.netlify.app",
+      "worksFor": { "@type": "Organization", "name": "OCBC" },
+      "sameAs": [
+        "https://www.linkedin.com/in/xavierting/",
+        "https://x.com/xaviertingai",
+        "https://www.xavierting.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://xavierairesources.netlify.app/#website",
+      "url": "https://xavierairesources.netlify.app/",
+      "name": "AI Resources",
+      "alternateName": "AI for the rest of us",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://xavierairesources.netlify.app/#curator" },
+      "creator": { "@id": "https://xavierairesources.netlify.app/#curator" }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://xavierairesources.netlify.app/ai-101.html#course",
+      "name": "Xavier's AI 101",
+      "description": "A plain-English short course for people new to AI: twenty-seven words decoded easiest first, across seven chapters, in about 35 minutes.",
+      "url": "https://xavierairesources.netlify.app/ai-101.html",
+      "learningResourceType": "Course",
+      "educationalLevel": "Beginner",
+      "inLanguage": "en",
+      "timeRequired": "PT35M",
+      "teaches": [
+        "Model", "LLM", "Image model", "Video model", "Prompt", "Token",
+        "Context window", "Memory", "Hallucination", "Generative AI",
+        "AI agent", "Agentic AI", "Multimodal", "Prompt engineering",
+        "Context engineering", "Skills", "Model tiers", "Vibe coding",
+        "Human in the loop", "Guardrails", "Tool call", "Computer use",
+        "API", "Connectors", "MCP", "Plugins", "Harness"
+      ],
+      "author": { "@id": "https://xavierairesources.netlify.app/#curator" },
+      "provider": { "@id": "https://xavierairesources.netlify.app/#curator" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://xavierairesources.netlify.app/ai-101.html#page",
+      "url": "https://xavierairesources.netlify.app/ai-101.html",
+      "name": "Xavier's AI 101 — a plain-English AI course for beginners",
+      "description": "Twenty-seven words do most of the gatekeeping in AI. Here is what each one actually means, in plain English.",
+      "isPartOf": { "@id": "https://xavierairesources.netlify.app/#website" },
+      "about": { "@id": "https://xavierairesources.netlify.app/ai-101.html#course" },
+      "reviewedBy": { "@id": "https://xavierairesources.netlify.app/#curator" },
+      "dateModified": "2026-08-09"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "AI Resources", "item": "https://xavierairesources.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "AI 101", "item": "https://xavierairesources.netlify.app/ai-101.html" }
+      ]
+    }
+  ]
+}
+  </script>
+  <script>document.documentElement.classList.add("js");
+try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the course</a>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="strip m">
+      <span class="strip-id"><a href="index.html">AI for the rest of us</a></span>
+      <span class="strip-right"><span class="strip-date">Est. 07.2026</span><button class="theme-toggle m" type="button" aria-label="Switch to dark theme">Dark</button></span>
+    </header>
+
+    <nav class="site-tabs m" aria-label="Site sections">
+      <a class="tab" href="index.html">The log</a>
+      <a class="tab" href="ai-101.html" aria-current="page">AI 101</a>
+      <a class="tab" href="curator.html">The curator</a>
+    </nav>
+
+    <div class="coursebar">
+      <nav class="chapbar" id="chapbar" aria-label="Chapters">
+        <a class="chapbar-home" href="#cover">Xavier's AI 101</a>
+        <ol class="chapbar-dots">
+          <li><a href="#basics" data-slug="basics"><span class="vh">The basics</span></a></li>
+          <li><a href="#layers" data-slug="layers"><span class="vh">The three layers</span></a></li>
+          <li><a href="#craft" data-slug="craft"><span class="vh">Getting good at it</span></a></li>
+          <li><a href="#judgment" data-slug="judgment"><span class="vh">Knowing when not to trust it</span></a></li>
+          <li><a href="#reach" data-slug="reach"><span class="vh">How it reaches the real world</span></a></li>
+          <li><a href="#tools" data-slug="tools"><span class="vh">Which tool to actually open</span></a></li>
+          <li><a href="#monday" data-slug="monday"><span class="vh">Start here on Monday</span></a></li>
+        </ol>
+        <p class="chapbar-now"><span class="chapbar-count" id="chapCount"></span><span id="chapNow">Seven chapters</span></p>
+        <button class="chapbar-menu" id="chapMenuBtn" type="button" aria-expanded="false" aria-controls="chapmenu">Contents</button>
+        <span class="chapbar-arrows">
+          <a class="chapbar-a" id="chapPrev" href="#cover" rel="prev" aria-label="Previous chapter">&#8249;</a>
+          <a class="chapbar-a" id="chapNext" href="#basics" rel="next" aria-label="Next chapter">&#8250;</a>
+        </span>
+      </nav>
+
+      <!-- SYNC: this list duplicates the cover contents list below — edit both -->
+      <div class="chapmenu" id="chapmenu" hidden>
+        <div class="chapmenu-inner">
+          <p class="label">Jump to a chapter</p>
+          <ol class="contents-list">
+            <li><a href="#basics">
+              <span class="c-num" aria-hidden="true">01</span>
+              <span class="c-body"><span class="c-title">The basics</span><span class="c-q">What is AI actually doing when it answers you?</span><span class="c-words">Model · LLM · Image model · Video model · Prompt · Token · Context window · Memory · Hallucination</span></span>
+              <span class="c-time">9 min</span>
+            </a></li>
+            <li><a href="#layers">
+              <span class="c-num" aria-hidden="true">02</span>
+              <span class="c-body"><span class="c-title">The three layers</span><span class="c-q">Why does everyone keep saying agent?</span><span class="c-words">Generative AI · AI agent · Agentic AI</span></span>
+              <span class="c-time">4 min</span>
+            </a></li>
+            <li><a href="#craft">
+              <span class="c-num" aria-hidden="true">03</span>
+              <span class="c-body"><span class="c-title">Getting good at it</span><span class="c-q">Why do some people get so much more out of it?</span><span class="c-words">Multimodal · Prompt engineering · Context engineering · Skills · Model tiers · Vibe coding</span></span>
+              <span class="c-time">6 min</span>
+            </a></li>
+            <li><a href="#judgment">
+              <span class="c-num" aria-hidden="true">04</span>
+              <span class="c-body"><span class="c-title">Knowing when not to trust it</span><span class="c-q">When should you not trust it?</span><span class="c-words">Human in the loop · Guardrails</span></span>
+              <span class="c-time">2 min</span>
+            </a></li>
+            <li><a href="#reach">
+              <span class="c-num" aria-hidden="true">05</span>
+              <span class="c-body"><span class="c-title">How it reaches the real world<span class="c-tag">Advanced</span></span><span class="c-q">How does a chat box end up sending real emails?</span><span class="c-words">Tool call · Computer use · API · Connectors · MCP · Plugins · Harness</span></span>
+              <span class="c-time">6 min</span>
+            </a></li>
+            <li><a href="#tools">
+              <span class="c-num" aria-hidden="true">06</span>
+              <span class="c-body"><span class="c-title">Which tool to actually open<span class="c-tag">Reference</span></span><span class="c-q">Which app fits the job in front of you?</span><span class="c-words">25 tools, filtered by job</span></span>
+              <span class="c-time">3 min</span>
+            </a></li>
+            <li><a href="#monday">
+              <span class="c-num" aria-hidden="true">07</span>
+              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-words">Three moves for this week</span></span>
+              <span class="c-time">3 min</span>
+            </a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell">
+    <main id="main">
+
+    <!-- ════ COVER ════ -->
+    <section class="chapter is-open" id="ch-cover" data-slug="cover" data-title="Xavier's AI 101" aria-labelledby="h-cover">
+    <header class="masthead col">
+      <p class="meta-row"><span>A plain-English short course</span><span class="dot" aria-hidden="true"></span><span>About 35 minutes</span><span class="dot" aria-hidden="true"></span><span>Updated August 2026</span></p>
+      <h1 class="display">Xavier's<br>AI 101</h1>
+      <hr class="rule-gold">
+      <p class="lede">Everyone says AI like it's one thing. It's not, and the confusion isn't your fault. Twenty-seven words do most of the gatekeeping. Here is every one of them, easiest first.</p>
+    </header>
+
+      <!-- SYNC: this list duplicates the chapmenu list above — edit both -->
+      <nav class="contents col" aria-label="Contents">
+        <h2 id="h-cover" class="label" tabindex="-1">Seven chapters, easiest first</h2>
+        <ol class="contents-list">
+          <li><a href="#basics">
+              <span class="c-num" aria-hidden="true">01</span>
+              <span class="c-body"><span class="c-title">The basics</span><span class="c-q">What is AI actually doing when it answers you?</span><span class="c-words">Model · LLM · Image model · Video model · Prompt · Token · Context window · Memory · Hallucination</span></span>
+              <span class="c-time">9 min</span>
+            </a></li>
+          <li><a href="#layers">
+              <span class="c-num" aria-hidden="true">02</span>
+              <span class="c-body"><span class="c-title">The three layers</span><span class="c-q">Why does everyone keep saying agent?</span><span class="c-words">Generative AI · AI agent · Agentic AI</span></span>
+              <span class="c-time">4 min</span>
+            </a></li>
+          <li><a href="#craft">
+              <span class="c-num" aria-hidden="true">03</span>
+              <span class="c-body"><span class="c-title">Getting good at it</span><span class="c-q">Why do some people get so much more out of it?</span><span class="c-words">Multimodal · Prompt engineering · Context engineering · Skills · Model tiers · Vibe coding</span></span>
+              <span class="c-time">6 min</span>
+            </a></li>
+          <li><a href="#judgment">
+              <span class="c-num" aria-hidden="true">04</span>
+              <span class="c-body"><span class="c-title">Knowing when not to trust it</span><span class="c-q">When should you not trust it?</span><span class="c-words">Human in the loop · Guardrails</span></span>
+              <span class="c-time">2 min</span>
+            </a></li>
+          <li><a href="#reach">
+              <span class="c-num" aria-hidden="true">05</span>
+              <span class="c-body"><span class="c-title">How it reaches the real world<span class="c-tag">Advanced</span></span><span class="c-q">How does a chat box end up sending real emails?</span><span class="c-words">Tool call · Computer use · API · Connectors · MCP · Plugins · Harness</span></span>
+              <span class="c-time">6 min</span>
+            </a></li>
+          <li><a href="#tools">
+              <span class="c-num" aria-hidden="true">06</span>
+              <span class="c-body"><span class="c-title">Which tool to actually open<span class="c-tag">Reference</span></span><span class="c-q">Which app fits the job in front of you?</span><span class="c-words">25 tools, filtered by job</span></span>
+              <span class="c-time">3 min</span>
+            </a></li>
+          <li><a href="#monday">
+              <span class="c-num" aria-hidden="true">07</span>
+              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-words">Three moves for this week</span></span>
+              <span class="c-time">3 min</span>
+            </a></li>
+        </ol>
+        <p class="wall-note">Read them in order and it builds. Chapter five is the machinery underneath, and you can leave it for another day.</p>
+        <p class="contents-go"><a class="btn-link" href="#basics">Start at the beginning</a></p>
+      </nav>
+    </section>
+
+    <!-- ════ 01 THE BASICS ════ -->
+    <section class="chapter" id="ch-basics" data-slug="basics" data-title="The basics" aria-labelledby="h-basics">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/01-loom.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">01</span>
+        <div class="plate-body">
+          <h2 id="h-basics" tabindex="-1">What the thing<br>actually is</h2>
+          <p>Nine words that explain how AI behaves. Get these and everything after them makes sense.</p>
+        </div>
+      </div>
+      <div class="objectives col">
+        <p class="label">By the end of this chapter</p>
+        <ul>
+          <li>Explain what a model is actually doing when it answers you</li>
+          <li>Spot a made-up answer before it costs you anything</li>
+          <li>Know why a long chat gets worse, and the two-second habit that fixes it</li>
+        </ul>
+      </div>
+      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-model">Model</a><a href="#e-llm">LLM</a><a href="#e-imagemodel">Image model</a><a href="#e-videomodel">Video model</a><a href="#e-prompt">Prompt</a><a href="#e-token">Token</a><a href="#e-context">Context window</a><a href="#e-memory">Memory</a><a href="#e-hallucination">Hallucination</a></nav>
+    <div class="col">
+    <article class="entry" id="e-model">
+      <h3 class="display">Model</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A model is a pattern machine. It read an enormous amount of text and learned which words tend to follow which. When you ask it something it is not fetching a stored answer, it is predicting the most likely next piece, over and over, until it has a response.</p>
+        <p style="margin-top:.9em">Nothing is looked up. Nothing is filed away. That single fact explains almost every strange thing AI does.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Ask it who won last night's match. Unless the app goes off and searches the web, the answer is a guess built from patterns it learned during training. That is why it can sound sure and still be wrong about anything recent.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>A search engine is a librarian who fetches the book. A model is a colleague who read every book, remembers none of them exactly, and can still talk you through the subject. Genuinely useful. Occasionally confidently wrong.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-model.png" width="1500" height="844" loading="lazy" decoding="async"
+             alt="The sentence 'The cat sat on the blank', with five candidate next words ranked as a bar chart. Mat has by far the longest bar, then floor, then sofa, then roof, with Tuesday almost nothing.">
+        <figcaption class="dg-cap">It isn't finding that sentence anywhere. It ranks what could come next, picks one, and then does the whole thing again for the word after that. The bar lengths are made up for the example.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>A model predicts. It doesn't retrieve.</p></div>
+    </article>
+    <article class="entry" id="e-llm">
+      <h3 class="display">LLM</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Large language model. It's the specific kind of model you just met, the one that works in words. Large because it was trained on an enormous amount of text. Language because words are what it handles. Model because it's the pattern machine.</p>
+        <p style="margin-top:.9em">The distinction worth holding: the LLM is the engine, ChatGPT and Claude and Gemini are the products built around it. When people argue about which one is better they are usually arguing about the product, not the engine.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>ChatGPT, Claude and Gemini are three different cars built around the same kind of engine. If you have used any of them, you have used an LLM. When your classmates argue about which app is best, they are mostly comparing the cars.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Nobody buys an engine. You buy a car. The engine matters enormously and you will still never see it.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>An LLM is the engine. The chat app is the car built around it.</p></div>
+    </article>
+    <article class="entry" id="e-imagemodel">
+      <h3 class="display">Image model</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>The same idea as <a href="#e-model">the model you just met</a>, pointed at pictures instead of words. It never copies an existing image and it never draws the way a person draws. It starts with a screen of pure static. Guided by your description, it removes a little of the noise at a time, until a picture that matches is all that is left.</p>
+        <p style="margin-top:.9em">That single fact explains the strangeness. Hands with six fingers, shop signs with letters that are almost words, a slightly different result every time you run the same prompt. It was never drawing a hand. It was clearing away static until something hand shaped appeared.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Type "a lion dancing at a void deck, watercolour style" into an image tool. You get four versions, none of them copied from anywhere, and running the same words again gives you four new ones.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>A sculptor with a block of marble, working blindfolded, being told what to carve. Chip away everything that isn't the thing. Occasionally you get a hand with an extra finger.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>It isn't drawing a picture. It's removing everything that isn't one.</p></div>
+    </article>
+    <article class="entry" id="e-videomodel">
+      <h3 class="display">Video model</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A video model makes moving pictures the way an image model makes stills, one frame at a time. Making one good frame is largely solved. Making the next frame agree with the one before it, so the jacket stays the same colour and the face stays the same face, is the hard part. A video model has to hold the picture steady and time steady at once.</p>
+        <p style="margin-top:.9em">That is why clips stay short, why they cost so much more to make than a still, and why people drift slightly out of themselves halfway through. The model is not remembering your character. It is deciding them again, frame after frame, and hoping the answers stay close enough.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Generate an eight-second clip of someone pouring coffee. Watch the mug: halfway through, its pattern quietly changes. Every frame was decided separately, and the model's answers drifted.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>A flipbook drawn by a different artist on every page. Each drawing is fine on its own. Flip through it and the coat changes shade, the nose wanders, and you notice immediately.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>The picture was the easy part. Keeping it the same is the work.</p></div>
+    </article>
+    <article class="entry" id="e-prompt">
+      <h3 class="display">Prompt</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A prompt is the whole brief: what you want, who it's for, what good looks like, and what to avoid. Most disappointing AI output is a briefing problem rather than an intelligence problem. The model gave you exactly what an average person would produce from what you actually said.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Compare "write about climate change" with "write 300 words for my geography tutorial on how climate change affects Southeast Asian coastal cities, with two named examples". Same tool, same effort to type, completely different result.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Hand a talented new designer the words "make me a poster" and walk away, and you get something generic. Same input, same result, no matter how good they are.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>A prompt is a brief. Vague brief, average work.</p></div>
+    </article>
+    <article class="entry" id="e-token">
+      <h3 class="display">Token</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>AI doesn't read words, it reads tokens: small chunks, roughly three quarters of a word each in English. "Singapore" might be one token. An unusual name might be three. Everything you send and everything it sends back is counted this way, and tokens are the thing you pay for.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Paste a ninety-page reading into a chat and the app refuses, saying it is too long. It did not count pages. It counted tokens, and you went over the limit.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>It's the meter in a taxi. You aren't charged per question. You're charged by the distance.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-token.png" width="1493" height="905" loading="lazy" decoding="async"
+             alt="Two rows of chips. 'I / live / in / Singapore / full stop' counts as five tokens. The same sentence with Punggol instead counts as six, because Punggol splits into two chips, Pung and gol.">
+        <figcaption class="dg-cap">Same sentence to you. More tokens to the model, so slightly more to pay. Familiar words stay in one piece, rarer ones get chopped. The exact split varies by model, so treat this as the shape of it.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Tokens are the unit AI reads in and bills by.</p></div>
+    </article>
+    <article class="entry" id="e-context">
+      <h3 class="display">Context window</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Ever notice your AI getting worse the longer you chat? It didn't get lazy and you didn't do anything wrong. You filled up the context window: the model's short-term working memory.</p>
+        <p style="margin-top:.9em">Here's the part almost nobody realises. Your entire conversation gets sent back to the model on every single reply. As the window fills, quality doesn't fall off a cliff, it steadily drops. The model isn't broken. It's drowning in its own transcript.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>An hour into planning a group project in one chat, the AI starts suggesting things you already rejected. Nothing broke. The early decisions have been pushed out of the window.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>It's a whiteboard, not a filing cabinet. Everything has to fit on the board at once, and when the board is full, something gets rubbed out.</p></div>
+      </div>
+
+      <div class="panel" id="meterPanel">
+        <div class="panel-head"><span class="label">Try it</span><span class="label" style="color:var(--ink-faint)">One conversation, filling up</span></div>
+        <div class="panel-body">
+          <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+          <p class="meter-read" id="meterRead">Fresh chat. The window is empty.</p>
+          <div class="btn-row">
+            <button class="btn" type="button" id="meterAdd">Send another message</button>
+            <button class="btn ghost" type="button" id="meterReset">Start a fresh chat</button>
+          </div>
+          <p style="margin:16px 0 0; font-size:.9375rem; color:var(--ink-soft)">Notice what the reset button does. It isn't a workaround. Starting a new chat for a new task is the single easiest habit that makes AI better.</p>
+        </div>
+      </div>
+
+      <div class="oneline"><span class="label">In one line</span><p>The context window is short-term memory, and it fills.</p></div>
+    </article>
+
+    <article class="entry" id="e-memory">
+      <h3 class="display">Memory</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Memory is the small notebook the assistant keeps between chats. The <a href="#e-context">context window</a> empties when a chat ends; memory is what survives it: your name, how you like things formatted, standing instructions, facts you have asked it to hold on to. Most of the big chat apps now keep one.</p>
+        <p style="margin-top:.9em">Two things worth knowing. It is selective, a handful of saved notes rather than a transcript of everything. And it is yours to inspect: you can read what it has kept and delete anything you would rather it forgot. Worth doing once, because those notes quietly shape every answer you get.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Tell it once that you are a year two business student who likes answers in bullet points. Weeks later, in a brand new chat, it still knows both. Those two facts went into memory, not the window.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>The context window is the whiteboard for this meeting. Memory is the notebook it carries to the next one. Wiping the board does not empty the notebook.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-memory.png" width="1500" height="880" loading="lazy" decoding="async"
+             alt="Two panels. Left: the context window drawn as a blank whiteboard on a stand with an eraser, captioned wiped when the chat ends. Right: memory drawn as a gold notebook with a bookmark, captioned carried to the next chat.">
+        <figcaption class="dg-cap">Two different places. The board is wiped between meetings; the notebook travels.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>The window forgets when the chat ends. Memory is what survives.</p></div>
+    </article>
+
+    <article class="entry" id="e-hallucination">
+      <h3 class="display">Hallucination</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A hallucination is a confident answer that is simply made up. The model is not lying, because lying requires knowing the truth. It produces the most believable next thing. When believable and true come apart, you get a confident, well-formatted answer that is completely invented. A court case that never happened, a product feature that never shipped, a statistic with a decimal point on it to make it look researched.</p>
+        <p style="margin-top:.9em">Fluency is not evidence. The polish of the answer tells you nothing about whether it's right.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Ask for five journal references for an essay and check them. Often one or two are perfectly formatted, plausibly titled, and do not exist. Lecturers catch this every semester.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>A student who didn't do the reading but is very good at essays. The handwriting is neat. The bibliography is fictional.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Confident and correct are not the same thing. Check anything that matters.</p></div>
+    </article>
+
+      <div class="tryit">
+        <p class="label">Try this now</p>
+        <p>Open any AI app and ask the same factual question in two fresh chats. Something like "what should I see in Penang in one day?". The answers will differ, sometimes a lot. That is prediction at work: nothing was looked up either time.</p>
+      </div>
+    </div>
+      <!-- SYNC: prev/next titles are hand-written in every chapter's chapend -->
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#cover" rel="prev"><span class="label">Previous</span><span class="chapend-t">Contents</span></a>
+        <a class="chapend-a next" href="#layers" rel="next"><span class="label">Next chapter</span><span class="chapend-t">The three layers</span></a>
+      </nav>
+    </section>
+
+    <!-- ════ 02 THE THREE LAYERS ════ -->
+    <section class="chapter" id="ch-layers" data-slug="layers" data-title="The three layers" aria-labelledby="h-layers">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/02-orrery.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">02</span>
+        <div class="plate-body">
+          <h2 id="h-layers" tabindex="-1">The three layers</h2>
+          <p>This is the upgrade. Three layers, and almost every confusing AI conversation is two people standing on different ones.</p>
+        </div>
+      </div>
+      <div class="objectives col">
+        <p class="label">By the end of this chapter</p>
+        <ul>
+          <li>Tell generative AI, AI agents and agentic AI apart without notes</li>
+          <li>Explain the difference between advice and an outcome</li>
+          <li>Know which of the three you are actually using</li>
+        </ul>
+      </div>
+      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-generative">Generative AI</a><a href="#e-agent">AI agent</a><a href="#e-agentic">Agentic AI</a></nav>
+    <div class="col">
+    <article class="entry" id="e-generative">
+      <h3 class="display">Generative AI</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Generative AI creates. You prompt, it responds, one shot. Text, images, audio, code. Powerful, and it's what most people have actually used.</p>
+        <p style="margin-top:.9em">But it only moves when you tell it to. No memory of your files, no ability to press a button anywhere, no plan of its own.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>One prompt writes your club's event caption. Another drafts an email to your professor. A third sketches a logo. Each time the pattern is the same: you ask, it makes, done.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>An extremely well read person on the other end of a phone line. They can tell you anything. They can't get up and do anything.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Generative AI creates. You prompt, it responds.</p></div>
+    </article>
+    <article class="entry" id="e-agent">
+      <h3 class="display">AI agent</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>An agent is AI with tools. A chatbot can only talk: it advises, and you do the doing. An agent can open things, fill things in and finish the job, so what comes back is the result rather than the instructions.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Ask a chatbot to book a flight and it gives you the steps: the airline, the dates, the price. Smart, fast, genuinely useful. But you're still the one opening the tab and clicking buy. Ask an agent and it checks the dates, fills the form, completes the payment. You get the confirmation.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Every question about whether something is "really an agent" comes down to this. Did it hand you a list of steps, or did it come back with the thing done?</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>One gives you advice. The other gives you an outcome.</p></div>
+    </article>
+    <article class="entry" id="e-agentic">
+      <h3 class="display">Agentic AI</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>An agent follows a task. Agentic AI pursues a goal. You don't hand it the steps, you hand it the outcome. It plans, chooses its own tools, checks its own work, and changes the plan when something breaks.</p>
+        <p style="margin-top:.9em">The flight is full? It doesn't stop and ask you what to do. It finds the next one.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>"Plan my grad trip: three cities, under $800, back before results day." It checks routes, compares costs, drafts an itinerary, hits a full hostel, and re-plans around it without coming back to you.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Think of your own role changing. At layer one you're the writer, typing every instruction. At layer two you're the director, assigning tasks. At layer three you're the advisor, setting direction and reviewing what comes back.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-layers.png" width="1500" height="779" loading="lazy" decoding="async"
+             alt="Three flows compared. Generative AI: You, arrow, Answer. AI agent: You, arrow, Task, arrow, Result. Agentic AI: You, arrow, Goal, arrow, Plan, arrow, Act, arrow, Check, arrow, Outcome, with a line looping from the end back to the start.">
+        <figcaption class="dg-cap">The difference was never how clever each one is. It's how many steps happen before you have to get involved again.</figcaption>
+      </figure>
+      </div>
+
+      <div class="panel" id="flightPanel">
+        <div class="panel-head"><span class="label">Try it</span><span class="label" style="color:var(--ink-faint)">One request, three layers</span></div>
+        <div class="panel-body">
+          <p style="font-weight:500; color:var(--ink); margin-bottom:16px">"Book me the cheapest flight to Tokyo on the 14th."</p>
+          <div class="lanes">
+            <div class="lane" data-lane="0"><p class="lane-name">Generative AI</p><ol>
+              <li>Lists the airlines that fly the route and roughly what to expect on price.</li>
+              <li>Offers to draft you a packing list while it's at it.</li>
+              <li class="stalled">Waiting for your next question.</li>
+              <li class="stalled">Still waiting. It cannot open a browser.</li>
+              <li class="stalled">You booked it yourself.</li>
+            </ol></div>
+            <div class="lane" data-lane="1"><p class="lane-name">AI agent</p><ol>
+              <li>Searches live flights for the 14th.</li>
+              <li>Picks the cheapest and starts filling in your details.</li>
+              <li>Submits the payment.</li>
+              <li>Sends you the confirmation.</li>
+              <li>Task complete, exactly as instructed.</li>
+            </ol></div>
+            <div class="lane" data-lane="2"><p class="lane-name">Agentic AI</p><ol>
+              <li>Checks your calendar first to confirm the 14th is really the travel date.</li>
+              <li>Cheapest is an overnight flight with two stops. Checks it against your Tuesday morning.</li>
+              <li>It clashes. Re-plans: takes the direct flight instead, $80 more.</li>
+              <li>Books it, picks a seat, blocks out your calendar.</li>
+              <li>Flags that you still have no hotel, and asks if it should handle that too.</li>
+            </ol></div>
+          </div>
+          <p class="lanes-hint">Swipe the lanes sideways to compare</p>
+          <p class="verdict" id="flightVerdict">Generative AI answered you. The agent finished the task you gave it. Agentic AI finished the job you actually wanted.</p>
+          <div class="btn-row">
+            <button class="btn" type="button" id="flightNext">Next step</button>
+            <button class="btn ghost" type="button" id="flightReset">Start over</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="oneline"><span class="label">In one line</span><p>You set a goal, not a task. It works out the rest.</p></div>
+    </article>
+
+      <div class="tryit">
+        <p class="label">Try this now</p>
+        <p>Ask your AI to actually do something. Not "how do I", but "book it", "draft it", "make me the file". Watch what comes back. Steps mean you are talking to an advisor. A finished thing means you have an agent. Now you know which layer you are on.</p>
+      </div>
+    </div>
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#basics" rel="prev"><span class="label">Previous</span><span class="chapend-t">The basics</span></a>
+        <a class="chapend-a next" href="#craft" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Getting good at it</span></a>
+      </nav>
+    </section>
+
+    <!-- ════ 03 GETTING GOOD AT IT ════ -->
+    <section class="chapter" id="ch-craft" data-slug="craft" data-title="Getting good at it" aria-labelledby="h-craft">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/05-desk.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">03</span>
+        <div class="plate-body">
+          <h2 id="h-craft" tabindex="-1">Getting good at it</h2>
+          <p>The gap between people who find AI useful and people who find it disappointing is almost entirely habit.</p>
+        </div>
+      </div>
+      <div class="objectives col">
+        <p class="label">By the end of this chapter</p>
+        <ul>
+          <li>Brief an AI the way you would brief a new hire</li>
+          <li>Pick the right model size for the job, and pay less</li>
+          <li>Fix a disappointing answer instead of giving up on the tool</li>
+        </ul>
+      </div>
+      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-multimodal">Multimodal</a><a href="#e-prompteng">Prompt engineering</a><a href="#e-contexteng">Context engineering</a><a href="#e-skills">Skills</a><a href="#e-tiers">Model tiers</a><a href="#e-vibecoding">Vibe coding</a></nav>
+    <div class="col">
+    <article class="entry" id="e-multimodal">
+      <h3 class="display">Multimodal</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Multimodal means the model takes in and gives back more than words: photos, screenshots, audio, video, spreadsheets, PDFs. This is the capability most people never touch, because they only ever paste text.</p>
+    </div>
+      <div class="field"><span class="label">For example</span>
+        <p>Photograph a form and ask what each field wants. Screenshot an error and ask what broke. Point it at a chart in an annual report and ask what it actually says. Record a meeting and ask for the decisions.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Most people are using a smartphone to make phone calls.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-multimodal.png" width="1500" height="816" loading="lazy" decoding="async"
+             alt="Four inputs, photo, PDF, screenshot and voice, all arrow into one model, which arrows out to one answer.">
+        <figcaption class="dg-cap">Different ways in, same machine underneath. Stop retyping what you could just show it.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Stop typing everything. Show it.</p></div>
+    </article>
+    <article class="entry" id="e-prompteng">
+      <h3 class="display">Prompt engineering</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>There is no secret phrase, and anyone selling you one is selling you something. What actually works is treating AI like a new hire on their first week. Give it the context, show it one example of good, say what done looks like, and tell it what to avoid.</p>
+        <p style="margin-top:.9em">Stop prompting and start managing. Prompting is typing. Managing is thinking. Twenty minutes of proper set-up saves twenty hours.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Asking for resume feedback, don't send the file alone. Say "here is the job ad, here is my resume, tell me what to cut and what to add for this role". You briefed it. The feedback stops being generic.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>You wouldn't interrogate a new joiner one question at a time and then complain they don't understand the business. You'd onboard them.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Onboard it. Don't interrogate it.</p></div>
+    </article>
+    <article class="entry" id="e-contexteng">
+      <h3 class="display">Context engineering</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Context engineering is deciding what the AI holds in mind, instead of dumping everything in and hoping. Start a fresh chat for a new task. Give it the two documents that matter rather than the twenty that exist. Summarise and restart when a long session starts drifting.</p>
+        <p style="margin-top:.9em">This is the most underrated AI skill going. Everyone is chasing the smartest model. Almost nobody is managing what they feed it.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Before asking for help with an assignment, give it the brief and your outline, not all twelve readings. Less in, sharper out.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Manage your context and an average model will outperform a great one you've buried in noise.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Feed it less, but feed it the right things.</p></div>
+    </article>
+
+    <article class="entry" id="e-skills">
+      <h3 class="display">Skills</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>In AI tools the word has a specific meaning now. A skill is a set of instructions you save once, and the assistant pulls them in whenever the job calls for it. Your report format, your team's review checklist, the way you like slides done. Claude calls them skills; other tools have their own version of the same idea.</p>
+        <p style="margin-top:.9em">The habit that matters: the third time you catch yourself pasting the same brief into a chat, stop. That brief is a skill. Name it, save it, and never type it again.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>You format lab reports the same way every week. Save that format once as a skill. Next week you type "lab report" and the structure, headings and style are already loaded.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>A laminated recipe card in the kitchen drawer. Nobody re-explains the dish from scratch every time. You hand over the card.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-skills.png" width="1500" height="390" loading="lazy" decoding="async"
+             alt="Four steps joined by arrows: write it once, saved as a skill on a filing card, that job comes up, loaded automatically.">
+        <figcaption class="dg-cap">The whole point is the last box. You stop repeating yourself.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Pasted the same instructions three times? That is a skill. Write it once.</p></div>
+    </article>
+
+    <article class="entry" id="e-tiers">
+      <h3 class="display">Model tiers</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Every major AI company offers a range: a small fast cheap model, a balanced everyday one, and a large deep one. They differ enormously in cost and speed, and only somewhat in quality on ordinary work. Most people default to the most expensive option for tasks the small one would finish instantly.</p>
+        <p style="margin-top:.9em">Most also offer a reasoning or extended thinking mode, where the model works through a problem step by step before answering. Slower, noticeably better on hard problems, wasted on easy ones.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Summarising lecture notes: the small fast model, done in seconds. Checking the methodology chapter of your final-year project: the deep one with thinking switched on. Same app, different gear.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>You don't smash an egg with a hammer. Match the tool to the size of the job.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-tiers.png" width="1500" height="846" loading="lazy" decoding="async"
+             alt="A decision tree. Is it routine? Yes leads to the small fast model. No leads to the question high stakes if wrong? No leads to the everyday model, yes leads to the deep model plus thinking.">
+        <figcaption class="dg-cap">The whole decision at one glance. Start in the middle gear unless the answer says otherwise.</figcaption>
+      </figure>
+      </div>
+
+
+      <div class="oneline"><span class="label">In one line</span><p>Use the cheapest model that does the job well, not the cleverest one available.</p></div>
+    </article>
+    <article class="entry" id="e-vibecoding">
+      <h3 class="display">Vibe coding</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Vibe coding is describing what you want and letting AI build it. Andrej Karpathy named it: you "fully give in to the vibes, embrace exponentials, and forget that the code even exists". It's genuinely real. People who never wrote a line of code are shipping working things.</p>
+        <p style="margin-top:.9em">But a working demo is not an app ready for real users. Lowering the barrier doesn't remove the need for judgment, it just changes when you need it. If you can't tell what a settings file does, you also can't tell when an agent is about to do something you'll regret.</p>
+        <p style="margin-top:.9em">I introduced this to my design team early last year and it changed how we work. We stopped presenting mockups and started handing people something they could click. Every one of those still went past someone who knew what they were looking at.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>A marketing student describes a sign-up page for their CCA's event: what it collects, how it looks, where the data goes. By dinner there is a working page, and nobody read or wrote a line of code.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>The question stopped being "should I learn to code?" It's now "can I describe what I want clearly enough for AI to build it?" That's the new skill.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>The barrier to building dropped. The need for judgment didn't.</p></div>
+    </article>
+
+      <div class="fixhead">
+        <p class="label">When the answer disappoints you</p>
+        <p>Every fix below is something from this guide. The right response is almost never a better model. It is a better ask.</p>
+      </div>
+      <div class="fixwrap" role="region" aria-label="Common problems and fixes" tabindex="0">
+        <table class="fixtable">
+          <thead><tr><th scope="col">The problem</th><th scope="col">What is happening</th><th scope="col">Try this</th></tr></thead>
+          <tbody>
+            <tr><td>The answer is too generic</td><td>Your prompt was a search query, not a <a href="#e-prompt">brief</a></td><td>Add who it is for and what good looks like. Not "write an email about the delay" but "write a short, apologetic email to a client about a two-week delay, and offer a call".</td></tr>
+            <tr><td>It got worse as the chat went on</td><td>The <a href="#e-context">context window</a> is full. It is drowning in its own transcript</td><td>Start a fresh chat and bring only what matters. Two seconds, and the single biggest fix there is.</td></tr>
+            <tr><td>It sounds confident but it is wrong</td><td>That is a <a href="#e-hallucination">hallucination</a>. Believable and true came apart</td><td>Ask "what are your sources for that?", and check anything that matters yourself before you use it.</td></tr>
+            <tr><td>It ignored my format</td><td>You described the shape you wanted. You did not show it</td><td>Paste one example of the format you want and say "like this". One example beats a paragraph of instructions.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tryit">
+        <p class="label">Try this now</p>
+        <p>Find the last prompt that disappointed you. Rewrite it as a brief: who it is for, what good looks like, what to avoid. Run both versions in fresh chats and compare. This one habit is most of the gap between frustrated users and happy ones.</p>
+      </div>
+    </div>
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#layers" rel="prev"><span class="label">Previous</span><span class="chapend-t">The three layers</span></a>
+        <a class="chapend-a next" href="#judgment" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Knowing when not to trust it</span></a>
+      </nav>
+    </section>
+
+    <!-- ════ 04 KNOWING WHEN NOT TO TRUST IT ════ -->
+    <section class="chapter" id="ch-judgment" data-slug="judgment" data-title="Knowing when not to trust it" aria-labelledby="h-judgment">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/06-scale.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">04</span>
+        <div class="plate-body">
+          <h2 id="h-judgment" tabindex="-1">Knowing when<br>not to trust it</h2>
+          <p>The two words that separate people who use AI well from people who eventually get burned by it.</p>
+        </div>
+      </div>
+      <div class="objectives col">
+        <p class="label">By the end of this chapter</p>
+        <ul>
+          <li>Decide when to let AI run and when to stay in the loop</li>
+          <li>Set the limits before you start, not after something goes wrong</li>
+        </ul>
+      </div>
+      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-hitl">Human in the loop</a><a href="#e-guardrails">Guardrails</a></nav>
+    <div class="col">
+    <article class="entry" id="e-hitl">
+      <h3 class="display">Human in the loop</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Human in the loop means a person approves before something irreversible happens. Money moves. An email goes out. A record is deleted.</p>
+        <p style="margin-top:.9em">The useful question isn't "is the AI good enough yet". It's "what does it cost me if this is wrong". Cheap and reversible, let it run. Expensive or permanent, put yourself in the loop and keep yourself there.</p>
+        <p style="margin-top:.9em">I work on AI in banking, where that question comes with a regulator attached. My honest take: the test works just as well without one. Ask what breaks, then decide how much freedom to give it.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Let AI draft the email to your professor, then read it before you hit send. That is you in the loop. Letting it auto-reply for you is how a polite apology goes out with the wrong module code in it.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Treat AI as a capable junior, not an autopilot. You're still accountable for what ships.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-hitl.png" width="1500" height="853" loading="lazy" decoding="async"
+             alt="A two by two grid. Costly and undoable: read it, then send it. Costly and permanent: you approve, every time. Cheap and undoable: let it run. Cheap and permanent: spot check.">
+        <figcaption class="dg-cap">Two questions, not one. What does it cost if this is wrong, and can I take it back? Where you land decides how much freedom to give it.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Decide by the cost of being wrong, not by how clever it looks.</p></div>
+    </article>
+    <article class="entry" id="e-guardrails">
+      <h3 class="display">Guardrails</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Guardrails are the limits you set before you start, not after something goes wrong. What it's allowed to reach. What it's allowed to change. What it must never touch.</p>
+    </div>
+      <div class="field"><span class="label">For example</span>
+        <p>Let it read things before you let it change things. Try it on a copy before the real file. Don't give an agent full control of your computer in week one. And know what's leaving your organisation when you paste something in.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>You don't hand a new joiner the master keys on their first morning. Same instinct, same reason, and it isn't about distrust.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Decide what it's allowed to touch before you start.</p></div>
+    </article>
+
+      <div class="tryit">
+        <p class="label">Try this now</p>
+        <p>Ask about something you know deeply. Your industry, your neighbourhood, your hobby. Grade the answer like a teacher, and notice how confident the wrong parts sounded. That feeling is the calibration you need when you ask about things you don't know.</p>
+      </div>
+    </div>
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#craft" rel="prev"><span class="label">Previous</span><span class="chapend-t">Getting good at it</span></a>
+        <a class="chapend-a next" href="#reach" rel="next"><span class="label">Next chapter</span><span class="chapend-t">How it reaches the real world</span></a>
+      </nav>
+    </section>
+
+    <!-- ════ 05 HOW IT REACHES THE REAL WORLD ════ -->
+    <section class="chapter" id="ch-reach" data-slug="reach" data-title="How it reaches the real world" aria-labelledby="h-reach">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/04-arm.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">05</span>
+        <div class="plate-body">
+          <p class="plate-tag">Advanced</p>
+          <h2 id="h-reach" tabindex="-1">How it reaches<br>the real world</h2>
+          <p>The machinery underneath. None of it is needed to use AI well, but it is what people mean when they talk about agents.</p>
+        </div>
+      </div>
+      <div class="objectives col">
+        <p class="label">By the end of this chapter</p>
+        <ul>
+          <li>Follow the chain from a chat box to a real action in your apps</li>
+          <li>Say what MCP, connectors and plugins each do, in one line</li>
+          <li>Explain why two products on the same model can feel worlds apart</li>
+        </ul>
+      </div>
+      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-toolcall">Tool call</a><a href="#e-computeruse">Computer use</a><a href="#e-api">API</a><a href="#e-connectors">Connectors</a><a href="#e-mcp">MCP</a><a href="#e-plugins">Plugins</a><a href="#e-harness">Harness</a></nav>
+    <div class="col">
+    <article class="entry" id="e-toolcall">
+      <h3 class="display">Tool call</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>For a long time all AI could do was talk. Now it can pick up tools and use them: Gmail to send an email, a browser to look something up, Slack to message a colleague. Every time it reaches for one, that's a tool call.</p>
+        <p style="margin-top:.9em">It's a loop. The AI decides it needs a tool and asks for it. The tool does the job and sends the answer back. The AI reads the answer and works out the next step. It repeats until your task is done.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Ask "what is on my calendar on Friday?". The model cannot know that, so it calls the calendar tool, reads what comes back, and answers. That round trip was one tool call.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>It sounds like a techie term but it's the simplest idea on this page. It's just AI reaching for the right tool. Once you see it that way, agents stop feeling like magic.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-toolcall.png" width="1500" height="487" loading="lazy" decoding="async"
+             alt="A five step chain: needs a tool, asks for it, tool does the job, reads the answer, done. A line runs from the end back to the start, showing the loop repeating until the task is finished.">
+        <figcaption class="dg-cap">That is the whole of what an agent is doing underneath. A long task is just this loop, many times over.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>A tool call is AI picking something up to get the job done.</p></div>
+    </article>
+    <article class="entry" id="e-computeruse">
+      <h3 class="display">Computer use</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>Computer use means the AI looks at your screen, moves the cursor, clicks, types, and checks its own work. It finishes the job inside real software, including old software with no integration and no prospect of ever getting one.</p>
+    </div>
+      <div class="field"><span class="label">For example</span>
+        <p>Think about the boring stuff. The thirty-field form. The report you rebuild across three systems every Monday morning. The expense claim nobody enjoys.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Your AI can explain how to do the task. Computer use just does it.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-computeruse.png" width="1500" height="755" loading="lazy" decoding="async"
+             alt="A loop of four steps: looks at the screen, clicks and types, checks its work, job done. A line labelled not done yet runs from job done back to the start.">
+        <figcaption class="dg-cap">The same loop you run when filling in a form yourself. It just never gets bored.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>AI stopped being a tool you operate. Now it operates the tools for you.</p></div>
+    </article>
+    <article class="entry" id="e-api">
+      <h3 class="display">API</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>An API is an agreed way for one piece of software to ask another for something. It matters to you because it's the whole difference between AI that can talk about your calendar and AI that can put something in it.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>You've already used a dozen today. Checked the weather? API. Opened Grab? API. Logged in somewhere with your Google account? API. Every one of those was software asking other software for something.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>A power socket. You don't need to understand the grid. You need the plug to fit.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>An API is the socket software plugs into.</p></div>
+    </article>
+
+    <article class="entry" id="e-connectors">
+      <h3 class="display">Connectors</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A connector is a ready-made bridge between your AI app and a service you already use: Gmail, Google Drive, Slack, your calendar. You click it, you sign in, and the assistant can now see and act there. No code, no setup beyond the login.</p>
+        <p style="margin-top:.9em">The trade-off is the menu. A connector only exists if somebody built it, so you choose from the list the maker offers. The newest ones are mostly built on one shared standard underneath, and that standard is the next word.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Click the Google Drive connector, sign in once, and from then on you can ask "summarise my project folder" and it actually can.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>An API is a socket you wire up yourself. A connector is the appliance that ships with the right plug already fitted.</p></div>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>A connector is an integration you click instead of build.</p></div>
+    </article>
+
+    <article class="entry" id="e-mcp">
+      <h3 class="display">MCP</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>MCP is USB-C for AI apps. Right now every AI tool speaks its own language, so every connection is custom built and breaks when something updates. MCP is one shared standard instead: your AI app talks to any service through the same plug.</p>
+        <p style="margin-top:.9em">It isn't a product you buy. It's the reason your AI assistant will quietly gain access to your files, your design tool and your database without anyone building a custom bridge for each one.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Your notes app publishes one MCP server. Now any assistant that speaks MCP can read your notes: Claude today, a different tool next year, no new integration either time.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Same way USB-C made every drawer full of cable adapters obsolete.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-mcp.png" width="1500" height="844" loading="lazy" decoding="async"
+             alt="Before: three AI apps, Claude, Cursor and ChatGPT, each wired separately to three services, Figma, Slack and Drive, making nine tangled lines. With MCP: the same six connect through one hub in the middle, making six straight lines.">
+        <figcaption class="dg-cap">Nobody sells you MCP and you will never open it. You just notice that your AI can suddenly reach things it couldn't last month.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>MCP is the standard plug between AI and everything else.</p></div>
+    </article>
+
+    <article class="entry" id="e-plugins">
+      <h3 class="display">Plugins</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A plugin bolts new abilities onto the AI app itself, where a connector reaches out from the app to another service. New commands, new behaviours, sometimes a whole bundle of skills and connectors in one pack you install from a marketplace.</p>
+        <p style="margin-top:.9em">The labels drift between products, and that is not your fault. The useful test: if it links the AI to a place your stuff already lives, think connector. If it changes what the AI itself can do, think plugin.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>Install a slides plugin and your chat app gains a "make me a deck" command it did not have yesterday. Nothing new got connected. The app itself grew a new ability.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>Attachments for a power drill. Same motor, new heads, each one picked up when the job needs it.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-plugins.png" width="1500" height="844" loading="lazy" decoding="async"
+             alt="Two panels. Connector: your AI app with arrows reaching out to mail, calendar and files. Plugin: puzzle pieces labelled new command, new skill and new ability attached directly onto your AI app.">
+        <figcaption class="dg-cap">Connectors reach out. Plugins bolt on. Hold this picture and you have the distinction.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>Connectors reach out to your apps. Plugins bolt new abilities on.</p></div>
+    </article>
+
+    <article class="entry" id="e-harness">
+      <h3 class="display">Harness</h3>
+      <div class="bar"></div>
+      <div class="entry-flow">
+<div class="field"><span class="label">What it is</span>
+        <p>A raw model is a brain in a jar. Brilliant, and helpless. It can't remember what you told it five minutes ago, read your files, run your code, or check its own work.</p>
+        <p style="margin-top:.9em">The harness is everything wrapped around it: memory, tools, permissions, guardrails, and checks on the output before it reaches anybody. It's why two products running the same underlying model can feel like they're in different leagues.</p>
+        <p style="margin-top:.9em">Here's how I see it. I build with these tools every day, and what decides whether an AI feature is any good is almost never which model is underneath. It's what got built around it.</p></div>
+      <div class="field"><span class="label">For example</span>
+        <p>The same model in a bare chat window versus inside a coding tool that reads your files, runs the code and tests the result. Night and day, same brain. Everything you just felt was harness.</p></div>
+      </div>
+      <div class="entry-rail">
+      <div class="analogy"><p>The model is the horse. The harness is what makes it useful.</p></div>
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-harness.png" width="1498" height="831" loading="lazy" decoding="async"
+             alt="On the left, a model sitting alone inside a dashed box. On the right, the same model surrounded by four boxes pointing inwards: memory above, tools to the left, permissions to the right and output checks below.">
+        <figcaption class="dg-cap">When two AI products feel worlds apart, this is usually the whole of the difference. Nothing on the right is the model.</figcaption>
+      </figure>
+      </div>
+      <div class="oneline"><span class="label">In one line</span><p>The model is a commodity. The harness is the moat.</p></div>
+    </article>
+
+      <div class="tryit">
+        <p class="label">Try this now</p>
+        <p>Open the settings of whichever AI app you use and find the list of connectors, or tools, or integrations. You will recognise the words on that screen now. That list is this whole chapter, sitting in a menu.</p>
+      </div>
+    </div>
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#judgment" rel="prev"><span class="label">Previous</span><span class="chapend-t">Knowing when not to trust it</span></a>
+        <a class="chapend-a next" href="#tools" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Which tool to actually open</span></a>
+      </nav>
+    </section>
+
+    <!-- ════ 06 WHICH TOOL TO ACTUALLY OPEN ════ -->
+    <section class="chapter" id="ch-tools" data-slug="tools" data-title="Which tool to actually open" aria-labelledby="h-tools">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/03-pegboard.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">06</span>
+        <div class="plate-body">
+          <p class="plate-tag">Reference</p>
+          <h2 id="h-tools" tabindex="-1">Which tool<br>to actually open</h2>
+          <p>Not a lesson. A directory to come back to, filtered by the job you are trying to do.</p>
+        </div>
+      </div>
+    <div class="col">
+    <section class="entry" id="tool-directory" aria-labelledby="tools-h">
+      <h3 class="display" id="tools-h">The tools</h3>
+      <div class="bar"></div>
+      <p>Ignore the leaderboards. The only question that matters is what you're trying to get done. Pick a job below and the list filters to the tools built for it.</p>
+      <p style="color:var(--ink-soft); font-size:.9375rem">Most of these have a free tier worth trying first. A few, Midjourney among them, are paid from day one. Try before you pay, and don't pay for four things at once.</p>
+
+      <ul class="filters" role="group" aria-label="Filter tools by job">
+        <li><button class="chip" type="button" data-filter="all" aria-pressed="true">Everything</button></li>
+        <li><button class="chip" type="button" data-filter="write" aria-pressed="false">Write &amp; think</button></li>
+        <li><button class="chip" type="button" data-filter="research" aria-pressed="false">Research</button></li>
+        <li><button class="chip" type="button" data-filter="build" aria-pressed="false">Build software</button></li>
+        <li><button class="chip" type="button" data-filter="design" aria-pressed="false">Design &amp; visuals</button></li>
+        <li><button class="chip" type="button" data-filter="meetings" aria-pressed="false">Meetings &amp; notes</button></li>
+        <li><button class="chip" type="button" data-filter="automate" aria-pressed="false">Connect &amp; automate</button></li>
+      </ul>
+      <p class="filter-count" id="toolCount" role="status">Showing all 25 tools</p>
+
+      <ul class="tools" id="toolList">
+        <li data-cat="write"><span class="tool-name">Claude</span><span class="tool-what">Long, careful writing and thinking. The one I reach for when the brief is detailed and the output has to hold together.</span><span class="tool-tag">Start here</span></li>
+        <li data-cat="write"><span class="tool-name">ChatGPT</span><span class="tool-what">The general-purpose one everybody has heard of. Broadest set of built-in extras.</span><span class="tool-tag">Start here</span></li>
+        <li data-cat="write"><span class="tool-name">Gemini</span><span class="tool-what">Google's. Worth it if your work already lives in Gmail, Docs and Drive.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="write"><span class="tool-name">Microsoft Copilot</span><span class="tool-what">AI inside Word, Excel, Outlook and Teams. Often already paid for by your employer.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="write"><span class="tool-name">Grammarly</span><span class="tool-what">Narrow and good at it. Catches what you would not, in the tone you set, inside whatever you are already writing in.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="research"><span class="tool-name">Perplexity</span><span class="tool-what">Search that answers the question and shows you the sources it used.</span><span class="tool-tag">Start here</span></li>
+        <li data-cat="research"><span class="tool-name">NotebookLM</span><span class="tool-what">You give it your own documents and it answers from those, citing the page it took each claim from.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="research"><span class="tool-name">Deep research modes</span><span class="tool-what">Built into ChatGPT, Claude and Gemini. Give it a question, come back later, get a cited report.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="research"><span class="tool-name">Elicit</span><span class="tool-what">Built for academic papers. Useful if your questions live in published research.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="build"><span class="tool-name">Claude Code</span><span class="tool-what">An agent that works in your actual project. Plans, edits files, runs things, checks its own work.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="build"><span class="tool-name">Cursor</span><span class="tool-what">A code editor with AI built into the middle of it rather than bolted on the side.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="build"><span class="tool-name">GitHub Copilot</span><span class="tool-what">The original. Completes code as you type, inside the editor you already use.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="build"><span class="tool-name">Codex</span><span class="tool-what">OpenAI's coding agent. Good at the behind-the-scenes code and at writing the tests nobody wants to write.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="build"><span class="tool-name">Lovable</span><span class="tool-what">Describe an app in a browser tab and get something working. No setup at all.</span><span class="tool-tag">Start here</span></li>
+        <li data-cat="build"><span class="tool-name">Replit</span><span class="tool-what">Build and host something small without installing anything. The gentlest way in.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="design"><span class="tool-name">Figma</span><span class="tool-what">AI now sits inside the design tool most product teams already use.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="design"><span class="tool-name">Canva</span><span class="tool-what">The one to hand a non-designer. Decks, posters, socials, without a design background.</span><span class="tool-tag">Start here</span></li>
+        <li data-cat="design"><span class="tool-name">Midjourney</span><span class="tool-what">Image generation with the strongest aesthetic point of view. Steeper learning curve.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="design"><span class="tool-name">Adobe Firefly</span><span class="tool-what">Adobe's image generation, built with commercial use in mind. Check which model you are on before you rely on that.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="meetings"><span class="tool-name">Otter</span><span class="tool-what">Transcribes the meeting and pulls out what was decided.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="meetings"><span class="tool-name">Granola</span><span class="tool-what">Takes notes alongside you rather than instead of you. Quiet and unobtrusive.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="meetings"><span class="tool-name">Notion AI</span><span class="tool-what">Search and summarise across your own workspace, where the notes already are.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="automate"><span class="tool-name">Zapier</span><span class="tool-what">Wire two apps together so something happens automatically. The most beginner-friendly.</span><span class="tool-tag">Start here</span></li>
+        <li data-cat="automate"><span class="tool-name">Make</span><span class="tool-what">Same idea, visual canvas, more control once your workflow gets complicated.</span><span class="tool-tag blank">&nbsp;</span></li>
+        <li data-cat="automate"><span class="tool-name">n8n</span><span class="tool-what">Open source. Run it yourself when the data cannot leave your own systems.</span><span class="tool-tag blank">&nbsp;</span></li>
+      </ul>
+
+      <div class="analogy" style="margin-top:28px"><p>Nobody on this page paid to be here, and this list will be out of date faster than you'd like. It's correct as of August 2026. Treat it as a starting map, not a verdict.</p></div>
+      <div class="oneline"><span class="label">In one line</span><p>Pick one tool per job you actually do. Four beats forty.</p></div>
+    </section>
+    </div>
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#reach" rel="prev"><span class="label">Previous</span><span class="chapend-t">How it reaches the real world</span></a>
+        <a class="chapend-a next" href="#monday" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Start here on Monday</span></a>
+      </nav>
+    </section>
+
+    <!-- ════ 07 START HERE ON MONDAY ════ -->
+    <section class="chapter" id="ch-monday" data-slug="monday" data-title="Start here on Monday" aria-labelledby="h-monday">
+      <div class="plate">
+        <img class="plate-art" src="assets/101/light/07-door.png" alt="" width="560" height="560" loading="lazy" decoding="async">
+        <span class="plate-num" aria-hidden="true">07</span>
+        <div class="plate-body">
+          <h2 id="h-monday" tabindex="-1">Start here<br>on Monday</h2>
+          <p>Reading about AI is not using AI. Three moves, in order, none of which take an afternoon.</p>
+        </div>
+      </div>
+    <div class="col">
+      <ol class="close-list">
+        <li><div><strong>Redo something you already did</strong><p>Pick one task from last week that took an hour and bored you. Do it again with AI beside you. Not a new task: one where you already know what the right answer looks like, so you can judge the output honestly instead of being impressed by it.</p></div></li>
+        <li><div><strong>Stop typing everything</strong><p>Photograph a form. Screenshot the error. Upload the PDF instead of describing it. Most people are using maybe a fifth of what they're already paying for.</p></div></li>
+        <li><div><strong>One chat, one task</strong><p>New task, new chat. It takes two seconds and it's the single biggest quality difference most people can make today, for reasons <a href="#e-context">the context window entry</a> explains.</p></div></li>
+      </ol>
+
+      <div class="aside-note">
+        <span class="label">One Singapore note</span>
+        <p>NTUC members get UTAP support on a list of AI tools: 50% of the fee, capped at $250 a year under 40 or $500 a year at 40 and above, running through to April 2028. If you're about to pay for one of these out of your own pocket, it's worth checking whether yours is on the list first.</p>
+        <p style="margin-bottom:0; color:var(--ink-soft); font-size:.9375rem">Name another government actively paying workers to adopt AI at that scale. Most are still debating the regulation.</p>
+      </div>
+
+      <div class="closer">
+        <h3 class="display">That's all of it</h3>
+        <hr class="rule-gold">
+        <p>Twenty-seven words, every one of them decoded. If you can define them, you can follow almost any conversation happening about AI right now, and you can tell the people who understand it from the people performing it.</p>
+      </div>
+
+      <!-- SYNC: every line here repeats an entry's "In one line" — edit both -->
+      <div class="recap">
+        <h3 class="label">All twenty-seven, in one line each</h3>
+        <dl class="recap-list">
+          <div class="rg">01 · The basics</div>
+          <dt><a href="#e-model">Model</a></dt><dd>A model predicts. It doesn't retrieve.</dd>
+          <dt><a href="#e-llm">LLM</a></dt><dd>An LLM is the engine. The chat app is the car built around it.</dd>
+          <dt><a href="#e-imagemodel">Image model</a></dt><dd>It isn't drawing a picture. It's removing everything that isn't one.</dd>
+          <dt><a href="#e-videomodel">Video model</a></dt><dd>The picture was the easy part. Keeping it the same is the work.</dd>
+          <dt><a href="#e-prompt">Prompt</a></dt><dd>A prompt is a brief. Vague brief, average work.</dd>
+          <dt><a href="#e-token">Token</a></dt><dd>Tokens are the unit AI reads in and bills by.</dd>
+          <dt><a href="#e-context">Context window</a></dt><dd>The context window is short-term memory, and it fills.</dd>
+          <dt><a href="#e-memory">Memory</a></dt><dd>The window forgets when the chat ends. Memory is what survives.</dd>
+          <dt><a href="#e-hallucination">Hallucination</a></dt><dd>Confident and correct are not the same thing. Check anything that matters.</dd>
+          <div class="rg">02 · The three layers</div>
+          <dt><a href="#e-generative">Generative AI</a></dt><dd>Generative AI creates. You prompt, it responds.</dd>
+          <dt><a href="#e-agent">AI agent</a></dt><dd>One gives you advice. The other gives you an outcome.</dd>
+          <dt><a href="#e-agentic">Agentic AI</a></dt><dd>You set a goal, not a task. It works out the rest.</dd>
+          <div class="rg">03 · Getting good at it</div>
+          <dt><a href="#e-multimodal">Multimodal</a></dt><dd>Stop typing everything. Show it.</dd>
+          <dt><a href="#e-prompteng">Prompt engineering</a></dt><dd>Onboard it. Don't interrogate it.</dd>
+          <dt><a href="#e-contexteng">Context engineering</a></dt><dd>Feed it less, but feed it the right things.</dd>
+          <dt><a href="#e-skills">Skills</a></dt><dd>Pasted the same instructions three times? That is a skill. Write it once.</dd>
+          <dt><a href="#e-tiers">Model tiers</a></dt><dd>Use the cheapest model that does the job well, not the cleverest one available.</dd>
+          <dt><a href="#e-vibecoding">Vibe coding</a></dt><dd>The barrier to building dropped. The need for judgment didn't.</dd>
+          <div class="rg">04 · Knowing when not to trust it</div>
+          <dt><a href="#e-hitl">Human in the loop</a></dt><dd>Decide by the cost of being wrong, not by how clever it looks.</dd>
+          <dt><a href="#e-guardrails">Guardrails</a></dt><dd>Decide what it's allowed to touch before you start.</dd>
+          <div class="rg">05 · How it reaches the real world</div>
+          <dt><a href="#e-toolcall">Tool call</a></dt><dd>A tool call is AI picking something up to get the job done.</dd>
+          <dt><a href="#e-computeruse">Computer use</a></dt><dd>AI stopped being a tool you operate. Now it operates the tools for you.</dd>
+          <dt><a href="#e-api">API</a></dt><dd>An API is the socket software plugs into.</dd>
+          <dt><a href="#e-connectors">Connectors</a></dt><dd>A connector is an integration you click instead of build.</dd>
+          <dt><a href="#e-mcp">MCP</a></dt><dd>MCP is the standard plug between AI and everything else.</dd>
+          <dt><a href="#e-plugins">Plugins</a></dt><dd>Connectors reach out to your apps. Plugins bolt new abilities on.</dd>
+          <dt><a href="#e-harness">Harness</a></dt><dd>The model is a commodity. The harness is the moat.</dd>
+        </dl>
+      </div>
+      <div class="next-steps">
+        <p class="label">Where to go next</p>
+        <ul>
+          <li><a href="https://anthropic.skilljar.com/claude-101" target="_blank" rel="noopener">Claude 101</a>&nbsp;<span>a free short course on using Claude for everyday work</span></li>
+          <li><a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" rel="noopener">AI Fluency: Framework and Foundations</a>&nbsp;<span>a free course on collaborating well with any AI</span></li>
+          <li><a href="#tools">The tool directory</a>&nbsp;<span>chapter six of this guide, whenever you need to pick an app</span></li>
+          <li><a href="index.html">The log</a>&nbsp;<span>the other tab of this site: the tools the curator actually runs daily</span></li>
+        </ul>
+      </div>
+
+    </div>
+      <nav class="chapend" aria-label="Chapter navigation">
+        <a class="chapend-a prev" href="#tools" rel="prev"><span class="label">Previous</span><span class="chapend-t">Which tool to actually open</span></a>
+        <a class="chapend-a next" href="#cover" rel="next"><span class="label">Back to</span><span class="chapend-t">Contents</span></a>
+      </nav>
+    </section>
+
+    </main>
+    </div>
+
+    <footer class="byline">
+      <div class="colophon-who">
+        <img class="avatar" src="assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
+        <div>
+          <p>Written by Xavier Ting, a design and product leader working on AI transformation in banking, in Singapore. Nothing here is sponsored and no tool paid to be on this page.</p>
+          <p class="colophon-links m">
+            <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+            <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+          </p>
+        </div>
+      </div>
+      <p class="byline-status">Last updated August 2026. Everything about AI tooling moves fast, so treat the tool list as a map rather than a verdict.</p>
+    </footer>
+
+  </div>
+
+  <script src="theme.js"></script>
+  <script src="101.js"></script>
+</body>
+</html>
