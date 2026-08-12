@@ -567,12 +567,6 @@ html:not(.js) .theme-toggle { display: none; }
   background: var(--accent-soft);
 }
 
-.card-num {
-  font-family: var(--font-mono);
-  font-size: var(--m-size);
-  color: var(--muted);
-}
-
 .card-name {
   font-family: var(--font-display);
   font-weight: 700;

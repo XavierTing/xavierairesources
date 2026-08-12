@@ -122,7 +122,6 @@
 
     var top = el("div", "card-top");
     top.appendChild(el("span", "card-cat m", tool.category));
-    top.appendChild(el("span", "card-num", "№ " + tool.num));
 
     card.appendChild(top);
     card.appendChild(el("h2", "card-name", tool.name));
@@ -244,7 +243,7 @@
       meta.appendChild(metaBlock("Made by", ownerP));
     }
 
-    var statusP = el("p", null, "In daily use · № " + tool.num + " of " + pad(TOOLS.length));
+    var statusP = el("p", null, "In daily use");
     meta.appendChild(metaBlock("Curator's status", statusP));
 
     var repoP = el("p");

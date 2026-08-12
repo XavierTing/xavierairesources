@@ -26,13 +26,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Xavier's AI 101 — a plain-English AI course for beginners | AI Resources</title>
+  <title>Xavier's AI 101: a plain-English AI course for beginners | AI Resources</title>
   <meta name="description" content="Forty-eight words do most of the gatekeeping in AI. Here is what each one actually means, in plain English. Generative AI versus agents, what you are actually building, and how to ship it safely.">
   <link rel="canonical" href="https://xavierairesources.netlify.app/ai-101.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Xavier's AI 101 — a plain-English AI course for beginners">
+  <meta property="og:title" content="Xavier's AI 101: a plain-English AI course for beginners">
   <meta property="og:description" content="Forty-eight words do most of the gatekeeping in AI. Here is what each one actually means, in plain English.">
   <meta property="og:url" content="https://xavierairesources.netlify.app/ai-101.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
@@ -109,7 +109,7 @@
       "@type": "WebPage",
       "@id": "https://xavierairesources.netlify.app/ai-101.html#page",
       "url": "https://xavierairesources.netlify.app/ai-101.html",
-      "name": "Xavier's AI 101 — a plain-English AI course for beginners",
+      "name": "Xavier's AI 101: a plain-English AI course for beginners",
       "description": "Forty-eight words do most of the gatekeeping in AI. Here is what each one actually means, in plain English.",
       "isPartOf": { "@id": "https://xavierairesources.netlify.app/#website" },
       "about": { "@id": "https://xavierairesources.netlify.app/ai-101.html#course" },
@@ -139,7 +139,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
   <div class="page">
 
     <header class="site-head">
-      <a class="brand" href="index.html" aria-label="Xavier Ting — home">
+      <a class="brand" href="index.html" aria-label="Xavier Ting, home">
         <span class="brand-mark">Xavier Ting</span>
         <span class="brand-sub m">AI for the rest of us</span>
       </a>
@@ -237,7 +237,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <p class="meta-row"><span>A plain-English short course</span><span class="dot" aria-hidden="true"></span><span>About an hour</span><span class="dot" aria-hidden="true"></span><span>Updated August 2026</span></p>
       <h1 class="display">Xavier's<br>AI 101</h1>
       <hr class="rule-gold">
-      <p class="lede">Everyone says AI — artificial intelligence — like it's one thing. It's not, and the confusion isn't your fault. Forty-eight words do most of the gatekeeping. Here is every one of them, easiest first, ending with the ones you need to build something real.</p>
+      <p class="lede">Everyone says AI (artificial intelligence) like it's one thing. It's not, and the confusion isn't your fault. Forty-eight words do most of the gatekeeping. Here is every one of them, easiest first, ending with the ones you need to build something real.</p>
     </header>
 
       <!-- SYNC: this list duplicates the chapmenu list above — edit both -->
@@ -329,9 +329,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>A search engine is a librarian who fetches the book. A model is a colleague who read every book, remembers none of them exactly, and can still talk you through the subject. Genuinely useful. Occasionally confidently wrong.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-model.png" width="1500" height="844" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-model.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="The sentence 'The cat sat on the blank', with five candidate next words ranked as a bar chart. Mat has by far the longest bar, then floor, then sofa, then roof, with Tuesday almost nothing.">
-        <figcaption class="dg-cap">It isn't finding that sentence anywhere. It ranks what could come next, picks one, and then does the whole thing again for the word after that. The bar lengths are made up for the example.</figcaption>
+        <figcaption class="dg-cap">The model never saw that exact sentence. It ranks what could come next, picks one, then repeats for the word after. The bar lengths are made up for the example.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>A model predicts. It doesn't retrieve.</p></div>
@@ -341,7 +341,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>LLM stands for large language model. It's the specific kind of model you just met, the one that works in words. Large because it was trained on an enormous amount of text. Language because words are what it handles. Model because it's the pattern machine.</p>
+        <p>LLM stands for large language model. It's the specific kind of model you just met, the one that works in words. Large because of how much text it read. Language because words are what it handles. Model because it's the pattern machine.</p>
         <p style="margin-top:.9em">The distinction worth holding: the LLM is the engine, ChatGPT and Claude and Gemini are the products built around it. When people argue about which one is better they are usually arguing about the product, not the engine.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>ChatGPT, Claude and Gemini are three different cars built around the same kind of engine. If you have used any of them, you have used an LLM. When your classmates argue about which app is best, they are mostly comparing the cars.</p></div>
@@ -349,8 +349,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Nobody buys an engine. You buy a car. The engine matters enormously and you will still never see it.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-llm.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A long shelf of books funnels down into one small machine. Text goes in on the left. On the right the machine has a single dial, labelled next word, pointing at one option out of five. Along the bottom, the line: trained on a library, answers one word at a time.">
+        <img class="dg-img" src="assets/101/light/dg-llm.png" width="1500" height="824" loading="lazy" decoding="async"
+             alt="A long shelf of books funnels down into one small machine. Text goes in on the left. On the right the machine has a single dial, labelled next word, pointing at one option out of five. Along the bottom, the line: one word at a time.">
         <figcaption class="dg-cap">The library went in once, during training. What comes out is one word at a time, for ever.</figcaption>
       </figure>
       </div>
@@ -362,7 +362,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>The same idea as <a href="#e-model">the model you just met</a>, pointed at pictures instead of words. It never copies an existing image and it never draws the way a person draws. It starts with a screen of pure static. Guided by your description, it removes a little of the noise at a time, until a picture that matches is all that is left.</p>
-        <p style="margin-top:.9em">That single fact explains the strangeness. Hands with six fingers, shop signs with letters that are almost words, a slightly different result every time you run the same prompt. It was never drawing a hand. It was clearing away static until something hand shaped appeared.</p></div>
+        <p style="margin-top:.9em">That is where the strangeness comes from. Hands with six fingers, shop signs with letters that are almost words, a slightly different result every time you run the same prompt. It was never drawing a hand. It was clearing away static until something hand shaped appeared.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Type "a lion dancing at a void deck, watercolour style" into an image tool. You get four versions, none of them copied from anywhere, and running the same words again gives you four new ones.</p></div>
       </div>
@@ -399,7 +399,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>Hand a talented new designer the words "make me a poster" and walk away, and you get something generic. Same input, same result, no matter how good they are.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-prompt.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="The same lamp wired to two different switch panels. On the top panel the request is half drawn and nothing is labelled, and the lamp glows dim and fuzzy. On the bottom panel three switches are labelled and ticked, who it is for, what format, what good looks like, and the same lamp glows sharp and bright.">
+             alt="The same lamp wired to two different switch panels. On the top panel the request is half drawn and nothing is labelled, and the lamp glows dim and fuzzy. On the bottom panel three switches are labelled and ticked, who for, format, good, and the same lamp glows sharp and bright.">
         <figcaption class="dg-cap">Same lamp both times. The only thing that changed was how much of the brief got switched on.</figcaption>
       </figure>
       </div>
@@ -417,7 +417,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>It's the meter in a taxi. You aren't charged per question. You're charged by the distance.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-token.png" width="1493" height="905" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-token.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Two rows of chips. 'I / live / in / Singapore / full stop' counts as five tokens. The same sentence with Punggol instead counts as six, because Punggol splits into two chips, Pung and gol.">
         <figcaption class="dg-cap">Same sentence to you. More tokens to the model, so slightly more to pay. Familiar words stay in one piece, rarer ones get chopped. The exact split varies by model, so treat this as the shape of it.</figcaption>
       </figure>
@@ -469,7 +469,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>The context window is the whiteboard for this meeting. Memory is the notebook it carries to the next one. Wiping the board does not empty the notebook.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-memory.png" width="1500" height="880" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-memory.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="Two panels. Left: the context window drawn as a blank whiteboard on a stand with an eraser, captioned wiped when the chat ends. Right: memory drawn as a gold notebook with a bookmark, captioned carried to the next chat.">
         <figcaption class="dg-cap">Two different places. The board is wiped between meetings; the notebook travels.</figcaption>
       </figure>
@@ -508,7 +508,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Multiplying 47 by 68 in your head, or working it out on paper. Same person, same brain. The paper version catches the carrying mistake.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-reasoning.png" width="1500" height="849" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-reasoning.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Two lanes. The top lane runs from a question straight to an answer in one quick arrow, with a small cross beside the answer. The bottom lane runs from the same question to a scratchpad showing the working, including one attempt crossed out, and then on to an answer marked with a tick.">
         <figcaption class="dg-cap">Same question, same model. The lower lane spends time and tokens on the middle step, and that is where its own mistakes get caught.</figcaption>
       </figure>
@@ -554,15 +554,15 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>Generative AI creates. You prompt, it responds, one shot. Text, images, audio, code. Powerful, and it's what most people have actually used.</p>
-        <p style="margin-top:.9em">But it only moves when you tell it to. No memory of your files, no ability to press a button anywhere, no plan of its own.</p></div>
+        <p style="margin-top:.9em">But it only moves when you tell it to. It cannot see your files or press a button anywhere, and it has no plan of its own.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>One prompt writes your club's event caption. Another drafts an email to your professor. A third sketches a logo. Each time the pattern is the same: you ask, it makes, done.</p></div>
       </div>
       <div class="entry-rail">
       <div class="analogy"><p>An extremely well read person on the other end of a phone line. They can tell you anything. They can't get up and do anything.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-generative.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="Two machines side by side. The left one is labelled creates: a single dot branches out into three new things, a paragraph of text, a picture frame and a sound wave. The right one is labelled recognises: existing items drop through a sorting machine into three labelled bins, nothing new appearing.">
+        <img class="dg-img" src="assets/101/light/dg-generative.png" width="1500" height="857" loading="lazy" decoding="async"
+             alt="Two machines side by side. The left one is labelled creates: a single dot branches out into three new things, a paragraph of text, a picture frame and a sound wave. The right one is labelled recognises: existing items drop through a sorting machine into three bins, nothing new appearing.">
         <figcaption class="dg-cap">The older kind of AI sorted things that already existed. This kind makes one that didn't.</figcaption>
       </figure>
       </div>
@@ -601,9 +601,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Think of your own role changing. At layer one you're the writer, typing every instruction. At layer two you're the director, assigning tasks. At layer three you're the advisor, setting direction and reviewing what comes back.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-layers.png" width="1500" height="779" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-layers.png" width="1500" height="844" loading="lazy" decoding="async"
              alt="Three flows compared. Generative AI: You, arrow, Answer. AI agent: You, arrow, Task, arrow, Result. Agentic AI: You, arrow, Goal, arrow, Plan, arrow, Act, arrow, Check, arrow, Outcome, with a line looping from the end back to the start.">
-        <figcaption class="dg-cap">The difference was never how clever each one is. It's how many steps happen before you have to get involved again.</figcaption>
+        <figcaption class="dg-cap">The rows differ in one thing: how many steps happen before you have to get involved again.</figcaption>
       </figure>
       </div>
 
@@ -691,7 +691,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Most people are using a smartphone to make phone calls.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-multimodal.png" width="1500" height="816" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-multimodal.png" width="1500" height="844" loading="lazy" decoding="async"
              alt="Four inputs, photo, PDF, screenshot and voice, all arrow into one model, which arrows out to one answer.">
         <figcaption class="dg-cap">Different ways in, same machine underneath. Stop retyping what you could just show it.</figcaption>
       </figure>
@@ -704,7 +704,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>There is no secret phrase, and anyone selling you one is selling you something. What actually works is treating AI like a new hire on their first week. Give it the context, show it one example of good, say what done looks like, and tell it what to avoid.</p>
-        <p style="margin-top:.9em">Stop prompting and start managing. Prompting is typing. Managing is thinking. Twenty minutes of proper set-up saves twenty hours.</p></div>
+        <p style="margin-top:.9em">Stop prompting and start managing. Twenty minutes of proper set-up saves twenty hours of cleaning up.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Asking for resume feedback, don't send the file alone. Say "here is the job ad, here is my resume, tell me what to cut and what to add for this role". You briefed it. The feedback stops being generic.</p></div>
       </div>
@@ -719,7 +719,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>Context engineering is deciding what the AI holds in mind, instead of dumping everything in and hoping. Start a fresh chat for a new task. Give it the two documents that matter rather than the twenty that exist. Summarise and restart when a long session starts drifting.</p>
-        <p style="margin-top:.9em">This is the most underrated AI skill going. Everyone is chasing the smartest model. Almost nobody is managing what they feed it.</p></div>
+        <p style="margin-top:.9em">It is the most underrated AI skill going: everyone chases a smarter model, and hardly anyone manages what they feed it.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Before asking for help with an assignment, give it the brief and your outline, not all twelve readings. Less in, sharper out.</p></div>
       </div>
@@ -728,7 +728,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-contexteng.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="A librarian sets exactly three folders down on a small desk in front of a seated AI assistant. Behind them a whole archive of shelves stands untouched behind a rope. The desk is labelled what it holds in mind.">
-        <figcaption class="dg-cap">The archive isn't the point. What made it onto the desk is.</figcaption>
+        <figcaption class="dg-cap">The desk decides the answer, not the archive behind it.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Feed it less, but feed it the right things.</p></div>
@@ -748,9 +748,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>A laminated recipe card in the kitchen drawer. Nobody re-explains the dish from scratch every time. You hand over the card.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-skills.png" width="1500" height="390" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-skills.png" width="1500" height="844" loading="lazy" decoding="async"
              alt="Four steps joined by arrows: write it once, saved as a skill on a filing card, that job comes up, loaded automatically.">
-        <figcaption class="dg-cap">The whole point is the last box. You stop repeating yourself.</figcaption>
+        <figcaption class="dg-cap">The last box is the point. You stop repeating yourself.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Pasted the same instructions three times? That is a skill. Write it once.</p></div>
@@ -770,9 +770,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>You don't smash an egg with a hammer. Match the tool to the size of the job.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-tiers.png" width="1500" height="846" loading="lazy" decoding="async"
-             alt="A decision tree. Is it routine? Yes leads to the small fast model. No leads to the question high stakes if wrong? No leads to the everyday model, yes leads to the deep model plus thinking.">
-        <figcaption class="dg-cap">The whole decision at one glance. Start in the middle gear unless the answer says otherwise.</figcaption>
+        <img class="dg-img" src="assets/101/light/dg-tiers.png" width="1500" height="1000" loading="lazy" decoding="async"
+             alt="A decision tree. Is it routine? Yes leads to the small fast model. No leads to the question high stakes if wrong? No leads to the everyday model, yes leads to the deep model.">
+        <figcaption class="dg-cap">The decision, at one glance. Start in the middle gear unless the answer says otherwise.</figcaption>
       </figure>
       </div>
 
@@ -833,7 +833,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>A contractor walks the flat and shows you a quotation before hacking any wall. Changing a line on the quotation is free. Changing a wall that has already been hacked is not.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-planmode.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-planmode.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="A prompt splits into two paths. The upper path runs straight to a half-built wall with a crack in it, and an arrow loops back to the start to build it again. The lower path passes through a small sheet marked PLAN with a tick on it, then goes on to a finished clean wall, with no loop back.">
         <figcaption class="dg-cap">Count the arrows. The lower path is the shorter one, even though it starts slower.</figcaption>
       </figure>
@@ -855,7 +855,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Ordering a cake. "A nice cake" gets you a surprise. "Chocolate, twenty centimetres, Happy 50th Ah Ma on top, pickup Saturday morning" gets you the cake you meant. The order form is the spec.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-spec.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-spec.png" width="1500" height="825" loading="lazy" decoding="async"
              alt="On the left, one gold sheet headed SPEC with checkbox lines and a final line reading DONE equals, feeding three neat screens that match each other. On the right, a speech bubble containing only a question mark, feeding four scattered screens that match neither each other nor the request.">
         <figcaption class="dg-cap">The same amount of building happens either way. The sheet is what makes it land where you meant.</figcaption>
       </figure>
@@ -865,7 +865,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
       <div class="fixhead">
         <p class="label">When the answer disappoints you</p>
-        <p>Every fix below is something from this guide. The right response is almost never a better model. It is a better ask.</p>
+        <p>Every fix below is something from this guide. A better ask fixes far more than a better model ever will.</p>
       </div>
       <div class="fixwrap" role="region" aria-label="Common problems and fixes" tabindex="0">
         <table class="fixtable">
@@ -915,7 +915,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>Human in the loop means a person approves before something irreversible happens. Money moves. An email goes out. A record is deleted.</p>
-        <p style="margin-top:.9em">The useful question isn't "is the AI good enough yet". It's "what does it cost me if this is wrong". Cheap and reversible, let it run. Expensive or permanent, put yourself in the loop and keep yourself there.</p>
+        <p style="margin-top:.9em">Skip "is the AI good enough yet" and ask the question that earns its keep: what does it cost me if this is wrong? Cheap and reversible, let it run. Expensive or permanent, put yourself in the loop and keep yourself there.</p>
         <p style="margin-top:.9em">I work on AI in banking, where that question comes with a regulator attached. My honest take: the test works just as well without one. Ask what breaks, then decide how much freedom to give it.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Let AI draft the email to your professor, then read it before you hit send. That is you in the loop. Letting it auto-reply for you is how a polite apology goes out with the wrong module code in it.</p></div>
@@ -923,7 +923,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Treat AI as a capable junior, not an autopilot. You're still accountable for whatever goes out.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-hitl.png" width="1500" height="853" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-hitl.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="A two by two grid. Costly and undoable: read it, then send it. Costly and permanent: you approve, every time. Cheap and undoable: let it run. Cheap and permanent: spot check.">
         <figcaption class="dg-cap">Two questions, not one. What does it cost if this is wrong, and can I take it back? Where you land decides how much freedom to give it.</figcaption>
       </figure>
@@ -943,7 +943,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>You don't hand a new joiner the master keys on their first morning. Same instinct, same reason, and it isn't about distrust.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-guardrails.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-guardrails.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="A bowling lane seen from above, with both gutters closed off by raised bumpers. The ball rolls down the middle towards the pins. Two small signs stand along the bumpers: may not delete, and asks before sending.">
         <figcaption class="dg-cap">The bumpers don't slow the ball down. They decide which parts of the lane it can reach.</figcaption>
       </figure>
@@ -965,7 +965,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>You cannot proofread your own essay. You read what you meant to write. Your friend finds the typo in the title in five seconds.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-fresheyes.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-fresheyes.png" width="1500" height="844" loading="lazy" decoding="async"
              alt="Two figures. On the left, a figure at a desk buried under a thick cloud of its own scribbled thinking, with a small heart drawn beside its work. On the right, a second figure holding a clean magnifier over a copy of the same work, with three small flags raised. An arrow between them carries only the work across, and the thought cloud does not cross.">
         <figcaption class="dg-cap">Only the work crosses over. The thinking that produced it stays behind, which is the whole point.</figcaption>
       </figure>
@@ -978,16 +978,16 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>The biggest upgrade you can make to what an agent produces is not a better model. It is giving the agent a way to check its own result, and permission to go again until the check passes. Take a screenshot and compare it. Run the test. Click the button and look at what happened.</p>
+        <p>The biggest upgrade you can make to what an agent produces is giving it a way to check its own result, and permission to go again until the check passes. That beats moving to a smarter model. Take a screenshot and compare it. Run the test. Click the button and look at what happened.</p>
         <p style="margin-top:.9em">Task, do, check, repeat. Without the check, the agent hands you its first attempt and calls that finished. With the check, the first attempt is only a draft.</p>
-        <p style="margin-top:.9em">The value of these tools was never getting it right the first time. It is being able to try again, thousands of times faster than you could. Give the agent something to aim at and it will spend that speed on your behalf.</p></div>
+        <p style="margin-top:.9em">These tools earn their keep by trying again, thousands of times faster than you could, rather than by getting it right first time. Give the agent something to aim at and it will spend that speed on your behalf.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>"Make this page match the screenshot. Then screenshot your own result, compare the two, list every difference, and fix them." The first pass looks about right at a glance and is wrong in a dozen small ways. Three loops later you cannot tell the two apart.</p></div>
       </div>
       <div class="entry-rail">
-      <div class="analogy"><p>Shooting free throws with your eyes open, or blindfolded. Same arm, same technique. The whole difference is seeing where the last one landed.</p></div>
+      <div class="analogy"><p>Shooting free throws with your eyes open, or blindfolded. Same arm, same technique. The difference is seeing where the last one landed.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-verification.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-verification.png" width="1500" height="750" loading="lazy" decoding="async"
              alt="On the left, a circle of three stations: TASK to BUILD to CHECK, where CHECK is drawn as a magnifier. A tick arrow leaves CHECK towards done, and a fail arrow bends back from CHECK to BUILD. On the right, a straight open line from TASK to BUILD to ship, with a hairline crack in the shipped piece.">
         <figcaption class="dg-cap">One extra instruction turns the first attempt into a draft. That loop is worth more than a smarter model.</figcaption>
       </figure>
@@ -1041,9 +1041,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>It sounds like a techie term but it's the simplest idea on this page. It's just AI reaching for the right tool. Once you see it that way, agents stop feeling like magic.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-toolcall.png" width="1500" height="487" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-toolcall.png" width="1500" height="750" loading="lazy" decoding="async"
              alt="A five step chain: needs a tool, asks for it, tool does the job, reads the answer, done. A line runs from the end back to the start, showing the loop repeating until the task is finished.">
-        <figcaption class="dg-cap">That is the whole of what an agent is doing underneath. A long task is just this loop, many times over.</figcaption>
+        <figcaption class="dg-cap">That is everything an agent is doing underneath. A long task is this loop, many times over.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>A tool call is AI picking something up to get the job done.</p></div>
@@ -1061,7 +1061,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Your AI can explain how to do the task. Computer use just does it.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-computeruse.png" width="1500" height="755" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-computeruse.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="A loop of four steps: looks at the screen, clicks and types, checks its work, job done. A line labelled not done yet runs from job done back to the start.">
         <figcaption class="dg-cap">The same loop you run when filling in a form yourself. It just never gets bored.</figcaption>
       </figure>
@@ -1073,7 +1073,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>API stands for application programming interface — a mouthful for a simple idea: an agreed way for one piece of software to ask another for something. It matters to you because it's the whole difference between AI that can talk about your calendar and AI that can put something in it.</p></div>
+        <p>API stands for application programming interface, a mouthful for a simple idea: an agreed way for one piece of software to ask another for something. It matters to you because it is the difference between AI that can talk about your calendar and AI that can put something in it.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>You've already used a dozen today. Checked the weather? API. Opened Grab? API. Logged in somewhere with your Google account? API. Every one of those was software asking other software for something.</p></div>
       </div>
@@ -1114,8 +1114,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>MCP stands for Model Context Protocol — a name you never need to say again. What it actually is: USB-C for AI apps. Right now every AI tool speaks its own language, so every connection is custom built and breaks when something updates. MCP is one shared standard instead: your AI app talks to any service through the same plug.</p>
-        <p style="margin-top:.9em">It isn't a product you buy. It's the reason your AI assistant will quietly gain access to your files, your design tool and your database without anyone building a custom bridge for each one.</p>
+        <p>MCP stands for Model Context Protocol, a name you never need to say again. What it actually is: USB-C for AI apps. Right now every AI tool speaks its own language, so every connection is custom built and breaks when something updates. MCP is one shared standard instead: your AI app talks to any service through the same plug.</p>
+        <p style="margin-top:.9em">There is nothing to buy or install. It is the reason your AI assistant will quietly gain access to your files, your design tool and your database without anyone building a custom bridge for each one.</p>
         <p style="margin-top:.9em">One honest cost. Every toolbox you connect loads its own manual into the <a href="#e-context">context window</a> before you have asked for anything, so connect the two or three you actually use rather than everything on the list.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Your notes app adds MCP support once. Now any assistant that speaks MCP can read your notes: Claude today, a different tool next year, no new wiring either time.</p></div>
@@ -1123,7 +1123,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Same way USB-C made every drawer full of cable adapters obsolete.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-mcp.png" width="1500" height="844" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-mcp.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Before: three AI apps, Claude, Cursor and ChatGPT, each wired separately to three services, Figma, Slack and Drive, making nine tangled lines. With MCP: the same six connect through one hub in the middle, making six straight lines.">
         <figcaption class="dg-cap">Nobody sells you MCP and you will never open it. You just notice that your AI can suddenly reach things it couldn't last month.</figcaption>
       </figure>
@@ -1144,7 +1144,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Attachments for a power drill. Same motor, new heads, each one picked up when the job needs it.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-plugins.png" width="1500" height="844" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-plugins.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Two panels. Connector: your AI app with arrows reaching out to mail, calendar and files. Plugin: puzzle pieces labelled new command, new skill and new ability attached directly onto your AI app.">
         <figcaption class="dg-cap">Connectors reach out. Plugins bolt on. Hold this picture and you have the distinction.</figcaption>
       </figure>
@@ -1166,9 +1166,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>The model is the horse. The harness is what makes it useful.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-harness.png" width="1498" height="831" loading="lazy" decoding="async"
-             alt="On the left, a model sitting alone inside a dashed box. On the right, the same model surrounded by four boxes pointing inwards: memory above, tools to the left, permissions to the right and output checks below.">
-        <figcaption class="dg-cap">When two AI products feel worlds apart, this is usually the whole of the difference. Nothing on the right is the model.</figcaption>
+        <img class="dg-img" src="assets/101/light/dg-harness.png" width="1500" height="1000" loading="lazy" decoding="async"
+             alt="On the left, a model sitting alone inside a dashed box. On the right, the same model surrounded by four boxes pointing inwards: memory above, tools to the left, permissions to the right and checks below.">
+        <figcaption class="dg-cap">When two AI products feel worlds apart, the gap usually lives here. Nothing on the right is the model.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Two products can run the same model. The harness is why one feels miles better.</p></div>
@@ -1244,7 +1244,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>The kitchen door, not the dining room. Same restaurant, but the supplier who comes in through the kitchen can stock the fridge. The customer at the table can only order off the menu.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-terminal.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-terminal.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Two frames side by side. Left: a browser window holding a chat box, the assistant drawn with its arms tied and a row of file drawers out of reach beside it. Right: a terminal frame with a typed command prompt, the same chat inside it, and arms reaching out to open the drawers, sort folders and turn a gear.">
         <figcaption class="dg-cap">Same assistant in both frames. Only one of them can reach the drawers.</figcaption>
       </figure>
@@ -1266,9 +1266,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>A hawker stall. The menu board and the counter face the customer. The cooking, the portioning and the till are behind, and nobody gets to walk into the kitchen and re-price the chicken rice.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-frontback.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-frontback.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Three boxes in a row joined by arrows. On the left a browser window drawn as a menu board, labelled frontend. In the middle a server drawn as a kitchen with a gear and a checklist, marked checked here, labelled backend. On the right a database drawn as a drawer cabinet. A request arrow runs left to right and a response arrow runs back.">
-        <figcaption class="dg-cap">The middle box is the one that decides. That is the whole lesson.</figcaption>
+        <figcaption class="dg-cap">The middle box is the one that decides. Everything else in the chapter hangs off that.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>The browser shows it. The server decides it. Never trust the browser alone.</p></div>
@@ -1288,7 +1288,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>A house. HTML is the walls and rooms. CSS is the paint and the furniture. JavaScript is the wiring that makes a switch actually switch something on.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-webtrio.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-webtrio.png" width="1500" height="750" loading="lazy" decoding="async"
              alt="The same small web page drawn three times in a row. First as a bare wireframe skeleton of boxes, labelled HTML, structure. Second the same page inked in with colour, type and spacing, labelled CSS, look. Third the same page with a button being pressed and a small bell ringing beside it, labelled JavaScript, behaviour.">
         <figcaption class="dg-cap">One page, three layers. Every website you have ever opened is these three.</figcaption>
       </figure>
@@ -1303,7 +1303,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 <div class="field"><span class="label">What it is</span>
         <p>A framework is a pre-built, opinionated way of assembling an app. The hundred small decisions every web app needs, how pages are laid out, how links move between them, what shows while something is loading, have already been made and already been tested by thousands of people. Next.js is the common one in this world. There are others, and they work the same way.</p>
         <p style="margin-top:.9em">Two reasons a beginner should care. The first is obvious: fewer decisions means less to get wrong. The second is the AI-era reason and it is the bigger one. A popular framework appears everywhere in the text <a href="#e-model">the model</a> learned from, so the agent has effectively seen a million apps built this way. Ask for something standard and it builds well. Ask for something exotic and it starts guessing.</p>
-        <p style="margin-top:.9em">So saying "build it with Next.js" is not showing off. It is choosing the road your agent already knows by heart.</p></div>
+        <p style="margin-top:.9em">Saying "build it with Next.js" simply picks the road your agent already knows by heart.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Ask an agent for a booking site with Next.js and the pages, the links and the loading states come out right the first time. Ask for the same booking site in a homemade setup and you spend the evening watching it patch its own mistakes.</p></div>
       </div>
@@ -1333,7 +1333,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>The clinic's filing cabinet. One drawer per kind of record, one card per person, and an identity card number on the tab so two Tan Ah Kows never get mixed up.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-database.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A spreadsheet grid with an inked header row and one gold highlighted identity column down the left. An arrow leads from the grid to a drawer cabinet, showing the two are the same idea. Below, a small funnel filters three matching rows out of the grid.">
+             alt="A spreadsheet grid with a gold highlighted identity column down the left. An arrow leads from the grid to a drawer cabinet, showing the two are the same idea. Below, a small funnel filters three matching rows out of the grid.">
         <figcaption class="dg-cap">A strict spreadsheet with a numbered first column. That is most of what a database is.</figcaption>
       </figure>
       </div>
@@ -1354,7 +1354,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>Writing the key into your code is a sticky note with your bank PIN stuck on the ATM. The .env file is keeping the PIN in your own wallet.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-apikey.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-apikey.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Two halves. On the left a sheet of code with the key written straight into it like a sticky note, a figure levering it off with a crowbar and coins spilling out below. On the right the same sheet showing only the word KEY and an arrow pointing to a sealed envelope labelled dot env, with a gate opening for it.">
         <figcaption class="dg-cap">The same key, kept in two different places. Only one of them is still yours tomorrow.</figcaption>
       </figure>
@@ -1399,7 +1399,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>Cooking at home against opening a stall. Same recipe, but now the kitchen is rented, the lights stay on all day, and strangers are eating it. You taste-test on opening morning, not just at home.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-deploy.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="Three stations left to right joined by gold arrows. A laptop labelled only you. A small middle table labelled staging, taste test. A stall with a globe on its front and a queue of people, labelled everyone. A magnifier with a tick mark sits above each hop.">
+             alt="Three stations left to right joined by gold arrows. A laptop labelled you. A small middle table labelled staging, taste test. A stall with a globe on its front and a queue of people, labelled everyone. A magnifier with a tick mark sits above each hop.">
         <figcaption class="dg-cap">Every hop gets its own check. The last one is the one people skip.</figcaption>
       </figure>
       </div>
@@ -1422,7 +1422,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-auth.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="A floor plan of several rooms. Every doorway has a small card-reader gate on it. One gold figure holding a pass walks through a gate into a room. A second figure without a pass is turned back along a dotted arrow to a counter marked LOGIN.">
-        <figcaption class="dg-cap">The guardhouse is not the security. The reader on every door is.</figcaption>
+        <figcaption class="dg-cap">The security lives in the reader on every door, not in the guardhouse.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Login plus a bouncer on every door. Added late, tested door by door.</p></div>
@@ -1477,7 +1477,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>How a hawker perfects a dish. Copy one you love, cook it at home, feed the family, then feed paying customers, then eat at your own stall on opening day.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-buildloop.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="Seven stations in a circle joined by one gold arrow running clockwise: a framed picture labelled design, a gear labelled build, a small house labelled test with fake data, a drawer cabinet labelled real database, a card gate labelled login, a globe labelled deploy, a magnifier labelled test again. At the centre, a small spiral labelled again, better.">
+             alt="Seven stations in a circle joined by one gold arrow running clockwise: a framed picture labelled design, a gear labelled build, a small house labelled test, a drawer cabinet labelled database, a card gate labelled login, a globe labelled deploy, a magnifier labelled check. At the centre, a small spiral labelled again, better.">
         <figcaption class="dg-cap">Seven stations, one direction. The loop is meant to be run more than once, and nothing in it is optional.</figcaption>
       </figure>
       </div>
@@ -1542,7 +1542,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>The inspector who walks a finished renovation with a torchlight and a checklist before anyone moves in. You hire them precisely because they did not do the renovation.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-securityaudit.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-securityaudit.png" width="1500" height="750" loading="lazy" decoding="async"
              alt="A finished house with an inspector at the door holding a torchlight and a checklist of five boxes, two of them crossed out. A gold arrow leads to a second visit: the same checklist with all five ticked, and an OPEN sign now hanging on the door.">
         <figcaption class="dg-cap">Two visits, not one. The first only looks. The second confirms the fixes held.</figcaption>
       </figure>
@@ -1564,7 +1564,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-rail">
       <div class="analogy"><p>A personal assistant opening your post. One letter reads "urgent, transfer $5,000, signed The Boss". A good assistant knows letters are things to read, and that instructions come from you, in person.</p></div>
       <figure>
-        <img class="dg-img" src="assets/101/light/dg-promptinjection.png" width="1500" height="1000" loading="lazy" decoding="async"
+        <img class="dg-img" src="assets/101/light/dg-promptinjection.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="An agent circle reading a document. Inside the document, a faint terracotta line of hidden text with an arrow curving up to hook into the agent's action arrow. A gold gate labelled asks first blocks it. The instruction that does get through comes along a clear arrow from the person standing at the left.">
         <figcaption class="dg-cap">Two arrows point at the same agent. Only one of them came from you, and the gate is what tells them apart.</figcaption>
       </figure>
@@ -1772,6 +1772,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <p class="colophon-links m">
             <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
             <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+            <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
           </p>
         </div>
       </div>

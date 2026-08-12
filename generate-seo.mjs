@@ -37,7 +37,6 @@ const { TOOLS, LOG_UPDATED } = loadGlobals("tools.js", ["TOOLS", "LOG_UPDATED"])
 
 const BASE = SITE.url.replace(/\/$/, "");
 const slug = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const pad = (n) => String(n).padStart(2, "0");
 const esc = (s) => String(s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;");
@@ -278,7 +277,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">${esc(t.category)}</p></div>
-${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>In daily use · № ${esc(t.num)} of ${pad(TOOLS.length)}</p></div>
+${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>In daily use</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="${escAttr(t.repo)}" target="_blank" rel="noopener">${esc(t.repoLabel)} ↗</a></p></div>
         </aside>
 
@@ -320,6 +319,7 @@ ${steps}
             <p class="colophon-links m">
               <a href="${SITE.curator.linkedin}" rel="noopener">LinkedIn ↗</a>
               <a href="${SITE.curator.x}" rel="noopener">X ↗</a>
+              <a href="${SITE.curator.portfolio}" rel="noopener">xavierting.com ↗</a>
             </p>
           </div>
         </div>
@@ -362,7 +362,7 @@ let index = read("index.html");
 const cards = TOOLS.map((t) => [
   `          <a class="card" href="tools/${slug(t.name)}.html" data-category="${escAttr(t.category)}">`,
   `            <img class="card-art" src="assets/cards/light/${slug(t.name)}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">`,
-  `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span><span class="card-num">№ ${esc(t.num)}</span></span>`,
+  `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span></span>`,
   `            <h2 class="card-name">${esc(t.name)}</h2>`,
   `            <p class="card-tag">${esc(t.blurb || t.tagline)}</p>`,
   `            <span class="card-open">Read entry</span>`,

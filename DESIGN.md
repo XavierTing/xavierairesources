@@ -97,7 +97,7 @@ Confirmed anti-references: the quad-grid/graph-paper background (explicitly reje
 - Glass cards: 2.5% white fill, 1px 10% warm-white border, 16px radius; hover lifts with a gold-tinted glow
 - One accent, two treatments: gold as **outline/text** = information (chips, labels, links); gold as **fill** = action (active tab, copy on hover)
 - Warmed neutrals throughout — no cool greys anywhere
-- Mono is measurement and code — labels, №, commands — never body costume
+- Mono is measurement and code — labels, commands — never body costume
 - Index card → detail page; detail = big title + lede left, meta panel right, WHY/WHEN/HOW sections below
 
 ## Colors
@@ -140,7 +140,7 @@ User-directed (2026-08-12): every page carries both themes, and **Daylight is th
 
 **Display Font:** Montserrat (Helvetica Neue fallback) — the brand thread from xavierting.com; 800 display, 700 card names
 **Body Font:** Poppins (system-ui fallback), 400–500
-**Label/Mono Font:** Fragment Mono — labels, №, commands; italic for the curator's notes
+**Label/Mono Font:** Fragment Mono — labels, commands; italic for the curator's notes
 
 **Character:** Confident geometric display over an even body, with a precise mono for everything measured. Unchanged from the brand thread; the world around it changed.
 
@@ -184,7 +184,7 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 - Inactive: Muted. Hover: Ink. Active: Ink + 2px gold underline with a soft gold glow, animated scaleX from the left.
 
 ### Tool Card (index)
-- An `<a>` to `tool.html?tool=<slug>`: chip + № top row, name, tagline, "READ ENTRY →" footer.
+- An `<a>` to `tool.html?tool=<slug>`: chip top row, name, tagline, "READ ENTRY →" footer.
 - Hover: border brightens, fill to 4%, lifts 3px with the blue glow, arrow nudges right.
 - Cards reveal on load/scroll with a ≤360ms stagger; on tab filtering, surviving cards rise back in (`card-in` 0.4s, ≤280ms stagger, skipped under reduced motion).
 
