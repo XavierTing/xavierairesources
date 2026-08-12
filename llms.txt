@@ -2,7 +2,7 @@
 
 > AI for the rest of us. The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.
 
-Curated by Xavier Ting, Vice President, Customer Experience Design at OCBC.
+Curated by Xavier Ting, Vice President at OCBC.
 AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.
 
 - Site: https://xavierairesources.netlify.app/

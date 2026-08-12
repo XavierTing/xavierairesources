@@ -34,7 +34,7 @@ Visitors scan a card grid, filter by category tabs, open a tool's detail page to
 
 ## Brand Commitments
 
-- Xavier Ting personal brand, aligned to his LinkedIn identity (read 2026-07-30): **VP, Customer Experience Design at OCBC · AI & Design Leader**; banner line **"AI for the rest of us"**; headline promise "I build with AI daily and share what I learn / Making AI accessible for everyone". Profile links (both, labelled, in the hero byline and colophon): linkedin.com/in/xavierting and x.com/xaviertingai.
+- Xavier Ting personal brand. Positioning (user directive 2026-08-12, superseding the CX-design title on record): **Vice President at OCBC · AI & Design Leader** — "Customer Experience Design" no longer appears anywhere on the site. Banner identity from LinkedIn (read 2026-07-30): banner line **"AI for the rest of us"**; headline promise "I build with AI daily and share what I learn / Making AI accessible for everyone". Profile links (both, labelled, in the hero byline and colophon): linkedin.com/in/xavierting and x.com/xaviertingai.
 - **Accent colour #E0BF91** (his brand gold, from the LinkedIn banner) is user-pinned as the single accent. Montserrat + Poppins remain the brand type thread.
 - His portrait appears on the page (hero byline + colophon) from `assets/portrait.jpg` — one swappable file, see `assets/README.md`.
 - Credentials on record (from xavierting.com/about, not currently shown on the site): Master Certified NN/g UX Specialist, Certified Scrum Master & Product Owner, LEGO® SERIOUS PLAY® facilitator; OCBC Business App revamp won Best Corporate Mobile Initiative 2023 (Asian Banker) and Singapore Good Design Award 2023.

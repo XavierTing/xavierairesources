@@ -93,7 +93,7 @@ often read as ambiguity; this is an explicit invitation with a pointer to
 A `Person` schema node on every page, linked from each page as its author and
 reviewer:
 
-- Name, job title (VP, Customer Experience Design), employer (OCBC)
+- Name, job title (Vice President), employer (OCBC)
 - `sameAs` → LinkedIn, X, portfolio — this is how Google connects the three
   profiles into one entity and becomes eligible to show a Knowledge Panel
 - `knowsAbout` → AI, generative AI, AI agents, CX design, design systems,

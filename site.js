@@ -19,7 +19,7 @@ const SITE = {
 
   curator: {
     name: "Xavier Ting",
-    jobTitle: "Vice President, Customer Experience Design",
+    jobTitle: "Vice President",
     worksFor: "OCBC",
     summary:
       "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
@@ -36,7 +36,6 @@ const SITE = {
       "Artificial Intelligence",
       "Generative AI",
       "AI Agents",
-      "Customer Experience Design",
       "Product Design",
       "Design Systems",
       "Prompt Engineering",
