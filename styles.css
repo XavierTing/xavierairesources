@@ -815,17 +815,6 @@ html:not(.js) .theme-toggle { display: none; }
   100% { box-shadow: 0 0 0 14px rgba(var(--pulse-rgb), 0); }
 }
 
-/* the framing note: the one paragraph that makes the log make sense to a
-   newcomer — what Claude Code is, and where the grey commands get typed */
-.lognote {
-  margin: 26px 0 6px;
-  padding: 16px 18px;
-  background: var(--glass);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-}
-.lognote p { font-size: 0.9375rem; line-height: 1.6; color: var(--body-ink); margin: 0; max-width: 72ch; }
-.lognote-index { margin: 24px 0 -8px; }
 
 .repo-link {
   display: inline-flex;

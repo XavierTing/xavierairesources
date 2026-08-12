@@ -7,11 +7,11 @@ related_targets: ["101.css","101.js"]
 
 # Surface: ai-101.html (+ 101.css, 101.js, assets/101/)
 
-Scope: the "AI 101" tab — Xavier's AI 101 course as the site's second page. Visitor mode: Read — a beginner must understand 27 AI terms, not adopt tools.
+Scope: the "AI 101" tab — Xavier's AI 101 course as the site's second page. Visitor mode: Read — a beginner must understand 48 AI terms, not adopt tools; the back half turns understanding into operational literacy for building digital products with agentic tools (Claude Code, Codex, Antigravity, Kimi).
 
-Audience & job: people new to AI (colleagues, students, LinkedIn readers), arriving from the log tab or a shared link; "explain the words everyone keeps using." Success: they finish a chapter and can define the words in it.
+Audience & job: people new to AI (colleagues, students, LinkedIn readers), arriving from the log tab or a shared link; "explain the words everyone keeps using — then the words you need to build." A tertiary student with zero AI knowledge must follow every sentence. Success: they finish a chapter and can define the words in it.
 
-Content: 27 terms across 7 chapters + cover, ported verbatim from the standalone xaviers-ai-101 build (now gitignored source). Fixed entry anatomy: display word → gold bar → What it is → For example → analogy → optional diagram → In one line. Three interactives (context meter, flight walkthrough, tool filter), fix table, recap dl, Singapore UTAP note.
+Content: 48 terms across 9 chapters + cover (expanded 2026-08-12 from the 27-term port, on the syllabi of four Nick Saraev 2026 courses + classic AI-foundation curricula). Chapters 06 "What you're actually building" (web-stack literacy) and 07 "Shipping it safely" (build loop, debugging, security five, audits, prompt injection) are Builder-tagged. Fixed entry anatomy: display word → gold bar → What it is → For example → analogy → diagram (now near-universal: 42 dg-* images) → In one line. Three interactives (context meter, flight walkthrough, tool filter), fix table, recap dl, Singapore UTAP note. New plates: 08-frame (stack), 09-lighthouse (ship).
 
 Constraints: hand-owned page — generate-seo.mjs never touches it (it only adds the URL to sitemap/llms.txt). Duplication is deliberate for no-JS/crawlers: cover TOC = chapmenu list; each "In one line" repeats in the recap; chapend titles are hand-written — SYNC comments mark each pair. Chapter router + interactives live in 101.js; deep links (#e-mcp) open their chapter.
 

@@ -291,9 +291,6 @@ ${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}   
           <h2>When</h2>
           <div class="body">${whenHtml}</div>
         </section>
-        <aside class="lognote">
-          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions.${t.command ? " The grey command box below says where its line gets typed." : ""}${t.commandTarget === "terminal" ? " On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal." : ""} New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
-        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
@@ -527,7 +524,7 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Xavier's AI 101, a plain-English short course for people new to AI (27 terms, 7 chapters, ~35 minutes)
+- Course: ${BASE}/ai-101.html — Xavier's AI 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (48 terms, 9 chapters, ~60 minutes)
 - Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})

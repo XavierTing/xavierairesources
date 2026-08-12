@@ -72,7 +72,7 @@
     var isCover = slug === "cover";
     document.body.setAttribute("data-ch", slug);
     chapCount.textContent = isCover ? "" : i + " / " + (chapters.length - 1);
-    chapNow.textContent = isCover ? "Seven chapters" : titleOf(slug);
+    chapNow.textContent = isCover ? "Nine chapters" : titleOf(slug);
     dots.forEach(function (a) {
       var on = a.getAttribute("data-slug") === slug;
       if (on) a.setAttribute("aria-current", "step"); else a.removeAttribute("aria-current");
