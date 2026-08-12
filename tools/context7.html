@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -163,7 +163,7 @@
       "name": "When should you use Context7?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Working with anything that changes often, such as Next.js, Tailwind or LangChain, or with any tool released more recently than the model itself."
+        "text": "Working with software that changes quickly (web-building kits such as Next.js and Tailwind are the classic case), or with any tool released more recently than the model itself."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Context7?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add it to your assistant's connected tools. Add the words use context7 to your request, or set a rule so it happens every time. You get code written against current documentation instead of the model's memory. Command: claude mcp add context7 -- npx -y @upstash/context7-mcp"
+        "text": "Add it to your assistant's connected tools with the command below. Add the words use context7 to your request, or set a rule so it happens every time. You get code written against current documentation instead of the model's memory. Command: claude mcp add context7 -- npx -y @upstash/context7-mcp"
       }
     }
   ]
@@ -230,17 +230,21 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Working with anything that changes often, such as Next.js, Tailwind or LangChain, or with any tool released more recently than the model itself.</div>
+          <div class="body">Working with software that changes quickly (web-building kits such as Next.js and Tailwind are the classic case), or with any tool released more recently than the model itself.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add it to your assistant's connected tools.</li>
+            <li>Add it to your assistant's <a href="../ai-101.html#e-connectors">connected tools</a> with the command below.</li>
             <li>Add the words use context7 to your request, or set a rule so it happens every time.</li>
             <li>You get code written against current documentation instead of the model's memory.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>claude mcp add context7 -- npx -y @upstash/context7-mcp</code>
             <button class="copy-btn" type="button" data-command="claude mcp add context7 -- npx -y @upstash/context7-mcp"
                     aria-label="Copy command: claude mcp add context7 -- npx -y @upstash/context7-mcp">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

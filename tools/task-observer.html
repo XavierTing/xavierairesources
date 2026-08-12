@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Task Observer — Watches how you work and improves your skills | AI Resources</title>
-  <meta name="description" content="Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.">
+  <meta name="description" content="For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.">
   <link rel="canonical" href="https://xavierairesources.netlify.app/tools/task-observer.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:title" content="Task Observer — Watches how you work and improves your skills | AI Resources">
-  <meta property="og:description" content="Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.">
+  <meta property="og:description" content="For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.">
   <meta property="og:url" content="https://xavierairesources.netlify.app/tools/task-observer.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -89,7 +89,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://xavierairesources.netlify.app/tools/task-observer.html#tool",
       "name": "Task Observer",
-      "description": "Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.",
+      "description": "For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/rebelytics/one-skill-to-rule-them-all",
@@ -103,7 +103,7 @@
       "@id": "https://xavierairesources.netlify.app/tools/task-observer.html#page",
       "url": "https://xavierairesources.netlify.app/tools/task-observer.html",
       "name": "Task Observer — Watches how you work and improves your skills | AI Resources",
-      "description": "Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.",
+      "description": "For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
@@ -115,7 +115,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -153,7 +153,7 @@
       "name": "Why use Task Observer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Writing a skill takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep."
+        "text": "A skill is a set of saved instructions your assistant loads for a particular job. Writing one takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep."
       }
     },
     {
@@ -161,7 +161,7 @@
       "name": "When should you use Task Observer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your library, so with two or three skills, editing them directly is still quicker."
+        "text": "Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your collection, so with two or three skills, editing them directly is still quicker."
       }
     },
     {
@@ -169,7 +169,7 @@
       "name": "How do you install and use Task Observer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Download the repo, keeping SKILL.md and the references folder together. Install it wherever your assistant reads skills from. The README covers the common setups. Work as normal, then read the observations it logs and apply the ones you agree with."
+        "text": "On the page linked above, use GitHub's green Code button and choose Download ZIP, then unzip it. Put the folder where your assistant keeps its skills. For Claude Code that is the .claude/skills folder; the guide on that page covers other assistants. Work as normal, then read the observations it logs and apply the ones you agree with."
       }
     }
   ]
@@ -224,18 +224,21 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Writing a skill takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep.</div>
+          <div class="body">A <a href="../ai-101.html#e-skills">skill</a> is a set of saved instructions your assistant loads for a particular job. Writing one takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your library, so with two or three skills, editing them directly is still quicker.</div>
+          <div class="body">Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your collection, so with two or three skills, editing them directly is still quicker.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Download the repo, keeping SKILL.md and the references folder together.</li>
-            <li>Install it wherever your assistant reads skills from. The README covers the common setups.</li>
+            <li>On the page linked above, use GitHub's green Code button and choose Download ZIP, then unzip it.</li>
+            <li>Put the folder where your assistant keeps its skills. For Claude Code that is the .claude/skills folder; the guide on that page covers other assistants.</li>
             <li>Work as normal, then read the observations it logs and apply the ones you agree with.</li>
             </ol>
           </div>
@@ -271,7 +274,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

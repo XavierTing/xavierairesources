@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LLM Wiki — Notes your AI writes and keeps up to date for you | AI Resources</title>
-  <meta name="description" content="The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.">
+  <meta name="description" content="Most setups make an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.">
   <link rel="canonical" href="https://xavierairesources.netlify.app/tools/llm-wiki.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:title" content="LLM Wiki — Notes your AI writes and keeps up to date for you | AI Resources">
-  <meta property="og:description" content="The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.">
+  <meta property="og:description" content="Most setups make an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.">
   <meta property="og:url" content="https://xavierairesources.netlify.app/tools/llm-wiki.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -89,7 +89,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://xavierairesources.netlify.app/tools/llm-wiki.html#tool",
       "name": "LLM Wiki",
-      "description": "The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
+      "description": "Most setups make an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
@@ -103,7 +103,7 @@
       "@id": "https://xavierairesources.netlify.app/tools/llm-wiki.html#page",
       "url": "https://xavierairesources.netlify.app/tools/llm-wiki.html",
       "name": "LLM Wiki — Notes your AI writes and keeps up to date for you | AI Resources",
-      "description": "The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
+      "description": "Most setups make an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
@@ -115,7 +115,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -153,7 +153,7 @@
       "name": "Why use LLM Wiki?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The usual way of giving an AI your documents has it search through them fresh for every question. It re-reads everything each time and builds up no understanding at all. Karpathy's approach has the model keep a set of plain text notes instead. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. You pay the reading cost once rather than on every question."
+        "text": "Most tools that let an AI use your documents work by searching them fresh for every question. The AI re-reads everything each time and builds up no understanding at all. Andrej Karpathy, one of the best known AI researchers, suggests the opposite: have the model keep a set of plain text notes. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. The reading work happens once instead of on every question."
       }
     },
     {
@@ -169,7 +169,7 @@
       "name": "How do you install and use LLM Wiki?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Read the gist. It describes an approach to follow, not something you install. Write down your own structure: what belongs on a page, and how pages should link to each other. Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then."
+        "text": "Read the page (a gist is simply a note published on GitHub). It describes an approach to follow, not something you install. Write down your own structure: what belongs on a page, and how pages should link to each other. Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then."
       }
     }
   ]
@@ -224,17 +224,20 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">The usual way of giving an AI your documents has it search through them fresh for every question. It re-reads everything each time and builds up no understanding at all. Karpathy's approach has the model keep a set of plain text notes instead. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. You pay the reading cost once rather than on every question.</div>
+          <div class="body">Most tools that let an AI use your documents work by searching them fresh for every question. The AI re-reads everything each time and builds up no understanding at all. Andrej Karpathy, one of the best known AI researchers, suggests the opposite: have the model keep a set of plain text notes. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. The reading work happens once instead of on every question.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Building a personal knowledge base out of notes, articles and bookmarks, where you want it to get more useful the more you add to it.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Read the gist. It describes an approach to follow, not something you install.</li>
+            <li>Read the page (a gist is simply a note published on GitHub). It describes an approach to follow, not something you install.</li>
             <li>Write down your own structure: what belongs on a page, and how pages should link to each other.</li>
             <li>Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then.</li>
             </ol>
@@ -271,7 +274,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OmniRoute — Keeps you working when your AI quota runs out | AI Resources</title>
-  <meta name="description" content="Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.">
+  <meta name="description" content="Hit your usage limit mid-task and everything stops. OmniRoute sits between your AI tool and hundreds of models, and when the one you are on runs dry it switches to another and carries on.">
   <link rel="canonical" href="https://xavierairesources.netlify.app/tools/omniroute.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:title" content="OmniRoute — Keeps you working when your AI quota runs out | AI Resources">
-  <meta property="og:description" content="Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.">
+  <meta property="og:description" content="Hit your usage limit mid-task and everything stops. OmniRoute sits between your AI tool and hundreds of models, and when the one you are on runs dry it switches to another and carries on.">
   <meta property="og:url" content="https://xavierairesources.netlify.app/tools/omniroute.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -89,7 +89,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://xavierairesources.netlify.app/tools/omniroute.html#tool",
       "name": "OmniRoute",
-      "description": "Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.",
+      "description": "Hit your usage limit mid-task and everything stops. OmniRoute sits between your AI tool and hundreds of models, and when the one you are on runs dry it switches to another and carries on.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/diegosouzapw/OmniRoute",
@@ -105,7 +105,7 @@
       "@id": "https://xavierairesources.netlify.app/tools/omniroute.html#page",
       "url": "https://xavierairesources.netlify.app/tools/omniroute.html",
       "name": "OmniRoute — Keeps you working when your AI quota runs out | AI Resources",
-      "description": "Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.",
+      "description": "Hit your usage limit mid-task and everything stops. OmniRoute sits between your AI tool and hundreds of models, and when the one you are on runs dry it switches to another and carries on.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use OmniRoute?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Running out of quota halfway through a job is a slow way to lose an afternoon. OmniRoute sits between your coding tool and the models as a single address that reaches more than 500 of them across upwards of 290 providers, over 90 of which are free. When the model you are using hits its limit it falls back to another and keeps going. It also compresses what gets sent, which the project measures at anywhere from 15 to 95 percent fewer tokens."
+        "text": "Running out of your usage allowance halfway through a job is a slow way to lose an afternoon. OmniRoute sits in the middle: instead of your AI tool talking to one company directly, it talks to OmniRoute, which can pass the work to more than 500 models from around 290 companies, over 90 of them free. When the model you are using hits its limit, it hands you to another and keeps going. It also trims what gets sent along the way, which the project measures at 15 to 95 percent fewer tokens, the units AI reads and bills by."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use OmniRoute?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Long sessions where stopping is expensive, and any time you want to try a cheaper or free model without rewiring your setup. It works with Claude Code, Codex, Cursor, OpenCode, Cline and Copilot."
+        "text": "Long sessions where stopping is expensive, and any time you want to try a cheaper or free model without changing your setup. It works with the main AI coding tools, Claude Code, Codex, Cursor and Copilot among them."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use OmniRoute?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install it globally with npm. Point your coding tool at OmniRoute rather than at one provider directly. Carry on working. When a model runs out of quota it moves you to the next one. Command: npm install -g omniroute"
+        "text": "Run the command below. Follow its guide, on the page linked above, to point your AI tool at it: one line to change in the tool's settings, shown for each tool. Carry on working. When a model runs out, it moves you to the next one. Command: npm install -g omniroute"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Running out of quota halfway through a job is a slow way to lose an afternoon. OmniRoute sits between your coding tool and the models as a single address that reaches more than 500 of them across upwards of 290 providers, over 90 of which are free. When the model you are using hits its limit it falls back to another and keeps going. It also compresses what gets sent, which the project measures at anywhere from 15 to 95 percent fewer tokens.</div>
+          <div class="body">Running out of your usage allowance halfway through a job is a slow way to lose an afternoon. OmniRoute sits in the middle: instead of your AI tool talking to one company directly, it talks to OmniRoute, which can pass the work to more than 500 models from around 290 companies, over 90 of them free. When the model you are using hits its limit, it hands you to another and keeps going. It also trims what gets sent along the way, which the project measures at 15 to 95 percent fewer <a href="../ai-101.html#e-token">tokens</a>, the units AI reads and bills by.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Long sessions where stopping is expensive, and any time you want to try a cheaper or free model without rewiring your setup. It works with Claude Code, Codex, Cursor, OpenCode, Cline and Copilot.</div>
+          <div class="body">Long sessions where stopping is expensive, and any time you want to try a cheaper or free model without changing your setup. It works with the main AI coding tools, Claude Code, Codex, Cursor and Copilot among them.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install it globally with npm.</li>
-            <li>Point your coding tool at OmniRoute rather than at one provider directly.</li>
-            <li>Carry on working. When a model runs out of quota it moves you to the next one.</li>
+            <li>Run the command below.</li>
+            <li>Follow its guide, on the page linked above, to point your AI tool at it: one line to change in the tool's settings, shown for each tool.</li>
+            <li>Carry on working. When a model runs out, it moves you to the next one.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>npm install -g omniroute</code>
             <button class="copy-btn" type="button" data-command="npm install -g omniroute"
                     aria-label="Copy command: npm install -g omniroute">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

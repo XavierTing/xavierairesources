@@ -96,6 +96,45 @@ function toolNode(t) {
 const jsonLd = (obj) =>
   `<script type="application/ld+json">\n${JSON.stringify(obj, null, 2)}\n  </script>`;
 
+/* ---------- AI 101 term links ----------
+   The course defines the concept words the log leans on. First mention of
+   each on a tool page becomes a link to its definition. Lowercase-only
+   matches (MCP excepted) so tool names like Agent-Reach and Supabase
+   Plugin never get linked; one link per term per page. Applied to
+   already-escaped text, so the only markup present is what we add. */
+
+const AI101_TERMS = [
+  ["context window", "context", "i"],
+  ["connected tools", "connectors", ""],
+  ["plugins?", "plugins", ""],
+  ["skills?", "skills", ""],
+  ["tokens?", "token", ""],
+  ["agents?", "agent", ""],
+  ["MCP", "mcp", ""],
+];
+
+function makeTermLinker() {
+  const linked = new Set();
+  return (escaped) => {
+    for (const [pattern, anchor, flags] of AI101_TERMS) {
+      if (linked.has(anchor)) continue;
+      const re = new RegExp(`\\b(${pattern})\\b`, flags);
+      if (re.test(escaped)) {
+        escaped = escaped.replace(re, `<a href="../ai-101.html#e-${anchor}">$1</a>`);
+        linked.add(anchor);
+      }
+    }
+    return escaped;
+  };
+}
+
+/* the label on the command box: where the grey line actually gets typed */
+const COMMAND_TARGETS = {
+  terminal: "Paste into the Terminal app",
+  claude: "Type inside Claude Code",
+  assistant: "Paste into your assistant",
+};
+
 /* ---------- 1. per-tool static pages ---------- */
 
 function detailPage(t, i) {
@@ -154,10 +193,16 @@ function detailPage(t, i) {
     ],
   };
 
-  const steps = t.how.map((s) => `            <li>${esc(s)}</li>`).join("\n");
+  /* prose gets first claim on a term link; the how-steps pick up the rest */
+  const linkTerms = makeTermLinker();
+  const whyHtml = linkTerms(esc(t.why));
+  const whenHtml = linkTerms(esc(t.when));
+  const steps = t.how.map((s) => `            <li>${linkTerms(esc(s))}</li>`).join("\n");
+  const whereLabel = COMMAND_TARGETS[t.commandTarget];
   const specimen = t.command
     ? `
-          <div class="specimen">
+          <div class="specimen">${whereLabel ? `
+            <span class="specimen-where m">${esc(whereLabel)}</span>` : ""}
             <code>${esc(t.command)}</code>
             <button class="copy-btn" type="button" data-command="${escAttr(t.command)}"
                     aria-label="Copy command: ${escAttr(t.command)}">Copy</button>
@@ -240,12 +285,15 @@ ${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}   
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">${esc(t.why)}</div>
+          <div class="body">${whyHtml}</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">${esc(t.when)}</div>
+          <div class="body">${whenHtml}</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions.${t.command ? " The grey command box below says where its line gets typed." : ""}${t.commandTarget === "terminal" ? " On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal." : ""} New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">

@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Codex for Claude Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own plugin for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and the free tier is enough to start, or an OpenAI key instead. What you use counts towards your Codex limits, so it is worth saving for work that matters."
+        "text": "Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and a free one is enough to start. What you use counts towards that account's Codex allowance, so it is worth saving for work that matters."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Codex for Claude Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: with an OpenAI key it will call gpt-image-2 and produce actual images for you. There is no button for that, you simply ask."
+        "text": "Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you, though that part needs a paid OpenAI account. There is no button for it, you simply ask."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Codex for Claude Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add the collection to Claude Code with the command below. Install it with /plugin install codex@openai-codex, then run /reload-plugins Run /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work. Command: /plugin marketplace add openai/codex-plugin-cc"
+        "text": "Type the command below inside Claude Code. It adds OpenAI's catalogue. Install it by typing /plugin install codex@openai-codex, then /reload-plugins Type /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work. Command: /plugin marketplace add openai/codex-plugin-cc"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own plugin for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and the free tier is enough to start, or an OpenAI key instead. What you use counts towards your Codex limits, so it is worth saving for work that matters.</div>
+          <div class="body">Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and a free one is enough to start. What you use counts towards that account's Codex allowance, so it is worth saving for work that matters.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: with an OpenAI key it will call gpt-image-2 and produce actual images for you. There is no button for that, you simply ask.</div>
+          <div class="body">Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you, though that part needs a paid OpenAI account. There is no button for it, you simply ask.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add the collection to Claude Code with the command below.</li>
-            <li>Install it with /plugin install codex@openai-codex, then run /reload-plugins</li>
-            <li>Run /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work.</li>
+            <li>Type the command below inside Claude Code. It adds OpenAI's catalogue.</li>
+            <li>Install it by typing /<a href="../ai-101.html#e-plugins">plugin</a> install codex@openai-codex, then /reload-plugins</li>
+            <li>Type /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Type inside Claude Code</span>
             <code>/plugin marketplace add openai/codex-plugin-cc</code>
             <button class="copy-btn" type="button" data-command="/plugin marketplace add openai/codex-plugin-cc"
                     aria-label="Copy command: /plugin marketplace add openai/codex-plugin-cc">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

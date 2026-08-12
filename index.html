@@ -118,7 +118,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "ItemList",
@@ -275,7 +275,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/llm-wiki.html#tool",
             "name": "LLM Wiki",
-            "description": "The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
+            "description": "Most setups make an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
@@ -413,7 +413,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/apple-design.html#tool",
             "name": "Apple Design",
-            "description": "Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.",
+            "description": "Assistants pick motion that feels slightly wrong: movement that rushes when it should settle, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://github.com/emilkowalski/skills/tree/main/skills/apple-design",
@@ -451,7 +451,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/omniroute.html#tool",
             "name": "OmniRoute",
-            "description": "Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.",
+            "description": "Hit your usage limit mid-task and everything stops. OmniRoute sits between your AI tool and hundreds of models, and when the one you are on runs dry it switches to another and carries on.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://github.com/diegosouzapw/OmniRoute",
@@ -531,7 +531,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/task-observer.html#tool",
             "name": "Task Observer",
-            "description": "Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.",
+            "description": "For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://github.com/rebelytics/one-skill-to-rule-them-all",
@@ -549,7 +549,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/playwright-cli.html#tool",
             "name": "Playwright CLI",
-            "description": "Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.",
+            "description": "Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://github.com/microsoft/playwright-cli",
@@ -569,7 +569,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/supabase-plugin.html#tool",
             "name": "Supabase Plugin",
-            "description": "Connects your assistant to your own Supabase project so it can look at the database, change its structure and ship functions, instead of guessing at what your tables look like.",
+            "description": "For apps built on Supabase, a popular service that stores an app's data. This connects your assistant to the real project, so it works with what is actually there instead of guessing.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://supabase.com/docs/guides/ai-tools/plugins",
@@ -609,7 +609,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xavierairesources.netlify.app/tools/skill-ui.html#tool",
             "name": "Skill UI",
-            "description": "Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
+            "description": "Reads a website or a project and writes down its colours, fonts, spacing and reusable pieces in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://github.com/amaancoderx/npxskillui",
@@ -684,6 +684,10 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <p class="tab-count m" id="tab-count" aria-live="polite"></p>
         </div>
 
+        <aside class="lognote lognote-index">
+          <p>Most of these are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. Every entry says where its install command gets typed. New to the words? <a href="ai-101.html">AI 101</a> explains them.</p>
+        </aside>
+
         <div class="grid" id="grid">
         <!-- CARDS:START -->
           <a class="card" href="tools/impeccable.html" data-category="Design">
@@ -739,7 +743,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <img class="card-art" src="assets/cards/light/llm-wiki.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Knowledge</span><span class="card-num">№ 08</span></span>
             <h2 class="card-name">LLM Wiki</h2>
-            <p class="card-tag">The usual setup makes an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.</p>
+            <p class="card-tag">Most setups make an AI re-read all your documents for every question and remember none of it. This has it keep a growing set of notes instead, linking new material to old.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/humanizer.html" data-category="Writing">
@@ -788,7 +792,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <img class="card-art" src="assets/cards/light/apple-design.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Design</span><span class="card-num">№ 15</span></span>
             <h2 class="card-name">Apple Design</h2>
-            <p class="card-tag">Assistants pick motion that feels slightly wrong: the wrong easing, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.</p>
+            <p class="card-tag">Assistants pick motion that feels slightly wrong: movement that rushes when it should settle, animations you cannot stop halfway. This hands over Apple's own principles, taken from their design talks.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/notchi.html" data-category="Workflow">
@@ -802,7 +806,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <img class="card-art" src="assets/cards/light/omniroute.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Coding</span><span class="card-num">№ 17</span></span>
             <h2 class="card-name">OmniRoute</h2>
-            <p class="card-tag">Hit your limit mid-task and everything stops. OmniRoute puts one address in front of hundreds of models, and when the one you are on runs dry it switches you to another and carries on.</p>
+            <p class="card-tag">Hit your usage limit mid-task and everything stops. OmniRoute sits between your AI tool and hundreds of models, and when the one you are on runs dry it switches to another and carries on.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/claude-mem.html" data-category="Knowledge">
@@ -830,21 +834,21 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <img class="card-art" src="assets/cards/light/task-observer.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Workflow</span><span class="card-num">№ 21</span></span>
             <h2 class="card-name">Task Observer</h2>
-            <p class="card-tag">Skills you write once tend to stay frozen. This sits alongside your work, notices the corrections you keep making, and turns them into suggested improvements for you to approve.</p>
+            <p class="card-tag">For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/playwright-cli.html" data-category="Agents &amp; MCP">
             <img class="card-art" src="assets/cards/light/playwright-cli.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Agents &amp; MCP</span><span class="card-num">№ 22</span></span>
             <h2 class="card-name">Playwright CLI</h2>
-            <p class="card-tag">Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.</p>
+            <p class="card-tag">Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/supabase-plugin.html" data-category="Agents &amp; MCP">
             <img class="card-art" src="assets/cards/light/supabase-plugin.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Agents &amp; MCP</span><span class="card-num">№ 23</span></span>
             <h2 class="card-name">Supabase Plugin</h2>
-            <p class="card-tag">Connects your assistant to your own Supabase project so it can look at the database, change its structure and ship functions, instead of guessing at what your tables look like.</p>
+            <p class="card-tag">For apps built on Supabase, a popular service that stores an app's data. This connects your assistant to the real project, so it works with what is actually there instead of guessing.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/strix.html" data-category="Coding">
@@ -858,7 +862,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <img class="card-art" src="assets/cards/light/skill-ui.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
             <span class="card-top"><span class="card-cat m">Design</span><span class="card-num">№ 25</span></span>
             <h2 class="card-name">Skill UI</h2>
-            <p class="card-tag">Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.</p>
+            <p class="card-tag">Reads a website or a project and writes down its colours, fonts, spacing and reusable pieces in a form Claude Code picks up on its own, so what it builds matches instead of drifting.</p>
             <span class="card-open">Read entry</span>
           </a>
         <!-- CARDS:END -->

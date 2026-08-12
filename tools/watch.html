@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -171,7 +171,7 @@
       "name": "How do you install and use Watch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add the collection it lives in to Claude Code, using the command below. Install the tool itself with /plugin install watch@claude-video Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute. Command: /plugin marketplace add mathiaschu/watch"
+        "text": "Type the command below inside Claude Code. It adds the catalogue the tool lives in. Then install the tool itself by typing /plugin install watch@claude-video Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute. Command: /plugin marketplace add mathiaschu/watch"
       }
     }
   ]
@@ -232,15 +232,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>When</h2>
           <div class="body">Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add the collection it lives in to Claude Code, using the command below.</li>
-            <li>Install the tool itself with /plugin install watch@claude-video</li>
+            <li>Type the command below inside Claude Code. It adds the catalogue the tool lives in.</li>
+            <li>Then install the tool itself by typing /<a href="../ai-101.html#e-plugins">plugin</a> install watch@claude-video</li>
             <li>Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Type inside Claude Code</span>
             <code>/plugin marketplace add mathiaschu/watch</code>
             <button class="copy-btn" type="button" data-command="/plugin marketplace add mathiaschu/watch"
                     aria-label="Copy command: /plugin marketplace add mathiaschu/watch">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Figma MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions."
+        "text": "Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official connection, built on MCP, the standard plug between AI apps and other software, gives it the real file instead: the actual colors you chose, the reusable pieces you built, the spacing you set. It can write back into Figma as well, so work moves in both directions."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Figma MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one. Open the file in Figma and select the frame you want built. Ask your assistant to build the selection. It reads the real values instead of guessing from pixels. Command: claude mcp add --transport http figma https://mcp.figma.com/mcp"
+        "text": "Add it to your assistant's connected tools with the command below. Open the file in Figma and select the frame you want built. Ask your assistant to build the selection. It reads the real values instead of guessing from pixels. Command: claude mcp add --transport http figma https://mcp.figma.com/mcp"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official server gives it the real file instead: the actual colors you chose, the components you built, the spacing you set, and the links between those components and your code. It can write back into Figma as well, so work moves in both directions.</div>
+          <div class="body">Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official connection, built on <a href="../ai-101.html#e-mcp">MCP</a>, the standard plug between AI apps and other software, gives it the real file instead: the actual colors you chose, the reusable pieces you built, the spacing you set. It can write back into Figma as well, so work moves in both directions.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add it to your assistant's connected tools, or install the Figma plugin if your tool offers one.</li>
+            <li>Add it to your assistant's <a href="../ai-101.html#e-connectors">connected tools</a> with the command below.</li>
             <li>Open the file in Figma and select the frame you want built.</li>
             <li>Ask your assistant to build the selection. It reads the real values instead of guessing from pixels.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>claude mcp add --transport http figma https://mcp.figma.com/mcp</code>
             <button class="copy-btn" type="button" data-command="claude mcp add --transport http figma https://mcp.figma.com/mcp"
                     aria-label="Copy command: claude mcp add --transport http figma https://mcp.figma.com/mcp">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

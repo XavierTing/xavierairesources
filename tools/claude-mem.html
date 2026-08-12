@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -171,7 +171,7 @@
       "name": "How do you install and use Claude Mem?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run the installer. It sets itself up for whichever assistant you use. Work as normal. It records and condenses each session in the background. Next time you start, the relevant history is already in front of the assistant. Command: npx claude-mem install"
+        "text": "Run the command below. It sets itself up for whichever assistant you use. Work as normal. It records and condenses each session in the background. Next time you start, the relevant history is already in front of the assistant. Command: npx claude-mem install"
       }
     }
   ]
@@ -232,15 +232,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>When</h2>
           <div class="body">Projects you return to across days or weeks, and any work where re-explaining the background eats the time you meant to spend building.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Run the installer. It sets itself up for whichever assistant you use.</li>
+            <li>Run the command below. It sets itself up for whichever assistant you use.</li>
             <li>Work as normal. It records and condenses each session in the background.</li>
             <li>Next time you start, the relevant history is already in front of the assistant.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>npx claude-mem install</code>
             <button class="copy-btn" type="button" data-command="npx claude-mem install"
                     aria-label="Copy command: npx claude-mem install">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Headroom?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A lot of what your assistant reads is filler. Command output, log files, long stretches of data. You pay for every word of it and almost none of it makes the answer better. Headroom compresses that material before it reaches the model. The project measures around 20 percent fewer tokens on coding work and between 60 and 95 percent on data files, with the same answers coming back."
+        "text": "A lot of what your assistant reads is filler. Records of what programs printed, long stretches of data, repeated boilerplate. Every word of it uses up tokens, the units AI reads and bills by, and almost none of it makes the answer better. Headroom compresses that material before it reaches the model. The project measures around 20 percent fewer tokens on coding work and between 60 and 95 percent on data files, with the same answers coming back."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Headroom?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Work that pushes a lot of output through the assistant: reading logs, handling large data files, or long runs where the context fills up and earlier detail starts falling out."
+        "text": "Work that pushes a lot of material through the assistant: reading logs, handling large data files, or long runs where the assistant's working memory fills up and earlier detail starts falling out."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Headroom?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install it with pip. It needs Python 3.10 or newer. Pick how to run it: as a library inside your own code, as a proxy in front of the model, or as a connected tool. Carry on as normal. It compresses in the middle and the answers come back unchanged. Command: pip install \"headroom-ai[all]\""
+        "text": "Run the command below. It needs Python 3.10 or newer; typing python3 --version in the Terminal tells you whether you have it. Follow its guide, on the page linked above, to add it to your assistant's connected tools. That is the simplest of its ways to run, and the guide covers the others. Carry on as normal. It compresses in the middle and the answers come back unchanged. Command: pip install \"headroom-ai[all]\""
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">A lot of what your assistant reads is filler. Command output, log files, long stretches of data. You pay for every word of it and almost none of it makes the answer better. Headroom compresses that material before it reaches the model. The project measures around 20 percent fewer tokens on coding work and between 60 and 95 percent on data files, with the same answers coming back.</div>
+          <div class="body">A lot of what your assistant reads is filler. Records of what programs printed, long stretches of data, repeated boilerplate. Every word of it uses up <a href="../ai-101.html#e-token">tokens</a>, the units AI reads and bills by, and almost none of it makes the answer better. Headroom compresses that material before it reaches the model. The project measures around 20 percent fewer tokens on coding work and between 60 and 95 percent on data files, with the same answers coming back.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Work that pushes a lot of output through the assistant: reading logs, handling large data files, or long runs where the context fills up and earlier detail starts falling out.</div>
+          <div class="body">Work that pushes a lot of material through the assistant: reading logs, handling large data files, or long runs where the assistant's working memory fills up and earlier detail starts falling out.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install it with pip. It needs Python 3.10 or newer.</li>
-            <li>Pick how to run it: as a library inside your own code, as a proxy in front of the model, or as a connected tool.</li>
+            <li>Run the command below. It needs Python 3.10 or newer; typing python3 --version in the Terminal tells you whether you have it.</li>
+            <li>Follow its guide, on the page linked above, to add it to your assistant's <a href="../ai-101.html#e-connectors">connected tools</a>. That is the simplest of its ways to run, and the guide covers the others.</li>
             <li>Carry on as normal. It compresses in the middle and the answers come back unchanged.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>pip install &quot;headroom-ai[all]&quot;</code>
             <button class="copy-btn" type="button" data-command="pip install &quot;headroom-ai[all]&quot;"
                     aria-label="Copy command: pip install &quot;headroom-ai[all]&quot;">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

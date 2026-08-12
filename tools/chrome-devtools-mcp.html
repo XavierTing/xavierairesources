@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -171,7 +171,7 @@
       "name": "How do you install and use Chrome DevTools MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Add it to your assistant's connected tools. MCP is simply the agreed standard for plugging outside tools into an AI assistant. Ask the assistant to open your page and read the errors. Let it take screenshots and check its own work before it tells you it is finished. Command: claude mcp add chrome-devtools npx chrome-devtools-mcp@latest"
+        "text": "Add it to your assistant's connected tools with the command below. MCP is simply the agreed standard for plugging outside tools into an AI assistant. Ask the assistant to open your page and read the errors. Let it take screenshots and check its own work before it tells you it is finished. Command: claude mcp add chrome-devtools npx chrome-devtools-mcp@latest"
       }
     }
   ]
@@ -232,15 +232,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>When</h2>
           <div class="body">Fixing anything that shows up in a browser, making a slow page faster, and any time you want proof that a change worked rather than a claim that it did.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Add it to your assistant's connected tools. MCP is simply the agreed standard for plugging outside tools into an AI assistant.</li>
+            <li>Add it to your assistant's <a href="../ai-101.html#e-connectors">connected tools</a> with the command below. <a href="../ai-101.html#e-mcp">MCP</a> is simply the agreed standard for plugging outside tools into an AI assistant.</li>
             <li>Ask the assistant to open your page and read the errors.</li>
             <li>Let it take screenshots and check its own work before it tells you it is finished.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>claude mcp add chrome-devtools npx chrome-devtools-mcp@latest</code>
             <button class="copy-btn" type="button" data-command="claude mcp add chrome-devtools npx chrome-devtools-mcp@latest"
                     aria-label="Copy command: claude mcp add chrome-devtools npx chrome-devtools-mcp@latest">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

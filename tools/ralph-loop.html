@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Ralph Loop?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some work does not come right on the first attempt, and sitting there restarting the assistant yourself gets old quickly. Ralph Loop catches the moment a session ends and feeds your original request straight back in, keeping every file change and the git history from the run before. Claude reads what it already tried, sees which tests failed, and goes again. It stops when it reports the finish word you picked, or when it reaches the number of attempts you allowed."
+        "text": "Some work does not come right on the first attempt, and sitting there restarting the assistant yourself gets old quickly. Ralph Loop catches the moment a session ends and feeds your original request straight back in, keeping every file change and the record of earlier attempts. Claude reads what it already tried, sees which checks failed, and goes again. It stops when it reports the finish word you picked, or when it reaches the number of attempts you allowed."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Ralph Loop?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Work where you can say plainly what finished looks like and something can check it for you, such as a test suite. The loop needs a finish line it can recognize, so open ended tasks are a poor fit."
+        "text": "Work where you can say plainly what finished looks like and something can check it for you automatically. The loop needs a finish line it can recognize, so open ended tasks are a poor fit."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Ralph Loop?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the plugin from the official Claude Code marketplace. Start a run with /ralph-loop followed by your request, --max-iterations to cap the attempts, and --completion-promise to set the word Claude says when it is finished. Leave it to work. Stop it early at any point with /cancel-ralph. Command: claude plugin install ralph-loop@claude-plugins-official"
+        "text": "Install it with the command below. Inside Claude Code, type /ralph-loop followed by your request. Add --max-iterations 10 to cap the attempts at ten, and --completion-promise DONE to set the finish word. Leave it to work. Stop it early at any point with /cancel-ralph. Command: claude plugin install ralph-loop@claude-plugins-official"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Some work does not come right on the first attempt, and sitting there restarting the assistant yourself gets old quickly. Ralph Loop catches the moment a session ends and feeds your original request straight back in, keeping every file change and the git history from the run before. Claude reads what it already tried, sees which tests failed, and goes again. It stops when it reports the finish word you picked, or when it reaches the number of attempts you allowed.</div>
+          <div class="body">Some work does not come right on the first attempt, and sitting there restarting the assistant yourself gets old quickly. Ralph Loop catches the moment a session ends and feeds your original request straight back in, keeping every file change and the record of earlier attempts. Claude reads what it already tried, sees which checks failed, and goes again. It stops when it reports the finish word you picked, or when it reaches the number of attempts you allowed.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Work where you can say plainly what finished looks like and something can check it for you, such as a test suite. The loop needs a finish line it can recognize, so open ended tasks are a poor fit.</div>
+          <div class="body">Work where you can say plainly what finished looks like and something can check it for you automatically. The loop needs a finish line it can recognize, so open ended tasks are a poor fit.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install the plugin from the official Claude Code marketplace.</li>
-            <li>Start a run with /ralph-loop followed by your request, --max-iterations to cap the attempts, and --completion-promise to set the word Claude says when it is finished.</li>
+            <li>Install it with the command below.</li>
+            <li>Inside Claude Code, type /ralph-loop followed by your request. Add --max-iterations 10 to cap the attempts at ten, and --completion-promise DONE to set the finish word.</li>
             <li>Leave it to work. Stop it early at any point with /cancel-ralph.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>claude plugin install ralph-loop@claude-plugins-official</code>
             <button class="copy-btn" type="button" data-command="claude plugin install ralph-loop@claude-plugins-official"
                     aria-label="Copy command: claude plugin install ralph-loop@claude-plugins-official">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

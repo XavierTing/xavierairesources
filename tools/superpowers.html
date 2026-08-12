@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Superpowers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Left alone, an AI assistant starts writing code straight away and guesses at whatever you did not spell out. Superpowers makes it work the way an experienced engineer does. It thinks through the design first, writes a plan, checks its own work with tests, then reviews before anything is final. You notice the difference a couple of weeks later, when you come back and can still follow what it built."
+        "text": "Left alone, an AI assistant starts writing code straight away and guesses at whatever you did not spell out. Superpowers makes it work the way an experienced engineer does. It thinks through the design first, writes a plan, checks its own work automatically, then reviews before anything is final. You notice the difference a couple of weeks later, when you come back and can still follow what it built."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Superpowers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the plugin from the official Claude Code marketplace. Start any task as normal. It brings in the planning steps by itself. Work through the checkpoints it offers, and approve the design before it writes any code. Command: claude plugin install superpowers@claude-plugins-official"
+        "text": "Install it with the command below, from the official catalogue of Claude Code add-ons. Start any task as normal. It brings in the planning steps by itself. Work through the checkpoints it offers, and approve the design before it writes any code. Command: claude plugin install superpowers@claude-plugins-official"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Left alone, an AI assistant starts writing code straight away and guesses at whatever you did not spell out. Superpowers makes it work the way an experienced engineer does. It thinks through the design first, writes a plan, checks its own work with tests, then reviews before anything is final. You notice the difference a couple of weeks later, when you come back and can still follow what it built.</div>
+          <div class="body">Left alone, an AI assistant starts writing code straight away and guesses at whatever you did not spell out. Superpowers makes it work the way an experienced engineer does. It thinks through the design first, writes a plan, checks its own work automatically, then reviews before anything is final. You notice the difference a couple of weeks later, when you come back and can still follow what it built.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Anything bigger than a quick fix. It is most useful on projects you are starting from scratch, and on bugs that have already survived a few attempts.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install the plugin from the official Claude Code marketplace.</li>
+            <li>Install it with the command below, from the official catalogue of Claude Code add-ons.</li>
             <li>Start any task as normal. It brings in the planning steps by itself.</li>
             <li>Work through the checkpoints it offers, and approve the design before it writes any code.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>claude plugin install superpowers@claude-plugins-official</code>
             <button class="copy-btn" type="button" data-command="claude plugin install superpowers@claude-plugins-official"
                     aria-label="Copy command: claude plugin install superpowers@claude-plugins-official">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

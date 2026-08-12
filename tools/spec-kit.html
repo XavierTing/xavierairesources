@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -171,7 +171,7 @@
       "name": "How do you install and use Spec-Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the specify command line tool. It needs uv, a Python package manager. Run specify init inside your project folder. Then work through it in your assistant: /speckit.specify to write the spec, /speckit.plan to plan the work, /speckit.implement to build it. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
+        "text": "Run the command below in the folder your project lives in. If it says uv is missing, install uv first from its site; that is the free helper it uses to fetch itself. Then, inside your assistant, type /speckit.specify to write down the requirements. Follow with /speckit.plan to plan the work, and /speckit.implement to build it. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
       }
     }
   ]
@@ -232,15 +232,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>When</h2>
           <div class="body">Projects that run across several sessions, work you share with other people, and anything where the plan has to outlive a single chat.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install the specify command line tool. It needs uv, a Python package manager.</li>
-            <li>Run specify init inside your project folder.</li>
-            <li>Then work through it in your assistant: /speckit.specify to write the spec, /speckit.plan to plan the work, /speckit.implement to build it.</li>
+            <li>Run the command below in the folder your project lives in. If it says uv is missing, install uv first from its site; that is the free helper it uses to fetch itself.</li>
+            <li>Then, inside your assistant, type /speckit.specify to write down the requirements.</li>
+            <li>Follow with /speckit.plan to plan the work, and /speckit.implement to build it.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>uvx --from git+https://github.com/github/spec-kit.git specify init</code>
             <button class="copy-btn" type="button" data-command="uvx --from git+https://github.com/github/spec-kit.git specify init"
                     aria-label="Copy command: uvx --from git+https://github.com/github/spec-kit.git specify init">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Strix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed container and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area."
+        "text": "Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed box where nothing can leak out, and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Strix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install it with the command below. It downloads a script from the internet and runs it, so read the script first if that matters to you. Set the assistant you want it to use and your key for that assistant, as its own page explains. The scanning costs whatever that assistant charges. Point it at your project folder with strix --target ./your-app. The first run pulls a Docker image, so give it time. Command: curl -sSL https://strix.ai/install | bash"
+        "text": "Run the command below. It downloads a small program from the internet and runs it, so read it first if that matters to you. Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company. Its own page explains where. The scanning costs whatever that assistant charges. Point it at your project folder with strix --target ./your-app. The first run downloads the sealed box it tests inside, so give it time. Command: curl -sSL https://strix.ai/install | bash"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed container and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area.</div>
+          <div class="body">Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed box where nothing can leak out, and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Before putting something on the internet, and after any change to the parts that handle logins, payments or user uploads. It is also worth running on an older project you inherited and have never properly looked at.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install it with the command below. It downloads a script from the internet and runs it, so read the script first if that matters to you.</li>
-            <li>Set the assistant you want it to use and your key for that assistant, as its own page explains. The scanning costs whatever that assistant charges.</li>
-            <li>Point it at your project folder with strix --target ./your-app. The first run pulls a Docker image, so give it time.</li>
+            <li>Run the command below. It downloads a small program from the internet and runs it, so read it first if that matters to you.</li>
+            <li>Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company. Its own page explains where. The scanning costs whatever that assistant charges.</li>
+            <li>Point it at your project folder with strix --target ./your-app. The first run downloads the sealed box it tests inside, so give it time.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>curl -sSL https://strix.ai/install | bash</code>
             <button class="copy-btn" type="button" data-command="curl -sSL https://strix.ai/install | bash"
                     aria-label="Copy command: curl -sSL https://strix.ai/install | bash">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

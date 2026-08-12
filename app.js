@@ -277,6 +277,14 @@
 
     if (tool.command) {
       var specimen = el("div", "specimen");
+      var whereLabels = {
+        terminal: "Paste into the Terminal app",
+        claude: "Type inside Claude Code",
+        assistant: "Paste into your assistant"
+      };
+      if (whereLabels[tool.commandTarget]) {
+        specimen.appendChild(el("span", "specimen-where m", whereLabels[tool.commandTarget]));
+      }
       specimen.appendChild(el("code", null, tool.command));
       var copyBtn = el("button", "copy-btn", "Copy");
       copyBtn.type = "button";

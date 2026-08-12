@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Claude Code Setup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Claude Code can be extended with hooks, skills, connected tools, specialist reviewers and shortcut commands. Working out which of those your particular project would actually benefit from is the hard part. This reads your codebase and names the top one or two in each category, with its reasoning. It only reads and changes nothing, so running it costs you the time and nothing else."
+        "text": "Claude Code can be extended in several directions: skills it loads for particular jobs, outside tools it connects to, actions that fire automatically as you work, and shortcut commands you can type. Working out which of those your particular project would actually benefit from is the hard part. This reads your project and names the top one or two in each category, with its reasoning. It only reads and changes nothing, so running it costs you the time and nothing else."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Claude Code Setup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the plugin from the official Claude Code marketplace. Ask for it in plain words, along the lines of recommending automations for this project. Read what it suggests and add whichever you want. It will not change anything itself. Command: claude plugin install claude-code-setup@claude-plugins-official"
+        "text": "Install it with the command below. Then open Claude Code and ask in plain words, along the lines of recommending automations for this project. Read what it suggests and add whichever you want. It will not change anything itself. Command: claude plugin install claude-code-setup@claude-plugins-official"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Claude Code can be extended with hooks, skills, connected tools, specialist reviewers and shortcut commands. Working out which of those your particular project would actually benefit from is the hard part. This reads your codebase and names the top one or two in each category, with its reasoning. It only reads and changes nothing, so running it costs you the time and nothing else.</div>
+          <div class="body">Claude Code can be extended in several directions: <a href="../ai-101.html#e-skills">skills</a> it loads for particular jobs, outside tools it connects to, actions that fire automatically as you work, and shortcut commands you can type. Working out which of those your particular project would actually benefit from is the hard part. This reads your project and names the top one or two in each category, with its reasoning. It only reads and changes nothing, so running it costs you the time and nothing else.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Setting up a project you have just started working in, or returning to one where you never got round to configuring anything past the defaults.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install the plugin from the official Claude Code marketplace.</li>
-            <li>Ask for it in plain words, along the lines of recommending automations for this project.</li>
+            <li>Install it with the command below.</li>
+            <li>Then open Claude Code and ask in plain words, along the lines of recommending automations for this project.</li>
             <li>Read what it suggests and add whichever you want. It will not change anything itself.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>claude plugin install claude-code-setup@claude-plugins-official</code>
             <button class="copy-btn" type="button" data-command="claude plugin install claude-code-setup@claude-plugins-official"
                     aria-label="Copy command: claude plugin install claude-code-setup@claude-plugins-official">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

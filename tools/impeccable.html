@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Impeccable?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every AI model builds you the same website: a big pale heading, rainbow gradient text, three identical boxes. Impeccable gives the assistant an actual design education. It adds 23 commands you can run and 60 automatic checks that catch those generic patterns the moment they appear on your page."
+        "text": "Every AI model builds you the same website: a big pale heading, rainbow gradient text, three identical boxes. Impeccable gives the assistant an actual design education. It adds 23 commands you can type into your assistant and 60 automatic checks that catch those generic patterns the moment they appear on your page."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Impeccable?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run the installer inside your project folder. It works out which AI tool you use, whether that is Claude Code, Cursor, Codex or another. Run /impeccable init once, so it learns what you are building and who it is for. Build as normal, then finish with /impeccable audit to check the result or /impeccable polish to improve it. Command: npx impeccable install"
+        "text": "Run the command below in the folder your project lives in. It works out which AI tool you use, whether that is Claude Code, Cursor, Codex or another. Inside your assistant, type /impeccable init once, so it learns what you are building and who it is for. Build as normal, then finish by typing /impeccable audit to check the result or /impeccable polish to improve it. Command: npx impeccable install"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Every AI model builds you the same website: a big pale heading, rainbow gradient text, three identical boxes. Impeccable gives the assistant an actual design education. It adds 23 commands you can run and 60 automatic checks that catch those generic patterns the moment they appear on your page.</div>
+          <div class="body">Every AI model builds you the same website: a big pale heading, rainbow gradient text, three identical boxes. Impeccable gives the assistant an actual design education. It adds 23 commands you can type into your assistant and 60 automatic checks that catch those generic patterns the moment they appear on your page.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Any time you are building a web page or an app with an AI assistant. Check it before you publish, ask it to improve what it made, or leave the checks running so it flags weak design while you work.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Run the installer inside your project folder. It works out which AI tool you use, whether that is Claude Code, Cursor, Codex or another.</li>
-            <li>Run /impeccable init once, so it learns what you are building and who it is for.</li>
-            <li>Build as normal, then finish with /impeccable audit to check the result or /impeccable polish to improve it.</li>
+            <li>Run the command below in the folder your project lives in. It works out which AI tool you use, whether that is Claude Code, Cursor, Codex or another.</li>
+            <li>Inside your assistant, type /impeccable init once, so it learns what you are building and who it is for.</li>
+            <li>Build as normal, then finish by typing /impeccable audit to check the result or /impeccable polish to improve it.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>npx impeccable install</code>
             <button class="copy-btn" type="button" data-command="npx impeccable install"
                     aria-label="Copy command: npx impeccable install">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

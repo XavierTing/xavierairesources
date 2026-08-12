@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Skill UI — Turns a design system into something Claude can build with | AI Resources</title>
-  <meta name="description" content="Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.">
+  <title>Skill UI — Writes down your product's look so Claude can match it | AI Resources</title>
+  <meta name="description" content="Reads a website or a project and writes down its colours, fonts, spacing and reusable pieces in a form Claude Code picks up on its own, so what it builds matches instead of drifting.">
   <link rel="canonical" href="https://xavierairesources.netlify.app/tools/skill-ui.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Skill UI — Turns a design system into something Claude can build with | AI Resources">
-  <meta property="og:description" content="Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.">
+  <meta property="og:title" content="Skill UI — Writes down your product's look so Claude can match it | AI Resources">
+  <meta property="og:description" content="Reads a website or a project and writes down its colours, fonts, spacing and reusable pieces in a form Claude Code picks up on its own, so what it builds matches instead of drifting.">
   <meta property="og:url" content="https://xavierairesources.netlify.app/tools/skill-ui.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -89,7 +89,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://xavierairesources.netlify.app/tools/skill-ui.html#tool",
       "name": "Skill UI",
-      "description": "Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
+      "description": "Reads a website or a project and writes down its colours, fonts, spacing and reusable pieces in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/amaancoderx/npxskillui",
@@ -104,8 +104,8 @@
       "@type": "WebPage",
       "@id": "https://xavierairesources.netlify.app/tools/skill-ui.html#page",
       "url": "https://xavierairesources.netlify.app/tools/skill-ui.html",
-      "name": "Skill UI — Turns a design system into something Claude can build with | AI Resources",
-      "description": "Reads a website or codebase and writes down its colours, type, spacing and components in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
+      "name": "Skill UI — Writes down your product's look so Claude can match it | AI Resources",
+      "description": "Reads a website or a project and writes down its colours, fonts, spacing and reusable pieces in a form Claude Code picks up on its own, so what it builds matches instead of drifting.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Skill UI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Telling an assistant to make something look like your product rarely works, because it has nothing solid to work from and fills the gaps with its own taste. Skill UI goes and looks. It crawls a website, a repository or a folder on your machine and pulls out the actual colours, typefaces, spacing, components and animations, then writes them into a folder that Claude Code reads by itself. Nothing is guessed and no AI is involved in the reading, it is plain inspection of what is there. Point it at your own product or a system you are allowed to use."
+        "text": "Telling an assistant to make something look like your product rarely works, because it has nothing solid to work from and fills the gaps with its own taste. Skill UI goes and looks. It reads through a website, a project or a folder on your machine and pulls out the actual colours, typefaces, spacing and reusable pieces, then writes them into a folder that Claude Code reads by itself. Nothing is guessed and no AI is involved in the reading, it is plain inspection of what is there. Point it at your own product or a system you are allowed to use."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Skill UI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Starting a new screen that has to sit alongside an existing product, or handing an assistant a house style it has never seen. It also works on your own site as a quick way to write down a design system nobody ever documented."
+        "text": "Starting a new screen that has to sit alongside an existing product, or handing an assistant a house style it has never seen. It also works on your own site as a quick way to write down a look nobody ever documented."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Skill UI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install it with the command below. You need Node.js 18 or newer. Run it against a web address, a repository or a local folder. Open the folder it produces, start Claude Code there, and ask for the screen you want. It already knows the style. Command: npm install -g skillui"
+        "text": "Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org. Run it against a web address, a project or a folder on your machine. Open the folder it produces and start Claude Code from inside it, then ask for the screen you want. It already knows the style. Command: npm install -g skillui"
       }
     }
   ]
@@ -213,7 +213,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="detail-main">
           <img class="detail-art" src="../assets/cards/light/skill-ui.webp" alt="" width="512" height="512" decoding="async">
           <h1 class="detail-title">Skill UI</h1>
-          <p class="detail-lede">Turns a design system into something Claude can build with.</p>
+          <p class="detail-lede">Writes down your product's look so Claude can match it.</p>
         </div>
 
         <aside class="meta">
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Telling an assistant to make something look like your product rarely works, because it has nothing solid to work from and fills the gaps with its own taste. Skill UI goes and looks. It crawls a website, a repository or a folder on your machine and pulls out the actual colours, typefaces, spacing, components and animations, then writes them into a folder that Claude Code reads by itself. Nothing is guessed and no AI is involved in the reading, it is plain inspection of what is there. Point it at your own product or a system you are allowed to use.</div>
+          <div class="body">Telling an assistant to make something look like your product rarely works, because it has nothing solid to work from and fills the gaps with its own taste. Skill UI goes and looks. It reads through a website, a project or a folder on your machine and pulls out the actual colours, typefaces, spacing and reusable pieces, then writes them into a folder that Claude Code reads by itself. Nothing is guessed and no AI is involved in the reading, it is plain inspection of what is there. Point it at your own product or a system you are allowed to use.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Starting a new screen that has to sit alongside an existing product, or handing an assistant a house style it has never seen. It also works on your own site as a quick way to write down a design system nobody ever documented.</div>
+          <div class="body">Starting a new screen that has to sit alongside an existing product, or handing an assistant a house style it has never seen. It also works on your own site as a quick way to write down a look nobody ever documented.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install it with the command below. You need Node.js 18 or newer.</li>
-            <li>Run it against a web address, a repository or a local folder.</li>
-            <li>Open the folder it produces, start Claude Code there, and ask for the screen you want. It already knows the style.</li>
+            <li>Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org.</li>
+            <li>Run it against a web address, a project or a folder on your machine.</li>
+            <li>Open the folder it produces and start Claude Code from inside it, then ask for the screen you want. It already knows the style.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>npm install -g skillui</code>
             <button class="copy-btn" type="button" data-command="npm install -g skillui"
                     aria-label="Copy command: npm install -g skillui">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 

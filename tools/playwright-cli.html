@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Playwright CLI — Lets your AI drive a browser without filling up its memory | AI Resources</title>
-  <meta name="description" content="Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.">
+  <meta name="description" content="Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.">
   <link rel="canonical" href="https://xavierairesources.netlify.app/tools/playwright-cli.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:title" content="Playwright CLI — Lets your AI drive a browser without filling up its memory | AI Resources">
-  <meta property="og:description" content="Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.">
+  <meta property="og:description" content="Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.">
   <meta property="og:url" content="https://xavierairesources.netlify.app/tools/playwright-cli.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -89,7 +89,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://xavierairesources.netlify.app/tools/playwright-cli.html#tool",
       "name": "Playwright CLI",
-      "description": "Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.",
+      "description": "Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://github.com/microsoft/playwright-cli",
@@ -105,7 +105,7 @@
       "@id": "https://xavierairesources.netlify.app/tools/playwright-cli.html#page",
       "url": "https://xavierairesources.netlify.app/tools/playwright-cli.html",
       "name": "Playwright CLI — Lets your AI drive a browser without filling up its memory | AI Resources",
-      "description": "Browser control for coding assistants, given as plain commands rather than a connected tool. It uses far less of the assistant's working memory, leaving room for your actual code.",
+      "description": "Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
@@ -117,7 +117,7 @@
       },
       "primaryImageOfPage": "https://xavierairesources.netlify.app/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-09"
+      "dateModified": "2026-08-12"
     },
     {
       "@type": "BreadcrumbList",
@@ -155,7 +155,7 @@
       "name": "Why use Playwright CLI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is fixed, so the more the page takes the less is left for your code. Microsoft's own command line version is built the other way around. It hands the assistant short commands instead, and does not push page contents at it. On a big codebase that difference is what decides whether the assistant can hold your project and the browser in mind at the same time."
+        "text": "An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is a fixed size, so the more the page takes the less is left for your code. Microsoft built this the other way around. It hands the assistant short typed commands instead, the CLI in the name stands for command line, and does not push page contents at it. On a big project that difference is what decides whether the assistant can hold your code and the browser in mind at the same time."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Playwright CLI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install it globally with the command below. You need Node.js 18 or newer. Run playwright-cli install --skills so Claude Code and similar tools learn the commands. Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli. Command: npm install -g @playwright/cli@latest"
+        "text": "Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org. Then run playwright-cli install --skills so Claude Code and similar tools learn the commands. Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli. Command: npm install -g @playwright/cli@latest"
       }
     }
   ]
@@ -226,21 +226,25 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is fixed, so the more the page takes the less is left for your code. Microsoft's own command line version is built the other way around. It hands the assistant short commands instead, and does not push page contents at it. On a big codebase that difference is what decides whether the assistant can hold your project and the browser in mind at the same time.</div>
+          <div class="body">An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is a fixed size, so the more the page takes the less is left for your code. Microsoft built this the other way around. It hands the assistant short typed commands instead, the CLI in the name stands for command line, and does not push page contents at it. On a big project that difference is what decides whether the assistant can hold your code and the browser in mind at the same time.</div>
         </section>
         <section class="section">
           <h2>When</h2>
           <div class="body">Writing or repairing tests that click through a website, checking a sign-up or checkout flow really works end to end, and any job where you want the assistant working against a real browser rather than guessing from the code.</div>
         </section>
+        <aside class="lognote">
+          <p>Most tools here are add-ons for Claude Code, a version of Claude that runs on your own computer, can read your files, and takes typed instructions. The grey command box below says where its line gets typed. On a Mac, the Terminal app lives in Applications, then Utilities; on Windows, search the Start menu for Terminal. New to the words? <a href="../ai-101.html">AI 101</a> explains them.</p>
+        </aside>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Install it globally with the command below. You need Node.js 18 or newer.</li>
-            <li>Run playwright-cli install --skills so Claude Code and similar tools learn the commands.</li>
+            <li>Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org.</li>
+            <li>Then run playwright-cli install --<a href="../ai-101.html#e-skills">skills</a> so Claude Code and similar tools learn the commands.</li>
             <li>Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli.</li>
             </ol>
           <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
             <code>npm install -g @playwright/cli@latest</code>
             <button class="copy-btn" type="button" data-command="npm install -g @playwright/cli@latest"
                     aria-label="Copy command: npm install -g @playwright/cli@latest">Copy</button>
@@ -278,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 09.08.2026</p>
+        <p>Last updated 12.08.2026</p>
       </div>
     </footer>
 
