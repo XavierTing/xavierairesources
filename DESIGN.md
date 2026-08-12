@@ -43,7 +43,7 @@ typography:
     lineHeight: 1.6
   label:
     fontFamily: "Fragment Mono, ui-monospace, SF Mono, Menlo, monospace"
-    fontSize: "0.72rem"
+    fontSize: "0.85rem"
     fontWeight: 400
     letterSpacing: "0.08em"
   command:
@@ -129,7 +129,7 @@ One accent on warm deep neutrals. The accent is the curator's own brand gold, ta
 
 User-directed (2026-08-12): every page carries both themes, and **Daylight is the default** — the same system re-lit on the warm linen the AI 101 course was originally printed on. It lives on `:root`, so no-JS visitors and crawlers get it from the static markup; **Night** (the original near-black) is the opt-in, set by `theme.js` as `html[data-theme="dark"]` and persisted in localStorage. One override block per stylesheet, plus matching static defaults in the markup: `theme-color`, the toggle's initial label, and the artwork `src` all ship light.
 
-- **Ground:** linen #F2ECE0, raised sand #E7DECB. Ink #1A1815, body #4F473D (7.8:1), muted #665C4E (5.6:1 — holds at the 0.72rem label step).
+- **Ground:** linen #F2ECE0, raised sand #E7DECB. Ink #1A1815, body #4F473D (7.8:1), muted #665C4E (5.6:1 — holds at the 0.85rem label step).
 - **One gold family, two duties:** `--accent` #6F5631 is the text-duty gold (5.85:1 on linen — Night's #e0bf91 reads 1.5:1 there); `--accent-fill` #B6966F keeps the brand-gold tile with `--on-accent` ink text (6.4:1, the course's own pairing). In Night, both collapse back to #e0bf91 on the void. The One-Gold Rule survives as one family.
 - **Aurora inverts:** pools can't lighten linen, so they stain it toward sand — gold `rgba(182,150,111,.18)`, copper `rgba(190,130,80,.10)`, bronze `rgba(140,95,55,.08)`. Alphas are contrast-capped (darkest composite keeps muted ≥4.87:1), not taste.
 - **Glass** becomes paper: `--glass` rgba(255,255,255,.55) — cards float as sheets on linen; hover 0.75.
@@ -151,8 +151,8 @@ User-directed (2026-08-12): every page carries both themes, and **Daylight is th
 - **Lede** (400, clamp(1.05–1.3rem), 1.6): the detail page's opening line.
 - **Lead** (400, clamp(1–1.125rem)): index hero subline.
 - **Body** (400, 1rem, 1.7): sections and taglines, 72ch max.
-- **Label** (mono, 0.72rem/11.5px, +0.08em, uppercase): tabs, meta labels, counts, section headings, chips, profile links. **The only micro size** — nothing functional goes below it.
-- **Command** (mono, 1rem): install commands and italic curator notes. Sits on the body step so the ramp stays two literal steps (11.5px label / 16px body) plus the fluid display clamps.
+- **Label** (mono, 0.85rem/13.6px, +0.08em, uppercase; 0.925rem/14.8px at ≤640px): tabs, meta labels, counts, section headings, chips, profile links. **The only micro size** — nothing functional goes below it. Raised from 0.72rem on 2026-08-12: the navigation read too small, and because every label shares this one step the whole micro tier moved with it.
+- **Command** (mono, 1rem): install commands and italic curator notes. Sits on the body step so the ramp stays two literal steps (13.6px label / 16px body) plus the fluid display clamps.
 
 ### Named Rules
 **The Measured-Mono Rule.** Fragment Mono appears only where the world measures, labels, or codes. Body prose is never mono.
@@ -223,7 +223,7 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 - **Do** keep the portrait as the one human element: a plain square photo, circled and gold-ringed in CSS (see `assets/README.md`).
 - **Do** keep hover physics consistent: lift + border-brighten + one soft glow, 0.25s ease-out.
 - **Do** respect `prefers-reduced-motion` everywhere: static aurora, no lifts, instant reveals.
-- **Do** keep every functional text at 0.72rem or above — there is no smaller step.
+- **Do** keep every functional text at 0.85rem or above — there is no smaller step.
 
 ### Don't:
 - **Don't** use gradient text, neon outlines, scanlines, or grid/graph backgrounds (user-rejected).

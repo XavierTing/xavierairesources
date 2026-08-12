@@ -58,8 +58,9 @@
   --radius-sm: 10px;
   /* smallest comfortable hit area for a pointer or thumb */
   --tap: 44px;
-  /* every mono label reads off this one step, so the phone bump is one line */
-  --m-size: 0.72rem;
+  /* every mono label reads off this one step — nav, chips, counts, section
+     labels — so a size change is one line and nothing drifts out of step */
+  --m-size: 0.85rem;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -912,9 +913,9 @@ html:not(.js) .theme-toggle { display: none; }
   .colophon { grid-template-columns: 1fr; gap: 24px; }
   .meta { flex-direction: column; gap: 22px; }
 
-  /* 11.5px mono is legible on a desktop monitor and not on a phone.
-     Every mono label reads off this, so one line lifts them all to 12.8px. */
-  :root { --m-size: 0.8rem; }
+  /* mono runs small on a phone, so it keeps the same lift it always had
+     over the desktop step — one line, every label. */
+  :root { --m-size: 0.925rem; }
   /* the blurb goes back to full body size once it has the width to itself */
   .card-tag { font-size: 1rem; }
   .hero-counts { gap: 6px 20px; }
