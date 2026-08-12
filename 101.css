@@ -340,16 +340,6 @@ body.js .verdict.shown { display: block; }
 .tools li[hidden] { display: none; }
 .tool-name { font-weight: 500; font-size: 1.0625rem; color: var(--ink); }
 .tool-what { color: var(--body-ink); font-size: 0.9375rem; }
-/* informational, not an action: outline treatment, same as an active chip */
-.tool-tag {
-  font-family: var(--font-mono); font-size: var(--m-size);
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--accent); background: var(--accent-soft);
-  border: 1px solid var(--accent-line);
-  border-radius: 999px; padding: 3px 10px;
-  justify-self: start; white-space: nowrap;
-}
-.tool-tag.blank { background: transparent; border-color: transparent; color: var(--muted); padding-left: 0; }
 
 /* ---------- close (Monday chapter) ---------- */
 
