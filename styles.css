@@ -391,28 +391,47 @@ html:not(.js) .theme-toggle { display: none; }
 .is-loaded .hero .hero-byline { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.4s, transform 0.6s var(--ease-out) 0.4s; }
 .is-loaded .hero .hero-counts { opacity: 1; transform: none; transition: opacity 0.6s ease-out 0.5s, transform 0.6s var(--ease-out) 0.5s; }
 
-/* ---------- site tabs (page-level: The log / AI 101) ----------
-   Same visual voice as the category tabs below, but these are real
-   links between pages, so state is aria-current, not aria-pressed. */
+/* ---------- section switch (page-level: The log / AI 101 / The curator) ----------
+   A segmented pill capsule, deliberately unlike the underline filter tabs:
+   wayfinding is a control you're holding, filtering is a scale you're reading.
+   Links between pages, so state is aria-current ("page" on the page itself,
+   "true" on a section's detail pages), not aria-pressed. */
 
 .site-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 14px;
-  border-bottom: 1px solid var(--line);
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 16px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--glass);
 }
 .site-tabs .tab {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 999px;
   text-decoration: none;
+  transition: color 0.15s ease-out, background-color 0.15s ease-out;
 }
-.site-tabs .tab:hover { text-decoration: none; }
-/* aria-current="page" on the page itself; "true" on a section's detail pages */
-.site-tabs .tab[aria-current] { color: var(--ink); }
-.site-tabs .tab[aria-current]::after {
-  transform: scaleX(1);
-  box-shadow: 0 0 12px 1px var(--accent-soft);
+/* the underline belongs to the filter tabs; pills carry state as fill */
+.site-tabs .tab::after { display: none; }
+.site-tabs .tab:hover {
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--glass-hover);
+}
+.site-tabs .tab[aria-current],
+.site-tabs .tab[aria-current]:hover {
+  background: var(--accent-fill);
+  color: var(--on-accent);
+}
+
+/* phones: the capsule spans the row, three equal segments */
+@media (max-width: 640px) {
+  .site-tabs { display: flex; }
+  .site-tabs .tab { flex: 1; padding-inline: 4px; font-size: var(--m-size); }
 }
 
 /* ---------- category tabs ---------- */
@@ -471,6 +490,66 @@ html:not(.js) .theme-toggle { display: none; }
   color: var(--muted);
   font-size: var(--nav-size);
   padding-bottom: 12px;
+}
+
+/* right side of the filter row: the view switch + the count.
+   Everything here wraps as whole units, never inside a label. */
+.tabs-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  padding-bottom: 12px;
+}
+.tabs-side .tab-count { padding-bottom: 0; white-space: nowrap; }
+
+/* the view switch speaks the chip language: outline = idle, gold tint = on */
+.views { display: inline-flex; gap: 6px; }
+.view-btn {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--m-size);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;
+}
+.view-btn:hover { color: var(--ink); border-color: var(--line-bright); }
+.view-btn[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent);
+}
+
+/* grouped view: the same cards re-parented under category headers */
+.grid.is-grouped { display: block; }
+.group { margin-bottom: clamp(36px, 5vh, 56px); scroll-margin-top: 24px; }
+.group:last-child { margin-bottom: 0; }
+.group-h {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.group-n { color: var(--muted); font-weight: 400; }
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 /* ---------- card grid (index) ---------- */
@@ -887,7 +966,8 @@ html:not(.js) .theme-toggle { display: none; }
 /* --- wide displays: use the space instead of padding it out --- */
 
 @media (min-width: 1600px) {
-  .grid { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .grid, .group-grid { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .grid.is-grouped { display: block; }
   /* prose should not track the container this far out */
   .hero-sub { max-width: 60ch; }
 }
@@ -895,7 +975,8 @@ html:not(.js) .theme-toggle { display: none; }
 /* --- tablet --- */
 
 @media (max-width: 1020px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid, .group-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid.is-grouped { display: block; }
   /* one column: head, then meta, then sections, so the explicit placement
      from the two-column layout has to be released */
   .detail { grid-template-columns: 1fr; row-gap: 36px; }
@@ -909,7 +990,8 @@ html:not(.js) .theme-toggle { display: none; }
 /* --- phone --- */
 
 @media (max-width: 640px) {
-  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .grid, .group-grid { grid-template-columns: 1fr; gap: 14px; }
+  .grid.is-grouped { display: block; }
   .hero { padding-block: 48px 36px; }
   /* the role wraps to 2–3 lines here, so top-align the portrait beside it */
   .hero-byline { align-items: flex-start; }
@@ -931,13 +1013,11 @@ html:not(.js) .theme-toggle { display: none; }
 
 /* --- small phones: the log has to survive 320px --- */
 
-/* --- phones: buy the tab row its width back from the padding, so the
-       three section names stay on one line at the nav step --- */
+/* --- phones: the filter row buys width back from its padding --- */
 
 @media (max-width: 430px) {
   .tab { padding-inline: 8px; }
   .tab::after { left: 6px; right: 6px; }
-  .site-tabs { gap: 2px; }
 }
 
 @media (max-width: 380px) {
@@ -1003,36 +1083,3 @@ html:not(.js) .theme-toggle { display: none; }
 }
 @media (max-width: 640px) { .curator-cards { grid-template-columns: 1fr; } }
 
-/* ---------- the stack map ----------
-   The one full-width image on the page: a summary of where each tool sits,
-   placed after the grid so the cards still lead. */
-.stackmap {
-  margin-top: clamp(56px, 9vh, 96px);
-  padding-top: clamp(40px, 6vh, 64px);
-  border-top: 1px solid var(--line);
-}
-.stackmap h2 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-.stackmap p {
-  max-width: 56ch;
-  margin-top: 12px;
-  color: var(--body-ink);
-}
-.stackmap figure {
-  margin-top: 28px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--glass);
-}
-.stackmap img {
-  display: block;
-  width: 100%;
-  height: auto;
-}

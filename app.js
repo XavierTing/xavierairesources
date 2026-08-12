@@ -134,6 +134,8 @@
   function initIndex(grid) {
     var tabsEl = document.getElementById("tabs");
     var countEl = document.getElementById("tab-count");
+    var viewsEl = document.getElementById("views");
+    var view = "cards";
 
     /* The cards ship as real HTML (generate-seo.mjs writes them) so crawlers and
        answer engines see the whole log without running JavaScript. Only build
@@ -145,6 +147,9 @@
       });
       grid.appendChild(frag);
     }
+
+    /* the static order, kept so the grouped view can be undone exactly */
+    var cardOrder = Array.prototype.slice.call(grid.querySelectorAll(".card"));
 
     var cats = [];
     TOOLS.forEach(function (t) {
@@ -190,10 +195,74 @@
       tabsEl.querySelectorAll(".tab").forEach(function (t) {
         t.setAttribute("aria-pressed", t === tab ? "true" : "false");
       });
+      /* in the grouped view the categories are all on screen, so the tabs
+         become jump links; in the cards view they filter as always */
+      if (view === "groups") {
+        var target = tab.dataset.category === "All"
+          ? document.getElementById("log")
+          : document.getElementById("cat-" + slug(tab.dataset.category));
+        if (target) target.scrollIntoView();
+        return;
+      }
       applyFilter(tab.dataset.category);
     });
 
+    /* ---------- two views of the same cards: flat grid / by category ----------
+       The grouped view re-parents the static card nodes — no duplication, so
+       crawlers and no-JS visitors keep the flat static grid. */
+
+    function resetTabs() {
+      tabsEl.querySelectorAll(".tab").forEach(function (t) {
+        t.setAttribute("aria-pressed", t.dataset.category === "All" ? "true" : "false");
+      });
+    }
+
+    function setView(next, persist) {
+      view = next;
+      if (persist) {
+        try { localStorage.setItem("log-view", next); } catch (err) { /* private mode */ }
+      }
+      if (viewsEl) {
+        viewsEl.querySelectorAll(".view-btn").forEach(function (b) {
+          b.setAttribute("aria-pressed", b.dataset.view === next ? "true" : "false");
+        });
+      }
+      resetTabs();
+      grid.textContent = "";
+      if (next === "groups") {
+        grid.classList.add("is-grouped");
+        cats.forEach(function (cat) {
+          var section = el("section", "group");
+          section.id = "cat-" + slug(cat);
+          var inGroup = cardOrder.filter(function (c) { return c.dataset.category === cat; });
+          var h = el("h2", "group-h", cat);
+          h.appendChild(el("span", "group-n m", pad(inGroup.length) + " tools"));
+          section.appendChild(h);
+          var g = el("div", "group-grid");
+          inGroup.forEach(function (c) { c.removeAttribute("data-filtered"); g.appendChild(c); });
+          section.appendChild(g);
+          grid.appendChild(section);
+        });
+        countEl.textContent = pad(TOOLS.length) + " tools · " + pad(cats.length) + " groups";
+      } else {
+        grid.classList.remove("is-grouped");
+        cardOrder.forEach(function (c) { c.removeAttribute("data-filtered"); grid.appendChild(c); });
+        updateCount(cardOrder.length);
+      }
+    }
+
+    if (viewsEl) {
+      viewsEl.addEventListener("click", function (e) {
+        var btn = e.target.closest(".view-btn");
+        if (!btn || btn.dataset.view === view) return;
+        setView(btn.dataset.view, true);
+      });
+    }
+
     updateCount(TOOLS.length);
+    var storedView = null;
+    try { storedView = localStorage.getItem("log-view"); } catch (err) { /* private mode */ }
+    if (storedView === "groups") setView("groups", false);
     initReveal(grid.querySelectorAll(".card"));
   }
 

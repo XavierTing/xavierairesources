@@ -656,10 +656,10 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <h1 class="headline">AI Resources</h1>
 
         <p class="hero-sub">
-          I build with AI every day and write up what actually works. Everything
-          here is from my own stack: tools I use daily, kept only once they
-          proved useful, curated for the people reading this. They make building
-          with AI easier and the output better. All of them are free.
+          I build with AI every day and write up what actually works. These are
+          the tools I trust — tested in my own work and curated for you, so
+          building with AI feels lighter and what you ship comes out better.
+          All of them free.
         </p>
 
         <div class="hero-byline">
@@ -685,7 +685,13 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <section id="log" aria-label="The tools">
         <div class="tabs-row">
           <div class="tabs" id="tabs" role="group" aria-label="Filter tools by category"></div>
-          <p class="tab-count m" id="tab-count" aria-live="polite"></p>
+          <div class="tabs-side">
+            <div class="views m" id="views" role="group" aria-label="View the stack as">
+              <button class="view-btn" type="button" data-view="cards" aria-pressed="true">Cards</button>
+              <button class="view-btn" type="button" data-view="groups" aria-pressed="false">By category</button>
+            </div>
+            <p class="tab-count m" id="tab-count" aria-live="polite"></p>
+          </div>
         </div>
 
         <div class="grid" id="grid">
@@ -869,16 +875,6 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         </div>
       </section>
     </main>
-
-    <section class="stackmap" aria-labelledby="stackmap-h">
-      <h2 id="stackmap-h">The stack, by stage</h2>
-      <p>Twenty-five tools is a lot to hold in your head. This is where each one earns its place.</p>
-      <figure>
-        <img src="assets/stack-infographic.png"
-             alt="The 25 tools arranged in six bands. Set up: Claude Code Setup, Skill UI, Obsidian Skills. Plan: Superpowers, Spec-Kit, LLM Wiki, Agent-Reach, Watch. Build: Context7, Figma MCP, Apple Design, Supabase Plugin, Repomix, Ralph Loop. Review: Impeccable, Chrome DevTools MCP, Playwright CLI, Codex for Claude Code. Ship: Strix, Humanizer. Running throughout: Notchi, OmniRoute, Claude Mem, Headroom, Task Observer."
-             width="1200" height="1350" loading="lazy" decoding="async">
-      </figure>
-    </section>
 
     <footer class="colophon">
       <div>
