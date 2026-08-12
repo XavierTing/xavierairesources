@@ -294,8 +294,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .brand-sub { display: none; }
 }
 
-/* no-JS is always dark; a switch that can't switch doesn't render */
-html:not(.js) .theme-toggle { display: none; }
+/* no-JS renders the static defaults; controls that can't do anything
+   without JS don't render at all */
+html:not(.js) .theme-toggle,
+html:not(.js) .views { display: none; }
 
 /* the light/dark switch — labelled with the theme it takes you to */
 .theme-toggle {

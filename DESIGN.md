@@ -175,7 +175,7 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 ## Components
 
 ### Masthead (one bar: wordmark + sections)
-- User-pinned reference (2026-08-12, the Cold Set / FOLD header pattern): a single bar on a hairline — the brand as a Montserrat-800 wordmark ("AI Resources") with the tagline as a muted mono gloss beside it, and the three sections as tracked-uppercase mono links (letter-spacing .14em) on the right, the theme switch at the end of the nav.
+- User-pinned reference (2026-08-12, the Cold Set / FOLD header pattern): a single bar on a hairline — the brand as a Montserrat-800 wordmark — the curator's name, "Xavier Ting", because the site IS the personal brand and the index headline already says AI Resources — with the tagline as a muted mono gloss beside it, and the three sections as tracked-uppercase mono links (letter-spacing .14em) on the right, the theme switch at the end of the nav.
 - Link states: muted at rest; on hover the name inks up and a 1px ink underline draws in from the left (scaleX). The active page holds that underline in gold (state = `aria-current`: "page" on the page itself, "true" on a section's detail pages).
 - Phones: the bar wraps as whole units (wordmark row, links row); the tagline gloss hides ≤430px. Everything about it is one row of quiet type — no capsule, no numerals, nothing shared with the filter tabs' 2px underline device.
 
