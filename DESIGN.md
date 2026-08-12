@@ -162,7 +162,7 @@ User-directed (2026-08-12): every page carries both themes, and **Daylight is th
 
 **One container, every surface.** All three tabs and the tool pages sit in `.page` at `--page-w` (clamp 1180–1440px, 90vw between), so their left and right edges are identical and nothing shifts as you cross tabs. Nothing sets a narrower inner column; prose is held by its own measure caps instead (`--measure` 66ch on the course, 34em lede / 820px sections on detail pages). Past 1440 the container stops growing and the card grid adds a column rather than widening cards.
 
-Index: hero (headline → sub → byline → counts) → filter row on a hairline (category tabs left; view switch + count right) → the stack in one of two views — the flat card grid (4 cols ≥1600px, 3 by default, 2 at ≤1020px, 1 at ≤640px; 20px gap, 14px at ≤640px) or the same cards grouped under category headers (choice persisted; grouped-view tabs jump instead of filter) → colophon. The by-stage infographic was removed 2026-08-12. Detail (tool pages and the curator): breadcrumb/strip → two-column header (title + lede left, 300px meta panel right; stacks at ≤1020px) → full-width sections (110px label column, stacks at ≤640px) → colophon. Course: sticky chapter bar → chapter plate → entries, which split into prose + analogy/diagram rail (7fr/5fr) at ≥1240px and stack below. 8px rhythm; generous vertical clamp spacing.
+Index: hero (headline → sub → byline → counts) → filter row on a hairline (category tabs left, count right) → card grid (4 cols ≥1600px, 3 by default, 2 at ≤1020px, 1 at ≤640px; 20px gap, 14px at ≤640px) → colophon. The by-stage infographic was removed 2026-08-12. Detail (tool pages and the curator): breadcrumb/strip → two-column header (title + lede left, 300px meta panel right; stacks at ≤1020px) → full-width sections (110px label column, stacks at ≤640px) → colophon. Course: sticky chapter bar → chapter plate → entries, which split into prose + analogy/diagram rail (7fr/5fr) at ≥1240px and stack below. 8px rhythm; generous vertical clamp spacing.
 
 ## Elevation & Depth
 
@@ -182,7 +182,6 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 ### Category Tabs
 - Mono uppercase text buttons on the grid's top hairline; `aria-pressed`.
 - Inactive: Muted. Hover: Ink. Active: Ink + 2px gold underline with a soft gold glow, animated scaleX from the left.
-- In the grouped view they become jump links to the category groups; the view switch beside the count is a chip pair (outline idle, gold tint active), and the grouped view re-parents the same static cards under display-font category headers.
 
 ### Tool Card (index)
 - An `<a>` to `tool.html?tool=<slug>`: chip + № top row, name, tagline, "READ ENTRY →" footer.
