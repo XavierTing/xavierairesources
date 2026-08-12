@@ -151,7 +151,7 @@ User-directed (2026-08-12): every page carries both themes, and **Daylight is th
 - **Lede** (400, clamp(1.05–1.3rem), 1.6): the detail page's opening line.
 - **Lead** (400, clamp(1–1.125rem)): index hero subline.
 - **Body** (400, 1rem, 1.7): sections and taglines, 72ch max.
-- **Nav** (mono, 1rem/16px, +0.08em, uppercase): the masthead strip, the section tabs, the category filters and their count, breadcrumbs, back/pager links, and the course's chapter bar. Wayfinding is read before anything else, so it sits a step above the label tier — added 2026-08-12 after the shared label step proved too dense for it. The section switch is a segmented pill capsule (see Components); its names never break mid-label, and on phones the capsule spans the row as three equal segments at the label step.
+- **Nav** (mono, 1rem/16px, +0.08em, uppercase): the masthead strip, the section tabs, the category filters and their count, breadcrumbs, back/pager links, and the course's chapter bar. Wayfinding is read before anything else, so it sits a step above the label tier — added 2026-08-12 after the shared label step proved too dense for it. The section nav is the numbered index (see Components): mono numerals at the label step, display-font names at 1.15rem (1rem on phones).
 - **Label** (mono, 0.85rem/13.6px, +0.08em, uppercase; 0.925rem/14.8px at ≤640px): meta labels, hero counts, section headings, chips, profile links. **The only micro size** — nothing functional goes below it. Raised from 0.72rem on 2026-08-12.
 - **Command** (mono, 1rem): install commands and italic curator notes. Sits on the body step, which the nav step also shares, so the ramp stays two literal steps (13.6px label / 16px nav and body) plus the fluid display clamps.
 
@@ -174,9 +174,9 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 
 ## Components
 
-### Section Switch (page-level nav)
-- A segmented pill capsule under the masthead on every page: hairline border, glass fill, 999px radius; each section is a pill, the active one a solid `--accent-fill` pill carrying `--on-accent` text (state = `aria-current`).
-- Deliberately unlike the underline filter tabs — wayfinding is a control you're holding, filtering is a scale you're reading. The capsule spans the row as equal segments on phones.
+### Section Index (page-level nav)
+- The log numbers everything it cares about (№ on every card, 01–07 on the course chapters), so the three sections are indexed the same way: a mono numeral beside a Montserrat-700 sentence-case name — `01 The log · 02 AI 101 · 03 The curator`. The gold numeral is the you-are-here (state = `aria-current`); the active name is ink, the rest muted.
+- Deliberately unlike the underline filter tabs: no underline, no capsule, two type voices doing the work. Items never break internally; the row wraps between whole items on narrow phones.
 
 ### Category Tabs
 - Mono uppercase text buttons on the grid's top hairline; `aria-pressed`.
