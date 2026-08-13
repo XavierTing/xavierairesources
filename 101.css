@@ -486,6 +486,10 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
   color: var(--on-accent); background: var(--accent-fill);
   border-radius: var(--radius-sm);
   padding: 8px 10px;
+  /* Montserrat's digits are proportional, so 01 and 09 are different widths.
+     This column is `auto`, so that difference shifts the whole row body and
+     every label and word column below it lands a few px off its neighbours. */
+  font-variant-numeric: tabular-nums;
 }
 /* three decks per row and no more: title states the payoff, description says
    what is inside, word list names it. Each steps down a size from the last,
@@ -496,12 +500,16 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
 .c-words { display: block; color: var(--muted); font-size: 0.9375rem; line-height: 1.5; margin-top: 5px; }
 .c-desc + .c-words { margin-top: 10px; }
 /* every chapter breaks its run into labelled clusters: mono micro-label in
-   the left column, the words in the right. The label track is a fixed width
-   rather than auto, because each row is its own grid: on auto, a row's track
-   sizes to that row's longest label and the words start at a different x
-   on every line down the page. 14.5em clears the longest label in the set
-   ("What holds it together") with room to spare. */
-.c-words--grouped { display: grid; grid-template-columns: 14.5em 1fr; gap: 4px 14px; }
+   the left column, the words in the right. Labels name their group as a
+   noun ("Model types", "Blind spots"), never as a question, so the column
+   reads as subjects rather than nine lines all starting "What".
+   The label track is a fixed width rather than auto, because each row is
+   its own grid: on auto, a row's track sizes to that row's longest label
+   and the words start at a different x on every line down the page.
+   10.5em (158px) clears the longest label text in the set ("Writing it down",
+   142px) by 16px. Measure the text with a Range, not the element: .c-gl
+   stretches to the track, so its box width always reads back as the track. */
+.c-words--grouped { display: grid; grid-template-columns: 10.5em 1fr; gap: 4px 14px; }
 .c-gl {
   font-family: var(--font-mono); font-size: var(--m-size);
   letter-spacing: 0.08em; text-transform: uppercase;
@@ -533,9 +541,9 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
   transition: box-shadow 0.2s ease-out;
 }
 .btn-link:hover { text-decoration: none; box-shadow: 0 0 18px 2px var(--accent-soft); }
-/* the fixed label track eats 14.5em, so it has to go well before the row
-   itself narrows: below this the words column is too cramped to read */
-@media (max-width: 900px) {
+/* the fixed label track eats 10.5em, so it has to go before the row itself
+   narrows: below this the words column is too cramped to read */
+@media (max-width: 820px) {
   /* no room for a label column: each label sits above its own words,
      so the clusters need their own breathing room to stay separate */
   .c-words--grouped { grid-template-columns: 1fr; }
