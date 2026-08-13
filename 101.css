@@ -107,7 +107,9 @@ hr.hair { border: 0; border-top: 1px solid var(--line); margin: 0; }
   line-height: 1;
   letter-spacing: -0.03em;
 }
-.masthead .lede { max-width: 38ch; margin-top: 18px; text-wrap: balance; }
+/* wide enough to hold the one-sentence lede on a single line at desktop
+   widths; it still wraps, balanced, once the viewport is narrower than it */
+.masthead .lede { max-width: 52ch; margin-top: 18px; text-wrap: balance; }
 .meta-row {
   display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center;
   font-family: var(--font-mono);
