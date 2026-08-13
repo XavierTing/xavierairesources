@@ -286,7 +286,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">${esc(t.category)}</p></div>
-${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}${t.needs ? `          <div><h2>You'll need</h2><p>${esc(t.needs)}</p></div>\n` : ""}${t.cost ? `          <div><h2>Cost</h2><p>${esc(t.cost)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>${esc(t.status || "In daily use")}</p></div>
+${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}${t.needs ? `          <div><h2>You'll need</h2><p>${esc(t.needs)}</p></div>\n` : ""}
           <div><h2>Source</h2><p><a class="repo-link" href="${escAttr(t.repo)}" target="_blank" rel="noopener">${esc(t.repoLabel)} ↗</a></p></div>
         </aside>
 
@@ -551,7 +551,8 @@ ${TOOLS.map((t) => `## ${t.num}. ${t.name} — ${t.tagline}
 - **Made by:** ${t.maker || repoOwner(t.repo) || "see source"}
 - **Source:** ${t.repo}
 - **Page:** ${toolUrl(t)}
-${t.needs ? `- **You'll need:** ${t.needs}\n` : ""}${t.cost ? `- **Cost:** ${t.cost}\n` : ""}${t.command ? `- **Install / run:** \`${t.command}\`\n` : ""}
+${t.needs ? `- **You'll need:** ${t.needs}\n` : ""}${t.cost ? `- **Cost:** ${t.cost}\n` : ""}- **Curator's status:** ${t.status || "In daily use"}
+${t.command ? `- **Install / run:** \`${t.command}\`\n` : ""}
 **Why use ${t.name}?**
 ${t.why}
 

@@ -746,19 +746,22 @@ html:not(.js) .theme-toggle { display: none; }
   list-style: none;
   counter-reset: step;
 }
+/* The number hangs in a gutter, positioned rather than gridded: display:grid
+   here would blockify each inline <a> in a step into its own grid item, so a
+   linked term dropped into the number column and collided with the prose. */
 .section ol li {
   counter-increment: step;
-  display: grid;
-  grid-template-columns: 26px 1fr;
-  gap: 12px;
-  padding: 4px 0;
+  position: relative;
+  padding: 4px 0 4px 38px;
 }
 .section ol li::before {
   content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 9px;
   font-family: var(--font-mono);
   font-size: var(--m-size);
   color: var(--muted);
-  padding-top: 5px;
 }
 
 

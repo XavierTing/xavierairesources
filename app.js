@@ -243,9 +243,6 @@
       meta.appendChild(metaBlock("Made by", ownerP));
     }
 
-    var statusP = el("p", null, "In daily use");
-    meta.appendChild(metaBlock("Curator's status", statusP));
-
     var repoP = el("p");
     var repoA = el("a", "repo-link", tool.repoLabel + " ↗");
     repoA.href = tool.repo;

@@ -78,18 +78,27 @@ Append one object to `TOOLS` and bump `LOG_UPDATED` (DD.MM.YYYY). Fields:
 | `repo` + `repoLabel` | The canonical link. Label is uppercase: "GITHUB REPO", "PROJECT PAGE", "DOCS". |
 | `maker` | Optional. Omit when the GitHub URL owner is the right answer (the site derives it). |
 | `needs` | Prerequisites in plain English, jargon glossed: "The uv helper, Python 3.10 or newer, an NVIDIA graphics card". |
-| `cost` | Honest, including the indirect part: "Free (the coding agent you point at it has its own plan)". |
+| `cost` | Honest, including the indirect part: "Free (the coding agent you point at it has its own plan)". Surfaces in `llms.txt` only; the tool page meta card deliberately does not show it. |
 | `why` | One paragraph. The problem a person actually has, then how this tool answers it, then honest scoping of what it is not. |
 | `when` | The situations you would reach for it, plus hard requirements and platform caveats. |
 | `how` | Exactly 3 imperative steps. Safety caveats live inside the step they belong to (fresh folder, disposable branch, review before keeping). |
 | `command` + `commandTarget` | One copy-paste line. Target is `"terminal"`, `"claude"` or `"assistant"`; it renders the location label ("Paste into the Terminal app" etc.). Omit both only if there is genuinely nothing to paste. |
-| `status` | Optional. Defaults to "In daily use". If you have not run it, say so: "Reviewed · Not tested". Never claim daily use falsely. |
+| `status` | Optional. Defaults to "In daily use". If you have not run it, say so: "Reviewed · Not tested". Never claim daily use falsely. Surfaces in `llms.txt` only, same as `cost`. |
 | `note` | Curator's note, one or two sentences of judgment or warning. Surfaces in `llms.txt` only. |
 
 The generator auto-links the first occurrence of AI 101 terms (agent, tokens,
 MCP, RAG, cron, GitHub and the rest of `AI101_TERMS` in `generate-seo.mjs`) on
 each tool page, so write those words in plain linkable form. If the entry
 teaches a concept the course covers, mention the concept by name once.
+
+The tool page's meta card shows Category, Made by, You'll need and Source,
+in that order, and nothing else. Cost and Curator's status are curation data
+that answer engines read from `llms.txt`; they are not printed on the page.
+
+Prose inside a how step may carry links, so the step list must never be a grid
+or flex container: those blockify each inline `<a>` into its own item and tear
+the sentence apart. `.section ol li` hangs its number with absolute positioning
+for exactly this reason.
 
 ## 5. The tools: card infographic style (assets/cards/)
 
