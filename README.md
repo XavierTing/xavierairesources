@@ -4,8 +4,8 @@ A curated log of AI tools for designing, building, writing and working with agen
 Each entry explains why it matters, when to reach for it, and how to run it.
 No hype, no affiliate links.
 
-Curated by **[Xavier Ting](https://www.linkedin.com/in/xavierting/)** — VP, Customer
-Experience Design at OCBC · AI & Design Leader.
+Curated by **[Xavier Ting](https://www.linkedin.com/in/xavierting/)** — Vice
+President at OCBC · AI & Design Leader.
 [LinkedIn](https://www.linkedin.com/in/xavierting/) · [X](https://x.com/xaviertingai)
 
 ![AI Resources](og-image.png)
@@ -19,6 +19,7 @@ deploy time. Open `index.html` and it works.
 
 | File | What it is |
 |---|---|
+| `AGENTS.md` | **The authoring contract.** Voice, entry schemas, sync checklists and the art specs. Read it before adding content (loaded automatically by coding agents; `CLAUDE.md` imports it). |
 | `tools.js` | **The curation.** One object per tool — this is the only file to edit to add or change an entry. |
 | `site.js` | Site identity and the canonical URL. One line to change after deploying. |
 | `index.html` | The card grid, category tabs, hero. The "The log" tab. |
@@ -33,6 +34,9 @@ deploy time. Open `index.html` and it works.
 | `generate-seo.mjs` | Regenerates the static pages, `sitemap.xml`, `robots.txt` and `llms.txt`. |
 
 ## Adding or changing a tool
+
+Follow the conventions in `AGENTS.md` (voice, field-by-field schema, card art
+spec). Mechanically:
 
 1. Edit `tools.js` — add one object to `TOOLS`, bump `LOG_UPDATED`.
 2. Run the generator so search engines see it:
