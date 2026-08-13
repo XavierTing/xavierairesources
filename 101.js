@@ -62,8 +62,8 @@
   }
 
   function titleOf(slug) {
-    // The plate heading carries a <br>, and a closed chapter has no innerText,
-    // so the short name travels on the section as data-title.
+    // A closed chapter has no innerText, so the short name the bar shows
+    // travels on the section as data-title rather than being read off the plate.
     var sec = document.getElementById("ch-" + slug);
     return sec ? sec.getAttribute("data-title") : "Contents";
   }

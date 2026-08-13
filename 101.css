@@ -143,12 +143,14 @@ hr.hair { border: 0; border-top: 1px solid var(--line); margin: 0; }
   color: var(--ink);
   margin: 0 0 clamp(36px, 6vw, 64px);
   padding: clamp(22px, 4vw, 36px);
-  display: flex; flex-wrap: wrap; gap: clamp(16px, 3vw, 30px); align-items: center;
+  /* the gap stays tight on wide screens: the title and its one-line
+     description need every pixel the row can give them */
+  display: flex; flex-wrap: wrap; gap: clamp(16px, 2vw, 26px); align-items: center;
 }
 /* the illustration keeps its own near-black ground, so it reads as a
    printed tile mounted on the raised card — the course's own device */
 .plate-art {
-  width: clamp(84px, 14vw, 156px); height: auto; aspect-ratio: 1;
+  width: clamp(84px, 10vw, 132px); height: auto; aspect-ratio: 1;
   flex: 0 0 auto; display: block;
   order: 1; /* art sits at the right edge; DOM keeps it first for the tile-on-card framing */
   border-radius: var(--radius-sm);
@@ -167,7 +169,9 @@ hr.hair { border: 0; border-top: 1px solid var(--line); margin: 0; }
   line-height: 1.1; letter-spacing: -0.02em;
   color: var(--ink);
 }
-.plate p { margin: 12px 0 0; color: var(--body-ink); font-size: 1rem; max-width: 48ch; }
+/* no measure cap: the description is written to sit on one line beside the
+   number, so it takes the whole row rather than a reading column */
+.plate p { margin: 12px 0 0; color: var(--body-ink); font-size: 1rem; max-width: none; }
 .plate-tag {
   font-family: var(--font-mono); font-size: var(--m-size);
   letter-spacing: 0.08em; text-transform: uppercase;

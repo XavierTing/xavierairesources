@@ -156,6 +156,12 @@ memorable sentence, and the recap reuses it verbatim. Cross-link related
 entries with `<a href="#e-other">` (forward links are fine). Place the entry
 next to its conceptual sibling, not at the end of the chapter.
 
+Each chapter opens with a `.plate`: number, tag, an `h2` title and a one
+sentence description. Both the title and the description must sit on a single
+line at every desktop width the container supports, down to 1180px, so keep
+the title under about 30 characters and the description under about 80. Never
+force the break with a `<br>`; write it short enough that it does not need one.
+
 **The sync checklist.** Every entry addition must also touch ALL of these, or
 the course lies about itself:
 
