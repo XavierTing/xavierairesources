@@ -12,9 +12,9 @@ AI & Design Leader. I build with AI daily and write up what works, so the tools 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 25 · Categories: 6 · Last updated: 12.08.2026
+- Tools listed: 26 · Categories: 6 · Last updated: 13.08.2026
 
-Every tool below is in the curator's daily use. Nobody paid to be on this list.
+Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
 ---
 
@@ -590,11 +590,34 @@ Starting a new screen that has to sit alongside an existing product, or handing 
 
 ---
 
+## 26. Autoresearch — Lets an AI agent run model experiments overnight
+
+- **Category:** Agents & MCP
+- **Made by:** karpathy
+- **Source:** https://github.com/karpathy/autoresearch
+- **Page:** https://xavierairesources.netlify.app/tools/autoresearch.html
+- **Install / run:** `git clone https://github.com/karpathy/autoresearch.git`
+
+**Why use Autoresearch?**
+Most AI research still depends on a person proposing each change, running it, reading the result and deciding what to try next. Andrej Karpathy's Autoresearch turns that loop over to an AI coding agent. The agent edits one training file, runs a fixed five-minute experiment, compares a validation score, keeps improvements and discards regressions. It is a compact demonstration of what autonomous research can look like, not a general-purpose training service.
+
+**When should you use Autoresearch?**
+Exploring autonomous AI research, teaching experiment design, or testing whether a coding agent can improve a small language model through repeated measured changes. The official version needs Python 3.10 or newer, uv and one NVIDIA GPU; it was tested by the project on an H100. Mac, Windows and AMD users need community forks linked from its README.
+
+**How do you install and use Autoresearch?**
+1. Clone the repository into a fresh folder, then read its README and program.md before giving an agent control. The README labels the project MIT, although the repository does not currently include a standalone licence file.
+2. Run uv sync, followed by uv run prepare.py. This downloads training data from Hugging Face into your local cache and trains a tokenizer.
+3. Run uv run train.py once to establish a baseline. Then use a disposable clone on its own branch, grant Claude Code, Codex or another coding agent only the permissions it needs, point it to program.md, and review every commit and result before keeping anything.
+
+**Curator's note:** Advanced and GPU-only. It downloads model-training data and attention kernels, then lets an agent repeatedly edit and execute training code, so use an isolated branch and review the output.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer
-- **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
+- **Agents & MCP**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Autoresearch
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem
 - **Writing**: Humanizer

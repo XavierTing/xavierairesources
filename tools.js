@@ -27,6 +27,7 @@
                 app), "claude" (typed inside Claude Code), "assistant"
                 (pasted into any AI assistant), or null when command is null.
                 Feeds the label on the command box.
+     status   — optional curator status shown on the detail page.
      note     — curator's aside. Feeds llms.txt only; not rendered on the site.
    ============================================================ */
 
@@ -514,9 +515,29 @@ const TOOLS = [
     command: "npm install -g skillui",
     commandTarget: "terminal",
     note: "Plain inspection rather than a model guessing, which is why what comes out actually matches."
+  },
+  {
+    num: "26",
+    name: "Autoresearch",
+    category: "Agents & MCP",
+    tagline: "Lets an AI agent run model experiments overnight",
+    blurb: "Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.",
+    repo: "https://github.com/karpathy/autoresearch",
+    repoLabel: "VIEW REPO",
+    why: "Most AI research still depends on a person proposing each change, running it, reading the result and deciding what to try next. Andrej Karpathy's Autoresearch turns that loop over to an AI coding agent. The agent edits one training file, runs a fixed five-minute experiment, compares a validation score, keeps improvements and discards regressions. It is a compact demonstration of what autonomous research can look like, not a general-purpose training service.",
+    when: "Exploring autonomous AI research, teaching experiment design, or testing whether a coding agent can improve a small language model through repeated measured changes. The official version needs Python 3.10 or newer, uv and one NVIDIA GPU; it was tested by the project on an H100. Mac, Windows and AMD users need community forks linked from its README.",
+    how: [
+      "Clone the repository into a fresh folder, then read its README and program.md before giving an agent control. The README labels the project MIT, although the repository does not currently include a standalone licence file.",
+      "Run uv sync, followed by uv run prepare.py. This downloads training data from Hugging Face into your local cache and trains a tokenizer.",
+      "Run uv run train.py once to establish a baseline. Then use a disposable clone on its own branch, grant Claude Code, Codex or another coding agent only the permissions it needs, point it to program.md, and review every commit and result before keeping anything."
+    ],
+    command: "git clone https://github.com/karpathy/autoresearch.git",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "Advanced and GPU-only. It downloads model-training data and attention kernels, then lets an agent repeatedly edit and execute training code, so use an isolated branch and review the output."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "12.08.2026";
+const LOG_UPDATED = "13.08.2026";

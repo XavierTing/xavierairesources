@@ -1,7 +1,7 @@
 # AI Resources — AI for the rest of us
 
-A curated log of the AI tools I use daily to design, build, and write.
-Ten entries, each with why it matters, when to reach for it, and how to run it.
+A curated log of AI tools for designing, building, writing and working with agents.
+Each entry explains why it matters, when to reach for it, and how to run it.
 No hype, no affiliate links.
 
 Curated by **[Xavier Ting](https://www.linkedin.com/in/xavierting/)** — VP, Customer

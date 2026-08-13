@@ -283,7 +283,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">${esc(t.category)}</p></div>
-${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>In daily use</p></div>
+${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>${esc(t.status || "In daily use")}</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="${escAttr(t.repo)}" target="_blank" rel="noopener">${esc(t.repoLabel)} ↗</a></p></div>
         </aside>
 
@@ -420,10 +420,10 @@ index = index.replace(
 
 /* Title and descriptions carry the tool count, so the generator owns them —
    hand-editing these is how the count went stale after tools 11 and 12. */
-const indexTitle = `${SITE.name} — ${TOOLS.length} AI tools I use daily | ${SITE.curator.name}`;
+const indexTitle = `${SITE.name} — ${TOOLS.length} curated AI tools | ${SITE.curator.name}`;
 const indexDesc =
-  `${SITE.tagline}. The ${TOOLS.length} AI tools ${SITE.curator.name} uses every day to ` +
-  `design, build and write: what each one does, when it is worth using, and how to set it up, ` +
+  `${SITE.tagline}. ${TOOLS.length} AI tools curated by ${SITE.curator.name} for designing, ` +
+  `building and writing: what each one does, when it is worth using, and how to set it up, ` +
   `explained without jargon.`;
 index = index.replace(
   /(<!-- META:START -->)[\s\S]*?(<!-- META:END -->)/,
@@ -538,7 +538,7 @@ ${SITE.curator.summary}
 - Credentials: ${SITE.curator.credentials.join("; ")}
 - Tools listed: ${TOOLS.length} · Categories: ${categories.length} · Last updated: ${LOG_UPDATED}
 
-Every tool below is in the curator's daily use. Nobody paid to be on this list.
+Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
 ---
 

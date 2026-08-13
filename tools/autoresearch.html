@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Task Observer — Watches how you work and improves your skills | AI Resources</title>
-  <meta name="description" content="For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.">
-  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/task-observer.html">
+  <title>Autoresearch — Lets an AI agent run model experiments overnight | AI Resources</title>
+  <meta name="description" content="Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.">
+  <link rel="canonical" href="https://xavierairesources.netlify.app/tools/autoresearch.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Task Observer — Watches how you work and improves your skills | AI Resources">
-  <meta property="og:description" content="For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.">
-  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/task-observer.html">
+  <meta property="og:title" content="Autoresearch — Lets an AI agent run model experiments overnight | AI Resources">
+  <meta property="og:description" content="Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.">
+  <meta property="og:url" content="https://xavierairesources.netlify.app/tools/autoresearch.html">
   <meta property="og:image" content="https://xavierairesources.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -87,28 +87,30 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://xavierairesources.netlify.app/tools/task-observer.html#tool",
-      "name": "Task Observer",
-      "description": "For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.",
+      "@id": "https://xavierairesources.netlify.app/tools/autoresearch.html#tool",
+      "name": "Autoresearch",
+      "description": "Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://github.com/rebelytics/one-skill-to-rule-them-all",
+      "url": "https://github.com/karpathy/autoresearch",
       "author": {
         "@type": "Organization",
-        "name": "rebelytics"
-      }
+        "name": "karpathy"
+      },
+      "installUrl": "https://github.com/karpathy/autoresearch",
+      "softwareHelp": "https://github.com/karpathy/autoresearch"
     },
     {
       "@type": "WebPage",
-      "@id": "https://xavierairesources.netlify.app/tools/task-observer.html#page",
-      "url": "https://xavierairesources.netlify.app/tools/task-observer.html",
-      "name": "Task Observer — Watches how you work and improves your skills | AI Resources",
-      "description": "For when you have written a few skills of your own, the saved instructions an assistant loads for a job. This notices the corrections you keep making and turns them into suggested improvements.",
+      "@id": "https://xavierairesources.netlify.app/tools/autoresearch.html#page",
+      "url": "https://xavierairesources.netlify.app/tools/autoresearch.html",
+      "name": "Autoresearch — Lets an AI agent run model experiments overnight | AI Resources",
+      "description": "Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.",
       "isPartOf": {
         "@id": "https://xavierairesources.netlify.app/#website"
       },
       "about": {
-        "@id": "https://xavierairesources.netlify.app/tools/task-observer.html#tool"
+        "@id": "https://xavierairesources.netlify.app/tools/autoresearch.html#tool"
       },
       "reviewedBy": {
         "@id": "https://xavierairesources.netlify.app/#curator"
@@ -129,14 +131,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Workflow",
-          "item": "https://xavierairesources.netlify.app/#workflow"
+          "name": "Agents & MCP",
+          "item": "https://xavierairesources.netlify.app/#agents-mcp"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Task Observer",
-          "item": "https://xavierairesources.netlify.app/tools/task-observer.html"
+          "name": "Autoresearch",
+          "item": "https://xavierairesources.netlify.app/tools/autoresearch.html"
         }
       ]
     }
@@ -150,26 +152,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why use Task Observer?",
+      "name": "Why use Autoresearch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A skill is a set of saved instructions your assistant loads for a particular job. Writing one takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep."
+        "text": "Most AI research still depends on a person proposing each change, running it, reading the result and deciding what to try next. Andrej Karpathy's Autoresearch turns that loop over to an AI coding agent. The agent edits one training file, runs a fixed five-minute experiment, compares a validation score, keeps improvements and discards regressions. It is a compact demonstration of what autonomous research can look like, not a general-purpose training service."
       }
     },
     {
       "@type": "Question",
-      "name": "When should you use Task Observer?",
+      "name": "When should you use Autoresearch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your collection, so with two or three skills, editing them directly is still quicker."
+        "text": "Exploring autonomous AI research, teaching experiment design, or testing whether a coding agent can improve a small language model through repeated measured changes. The official version needs Python 3.10 or newer, uv and one NVIDIA GPU; it was tested by the project on an H100. Mac, Windows and AMD users need community forks linked from its README."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you install and use Task Observer?",
+      "name": "How do you install and use Autoresearch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On the page linked above, use GitHub's green Code button and choose Download ZIP, then unzip it. Put the folder where your assistant keeps its skills. For Claude Code that is the .claude/skills folder; the guide on that page covers other assistants. Work as normal, then read the observations it logs and apply the ones you agree with."
+        "text": "Clone the repository into a fresh folder, then read its README and program.md before giving an agent control. The README labels the project MIT, although the repository does not currently include a standalone licence file. Run uv sync, followed by uv run prepare.py. This downloads training data from Hugging Face into your local cache and trains a tokenizer. Run uv run train.py once to establish a baseline. Then use a disposable clone on its own branch, grant Claude Code, Codex or another coding agent only the permissions it needs, point it to program.md, and review every commit and result before keeping anything. Command: git clone https://github.com/karpathy/autoresearch.git"
       }
     }
   ]
@@ -204,40 +206,46 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="crumbs m" aria-label="Breadcrumb">
         <a href="../index.html">The log</a>
         <span class="sep">/</span>
-        <span class="here">Task Observer</span>
+        <span class="here">Autoresearch</span>
       </nav>
 
       <div class="detail">
         <div class="detail-main">
-          <img class="detail-art" src="../assets/cards/light/task-observer.webp" alt="" width="512" height="512" decoding="async">
-          <h1 class="detail-title">Task Observer</h1>
-          <p class="detail-lede">Watches how you work and improves your skills.</p>
+          <img class="detail-art" src="../assets/cards/light/autoresearch.webp" alt="" width="512" height="512" decoding="async">
+          <h1 class="detail-title">Autoresearch</h1>
+          <p class="detail-lede">Lets an AI agent run model experiments overnight.</p>
         </div>
 
         <aside class="meta">
-          <div><h2>Category</h2><p class="meta-cat">Workflow</p></div>
-          <div><h2>Made by</h2><p>rebelytics</p></div>
-          <div><h2>Curator's status</h2><p>In daily use</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/rebelytics/one-skill-to-rule-them-all" target="_blank" rel="noopener">VIEW SKILL ↗</a></p></div>
+          <div><h2>Category</h2><p class="meta-cat">Agents &amp; MCP</p></div>
+          <div><h2>Made by</h2><p>karpathy</p></div>
+          <div><h2>Curator's status</h2><p>Reviewed · Not tested</p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">A <a href="../ai-101.html#e-skills">skill</a> is a set of saved instructions your assistant loads for a particular job. Writing one takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep.</div>
+          <div class="body">Most AI research still depends on a person proposing each change, running it, reading the result and deciding what to try next. Andrej Karpathy's Autoresearch turns that loop over to an AI coding <a href="../ai-101.html#e-agent">agent</a>. The agent edits one training file, runs a fixed five-minute experiment, compares a validation score, keeps improvements and discards regressions. It is a compact demonstration of what autonomous research can look like, not a general-purpose training service.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your collection, so with two or three skills, editing them directly is still quicker.</div>
+          <div class="body">Exploring autonomous AI research, teaching experiment design, or testing whether a coding agent can improve a small language model through repeated measured changes. The official version needs Python 3.10 or newer, uv and one NVIDIA GPU; it was tested by the project on an H100. Mac, Windows and AMD users need community forks linked from its README.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>On the page linked above, use <a href="../ai-101.html#e-github">GitHub</a>'s green Code button and choose Download ZIP, then unzip it.</li>
-            <li>Put the folder where your assistant keeps its skills. For Claude Code that is the .claude/skills folder; the guide on that page covers other assistants.</li>
-            <li>Work as normal, then read the observations it logs and apply the ones you agree with.</li>
+            <li>Clone the repository into a fresh folder, then read its README and program.md before giving an agent control. The README labels the project MIT, although the repository does not currently include a standalone licence file.</li>
+            <li>Run uv sync, followed by uv run prepare.py. This downloads training data from Hugging Face into your local cache and trains a tokenizer.</li>
+            <li>Run uv run train.py once to establish a baseline. Then use a disposable clone on its own branch, grant Claude Code, Codex or another coding agent only the permissions it needs, point it to program.md, and review every commit and result before keeping anything.</li>
             </ol>
+          <div class="specimen">
+            <span class="specimen-where m">Paste into the Terminal app</span>
+            <code>git clone https://github.com/karpathy/autoresearch.git</code>
+            <button class="copy-btn" type="button" data-command="git clone https://github.com/karpathy/autoresearch.git"
+                    aria-label="Copy command: git clone https://github.com/karpathy/autoresearch.git">Copy</button>
+          </div>
           </div>
         </section>
         </div>
@@ -246,8 +254,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <a class="back-link" href="../index.html">← Back to the log</a>
 
       <nav class="pager" aria-label="More tools">
-        <a href="claude-code-setup.html">← Claude Code Setup</a>
-        <a href="playwright-cli.html">Playwright CLI →</a>
+        <a href="skill-ui.html">← Skill UI</a>
+        <a href="impeccable.html">Impeccable →</a>
       </nav>
     </main>
 
