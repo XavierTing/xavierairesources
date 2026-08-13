@@ -1,6 +1,7 @@
 {
   "_readme": [
-    "Subjects for the 14 AI 101 entries that ship without a diagram.",
+    "Subjects for AI 101 diagrams that still need rendering, plus any shipped",
+    "diagram being redrawn, so every render stays reproducible.",
     "generate-diagrams.py composes STYLE (held in that script, identical for every",
     "image, which is what makes the set a family) + the subject below + the word",
     "whitelist. Keep whitelists to 5 short caps words or fewer: garbled lettering is",
@@ -15,76 +16,165 @@
     "from that alt text so the render and the alt agree."
   ],
   "diagrams": {
+    "dg-generative": {
+      "parked": false,
+      "subject": "A single left to right flow showing one typed request becoming something made on the spot. Upper left: a rounded chat input box containing one wobbly scribbled line of handwriting and a small upright cursor bar, with PROMPT lettered underneath it. One curved gold arrow leaves the box and runs down to the centre. Centre: a large sheet of paper being written on at this moment, its top four ruled lines complete and its fifth line stopping halfway across, with a small pen nib resting at the end of that unfinished line. Below and to the right of the sheet, two smaller half-made things: a picture frame whose upper half is drawn and whose lower half is still empty, and a sound wave whose bars shorten and stop partway along. Far right, separated from the made things by a clear gap: one small ember cross floating in the gap, and beyond it a sand-filled rounded rectangle with BUTTON lettered inside it. No arrow, no line and nothing at all touches or points at that rectangle. The flow ends at the ember cross.",
+      "words": [
+        "PROMPT",
+        "BUTTON"
+      ]
+    },
     "dg-imagemodel": {
       "parked": false,
       "subject": "Three panels left to right showing one picture being uncovered rather than drawn. Panel one is a square of dense messy static, labelled NOISE underneath. Panel two is the same square half cleared, a vague shape of a cat emerging from the noise, with NO label underneath it at all. Panel three is a clean finished drawing of the cat, labelled PICTURE underneath. Below the panels a small card labelled PROMPT has curved gold arrows rising from it to each panel, steering the clearing. Label exactly two panels: the first and the third. The middle panel must have no caption.",
-      "words": ["NOISE", "PROMPT", "PICTURE"]
+      "words": [
+        "NOISE",
+        "PROMPT",
+        "PICTURE"
+      ]
     },
     "dg-videomodel": {
       "parked": false,
       "subject": "A film strip of four frames in a row, each frame showing the same striped mug on a table. A different hand holding a different pen draws each frame, four hands in a row above the strip. The mug's stripes are identical in frames one and two, slightly off in frame three, and clearly wrong in frame four, where a small ember circle rings the drifted stripes.",
-      "words": ["FRAME 1", "FRAME 4", "DRIFT"]
+      "words": [
+        "FRAME 1",
+        "FRAME 4",
+        "DRIFT"
+      ]
     },
     "dg-context": {
       "parked": false,
       "subject": "A large whiteboard almost completely covered in small sticky notes. The notes carry only wavy scribble lines standing in for handwriting, NO readable words on any of them. At the right edge a hand pushes one last note into the final free gap; this single note is the only one with a word on it, reading NEW. At the left edge an eraser is rubbing the oldest notes away, leaving faint ghost outlines. Below the erased corner one small note reading SUMMARY stands in for the wiped block, with a curved arrow from the erased area down to it. Exactly two words appear in the whole drawing.",
-      "words": ["NEW", "SUMMARY"]
+      "words": [
+        "NEW",
+        "SUMMARY"
+      ]
     },
     "dg-hallucination": {
       "parked": false,
       "subject": "A neat confident answer sheet on the left, ticked and tidy, with three small source tags stapled along its edge. Three curved arrows run from the tags to a bookshelf on the right. Two of the arrows land on solid, real books. The third arrow lands on a gap where a book should be, drawn as a dotted outline only, with a small ember question mark inside it.",
-      "words": ["ANSWER", "REAL", "MADE UP"]
+      "words": [
+        "ANSWER",
+        "REAL",
+        "MADE UP"
+      ]
     },
     "dg-prompteng": {
       "parked": false,
       "subject": "Two desks side by side, divided by a vertical line. At the left desk a hand flicks one tiny question slip at a new worker who answers with a visible shrug, and the output tray below holds one crumpled page. At the right desk the same worker is handed a thick labelled folder, and the output tray below holds a neat stack of finished pages. The folder's visible tabs read CONTEXT, EXAMPLE and AVOID.",
-      "words": ["CONTEXT", "EXAMPLE", "AVOID"]
+      "words": [
+        "CONTEXT",
+        "EXAMPLE",
+        "AVOID"
+      ]
     },
     "dg-loops": {
       "parked": false,
       "subject": "A large circular track of curved arrows running clockwise in the centre. Two stations sit on the track as rounded boxes: one labelled RUN holding a small friendly robot pressing its own start button, one labelled CHECK holding a magnifying glass over a result card. A curved ember arrow labelled FAIL bends from CHECK back around to RUN. A gold arrow labelled PASS leaves the track to the right and ends at a small flag labelled DONE. At the far left a small person walks away from the machine with their back turned.",
-      "words": ["RUN", "CHECK", "FAIL", "PASS", "DONE"]
+      "words": [
+        "RUN",
+        "CHECK",
+        "FAIL",
+        "PASS",
+        "DONE"
+      ]
     },
     "dg-routines": {
       "parked": false,
       "subject": "A wall calendar on the left with the same hour circled on several days. A wire runs from the circled hour to a small always on machine sitting on a cloud shaped shelf in the middle, which contains a tiny circular loop of arrows. From the machine a finished page drops into an out tray on the right. Underneath the whole scene a closed laptop lies flat with three small sleep marks rising from it, with nobody nearby.",
-      "words": ["EVERY DAY", "CLOUD", "DONE"]
+      "words": [
+        "EVERY DAY",
+        "CLOUD",
+        "DONE"
+      ]
     },
     "dg-vibecoding": {
       "parked": false,
       "subject": "Left, a person speaks into a large speech bubble containing a rough sketch of an app screen. A curved arrow carries the bubble to a small builder robot in the middle, which is assembling a real clickable page out of blocks. To the right of the page a barrier gate blocks the path, with a person standing at it holding a checklist and looking closely at the page. Past the gate stands a small flag labelled LIVE.",
-      "words": ["DESCRIBE", "BUILD", "CHECK", "LIVE"]
+      "words": [
+        "DESCRIBE",
+        "BUILD",
+        "CHECK",
+        "LIVE"
+      ]
     },
-
     "dg-websearch": {
       "parked": true,
       "subject": "A model drawn as a simple head inside a large thought bubble filled with stacks of old newspapers, one stack banded with a label reading TRAINING DATA. A curved arrow reaches out through the wall of the bubble to a crisp fresh web page standing outside on the right, and that web page carries a small tag reading TODAY. A second curved arrow leaves the web page and travels down to an answer sheet at the bottom right, and clipped to the corner of that answer sheet is a luggage tag reading SOURCE. Important: the word SOURCE must be on the tag attached to the answer sheet outside the bubble, never on a newspaper inside the bubble.",
-      "words": ["TRAINING DATA", "TODAY", "SOURCE"]
+      "words": [
+        "TRAINING DATA",
+        "TODAY",
+        "SOURCE"
+      ]
     },
     "dg-cron": {
       "parked": true,
       "subject": "Upper left, a large wall calendar labelled EVERY DAY with the same hour ticked on five consecutive days. Upper right, a big round clock whose hands have just reached that hour. Lower middle, a bell ringing, joined by curved wires coming down from BOTH the calendar and the clock. Lower right, a task card reading RUN THE JOB, with a curved arrow from the bell into it. Fill the frame in both directions: the calendar and clock occupy the top half across the full width, the bell and card occupy the bottom half.",
-      "words": ["EVERY DAY", "RUN THE JOB"]
+      "words": [
+        "EVERY DAY",
+        "RUN THE JOB"
+      ]
     },
     "dg-webhook": {
       "parked": true,
       "subject": "Two panels divided by a vertical line. Left panel: a person walks to an empty porch over and over, three repeated figures on a looping path, each trip crossed out with a small ember cross. Right panel: a courier presses a doorbell wired straight into the house, and the resident opens the door once, exactly as the parcel arrives.",
-      "words": ["ASKING", "WASTED", "TOLD"]
+      "words": [
+        "ASKING",
+        "WASTED",
+        "TOLD"
+      ]
     },
     "dg-rag": {
       "parked": true,
       "subject": "A question card travels along a curved arrow toward a tall bookshelf. At the shelf a librarian figure pulls three loose pages out and clips them onto the card. The card, now carrying the three pages, continues along the arrow to a simple model box on the right. The answer leaving the model has a small page reference tag clipped to it.",
-      "words": ["QUESTION", "PAGES", "ANSWER"]
+      "words": [
+        "QUESTION",
+        "PAGES",
+        "ANSWER"
+      ]
     },
     "dg-secondbrain": {
       "parked": true,
       "subject": "Two halves divided by a vertical line. Left: a tall unstable pile of documents with tired looping arrows circling back to its top, being re-read from the beginning every time. Right: a small open notebook whose pages are joined to each other by curved lines, with one document being read once and becoming a new page that links itself into the existing web.",
-      "words": ["EVERY TIME", "ONCE"]
+      "words": [
+        "EVERY TIME",
+        "ONCE"
+      ]
     },
     "dg-github": {
       "parked": true,
       "subject": "A large open folder in the centre drawn as a repository, showing a front page marked README and a star stamp with a small count beside it. A gold horizontal timeline of round commit nodes runs beneath the folder. An arrow comes in from a laptop on the left pushing changes up into the folder. Two arrows leave to the right, one to a person reading the README, one to a small host machine watching the folder.",
-      "words": ["README", "STARS", "HISTORY"]
+      "words": [
+        "README",
+        "STARS",
+        "HISTORY"
+      ]
+    },
+    "dg-workflows": {
+      "parked": false,
+      "subject": "A written running order drawn as one wide sheet with three numbered boxes set in a row left to right across it, joined by arrows that each carry a small page from one box into the next, so what one box finishes is what the next box starts with. The middle box opens out vertically into three identical small worker circles stacked one above another, and all three rejoin into the single arrow that continues right to the last box. A pen lies in the top left corner of the sheet, showing the order was written before anything ran. Label only the three boxes, left to right, with the single numerals 1, 2 and 3. The three worker circles carry no lettering at all.",
+      "words": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "dg-agi": {
+      "parked": false,
+      "subject": "The left half shows three small machines in a row, each one shut inside its own closed fence, and each fence containing exactly one object that machine works on: a chat bubble, an envelope, a calendar. An arm reaches from each machine to the object inside its own fence and stops dead at the fence, touching nothing outside it. The right half shows one much larger pedestal that is completely empty, drawn as a dashed outline only so it reads clearly as a space where nothing stands, and scattered high and low all around it float many loose objects of many different kinds with no fences anywhere. A single question mark hovers above the empty pedestal. Label the row of fenced machines NARROW once, underneath the row. Label the empty dashed pedestal GENERAL once, underneath it. The scattered objects spread high and low so the drawing fills the frame top to bottom as well as left to right.",
+      "words": [
+        "NARROW",
+        "GENERAL"
+      ]
+    },
+    "dg-markdown": {
+      "parked": true,
+      "subject": "One typed sheet of paper in the centre, held upright, with a small file tab on its top edge lettered .MD. The sheet shows plain typed text: the first line begins with a large hash sign, the next three lines each begin with a hyphen, and one word further down is wrapped in a pair of double asterisks either side. The characters must read as typed symbols, not as formatted text. A person stands at the left of the sheet and a friendly robot stands at the right, both leaning in to read that same single sheet, with a small tick floating above each of them. Two curved gold arrows rise from the sheet to small labels: one from the hash sign to a label lettered HEADING, one from the column of hyphens to a label lettered BULLET.",
+      "words": [
+        "MD",
+        "HEADING",
+        "BULLET"
+      ]
     }
   }
 }

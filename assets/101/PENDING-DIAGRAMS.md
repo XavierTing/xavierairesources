@@ -1,11 +1,32 @@
 # Diagram queue — AI 101
 
-## Status (2026-08-13)
+## Status (2026-08-14)
 
-**All 56 entries now carry a diagram.** The 14 that shipped text-only were
-generated, quantised, recoloured and pasted in on 2026-08-13. Nothing is
-pending; what remains below is the redraw queue for art-level flaws in older
-diagrams.
+**58 of the 59 entries carry a diagram. One is pending: `dg-markdown`.**
+The 14 that shipped text-only were generated, quantised, recoloured and
+pasted in on 2026-08-13, and Workflows shipped with `dg-workflows` the same
+day. AGI shipped with `dg-agi` on 2026-08-14. Markdown shipped the same day
+without art, because generation needs the Codex CLI on a ChatGPT
+subscription and that was not available in the session that wrote the entry.
+Its figure block is ready to paste below and its subject is in
+`diagram-prompts.json` under `dg-markdown`. Everything after that is the
+redraw queue for art-level flaws in older diagrams.
+
+## Ready to paste
+
+### dg-markdown
+
+Paste into `e-markdown`'s `.entry-rail`, immediately after the `.analogy`
+block (`verify-diagrams.py` expects the figure to follow the analogy), then
+replace the width and height with the trimmed render's real pixel size.
+
+```html
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-markdown.png" width="1500" height="1000" loading="lazy" decoding="async"
+             alt="One typed sheet in the centre with a file tab reading .MD, showing a line that starts with a hash sign, three lines that start with hyphens, and one word wrapped in pairs of asterisks. A person on the left and a robot on the right lean in and read the same sheet, a small tick above each of them. Curved arrows run from the hash sign to a label reading HEADING and from the hyphens to a label reading BULLET.">
+        <figcaption class="dg-cap">No translation step and no second copy. The symbols you type are the structure the model receives, which is why a tidy file gets followed more closely than a rambling one.</figcaption>
+      </figure>
+```
 
 ## How these are made
 

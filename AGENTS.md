@@ -5,7 +5,7 @@ existing entry follows, so that new content written by any person or model is
 indistinguishable in voice, structure and art from what is already here.
 
 The site is three tabs served as plain HTML, CSS and JavaScript with no build
-step: **The tools** (a curated directory of AI tools), **AI 101** (a 56-term
+step: **The tools** (a curated directory of AI tools), **AI 101** (a 59-term
 plain-English course), and **The curator** (bio). Preview locally with
 `python3 -m http.server` from the repo root.
 
@@ -174,7 +174,7 @@ the course lies about itself:
    in the right chapter group.
 5. JSON-LD `teaches[]` gains the term; `timeRequired` and `dateModified` update.
 6. Every spelled-out count updates: the head comment, meta description,
-   og:description, WebPage description, and the closing "Fifty-six words"
+   og:description, WebPage description, and the closing "Fifty-nine words"
    paragraph all carry the term count as a word.
 7. `generate-seo.mjs`: the `llms.txt` course line's counts, and a new
    `AI101_TERMS` pattern if tool pages should link the term. Rerun the generator.
@@ -198,7 +198,7 @@ curved arrows, hand-lettered caps. Exactly five colours, the Daylight palette:
 - Markup: `img.dg-img` with exact width/height, `loading="lazy"
   decoding="async"`, a full descriptive alt, and a `figcaption.dg-cap` that
   adds one insight rather than repeating the alt.
-- Every entry carries a diagram (all 56 since 2026-08-13). A new entry should
+- Every entry carries a diagram (58 of 59; dg-markdown parked 2026-08-14). A new entry should
   ship with one; if art generation is unavailable, park the ready-to-paste
   figure block in `assets/101/PENDING-DIAGRAMS.md` and its subject in
   `assets/101/diagram-prompts.json`.

@@ -111,9 +111,11 @@ const AI101_TERMS = [
   ["agents?", "agent", ""],
   ["MCP", "mcp", ""],
   ["RAG", "rag", ""],
+  ["AGI", "agi", ""],
   ["webhooks?", "webhook", ""],
   ["web search", "websearch", "i"],
   ["cron", "cron", ""],
+  ["workflows?", "workflows", ""],
   ["second brain", "secondbrain", "i"],
   ["GitHub", "github", ""],
   ["Terminal", "terminal", "i"],
@@ -265,7 +267,6 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="site-nav m" aria-label="Site sections">
         <a href="../index.html" aria-current="true">The tools</a>
         <a href="../ai-101.html">AI 101</a>
-        <a href="../curator.html">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
       </nav>
     </header>
@@ -529,7 +530,7 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (56 terms, 9 chapters, about an hour)
+- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (59 terms, 9 chapters, about an hour)
 - Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})

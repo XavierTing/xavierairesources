@@ -2,7 +2,7 @@
    AI 101 — 101.js
    The course page's behaviour, ported from the standalone
    Xavier's AI 101 build: contents menu, chapter router, and the
-   three interactives (context meter, flight walkthrough, tool
+   three interactives (context chat, flight walkthrough, tool
    filter). ai-101.html loads this and nothing else — tools.js
    and app.js belong to the log pages.
    ============================================================ */
@@ -144,30 +144,64 @@
     if (back !== "cover") resumeCue(back);
   }
 
-  /* ── Context window meter ───────────────────────────────── */
-  var fill = document.getElementById("meterFill");
+  /* ── Context window: one chat, filling up ───────────────────────────
+     Six scripted turns of a group project. The answers stay sharp while
+     the whole conversation still fits, then blur, and the last one
+     re-suggests the survey cancelled in turn 2 because that decision has
+     been pushed out of the window. */
+  var sim = document.getElementById("chatSim");
   var read = document.getElementById("meterRead");
   var addBtn = document.getElementById("meterAdd");
   var resetBtn = document.getElementById("meterReset");
+  var HOLDS = 6; // bubbles the window holds; older ones grey out
   var turns = 0;
+  var SCRIPT = [
+    { u: "Group project on urban farming in Singapore. Help me plan it.",
+      a: "Sure. Three parts: research, a field visit, and the slides. Which one is due first?" },
+    { u: "Research first. And we dropped the survey, the team voted it out.",
+      a: "Noted, no survey. Two local case studies instead: Citiponics in Ang Mo Kio and Edible Garden City." },
+    { u: "Write the intro paragraph.",
+      a: "Singapore imports most of what it eats. Urban farms are one answer, and two of them sit inside ordinary HDB estates." },
+    { u: "Now the field visit plan.",
+      a: "Book Citiponics for a weekday morning. Prepare five questions, bring a phone for photos, and put one person on notes so nothing gets lost." },
+    { u: "Tidy up the timeline.",
+      a: "A clear timeline helps a lot. Set milestones, check in with each other regularly, and leave buffer time before the deadline." },
+    { u: "What is left to do?",
+      a: "You still have no primary data. Run a survey with your classmates and write up the results." }
+  ];
   var lines = [
     "Fresh chat. The window is empty.",
     "Turn 1. Your message, plus its reply, now get re-sent every time.",
-    "Turn 2. Still sharp. The whole transcript goes back on every reply.",
-    "Turn 4. Filling up. You have changed the subject twice by now.",
-    "Turn 7. Answers are getting vaguer. This is where people blame the model.",
-    "Turn 10. It is losing the thread. Nothing broke. The board is full.",
-    "Full. Start a fresh chat. That is the entire fix."
+    "Turn 2. You cancel the survey. Still sharp: the whole transcript goes back on every reply.",
+    "Turn 3. Filling up. Every earlier turn is still riding along.",
+    "Turn 4. Wordier, and less useful. This is where people blame the model.",
+    "Turn 5. Vague and generic. The oldest messages have been pushed out of the window.",
+    "Full. It just suggested the survey you cancelled at turn 2. Nothing broke: that decision fell out of the window. Start a fresh chat. That is the entire fix."
   ];
-  function paint() {
-    var pct = Math.min(100, turns * 17);
-    fill.style.transform = "scaleX(" + (pct / 100) + ")";
-    fill.classList.toggle("hot", pct >= 68);
-    read.textContent = lines[Math.min(turns, lines.length - 1)];
-    addBtn.disabled = turns >= 6;
-    addBtn.textContent = turns >= 6 ? "Window full" : "Send another message";
+  function bubble(role, text) {
+    var el = document.createElement("div");
+    el.className = "msg " + role;
+    el.textContent = text;
+    return el;
   }
-  addBtn.addEventListener("click", function () { if (turns < 6) { turns++; paint(); } });
+  /* Bubbles are added, never rebuilt: the live region then announces only
+     the new pair, and each arrival animates once. Reset removes them all. */
+  function paint() {
+    while (sim.children.length > turns * 2) sim.removeChild(sim.lastElementChild);
+    for (var i = sim.children.length / 2; i < turns; i++) {
+      sim.appendChild(bubble("user", SCRIPT[i].u));
+      sim.appendChild(bubble("bot", SCRIPT[i].a));
+    }
+    var kids = sim.children;
+    for (var n = 0; n < kids.length; n++) {
+      kids[n].classList.toggle("gone", n < kids.length - HOLDS);
+    }
+    sim.scrollTop = sim.scrollHeight;
+    read.textContent = lines[Math.min(turns, lines.length - 1)];
+    addBtn.disabled = turns >= SCRIPT.length;
+    addBtn.textContent = turns >= SCRIPT.length ? "Window full" : "Send another message";
+  }
+  addBtn.addEventListener("click", function () { if (turns < SCRIPT.length) { turns++; paint(); } });
   resetBtn.addEventListener("click", function () { turns = 0; paint(); });
   paint();
 

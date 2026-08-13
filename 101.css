@@ -16,9 +16,9 @@
   --linen-deep: var(--bg-raise);
   --gold: var(--accent);
   --gold-ink: var(--on-accent);
-  /* the one warm alarm: the meter's hot state and the artwork's terracotta
-     share this exact ember per theme — recolor.py must match the Night one.
-     Daylight is the course's original terracotta, 3.78:1 on the sand track. */
+  /* the one warm alarm, and the artwork's terracotta: recolor.py must match
+     the Night value exactly, so this stays the record of it even while no
+     rule paints with it. Daylight is the course's original terracotta. */
   --ember: #B4512D;
   --terra: var(--ember);
   --rule: var(--line);
@@ -235,7 +235,9 @@ figure { margin: 0 0 26px; }
   border: 1px solid var(--line);
   background: var(--glass);
   border-radius: var(--radius);
-  margin: 0 0 26px;
+  /* the panel follows the entry's prose and rail, so it needs air above it,
+     not just below: without a top margin it collides with the figcaption */
+  margin: clamp(28px, 4vw, 44px) 0 26px;
 }
 .panel-head {
   display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
@@ -263,20 +265,69 @@ figure { margin: 0 0 26px; }
 .btn.ghost:hover { background: transparent; border-color: var(--line-bright); color: var(--ink); box-shadow: none; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 
-/* context meter */
-.meter {
-  height: 26px; background: var(--bg-raise);
+/* context window: a chat that fills up. The panel's buttons drive it, so the
+   frame itself is a picture: nothing inside is typed into or scrolled by hand.
+   Bubbles are pinned to the bottom and the oldest ones clip past the top. */
+.chatsim {
+  /* tall enough that the pair just pushed out still shows, greyed, above the
+     six the window holds: the lesson is only legible if you can see it go */
+  height: 400px; padding: 14px;
+  background: var(--bg);
   border: 1px solid var(--line); border-radius: var(--radius-sm);
-  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;
+  overflow: hidden;
+  position: relative;
 }
-/* scaleX rather than width: same fill, no layout thrash on every step */
-.meter-fill {
-  height: 100%; width: 100%;
-  background: var(--accent);
-  transform: scaleX(0); transform-origin: left center;
-  transition: transform 0.5s var(--ease-out);
+/* the oldest bubbles overflow past the top edge, where a hard cut would read
+   as a rendering fault. Inside the border, so the frame itself stays drawn. */
+.chatsim::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 52px;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+  pointer-events: none; z-index: 1;
 }
-.meter-fill.hot { background: var(--ember); }
+.chatsim .msg {
+  flex: 0 0 auto;
+  max-width: 75%;
+  padding: 8px 13px; border-radius: var(--radius-sm);
+  font-size: 0.9375rem; line-height: 1.5;
+  /* backwards, not both: a finished animation with a fill would outrank the
+     .gone opacity below and the pushed-out bubbles would never grey */
+  animation: msg-in 0.3s var(--ease-out) backwards;
+  transition: opacity 0.4s ease-out, filter 0.4s ease-out;
+}
+.chatsim .msg.user {
+  align-self: flex-end;
+  background: var(--accent-fill); color: var(--on-accent);
+  border-bottom-right-radius: 4px;
+}
+.chatsim .msg.bot {
+  align-self: flex-start;
+  background: var(--bg-raise); color: var(--body-ink);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 4px;
+  animation-delay: 0.1s;
+}
+/* still on screen, no longer in play: the window has pushed it out */
+.chatsim .msg.gone { opacity: 0.3; filter: grayscale(1); }
+@keyframes msg-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+/* the composer is scenery: it says "this is a chat" and takes no input */
+.chatsim-input {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin: 10px 0 6px; padding: 10px 16px;
+  border: 1px solid var(--line); border-radius: 999px;
+  font-size: 0.9375rem; color: var(--muted);
+  pointer-events: none; -webkit-user-select: none; user-select: none;
+}
+.chatsim-send { color: var(--accent); }
+/* on a phone every bubble wraps to several lines, so the frame holds far less
+   of the conversation: give the bubbles more of the width to claw some back */
+@media (max-width: 560px) {
+  .chatsim { height: 340px; }
+  .chatsim .msg { max-width: 85%; }
+}
 .meter-read { font-size: 1rem; line-height: 1.5; margin-top: 12px; color: var(--ink); min-height: 3em; }
 
 /* flight walkthrough — three lanes side by side; below 720px they swipe,
@@ -735,7 +786,9 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
     transition-duration: 0.001ms !important;
   }
   .chapend-a, .chapend-a:hover { transform: none; }
-  .meter-fill { transition: none; }
+  /* the blanket rule above cannot reach an animation-delay, and a delayed
+     bubble held at opacity 0 would read as a dropped message */
+  .chatsim .msg { animation: none; transition: none; }
   .js .masthead .meta-row,
   .js .masthead .display,
   .js .masthead .rule-gold,
@@ -759,7 +812,7 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
   }
   body { background: #fff; }
   .aurora, .site-nav, .skip-link, .theme-toggle,
-  .btn, .btn-row, .chip, .filters, .meter, .meter-read,
+  .btn, .btn-row, .chip, .filters, .chatsim, .chatsim-input, .meter-read,
   .coursebar, .chapbar, .chapmenu, .chapend, .contents-go, .wordnav,
   .plate-art { display: none !important; }
   /* the artwork is drawn on the dark ground; the decorative plates go,
