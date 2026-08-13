@@ -579,7 +579,7 @@ const TOOLS = [
   {
     num: "26",
     name: "Autoresearch",
-    category: "Connections",
+    category: "Workflow",
     tagline: "Lets an AI agent run model experiments overnight",
     blurb: "Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.",
     repo: "https://github.com/karpathy/autoresearch",

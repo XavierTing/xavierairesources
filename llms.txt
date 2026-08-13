@@ -642,7 +642,7 @@ Starting a new screen that has to sit alongside an existing product, or handing 
 
 ## 26. Autoresearch — Lets an AI agent run model experiments overnight
 
-- **Category:** Connections
+- **Category:** Workflow
 - **Made by:** karpathy
 - **Source:** https://github.com/karpathy/autoresearch
 - **Page:** https://xavierairesources.netlify.app/tools/autoresearch.html
@@ -668,8 +668,8 @@ Exploring autonomous AI research, teaching experiment design, or testing whether
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI
-- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer
-- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Autoresearch
+- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch
+- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem
 - **Writing**: Humanizer
