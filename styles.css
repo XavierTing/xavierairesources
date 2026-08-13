@@ -332,11 +332,12 @@ html:not(.js) .theme-toggle { display: none; }
 }
 
 .hero-sub {
-  max-width: 56ch;
+  max-width: 72ch;
   margin-top: 26px;
   font-size: clamp(1rem, 1.6vw, 1.125rem);
   color: var(--body-ink);
 }
+.hero-cta { margin-top: 14px; }
 
 /* the curator, present on the page: portrait in a gold ring + role */
 .hero-byline {
