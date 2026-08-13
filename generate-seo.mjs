@@ -115,6 +115,7 @@ const AI101_TERMS = [
   ["web search", "websearch", "i"],
   ["cron", "cron", ""],
   ["second brain", "secondbrain", "i"],
+  ["GitHub", "github", ""],
 ];
 
 function makeTermLinker() {
@@ -529,7 +530,7 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (55 terms, 9 chapters, ~65 minutes)
+- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (56 terms, 9 chapters, ~66 minutes)
 - Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})

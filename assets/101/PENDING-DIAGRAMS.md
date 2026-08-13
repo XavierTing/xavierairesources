@@ -61,3 +61,17 @@ into its entry's .entry-rail in ai-101.html (after the .analogy).
         <figcaption class="dg-cap">Left reads everything every time. Right read it once and wrote it down, and the notes keep linking up.</figcaption>
       </figure>
 ```
+
+## dg-github (entry e-github, chapter 06 stack, after e-git)
+
+Figure block to paste into the entry-rail after the analogy div:
+
+```html
+      <figure>
+        <img class="dg-img" src="assets/101/light/dg-github.png" width="1500" height="1000" loading="lazy" decoding="async"
+             alt="A large open folder drawn as a repository, with a front page marked README and a star stamp with a count beside it. A gold timeline of commit nodes runs beneath the folder. Arrows come in from a laptop pushing changes up, and go out to a stranger reading the README and to a small host machine watching the repo.">
+        <figcaption class="dg-cap">One folder online: the README explains it, the stars vouch for it, and the host watches it.</figcaption>
+      </figure>
+```
+
+Prompt: sketchnote style, wobbly ink outlines, curved arrows, hand-lettered caps, exactly the 5 hexes #F2ECE0 #E7DECB #B6966F #1A1815 #B4512D, ~1500x1000. Subject: a repository drawn as one big open folder with a README front page and a star-count stamp; a commit timeline underneath; a laptop pushing in from the left, a reader and a small deploy host drawing from it on the right.
