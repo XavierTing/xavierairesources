@@ -1,5 +1,31 @@
 # Pending diagrams — five AI 101 entries shipped text-only
 
+## Redraw queue (added 2026-08-13, from the three-persona review)
+
+Ten existing diagrams have art-level flaws that captions/alt text now
+compensate for; when the sketchnote pipeline is back, redraw these in the
+same family and the caption patches can be simplified:
+
+- dg-hitl — row label UNDOABLE reads as "cannot be done"; relabel REVERSIBLE
+- dg-git — flag says JUMP BACK but the arc's arrowhead lands on a LATER node;
+  reverse it, and draw the small branch the prose describes
+- dg-database — funnel shows three bars in, three out; draw many in, few out
+  so the narrowing is visible
+- dg-llm — the dial reads as a clock; draw five small candidate-word marks
+  on its face so "picks one of several" is visible
+- dg-frontback — REQUEST/RESPONSE arcs visually bypass the backend; route
+  them through the middle box
+- dg-tiers — first box "ROUTINE?" collides with the taught word Routines;
+  relabel "ORDINARY JOB?"
+- dg-promptinjection — add a visible stop/cross where the smuggled
+  instruction meets the gate
+- dg-fresheyes — the two figures read as humans; draw them as two agent
+  sessions in the style of dg-subagent
+- dg-generative — the three sorting containers read as rubbish bins; label
+  them as trays/bins
+- dg-planmode — give the top path visibly more loop-back arrows than the
+  bottom so the "shorter path" claim is checkable
+
 The OpenAI key had no credit and the codex CLI was absent when these five
 entries (Web search, Cron, Webhooks, RAG, Second brain) were added on
 2026-08-13, so they joined the eight existing diagram-less entries.

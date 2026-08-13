@@ -24,8 +24,8 @@ Entries are independently curated and carry their own usage status. Nobody paid 
 - **Made by:** pbakaus
 - **Source:** https://github.com/pbakaus/impeccable
 - **Page:** https://xavierairesources.netlify.app/tools/impeccable.html
-- **You'll need:** An AI coding assistant, Node.js
-- **Cost:** Free
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
 - **Install / run:** `npx impeccable install`
 
 **Why use Impeccable?**
@@ -50,7 +50,7 @@ Any time you are building a web page or an app with an AI assistant. Check it be
 - **Source:** https://github.com/obra/superpowers
 - **Page:** https://xavierairesources.netlify.app/tools/superpowers.html
 - **You'll need:** Claude Code
-- **Cost:** Free
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `claude plugin install superpowers@claude-plugins-official`
 
 **Why use Superpowers?**
@@ -75,7 +75,7 @@ Anything bigger than a quick fix. It is most useful on projects you are starting
 - **Source:** https://github.com/github/spec-kit
 - **Page:** https://xavierairesources.netlify.app/tools/spec-kit.html
 - **You'll need:** An AI coding assistant, the uv helper
-- **Cost:** Free
+- **Cost:** Free (your AI assistant has its own plan)
 - **Install / run:** `uvx --from git+https://github.com/github/spec-kit.git specify init`
 
 **Why use Spec-Kit?**
@@ -99,8 +99,8 @@ Projects that run across several sessions, work you share with other people, and
 - **Made by:** ChromeDevTools
 - **Source:** https://github.com/ChromeDevTools/chrome-devtools-mcp
 - **Page:** https://xavierairesources.netlify.app/tools/chrome-devtools-mcp.html
-- **You'll need:** Claude Code, Node.js, Chrome
-- **Cost:** Free
+- **You'll need:** Claude Code, Node.js (free, from nodejs.org), Chrome
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `claude mcp add chrome-devtools npx chrome-devtools-mcp@latest`
 
 **Why use Chrome DevTools MCP?**
@@ -124,8 +124,8 @@ Fixing anything that shows up in a browser, making a slow page faster, and any t
 - **Made by:** upstash
 - **Source:** https://github.com/upstash/context7
 - **Page:** https://xavierairesources.netlify.app/tools/context7.html
-- **You'll need:** Claude Code, Node.js
-- **Cost:** Free
+- **You'll need:** Claude Code, Node.js (free, from nodejs.org)
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `claude mcp add context7 -- npx -y @upstash/context7-mcp`
 
 **Why use Context7?**
@@ -149,7 +149,7 @@ Working with software that changes quickly (web-building kits such as Next.js an
 - **Made by:** yamadashy
 - **Source:** https://github.com/yamadashy/repomix
 - **Page:** https://xavierairesources.netlify.app/tools/repomix.html
-- **You'll need:** Node.js, and any AI chat to paste into
+- **You'll need:** Node.js (free, from nodejs.org), and any AI chat to paste into
 - **Cost:** Free
 - **Install / run:** `npx repomix@latest`
 
@@ -175,7 +175,7 @@ Getting a second opinion from a different AI, having code reviewed by a model th
 - **Source:** https://github.com/Panniantong/Agent-Reach
 - **Page:** https://xavierairesources.netlify.app/tools/agent-reach.html
 - **You'll need:** Claude Code
-- **Cost:** Free
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `Install Agent Reach: https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`
 
 **Why use Agent-Reach?**
@@ -223,8 +223,8 @@ Building a second brain out of notes, articles and bookmarks: a personal knowled
 - **Made by:** blader
 - **Source:** https://github.com/blader/humanizer
 - **Page:** https://xavierairesources.netlify.app/tools/humanizer.html
-- **You'll need:** An AI coding assistant, Node.js
-- **Cost:** Free
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
 - **Install / run:** `npx skills add blader/humanizer --global`
 
 **Why use Humanizer?**
@@ -249,7 +249,7 @@ The last thing you do before anything goes public: posts, documentation, emails,
 - **Source:** https://developers.figma.com/docs/figma-mcp-server/
 - **Page:** https://xavierairesources.netlify.app/tools/figma-mcp.html
 - **You'll need:** Claude Code, a Figma account
-- **Cost:** Free with your Figma account
+- **Cost:** Free with your Figma account (Claude Code has its own plan)
 - **Install / run:** `claude mcp add --transport http figma https://mcp.figma.com/mcp`
 
 **Why use Figma MCP?**
@@ -274,7 +274,7 @@ Any build that starts from a design file, and any time the live product has drif
 - **Source:** https://github.com/kepano/obsidian-skills
 - **Page:** https://xavierairesources.netlify.app/tools/obsidian-skills.html
 - **You'll need:** An AI coding assistant, Obsidian
-- **Cost:** Free
+- **Cost:** Free (your AI assistant has its own plan)
 - **Install / run:** `npx skills add https://github.com/kepano/obsidian-skills`
 
 **Why use Obsidian Skills?**
@@ -324,7 +324,7 @@ Work where you can say plainly what finished looks like and something can check 
 - **Source:** https://github.com/mathiaschu/watch
 - **Page:** https://xavierairesources.netlify.app/tools/watch.html
 - **You'll need:** Claude Code
-- **Cost:** Free; it transcribes on your own computer
+- **Cost:** Free; transcribes on your computer (Claude Code has its own plan)
 - **Install / run:** `/plugin marketplace add mathiaschu/watch`
 
 **Why use Watch?**
@@ -356,7 +356,7 @@ Any time the answer sits inside a video rather than a page: a product demo you w
 Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. The plugin itself is free; the work runs against your ChatGPT account's Codex allowance, which a free account gets a small amount of, and the image making it can also do needs a paid OpenAI account.
 
 **When should you use Codex for Claude Code?**
-Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you. There is no button for it, you simply ask.
+Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you (needs a paid OpenAI account). There is no button for it, you simply ask.
 
 **How do you install and use Codex for Claude Code?**
 1. Type the command below inside Claude Code. It adds OpenAI's catalogue.
@@ -373,8 +373,8 @@ Straight after a change big enough that you would want someone else to look at i
 - **Made by:** Emil Kowalski
 - **Source:** https://github.com/emilkowalski/skills/tree/main/skills/apple-design
 - **Page:** https://xavierairesources.netlify.app/tools/apple-design.html
-- **You'll need:** An AI coding assistant, Node.js
-- **Cost:** Free
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
 - **Install / run:** `npx skills@latest add emilkowalski/skills`
 
 **Why use Apple Design?**
@@ -422,7 +422,7 @@ Any time you set the assistant on something that will take minutes rather than s
 - **Made by:** diegosouzapw
 - **Source:** https://github.com/diegosouzapw/OmniRoute
 - **Page:** https://xavierairesources.netlify.app/tools/omniroute.html
-- **You'll need:** Node.js, and an AI coding tool
+- **You'll need:** Node.js (free, from nodejs.org), and an AI coding tool
 - **Cost:** Free; paid models still bill you as usual
 - **Install / run:** `npm install -g omniroute`
 
@@ -447,8 +447,8 @@ Long sessions where stopping is expensive, and any time you want to try a cheape
 - **Made by:** thedotmack
 - **Source:** https://github.com/thedotmack/claude-mem
 - **Page:** https://xavierairesources.netlify.app/tools/claude-mem.html
-- **You'll need:** An AI coding assistant, Node.js
-- **Cost:** Free
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
 - **Install / run:** `npx claude-mem install`
 
 **Why use Claude Mem?**
@@ -498,7 +498,7 @@ Work that pushes a lot of material through the assistant: reading logs, handling
 - **Source:** https://claude.com/plugins/claude-code-setup
 - **Page:** https://xavierairesources.netlify.app/tools/claude-code-setup.html
 - **You'll need:** Claude Code
-- **Cost:** Free
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `claude plugin install claude-code-setup@claude-plugins-official`
 
 **Why use Claude Code Setup?**
@@ -523,7 +523,7 @@ Setting up a project you have just started working in, or returning to one where
 - **Source:** https://github.com/rebelytics/one-skill-to-rule-them-all
 - **Page:** https://xavierairesources.netlify.app/tools/task-observer.html
 - **You'll need:** Claude Code, and a few skills of your own
-- **Cost:** Free
+- **Cost:** Free (Claude Code has its own plan)
 
 **Why use Task Observer?**
 A skill is a set of saved instructions your assistant loads for a particular job. Writing one takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep.
@@ -546,8 +546,8 @@ Once you have built a few skills and keep correcting the same things. The author
 - **Made by:** Microsoft
 - **Source:** https://github.com/microsoft/playwright-cli
 - **Page:** https://xavierairesources.netlify.app/tools/playwright-cli.html
-- **You'll need:** Claude Code, Node.js 18 or newer
-- **Cost:** Free
+- **You'll need:** Claude Code, Node.js 18 or newer (free, from nodejs.org)
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `npm install -g @playwright/cli@latest`
 
 **Why use Playwright CLI?**
@@ -572,7 +572,7 @@ Writing or repairing tests that click through a website, checking a sign-up or c
 - **Source:** https://supabase.com/docs/guides/ai-tools/plugins
 - **Page:** https://xavierairesources.netlify.app/tools/supabase-plugin.html
 - **You'll need:** An AI coding assistant, a Supabase project
-- **Cost:** Free; your Supabase plan is separate
+- **Cost:** Free; Supabase and your AI assistant have their own plans
 - **Install / run:** `npx plugins add supabase-community/supabase-plugin`
 
 **Why use Supabase Plugin?**
@@ -621,8 +621,8 @@ Before putting something on the internet, and after any change to the parts that
 - **Made by:** amaancoderx
 - **Source:** https://github.com/amaancoderx/npxskillui
 - **Page:** https://xavierairesources.netlify.app/tools/skill-ui.html
-- **You'll need:** Claude Code, Node.js 18 or newer
-- **Cost:** Free
+- **You'll need:** Claude Code, Node.js 18 or newer (free, from nodejs.org)
+- **Cost:** Free (Claude Code has its own plan)
 - **Install / run:** `npm install -g skillui`
 
 **Why use Skill UI?**

@@ -821,7 +821,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <p>Cron is the timer that fires <a href="#e-routines">routines</a>. It is a scheduler that has shipped with almost every computer since the 1970s: you give it a time pattern and a job, and it runs that job on the dot, again and again, until you say stop. When a tool promises your agent will run "every weekday at 8am", cron or one of its descendants is doing the counting.</p>
         <p style="margin-top:.9em">The pattern is written as a terse five-part line called a cron expression, which reads minute, hour, day, month, weekday. You will mostly meet it as a dropdown that writes the line for you. Knowing the name is still worth it, because the scheduling screen of every automation tool stops looking like hieroglyphics.</p></div>
       <div class="field"><span class="label">For example</span>
-        <p>0 8 * * 1 means 8:00am every Monday: minute zero, hour eight, the stars meaning any date and any month, and weekdays counted from Sunday as 0, so 1 is Monday. That one line, attached to that Monday routine, is the whole difference between a job you remember to run and a job that runs itself.</p></div>
+        <p>0 8 * * 1 means 8:00am every Monday: minute zero, hour eight, the stars meaning any date and any month, and weekdays counted from Sunday as 0, so 1 is Monday. You never write that line yourself: you say "every Monday at 8am" and the tool writes it. That one line, attached to that Monday routine, is the whole difference between a job you remember to run and a job that runs itself.</p></div>
       </div>
       <div class="entry-rail">
       <div class="analogy"><p>The timer plug on a fish tank light. Set the dial once and the light snaps on at the same time every day, whether or not you are home.</p></div>
@@ -852,7 +852,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <p>Every major AI company offers a range: a small fast cheap model, a balanced everyday one, and a large deep one. They differ enormously in cost and speed, and only somewhat in quality on ordinary work. Most people default to the most expensive option for tasks the small one would finish instantly.</p>
         <p style="margin-top:.9em">Most also offer a reasoning or extended thinking mode, where the model works through a problem step by step before answering. Slower, noticeably better on hard problems, wasted on easy ones.</p>
         <p style="margin-top:.9em">Once you are running agents rather than chatting, the same gears get names: cheap, middle, and frontier, frontier being the biggest model a company sells. A rough split to aim for is sixty per cent of the work on the cheap model, thirty on the middle one, and only the last ten, the actual decisions, on the frontier one.</p>
-        <p style="margin-top:.9em">The shape of the money, without the numbers that go stale. A chat subscription costs about what one streaming service costs. Running agents seriously sits on a higher paid plan and costs more than that. And if you use a key of your own instead of a subscription, you are billed by the <a href="#e-token">token</a>, so the meter runs on every attempt, including the ones you throw away.</p></div>
+        <p style="margin-top:.9em">The shape of the money, without the numbers that go stale. A chat subscription costs about what one streaming service costs. Running agents seriously sits on a higher paid plan and costs more than that. <a href="#monday">Chapter nine</a> puts a rough figure on it. And if you use a key of your own instead of a subscription, you are billed by the <a href="#e-token">token</a>, so the meter runs on every attempt, including the ones you throw away.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Summarising this week's meeting notes: the small fast model, done in seconds. Checking the payment terms in a supplier contract: the deep one with thinking switched on. Same app, different gear.</p></div>
       </div>
@@ -998,10 +998,11 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <ul>
           <li>Decide when to let AI run and when to stay in the loop</li>
           <li>Set the limits before you start, not after something goes wrong</li>
+          <li>Know where what you paste goes, and which plan protects it</li>
           <li>Make the agent check its own work, and get a second one to check that</li>
         </ul>
       </div>
-      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-hitl">Human in the loop</a><a href="#e-guardrails">Guardrails</a><a href="#e-fresheyes">Fresh-eyes review</a><a href="#e-verification">Verification loop</a></nav>
+      <nav class="wordnav col" aria-label="Words in this chapter"><a href="#e-hitl">Human in the loop</a><a href="#e-guardrails">Guardrails</a><a href="#paste-privacy">Where your data goes</a><a href="#e-fresheyes">Fresh-eyes review</a><a href="#e-verification">Verification loop</a></nav>
     <div class="col">
     <article class="entry" id="e-hitl">
       <h3 class="display">Human in the loop</h3>
@@ -1045,11 +1046,11 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="oneline"><span class="label">In one line</span><p>Decide what it's allowed to touch before you start.</p></div>
     </article>
 
-      <div class="tryit">
-        <p class="label">Where does what you paste actually go?</p>
+      <div class="aside-note" id="paste-privacy">
+        <span class="label">Where does what you paste actually go?</span>
         <p>Out of your building, first of all. Anything you paste is sent to the AI company's computers, because that is where the model runs. On a personal account it may also be kept and used to improve their models, unless you turn that off. It is a setting, usually under data controls, and you have to go and find it.</p>
-        <p style="margin-top:.9em">Business and team plans promise not to train on your data, which is most of why workplaces pay for them. If you handle other people's information, clients, staff, students, use the workplace plan rather than your own account, and ask before you connect a work account to anything.</p>
-        <p style="margin-top:.9em">One rule covers the rest of it. Paste nothing you would not be willing to forward to an outside vendor.</p>
+        <p>Business and team plans promise not to train on your data, which is most of why workplaces pay for them. Telling the two apart is easy: if you signed up yourself with a personal email, you are on the consumer plan. If you handle other people's information, clients, staff, students, use the workplace plan rather than your own account, and ask whoever administers that account, usually IT, before you connect it to anything.</p>
+        <p>One rule covers the rest of it. Paste nothing you would not be willing to forward to an outside vendor.</p>
       </div>
 
     <article class="entry" id="e-fresheyes">
@@ -1543,8 +1544,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>GitHub is the website where projects kept under <a href="#e-git">version control</a> live online. A project's folder, together with its whole history, is called a repository, repo for short. Upload yours to GitHub, an action builders call pushing, and it is backed up off your laptop, reachable from any computer, and shareable with a link, the way a document becomes shareable the moment it goes into Google Drive.</p>
-        <p style="margin-top:.9em">It is also where the world publishes its software. Many of the tools in this site's log link straight to a GitHub repository, and every repo greets you the same way: a file called the README as its front page, telling you what the thing is and how to install it, and a star count in the corner, which is the closest thing software has to a review score. You do not need to write code to use any of this. Reading the README and handing the link to your agent is using GitHub.</p>
-        <p style="margin-top:.9em">For building, two habits. Let the agent push your commits to GitHub after every working session, so the online copy stays current and your laptop stops being the only place the project exists. And remember that a public repo is public: the <a href="#e-apikey">API key</a> rule about never publishing secrets applies here word for word. One thing to keep straight before you move on: a repo link shows people your files, not a running app. Turning those files into something anyone can use is the next entry's job, and GitHub is the copy it works from.</p></div>
+        <p style="margin-top:.9em">It is also where the world publishes its software. The PROJECT PAGE buttons on the tools in this site's log land on GitHub repositories, and every repo greets you the same way: a file called the README as its front page, telling you what the thing is and how to install it, and a star count in the corner, which is the closest thing software has to a review score. You do not need to write code to use any of this. Reading the README and handing the link to your agent is using GitHub.</p>
+        <p style="margin-top:.9em">For building, two habits. Let the agent push your commits to GitHub after every working session, so the online copy stays current and your laptop stops being the only place the project exists. And remember that a public repo is public: the <a href="#e-apikey">API key</a> rule about never publishing secrets applies here word for word, and it is not only keys. Client names, prices and anything else your files happen to contain go up with them, and stay in the history even after you delete them. If the work is not meant to be read by strangers, set the repo to private, which is a switch in its settings and costs nothing. One thing to keep straight before you move on: a repo link shows people your files, not a running app. Turning those files into something anyone can use is the next entry's job, and GitHub is the copy it works from.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>The site you are reading is a repository on GitHub. Every file, and every version of every file back to the first commit, sits in that one repo, and each time a change is pushed the live site rebuilds itself within a couple of minutes. Nobody has ever attached it to an email.</p></div>
       </div>
@@ -1793,8 +1794,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <li data-cat="write admin"><a class="tool-name" href="https://www.grammarly.com" target="_blank" rel="noopener">Grammarly ↗</a><span class="tool-what">Narrow and good at it. Catches what you would not, in the tone you set, inside whatever you are already writing in. (free tier)</span></li>
         <li data-cat="research"><a class="tool-name" href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity ↗</a><span class="tool-what">Search that answers the question and shows you the sources it used. (free tier)</span></li>
         <li data-cat="research"><a class="tool-name" href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM ↗</a><span class="tool-what">You give it your own documents and it answers from those, citing the page it took each claim from. (free tier)</span></li>
-        <li data-cat="research"><span class="tool-name">Deep research modes</span><span class="tool-what">Built into ChatGPT, Claude and Gemini. Give it a question, come back later, get a cited report.</span></li>
-        <li data-cat="research"><a class="tool-name" href="https://elicit.com" target="_blank" rel="noopener">Elicit ↗</a><span class="tool-what">Built for academic papers. Useful if your questions live in published research.</span></li>
+        <li data-cat="research"><span class="tool-name">Deep research modes</span><span class="tool-what">Built into ChatGPT, Claude and Gemini. Give it a question, come back later, get a cited report. (included with those plans)</span></li>
+        <li data-cat="research"><a class="tool-name" href="https://elicit.com" target="_blank" rel="noopener">Elicit ↗</a><span class="tool-what">Built for academic papers. Useful if your questions live in published research. (free tier)</span></li>
         <li data-cat="build"><a class="tool-name" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code ↗</a><span class="tool-what">An agent that works in your actual project. Plans, edits files, runs things, checks its own work. (paid)</span></li>
         <li data-cat="build"><a class="tool-name" href="https://cursor.com" target="_blank" rel="noopener">Cursor ↗</a><span class="tool-what">A code editor with AI built into the middle of it rather than bolted on the side. (free tier)</span></li>
         <li data-cat="build"><a class="tool-name" href="https://windsurf.com" target="_blank" rel="noopener">Windsurf ↗</a><span class="tool-what">The same idea as Cursor, with the agent keeping track of the whole project rather than the file you have open. Try one, then the other. (free tier)</span></li>
@@ -1836,13 +1837,13 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <span class="plate-num" aria-hidden="true">09</span>
         <div class="plate-body">
           <h2 id="h-monday" tabindex="-1">Start here<br>on Monday</h2>
-          <p>Reading about AI is not using AI. Three moves, in order: one today, one this week, one this month. The last one ends with something of yours on the internet.</p>
+          <p>Reading about AI is not using AI. Three moves if you are building something, and three more for office work if you are not. One today, one this week, one this month, on either track.</p>
         </div>
       </div>
     <div class="col">
       <ol class="close-list">
         <li><div><strong>Today: pick one assistant and give it real work</strong><p>Claude, ChatGPT or Gemini. Which one matters far less than people pretend. Use it for something real every day this week, and have at least one conversation where you paste in the actual thing you are working on rather than describing it. New task, new chat, for reasons <a href="#e-context">the context window entry</a> explains.</p></div></li>
-        <li><div><strong>This week: install one agentic tool and build one small thing</strong><p>One, not four. Claude Code is the default; pick Antigravity instead if you would rather work inside an editor. If the black window puts you off, <a href="#e-terminal">the terminal entry</a> is a two-minute read and the right thing to do first. Then build the smallest real thing you would actually use: one page, one purpose. Turn <a href="#e-planmode">plan mode</a> on and read the plan before you say yes to it. Expect to pay: the free allowances on agentic tools are small, and steady use means a paid plan, about the price of a couple of streaming services.</p></div></li>
+        <li><div><strong>This week: install one agentic tool and build one small thing</strong><p>One, not four. Claude Code is the default; pick Antigravity instead if you would rather work inside an editor. If the black window puts you off, <a href="#e-terminal">the terminal entry</a> is a two-minute read and the right thing to do first. Then build the smallest real thing you would actually use: one page, one purpose. Turn <a href="#e-planmode">plan mode</a> on and read the plan before you say yes to it. Expect to pay: the free allowances on agentic tools are small, and steady use means a paid plan. As this is written the usual ones run about S$25 to S$40 a month, and only heavy agent use goes past that.</p></div></li>
         <li><div><strong>This month: run the whole loop once, end to end</strong><p>Write a <a href="#e-spec">spec</a>, build it, make the agent <a href="#e-verification">check its own work</a>, deploy it somewhere free like Netlify so it has an address a stranger could open, run <a href="#e-securityfive">the security five</a> over it, and show it to one person. Finishing one small thing properly teaches more than reading another ten chapters.</p></div></li>
       </ol>
 
@@ -1855,6 +1856,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <li><div><strong>This week: put one real work task through an assistant every day</strong><p>Real work, not test questions. Before you use what comes back, run the <a href="#e-hitl">chapter four test</a> on it: what does it cost me if this is wrong? Cheap and reversible, use it. Expensive or permanent, check it properly first.</p></div></li>
         <li><div><strong>Every time: nothing goes out under your name unreviewed</strong><p>Before anything AI-written leaves your desk, give it the <a href="#e-fresheyes">fresh-eyes check</a>. Fresh chat, only the finished text, and the instruction to read it as if a stranger wrote it. It takes a minute and it catches the thing you would have been embarrassed by.</p></div></li>
       </ol>
+
+      <p class="wall-note">One pointer for both tracks. The PROJECT PAGE buttons on <a href="index.html">the log</a> land on GitHub repositories, and <a href="#e-github">the GitHub entry</a> in chapter six explains how to read one without writing any code.</p>
 
       <div class="aside-note">
         <span class="label">One Singapore note</span>

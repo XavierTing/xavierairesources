@@ -112,9 +112,37 @@
     open(r.slug, r.target, moveFocus);
   }
   window.addEventListener("hashchange", function () { route(true); });
+
+  /* A restored chapter would otherwise start mid-course with no explanation,
+     so say it once. Dismissable, and it clears itself on the first jump. */
+  function resumeCue(slug) {
+    try {
+      var sec = document.getElementById("ch-" + slug);
+      if (!sec) return;
+      var cue = document.createElement("p");
+      cue.className = "filter-count";
+      cue.innerHTML = 'Resuming where you left off · <a href="#cover">Back to contents</a> ';
+      var drop = document.createElement("button");
+      drop.type = "button";
+      drop.className = "chip";
+      drop.textContent = "Dismiss";
+      function bin() { if (cue.parentNode) cue.parentNode.removeChild(cue); }
+      drop.addEventListener("click", bin);
+      window.addEventListener("hashchange", bin);
+      cue.appendChild(drop);
+      sec.insertBefore(cue, sec.firstChild);
+    } catch (e) {}
+  }
+
   // Deep links (ai-101.html#e-mcp) must open their chapter on first load too.
   // A bare load reopens wherever you stopped last time instead of the cover.
-  if (location.hash) route(false); else open(lastRead(), null, false);
+  if (location.hash) {
+    route(false);
+  } else {
+    var back = lastRead();
+    open(back, null, false);
+    if (back !== "cover") resumeCue(back);
+  }
 
   /* ── Context window meter ───────────────────────────────── */
   var fill = document.getElementById("meterFill");
