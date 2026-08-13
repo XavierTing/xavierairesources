@@ -157,15 +157,15 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="chapbar" id="chapbar" aria-label="Chapters">
         <a class="chapbar-home" href="#cover">Artificial Intelligence 101</a>
         <ol class="chapbar-dots">
-          <li><a href="#basics" data-slug="basics"><span class="vh">The basics</span></a></li>
-          <li><a href="#layers" data-slug="layers"><span class="vh">The three layers</span></a></li>
-          <li><a href="#craft" data-slug="craft"><span class="vh">Getting good at it</span></a></li>
-          <li><a href="#judgment" data-slug="judgment"><span class="vh">Knowing when not to trust it</span></a></li>
-          <li><a href="#reach" data-slug="reach"><span class="vh">How it reaches the real world</span></a></li>
-          <li><a href="#stack" data-slug="stack"><span class="vh">What you're actually building</span></a></li>
-          <li><a href="#ship" data-slug="ship"><span class="vh">Shipping it safely</span></a></li>
-          <li><a href="#tools" data-slug="tools"><span class="vh">Which tool to actually open</span></a></li>
-          <li><a href="#monday" data-slug="monday"><span class="vh">Start here on Monday</span></a></li>
+          <li><a href="#basics" data-slug="basics"><span class="vh">The basics of AI</span></a></li>
+          <li><a href="#layers" data-slug="layers"><span class="vh">Agents and agentic AI</span></a></li>
+          <li><a href="#craft" data-slug="craft"><span class="vh">Prompting and working habits</span></a></li>
+          <li><a href="#judgment" data-slug="judgment"><span class="vh">Judgment and guardrails</span></a></li>
+          <li><a href="#reach" data-slug="reach"><span class="vh">The machinery underneath</span></a></li>
+          <li><a href="#stack" data-slug="stack"><span class="vh">The parts of a web app</span></a></li>
+          <li><a href="#ship" data-slug="ship"><span class="vh">Debugging and security</span></a></li>
+          <li><a href="#tools" data-slug="tools"><span class="vh">The tool directory</span></a></li>
+          <li><a href="#monday" data-slug="monday"><span class="vh">Where to start</span></a></li>
         </ol>
         <p class="chapbar-now"><span class="chapbar-count" id="chapCount"></span><span id="chapNow">Nine chapters</span></p>
         <button class="chapbar-menu" id="chapMenuBtn" type="button" aria-expanded="false" aria-controls="chapmenu">Contents</button>
@@ -175,54 +175,54 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         </span>
       </nav>
 
-      <!-- SYNC: number, title, tag, question and time mirror the cover contents list below — edit both. The descriptions and word lists are cover-only. -->
+      <!-- SYNC: number, title, tag and time mirror the cover contents list below — edit both. The descriptions and word lists are cover-only. -->
       <div class="chapmenu" id="chapmenu" hidden>
         <div class="chapmenu-inner">
           <p class="label">Jump to a chapter</p>
           <ol class="contents-list">
             <li><a href="#basics">
               <span class="c-num" aria-hidden="true">01</span>
-              <span class="c-body"><span class="c-title">The basics</span><span class="c-q">What is AI actually doing when it answers you?</span></span>
+              <span class="c-body"><span class="c-title">The basics of AI</span></span>
               <span class="c-time">11 min</span>
             </a></li>
             <li><a href="#layers">
               <span class="c-num" aria-hidden="true">02</span>
-              <span class="c-body"><span class="c-title">The three layers</span><span class="c-q">Why does everyone keep saying agent?</span></span>
+              <span class="c-body"><span class="c-title">Agents and agentic AI</span></span>
               <span class="c-time">4 min</span>
             </a></li>
             <li><a href="#craft">
               <span class="c-num" aria-hidden="true">03</span>
-              <span class="c-body"><span class="c-title">Getting good at it</span><span class="c-q">Why do some people get so much more out of it?</span></span>
+              <span class="c-body"><span class="c-title">Prompting and working habits</span></span>
               <span class="c-time">12 min</span>
             </a></li>
             <li><a href="#judgment">
               <span class="c-num" aria-hidden="true">04</span>
-              <span class="c-body"><span class="c-title">Knowing when not to trust it</span><span class="c-q">When should you not trust it?</span></span>
+              <span class="c-body"><span class="c-title">Judgment and guardrails</span></span>
               <span class="c-time">5 min</span>
             </a></li>
             <li><a href="#reach">
               <span class="c-num" aria-hidden="true">05</span>
-              <span class="c-body"><span class="c-title">How it reaches the real world<span class="c-tag">Advanced</span></span><span class="c-q">How does a chat box end up sending real emails?</span></span>
+              <span class="c-body"><span class="c-title">The machinery underneath<span class="c-tag">Advanced</span></span></span>
               <span class="c-time">12 min</span>
             </a></li>
             <li><a href="#stack">
               <span class="c-num" aria-hidden="true">06</span>
-              <span class="c-body"><span class="c-title">What you're actually building<span class="c-tag">Builder</span></span><span class="c-q">What is your agent actually making while you watch?</span></span>
+              <span class="c-body"><span class="c-title">The parts of a web app<span class="c-tag">Builder</span></span></span>
               <span class="c-time">10 min</span>
             </a></li>
             <li><a href="#ship">
               <span class="c-num" aria-hidden="true">07</span>
-              <span class="c-body"><span class="c-title">Shipping it safely<span class="c-tag">Builder</span></span><span class="c-q">How do you get it out the door without handing strangers your keys?</span></span>
+              <span class="c-body"><span class="c-title">Debugging and security<span class="c-tag">Builder</span></span></span>
               <span class="c-time">6 min</span>
             </a></li>
             <li><a href="#tools">
               <span class="c-num" aria-hidden="true">08</span>
-              <span class="c-body"><span class="c-title">Which tool to actually open<span class="c-tag">Reference</span></span><span class="c-q">Which app fits the job in front of you?</span></span>
+              <span class="c-body"><span class="c-title">The tool directory<span class="c-tag">Reference</span></span></span>
               <span class="c-time">3 min</span>
             </a></li>
             <li><a href="#monday">
               <span class="c-num" aria-hidden="true">09</span>
-              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span></span>
+              <span class="c-body"><span class="c-title">Where to start</span></span>
               <span class="c-time">4 min</span>
             </a></li>
           </ol>
@@ -236,74 +236,76 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
     <!-- ════ COVER ════ -->
     <section class="chapter is-open" id="ch-cover" data-slug="cover" data-title="Artificial Intelligence 101" aria-labelledby="h-cover">
     <header class="masthead col">
-      <h1 class="display">Artificial<br>Intelligence 101</h1>
+      <!-- carries id + tabindex because the cover has no contents heading: this is
+           the section's accessible name and the focus target 101.js moves to -->
+      <h1 id="h-cover" class="display" tabindex="-1">Artificial<br>Intelligence 101</h1>
       <hr class="rule-gold">
       <p class="lede">All you need to understand and become proficient in AI.</p>
     </header>
 
-      <!-- SYNC: number, title, tag, question and time mirror the chapmenu list above — edit both. The descriptions and word lists are cover-only. -->
+      <!-- SYNC: number, title, tag and time mirror the chapmenu list above — edit both. The descriptions and word lists are cover-only.
+           Every row is the same three decks: title, one description, one labelled word list. No row gets a fourth. -->
       <nav class="contents col" aria-label="Contents">
-        <h2 id="h-cover" class="label" tabindex="-1">Nine chapters, easiest first</h2>
         <ol class="contents-list">
           <li><a href="#basics">
               <span class="c-num" aria-hidden="true">01</span>
-              <span class="c-body"><span class="c-title">The basics</span><span class="c-q">What is AI actually doing when it answers you?</span><span class="c-desc">Where it all starts. What a model really is, why a long chat gets worse, and how to spot a made-up answer before it costs you.</span><span class="c-words c-words--grouped"><span class="c-gl">What it is</span><span class="c-gw">Model · LLM · Image model · Video model · Reasoning model</span><span class="c-gl">What you feed it</span><span class="c-gw">Prompt · Token · Context window</span><span class="c-gl">Where it falls short</span><span class="c-gw">Memory · Hallucination · Web search</span></span></span>
+              <span class="c-body"><span class="c-title">The basics of AI</span><span class="c-desc">Where it all starts. What a model really is, why a long chat gets worse, and how to spot a made-up answer before it costs you.</span><span class="c-words c-words--grouped"><span class="c-gl">What it is</span><span class="c-gw">Model · LLM · Image model · Video model · Reasoning model</span><span class="c-gl">What you feed it</span><span class="c-gw">Prompt · Token · Context window</span><span class="c-gl">Where it falls short</span><span class="c-gw">Memory · Hallucination · Web search</span></span></span>
               <span class="c-time">11 min</span>
             </a></li>
           <li><a href="#layers">
               <span class="c-num" aria-hidden="true">02</span>
-              <span class="c-body"><span class="c-title">The three layers</span><span class="c-q">Why does everyone keep saying agent?</span><span class="c-desc">Three layers, from AI that hands you advice to AI that goes and gets the outcome. Tell them apart, and know which one you are actually using.</span><span class="c-words">Generative AI · AI agent · Agentic AI</span></span>
+              <span class="c-body"><span class="c-title">Agents and agentic AI</span><span class="c-desc">Everyone says agent and almost nobody means the same thing. Three layers, from AI that hands you advice to AI that goes and gets the outcome, and how to tell which one you are actually using.</span><span class="c-words c-words--grouped"><span class="c-gl">The three layers</span><span class="c-gw">Generative AI · AI agent · Agentic AI</span></span></span>
               <span class="c-time">4 min</span>
             </a></li>
           <li><a href="#craft">
               <span class="c-num" aria-hidden="true">03</span>
-              <span class="c-body"><span class="c-title">Getting good at it</span><span class="c-q">Why do some people get so much more out of it?</span><span class="c-desc">The habits. How to brief an AI properly, what to write down before it starts, and how to get work running on a schedule without you.</span><span class="c-words c-words--grouped"><span class="c-gl">How you ask</span><span class="c-gw">Multimodal · Prompt engineering · Context engineering · Model tiers · Vibe coding</span><span class="c-gl">What you write down</span><span class="c-gw">Skills · Rules file · Plan mode · Spec</span><span class="c-gl">What runs without you</span><span class="c-gw">Loops · Routines · Cron</span></span></span>
+              <span class="c-body"><span class="c-title">Prompting and working habits</span><span class="c-desc">Some people get far more out of AI than others, and the gap is almost entirely habit. How to brief one properly, what to write down before it starts, and how to get work running on a schedule without you.</span><span class="c-words c-words--grouped"><span class="c-gl">How you ask</span><span class="c-gw">Multimodal · Prompt engineering · Context engineering · Model tiers · Vibe coding</span><span class="c-gl">What you write down</span><span class="c-gw">Skills · Rules file · Plan mode · Spec</span><span class="c-gl">What runs without you</span><span class="c-gw">Loops · Routines · Cron</span></span></span>
               <span class="c-time">12 min</span>
             </a></li>
           <li><a href="#judgment">
               <span class="c-num" aria-hidden="true">04</span>
-              <span class="c-body"><span class="c-title">Knowing when not to trust it</span><span class="c-q">When should you not trust it?</span><span class="c-desc">Set the limits before you start, not after something goes wrong. Then make the agent check its own work, and get a second one to check that.</span><span class="c-words c-words--grouped"><span class="c-gl">Limits you set</span><span class="c-gw">Human in the loop · Guardrails</span><span class="c-gl">Checks you run</span><span class="c-gw">Fresh-eyes review · Verification loop</span></span></span>
+              <span class="c-body"><span class="c-title">Judgment and guardrails</span><span class="c-desc">Set the limits before you start, not after something goes wrong. Then make the agent check its own work, and get a second one to check that.</span><span class="c-words c-words--grouped"><span class="c-gl">Limits you set</span><span class="c-gw">Human in the loop · Guardrails</span><span class="c-gl">Checks you run</span><span class="c-gw">Fresh-eyes review · Verification loop</span></span></span>
               <span class="c-time">5 min</span>
             </a></li>
           <li><a href="#reach">
               <span class="c-num" aria-hidden="true">05</span>
-              <span class="c-body"><span class="c-title">How it reaches the real world<span class="c-tag">Advanced</span></span><span class="c-q">How does a chat box end up sending real emails?</span><span class="c-desc">The machinery underneath. What lets a model act, how it plugs into your apps, where it looks things up, and what holds the whole thing together.</span><span class="c-words c-words--grouped"><span class="c-gl">How it acts</span><span class="c-gw">Tool call · Computer use</span><span class="c-gl">How it plugs in</span><span class="c-gw">API · Webhooks · Connectors · MCP · Plugins</span><span class="c-gl">What it knows</span><span class="c-gw">RAG · Second brain</span><span class="c-gl">What holds it together</span><span class="c-gw">Harness · Subagent</span></span></span>
+              <span class="c-body"><span class="c-title">The machinery underneath<span class="c-tag">Advanced</span></span><span class="c-desc">A chat box ends up sending real emails, and this is how. What lets a model act, how it plugs into your apps, where it looks things up, and what holds it all together.</span><span class="c-words c-words--grouped"><span class="c-gl">How it acts</span><span class="c-gw">Tool call · Computer use</span><span class="c-gl">How it plugs in</span><span class="c-gw">API · Webhooks · Connectors · MCP · Plugins</span><span class="c-gl">What it knows</span><span class="c-gw">RAG · Second brain</span><span class="c-gl">What holds it together</span><span class="c-gw">Harness · Subagent</span></span></span>
               <span class="c-time">12 min</span>
             </a></li>
           <li><a href="#stack">
               <span class="c-num" aria-hidden="true">06</span>
-              <span class="c-body"><span class="c-title">What you're actually building<span class="c-tag">Builder</span></span><span class="c-q">What is your agent actually making while you watch?</span><span class="c-desc">The pieces of a real app, the tools you build it with, and what it takes to put it online. Enough to read the updates scrolling past.</span><span class="c-words c-words--grouped"><span class="c-gl">The pieces</span><span class="c-gw">Frontend and backend · HTML, CSS and JavaScript · Framework · Database</span><span class="c-gl">Your workbench</span><span class="c-gw">Terminal · Version control · GitHub</span><span class="c-gl">Going live</span><span class="c-gw">API key · Deployment · Authentication</span></span></span>
+              <span class="c-body"><span class="c-title">The parts of a web app<span class="c-tag">Builder</span></span><span class="c-desc">Frontend, backend, database, deployment. What each one is, the tools you build with, and what it takes to put something online. Enough to read the updates scrolling past.</span><span class="c-words c-words--grouped"><span class="c-gl">The pieces</span><span class="c-gw">Frontend and backend · HTML, CSS and JavaScript · Framework · Database</span><span class="c-gl">Your workbench</span><span class="c-gw">Terminal · Version control · GitHub</span><span class="c-gl">Going live</span><span class="c-gw">API key · Deployment · Authentication</span></span></span>
               <span class="c-time">10 min</span>
             </a></li>
           <li><a href="#ship">
               <span class="c-num" aria-hidden="true">07</span>
-              <span class="c-body"><span class="c-title">Shipping it safely<span class="c-tag">Builder</span></span><span class="c-q">How do you get it out the door without handing strangers your keys?</span><span class="c-desc">The loop that gets you from broken to working, and the checklist that closes the five doors a beginner's app leaves open.</span><span class="c-words c-words--grouped"><span class="c-gl">Getting it working</span><span class="c-gw">The build loop · Debugging</span><span class="c-gl">Keeping it safe</span><span class="c-gw">The security five · Security audit · Prompt injection</span></span></span>
+              <span class="c-body"><span class="c-title">Debugging and security<span class="c-tag">Builder</span></span><span class="c-desc">Getting it out the door without handing strangers your keys. The loop that takes you from broken to working, and the checklist that closes the five doors a beginner's app leaves open.</span><span class="c-words c-words--grouped"><span class="c-gl">Getting it working</span><span class="c-gw">The build loop · Debugging</span><span class="c-gl">Keeping it safe</span><span class="c-gw">The security five · Security audit · Prompt injection</span></span></span>
               <span class="c-time">6 min</span>
             </a></li>
           <li><a href="#tools">
               <span class="c-num" aria-hidden="true">08</span>
-              <span class="c-body"><span class="c-title">Which tool to actually open<span class="c-tag">Reference</span></span><span class="c-q">Which app fits the job in front of you?</span><span class="c-desc">Not a lesson. A directory to come back to. Pick a job, and the list filters down to the mainstream apps built for it.</span><span class="c-words">31 tools, filtered by job</span></span>
+              <span class="c-body"><span class="c-title">The tool directory<span class="c-tag">Reference</span></span><span class="c-desc">Somewhere to come back to rather than something to read through. Pick the job in front of you, and the list filters down to the mainstream apps built for it.</span><span class="c-words c-words--grouped"><span class="c-gl">What is inside</span><span class="c-gw">31 tools, filtered by job</span></span></span>
               <span class="c-time">3 min</span>
             </a></li>
           <li><a href="#monday">
               <span class="c-num" aria-hidden="true">09</span>
-              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-desc">Reading about AI is not using AI. Three moves if you are building, three more for coursework and office work. One today, one this week, one this month.</span><span class="c-words">Three moves: today, this week, this month · Three more for office work</span></span>
+              <span class="c-body"><span class="c-title">Where to start</span><span class="c-desc">Reading about AI is not using AI. Two tracks, three moves each: one for the day you want to build something, one for coursework, documents and email. One today, one this week, one this month.</span><span class="c-words c-words--grouped"><span class="c-gl">What you leave with</span><span class="c-gw">Three moves: today, this week, this month · Three more for office work</span></span></span>
               <span class="c-time">4 min</span>
             </a></li>
         </ol>
         <p class="wall-note">Every word in those lists gets its own plain-English page in here. Easiest first, so you can read straight through.</p>
-        <p class="wall-note">Read them in order and it builds. Chapter five is the machinery underneath, and chapters six and seven are for the day you want to build something real. You can leave all three for later.</p>
+        <p class="wall-note">Read them in order and it builds. Chapter five is the part under the bonnet, and chapters six and seven are for the day you want to build something real. You can leave all three for later.</p>
         <p class="contents-go"><a class="btn-link" href="#basics">Start at the beginning</a></p>
       </nav>
     </section>
 
     <!-- ════ 01 THE BASICS ════ -->
-    <section class="chapter" id="ch-basics" data-slug="basics" data-title="The basics" aria-labelledby="h-basics">
+    <section class="chapter" id="ch-basics" data-slug="basics" data-title="The basics of AI" aria-labelledby="h-basics">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/01-loom.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">01</span>
         <div class="plate-body">
-          <h2 id="h-basics" tabindex="-1">What the thing<br>actually is</h2>
+          <h2 id="h-basics" tabindex="-1">The basics<br>of AI</h2>
           <p>Eleven words that explain how AI behaves. Get these and everything after them makes sense.</p>
         </div>
       </div>
@@ -543,17 +545,17 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <!-- SYNC: prev/next titles are hand-written in every chapter's chapend -->
       <nav class="chapend" aria-label="Chapter navigation">
         <a class="chapend-a prev" href="#cover" rel="prev"><span class="label">Previous</span><span class="chapend-t">Contents</span></a>
-        <a class="chapend-a next" href="#layers" rel="next"><span class="label">Next chapter</span><span class="chapend-t">The three layers</span></a>
+        <a class="chapend-a next" href="#layers" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Agents and agentic AI</span></a>
       </nav>
     </section>
 
     <!-- ════ 02 THE THREE LAYERS ════ -->
-    <section class="chapter" id="ch-layers" data-slug="layers" data-title="The three layers" aria-labelledby="h-layers">
+    <section class="chapter" id="ch-layers" data-slug="layers" data-title="Agents and agentic AI" aria-labelledby="h-layers">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/02-orrery.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">02</span>
         <div class="plate-body">
-          <h2 id="h-layers" tabindex="-1">The three layers</h2>
+          <h2 id="h-layers" tabindex="-1">Agents and<br>agentic AI</h2>
           <p>This is the upgrade. Three layers, and almost every confusing AI conversation is two people standing on different ones.</p>
         </div>
       </div>
@@ -675,19 +677,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#basics" rel="prev"><span class="label">Previous</span><span class="chapend-t">The basics</span></a>
-        <a class="chapend-a next" href="#craft" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Getting good at it</span></a>
+        <a class="chapend-a prev" href="#basics" rel="prev"><span class="label">Previous</span><span class="chapend-t">The basics of AI</span></a>
+        <a class="chapend-a next" href="#craft" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Prompting and working habits</span></a>
       </nav>
     </section>
 
     <!-- ════ 03 GETTING GOOD AT IT ════ -->
-    <section class="chapter" id="ch-craft" data-slug="craft" data-title="Getting good at it" aria-labelledby="h-craft">
+    <section class="chapter" id="ch-craft" data-slug="craft" data-title="Prompting and working habits" aria-labelledby="h-craft">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/05-desk.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">03</span>
         <div class="plate-body">
-          <h2 id="h-craft" tabindex="-1">Getting good at it</h2>
-          <p>The gap between people who find AI useful and people who find it disappointing is almost entirely habit.</p>
+          <h2 id="h-craft" tabindex="-1">Prompting and<br>working habits</h2>
+          <p>Twelve words, and not one of them asks you to write any code. They are all things you do, not things you install.</p>
         </div>
       </div>
       <div class="objectives col">
@@ -977,18 +979,18 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#layers" rel="prev"><span class="label">Previous</span><span class="chapend-t">The three layers</span></a>
-        <a class="chapend-a next" href="#judgment" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Knowing when not to trust it</span></a>
+        <a class="chapend-a prev" href="#layers" rel="prev"><span class="label">Previous</span><span class="chapend-t">Agents and agentic AI</span></a>
+        <a class="chapend-a next" href="#judgment" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Judgment and guardrails</span></a>
       </nav>
     </section>
 
     <!-- ════ 04 KNOWING WHEN NOT TO TRUST IT ════ -->
-    <section class="chapter" id="ch-judgment" data-slug="judgment" data-title="Knowing when not to trust it" aria-labelledby="h-judgment">
+    <section class="chapter" id="ch-judgment" data-slug="judgment" data-title="Judgment and guardrails" aria-labelledby="h-judgment">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/06-scale.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">04</span>
         <div class="plate-body">
-          <h2 id="h-judgment" tabindex="-1">Knowing when<br>not to trust it</h2>
+          <h2 id="h-judgment" tabindex="-1">Judgment and<br>guardrails</h2>
           <p>The four words that separate people who use AI well from people who eventually get burned by it.</p>
         </div>
       </div>
@@ -1102,20 +1104,20 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#craft" rel="prev"><span class="label">Previous</span><span class="chapend-t">Getting good at it</span></a>
-        <a class="chapend-a next" href="#reach" rel="next"><span class="label">Next chapter</span><span class="chapend-t">How it reaches the real world</span></a>
+        <a class="chapend-a prev" href="#craft" rel="prev"><span class="label">Previous</span><span class="chapend-t">Prompting and working habits</span></a>
+        <a class="chapend-a next" href="#reach" rel="next"><span class="label">Next chapter</span><span class="chapend-t">The machinery underneath</span></a>
       </nav>
     </section>
 
     <!-- ════ 05 HOW IT REACHES THE REAL WORLD ════ -->
-    <section class="chapter" id="ch-reach" data-slug="reach" data-title="How it reaches the real world" aria-labelledby="h-reach">
+    <section class="chapter" id="ch-reach" data-slug="reach" data-title="The machinery underneath" aria-labelledby="h-reach">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/04-arm.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">05</span>
         <div class="plate-body">
           <p class="plate-tag">Advanced</p>
-          <h2 id="h-reach" tabindex="-1">How it reaches<br>the real world</h2>
-          <p>The machinery underneath. None of it is needed to use AI well, but it is what people mean when they talk about agents.</p>
+          <h2 id="h-reach" tabindex="-1">The machinery<br>underneath</h2>
+          <p>None of this is needed to use AI well, but it is what people mean when they talk about agents.</p>
         </div>
       </div>
       <div class="objectives col">
@@ -1352,19 +1354,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#judgment" rel="prev"><span class="label">Previous</span><span class="chapend-t">Knowing when not to trust it</span></a>
-        <a class="chapend-a next" href="#stack" rel="next"><span class="label">Next chapter</span><span class="chapend-t">What you're actually building</span></a>
+        <a class="chapend-a prev" href="#judgment" rel="prev"><span class="label">Previous</span><span class="chapend-t">Judgment and guardrails</span></a>
+        <a class="chapend-a next" href="#stack" rel="next"><span class="label">Next chapter</span><span class="chapend-t">The parts of a web app</span></a>
       </nav>
     </section>
 
     <!-- ════ 06 WHAT YOU'RE ACTUALLY BUILDING ════ -->
-    <section class="chapter" id="ch-stack" data-slug="stack" data-title="What you're actually building" aria-labelledby="h-stack">
+    <section class="chapter" id="ch-stack" data-slug="stack" data-title="The parts of a web app" aria-labelledby="h-stack">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/08-frame.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">06</span>
         <div class="plate-body">
           <p class="plate-tag">Builder</p>
-          <h2 id="h-stack" tabindex="-1">What you're<br>actually building</h2>
+          <h2 id="h-stack" tabindex="-1">The parts of<br>a web app</h2>
           <p>Ten words. Server, database, deployment and the rest. They turn your agent's updates from noise into a story you can follow.</p>
         </div>
       </div>
@@ -1605,20 +1607,20 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#reach" rel="prev"><span class="label">Previous</span><span class="chapend-t">How it reaches the real world</span></a>
-        <a class="chapend-a next" href="#ship" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Shipping it safely</span></a>
+        <a class="chapend-a prev" href="#reach" rel="prev"><span class="label">Previous</span><span class="chapend-t">The machinery underneath</span></a>
+        <a class="chapend-a next" href="#ship" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Debugging and security</span></a>
       </nav>
     </section>
 
     <!-- ════ 07 SHIPPING IT SAFELY ════ -->
-    <section class="chapter" id="ch-ship" data-slug="ship" data-title="Shipping it safely" aria-labelledby="h-ship">
+    <section class="chapter" id="ch-ship" data-slug="ship" data-title="Debugging and security" aria-labelledby="h-ship">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/09-lighthouse.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">07</span>
         <div class="plate-body">
           <p class="plate-tag">Builder</p>
-          <h2 id="h-ship" tabindex="-1">Shipping<br>it safely</h2>
-          <p>The loop and the checklist that get a real product out the door without handing strangers your keys.</p>
+          <h2 id="h-ship" tabindex="-1">Debugging<br>and security</h2>
+          <p>Five words. The first two get a broken thing working, and the last three keep it from leaking on the day a stranger finally opens it.</p>
         </div>
       </div>
       <div class="objectives col">
@@ -1749,19 +1751,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#stack" rel="prev"><span class="label">Previous</span><span class="chapend-t">What you're actually building</span></a>
-        <a class="chapend-a next" href="#tools" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Which tool to actually open</span></a>
+        <a class="chapend-a prev" href="#stack" rel="prev"><span class="label">Previous</span><span class="chapend-t">The parts of a web app</span></a>
+        <a class="chapend-a next" href="#tools" rel="next"><span class="label">Next chapter</span><span class="chapend-t">The tool directory</span></a>
       </nav>
     </section>
 
     <!-- ════ 08 WHICH TOOL TO ACTUALLY OPEN ════ -->
-    <section class="chapter" id="ch-tools" data-slug="tools" data-title="Which tool to actually open" aria-labelledby="h-tools">
+    <section class="chapter" id="ch-tools" data-slug="tools" data-title="The tool directory" aria-labelledby="h-tools">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/03-pegboard.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">08</span>
         <div class="plate-body">
           <p class="plate-tag">Reference</p>
-          <h2 id="h-tools" tabindex="-1">Which tool<br>to actually open</h2>
+          <h2 id="h-tools" tabindex="-1">The tool<br>directory</h2>
           <p>Not a lesson. A directory to come back to, filtered by the job you are trying to do.</p>
         </div>
       </div>
@@ -1824,18 +1826,18 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
     </section>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#ship" rel="prev"><span class="label">Previous</span><span class="chapend-t">Shipping it safely</span></a>
-        <a class="chapend-a next" href="#monday" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Start here on Monday</span></a>
+        <a class="chapend-a prev" href="#ship" rel="prev"><span class="label">Previous</span><span class="chapend-t">Debugging and security</span></a>
+        <a class="chapend-a next" href="#monday" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Where to start</span></a>
       </nav>
     </section>
 
     <!-- ════ 09 START HERE ON MONDAY ════ -->
-    <section class="chapter" id="ch-monday" data-slug="monday" data-title="Start here on Monday" aria-labelledby="h-monday">
+    <section class="chapter" id="ch-monday" data-slug="monday" data-title="Where to start" aria-labelledby="h-monday">
       <div class="plate">
         <img class="plate-art" src="assets/101/light/07-door.png" alt="" width="560" height="560" loading="lazy" decoding="async">
         <span class="plate-num" aria-hidden="true">09</span>
         <div class="plate-body">
-          <h2 id="h-monday" tabindex="-1">Start here<br>on Monday</h2>
+          <h2 id="h-monday" tabindex="-1">Where<br>to start</h2>
           <p>Reading about AI is not using AI. Three moves if you are building something, and three more for coursework and office work if you are not. One today, one this week, one this month, on either track.</p>
         </div>
       </div>
@@ -1875,7 +1877,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="recap">
         <h3 class="label">All fifty-six, in one line each</h3>
         <dl class="recap-list">
-          <div class="rg">01 · The basics</div>
+          <div class="rg">01 · The basics of AI</div>
           <dt><a href="#e-model">Model</a></dt><dd>A model predicts. It doesn't retrieve.</dd>
           <dt><a href="#e-llm">LLM</a></dt><dd>An LLM (large language model) is the engine. The chat app is the car built around it.</dd>
           <dt><a href="#e-imagemodel">Image model</a></dt><dd>It isn't drawing a picture. It's removing everything that isn't one.</dd>
@@ -1887,11 +1889,11 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <dt><a href="#e-hallucination">Hallucination</a></dt><dd>Confident and correct are not the same thing. Check anything that matters.</dd>
           <dt><a href="#e-websearch">Web search</a></dt><dd>Web search lets the model look it up instead of guessing from memory.</dd>
           <dt><a href="#e-reasoning">Reasoning model</a></dt><dd>A reasoning model works the problem out on paper before it gives you the answer.</dd>
-          <div class="rg">02 · The three layers</div>
+          <div class="rg">02 · Agents and agentic AI</div>
           <dt><a href="#e-generative">Generative AI</a></dt><dd>Generative AI creates. You prompt, it responds.</dd>
           <dt><a href="#e-agent">AI agent</a></dt><dd>One gives you advice. The other gives you an outcome.</dd>
           <dt><a href="#e-agentic">Agentic AI</a></dt><dd>You set a goal, not a task. It works out the rest.</dd>
-          <div class="rg">03 · Getting good at it</div>
+          <div class="rg">03 · Prompting and working habits</div>
           <dt><a href="#e-multimodal">Multimodal</a></dt><dd>Stop typing everything. Show it.</dd>
           <dt><a href="#e-prompteng">Prompt engineering</a></dt><dd>Onboard it. Don't interrogate it.</dd>
           <dt><a href="#e-contexteng">Context engineering</a></dt><dd>Feed it less, but feed it the right things.</dd>
@@ -1904,12 +1906,12 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <dt><a href="#e-rulesfile">Rules file</a></dt><dd>A rules file is the standing instructions an agent reads before every job in your project.</dd>
           <dt><a href="#e-planmode">Plan mode</a></dt><dd>Make the agent show its plan and get your yes before it builds anything.</dd>
           <dt><a href="#e-spec">Spec</a></dt><dd>Write down what you want, and how you will know it is done, before anyone builds.</dd>
-          <div class="rg">04 · Knowing when not to trust it</div>
+          <div class="rg">04 · Judgment and guardrails</div>
           <dt><a href="#e-hitl">Human in the loop</a></dt><dd>Decide by the cost of being wrong, not by how clever it looks.</dd>
           <dt><a href="#e-guardrails">Guardrails</a></dt><dd>Decide what it's allowed to touch before you start.</dd>
           <dt><a href="#e-fresheyes">Fresh-eyes review</a></dt><dd>Have a second agent with no history judge the work, because it sees what the builder cannot.</dd>
           <dt><a href="#e-verification">Verification loop</a></dt><dd>Agents get good when they can check their own work and go again.</dd>
-          <div class="rg">05 · How it reaches the real world</div>
+          <div class="rg">05 · The machinery underneath</div>
           <dt><a href="#e-toolcall">Tool call</a></dt><dd>A tool call is AI picking something up to get the job done.</dd>
           <dt><a href="#e-computeruse">Computer use</a></dt><dd>AI stopped being a tool you operate. Now it operates the tools for you.</dd>
           <dt><a href="#e-api">API</a></dt><dd>An API (application programming interface) is the socket software plugs into.</dd>
@@ -1921,7 +1923,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <dt><a href="#e-secondbrain">Second brain</a></dt><dd>A second brain reads once and keeps notes that grow, instead of re-reading forever.</dd>
           <dt><a href="#e-harness">Harness</a></dt><dd>Two products can run the same model. The harness is why one feels miles better.</dd>
           <dt><a href="#e-subagent">Subagent</a></dt><dd>Subagents are helpers with their own clean memory that work in parallel and report back small.</dd>
-          <div class="rg">06 · What you're actually building</div>
+          <div class="rg">06 · The parts of a web app</div>
           <dt><a href="#e-terminal">Terminal</a></dt><dd>The typed-command window where an agent gets real hands on your computer.</dd>
           <dt><a href="#e-frontback">Frontend and backend</a></dt><dd>The browser shows it. The server decides it. Never trust the browser alone.</dd>
           <dt><a href="#e-webtrio">HTML, CSS and JavaScript</a></dt><dd>Structure, style, behaviour. The three languages every web page is written in.</dd>
@@ -1932,7 +1934,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <dt><a href="#e-github">GitHub</a></dt><dd>The website where projects live and are shared. The README on every repo tells you how to use it.</dd>
           <dt><a href="#e-deploy">Deployment</a></dt><dd>Moving your app from your laptop to an always-on computer the world can reach.</dd>
           <dt><a href="#e-auth">Authentication</a></dt><dd>Login plus a bouncer on every door. Added late, tested door by door.</dd>
-          <div class="rg">07 · Shipping it safely</div>
+          <div class="rg">07 · Debugging and security</div>
           <dt><a href="#e-buildloop">The build loop</a></dt><dd>Design, build, test, database, login, deploy, test again. That order, every time.</dd>
           <dt><a href="#e-debugging">Debugging</a></dt><dd>Copy the exact error to the agent, let it fix, test it yourself, repeat.</dd>
           <dt><a href="#e-securityfive">The security five</a></dt><dd>Five standard doors burglars try first. Bolt all five before you ship.</dd>
@@ -1952,7 +1954,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
-        <a class="chapend-a prev" href="#tools" rel="prev"><span class="label">Previous</span><span class="chapend-t">Which tool to actually open</span></a>
+        <a class="chapend-a prev" href="#tools" rel="prev"><span class="label">Previous</span><span class="chapend-t">The tool directory</span></a>
         <a class="chapend-a next" href="#cover" rel="next"><span class="label">Back to</span><span class="chapend-t">Contents</span></a>
       </nav>
     </section>
@@ -1960,19 +1962,30 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
     </main>
     </div>
 
-    <footer class="byline">
-      <div class="colophon-who">
-        <img class="avatar" src="assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
-        <div>
-          <p>Written by Xavier Ting, a design and product leader working on AI transformation in banking, in Singapore. Nothing here is sponsored and no tool paid to be on this page.</p>
-          <p class="colophon-links m">
-            <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
-            <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
-            <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
-          </p>
+    <!-- SYNC: the site-wide footer, identical on index.html, curator.html and
+         the generated tool pages. This copy has no access to LOG_UPDATED
+         (the course page does not load tools.js), so its date is written in
+         by hand — bump it here whenever LOG_UPDATED changes. -->
+    <footer class="colophon">
+      <div>
+        <h2>Logged &amp; maintained</h2>
+        <div class="colophon-who">
+          <img class="avatar" src="assets/portrait.jpg"
+               width="44" height="44" alt="Xavier Ting" loading="lazy">
+          <div>
+            <p>Xavier Ting · Vice President at OCBC. I write these up so the tools stay usable by people who don't ship code for a living.</p>
+            <p class="colophon-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
+              <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+            </p>
+          </div>
         </div>
       </div>
-      <p class="byline-status">Last updated August 2026. Everything about AI tooling moves fast, so treat the tool list as a map rather than a verdict.</p>
+      <div>
+        <h2>Status</h2>
+        <p>Last updated <span data-updated>13.08.2026</span></p>
+      </div>
     </footer>
 
   </div>

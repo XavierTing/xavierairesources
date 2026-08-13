@@ -201,6 +201,15 @@ curved arrows, hand-lettered caps. Exactly five colours, the Daylight palette:
 - Xavier is positioned as "Vice President at OCBC", everywhere, with no
   department name. The bio page, footer, README and JSON-LD already comply.
 - Light mode is the default; dark is the opt-in.
+- Every page carries the same `footer.colophon`: a "Logged & maintained"
+  block (portrait, one line on who Xavier is, the three profile links) on the
+  left, and "Status" pushed to the right. Nothing else goes in it. Credentials
+  live in the Person JSON-LD and in `llms.txt`, not in the footer. Four copies
+  exist, so a change to one is a change to all: `index.html`, `curator.html`,
+  the template in `generate-seo.mjs`, and `ai-101.html`.
+- The footer date comes from `LOG_UPDATED` everywhere except `ai-101.html`,
+  which does not load `tools.js`; bump that page's hand-written date in the
+  same commit that bumps `LOG_UPDATED`.
 - Everything on the site is free to read and free of affiliate links, and the
   copy may say so.
 - The nav tab label stays the short "AI 101" even though the course's full

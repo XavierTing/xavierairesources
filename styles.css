@@ -865,14 +865,19 @@ html:not(.js) .theme-toggle { display: none; }
 
 /* ---------- colophon ---------- */
 
+/* Two blocks, set like the masthead above it: who on the left, status
+   pushed to the far right. The who-block keeps a reading measure of its
+   own so the wide left column does not stretch the sentence. */
 .colophon {
   margin-top: clamp(64px, 10vh, 112px);
   border-top: 1px solid var(--line);
   padding: 36px 0 56px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px 48px;
+  align-items: start;
 }
+.colophon-who p { max-width: 46ch; }
 
 .colophon h2 {
   font-family: var(--font-mono);

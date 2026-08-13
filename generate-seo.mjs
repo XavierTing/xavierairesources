@@ -334,10 +334,6 @@ ${steps}
         </div>
       </div>
       <div>
-        <h2>Credentials</h2>
-        <p>${SITE.curator.credentials.map(esc).join(" · ")}</p>
-      </div>
-      <div>
         <h2>Status</h2>
         <p>Last updated ${esc(LOG_UPDATED)}</p>
       </div>
