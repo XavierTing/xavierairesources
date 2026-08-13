@@ -1,10 +1,70 @@
-# Pending diagrams — five AI 101 entries shipped text-only
+# Diagram queue — AI 101
+
+## Status (2026-08-13)
+
+**All 56 entries now carry a diagram.** The 14 that shipped text-only were
+generated, quantised, recoloured and pasted in on 2026-08-13. Nothing is
+pending; what remains below is the redraw queue for art-level flaws in older
+diagrams.
+
+## How these are made
+
+Generation runs through the **Codex CLI on a ChatGPT subscription**, not the
+OpenAI REST API. This matters: the API key on this machine has no credit
+(`credit_balance_exhausted`), and a Codex token is scoped to coding sessions
+so `/v1/images/generations` returns 401 `Missing scopes: api.model.request`.
+Codex nevertheless carries its own `image_gen__imagegen` tool, which draws on
+the subscription and needs no API credit at all.
+
+```sh
+npm install -g @openai/codex && codex login       # once
+python3 assets/101/generate-diagrams.py /tmp/dg/raw --print dg-loops   # see the prompt
+# drive codex exec per slug with that prompt (see the loop in the commit message),
+# then:
+python3 assets/101/make-diagram.py /tmp/dg/raw/*.png /tmp/dg/staged
+python3 assets/101/recolor.py /tmp/dg/staged/*.png     # explicit paths, never bare
+python3 assets/101/verify-diagrams.py                  # must exit 0
+```
+
+`generate-diagrams.py` still holds a working OpenAI REST path (`--preflight`
+checks credit first) for the day the API account is funded. Either route feeds
+the same `make-diagram.py`.
+
+### Three prompt rules learned the hard way
+
+Every first-pass reject on 2026-08-13 came from one of these, and all three are
+now in the shared STYLE block or the subjects:
+
+1. **Pin each word to its object.** A word offered in the whitelist without a
+   home gets applied everywhere it plausibly fits: "FULL" landed on all sixty
+   sticky notes, "PICTURE" on two panels, "SOURCE" on the wrong object. Say
+   "the word SOURCE must be on the tag attached to the answer sheet, never on a
+   newspaper inside the bubble", and state the total count of words.
+2. **Ask for a 3:2 drawn area, not a direction.** "Spread across the width"
+   produced a 1500x475 ribbon; the previous "fill the frame" produced a
+   1500x1083 block. Name the target ratio and say the pipeline crops to the
+   drawing's bounding box, so the model understands why.
+3. **Ember is line work only.** Never a filled shape or a label background. One
+   ember-filled label pushed a diagram to 1.22% ember; the family runs 0.15% to
+   1.24% but always as thin strokes and small marks.
+
+### Do not run recolor.py or optimise.py bare
+
+`xaviers-ai-101/art/` still holds **13 superseded flat-poster `dg-*.png`** from
+the previous art era (4 colours, no terracotta), and that directory is
+`recolor.py`'s bulk source. A bare run recolours those and copies them over the
+shipped diagrams in **both** `assets/101/` and `assets/101/light/`, silently
+reverting 13 entries. `recolor.py` now refuses a bare run for exactly this
+reason; pass explicit paths. `optimise.py` belongs to that dead era too and its
+4-colour diagram palette is wrong for this set: `make-diagram.py` supersedes it.
+
+---
 
 ## Redraw queue (added 2026-08-13, from the three-persona review)
 
 Ten existing diagrams have art-level flaws that captions/alt text now
-compensate for; when the sketchnote pipeline is back, redraw these in the
-same family and the caption patches can be simplified:
+compensate for; redraw these in the same family and the caption patches can be
+simplified:
 
 - dg-hitl — row label UNDOABLE reads as "cannot be done"; relabel REVERSIBLE
 - dg-git — flag says JUMP BACK but the arc's arrowhead lands on a LATER node;
@@ -26,78 +86,6 @@ same family and the caption patches can be simplified:
 - dg-planmode — give the top path visibly more loop-back arrows than the
   bottom so the "shorter path" claim is checkable
 
-The OpenAI key had no credit and the codex CLI was absent when these five
-entries (Web search, Cron, Webhooks, RAG, Second brain) were added on
-2026-08-13, so they joined the eight existing diagram-less entries.
-To finish them: generate each render in the sketchnote family (wobbly ink,
-curved arrows, hand-lettered caps, the five linen hexes #F2ECE0 #E7DECB
-#B6966F #1A1815 #B4512D, landscape 3:2, ~1500x1000), write the linen file
-to assets/101/light/dg-<name>.png, recolor to assets/101/dg-<name>.png with
-the mapping in recolor.py, then paste the matching figure block below back
-into its entry's .entry-rail in ai-101.html (after the .analogy).
-
-## Figure blocks, ready to paste
-
-### dg-websearch
-
-```html
-      <figure>
-        <img class="dg-img" src="assets/101/light/dg-websearch.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A model drawn as a head inside a thought bubble full of old newspapers marked training data, with an arrow reaching out of the bubble to a fresh web page marked today, and a small tag on the answer reading source attached.">
-        <figcaption class="dg-cap">Same model, two sources. Memory ends at training day; the arrow out of the bubble is what search adds.</figcaption>
-      </figure>
-```
-
-### dg-cron
-
-```html
-      <figure>
-        <img class="dg-img" src="assets/101/light/dg-cron.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A wall calendar and a clock wired to a small bell. The wire runs from the clock to a task card marked run the job, with tick marks at the same hour across several calendar days showing it firing every day on the dot.">
-        <figcaption class="dg-cap">Nothing clever, everything reliable. The clock reaches the set time and the job simply runs.</figcaption>
-      </figure>
-```
-
-### dg-webhook
-
-```html
-      <figure>
-        <img class="dg-img" src="assets/101/light/dg-webhook.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="Two panels. Left, a person walks to an empty porch again and again, each trip crossed out as wasted. Right, a courier presses a doorbell wired straight to the house, and the resident answers once, exactly when the parcel arrives.">
-        <figcaption class="dg-cap">Polling versus being told. The doorbell side does no wasted trips and still reacts first.</figcaption>
-      </figure>
-```
-
-### dg-rag
-
-```html
-      <figure>
-        <img class="dg-img" src="assets/101/light/dg-rag.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A question card travels toward a bookshelf, where a librarian figure pulls three pages out and clips them to the card. The card, now carrying the pages, arrives at the model, and the answer coming out has a page reference tag on it.">
-        <figcaption class="dg-cap">The model never reads the whole shelf. It answers from the few pages fetched for this one question.</figcaption>
-      </figure>
-```
-
-### dg-secondbrain
-
-```html
-      <figure>
-        <img class="dg-img" src="assets/101/light/dg-secondbrain.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="Left, a tall pile of documents being re-read from the top for every question, with tired repeat arrows circling it. Right, a small notebook whose pages link to each other with curved lines, growing a new linked page as one more document is read once and filed.">
-        <figcaption class="dg-cap">Left reads everything every time. Right read it once and wrote it down, and the notes keep linking up.</figcaption>
-      </figure>
-```
-
-## dg-github (entry e-github, chapter 06 stack, after e-git)
-
-Figure block to paste into the entry-rail after the analogy div:
-
-```html
-      <figure>
-        <img class="dg-img" src="assets/101/light/dg-github.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A large open folder drawn as a repository, with a front page marked README and a star stamp with a count beside it. A gold timeline of commit nodes runs beneath the folder. Arrows come in from a laptop pushing changes up, and go out to a stranger reading the README and to a small host machine watching the repo.">
-        <figcaption class="dg-cap">One folder online: the README explains it, the stars vouch for it, and the host watches it.</figcaption>
-      </figure>
-```
-
-Prompt: sketchnote style, wobbly ink outlines, curved arrows, hand-lettered caps, exactly the 5 hexes #F2ECE0 #E7DECB #B6966F #1A1815 #B4512D, ~1500x1000. Subject: a repository drawn as one big open folder with a README front page and a star-count stamp; a commit timeline underneath; a laptop pushing in from the left, a reader and a small deploy host drawing from it on the right.
+Add a subject for each to `assets/101/diagram-prompts.json` and run the same
+pipeline. Replacing art needs no HTML change beyond the width/height attributes
+if the new render's dimensions differ, which `verify-diagrams.py` will catch.

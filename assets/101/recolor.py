@@ -128,9 +128,29 @@ def recolour(path: Path, check: bool) -> str:
 
 def main():
     check = "--check" in sys.argv
-    files = sorted(SRC.glob("*.png"))
+    # Named files win over the bulk glob, and you almost always want them.
+    # SRC still holds 13 superseded flat-poster dg-*.png from the old art era
+    # (4 colours, no terracotta). A bare run recolours those and copies them
+    # over the shipped 5-colour diagrams in BOTH assets/101/ and
+    # assets/101/light/, silently reverting 13 entries to art nobody wants.
+    # So: pass the files you actually mean.
+    #     python3 assets/101/recolor.py path/to/dg-loops.png [more.png ...]
+    named = [Path(a) for a in sys.argv[1:] if not a.startswith("--")]
+    for f in named:
+        if not f.is_file():
+            sys.exit(f"not a file: {f}")
+    files = named or sorted(SRC.glob("*.png"))
     if not files:
         sys.exit(f"no PNGs in {SRC}")
+    if not named and "--force-bulk" not in sys.argv:
+        stale = [f.name for f in files if f.name.startswith("dg-")]
+        if stale:
+            sys.exit(
+                f"refusing a bulk run: {len(stale)} stale dg-*.png in {SRC} would\n"
+                f"overwrite shipped diagrams ({', '.join(stale[:3])} ...).\n"
+                f"Name the files you mean, or pass --force-bulk if you really "
+                f"intend to rebuild every plate from that directory."
+            )
     for f in files:
         print(recolour(f, check))
     if not check:

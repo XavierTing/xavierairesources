@@ -198,9 +198,15 @@ curved arrows, hand-lettered caps. Exactly five colours, the Daylight palette:
 - Markup: `img.dg-img` with exact width/height, `loading="lazy"
   decoding="async"`, a full descriptive alt, and a `figcaption.dg-cap` that
   adds one insight rather than repeating the alt.
-- Entries may ship text-only (several do). When art generation is unavailable,
-  park the ready-to-paste figure block and its image prompt in
-  `assets/101/PENDING-DIAGRAMS.md`.
+- Every entry carries a diagram (all 56 since 2026-08-13). A new entry should
+  ship with one; if art generation is unavailable, park the ready-to-paste
+  figure block in `assets/101/PENDING-DIAGRAMS.md` and its subject in
+  `assets/101/diagram-prompts.json`.
+- The pipeline is generate (Codex `image_gen`, on a ChatGPT subscription) →
+  `assets/101/make-diagram.py` (trim, 1500px, snap to the five) →
+  `assets/101/recolor.py <explicit paths>` → `assets/101/verify-diagrams.py`.
+  Never run `recolor.py` or `optimise.py` bare: their source directory holds 13
+  superseded diagrams that would overwrite shipped art in both themes.
 
 ## 8. Site-wide invariants
 
