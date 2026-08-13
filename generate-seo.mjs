@@ -324,7 +324,7 @@ ${steps}
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="${escAttr(SITE.curator.name)}" loading="lazy">
           <div>
-            <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor)}. I write these up so the tools stay usable by people who don't ship code for a living.</p>
+            <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor)}. I build with AI every day and curate the resources I personally use and find useful.</p>
             <p class="colophon-links m">
               <a href="${SITE.curator.linkedin}" rel="noopener">LinkedIn ↗</a>
               <a href="${SITE.curator.x}" rel="noopener">X ↗</a>
