@@ -5,7 +5,7 @@ existing entry follows, so that new content written by any person or model is
 indistinguishable in voice, structure and art from what is already here.
 
 The site is three tabs served as plain HTML, CSS and JavaScript with no build
-step: **The log** (a curated directory of AI tools), **AI 101** (a 56-term
+step: **The tools** (a curated directory of AI tools), **AI 101** (a 56-term
 plain-English course), and **The curator** (bio). Preview locally with
 `python3 -m http.server` from the repo root.
 
@@ -15,7 +15,7 @@ plain-English course), and **The curator** (bio). Preview locally with
 
 | Source of truth | Generated from it (never hand-edit) |
 |---|---|
-| `tools.js` — one object per log entry | `tools/<slug>.html`, the card block + JSON-LD in `index.html`, `sitemap.xml`, `robots.txt`, `llms.txt` |
+| `tools.js` — one object per tool entry | `tools/<slug>.html`, the card block + JSON-LD in `index.html`, `sitemap.xml`, `robots.txt`, `llms.txt` |
 | `ai-101.html` — the whole course, hand-owned | nothing (the generator never touches it) |
 | `curator.html` — hand-owned | nothing |
 | `assets/cards/*.webp` — dark-theme card art masters | `assets/cards/light/*.webp` via `python3 assets/cards/lighten.py` |
@@ -64,7 +64,7 @@ background. That reader is the bar every sentence has to clear.
   the tertiary-student persona, read only the new content, and report back
   what each term means in their own words. Fix anything they mark opaque.
 
-## 4. The log: adding an entry to tools.js
+## 4. The tools: adding an entry to tools.js
 
 Append one object to `TOOLS` and bump `LOG_UPDATED` (DD.MM.YYYY). Fields:
 
@@ -91,7 +91,7 @@ MCP, RAG, cron, GitHub and the rest of `AI101_TERMS` in `generate-seo.mjs`) on
 each tool page, so write those words in plain linkable form. If the entry
 teaches a concept the course covers, mention the concept by name once.
 
-## 5. The log: card infographic style (assets/cards/)
+## 5. The tools: card infographic style (assets/cards/)
 
 Every card carries one monoline blueprint illustration: a technical-drawing
 metaphor of what the tool does (a UI under calipers, an experiment tree, a
@@ -162,7 +162,7 @@ the course lies about itself:
    og:description, WebPage description, and the closing "Fifty-six words"
    paragraph all carry the term count as a word.
 7. `generate-seo.mjs`: the `llms.txt` course line's counts, and a new
-   `AI101_TERMS` pattern if log pages should link the term. Rerun the generator.
+   `AI101_TERMS` pattern if tool pages should link the term. Rerun the generator.
 8. `README.md` and `.impeccable/surfaces/ai-101-html.md` count references.
 
 Then verify with a browser: the deep link `ai-101.html#e-slug` opens the right

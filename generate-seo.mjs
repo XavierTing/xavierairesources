@@ -263,7 +263,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <span class="brand-sub m">AI for the rest of us</span>
       </a>
       <nav class="site-nav m" aria-label="Site sections">
-        <a href="../index.html" aria-current="true">The log</a>
+        <a href="../index.html" aria-current="true">The tools</a>
         <a href="../ai-101.html">AI 101</a>
         <a href="../curator.html">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
@@ -272,7 +272,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
     <main id="tool-root">
       <nav class="crumbs m" aria-label="Breadcrumb">
-        <a href="../index.html">The log</a>
+        <a href="../index.html">The tools</a>
         <span class="sep">/</span>
         <span class="here">${esc(t.name)}</span>
       </nav>
@@ -310,7 +310,7 @@ ${steps}
         </div>
       </div>
 
-      <a class="back-link" href="../index.html">← Back to the log</a>
+      <a class="back-link" href="../index.html">← Back to the tools</a>
 
       <nav class="pager" aria-label="More tools">
         <a href="${slug(prev.name)}.html">← ${esc(prev.name)}</a>
@@ -479,7 +479,7 @@ writeFileSync(
 User-agent: *
 Allow: /
 
-# Answer engines are welcome. This log exists to be quoted.
+# Answer engines are welcome. This list exists to be quoted.
 # See /llms.txt for the full content in plain markdown.
 User-agent: GPTBot
 Allow: /

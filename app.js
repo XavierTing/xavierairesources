@@ -218,7 +218,7 @@
     /* breadcrumbs */
     var crumbs = el("nav", "crumbs m");
     crumbs.setAttribute("aria-label", "Breadcrumb");
-    var home = el("a", null, "The log");
+    var home = el("a", null, "The tools");
     home.href = "index.html";
     crumbs.appendChild(home);
     crumbs.appendChild(el("span", "sep", "/"));
@@ -295,7 +295,7 @@
     how.appendChild(howBody);
     sections.appendChild(how);
 
-    var back = el("a", "back-link", "← Back to the log");
+    var back = el("a", "back-link", "← Back to the tools");
     back.href = "index.html";
 
     /* prev / next pager */

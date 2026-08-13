@@ -1,6 +1,6 @@
 # AI Resources — AI for the rest of us
 
-A curated log of AI tools for designing, building, writing and working with agents.
+A curated list of AI tools for designing, building, writing and working with agents.
 Each entry explains why it matters, when to reach for it, and how to run it.
 No hype, no affiliate links.
 
@@ -22,7 +22,7 @@ deploy time. Open `index.html` and it works.
 | `AGENTS.md` | **The authoring contract.** Voice, entry schemas, sync checklists and the art specs. Read it before adding content (loaded automatically by coding agents; `CLAUDE.md` imports it). |
 | `tools.js` | **The curation.** One object per tool — this is the only file to edit to add or change an entry. |
 | `site.js` | Site identity and the canonical URL. One line to change after deploying. |
-| `index.html` | The card grid, category tabs, hero. The "The log" tab. |
+| `index.html` | The card grid, category tabs, hero. The "The tools" tab. |
 | `ai-101.html` | The "AI 101" tab: the Artificial Intelligence 101 course (56 terms, 9 chapters). **Hand-owned** — the generator never touches it. |
 | `curator.html` | The "The curator" tab: bio and why the site exists. **Hand-owned.** |
 | `101.css` / `101.js` | The course page's styles (over `styles.css` tokens) and behaviour (chapter router + interactives). |
@@ -76,5 +76,5 @@ brainstorm → plan → build flow. Chrome DevTools MCP verified every render.
 
 ## Licence
 
-Code: MIT — take the pattern and build your own log.
+Code: MIT — take the pattern and build your own list.
 Written content, curation and portrait: © Xavier Ting. Please credit if you quote it.
