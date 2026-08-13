@@ -337,7 +337,16 @@ html:not(.js) .theme-toggle { display: none; }
   font-size: clamp(1rem, 1.6vw, 1.125rem);
   color: var(--body-ink);
 }
-.hero-cta { margin-top: 14px; }
+.hero-cta { margin-top: 16px; color: var(--ink); }
+.hero-cta a {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-line);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.hero-cta a:hover { text-decoration-color: currentColor; }
 
 /* the curator, present on the page: portrait in a gold ring + role */
 .hero-byline {
