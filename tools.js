@@ -602,4 +602,4 @@ const TOOLS = [
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "13.08.2026";
+const LOG_UPDATED = "14.08.2026";

@@ -265,6 +265,30 @@ figure { margin: 0 0 26px; }
 .btn.ghost:hover { background: transparent; border-color: var(--line-bright); color: var(--ink); box-shadow: none; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 
+/* a file shown as it actually sits on disk. It reads as an inset of the panel
+   it lives in, so it drops to --bg where the panel is --glass. Mono lines are
+   kept short in the markup, but a skill's description line is naturally longer
+   than a phone is wide: overflow-x keeps that scroll inside the block instead
+   of letting the page itself slide sideways at 390px. */
+.filespec {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+}
+.filespec code {
+  font-family: var(--font-mono);
+  font-size: var(--m-size);
+  line-height: 1.75;
+  color: var(--ink);
+  white-space: pre;
+}
+/* the lines the assistant actually carries around, marked in the text-duty
+   gold so the point survives without a legend */
+.filespec b { font-weight: 400; color: var(--accent); }
+
 /* context window: a chat that fills up. The panel's buttons drive it, so the
    frame itself is a picture: nothing inside is typed into or scrolled by hand.
    Bubbles are pinned to the bottom and the oldest ones clip past the top. */
@@ -719,6 +743,28 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
 .fixtable tr:last-child td { border-bottom: 0; }
 .fixtable td + td, .fixtable th + th { border-left: 1px solid var(--line); }
 .fixtable td:first-child { font-weight: 500; color: var(--ink); width: 11rem; }
+
+/* ---------- harness flow: one prompt in, finished work out ---------- */
+
+.harness-flow {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 10px; margin: 0 0 16px;
+  font-family: var(--font-mono); font-size: var(--m-size);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.hf-box {
+  border: 1px solid var(--line-bright); border-radius: var(--radius-sm);
+  padding: 8px 12px; background: var(--bg-raise); color: var(--ink);
+  white-space: nowrap;
+}
+.hf-core { background: var(--accent-fill); color: var(--on-accent); border-color: var(--accent-fill); }
+.hf-arrow { color: var(--accent); }
+.hf-wrap {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  border: 1px dashed var(--accent); border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+.hf-title { flex-basis: 100%; color: var(--muted); }
 
 .next-steps { margin-top: clamp(30px, 5vw, 44px); border-top: 1px solid var(--line); padding-top: 24px; }
 .next-steps .label { margin-bottom: 10px; }

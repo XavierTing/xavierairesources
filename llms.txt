@@ -6,13 +6,13 @@ Curated by Xavier Ting, Vice President at OCBC.
 AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.
 
 - Site: https://xavierairesources.netlify.app/
-- Course: https://xavierairesources.netlify.app/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (59 terms, 9 chapters, about an hour)
+- Course: https://xavierairesources.netlify.app/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 9 chapters, about an hour)
 - Curator: https://xavierairesources.netlify.app/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: https://www.linkedin.com/in/xavierting/
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 26 · Categories: 6 · Last updated: 13.08.2026
+- Tools listed: 26 · Categories: 6 · Last updated: 14.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 

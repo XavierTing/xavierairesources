@@ -18,7 +18,7 @@
   "diagrams": {
     "dg-generative": {
       "parked": false,
-      "subject": "A single left to right flow showing one typed request becoming something made on the spot. Upper left: a rounded chat input box containing one wobbly scribbled line of handwriting and a small upright cursor bar, with PROMPT lettered underneath it. One curved gold arrow leaves the box and runs down to the centre. Centre: a large sheet of paper being written on at this moment, its top four ruled lines complete and its fifth line stopping halfway across, with a small pen nib resting at the end of that unfinished line. Below and to the right of the sheet, two smaller half-made things: a picture frame whose upper half is drawn and whose lower half is still empty, and a sound wave whose bars shorten and stop partway along. Far right, separated from the made things by a clear gap: one small ember cross floating in the gap, and beyond it a sand-filled rounded rectangle with BUTTON lettered inside it. No arrow, no line and nothing at all touches or points at that rectangle. The flow ends at the ember cross.",
+      "subject": "A single left to right flow showing one typed request becoming things made on the spot. Left edge, vertically centred: a rounded gold chat input box holding one wobbly scribbled line of handwriting and a small upright cursor bar, with PROMPT lettered underneath it. Three curved gold arrows fan out from the right edge of that box to three things stacked in a tall column across the middle of the frame, every one of them visibly still being made. Top of the column: a sheet of paper whose top four ruled lines are finished and whose fifth line stops halfway across, a small pen nib resting at the end of that unfinished line. Middle of the column: a framed picture whose drawing is complete across the top half of the frame and simply absent across the bottom half, that bottom half left as plain empty background with no outline and no fill. Bottom of the column: a sound wave whose bars shorten and stop partway along. Right edge, vertically centred and separated from the column by a wide clear gap: one small ember cross floating in the gap, and beyond the cross a sand filled rounded rectangle with BUTTON lettered inside it. Nothing touches, points at or reaches that rectangle and no arrow crosses the gap. Use no dashed and no dotted lines anywhere in the drawing. Spread the four groups evenly so no corner of the frame is left empty.",
       "words": [
         "PROMPT",
         "BUTTON"
@@ -168,13 +168,51 @@
       ]
     },
     "dg-markdown": {
-      "parked": true,
+      "parked": false,
       "subject": "One typed sheet of paper in the centre, held upright, with a small file tab on its top edge lettered .MD. The sheet shows plain typed text: the first line begins with a large hash sign, the next three lines each begin with a hyphen, and one word further down is wrapped in a pair of double asterisks either side. The characters must read as typed symbols, not as formatted text. A person stands at the left of the sheet and a friendly robot stands at the right, both leaning in to read that same single sheet, with a small tick floating above each of them. Two curved gold arrows rise from the sheet to small labels: one from the hash sign to a label lettered HEADING, one from the column of hyphens to a label lettered BULLET.",
       "words": [
         "MD",
         "HEADING",
         "BULLET"
       ]
+    },
+    "dg-cli": {
+      "parked": true,
+      "subject": "Two nested frames making one picture. The outer frame is a wide terminal window drawn as a plain rectangle with a small title bar, and the title bar carries a label reading TERMINAL. Inside that window, three separate rounded cards sit in a row, each drawn as its own small tool with no buttons on it, and each card carries a label: the left card reads CLAUDE, the middle card reads CODEX, the right card reads GEMINI. A small typed prompt arrow, drawn as a wobbly right-pointing chevron, sits just left of the middle card to show it is the one being typed to. Below the outer window, outside it, a separate small hand-drawn icon of a mouse cursor is crossed out with a single stroke, and beside the crossed cursor is a label reading NO BUTTONS. Important: the three tool cards must sit clearly INSIDE the terminal window frame, because the whole point is that the window contains the tools.",
+      "words": [
+        "TERMINAL",
+        "CLAUDE",
+        "CODEX",
+        "GEMINI",
+        "NO BUTTONS"
+      ]
+    },
+    "dg-desktopapp": {
+      "parked": true,
+      "subject": "One engine, three doors. At the bottom centre, a single gold rounded box drawn as a machine with one visible gear, labelled SAME ENGINE. Three separate wobbly arrows rise from that box, fanning out to three different door shapes standing in a row above it. The left door is drawn as a terminal window with a typed line in it and is labelled TERMINAL. The middle door is drawn as an application window with a title bar and three chunky rounded buttons stacked inside it, and is labelled DESKTOP APP. The right door is drawn as a code editor window with a narrow side panel, labelled EDITOR. Above the middle door only, a small open eye is drawn with a short label reading YOU CAN SEE IT. Important: all three arrows must clearly start from the one engine box at the bottom, because the point is that a single engine sits behind all three doors.",
+      "words": [
+        "SAME ENGINE",
+        "TERMINAL",
+        "DESKTOP APP",
+        "EDITOR",
+        "YOU CAN SEE IT"
+      ]
     }
+  },
+  "dg-secrets": {
+    "subject": "A single key drawn on the left. A curved arrow takes it INTO a small closed box labelled ENV that sits apart from a stack of code sheets. A second curved arrow sends the code sheets alone out to a globe on the right, with the key clearly NOT among them. A small ember cross marks a discarded sheet that had the key drawn on it, showing the wrong way.",
+    "words": [
+      "ENV",
+      "CODE",
+      "KEY"
+    ]
+  },
+  "dg-oauth": {
+    "subject": "Left: a person at a small app window. A curved arrow sends them to a separate trusted desk in the middle marked GOOGLE, where a stamped pass is issued. A second curved arrow carries only that pass back to the app. The person's password is drawn once beside them staying put, ringed in ember to show it never travels. The pass carries two small ticks for the limited things it allows.",
+    "words": [
+      "GOOGLE",
+      "PASS",
+      "APP"
+    ]
   }
 }
