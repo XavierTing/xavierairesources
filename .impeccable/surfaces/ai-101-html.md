@@ -7,7 +7,7 @@ related_targets: ["101.css","101.js"]
 
 # Surface: ai-101.html (+ 101.css, 101.js, assets/101/)
 
-Scope: the "AI 101" tab — Xavier's AI 101 course as the site's second page. Visitor mode: Read — a beginner must understand 48 AI terms, not adopt tools; the back half turns understanding into operational literacy for building digital products with agentic tools (Claude Code, Codex, Antigravity, Kimi).
+Scope: the "AI 101" tab — the Artificial Intelligence 101 course as the site's second page. Visitor mode: Read — a beginner must understand 48 AI terms, not adopt tools; the back half turns understanding into operational literacy for building digital products with agentic tools (Claude Code, Codex, Antigravity, Kimi).
 
 Audience & job: people new to AI (colleagues, students, LinkedIn readers), arriving from the log tab or a shared link; "explain the words everyone keeps using — then the words you need to build." A tertiary student with zero AI knowledge must follow every sentence. Success: they finish a chapter and can define the words in it.
 

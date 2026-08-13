@@ -22,7 +22,7 @@ deploy time. Open `index.html` and it works.
 | `tools.js` | **The curation.** One object per tool — this is the only file to edit to add or change an entry. |
 | `site.js` | Site identity and the canonical URL. One line to change after deploying. |
 | `index.html` | The card grid, category tabs, hero. The "The log" tab. |
-| `ai-101.html` | The "AI 101" tab: Xavier's AI 101 course (55 terms, 9 chapters). **Hand-owned** — the generator never touches it. |
+| `ai-101.html` | The "AI 101" tab: the Artificial Intelligence 101 course (55 terms, 9 chapters). **Hand-owned** — the generator never touches it. |
 | `curator.html` | The "The curator" tab: bio and why the site exists. **Hand-owned.** |
 | `101.css` / `101.js` | The course page's styles (over `styles.css` tokens) and behaviour (chapter router + interactives). |
 | `theme.js` | The light/dark switch, shared by every page (light default, localStorage, art swap). |
