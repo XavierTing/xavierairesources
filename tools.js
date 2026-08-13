@@ -579,11 +579,13 @@ const TOOLS = [
   {
     num: "26",
     name: "Autoresearch",
-    category: "Agents & MCP",
+    category: "Connections",
     tagline: "Lets an AI agent run model experiments overnight",
     blurb: "Give an AI agent one small language model and one score to improve. It edits the training code, runs five-minute experiments, keeps what works, and records the rest while you sleep.",
     repo: "https://github.com/karpathy/autoresearch",
-    repoLabel: "VIEW REPO",
+    repoLabel: "PROJECT PAGE",
+    needs: "The uv helper, Python 3.10 or newer, an NVIDIA graphics card",
+    cost: "Free (the coding agent you point at it has its own plan)",
     why: "Most AI research still depends on a person proposing each change, running it, reading the result and deciding what to try next. Andrej Karpathy's Autoresearch turns that loop over to an AI coding agent. The agent edits one training file, runs a fixed five-minute experiment, compares a validation score, keeps improvements and discards regressions. It is a compact demonstration of what autonomous research can look like, not a general-purpose training service.",
     when: "Exploring autonomous AI research, teaching experiment design, or testing whether a coding agent can improve a small language model through repeated measured changes. The official version needs Python 3.10 or newer, uv and one NVIDIA GPU; it was tested by the project on an H100. Mac, Windows and AMD users need community forks linked from its README.",
     how: [

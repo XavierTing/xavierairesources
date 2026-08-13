@@ -12,7 +12,7 @@ AI & Design Leader. I build with AI daily and write up what works, so the tools 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 26 · Categories: 7 · Last updated: 13.08.2026
+- Tools listed: 26 · Categories: 6 · Last updated: 13.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -642,10 +642,12 @@ Starting a new screen that has to sit alongside an existing product, or handing 
 
 ## 26. Autoresearch — Lets an AI agent run model experiments overnight
 
-- **Category:** Agents & MCP
+- **Category:** Connections
 - **Made by:** karpathy
 - **Source:** https://github.com/karpathy/autoresearch
 - **Page:** https://xavierairesources.netlify.app/tools/autoresearch.html
+- **You'll need:** The uv helper, Python 3.10 or newer, an NVIDIA graphics card
+- **Cost:** Free (the coding agent you point at it has its own plan)
 - **Install / run:** `git clone https://github.com/karpathy/autoresearch.git`
 
 **Why use Autoresearch?**
@@ -667,11 +669,10 @@ Exploring autonomous AI research, teaching experiment design, or testing whether
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer
-- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
+- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Autoresearch
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem
 - **Writing**: Humanizer
-- **Agents & MCP**: Autoresearch
 
 ## Citation
 
