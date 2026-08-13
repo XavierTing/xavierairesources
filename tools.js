@@ -173,7 +173,7 @@ const TOOLS = [
     repo: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
     repoLabel: "VIEW GIST",
     why: "Most tools that let an AI use your documents work by searching them fresh for every question. The AI re-reads everything each time and builds up no understanding at all. Andrej Karpathy, one of the best known AI researchers, suggests the opposite: have the model keep a set of plain text notes. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. The reading work happens once instead of on every question.",
-    when: "Building a personal knowledge base out of notes, articles and bookmarks, where you want it to get more useful the more you add to it.",
+    when: "Building a second brain out of notes, articles and bookmarks: a personal knowledge base that gets more useful the more you add to it.",
     how: [
       "Read the page (a gist is simply a note published on GitHub). It describes an approach to follow, not something you install.",
       "Write down your own structure: what belongs on a page, and how pages should link to each other.",
