@@ -7,7 +7,7 @@
   OWN-WORLD: The Signal Field (see DESIGN.md), inherited whole: warm
   near-black under the aurora, glass plates, one brand gold. The course keeps
   its own devices inside it — the 96×4 gold bar, chapter plates, the recap.
-  STORY: "AI is one intimidating blob" becomes "AI is fifty-five words, and
+  STORY: "AI is one intimidating blob" becomes "AI is fifty-six words, and
   I have them" — and, in the two Builder chapters, "I can build with them".
   Nine chapters: one to five decode the vocabulary; six and seven are the
   Builder pair, teaching the stack under a real app and how to ship it
@@ -86,7 +86,7 @@
       "learningResourceType": "Course",
       "educationalLevel": "Beginner",
       "inLanguage": "en",
-      "timeRequired": "PT66M",
+      "timeRequired": "PT67M",
       "teaches": [
         "Model", "LLM (large language model)", "Image model", "Video model",
         "Prompt", "Token", "Context window", "Memory", "Hallucination",
@@ -122,7 +122,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "AI Resources", "item": "https://xavierairesources.netlify.app/" },
-        { "@type": "ListItem", "position": 2, "name": "AI 101", "item": "https://xavierairesources.netlify.app/ai-101.html" }
+        { "@type": "ListItem", "position": 2, "name": "Artificial Intelligence 101", "item": "https://xavierairesources.netlify.app/ai-101.html" }
       ]
     }
   ]
@@ -222,8 +222,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             </a></li>
             <li><a href="#monday">
               <span class="c-num" aria-hidden="true">09</span>
-              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-words">Three moves: today, this week, this month</span></span>
-              <span class="c-time">3 min</span>
+              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-words">Three moves: today, this week, this month · Three more for office work</span></span>
+              <span class="c-time">4 min</span>
             </a></li>
           </ol>
         </div>
@@ -288,10 +288,11 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             </a></li>
           <li><a href="#monday">
               <span class="c-num" aria-hidden="true">09</span>
-              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-words">Three moves: today, this week, this month</span></span>
-              <span class="c-time">3 min</span>
+              <span class="c-body"><span class="c-title">Start here on Monday</span><span class="c-q">What will you do differently this week?</span><span class="c-words">Three moves: today, this week, this month · Three more for office work</span></span>
+              <span class="c-time">4 min</span>
             </a></li>
         </ol>
+        <p class="wall-note">Those word lists are meant to look like that. Every word in them gets its own plain-English page in here, easiest first.</p>
         <p class="wall-note">Read them in order and it builds. Chapter five is the machinery underneath, and chapters six and seven are for the day you want to build something real. You can leave all three for later.</p>
         <p class="contents-go"><a class="btn-link" href="#basics">Start at the beginning</a></p>
       </nav>
@@ -353,8 +354,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>Nobody buys an engine. You buy a car. The engine matters enormously and you will still never see it.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-llm.png" width="1500" height="824" loading="lazy" decoding="async"
-             alt="A long shelf of books funnels down into one small machine. Text goes in on the left. On the right the machine has a single dial, labelled next word, pointing at one option out of five. Along the bottom, the line: one word at a time.">
-        <figcaption class="dg-cap">The library went in once, during training. What comes out is one word at a time, for ever.</figcaption>
+             alt="A long shelf of books funnels down into one small machine. Text goes in on the left by an arrow. On the right the machine drives a round gauge, marked like a clock face and labelled next word, with a single needle resting on one position. Along the bottom, the line: one word at a time.">
+        <figcaption class="dg-cap">The library went in once, during training. After that the needle picks one candidate word, then the next, for ever.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>An LLM (large language model) is the engine. The chat app is the car built around it.</p></div>
@@ -487,7 +488,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 <div class="field"><span class="label">What it is</span>
         <p>A hallucination is a confident answer that is simply made up. The model is not lying, because lying requires knowing the truth. It produces the most believable next thing. When believable and true come apart, you get a confident, well-formatted answer that is completely invented. A court case that never happened, a product feature that never shipped, a statistic with a decimal point on it to make it look researched.</p>
         <p style="margin-top:.9em">Fluency is not evidence. The polish of the answer tells you nothing about whether it's right.</p>
-        <p style="margin-top:.9em">There is a builder's version of this that bites harder. Asked to write software, a model will sometimes invent the name of a ready-made component that does not exist, and attackers have started registering those invented names and filling them with malware. It is one of <a href="#e-securityfive">the security five</a>.</p></div>
+        <p style="margin-top:.9em">There is a builder's version of this that bites harder. Asked to write software, a model will sometimes invent the name of a ready-made component, meaning a block of code someone else wrote that your project pulls in, when no such component exists. Attackers have started registering those invented names and filling them with malware. Nothing to do about it today if you are not building anything. <a href="#ship">Chapter seven</a> has it as one of <a href="#e-securityfive">the security five</a>.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Ask for five journal references for an essay and check them. Often one or two are perfectly formatted, plausibly titled, and do not exist. Lecturers catch this every semester.</p></div>
       </div>
@@ -573,6 +574,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>Generative AI creates. You prompt, it responds, one shot. Text, images, audio, code. Powerful, and it's what most people have actually used.</p>
+        <p style="margin-top:.9em">The AI you already had did the opposite job. It recognised things and sorted them: the spam filter deciding which mail is junk, the photo app grouping the same face into one album. Useful, and it never made anything that was not already there.</p>
         <p style="margin-top:.9em">But it only moves when you tell it to. It cannot see your files or press a button anywhere, and it has no plan of its own.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>One prompt writes your club's event caption. Another drafts an email to your professor. A third sketches a logo. Each time the pattern is the same: you ask, it makes, done.</p></div>
@@ -592,16 +594,17 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>An agent is AI with tools. A chatbot can only talk: it advises, and you do the doing. An agent can open things, fill things in and finish the job, so what comes back is the result rather than the instructions.</p></div>
+        <p>An agent is AI with tools. A chatbot can only talk: it advises, and you do the doing. An agent can open things, fill things in and finish the job, so what comes back is the result rather than the instructions.</p>
+        <p style="margin-top:.9em">It works in a loop, and the diagram names the three parts. It observes what is in front of it, thinks about the next step, acts, then looks again at what changed. Round and round until the job is done.</p></div>
       <div class="field"><span class="label">For example</span>
-        <p>Ask a chatbot to book a flight and it gives you the steps: the airline, the dates, the price. Smart, fast, genuinely useful. But you're still the one opening the tab and clicking buy. Ask an agent and it checks the dates, fills the form, completes the payment. You get the confirmation.</p></div>
+        <p>Ask a chatbot to book a flight and it gives you the steps: the airline, the dates, the price. Smart, fast, genuinely useful. But you're still the one opening the tab and clicking buy. Ask an agent and it checks the dates, fills the form, completes the payment. That last step only happens if you deliberately connected a payment method and left a gate on it that asks you first. You get the confirmation.</p></div>
       </div>
       <div class="entry-rail">
       <div class="analogy"><p>Every question about whether something is "really an agent" comes down to this. Did it hand you a list of steps, or did it come back with the thing done?</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-agent.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="Three corners joined into a triangle by arrows: observe, then think, then act, then back round to observe. A small flag marked goal stands in the middle. Three tools hang off the act corner, a browser window, an envelope and a calendar.">
-        <figcaption class="dg-cap">The talking happens at one corner. The tools hanging off the act corner are what make it an agent.</figcaption>
+        <figcaption class="dg-cap">A chatbot can do the thinking and hand you words. The tools hanging off the act corner are what turn those words into something done.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>One gives you advice. The other gives you an outcome.</p></div>
@@ -659,6 +662,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <button class="btn" type="button" id="flightNext">Next step</button>
             <button class="btn ghost" type="button" id="flightReset">Start over</button>
           </div>
+          <p style="margin:16px 0 0; font-size:.9375rem; color:var(--ink-soft)">Look at the third step in the middle lane. Whether an agent may pay for anything is your decision, never its own. <a href="#judgment">Chapter four</a> is where you set that, and money moving is the clearest case for making a person approve first.</p>
         </div>
       </div>
 
@@ -668,6 +672,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="tryit">
         <p class="label">Try this now</p>
         <p>Ask your AI to actually do something. Not "how do I", but "book it", "draft it", "make me the file". Watch what comes back. Steps mean you are talking to an advisor. A finished thing means you have an agent. Now you know which layer you are on.</p>
+        <p style="margin-top:.9em">In a plain chat app it will refuse, or hand you the steps and stall. That refusal is the lesson, not a fault: an assistant with no tools cannot act, however clever it sounds.</p>
       </div>
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
@@ -782,7 +787,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>Climb one rung at a time. A <a href="#e-prompt">prompt</a> means you power every step by hand. A <a href="#e-skills">skill</a> saves the explanation, but you still start every run. A loop is the next graduation: the agent runs the job, checks its own result, and goes again, round after round, until the check passes or it runs out of tries.</p>
-        <p style="margin-top:.9em">The shift is what you stop doing. You no longer read each attempt and type "try again". You set the goal and the finish line, then come back to done instead of to a next question. Claude Code ships this built in; most agent tools now have their own version.</p></div>
+        <p style="margin-top:.9em">The shift is what you stop doing. You no longer read each attempt and type "try again". You set the goal and the finish line, then come back to done instead of to a next question. Claude Code (an agent tool that runs in a terminal window rather than in the Claude chat app, and <a href="#stack">chapter six</a> shows it properly) ships this built in; most agent tools now have their own version.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>"Fix every broken reference in my final-year project, and keep going until the checker finds none." You watch the first round, then leave it. Round nine comes back clean and the loop stops itself.</p></div>
       </div>
@@ -846,7 +851,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 <div class="field"><span class="label">What it is</span>
         <p>Every major AI company offers a range: a small fast cheap model, a balanced everyday one, and a large deep one. They differ enormously in cost and speed, and only somewhat in quality on ordinary work. Most people default to the most expensive option for tasks the small one would finish instantly.</p>
         <p style="margin-top:.9em">Most also offer a reasoning or extended thinking mode, where the model works through a problem step by step before answering. Slower, noticeably better on hard problems, wasted on easy ones.</p>
-        <p style="margin-top:.9em">Once you are running agents rather than chatting, the same gears get names: cheap, middle, and frontier, frontier being the biggest model a company sells. A rough split to aim for is sixty per cent of the work on the cheap model, thirty on the middle one, and only the last ten, the actual decisions, on the frontier one.</p></div>
+        <p style="margin-top:.9em">Once you are running agents rather than chatting, the same gears get names: cheap, middle, and frontier, frontier being the biggest model a company sells. A rough split to aim for is sixty per cent of the work on the cheap model, thirty on the middle one, and only the last ten, the actual decisions, on the frontier one.</p>
+        <p style="margin-top:.9em">The shape of the money, without the numbers that go stale. A chat subscription costs about what one streaming service costs. Running agents seriously sits on a higher paid plan and costs more than that. And if you use a key of your own instead of a subscription, you are billed by the <a href="#e-token">token</a>, so the meter runs on every attempt, including the ones you throw away.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Summarising lecture notes: the small fast model, done in seconds. Checking the methodology chapter of your final-year project: the deep one with thinking switched on. Same app, different gear.</p></div>
       </div>
@@ -855,7 +861,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-tiers.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="A decision tree. Is it routine? Yes leads to the small fast model. No leads to the question high stakes if wrong? No leads to the everyday model, yes leads to the deep model.">
-        <figcaption class="dg-cap">The decision, at one glance. Start in the middle gear unless the answer says otherwise.</figcaption>
+        <figcaption class="dg-cap">Start at the top box and follow the answers. Routine here means an ordinary everyday job, not the scheduled routines two entries back. Yes gets the small fast model. No asks what it costs to be wrong, and that picks between the everyday model and the deep one.</figcaption>
       </figure>
       </div>
 
@@ -879,6 +885,11 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div class="oneline"><span class="label">In one line</span><p>The barrier to building dropped. The need for judgment didn't.</p></div>
     </article>
+
+      <div class="aside-note">
+        <span class="label">Before you go on</span>
+        <p>The three words left in this chapter matter most on the day you actually build something. Skim them the first time through. They will still be here when you need them.</p>
+      </div>
 
     <article class="entry" id="e-rulesfile">
       <h3 class="display">Rules file</h3>
@@ -918,7 +929,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-planmode.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="A prompt splits into two paths. The upper path runs straight to a half-built wall with a crack in it, and an arrow loops back to the start to build it again. The lower path passes through a small sheet marked PLAN with a tick on it, then goes on to a finished clean wall, with no loop back.">
-        <figcaption class="dg-cap">Count the arrows. The lower path is the shorter one, even though it starts slower.</figcaption>
+        <figcaption class="dg-cap">Watch the top path. It ends at a wall with a crack in it, and the arrow curls back to the prompt to build the thing again. The lower path starts slower and only goes one way.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Make the agent show its plan and get your yes before it builds anything.</p></div>
@@ -1008,7 +1019,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-hitl.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="A two by two grid. Costly and undoable: read it, then send it. Costly and permanent: you approve, every time. Cheap and undoable: let it run. Cheap and permanent: spot check.">
-        <figcaption class="dg-cap">Two questions, not one. What does it cost if this is wrong, and can I take it back? Where you land decides how much freedom to give it.</figcaption>
+        <figcaption class="dg-cap">Two questions, not one. What does it cost if this is wrong, and can I take it back? Undoable on the grid means it can be undone, so the top row is the reversible one. Where you land decides how much freedom to give it.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Decide by the cost of being wrong, not by how clever it looks.</p></div>
@@ -1034,6 +1045,13 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="oneline"><span class="label">In one line</span><p>Decide what it's allowed to touch before you start.</p></div>
     </article>
 
+      <div class="tryit">
+        <p class="label">Where does what you paste actually go?</p>
+        <p>Out of your building, first of all. Anything you paste is sent to the AI company's computers, because that is where the model runs. On a personal account it may also be kept and used to improve their models, unless you turn that off. It is a setting, usually under data controls, and you have to go and find it.</p>
+        <p style="margin-top:.9em">Business and team plans promise not to train on your data, which is most of why workplaces pay for them. If you handle other people's information, clients, staff, students, use the workplace plan rather than your own account, and ask before you connect a work account to anything.</p>
+        <p style="margin-top:.9em">One rule covers the rest of it. Paste nothing you would not be willing to forward to an outside vendor.</p>
+      </div>
+
     <article class="entry" id="e-fresheyes">
       <h3 class="display">Fresh-eyes review</h3>
       <div class="bar"></div>
@@ -1050,7 +1068,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-fresheyes.png" width="1500" height="844" loading="lazy" decoding="async"
              alt="Two figures. On the left, a figure at a desk buried under a thick cloud of its own scribbled thinking, with a small heart drawn beside its work. On the right, a second figure holding a clean magnifier over a copy of the same work, with three small flags raised. An arrow between them carries only the work across, and the thought cloud does not cross.">
-        <figcaption class="dg-cap">Only the work crosses over. The thinking that produced it stays behind, which is the whole point.</figcaption>
+        <figcaption class="dg-cap">Two sessions, drawn as two people. Only the work crosses over. The second one has seen none of the thinking that produced it, which is the whole point.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Have a second agent with no history judge the work, because it sees what the builder cannot.</p></div>
@@ -1290,7 +1308,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
         <p>A raw model is a brain in a jar. Brilliant, and helpless. It can't remember what you told it five minutes ago, read your files, run your code, or check its own work.</p>
-        <p style="margin-top:.9em">The harness is everything wrapped around it: memory, tools, permissions, guardrails, and checks on the output before it reaches anybody. It's why two products running the same underlying model can feel like they're in different leagues.</p>
+        <p style="margin-top:.9em">The harness is everything wrapped around it: memory, tools, the permissions that decide what it may touch, and checks on the output before it reaches anybody. It's why two products running the same underlying model can feel like they're in different leagues.</p>
         <p style="margin-top:.9em">Here's how I see it. I build with these tools every day, and what decides whether an AI feature is any good is almost never which model is underneath. It's what got built around it.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>The same model in a bare chat window versus inside a coding tool that reads your files, runs the code and tests the result. Night and day, same brain. Everything you just felt was harness.</p></div>
@@ -1300,7 +1318,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-harness.png" width="1500" height="1000" loading="lazy" decoding="async"
              alt="On the left, a model sitting alone inside a dashed box. On the right, the same model surrounded by four boxes pointing inwards: memory above, tools to the left, permissions to the right and checks below.">
-        <figcaption class="dg-cap">When two AI products feel worlds apart, the gap usually lives here. Nothing on the right is the model.</figcaption>
+        <figcaption class="dg-cap">When two AI products feel worlds apart, the gap usually lives here. The model is the circle in the middle. None of the boxes around it is.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Two products can run the same model. The harness is why one feels miles better.</p></div>
@@ -1373,7 +1391,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <p style="margin-top:.9em">One more thing, because it trips everyone at the start: the terminal is a door, not the tool. Like a website that is the same site whether you open it in Chrome, Safari or Firefox, Claude Code is one engine behind three doors: a desktop app, this typed window, and a panel inside VS Code, an editor programmers write code in. The interface changes. The engine does not.</p>
         <p style="margin-top:.9em">You do not have to memorise a single command. The agent types those. All you have to do is stop being frightened of the window.</p></div>
       <div class="field"><span class="label">For example</span>
-        <p>On a Mac, open the app called Terminal, type "claude", press enter. What appears is the same kind of chat box you have used a hundred times. The difference is that this one can reach your files.</p></div>
+        <p>On a Mac, open the app called Terminal, type "claude", press enter. On Windows the same window is called Terminal or PowerShell, and you open it from the Start menu. What appears is the same kind of chat box you have used a hundred times. The difference is that this one can reach your files.</p>
+        <p style="margin-top:.9em">One trick is worth learning, because every tool page assumes you know it. The window is always pointed at one folder, and you point it at yours by typing cd and a space, then dragging the folder onto the window and pressing enter. The cd is short for change directory. Drag from Finder on a Mac, from File Explorer on Windows.</p></div>
       </div>
       <div class="entry-rail">
       <div class="analogy"><p>The kitchen door, not the dining room. Same restaurant, but the supplier who comes in through the kitchen can stock the fridge. The customer at the table can only order off the menu.</p></div>
@@ -1402,7 +1421,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-frontback.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="Three boxes in a row joined by arrows. On the left a browser window drawn as a menu board, labelled frontend. In the middle a server drawn as a kitchen with a gear and a checklist, marked checked here, labelled backend. On the right a database drawn as a drawer cabinet. A request arrow runs left to right and a response arrow runs back.">
-        <figcaption class="dg-cap">The middle box is the one that decides. Everything else in the chapter hangs off that.</figcaption>
+        <figcaption class="dg-cap">Every request and every reply passes through the middle box, whatever the long arcs look like. The middle box is the one that decides, and everything else in the chapter hangs off that.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>The browser shows it. The server decides it. Never trust the browser alone.</p></div>
@@ -1413,7 +1432,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>Three languages build every web page, and one sentence on each is genuinely enough. HTML, HyperText Markup Language, is the structure: what is on the page and in what order. CSS, Cascading Style Sheets, is the look: colours, fonts, spacing, layout. JavaScript is the behaviour: what happens when you click, type or scroll.</p>
+        <p>Three languages build every web page, and one sentence on each is genuinely enough. HTML, HyperText Markup Language, is the structure: what is on the page and in what order. CSS, Cascading Style Sheets, is the look: colours, fonts, spacing, layout. JavaScript (JS) is the behaviour: what happens when you click, type or scroll.</p>
         <p style="margin-top:.9em">You are not going to write them. Your agent will. You need the three names so that its updates stop sounding like noise. "The button's HTML was fine, the bug was in the JavaScript that runs when you tap it" tells you this is a behaviour problem, not a layout one, and now you know what to go and test.</p>
         <p style="margin-top:.9em">One more thing, because it tells you something about how the web is built. The first website ever published, in 1991, was HTML on its own. No styling, no behaviour. It is still online and it still works. Structure is the part that survives.</p></div>
       <div class="field"><span class="label">For example</span>
@@ -1423,7 +1442,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>A house. HTML is the walls and rooms. CSS is the paint and the furniture. JavaScript is the wiring that makes a switch actually switch something on.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-webtrio.png" width="1500" height="750" loading="lazy" decoding="async"
-             alt="The same small web page drawn three times in a row. First as a bare wireframe skeleton of boxes, labelled HTML, structure. Second the same page inked in with colour, type and spacing, labelled CSS, look. Third the same page with a button being pressed and a small bell ringing beside it, labelled JavaScript, behaviour.">
+             alt="The same small web page drawn three times in a row. First as a bare wireframe skeleton of boxes, labelled HTML, structure. Second the same page inked in with colour, type and spacing, labelled CSS, look. Third the same page with a button being pressed and a small bell ringing beside it, labelled JS, behaviour.">
         <figcaption class="dg-cap">One page, three layers. Every website you have ever opened is these three.</figcaption>
       </figure>
       </div>
@@ -1467,8 +1486,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>The clinic's filing cabinet. One drawer per kind of record, one card per person, and an identity card number on the tab so two Tan Ah Kows never get mixed up.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-database.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="A spreadsheet grid with a gold highlighted identity column down the left. An arrow leads from the grid to a drawer cabinet, showing the two are the same idea. Below, a small funnel filters three matching rows out of the grid.">
-        <figcaption class="dg-cap">A strict spreadsheet with a numbered first column. That is most of what a database is.</figcaption>
+             alt="A spreadsheet grid with a gold highlighted identity column down the left. An arrow leads from the grid to a drawer cabinet, showing the two are the same idea. Below the grid, rows drop through a funnel and come out the other side, standing for the rows one question pulls out.">
+        <figcaption class="dg-cap">A strict spreadsheet with a numbered first column. That is most of what a database is. The funnel is one question pulling its matching rows out of the pile.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>The app's permanent memory. A strict spreadsheet it reads and writes for you.</p></div>
@@ -1481,9 +1500,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 <div class="field"><span class="label">What it is</span>
         <p>When your app wants to use somebody else's service, an AI model, a map, an email sender, it asks through an <a href="#e-api">API</a> (application programming interface). The service needs to know who is asking, so it gives you an API key: one long secret string of characters that your app sends along with every request.</p>
         <p style="margin-top:.9em">The thing to understand is that the key is two things at once. It is a password, and it is a meter. Whoever holds it can use the service, and every use is billed to whoever owns the key, usually by the <a href="#e-token">token</a>. There is no "that wasn't me" button.</p>
-        <p style="margin-top:.9em">So there are two rules and neither is optional. Keep keys in a file called .env, a small local envelope your code reads and you never publish. Never type a key into the code itself, and never push one to a public repository. Strangers run programs that scan public code for key-shaped strings all day long. Leaked keys get found in minutes, not months. A key sitting in the code is the first of <a href="#e-securityfive">the security five</a>.</p></div>
+        <p style="margin-top:.9em">So there are two rules and neither is optional. Keep keys in a file called .env, a small local envelope your code reads and you never publish. Never type a key into the code itself, and never let one go up anywhere public with the rest of your files. Strangers run programs that scan public code for key-shaped strings all day long. Leaked keys get found in minutes, not months. A key sitting in the code is the first of <a href="#e-securityfive">the security five</a>.</p></div>
       <div class="field"><span class="label">For example</span>
-        <p>Your app calls Claude with your key and everything is fine, until the key goes up in a public repository by accident. A stranger's traffic starts landing on your card and you find out from the bill. One published sweep of public code turned up around 25,000 working keys, and every one of them belonged to someone who thought nobody was looking.</p></div>
+        <p>Your app calls Claude with your key and everything is fine, until the key gets published by accident along with the code. A stranger's traffic starts landing on your card and you find out from the bill. One published sweep of public code turned up around 25,000 working keys, and every one of them belonged to someone who thought nobody was looking.</p></div>
       </div>
       <div class="entry-rail">
       <div class="analogy"><p>Writing the key into your code is a sticky note with your bank PIN stuck on the ATM. The .env file is keeping the PIN in your own wallet.</p></div>
@@ -1501,7 +1520,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="bar"></div>
       <div class="entry-flow">
 <div class="field"><span class="label">What it is</span>
-        <p>Version control is save points for an entire project. Git is the tool that keeps them. <a href="#e-github">GitHub</a> is the shared copy that lives online. Instead of essay_final_FINAL_v3 sitting in your downloads folder next to four near-identical siblings, you keep one folder with its whole history behind it, and you can stand at any point in that history whenever you like.</p>
+        <p>Version control is save points for an entire project. Git is the tool that keeps them. The project folder and its whole history together are called a repository, and <a href="#e-github">GitHub</a> is where that repository lives online, the shared copy. Instead of essay_final_FINAL_v3 sitting in your downloads folder next to four near-identical siblings, you keep one folder with its whole history behind it, and you can stand at any point in that history whenever you like.</p>
         <p style="margin-top:.9em">Each save point is a commit: a snapshot of every file with a one-line note about what changed. Branches let you take the project sideways, trying a redesign off to one side while the working version stays untouched, and you merge the new one in only if it turns out well. Several agents can each work on their own branch at the same time without treading on each other.</p>
         <p style="margin-top:.9em">For building with agents this is the safety net that makes boldness sensible. Commit before every big change. When the agent goes down a wrong path, and it will, one command puts everything back the way it was and you have lost nothing except the mistake. There is a bonus too: hosts watch the repository, so pushing a change is often all it takes for the live site to rebuild itself. That is the first half of <a href="#e-deploy">deployment</a>, coming up in two entries.</p></div>
       <div class="field"><span class="label">For example</span>
@@ -1511,8 +1530,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <div class="analogy"><p>Save slots before a boss fight. You try the risky move precisely because reloading costs you nothing.</p></div>
       <figure>
         <img class="dg-img" src="assets/101/light/dg-git.png" width="1500" height="1000" loading="lazy" decoding="async"
-             alt="Top: scattered file copies labelled final, final2 and FINAL really, struck through in terracotta. Below: one gold timeline rail carrying round nodes, each node a commit, with a small branch looping out to one side and merging back in, and a flag planted on an earlier node reading jump back here.">
-        <figcaption class="dg-cap">The mess on top is what most people have. The line below is what one extra command buys you.</figcaption>
+             alt="Top: three scattered file copies labelled final, final2 and FINAL really, struck through in terracotta. Below: one gold timeline rail carrying five round nodes, each node a commit. A flag reading jump back stands on an early node, and an arc joins that node to a later one along the rail.">
+        <figcaption class="dg-cap">The mess on top is what most people have. The line below is what one extra command buys you: every node a save point, and a flag on any one of them you can stand at again.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Save points for your whole project. Try boldly, undo instantly.</p></div>
@@ -1542,6 +1561,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 <div class="field"><span class="label">What it is</span>
         <p>While you are building, your app runs only on your own laptop, at an address called localhost. It is a rehearsal in an empty theatre. Real, working, and visible to exactly one person.</p>
         <p style="margin-top:.9em">Deploying is putting it on a rented computer that never sleeps, so that anyone with the link can use it. Netlify and Vercel are the usual homes for a project like yours, and both are free for a personal project. You point them at your <a href="#e-github">GitHub repository</a>, they build the site, and you get a web address ending in netlify.app or vercel.app, with the option of attaching a proper domain of your own later. From then on every push to the repo rebuilds the live site on its own. The agent handles nearly all of the mechanics, and none of that part is your problem.</p>
+        <p style="margin-top:.9em">Bigger projects put one more stop in between, called staging: a practice copy of the live site that only your team can open, where you taste-test before you serve. Your first project does not need one. The diagram shows it because that middle table is where the word belongs.</p>
         <p style="margin-top:.9em">What the agent cannot do for you is the retest. The live computer is not your computer: different address, different settings, the real database instead of your practice one. "It works on my machine" is the most expensive sentence in software. After every deploy, open the live link on your own phone and use the thing like a stranger would.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Your booking app is perfect at localhost:3000. You deploy, open the link, and login fails on the first tap, because the live web address was never added to the database's list of allowed addresses. A five-minute fix. But you only find it if you look.</p></div>
@@ -1717,7 +1737,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <figure>
         <img class="dg-img" src="assets/101/light/dg-promptinjection.png" width="1500" height="823" loading="lazy" decoding="async"
              alt="An agent circle reading a document. Inside the document, a faint terracotta line of hidden text with an arrow curving up to hook into the agent's action arrow. A gold gate labelled asks first blocks it. The instruction that does get through comes along a clear arrow from the person standing at the left.">
-        <figcaption class="dg-cap">Two arrows point at the same agent. Only one of them came from you, and the gate is what tells them apart.</figcaption>
+        <figcaption class="dg-cap">Two arrows point at the same agent. Only one of them came from you. Every action leaving the agent stops at the gate and gets asked for, which is how a smuggled instruction ends up in front of you instead of running quietly.</figcaption>
       </figure>
       </div>
       <div class="oneline"><span class="label">In one line</span><p>Hidden instructions inside what an agent reads, trying to hijack what it does.</p></div>
@@ -1750,11 +1770,13 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <h3 class="display" id="tools-h">The tools</h3>
       <div class="bar"></div>
       <p>Ignore the leaderboards. The only question that matters is what you're trying to get done. Pick a job below and the list filters to the tools built for it.</p>
+      <p>These are mainstream apps you open in a browser and use the same day. They are a different list from <a href="index.html">the log</a>, the other tab of this site, which is the workshop side: the tools I actually build with.</p>
       <p style="color:var(--ink-soft); font-size:.9375rem">Most of these have a free tier worth trying first. A few, Midjourney among them, are paid from day one. Try before you pay, and don't pay for four things at once.</p>
 
       <ul class="filters" role="group" aria-label="Filter tools by job">
         <li><button class="chip" type="button" data-filter="all" aria-pressed="true">Everything</button></li>
         <li><button class="chip" type="button" data-filter="write" aria-pressed="false">Write &amp; think</button></li>
+        <li><button class="chip" type="button" data-filter="admin" aria-pressed="false">Admin &amp; business</button></li>
         <li><button class="chip" type="button" data-filter="research" aria-pressed="false">Research</button></li>
         <li><button class="chip" type="button" data-filter="build" aria-pressed="false">Build software</button></li>
         <li><button class="chip" type="button" data-filter="design" aria-pressed="false">Design &amp; visuals</button></li>
@@ -1764,37 +1786,37 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <p class="filter-count" id="toolCount" role="status">Showing all 31 tools</p>
 
       <ul class="tools" id="toolList">
-        <li data-cat="write"><a class="tool-name" href="https://claude.ai" target="_blank" rel="noopener">Claude ↗</a><span class="tool-what">Long, careful writing and thinking. The one I reach for when the brief is detailed and the output has to hold together.</span></li>
-        <li data-cat="write"><a class="tool-name" href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT ↗</a><span class="tool-what">The general-purpose one everybody has heard of. Broadest set of built-in extras.</span></li>
-        <li data-cat="write"><a class="tool-name" href="https://gemini.google.com" target="_blank" rel="noopener">Gemini ↗</a><span class="tool-what">Google's. Reads the longest documents of the big three, and lives where your Gmail, Docs and Drive already are.</span></li>
-        <li data-cat="write"><a class="tool-name" href="https://copilot.microsoft.com" target="_blank" rel="noopener">Microsoft Copilot ↗</a><span class="tool-what">AI inside Word, Excel, Outlook and Teams. Often already paid for by your employer.</span></li>
-        <li data-cat="write"><a class="tool-name" href="https://www.grammarly.com" target="_blank" rel="noopener">Grammarly ↗</a><span class="tool-what">Narrow and good at it. Catches what you would not, in the tone you set, inside whatever you are already writing in.</span></li>
-        <li data-cat="research"><a class="tool-name" href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity ↗</a><span class="tool-what">Search that answers the question and shows you the sources it used.</span></li>
-        <li data-cat="research"><a class="tool-name" href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM ↗</a><span class="tool-what">You give it your own documents and it answers from those, citing the page it took each claim from.</span></li>
+        <li data-cat="write admin"><a class="tool-name" href="https://claude.ai" target="_blank" rel="noopener">Claude ↗</a><span class="tool-what">Long, careful writing and thinking. The one I reach for when the brief is detailed and the output has to hold together. (free tier)</span></li>
+        <li data-cat="write admin"><a class="tool-name" href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT ↗</a><span class="tool-what">The general-purpose one everybody has heard of. Broadest set of built-in extras. (free tier)</span></li>
+        <li data-cat="write admin"><a class="tool-name" href="https://gemini.google.com" target="_blank" rel="noopener">Gemini ↗</a><span class="tool-what">Google's. Reads the longest documents of the big three, and lives where your Gmail, Docs and Drive already are. (free tier)</span></li>
+        <li data-cat="write admin"><a class="tool-name" href="https://copilot.microsoft.com" target="_blank" rel="noopener">Microsoft Copilot ↗</a><span class="tool-what">AI inside Word, Excel, Outlook and Teams. Often already paid for by your employer. (free tier)</span></li>
+        <li data-cat="write admin"><a class="tool-name" href="https://www.grammarly.com" target="_blank" rel="noopener">Grammarly ↗</a><span class="tool-what">Narrow and good at it. Catches what you would not, in the tone you set, inside whatever you are already writing in. (free tier)</span></li>
+        <li data-cat="research"><a class="tool-name" href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity ↗</a><span class="tool-what">Search that answers the question and shows you the sources it used. (free tier)</span></li>
+        <li data-cat="research"><a class="tool-name" href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM ↗</a><span class="tool-what">You give it your own documents and it answers from those, citing the page it took each claim from. (free tier)</span></li>
         <li data-cat="research"><span class="tool-name">Deep research modes</span><span class="tool-what">Built into ChatGPT, Claude and Gemini. Give it a question, come back later, get a cited report.</span></li>
         <li data-cat="research"><a class="tool-name" href="https://elicit.com" target="_blank" rel="noopener">Elicit ↗</a><span class="tool-what">Built for academic papers. Useful if your questions live in published research.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code ↗</a><span class="tool-what">An agent that works in your actual project. Plans, edits files, runs things, checks its own work.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://cursor.com" target="_blank" rel="noopener">Cursor ↗</a><span class="tool-what">A code editor with AI built into the middle of it rather than bolted on the side.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://windsurf.com" target="_blank" rel="noopener">Windsurf ↗</a><span class="tool-what">The same idea as Cursor, with the agent keeping track of the whole project rather than the file you have open. Try one, then the other.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot ↗</a><span class="tool-what">The original. Completes code as you type, inside the editor you already use.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://openai.com/codex/" target="_blank" rel="noopener">Codex ↗</a><span class="tool-what">OpenAI's agentic coding tool, and the closest thing to Claude Code. Plans the change, edits the files, and writes the tests nobody wants to write.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://antigravity.google" target="_blank" rel="noopener">Antigravity ↗</a><span class="tool-what">Google's agentic editor. Same idea as Claude Code, except it lives in a proper code editor and you watch the work happen.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://www.kimi.com" target="_blank" rel="noopener">Kimi K3 ↗</a><span class="tool-what">Moonshot's open frontier model: near the top of the pile, and free to run or host yourself. Strong on long documents and code.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://lovable.dev" target="_blank" rel="noopener">Lovable ↗</a><span class="tool-what">Describe an app in a browser tab and get something working. No setup at all.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://v0.app" target="_blank" rel="noopener">v0 ↗</a><span class="tool-what">Vercel's screen builder. Describe one page, get a real working version of it, then keep nudging it until it looks right.</span></li>
-        <li data-cat="build"><a class="tool-name" href="https://replit.com" target="_blank" rel="noopener">Replit ↗</a><span class="tool-what">Build and host something small without installing anything. The gentlest way in.</span></li>
-        <li data-cat="design"><a class="tool-name" href="https://www.figma.com" target="_blank" rel="noopener">Figma ↗</a><span class="tool-what">The design tool product teams already work in, with AI that now drafts screens and tidies files. Strongest when a design has to be handed to other people.</span></li>
-        <li data-cat="design"><a class="tool-name" href="https://www.canva.com" target="_blank" rel="noopener">Canva ↗</a><span class="tool-what">The one to hand a non-designer. Decks, posters, socials, without a design background.</span></li>
-        <li data-cat="design"><a class="tool-name" href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney ↗</a><span class="tool-what">Image generation with the strongest aesthetic point of view. Steeper learning curve.</span></li>
-        <li data-cat="design"><a class="tool-name" href="https://gemini.google/overview/image-generation/" target="_blank" rel="noopener">Nano Banana ↗</a><span class="tool-what">Google's image generator, strongest at editing what already exists: hand it a photo, say what to change, and the faces stay the same. Lives inside the Gemini app.</span></li>
-        <li data-cat="design"><a class="tool-name" href="https://firefly.adobe.com" target="_blank" rel="noopener">Adobe Firefly ↗</a><span class="tool-what">Adobe's image generation, built with commercial use in mind. Check which model you are on before you rely on that.</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code ↗</a><span class="tool-what">An agent that works in your actual project. Plans, edits files, runs things, checks its own work. (paid)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://cursor.com" target="_blank" rel="noopener">Cursor ↗</a><span class="tool-what">A code editor with AI built into the middle of it rather than bolted on the side. (free tier)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://windsurf.com" target="_blank" rel="noopener">Windsurf ↗</a><span class="tool-what">The same idea as Cursor, with the agent keeping track of the whole project rather than the file you have open. Try one, then the other. (free tier)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot ↗</a><span class="tool-what">The original. Completes code as you type, inside the editor you already use. (free tier)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://openai.com/codex/" target="_blank" rel="noopener">Codex ↗</a><span class="tool-what">OpenAI's agentic coding tool, and the closest thing to Claude Code. Plans the change, edits the files, and writes the tests nobody wants to write. (paid)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://antigravity.google" target="_blank" rel="noopener">Antigravity ↗</a><span class="tool-what">Google's agentic editor. Same idea as Claude Code, except it lives in a proper code editor and you watch the work happen. (free tier)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://www.kimi.com" target="_blank" rel="noopener">Kimi K3 ↗</a><span class="tool-what">Moonshot's open frontier model, near the top of the pile and strong on long documents and code. Open means you may run it on your own machines, but that takes serious hardware. For most people it is one more chat app with a free tier.</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://lovable.dev" target="_blank" rel="noopener">Lovable ↗</a><span class="tool-what">Describe an app in a browser tab and get something working. No setup at all. (free tier)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://v0.app" target="_blank" rel="noopener">v0 ↗</a><span class="tool-what">Vercel's screen builder. Describe one page, get a real working version of it, then keep nudging it until it looks right. (free tier)</span></li>
+        <li data-cat="build"><a class="tool-name" href="https://replit.com" target="_blank" rel="noopener">Replit ↗</a><span class="tool-what">Build and host something small without installing anything. The gentlest way in. (free tier)</span></li>
+        <li data-cat="design"><a class="tool-name" href="https://www.figma.com" target="_blank" rel="noopener">Figma ↗</a><span class="tool-what">The design tool product teams already work in, with AI that now drafts screens and tidies files. Strongest when a design has to be handed to other people. (free tier)</span></li>
+        <li data-cat="design admin"><a class="tool-name" href="https://www.canva.com" target="_blank" rel="noopener">Canva ↗</a><span class="tool-what">The one to hand a non-designer. Decks, posters, socials, without a design background. (free tier)</span></li>
+        <li data-cat="design"><a class="tool-name" href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney ↗</a><span class="tool-what">Image generation with the strongest aesthetic point of view. Steeper learning curve. (paid)</span></li>
+        <li data-cat="design"><a class="tool-name" href="https://gemini.google/overview/image-generation/" target="_blank" rel="noopener">Nano Banana ↗</a><span class="tool-what">Google's image generator, strongest at editing what already exists: hand it a photo, say what to change, and the faces stay the same. Lives inside the Gemini app. (free tier)</span></li>
+        <li data-cat="design"><a class="tool-name" href="https://firefly.adobe.com" target="_blank" rel="noopener">Adobe Firefly ↗</a><span class="tool-what">Adobe's image generation, built with commercial use in mind. Check which model you are on before you rely on that. (free tier)</span></li>
         <li data-cat="design"><a class="tool-name" href="https://higgsfield.ai" target="_blank" rel="noopener">Higgsfield ↗</a><span class="tool-what">Video generation built around camera moves you choose: orbit, crane, dolly. The quickest way to make a short clip look directed rather than generated.</span></li>
-        <li data-cat="meetings"><a class="tool-name" href="https://otter.ai" target="_blank" rel="noopener">Otter ↗</a><span class="tool-what">Transcribes the meeting and pulls out what was decided.</span></li>
-        <li data-cat="meetings"><a class="tool-name" href="https://www.granola.ai" target="_blank" rel="noopener">Granola ↗</a><span class="tool-what">Takes notes alongside you rather than instead of you. Quiet and unobtrusive.</span></li>
-        <li data-cat="meetings"><a class="tool-name" href="https://www.notion.com/product/ai" target="_blank" rel="noopener">Notion AI ↗</a><span class="tool-what">Search and summarise across your own workspace, where the notes already are.</span></li>
-        <li data-cat="automate"><a class="tool-name" href="https://zapier.com" target="_blank" rel="noopener">Zapier ↗</a><span class="tool-what">Wire two apps together so something happens automatically. The most beginner-friendly.</span></li>
-        <li data-cat="automate"><a class="tool-name" href="https://www.make.com" target="_blank" rel="noopener">Make ↗</a><span class="tool-what">Same idea, visual canvas, more control once your workflow gets complicated.</span></li>
-        <li data-cat="automate"><a class="tool-name" href="https://n8n.io" target="_blank" rel="noopener">n8n ↗</a><span class="tool-what">Open source, so you can run it on your own machines when the data cannot leave your own systems.</span></li>
+        <li data-cat="meetings admin"><a class="tool-name" href="https://otter.ai" target="_blank" rel="noopener">Otter ↗</a><span class="tool-what">Transcribes the meeting and pulls out what was decided. (free tier)</span></li>
+        <li data-cat="meetings admin"><a class="tool-name" href="https://www.granola.ai" target="_blank" rel="noopener">Granola ↗</a><span class="tool-what">Takes notes alongside you rather than instead of you. Quiet and unobtrusive. (free tier)</span></li>
+        <li data-cat="meetings admin"><a class="tool-name" href="https://www.notion.com/product/ai" target="_blank" rel="noopener">Notion AI ↗</a><span class="tool-what">Search and summarise across your own workspace, where the notes already are. (paid)</span></li>
+        <li data-cat="automate admin"><a class="tool-name" href="https://zapier.com" target="_blank" rel="noopener">Zapier ↗</a><span class="tool-what">Wire two apps together so something happens automatically. The most beginner-friendly. (free tier)</span></li>
+        <li data-cat="automate admin"><a class="tool-name" href="https://www.make.com" target="_blank" rel="noopener">Make ↗</a><span class="tool-what">Same idea, visual canvas, more control once your workflow gets complicated. (free tier)</span></li>
+        <li data-cat="automate"><a class="tool-name" href="https://n8n.io" target="_blank" rel="noopener">n8n ↗</a><span class="tool-what">Open source, so you can run it on your own machines when the data cannot leave your own systems. (free to self-host)</span></li>
       </ul>
 
       <div class="analogy" style="margin-top:28px"><p>Nobody on this page paid to be here, and this list will be out of date faster than you'd like. It's correct as of August 2026. Treat it as a starting map, not a verdict.</p></div>
@@ -1820,13 +1842,24 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
     <div class="col">
       <ol class="close-list">
         <li><div><strong>Today: pick one assistant and give it real work</strong><p>Claude, ChatGPT or Gemini. Which one matters far less than people pretend. Use it for something real every day this week, and have at least one conversation where you paste in the actual thing you are working on rather than describing it. New task, new chat, for reasons <a href="#e-context">the context window entry</a> explains.</p></div></li>
-        <li><div><strong>This week: install one agentic tool and build one small thing</strong><p>One, not four. Claude Code is the default; pick Antigravity instead if you would rather work inside an editor. Then build the smallest real thing you would actually use: one page, one purpose. Turn <a href="#e-planmode">plan mode</a> on and read the plan before you say yes to it.</p></div></li>
+        <li><div><strong>This week: install one agentic tool and build one small thing</strong><p>One, not four. Claude Code is the default; pick Antigravity instead if you would rather work inside an editor. If the black window puts you off, <a href="#e-terminal">the terminal entry</a> is a two-minute read and the right thing to do first. Then build the smallest real thing you would actually use: one page, one purpose. Turn <a href="#e-planmode">plan mode</a> on and read the plan before you say yes to it. Expect to pay: the free allowances on agentic tools are small, and steady use means a paid plan, about the price of a couple of streaming services.</p></div></li>
         <li><div><strong>This month: run the whole loop once, end to end</strong><p>Write a <a href="#e-spec">spec</a>, build it, make the agent <a href="#e-verification">check its own work</a>, deploy it somewhere free like Netlify so it has an address a stranger could open, run <a href="#e-securityfive">the security five</a> over it, and show it to one person. Finishing one small thing properly teaches more than reading another ten chapters.</p></div></li>
+      </ol>
+
+      <div class="fixhead">
+        <p class="label">Not building anything? Three moves for office work</p>
+        <p>Same shape, different work. If your week is documents, email and meetings rather than code, run these three instead.</p>
+      </div>
+      <ol class="close-list">
+        <li><div><strong>Today: turn the thing you write every week into a saved brief</strong><p>Pick the one document you produce on repeat. The weekly update, the client proposal, the meeting summary. Write the brief once, who it is for, what good looks like, what to leave out, and save it where you can paste it again. That is a <a href="#e-skills">skill</a>, and you have just stopped retyping it.</p></div></li>
+        <li><div><strong>This week: put one real work task through an assistant every day</strong><p>Real work, not test questions. Before you use what comes back, run the <a href="#e-hitl">chapter four test</a> on it: what does it cost me if this is wrong? Cheap and reversible, use it. Expensive or permanent, check it properly first.</p></div></li>
+        <li><div><strong>Every time: nothing goes out under your name unreviewed</strong><p>Before anything AI-written leaves your desk, give it the <a href="#e-fresheyes">fresh-eyes check</a>. Fresh chat, only the finished text, and the instruction to read it as if a stranger wrote it. It takes a minute and it catches the thing you would have been embarrassed by.</p></div></li>
       </ol>
 
       <div class="aside-note">
         <span class="label">One Singapore note</span>
-        <p>NTUC (National Trades Union Congress) members get UTAP (Union Training Assistance Programme) support on a list of AI tools: 50% of the fee, capped at $250 a year under 40 or $500 a year at 40 and above, running through to April 2028. If you're about to pay for one of these out of your own pocket, it's worth checking whether yours is on the list first.</p>
+        <p>From 1 May 2026 to 30 April 2028, NTUC (National Trades Union Congress) members can claim UTAP (Union Training Assistance Programme) support on selected AI tool subscriptions: 50% of the fee, on a list of about twenty-one tools that includes ChatGPT, Claude, GitHub Copilot and Midjourney. The cap is $250 a year under 40 and $500 a year from 40 up, and it is shared with your course-fee claims rather than a separate pot. Check the current list and the claim steps on the NTUC UTAP portal before you pay for anything.</p>
+        <p>It is a scheme for working members, so students mostly will not qualify. And if the subscription belongs to a company rather than to you, this is the wrong door: company-side support is a different set of schemes, and gobusiness.gov.sg is where to start.</p>
         <p style="margin-bottom:0; color:var(--ink-soft); font-size:.9375rem">Name another government actively paying workers to adopt AI at that scale. Most are still debating the regulation.</p>
       </div>
 
@@ -1838,7 +1871,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
       <!-- SYNC: every line here repeats an entry's "In one line" — edit both -->
       <div class="recap">
-        <h3 class="label">All fifty-five, in one line each</h3>
+        <h3 class="label">All fifty-six, in one line each</h3>
         <dl class="recap-list">
           <div class="rg">01 · The basics</div>
           <dt><a href="#e-model">Model</a></dt><dd>A model predicts. It doesn't retrieve.</dd>

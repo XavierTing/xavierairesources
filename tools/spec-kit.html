@@ -171,7 +171,7 @@
       "name": "How do you install and use Spec-Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run the command below in the folder your project lives in. If it says uv is missing, install uv first from its site; that is the free helper it uses to fetch itself. Then, inside your assistant, type /speckit.specify to write down the requirements. Follow with /speckit.plan to plan the work, and /speckit.implement to build it. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
+        "text": "Run the command below in the folder your project lives in (in the Terminal: type cd, a space, then drag the folder onto the window and press enter). If it says uv is missing, install it from uv's own page at docs.astral.sh/uv; uv is the free helper this uses to fetch itself. Then, inside your assistant, type /speckit.specify to write down the requirements. Follow with /speckit.plan to plan the work, and /speckit.implement to build it. Command: uvx --from git+https://github.com/github/spec-kit.git specify init"
       }
     }
   ]
@@ -219,8 +219,10 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Workflow</p></div>
           <div><h2>Made by</h2><p>github</p></div>
+          <div><h2>You'll need</h2><p>An AI coding assistant, the uv helper</p></div>
+          <div><h2>Cost</h2><p>Free</p></div>
           <div><h2>Curator's status</h2><p>In daily use</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener">PROJECT PAGE ↗</a></p></div>
         </aside>
 
         <div class="sections">
@@ -236,12 +238,12 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Run the command below in the folder your project lives in. If it says uv is missing, install uv first from its site; that is the free helper it uses to fetch itself.</li>
+            <li>Run the command below in the folder your project lives in (in the <a href="../ai-101.html#e-terminal">Terminal</a>: type cd, a space, then drag the folder onto the window and press enter). If it says uv is missing, install it from uv's own page at docs.astral.sh/uv; uv is the free helper this uses to fetch itself.</li>
             <li>Then, inside your assistant, type /speckit.specify to write down the requirements.</li>
             <li>Follow with /speckit.plan to plan the work, and /speckit.implement to build it.</li>
             </ol>
           <div class="specimen">
-            <span class="specimen-where m">Paste into the Terminal app</span>
+            <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
             <code>uvx --from git+https://github.com/github/spec-kit.git specify init</code>
             <button class="copy-btn" type="button" data-command="uvx --from git+https://github.com/github/spec-kit.git specify init"
                     aria-label="Copy command: uvx --from git+https://github.com/github/spec-kit.git specify init">Copy</button>

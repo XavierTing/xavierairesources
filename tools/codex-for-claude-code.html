@@ -155,7 +155,7 @@
       "name": "Why use Codex for Claude Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and a free one is enough to start. What you use counts towards that account's Codex allowance, so it is worth saving for work that matters."
+        "text": "Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. The plugin itself is free; the work runs against your ChatGPT account's Codex allowance, which a free account gets a small amount of, and the image making it can also do needs a paid OpenAI account."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "When should you use Codex for Claude Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you, though that part needs a paid OpenAI account. There is no button for it, you simply ask."
+        "text": "Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you. There is no button for it, you simply ask."
       }
     },
     {
@@ -219,25 +219,27 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Coding</p></div>
           <div><h2>Made by</h2><p>OpenAI</p></div>
+          <div><h2>You'll need</h2><p>Claude Code, a ChatGPT account</p></div>
+          <div><h2>Cost</h2><p>Free plugin; uses your ChatGPT account's Codex allowance</p></div>
           <div><h2>Curator's status</h2><p>In daily use</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/openai/codex-plugin-cc" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/openai/codex-plugin-cc" target="_blank" rel="noopener">PROJECT PAGE ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. It needs a ChatGPT account, and a free one is enough to start. What you use counts towards that account's Codex allowance, so it is worth saving for work that matters.</div>
+          <div class="body">Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. The <a href="../ai-101.html#e-plugins">plugin</a> itself is free; the work runs against your ChatGPT account's Codex allowance, which a free account gets a small amount of, and the image making it can also do needs a paid OpenAI account.</div>
         </section>
         <section class="section">
           <h2>When</h2>
-          <div class="body">Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you, though that part needs a paid OpenAI account. There is no button for it, you simply ask.</div>
+          <div class="body">Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you. There is no button for it, you simply ask.</div>
         </section>
         <section class="section">
           <h2>How</h2>
           <div class="body">
             <ol>
             <li>Type the command below inside Claude Code. It adds OpenAI's catalogue.</li>
-            <li>Install it by typing /<a href="../ai-101.html#e-plugins">plugin</a> install codex@openai-codex, then /reload-plugins</li>
+            <li>Install it by typing /plugin install codex@openai-codex, then /reload-plugins</li>
             <li>Type /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work.</li>
             </ol>
           <div class="specimen">

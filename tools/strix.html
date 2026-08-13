@@ -171,7 +171,7 @@
       "name": "How do you install and use Strix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run the command below. It downloads a small program from the internet and runs it, so read it first if that matters to you. Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company. Its own page explains where. The scanning costs whatever that assistant charges. Point it at your project folder with strix --target ./your-app. The first run downloads the sealed box it tests inside, so give it time. Command: curl -sSL https://strix.ai/install | bash"
+        "text": "Run the command below. It downloads a small program from the internet and runs it; to read that program first, paste https://strix.ai/install into your browser. Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company; the project page linked in the sidebar explains where. A scan spends that account's credit as it works: a few dollars on a small app, more on a large one. If none of that sentence made sense, this entry is for whoever builds your software, not for you. Point it at your project folder with strix --target ./your-app. The first run downloads the sealed box it tests inside, so give it time. Command: curl -sSL https://strix.ai/install | bash"
       }
     }
   ]
@@ -219,8 +219,10 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Coding</p></div>
           <div><h2>Made by</h2><p>Strix</p></div>
+          <div><h2>You'll need</h2><p>A paid AI account key, software you own</p></div>
+          <div><h2>Cost</h2><p>Free; scans spend your AI account's credit</p></div>
           <div><h2>Curator's status</h2><p>In daily use</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/usestrix/strix" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/usestrix/strix" target="_blank" rel="noopener">PROJECT PAGE ↗</a></p></div>
         </aside>
 
         <div class="sections">
@@ -236,12 +238,12 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Run the command below. It downloads a small program from the internet and runs it, so read it first if that matters to you.</li>
-            <li>Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company. Its own page explains where. The scanning costs whatever that assistant charges.</li>
+            <li>Run the command below. It downloads a small program from the internet and runs it; to read that program first, paste https://strix.ai/install into your browser.</li>
+            <li>Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company; the project page linked in the sidebar explains where. A scan spends that account's credit as it works: a few dollars on a small app, more on a large one. If none of that sentence made sense, this entry is for whoever builds your software, not for you.</li>
             <li>Point it at your project folder with strix --target ./your-app. The first run downloads the sealed box it tests inside, so give it time.</li>
             </ol>
           <div class="specimen">
-            <span class="specimen-where m">Paste into the Terminal app</span>
+            <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
             <code>curl -sSL https://strix.ai/install | bash</code>
             <button class="copy-btn" type="button" data-command="curl -sSL https://strix.ai/install | bash"
                     aria-label="Copy command: curl -sSL https://strix.ai/install | bash">Copy</button>

@@ -49,6 +49,18 @@
   var chapNext = document.getElementById("chapNext");
   document.body.classList.add("chaptered");
 
+  /* Where you stopped, remembered. Storage throws in private mode, so
+     every touch of it is wrapped and nothing here is allowed to matter. */
+  var LAST = "ai101-last";
+  function remember(slug) {
+    try { localStorage.setItem(LAST, slug); } catch (e) {}
+  }
+  function lastRead() {
+    var slug = null;
+    try { slug = localStorage.getItem(LAST); } catch (e) {}
+    return slugs.indexOf(slug) !== -1 ? slug : "cover";
+  }
+
   function titleOf(slug) {
     // The plate heading carries a <br>, and a closed chapter has no innerText,
     // so the short name travels on the section as data-title.
@@ -68,6 +80,7 @@
     var i = slugs.indexOf(slug);
     if (i === -1) { slug = "cover"; i = slugs.indexOf("cover"); }
     chapters.forEach(function (c, n) { c.classList.toggle("is-open", n === i); });
+    remember(slug);
 
     var isCover = slug === "cover";
     document.body.setAttribute("data-ch", slug);
@@ -100,7 +113,8 @@
   }
   window.addEventListener("hashchange", function () { route(true); });
   // Deep links (ai-101.html#e-mcp) must open their chapter on first load too.
-  route(false);
+  // A bare load reopens wherever you stopped last time instead of the cover.
+  if (location.hash) route(false); else open(lastRead(), null, false);
 
   /* ── Context window meter ───────────────────────────────── */
   var fill = document.getElementById("meterFill");
@@ -156,15 +170,18 @@
   var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
   var tools = Array.prototype.slice.call(document.querySelectorAll("#toolList li"));
   var toolCount = document.getElementById("toolCount");
-  var names = { all: "all", write: "Write & think", research: "Research", build: "Build software",
-                design: "Design & visuals", meetings: "Meetings & notes", automate: "Connect & automate" };
+  var names = { all: "all", write: "Write & think", admin: "Admin & business", research: "Research",
+                build: "Build software", design: "Design & visuals", meetings: "Meetings & notes",
+                automate: "Connect & automate" };
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       var f = chip.getAttribute("data-filter");
       chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
       var shown = 0;
       tools.forEach(function (li) {
-        var match = f === "all" || li.getAttribute("data-cat") === f;
+        // data-cat carries one or more jobs, space separated: "write admin".
+        var cats = (" " + (li.getAttribute("data-cat") || "") + " ");
+        var match = f === "all" || cats.indexOf(" " + f + " ") !== -1;
         li.hidden = !match;
         if (match) shown++;
       });

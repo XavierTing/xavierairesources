@@ -116,6 +116,7 @@ const AI101_TERMS = [
   ["cron", "cron", ""],
   ["second brain", "secondbrain", "i"],
   ["GitHub", "github", ""],
+  ["Terminal", "terminal", "i"],
 ];
 
 function makeTermLinker() {
@@ -133,9 +134,11 @@ function makeTermLinker() {
   };
 }
 
-/* the label on the command box: where the grey line actually gets typed */
+/* the label on the command box: where the grey line actually gets typed.
+   Authored HTML, not escaped on the way out — "Terminal app" links to the
+   AI 101 entry that explains what the Terminal is. */
 const COMMAND_TARGETS = {
-  terminal: "Paste into the Terminal app",
+  terminal: `Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a>`,
   claude: "Type inside Claude Code",
   assistant: "Paste into your assistant",
 };
@@ -207,7 +210,7 @@ function detailPage(t, i) {
   const specimen = t.command
     ? `
           <div class="specimen">${whereLabel ? `
-            <span class="specimen-where m">${esc(whereLabel)}</span>` : ""}
+            <span class="specimen-where m">${whereLabel}</span>` : ""}
             <code>${esc(t.command)}</code>
             <button class="copy-btn" type="button" data-command="${escAttr(t.command)}"
                     aria-label="Copy command: ${escAttr(t.command)}">Copy</button>
@@ -283,7 +286,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">${esc(t.category)}</p></div>
-${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>${esc(t.status || "In daily use")}</p></div>
+${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}${t.needs ? `          <div><h2>You'll need</h2><p>${esc(t.needs)}</p></div>\n` : ""}${t.cost ? `          <div><h2>Cost</h2><p>${esc(t.cost)}</p></div>\n` : ""}          <div><h2>Curator's status</h2><p>${esc(t.status || "In daily use")}</p></div>
           <div><h2>Source</h2><p><a class="repo-link" href="${escAttr(t.repo)}" target="_blank" rel="noopener">${esc(t.repoLabel)} ↗</a></p></div>
         </aside>
 
@@ -530,7 +533,7 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (56 terms, 9 chapters, ~66 minutes)
+- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (56 terms, 9 chapters, about an hour)
 - Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})
@@ -548,7 +551,7 @@ ${TOOLS.map((t) => `## ${t.num}. ${t.name} — ${t.tagline}
 - **Made by:** ${t.maker || repoOwner(t.repo) || "see source"}
 - **Source:** ${t.repo}
 - **Page:** ${toolUrl(t)}
-${t.command ? `- **Install / run:** \`${t.command}\`\n` : ""}
+${t.needs ? `- **You'll need:** ${t.needs}\n` : ""}${t.cost ? `- **Cost:** ${t.cost}\n` : ""}${t.command ? `- **Install / run:** \`${t.command}\`\n` : ""}
 **Why use ${t.name}?**
 ${t.why}
 

@@ -155,7 +155,7 @@
       "name": "Why use Repomix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It skips the clutter folders a project collects, hides anything that looks like a password or a key, and tells you how large the result is before you paste it anywhere."
+        "text": "Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It skips the clutter folders a project collects, hides anything that looks like a password or a key, and tells you how large the result is. That hiding only covers things shaped like a credential, though: names, prices and client details sitting in your files travel with the pack, so read the output before you paste it anywhere."
       }
     },
     {
@@ -171,7 +171,7 @@
       "name": "How do you install and use Repomix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run the command below in the main folder of your project. It produces a single file, named repomix-output.xml. Paste that file into whichever AI you want to ask. If the project is big, add --compress to the command to shrink it further. Command: npx repomix@latest"
+        "text": "Run the command below in the main folder of your project (in the Terminal: type cd, a space, then drag the folder onto the window and press enter). It produces a single file, named repomix-output.xml. Paste that file into whichever AI you want to ask. If the project is big, add --compress to the command to shrink it further. Command: npx repomix@latest"
       }
     }
   ]
@@ -219,14 +219,16 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Coding</p></div>
           <div><h2>Made by</h2><p>yamadashy</p></div>
+          <div><h2>You'll need</h2><p>Node.js, and any AI chat to paste into</p></div>
+          <div><h2>Cost</h2><p>Free</p></div>
           <div><h2>Curator's status</h2><p>In daily use</p></div>
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/yamadashy/repomix" target="_blank" rel="noopener">VIEW REPO ↗</a></p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/yamadashy/repomix" target="_blank" rel="noopener">PROJECT PAGE ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why</h2>
-          <div class="body">Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It skips the clutter folders a project collects, hides anything that looks like a password or a key, and tells you how large the result is before you paste it anywhere.</div>
+          <div class="body">Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It skips the clutter folders a project collects, hides anything that looks like a password or a key, and tells you how large the result is. That hiding only covers things shaped like a credential, though: names, prices and client details sitting in your files travel with the pack, so read the output before you paste it anywhere.</div>
         </section>
         <section class="section">
           <h2>When</h2>
@@ -236,12 +238,12 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>How</h2>
           <div class="body">
             <ol>
-            <li>Run the command below in the main folder of your project.</li>
+            <li>Run the command below in the main folder of your project (in the <a href="../ai-101.html#e-terminal">Terminal</a>: type cd, a space, then drag the folder onto the window and press enter).</li>
             <li>It produces a single file, named repomix-output.xml.</li>
             <li>Paste that file into whichever AI you want to ask. If the project is big, add --compress to the command to shrink it further.</li>
             </ol>
           <div class="specimen">
-            <span class="specimen-where m">Paste into the Terminal app</span>
+            <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
             <code>npx repomix@latest</code>
             <button class="copy-btn" type="button" data-command="npx repomix@latest"
                     aria-label="Copy command: npx repomix@latest">Copy</button>

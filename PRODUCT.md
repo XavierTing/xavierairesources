@@ -29,7 +29,7 @@ Visitors scan a card grid, filter by category tabs, open a tool's detail page to
 - Plain HTML/CSS/JS. No framework, no dependencies, no deploy-time build. One optional Node generator (`generate-seo.mjs`) refreshes SEO artefacts on demand. Static deploy on Vercel/Netlify.
 - Three artefacts: index.html (hero → tabs → static card grid → colophon), tools/<slug>.html (one static, indexable page per tool), and tool.html (noindex redirect shim for legacy ?tool= links).
 - Tool data lives in `tools.js` as a plain array; curation = editing that file, then running `node generate-seo.mjs` to regenerate the static pages, sitemap and llms.txt. Site identity and the canonical URL live in `site.js` (one line to change after deploy). Deployment is still a plain static upload — no build pipeline.
-- Current set (10 tools): Impeccable, Superpowers, Spec-Kit, Chrome DevTools MCP, Context7, Repomix, Agent-Reach, LLM Wiki (karpathy gist), Humanizer, Figma MCP. Categories: Design, Writing, Coding, Agents & MCP, Workflow, Knowledge. The set grows; page copy must never hardcode the count (numbers derive from tools.js).
+- Current set: 25 tools and counting — the list lives in `tools.js`. Categories: Design, Writing, Coding, Connections, Workflow, Knowledge. The set grows; page copy must never hardcode the count (numbers derive from tools.js).
 - Content voice: confident, opinionated, concise — and readable by a newcomer. User directive (2026-08-12): a tertiary student with limited AI knowledge must be able to follow every log entry, so terms of art get explained at first use, every command box says where its line gets typed, and concept words link to their AI 101 definitions, and AI 101 itself spells out every acronym at first use.
 
 ## Brand Commitments
