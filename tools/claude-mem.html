@@ -19,6 +19,9 @@
   <meta property="og:image" content="https://xaviertingai.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Xavier Ting, curator of AI Resources: AI for the rest of us">
+  <meta property="og:locale" content="en_SG">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@xaviertingai">
   <meta name="twitter:site" content="@xaviertingai">
@@ -138,11 +141,18 @@
       "@id": "https://xaviertingai.com/tools/claude-mem.html#tool",
       "name": "Claude Mem",
       "description": "Close the window and your assistant forgets the lot. Claude Mem records what happened while you worked, condenses it, and feeds the relevant parts back the next time you sit down.",
-      "applicationCategory": "DeveloperApplication",
+      "applicationCategory": "ReferenceApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://github.com/thedotmack/claude-mem",
+      "url": "https://xaviertingai.com/tools/claude-mem.html",
+      "sameAs": "https://github.com/thedotmack/claude-mem",
+      "image": "https://xaviertingai.com/assets/cards/light/claude-mem.webp",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
       "author": {
-        "@type": "Organization",
+        "@type": "Person",
         "name": "thedotmack"
       },
       "installUrl": "https://github.com/thedotmack/claude-mem",
@@ -182,12 +192,6 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Knowledge",
-          "item": "https://xaviertingai.com/#knowledge"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "name": "Claude Mem",
           "item": "https://xaviertingai.com/tools/claude-mem.html"
         }
@@ -276,15 +280,15 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <div class="sections">
         <section class="section">
-          <h2>Why</h2>
+          <h2>Why use Claude Mem?</h2>
           <div class="body">Every new session starts from nothing. You re-explain the project, the decisions you already settled, and the approaches that did not work. Claude Mem captures what the assistant does as you go, compresses it, then puts the parts that matter back into later sessions. You get an assistant that picks up roughly where you left off instead of asking again.</div>
         </section>
         <section class="section">
-          <h2>When</h2>
+          <h2>When should you use Claude Mem?</h2>
           <div class="body">Projects you return to across days or weeks, and any work where re-explaining the background eats the time you meant to spend building.</div>
         </section>
         <section class="section">
-          <h2>How</h2>
+          <h2>How do you install and use Claude Mem?</h2>
           <div class="body">
             <ol>
             <li>Run the command below. It sets itself up for whichever assistant you use.</li>

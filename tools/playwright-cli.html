@@ -19,6 +19,9 @@
   <meta property="og:image" content="https://xaviertingai.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Xavier Ting, curator of AI Resources: AI for the rest of us">
+  <meta property="og:locale" content="en_SG">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@xaviertingai">
   <meta name="twitter:site" content="@xaviertingai">
@@ -140,7 +143,14 @@
       "description": "Browser control for coding assistants, given as short typed commands. It uses far less of the assistant's limited working memory, leaving room for your actual code.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
-      "url": "https://github.com/microsoft/playwright-cli",
+      "url": "https://xaviertingai.com/tools/playwright-cli.html",
+      "sameAs": "https://github.com/microsoft/playwright-cli",
+      "image": "https://xaviertingai.com/assets/cards/light/playwright-cli.webp",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
       "author": {
         "@type": "Organization",
         "name": "Microsoft"
@@ -182,12 +192,6 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Connections",
-          "item": "https://xaviertingai.com/#connections"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "name": "Playwright CLI",
           "item": "https://xaviertingai.com/tools/playwright-cli.html"
         }
@@ -276,15 +280,15 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <div class="sections">
         <section class="section">
-          <h2>Why</h2>
+          <h2>Why use Playwright CLI?</h2>
           <div class="body">An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is a fixed size, so the more the page takes the less is left for your code. Microsoft built this the other way around. It hands the assistant short typed commands instead, the <a href="../ai-101.html#e-cli">CLI</a> in the name stands for command line, and does not push page contents at it. On a big project that difference is what decides whether the assistant can hold your code and the browser in mind at the same time.</div>
         </section>
         <section class="section">
-          <h2>When</h2>
+          <h2>When should you use Playwright CLI?</h2>
           <div class="body">Writing or repairing tests that click through a website, checking a sign-up or checkout flow really works end to end, and any job where you want the assistant working against a real browser rather than guessing from the code.</div>
         </section>
         <section class="section">
-          <h2>How</h2>
+          <h2>How do you install and use Playwright CLI?</h2>
           <div class="body">
             <ol>
             <li>Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org.</li>

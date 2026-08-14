@@ -115,24 +115,50 @@ const siteNode = {
   creator: { "@id": `${BASE}/#curator` },
 };
 
+/* Google's software rich result wants the category to mean something and the
+   node to carry offers or ratings. Ratings would be invented; a zero-price
+   offer is simply true, every entry is free. */
+const APP_CATEGORY = {
+  Design: "DesignApplication",
+  Coding: "DeveloperApplication",
+  Workflow: "DeveloperApplication",
+  Connections: "DeveloperApplication",
+  Knowledge: "ReferenceApplication",
+  Writing: "UtilitiesApplication",
+};
+
 function toolNode(t) {
+  const owner = t.maker || repoOwner(t.repo);
+  /* A bare GitHub handle is almost always a person; an explicitly named
+     maker is almost always a company. makerType overrides either default,
+     because "github" is an org handle and Emil Kowalski is a person. */
+  const makerIsPerson = t.makerType
+    ? t.makerType === "person"
+    : !t.maker && !!repoOwner(t.repo);
   return {
     "@type": "SoftwareApplication",
     "@id": `${toolUrl(t)}#tool`,
     name: t.name,
     description: t.blurb || t.tagline,
-    applicationCategory: "DeveloperApplication",
+    applicationCategory: APP_CATEGORY[t.category] || "DeveloperApplication",
     operatingSystem: "Cross-platform",
-    url: t.repo,
-    ...(t.maker || repoOwner(t.repo)
-      ? { author: { "@type": "Organization", name: t.maker || repoOwner(t.repo) } }
+    /* the node's canonical URL is the page that describes it here; the
+       repository is the same entity elsewhere */
+    url: toolUrl(t),
+    sameAs: t.repo,
+    image: `${BASE}/assets/cards/light/${slug(t.name)}.webp`,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    ...(owner
+      ? { author: { "@type": makerIsPerson ? "Person" : "Organization", name: owner } }
       : {}),
     ...(t.command ? { installUrl: t.repo, softwareHelp: t.repo } : {}),
   };
 }
 
+/* \u003c-escaping keeps a literal "</script>" in any data field from
+   terminating the script block early; browsers parse the JSON identically. */
 const jsonLd = (obj) =>
-  `<script type="application/ld+json">\n${JSON.stringify(obj, null, 2)}\n  </script>`;
+  `<script type="application/ld+json">\n${JSON.stringify(obj, null, 2).replace(/</g, "\\u003c")}\n  </script>`;
 
 /* ---------- AI 101 term links ----------
    The course defines the concept words the log leans on. First mention of
@@ -189,6 +215,14 @@ const COMMAND_TARGETS = {
   assistant: "Paste into your assistant",
 };
 
+/* A command with no known target would render a copy-paste box with no
+   "where does this go" label, silently. Refuse instead. */
+for (const t of TOOLS) {
+  if (t.command && !COMMAND_TARGETS[t.commandTarget]) {
+    throw new Error(`tools.js entry ${t.num} (${t.name}): command present but commandTarget is ${JSON.stringify(t.commandTarget)}; use one of ${Object.keys(COMMAND_TARGETS).join(" | ")}`);
+  }
+}
+
 /* ---------- 1. per-tool static pages ---------- */
 
 function detailPage(t, i) {
@@ -238,11 +272,13 @@ function detailPage(t, i) {
         dateModified: t.updated,
       },
       {
+        /* Two levels, because that is what the visible trail shows. The old
+           middle level pointed at #category anchors that do not exist on the
+           homepage, and Google requires the markup to mirror the page. */
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: SITE.name, item: `${BASE}/` },
-          { "@type": "ListItem", position: 2, name: t.category, item: `${BASE}/#${slug(t.category)}` },
-          { "@type": "ListItem", position: 3, name: t.name, item: url },
+          { "@type": "ListItem", position: 2, name: t.name, item: url },
         ],
       },
     ],
@@ -285,6 +321,9 @@ function detailPage(t, i) {
   <meta property="og:image" content="${BASE}/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${escAttr(`${SITE.curator.name}, curator of ${SITE.name}: ${SITE.tagline}`)}">
+  <meta property="og:locale" content="en_SG">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="${SITE.curator.xHandle}">
   <meta name="twitter:site" content="${SITE.curator.xHandle}">
@@ -342,15 +381,15 @@ ${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}${t
 
         <div class="sections">
         <section class="section">
-          <h2>Why</h2>
+          <h2>Why use ${esc(t.name)}?</h2>
           <div class="body">${whyHtml}</div>
         </section>
         <section class="section">
-          <h2>When</h2>
+          <h2>When should you use ${esc(t.name)}?</h2>
           <div class="body">${whenHtml}</div>
         </section>
         <section class="section">
-          <h2>How</h2>
+          <h2>How do you install and use ${esc(t.name)}?</h2>
           <div class="body">
             <ol>
 ${steps}
@@ -426,7 +465,7 @@ const cards = TOOLS.map((t) => [
 
 index = index.replace(
   /(<!-- CARDS:START -->)[\s\S]*?(<!-- CARDS:END -->)/,
-  `$1\n${cards}\n        $2`
+  () => `<!-- CARDS:START -->\n${cards}\n        <!-- CARDS:END -->`
 );
 
 const indexGraph = {
@@ -443,11 +482,15 @@ const indexGraph = {
       isPartOf: { "@id": `${BASE}/#website` },
       about: { "@id": `${BASE}/#curator` },
       author: { "@id": `${BASE}/#curator` },
+      mainEntity: { "@id": `${BASE}/#toollist` },
       primaryImageOfPage: `${BASE}/og-image.png`,
       datePublished: SITE.published,
       dateModified: isoDate(LOG_UPDATED),
     },
     {
+      /* All-in-one ItemList shape: ListItem carries position, name and the
+         full nested entity, never a url of its own. Mixing the summary and
+         all-in-one formats is a documented way to have the list ignored. */
       "@type": "ItemList",
       "@id": `${BASE}/#toollist`,
       name: `${SITE.name}: the ${TOOLS.length} AI tools ${SITE.curator.name} uses daily`,
@@ -456,7 +499,7 @@ const indexGraph = {
       itemListElement: TOOLS.map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: toolUrl(t),
+        name: t.name,
         item: toolNode(t),
       })),
     },
@@ -465,7 +508,7 @@ const indexGraph = {
 
 index = index.replace(
   /(<!-- JSONLD:START -->)[\s\S]*?(<!-- JSONLD:END -->)/,
-  `$1\n  ${jsonLd(indexGraph)}\n  $2`
+  () => `<!-- JSONLD:START -->\n  ${jsonLd(indexGraph)}\n  <!-- JSONLD:END -->`
 );
 
 /* Title and descriptions carry the tool count, so the generator owns them —
@@ -485,7 +528,7 @@ index = index.replace(
 
 index = index.replace(
   /(<!-- META:START -->)[\s\S]*?(<!-- META:END -->)/,
-  `$1
+  () => `<!-- META:START -->
   <title>${esc(indexTitle)}</title>
   <meta name="description" content="${esc(indexDesc)}">
   <meta property="og:title" content="${esc(indexTitle)}">
@@ -493,7 +536,7 @@ index = index.replace(
   <link rel="canonical" href="${BASE}/">
   <meta property="og:url" content="${BASE}/">
   <meta property="og:image" content="${BASE}/og-image.png">
-  $2`
+  <!-- META:END -->`
 );
 
 writeFileSync(join(ROOT, "index.html"), index);

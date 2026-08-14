@@ -90,6 +90,7 @@ const TOOLS = [
   },
   {
     num: "03",
+    makerType: "org",
     added: "2026-07-30",
     updated: "2026-08-13",
     name: "Spec-Kit",
@@ -113,6 +114,7 @@ const TOOLS = [
   },
   {
     num: "04",
+    makerType: "org",
     added: "2026-07-30",
     updated: "2026-08-13",
     name: "Chrome DevTools MCP",
@@ -136,6 +138,7 @@ const TOOLS = [
   },
   {
     num: "05",
+    makerType: "org",
     added: "2026-07-30",
     updated: "2026-08-13",
     name: "Context7",
@@ -331,6 +334,7 @@ const TOOLS = [
     repo: "https://github.com/mathiaschu/watch",
     repoLabel: "PROJECT PAGE",
     maker: "Mathias Schusterman",
+    makerType: "person",
     needs: "Claude Code",
     cost: "Free; transcribes on your computer (Claude Code has its own plan)",
     why: "Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute.",
@@ -379,6 +383,7 @@ const TOOLS = [
     repo: "https://github.com/emilkowalski/skills/tree/main/skills/apple-design",
     repoLabel: "VIEW SKILL",
     maker: "Emil Kowalski",
+    makerType: "person",
     needs: "An AI coding assistant, Node.js (free, from nodejs.org)",
     cost: "Free (your AI assistant has its own plan)",
     why: "An AI assistant has no feel for motion. It will slow an animation down as it arrives when it should speed up, or build one that locks you out until it has finished playing. This hands the assistant Apple's own thinking, taken from their design talks and rewritten for the web. The rules are specific: react the instant a finger goes down rather than when it lifts, keep a dragged thing stuck to the finger the whole way, and let any animation be caught and reversed halfway through. That last one is most of the difference between an interface that feels alive and one that feels like a slideshow. It was written by Emil Kowalski, who spent years building interfaces at Vercel and Linear, two software companies known for exactly this kind of polish.",
@@ -463,6 +468,7 @@ const TOOLS = [
   },
   {
     num: "19",
+    makerType: "org",
     added: "2026-08-07",
     updated: "2026-08-13",
     name: "Headroom",
