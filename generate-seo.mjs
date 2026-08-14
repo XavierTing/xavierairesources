@@ -413,7 +413,7 @@ ${steps}
         <div class="colophon-who">
           <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="${escAttr(SITE.curator.name)}" loading="lazy">
           <div>
-            <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor)}. I build with AI every day and curate the resources I personally use and find useful.</p>
+            <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor.name)}. I build with AI every day and curate the resources I personally use and find useful.</p>
             <p class="colophon-links m">
               <a href="${SITE.curator.linkedin}" rel="me noopener">LinkedIn ↗</a>
               <a href="${SITE.curator.x}" rel="me noopener">X ↗</a>
@@ -635,7 +635,7 @@ const llms = `# ${SITE.name}
 
 > ${SITE.tagline}. ${SITE.description}
 
-Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.worksFor}.
+Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.worksFor.name}.
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
@@ -644,7 +644,7 @@ ${SITE.curator.summary}
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})
 - Portfolio: ${SITE.curator.portfolio}
-- Credentials: ${SITE.curator.credentials.join("; ")}
+- Credentials: ${SITE.curator.credentials.map((c) => c.name).join("; ")}
 - Tools listed: ${TOOLS.length} · Categories: ${categories.length} · Last updated: ${LOG_UPDATED}
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.

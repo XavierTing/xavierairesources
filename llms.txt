@@ -2,7 +2,7 @@
 
 > AI for the rest of us. The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.
 
-Curated by Xavier Ting, Vice President at [object Object].
+Curated by Xavier Ting, Vice President at OCBC.
 AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.
 
 - Site: https://xaviertingai.com/
@@ -11,7 +11,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - LinkedIn: https://www.linkedin.com/in/xavierting/
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
-- Credentials: [object Object]; [object Object]; [object Object]
+- Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
 - Tools listed: 27 · Categories: 6 · Last updated: 14.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
