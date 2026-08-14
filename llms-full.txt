@@ -1,0 +1,706 @@
+# AI Resources
+
+> AI for the rest of us. The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.
+
+Curated by Xavier Ting, Vice President at OCBC.
+AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.
+
+- Site: https://xaviertingai.com/
+- Course: https://xaviertingai.com/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, about 75 minutes)
+- Curator: https://xaviertingai.com/curator.html — who Xavier Ting is and why this site exists
+- LinkedIn: https://www.linkedin.com/in/xavierting/
+- X: https://x.com/xaviertingai (@xaviertingai)
+- Portfolio: https://www.xavierting.com/
+- Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
+- Tools listed: 27 · Categories: 6 · Last updated: 14.08.2026
+
+Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
+
+---
+
+## 01. Impeccable — Stops AI building the same generic website
+
+- **Category:** Design
+- **Made by:** pbakaus
+- **Source:** https://github.com/pbakaus/impeccable
+- **Page:** https://xaviertingai.com/tools/impeccable.html
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
+- **Install / run:** `npx impeccable install`
+
+**Why use Impeccable?**
+Every AI model builds you the same website: a big pale heading, rainbow gradient text, three identical boxes. Impeccable gives the assistant an actual design education. It adds 23 commands you can type into your assistant and 60 automatic checks that catch those generic patterns the moment they appear on your page.
+
+**When should you use Impeccable?**
+Any time you are building a web page or an app with an AI assistant. Check it before you publish, ask it to improve what it made, or leave the checks running so it flags weak design while you work.
+
+**How do you install and use Impeccable?**
+1. Run the command below in the folder your project lives in (in the Terminal: type cd, a space, then drag the folder onto the window and press enter). It works out which AI tool you use, whether that is Claude Code, Cursor, Codex or another.
+2. Inside your assistant, type /impeccable init once, so it learns what you are building and who it is for.
+3. Build as normal, then finish by typing /impeccable audit to check the result or /impeccable polish to improve it.
+
+**Curator's note:** Its checks ran on every edit of this page.
+
+---
+
+## 02. Superpowers — Makes Claude Code plan before it builds
+
+- **Category:** Workflow
+- **Made by:** obra
+- **Source:** https://github.com/obra/superpowers
+- **Page:** https://xaviertingai.com/tools/superpowers.html
+- **You'll need:** Claude Code
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `claude plugin install superpowers@claude-plugins-official`
+
+**Why use Superpowers?**
+Left alone, an AI assistant starts writing code straight away and guesses at whatever you did not spell out. Superpowers makes it work the way an experienced engineer does. It thinks through the design first, writes a plan, checks its own work automatically, then reviews before anything is final. You notice the difference a couple of weeks later, when you come back and can still follow what it built.
+
+**When should you use Superpowers?**
+Anything bigger than a quick fix. It is most useful on projects you are starting from scratch, and on bugs that have already survived a few attempts.
+
+**How do you install and use Superpowers?**
+1. Install it with the command below, from the official catalogue of Claude Code add-ons.
+2. Start any task as normal. It brings in the planning steps by itself.
+3. Work through the checkpoints it offers, and approve the design before it writes any code.
+
+**Curator's note:** This site was built through its plan-first flow.
+
+---
+
+## 03. Spec-Kit — Write down what you want, so the AI stops drifting
+
+- **Category:** Workflow
+- **Made by:** github
+- **Source:** https://github.com/github/spec-kit
+- **Page:** https://xaviertingai.com/tools/spec-kit.html
+- **You'll need:** An AI coding assistant, the uv helper
+- **Cost:** Free (your AI assistant has its own plan)
+- **Install / run:** `uvx --from git+https://github.com/github/spec-kit.git specify init`
+
+**Why use Spec-Kit?**
+Building feature by feature inside one long chat drifts. By the third one, the assistant is guessing at what you asked for in the first. Spec-Kit turns that around. You write the requirements into a document, and the assistant builds from that document rather than from whatever it can still remember of the conversation.
+
+**When should you use Spec-Kit?**
+Projects that run across several sessions, work you share with other people, and anything where the plan has to outlive a single chat.
+
+**How do you install and use Spec-Kit?**
+1. Run the command below in the folder your project lives in (in the Terminal: type cd, a space, then drag the folder onto the window and press enter). If it says uv is missing, install it from uv's own page at docs.astral.sh/uv; uv is the free helper this uses to fetch itself.
+2. Then, inside your assistant, type /speckit.specify to write down the requirements.
+3. Follow with /speckit.plan to plan the work, and /speckit.implement to build it.
+
+**Curator's note:** The written spec is still there long after the chat has gone.
+
+---
+
+## 04. Chrome DevTools MCP — Lets your AI assistant see the page it built
+
+- **Category:** Connections
+- **Made by:** ChromeDevTools
+- **Source:** https://github.com/ChromeDevTools/chrome-devtools-mcp
+- **Page:** https://xaviertingai.com/tools/chrome-devtools-mcp.html
+- **You'll need:** Claude Code, Node.js (free, from nodejs.org), Chrome
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `claude mcp add chrome-devtools npx chrome-devtools-mcp@latest`
+
+**Why use Chrome DevTools MCP?**
+An assistant that cannot see the page is working blind, and it will report things as fixed that it never checked. This official tool from Google connects your assistant to a real Chrome browser. It can then read the error messages, watch what the page loads, measure how fast it runs, and take screenshots of what it actually looks like.
+
+**When should you use Chrome DevTools MCP?**
+Fixing anything that shows up in a browser, making a slow page faster, and any time you want proof that a change worked rather than a claim that it did.
+
+**How do you install and use Chrome DevTools MCP?**
+1. Add it to your assistant's connected tools with the command below. MCP is simply the agreed standard for plugging outside tools into an AI assistant.
+2. Ask the assistant to open your page and read the errors.
+3. Let it take screenshots and check its own work before it tells you it is finished.
+
+**Curator's note:** The single biggest upgrade to how an assistant handles web work.
+
+---
+
+## 05. Context7 — Gives the AI today's documentation, not last year's
+
+- **Category:** Connections
+- **Made by:** upstash
+- **Source:** https://github.com/upstash/context7
+- **Page:** https://xaviertingai.com/tools/context7.html
+- **You'll need:** Claude Code, Node.js (free, from nodejs.org)
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `claude mcp add context7 -- npx -y @upstash/context7-mcp`
+
+**Why use Context7?**
+An AI model only knows the versions of software that existed when it was trained, so it confidently writes code for features that have since been renamed or removed. Context7 fetches the current documentation while the assistant is working. What it writes then matches the version you actually have installed.
+
+**When should you use Context7?**
+Working with software that changes quickly (web-building kits such as Next.js and Tailwind are the classic case), or with any tool released more recently than the model itself.
+
+**How do you install and use Context7?**
+1. Add it to your assistant's connected tools with the command below.
+2. Add the words use context7 to your request, or set a rule so it happens every time.
+3. You get code written against current documentation instead of the model's memory.
+
+**Curator's note:** Killed a whole class of bug where a method had quietly been renamed months earlier.
+
+---
+
+## 06. Repomix — Packs your whole project into one file you can paste
+
+- **Category:** Coding
+- **Made by:** yamadashy
+- **Source:** https://github.com/yamadashy/repomix
+- **Page:** https://xaviertingai.com/tools/repomix.html
+- **You'll need:** Node.js (free, from nodejs.org), and any AI chat to paste into
+- **Cost:** Free
+- **Install / run:** `npx repomix@latest`
+
+**Why use Repomix?**
+Most AI chat windows cannot see your project folder, and pasting files one at a time is slow. Repomix flattens the whole project into one organized file. It skips the clutter folders a project collects, hides anything that looks like a password or a key, and tells you how large the result is. That hiding only covers things shaped like a credential, though: names, prices and client details sitting in your files travel with the pack, so read the output before you paste it anywhere.
+
+**When should you use Repomix?**
+Getting a second opinion from a different AI, having code reviewed by a model that cannot open your folder, or bringing an assistant up to speed on code it has never seen.
+
+**How do you install and use Repomix?**
+1. Run the command below in the main folder of your project (in the Terminal: type cd, a space, then drag the folder onto the window and press enter).
+2. It produces a single file, named repomix-output.xml.
+3. Paste that file into whichever AI you want to ask. If the project is big, add --compress to the command to shrink it further.
+
+**Curator's note:** My button for letting a second model sanity check the work.
+
+---
+
+## 07. Agent-Reach — Gets your AI past sites that block it
+
+- **Category:** Connections
+- **Made by:** Panniantong
+- **Source:** https://github.com/Panniantong/Agent-Reach
+- **Page:** https://xaviertingai.com/tools/agent-reach.html
+- **You'll need:** Claude Code
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `Install Agent Reach: https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md`
+
+**Why use Agent-Reach?**
+Much of the useful internet is closed to automated tools. X charges for access, Reddit blocks the machines assistants usually call from, and video sites restrict things by country. Agent-Reach works out which route still works for each site, sets it up, tests that it really is working, and gives your assistant one consistent way to ask for any of them.
+
+**When should you use Agent-Reach?**
+Research where the assistant genuinely needs to read tweets, Reddit discussions or video transcripts, or to check several sites in a single run.
+
+**How do you install and use Agent-Reach?**
+1. Paste the line below into your assistant. It installs itself: the assistant downloads the skill's instructions and saves them into its own skills folder on your machine.
+2. It checks your setup and reports which sites it can reach.
+3. Ask for a page by its web address or by searching, and it picks a route that works.
+
+**Curator's note:** Turns a flat refusal to open the page into an actual answer.
+
+---
+
+## 08. LLM Wiki — Notes your AI writes and keeps up to date for you
+
+- **Category:** Knowledge
+- **Made by:** karpathy
+- **Source:** https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+- **Page:** https://xaviertingai.com/tools/llm-wiki.html
+- **You'll need:** Nothing to install, a browser
+- **Cost:** Free
+
+**Why use LLM Wiki?**
+Most tools that let an AI use your documents work by searching them fresh for every question. The AI re-reads everything each time and builds up no understanding at all. Andrej Karpathy, one of the best known AI researchers, suggests the opposite: have the model keep a set of plain text notes. Each new source gets read once, linked to the notes it relates to, and flagged where it contradicts something already written down. The reading work happens once instead of on every question.
+
+**When should you use LLM Wiki?**
+Building a second brain out of notes, articles and bookmarks: a personal knowledge base that gets more useful the more you add to it.
+
+**How do you install and use LLM Wiki?**
+1. Read the page (a gist is simply a note published on GitHub). It describes an approach to follow, not something you install.
+2. Write down your own structure: what belongs on a page, and how pages should link to each other.
+3. Point your assistant at new material to read in. Ask the notes questions, and have it tidy them up now and then.
+
+**Curator's note:** One of the rare ideas that gets better the longer you run it.
+
+---
+
+## 09. Humanizer — Takes the AI sound out of your writing
+
+- **Category:** Writing
+- **Made by:** blader
+- **Source:** https://github.com/blader/humanizer
+- **Page:** https://xaviertingai.com/tools/humanizer.html
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
+- **Install / run:** `npx skills add blader/humanizer --global`
+
+**Why use Humanizer?**
+AI prose has a recognizable accent. Long dashes strung through the sentences, the it is not this, it is that construction, bold text on every other phrase. Most readers pick it up within a sentence or two. Humanizer works through 33 documented habits of machine writing and takes them back out. Give it a few samples of your own writing and it keeps your voice while it does.
+
+**When should you use Humanizer?**
+The last thing you do before anything goes public: posts, documentation, emails, or anything at all with your name on it.
+
+**How do you install and use Humanizer?**
+1. Run the command below. It installs Humanizer as a skill, which is a saved set of instructions your assistant loads when the job calls for it.
+2. Type /humanizer, then paste in the text, or name a file for it to work on.
+3. Give it a few samples of your own writing once, so later edits still sound like you.
+
+**Curator's note:** The last gate before anything ships with my name on it.
+
+---
+
+## 10. Figma MCP — Lets AI read your real design file, not a screenshot
+
+- **Category:** Design
+- **Made by:** Figma
+- **Source:** https://developers.figma.com/docs/figma-mcp-server/
+- **Page:** https://xaviertingai.com/tools/figma-mcp.html
+- **You'll need:** Claude Code, a Figma account
+- **Cost:** Free with your Figma account (Claude Code has its own plan)
+- **Install / run:** `claude mcp add --transport http figma https://mcp.figma.com/mcp`
+
+**Why use Figma MCP?**
+Hand an assistant a screenshot and it has to guess. It eyeballs the spacing, invents color values, and rebuilds buttons you already have. Figma's official connection, built on MCP, the standard plug between AI apps and other software, gives it the real file instead: the actual colors you chose, the reusable pieces you built, the spacing you set. It can write back into Figma as well, so work moves in both directions.
+
+**When should you use Figma MCP?**
+Any build that starts from a design file, and any time the live product has drifted away from the design. Select a frame, point the assistant at it, and check what it makes against the real values rather than against the picture.
+
+**How do you install and use Figma MCP?**
+1. Add it to your assistant's connected tools with the command below.
+2. Open the file in Figma and select the frame you want built.
+3. Ask your assistant to build the selection. It reads the real values instead of guessing from pixels.
+
+**Curator's note:** The handover step I stopped doing by hand.
+
+---
+
+## 11. Obsidian Skills — Teaches your AI to work inside your Obsidian notes
+
+- **Category:** Knowledge
+- **Made by:** kepano
+- **Source:** https://github.com/kepano/obsidian-skills
+- **Page:** https://xaviertingai.com/tools/obsidian-skills.html
+- **You'll need:** An AI coding assistant, Obsidian
+- **Cost:** Free (your AI assistant has its own plan)
+- **Install / run:** `npx skills add https://github.com/kepano/obsidian-skills`
+
+**Why use Obsidian Skills?**
+Obsidian stores your notes as ordinary text files on your own machine, which means an assistant can work on them directly. Left to itself though, it writes plain text and misses everything that makes a set of notes worth having: the links between them, the properties at the top of each one, the canvases, the tables. These five skills teach it the real formats, so what it writes behaves like an actual Obsidian note rather than a file that happens to sit in the folder.
+
+**When should you use Obsidian Skills?**
+Any time you want an assistant working inside your notes rather than in a chat window. Turning research into linked notes, laying out a canvas, or building one of Obsidian's tables without learning the format yourself.
+
+**How do you install and use Obsidian Skills?**
+1. Run the command below. The skills follow an open standard, so Claude Code, Codex and other assistants all read the same files.
+2. Point the assistant at your vault, which is simply the folder your notes already live in.
+3. Ask for what you want in plain words. It handles the links, the properties and the canvas format itself.
+
+**Curator's note:** Five skills on an open standard, so they are not tied to one assistant.
+
+---
+
+## 12. Ralph Loop — Runs Claude on the same task until it is done
+
+- **Category:** Workflow
+- **Made by:** Anthropic
+- **Source:** https://claude.com/plugins/ralph-loop
+- **Page:** https://xaviertingai.com/tools/ralph-loop.html
+- **You'll need:** Claude Code
+- **Cost:** Free; each attempt uses your Claude allowance
+- **Install / run:** `claude plugin install ralph-loop@claude-plugins-official`
+
+**Why use Ralph Loop?**
+Some work does not come right on the first attempt, and sitting there restarting the assistant yourself gets old quickly. Ralph Loop catches the moment a session ends and feeds your original request straight back in, keeping every file change and the record of earlier attempts. Claude reads what it already tried, sees which checks failed, and goes again. It stops when it reports the finish word you picked, or when it reaches the number of attempts you allowed.
+
+**When should you use Ralph Loop?**
+Work where you can say plainly what finished looks like and something can check it for you automatically. The loop needs a finish line it can recognize, so open ended tasks are a poor fit.
+
+**How do you install and use Ralph Loop?**
+1. Install it with the command below.
+2. Inside Claude Code, type /ralph-loop followed by your request. Add --max-iterations 10 to cap the attempts at ten, and --completion-promise DONE to set the finish word.
+3. Leave it to work. Stop it early at any point with /cancel-ralph.
+
+**Curator's note:** Needs a finish line it can check. Without one it just runs until the attempts are gone.
+
+---
+
+## 13. Watch — Lets Claude actually watch a video and answer
+
+- **Category:** Connections
+- **Made by:** Mathias Schusterman
+- **Source:** https://github.com/mathiaschu/watch
+- **Page:** https://xaviertingai.com/tools/watch.html
+- **You'll need:** Claude Code
+- **Cost:** Free; transcribes on your computer (Claude Code has its own plan)
+- **Install / run:** `/plugin marketplace add mathiaschu/watch`
+
+**Why use Watch?**
+Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute.
+
+**When should you use Watch?**
+Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down.
+
+**How do you install and use Watch?**
+1. Type the command below inside Claude Code. It adds the catalogue the tool lives in.
+2. Then install the tool itself by typing /plugin install watch@claude-video
+3. Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute.
+
+**Curator's note:** It answers from what is on the screen rather than from the title. The difference shows up on the first question.
+
+---
+
+## 14. Codex for Claude Code — Brings in OpenAI's Codex to review code or take on jobs
+
+- **Category:** Coding
+- **Made by:** OpenAI
+- **Source:** https://github.com/openai/codex-plugin-cc
+- **Page:** https://xaviertingai.com/tools/codex-for-claude-code.html
+- **You'll need:** Claude Code, a ChatGPT account
+- **Cost:** Free plugin; uses your ChatGPT account's Codex allowance
+- **Install / run:** `/plugin marketplace add openai/codex-plugin-cc`
+
+**Why use Codex for Claude Code?**
+Two assistants built by different companies rarely make the same mistake, and the one that wrote the code is the worst judge of it. This is OpenAI's own add-on for Claude Code. It calls in Codex, their coding assistant, to read the changes just made and report what it finds, without you switching apps. The other half is handing work over rather than checking it: Codex takes the job, runs in the background, and reports back when it is done. The plugin itself is free; the work runs against your ChatGPT account's Codex allowance, which a free account gets a small amount of, and the image making it can also do needs a paid OpenAI account.
+
+**When should you use Codex for Claude Code?**
+Straight after a change big enough that you would want someone else to look at it, or on a stubborn bug where a fresh opinion beats another attempt. Handing work over is the other half. Because Codex can write and run code of its own, a job you pass to it can go well beyond code: it can even produce finished images for you (needs a paid OpenAI account). There is no button for it, you simply ask.
+
+**How do you install and use Codex for Claude Code?**
+1. Type the command below inside Claude Code. It adds OpenAI's catalogue.
+2. Install it by typing /plugin install codex@openai-codex, then /reload-plugins
+3. Type /codex:setup once. It checks Codex is ready and offers to fetch it if not. After that, /codex:review looks over your current work.
+
+**Curator's note:** A review from a model that did not write the code catches what checking your own work never will.
+
+---
+
+## 15. Apple Design — Teaches your AI what makes Apple interfaces feel right
+
+- **Category:** Design
+- **Made by:** Emil Kowalski
+- **Source:** https://github.com/emilkowalski/skills/tree/main/skills/apple-design
+- **Page:** https://xaviertingai.com/tools/apple-design.html
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
+- **Install / run:** `npx skills@latest add emilkowalski/skills`
+
+**Why use Apple Design?**
+An AI assistant has no feel for motion. It will slow an animation down as it arrives when it should speed up, or build one that locks you out until it has finished playing. This hands the assistant Apple's own thinking, taken from their design talks and rewritten for the web. The rules are specific: react the instant a finger goes down rather than when it lifts, keep a dragged thing stuck to the finger the whole way, and let any animation be caught and reversed halfway through. That last one is most of the difference between an interface that feels alive and one that feels like a slideshow. It was written by Emil Kowalski, who spent years building interfaces at Vercel and Linear, two software companies known for exactly this kind of polish.
+
+**When should you use Apple Design?**
+Anything a person touches and drags: panels that slide up from the bottom, side drawers, swipe gestures, anything that should carry momentum. It is also worth reaching for when an animation you already built feels slightly off and you cannot put your finger on why.
+
+**How do you install and use Apple Design?**
+1. Run the command below. It installs Emil's whole set of nine skills, not this one on its own.
+2. Ask your assistant to follow the apple-design skill while it builds or reviews an interface.
+3. The rest of the set is worth knowing about: animate builds an animation from scratch, review-animations goes over what you already have.
+
+**Curator's note:** The rule about catching an animation mid-flight is the one almost no assistant thinks of on its own.
+
+---
+
+## 16. Notchi — Shows what Claude Code is doing, up in the notch
+
+- **Category:** Workflow
+- **Made by:** sk-ruban
+- **Source:** https://github.com/sk-ruban/notchi
+- **Page:** https://xaviertingai.com/tools/notchi.html
+- **You'll need:** A MacBook with a notch, macOS 15 or newer
+- **Cost:** Free; the optional key spends your own credit
+
+**Why use Notchi?**
+While an assistant is working you either sit watching its window or wander off and lose track of it. Notchi puts a small animated character in the notch at the top of your MacBook screen and changes it as the work changes: thinking, running something, stopped and waiting for your permission, done. Every session you have open gets its own character. Click the notch and it opens out to show how long the session has run and how much of your usage allowance is left. It only runs on a MacBook that actually has a notch, on macOS 15 or newer, which rules out plenty of machines.
+
+**When should you use Notchi?**
+Any time you set the assistant on something that will take minutes rather than seconds and you would rather glance up than keep checking. It is quickest at catching the moment it has stopped and is waiting on you to approve something, which is the easiest thing to miss.
+
+**How do you install and use Notchi?**
+1. Download the app from the releases page, linked from the project page in the sidebar, and drag Notchi into Applications. There is nothing to type.
+2. Open it once. It connects itself to Claude Code and Codex, OpenAI's equivalent, whichever you have.
+3. Skip the key. The character works without one; a key is only for the chat feature, it comes from Anthropic's or OpenAI's own website, and it spends your own credit every time it is used.
+
+**Curator's note:** Ambient rather than useful, strictly speaking. Knowing it is waiting on you without having to look is worth more than it sounds.
+
+---
+
+## 17. OmniRoute — Keeps you working when your AI quota runs out
+
+- **Category:** Coding
+- **Made by:** diegosouzapw
+- **Source:** https://github.com/diegosouzapw/OmniRoute
+- **Page:** https://xaviertingai.com/tools/omniroute.html
+- **You'll need:** Node.js (free, from nodejs.org), and an AI coding tool
+- **Cost:** Free; paid models still bill you as usual
+- **Install / run:** `npm install -g omniroute`
+
+**Why use OmniRoute?**
+Running out of your usage allowance halfway through a job is a slow way to lose an afternoon. OmniRoute sits in the middle: instead of your AI tool talking to one company directly, it talks to OmniRoute, which can pass the work to more than 500 models from around 290 companies, over 90 of them free. When the model you are using hits its limit, it hands you to another and keeps going. It also trims what gets sent along the way, which the project measures at 15 to 95 percent fewer tokens, the units AI reads and bills by. Sitting in the middle is the trade: what you send travels through OmniRoute on its way to whichever company hosts the model you picked, which is worth a thought if the text is confidential.
+
+**When should you use OmniRoute?**
+Long sessions where stopping is expensive, and any time you want to try a cheaper or free model without changing your setup. It works with the main AI coding tools, Claude Code, Codex, Cursor and Copilot among them.
+
+**How do you install and use OmniRoute?**
+1. Run the command below.
+2. Follow its guide, on the project page linked in the sidebar, to point your AI tool at it: one line to change in the tool's settings, shown for each tool.
+3. Carry on working. When a model runs out, it moves you to the next one.
+
+**Curator's note:** MIT licensed and built by a large contributor base, so nothing here is locked behind one vendor.
+
+---
+
+## 18. Claude Mem — Lets your assistant remember earlier sessions
+
+- **Category:** Knowledge
+- **Made by:** thedotmack
+- **Source:** https://github.com/thedotmack/claude-mem
+- **Page:** https://xaviertingai.com/tools/claude-mem.html
+- **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
+- **Cost:** Free (your AI assistant has its own plan)
+- **Install / run:** `npx claude-mem install`
+
+**Why use Claude Mem?**
+Every new session starts from nothing. You re-explain the project, the decisions you already settled, and the approaches that did not work. Claude Mem captures what the assistant does as you go, compresses it, then puts the parts that matter back into later sessions. You get an assistant that picks up roughly where you left off instead of asking again.
+
+**When should you use Claude Mem?**
+Projects you return to across days or weeks, and any work where re-explaining the background eats the time you meant to spend building.
+
+**How do you install and use Claude Mem?**
+1. Run the command below. It sets itself up for whichever assistant you use.
+2. Work as normal. It records and condenses each session in the background.
+3. Next time you start, the relevant history is already in front of the assistant.
+
+**Curator's note:** Reaches past Claude Code to Codex, Gemini and Copilot, so the memory is not stranded in one tool.
+
+---
+
+## 19. Headroom — Shrinks what gets sent to the model, not the answers
+
+- **Category:** Coding
+- **Made by:** headroomlabs-ai
+- **Source:** https://github.com/headroomlabs-ai/headroom
+- **Page:** https://xaviertingai.com/tools/headroom.html
+- **You'll need:** Python 3.10 or newer
+- **Cost:** Free
+- **Install / run:** `pip install "headroom-ai[all]"`
+
+**Why use Headroom?**
+A lot of what your assistant reads is filler. Records of what programs printed, long stretches of data, repeated boilerplate. Every word of it uses up tokens, the units AI reads and bills by, and almost none of it makes the answer better. Headroom compresses that material before it reaches the model. The project measures around 20 percent fewer tokens on coding work and between 60 and 95 percent on data files, with the same answers coming back.
+
+**When should you use Headroom?**
+Work that pushes a lot of material through the assistant: reading logs, handling large data files, or long runs where the assistant's working memory fills up and earlier detail starts falling out.
+
+**How do you install and use Headroom?**
+1. Run the command below. It needs Python 3.10 or newer; typing python3 --version in the Terminal tells you whether you have it. If it is missing, Python is a free install from python.org, and pip, Python's own installer, arrives with it.
+2. Follow its guide, on the project page linked in the sidebar, to add it to your assistant's connected tools. That is the simplest of its ways to run, and the guide covers the others.
+3. Carry on as normal. It compresses in the middle and the answers come back unchanged.
+
+**Curator's note:** It compresses what goes in, not what comes back, so nothing about the reply is degraded.
+
+---
+
+## 20. Claude Code Setup — Reads your project and suggests what to set up
+
+- **Category:** Workflow
+- **Made by:** Anthropic
+- **Source:** https://claude.com/plugins/claude-code-setup
+- **Page:** https://xaviertingai.com/tools/claude-code-setup.html
+- **You'll need:** Claude Code
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `claude plugin install claude-code-setup@claude-plugins-official`
+
+**Why use Claude Code Setup?**
+Claude Code can be extended in several directions: skills it loads for particular jobs, outside tools it connects to, actions that fire automatically as you work, and shortcut commands you can type. Working out which of those your particular project would actually benefit from is the hard part. This reads your project and names the top one or two in each category, with its reasoning. It only reads and changes nothing, so running it costs you the time and nothing else.
+
+**When should you use Claude Code Setup?**
+Setting up a project you have just started working in, or returning to one where you never got round to configuring anything past the defaults.
+
+**How do you install and use Claude Code Setup?**
+1. Install it with the command below.
+2. Then open Claude Code and ask in plain words, along the lines of recommending automations for this project.
+3. Read what it suggests and add whichever you want. It will not change anything itself.
+
+**Curator's note:** Read only, so there is no risk in running it purely to see what it says.
+
+---
+
+## 21. Task Observer — Watches how you work and improves your skills
+
+- **Category:** Workflow
+- **Made by:** rebelytics
+- **Source:** https://github.com/rebelytics/one-skill-to-rule-them-all
+- **Page:** https://xaviertingai.com/tools/task-observer.html
+- **You'll need:** Claude Code, and a few skills of your own
+- **Cost:** Free (Claude Code has its own plan)
+
+**Why use Task Observer?**
+A skill is a set of saved instructions your assistant loads for a particular job. Writing one takes effort, and once written it never learns from how you actually use it. Task Observer runs alongside your work watching for two things: corrections you keep making, which point at a skill that is unclear, and jobs you keep doing by hand, which point at a skill that does not exist yet. It logs what it noticed and suggests specific changes. It never edits your skills itself, so you decide what to keep.
+
+**When should you use Task Observer?**
+Once you have built a few skills and keep correcting the same things. The author is upfront that the payoff grows with the size of your collection, so with two or three skills, editing them directly is still quicker.
+
+**How do you install and use Task Observer?**
+1. On the project page linked in the sidebar, use GitHub's green Code button and choose Download ZIP, then unzip it.
+2. Put the folder where your assistant keeps its skills. For Claude Code that is the .claude/skills folder, and folders whose name starts with a dot are hidden: on a Mac, press Cmd+Shift+. in Finder to show them, or use Finder's Go to Folder. The guide on that page covers other assistants.
+3. Work as normal, then read the observations it logs and apply the ones you agree with.
+
+**Curator's note:** Released under CC BY 4.0 rather than a code license, which fits. It is a method as much as a tool.
+
+---
+
+## 22. Playwright CLI — Lets your AI drive a browser without filling up its memory
+
+- **Category:** Connections
+- **Made by:** Microsoft
+- **Source:** https://github.com/microsoft/playwright-cli
+- **Page:** https://xaviertingai.com/tools/playwright-cli.html
+- **You'll need:** Claude Code, Node.js 18 or newer (free, from nodejs.org)
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `npm install -g @playwright/cli@latest`
+
+**Why use Playwright CLI?**
+An assistant that needs to click through your website can be given a browser in two ways. The usual way loads a large description of the page into the assistant's working memory, and that memory is a fixed size, so the more the page takes the less is left for your code. Microsoft built this the other way around. It hands the assistant short typed commands instead, the CLI in the name stands for command line, and does not push page contents at it. On a big project that difference is what decides whether the assistant can hold your code and the browser in mind at the same time.
+
+**When should you use Playwright CLI?**
+Writing or repairing tests that click through a website, checking a sign-up or checkout flow really works end to end, and any job where you want the assistant working against a real browser rather than guessing from the code.
+
+**How do you install and use Playwright CLI?**
+1. Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org.
+2. Then run playwright-cli install --skills so Claude Code and similar tools learn the commands.
+3. Ask your assistant in plain words, for example: test the add to basket flow on my site using playwright-cli.
+
+**Curator's note:** The token argument is the whole point. On a large repo it is the difference between the assistant coping and running out of room.
+
+---
+
+## 23. Supabase Plugin — Lets your AI work directly with your Supabase database
+
+- **Category:** Connections
+- **Made by:** Supabase
+- **Source:** https://supabase.com/docs/guides/ai-tools/plugins
+- **Page:** https://xaviertingai.com/tools/supabase-plugin.html
+- **You'll need:** An AI coding assistant, a Supabase project
+- **Cost:** Free; Supabase and your AI assistant have their own plans
+- **Install / run:** `npx plugins add supabase-community/supabase-plugin`
+
+**Why use Supabase Plugin?**
+Supabase is the service many apps use to store their data and run their behind-the-scenes code. An assistant that cannot see yours will invent table names and write code against a shape that does not exist. This is Supabase's own add-on. It gives the assistant a real connection to your project, so it can read the data, make structural changes safely, and publish the small pieces of server code an app runs. It also brings two sets of written guidance, one on using Supabase properly and one on Postgres, the database underneath, so the assistant follows the house rules rather than whatever it half remembers.
+
+**When should you use Supabase Plugin?**
+Any project already using Supabase. It earns its place fastest on database structure changes, where an assistant working blind will happily write something that does not match your real tables.
+
+**How do you install and use Supabase Plugin?**
+1. Run the command below. It works out which assistants you have and sets them up.
+2. Add --yes to the end of the command if you would rather it did not stop to ask.
+3. The first time you use it, it walks you through signing in to your Supabase project. After that, ask about your data in plain words.
+
+**Curator's note:** It bundles the connection and the written guidance together, which is why it beats wiring up the connection on its own.
+
+---
+
+## 24. Strix — Sets an AI loose on your own app to find security holes
+
+- **Category:** Coding
+- **Made by:** Strix
+- **Source:** https://github.com/usestrix/strix
+- **Page:** https://xaviertingai.com/tools/strix.html
+- **You'll need:** A paid AI account key, software you own
+- **Cost:** Free; scans spend your AI account's credit
+- **Install / run:** `curl -sSL https://strix.ai/install | bash`
+
+**Why use Strix?**
+Most security checking tools read your code and hand back a long list of things that might be wrong, and most of it is noise. Strix works the other way: it runs your application in a sealed box where nothing can leak out, and actually tries things against it, so what it reports is what it managed to do rather than what it suspects. It then helps you fix each one and runs again to confirm the fix held. Point it only at software you own or have written permission to test. Running this against someone else's site is not a grey area.
+
+**When should you use Strix?**
+Before putting something on the internet, and after any change to the parts that handle logins, payments or user uploads. It is also worth running on an older project you inherited and have never properly looked at.
+
+**How do you install and use Strix?**
+1. Run the command below. It downloads a small program from the internet and runs it; to read that program first, paste https://strix.ai/install into your browser.
+2. Tell it which AI assistant to use and give it that assistant's key, the paid pass code from that company; the project page linked in the sidebar explains where. A scan spends that account's credit as it works: a few dollars on a small app, more on a large one. If none of that sentence made sense, this entry is for whoever builds your software, not for you.
+3. Point it at your project folder with strix --target ./your-app. The first run downloads the sealed box it tests inside, so give it time.
+
+**Curator's note:** It reports what it actually managed to do, not what it suspects. That is the difference from every scanner that hands you a wall of maybes.
+
+---
+
+## 25. Skill UI — Writes down your product's look so Claude can match it
+
+- **Category:** Design
+- **Made by:** amaancoderx
+- **Source:** https://github.com/amaancoderx/npxskillui
+- **Page:** https://xaviertingai.com/tools/skill-ui.html
+- **You'll need:** Claude Code, Node.js 18 or newer (free, from nodejs.org)
+- **Cost:** Free (Claude Code has its own plan)
+- **Install / run:** `npm install -g skillui`
+
+**Why use Skill UI?**
+Telling an assistant to make something look like your product rarely works, because it has nothing solid to work from and fills the gaps with its own taste. Skill UI goes and looks. It reads through a website, a project or a folder on your machine and pulls out the actual colours, typefaces, spacing and reusable pieces, then writes them into a folder that Claude Code reads by itself. Nothing is guessed and no AI is involved in the reading, it is plain inspection of what is there. Point it at your own product or a system you are allowed to use.
+
+**When should you use Skill UI?**
+Starting a new screen that has to sit alongside an existing product, or handing an assistant a house style it has never seen. It also works on your own site as a quick way to write down a look nobody ever documented.
+
+**How do you install and use Skill UI?**
+1. Run the command below. It needs Node.js 18 or newer, a free runtime from nodejs.org.
+2. Run it against a web address, a project or a folder on your machine.
+3. Open the folder it produces and start Claude Code from inside it (in the Terminal: type cd, a space, then drag the folder onto the window and press enter), then ask for the screen you want. It already knows the style.
+
+**Curator's note:** Plain inspection rather than a model guessing, which is why what comes out actually matches.
+
+---
+
+## 26. Autoresearch — Lets an AI agent run model experiments overnight
+
+- **Category:** Workflow
+- **Made by:** karpathy
+- **Source:** https://github.com/karpathy/autoresearch
+- **Page:** https://xaviertingai.com/tools/autoresearch.html
+- **You'll need:** The uv helper, Python 3.10 or newer, an NVIDIA graphics card
+- **Cost:** Free (the coding agent you point at it has its own plan)
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `git clone https://github.com/karpathy/autoresearch.git`
+
+**Why use Autoresearch?**
+Most AI research still depends on a person proposing each change, running it, reading the result and deciding what to try next. Andrej Karpathy's Autoresearch turns that loop over to an AI coding agent. The agent edits one training file, runs a fixed five-minute experiment, compares a validation score, keeps improvements and discards regressions. It is a compact demonstration of what autonomous research can look like, not a general-purpose training service.
+
+**When should you use Autoresearch?**
+Exploring autonomous AI research, teaching experiment design, or testing whether a coding agent can improve a small language model through repeated measured changes. The official version needs Python 3.10 or newer, uv and one NVIDIA GPU; it was tested by the project on an H100. Mac, Windows and AMD users need community forks linked from its README.
+
+**How do you install and use Autoresearch?**
+1. Clone the repository into a fresh folder, then read its README and program.md before giving an agent control. The README labels the project MIT, although the repository does not currently include a standalone licence file.
+2. Run uv sync, followed by uv run prepare.py. This downloads training data from Hugging Face into your local cache and trains a tokenizer.
+3. Run uv run train.py once to establish a baseline. Then use a disposable clone on its own branch, grant Claude Code, Codex or another coding agent only the permissions it needs, point it to program.md, and review every commit and result before keeping anything.
+
+**Curator's note:** Advanced and GPU-only. It downloads model-training data and attention kernels, then lets an agent repeatedly edit and execute training code, so use an isolated branch and review the output.
+
+---
+
+## 27. Agent Skills — Makes an AI follow a repeatable build process
+
+- **Category:** Workflow
+- **Made by:** addyosmani
+- **Source:** https://github.com/addyosmani/agent-skills
+- **Page:** https://xaviertingai.com/tools/agent-skills.html
+- **You'll need:** An AI assistant that can change project files, Node.js (free software from nodejs.org; it includes npx)
+- **Cost:** Free (your AI assistant has its own plan)
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx skills add addyosmani/agent-skills --list`
+
+**Why use Agent Skills?**
+An AI that can change project files can write quickly and still skip the habits that keep the work healthy: agreeing on the requirement, making a small plan, testing the change and asking for a fresh review. Addy Osmani's Agent Skills packages those habits as 24 saved workflows, the step-by-step routines an AI follows for a particular job. They cover the path from defining an idea to publishing the finished work. These are instructions that shape how your AI works, not a replacement for your judgment or approval.
+
+**When should you use Agent Skills?**
+Use it when an AI is changing a software project large enough to need a repeatable process, especially a feature that crosses several files or a change you intend to publish. Start with one or two skills on an existing project rather than changing the whole workflow at once. Claude Code, Codex, Cursor and many other AI assistants can read the format, although the exact setup differs by assistant.
+
+**How do you install and use Agent Skills?**
+1. Open the Terminal app, the window where you type commands, in the folder that holds your project. Paste the command below and press Enter. npx arrives with Node.js and may download the open skills installer from Vercel Labs; --list tells that installer to show the 24 choices without adding Agent Skills yet.
+2. Choose a skill by name. To install all 24, run the command again after deleting --list. To install one, replace --list with --skill and its name, for example --skill code-review-and-quality. A one-skill install can omit supporting checklists, so install all 24 when you want the complete material.
+3. Try the installed skill on a duplicate of your project folder first, not on your only copy. Ask your AI assistant to use the skill you chose, read every command and file change it proposes, and keep only changes you understand. If anything goes wrong, delete the duplicate and your original stays untouched.
+
+**Curator's note:** A broad, MIT-licensed pack with a useful verification-first bias. Browse before installing, and watch the shared-reference gap when you add only one skill.
+
+---
+
+## Categories
+
+- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI
+- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills
+- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
+- **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
+- **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem
+- **Writing**: Humanizer
+
+## Citation
+
+If you quote this list, please credit Xavier Ting (https://xaviertingai.com/).

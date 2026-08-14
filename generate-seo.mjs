@@ -189,6 +189,23 @@ const AI101_TERMS = [
   ["API keys?", "apikey", ""],
   ["OAuth", "oauth", ""],
   ["secrets?", "secrets", ""],
+  /* second wave, 2026-08-14: the highest-intent course terms were missing,
+     and six tool pages had no course link at all. Same rules as above:
+     lowercase-only so brand names stay unlinked, first mention per page. */
+  ["prompt engineering", "prompteng", ""],
+  ["context engineering", "contexteng", ""],
+  ["hallucinations?", "hallucination", ""],
+  ["subagents?", "subagent", ""],
+  ["vibe coding", "vibecoding", ""],
+  ["rules files?", "rulesfile", ""],
+  ["specs?", "spec", ""],
+  ["guardrails?", "guardrails", ""],
+  ["databases?", "database", ""],
+  ["deploy(?:ment|ing|ed)?", "deploy", ""],
+  ["memory", "memory", ""],
+  ["loops?", "loops", ""],
+  ["plan mode", "planmode", "i"],
+  ["security audits?", "securityaudit", ""],
 ];
 
 function makeTermLinker() {
@@ -599,7 +616,10 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -612,6 +632,15 @@ User-agent: Applebot-Extended
 Allow: /
 
 User-agent: CCBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 Sitemap: ${BASE}/sitemap.xml
@@ -629,7 +658,51 @@ let shim = read("tool.html").replace(
 writeFileSync(shimPath, shim);
 console.log("✓ tool.html — redirect shim canonical");
 
-/* ---------- 5. llms.txt — the whole log, for answer engines ---------- */
+/* ---------- 5. llms.txt + llms-full.txt — for answer engines ----------
+
+   Two files because they do two jobs. llms.txt is the cheap index the
+   llmstxt.org convention describes: a model loads it first, sees what exists,
+   and fetches only what it needs. llms-full.txt is the whole log in prose,
+   which is what the old oversized llms.txt actually was. */
+
+/* The course page owns its own facts. Counting its entry articles and
+   reading its declared timeRequired here means the numbers in these files
+   can never drift from the page they describe. */
+const COURSE_HTML = read("ai-101.html");
+const TERM_COUNT = (COURSE_HTML.match(/<article class="entry"/g) || []).length;
+const COURSE_MINUTES = (COURSE_HTML.match(/"timeRequired":\s*"PT(\d+)M"/) || [])[1] || "75";
+
+const statusLine = (t) =>
+  t.status ? `- **Curator's status:** ${t.status}\n` : "";
+
+const llmsIndex = `# ${SITE.name}
+
+> ${SITE.tagline}. ${SITE.description}
+
+Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.worksFor.name}, Singapore. Nobody paid to be on this list. The full log in prose lives at ${BASE}/llms-full.txt.
+
+## Tools
+
+${TOOLS.map((t) => `- [${t.name}](${toolUrl(t)}): ${t.tagline}`).join("\n")}
+
+## Course
+
+- [Artificial Intelligence 101](${BASE}/ai-101.html): ${TERM_COUNT} AI terms in plain English, about ${COURSE_MINUTES} minutes end to end
+
+## About
+
+- [The curator](${BASE}/curator.html): who ${SITE.curator.name} is and why this site exists
+- [LinkedIn](${SITE.curator.linkedin})
+- [X](${SITE.curator.x})
+- [Portfolio](${SITE.curator.portfolio})
+
+## Optional
+
+- [llms-full.txt](${BASE}/llms-full.txt): every entry's full why/when/how, statuses, costs and curator's notes
+- [Sitemap](${BASE}/sitemap.xml)
+`;
+writeFileSync(join(ROOT, "llms.txt"), llmsIndex);
+console.log(`✓ llms.txt — ${(llmsIndex.length / 1024).toFixed(1)} KB index`);
 
 const llms = `# ${SITE.name}
 
@@ -639,7 +712,7 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 8 chapters, about an hour)
+- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (${TERM_COUNT} terms, about ${COURSE_MINUTES} minutes)
 - Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})
@@ -657,8 +730,7 @@ ${TOOLS.map((t) => `## ${t.num}. ${t.name} — ${t.tagline}
 - **Made by:** ${t.maker || repoOwner(t.repo) || "see source"}
 - **Source:** ${t.repo}
 - **Page:** ${toolUrl(t)}
-${t.needs ? `- **You'll need:** ${t.needs}\n` : ""}${t.cost ? `- **Cost:** ${t.cost}\n` : ""}- **Curator's status:** ${t.status || "In daily use"}
-${t.command ? `- **Install / run:** \`${t.command}\`\n` : ""}
+${t.needs ? `- **You'll need:** ${t.needs}\n` : ""}${t.cost ? `- **Cost:** ${t.cost}\n` : ""}${statusLine(t)}${t.command ? `- **Install / run:** \`${t.command}\`\n` : ""}
 **Why use ${t.name}?**
 ${t.why}
 
@@ -680,8 +752,8 @@ ${categories.map((c) => `- **${c}**: ${TOOLS.filter((t) => t.category === c).map
 
 If you quote this list, please credit ${SITE.curator.name} (${BASE}/).
 `;
-writeFileSync(join(ROOT, "llms.txt"), llms);
-console.log(`✓ llms.txt — ${(llms.length / 1024).toFixed(1)} KB of quotable content`);
+writeFileSync(join(ROOT, "llms-full.txt"), llms);
+console.log(`✓ llms-full.txt — ${(llms.length / 1024).toFixed(1)} KB of quotable content`);
 
 console.log(`\nBase URL: ${BASE}`);
 console.log("Change SITE.url in site.js and re-run after deploying.");
