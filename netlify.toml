@@ -1,0 +1,12 @@
+# The site moved to Cloudflare at https://xaviertingai.com on 14.08.2026.
+#
+# This Netlify deploy stays alive purely to forward the old address. A 301 tells
+# search engines the move is permanent, so the ranking the netlify.app URL has
+# earned transfers to the new domain instead of competing with it. :splat keeps
+# the path, so an existing link to /tools/context7.html lands on the same page.
+
+[[redirects]]
+  from = "/*"
+  to = "https://xaviertingai.com/:splat"
+  status = 301
+  force = true
