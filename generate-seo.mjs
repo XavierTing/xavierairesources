@@ -47,6 +47,10 @@ const repoOwner = (u) => (u.match(/(?:github\.com|gist\.github\.com)\/([^/]+)/) 
 
 /* ---------- shared JSON-LD nodes ---------- */
 
+/* The one Person node. The bio page is the entity's home: url and
+   mainEntityOfPage both point at curator.html so every mention of Xavier
+   resolves there, and the hand-owned pages carry this exact node (checked by
+   scripts/verify below, via the parse gate) rather than a drifted copy. */
 const personNode = {
   "@type": "Person",
   "@id": `${BASE}/#curator`,
@@ -54,13 +58,35 @@ const personNode = {
   jobTitle: SITE.curator.jobTitle,
   description: SITE.curator.summary,
   image: `${BASE}/assets/portrait.jpg`,
-  url: BASE,
-  worksFor: { "@type": "Organization", name: SITE.curator.worksFor },
+  url: `${BASE}/curator.html`,
+  mainEntityOfPage: `${BASE}/curator.html`,
+  worksFor: {
+    "@type": "Organization",
+    name: SITE.curator.worksFor.name,
+    sameAs: SITE.curator.worksFor.sameAs,
+  },
+  homeLocation: {
+    "@type": "Place",
+    address: { "@type": "PostalAddress", addressCountry: SITE.curator.country },
+  },
   sameAs: [SITE.curator.linkedin, SITE.curator.x, SITE.curator.portfolio],
-  knowsAbout: SITE.curator.knowsAbout,
+  knowsAbout: SITE.curator.knowsAbout.map((k) => ({
+    "@type": "Thing",
+    name: k.name,
+    sameAs: k.sameAs,
+  })),
   hasCredential: SITE.curator.credentials.map((c) => ({
     "@type": "EducationalOccupationalCredential",
-    name: c,
+    name: c.name,
+    ...(c.recognizedBy
+      ? {
+          recognizedBy: {
+            "@type": "Organization",
+            name: c.recognizedBy.name,
+            url: c.recognizedBy.url,
+          },
+        }
+      : {}),
   })),
 };
 
@@ -192,6 +218,7 @@ function detailPage(t, i) {
         description: desc,
         isPartOf: { "@id": `${BASE}/#website` },
         about: { "@id": `${url}#tool` },
+        author: { "@id": `${BASE}/#curator` },
         reviewedBy: { "@id": `${BASE}/#curator` },
         primaryImageOfPage: `${BASE}/og-image.png`,
         datePublished: SITE.published,
@@ -270,8 +297,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <span class="brand-sub m">AI for the rest of us</span>
       </a>
       <nav class="site-nav m" aria-label="Site sections">
-        <a href="../index.html" aria-current="true">The tools</a>
+        <a href="../index.html">The tools</a>
         <a href="../ai-101.html">AI 101</a>
+        <a href="../curator.html">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
       </nav>
     </header>
@@ -332,9 +360,9 @@ ${steps}
           <div>
             <p>${esc(SITE.curator.name)} · ${esc(SITE.curator.jobTitle)} at ${esc(SITE.curator.worksFor)}. I build with AI every day and curate the resources I personally use and find useful.</p>
             <p class="colophon-links m">
-              <a href="${SITE.curator.linkedin}" rel="noopener">LinkedIn ↗</a>
-              <a href="${SITE.curator.x}" rel="noopener">X ↗</a>
-              <a href="${SITE.curator.portfolio}" rel="noopener">xavierting.com ↗</a>
+              <a href="${SITE.curator.linkedin}" rel="me noopener">LinkedIn ↗</a>
+              <a href="${SITE.curator.x}" rel="me noopener">X ↗</a>
+              <a href="${SITE.curator.portfolio}" rel="me noopener">xavierting.com ↗</a>
             </p>
           </div>
         </div>
@@ -398,6 +426,7 @@ const indexGraph = {
       description: SITE.description,
       isPartOf: { "@id": `${BASE}/#website` },
       about: { "@id": `${BASE}/#curator` },
+      author: { "@id": `${BASE}/#curator` },
       primaryImageOfPage: `${BASE}/og-image.png`,
       datePublished: SITE.published,
       dateModified: isoDate(LOG_UPDATED),

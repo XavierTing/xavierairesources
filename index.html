@@ -28,7 +28,9 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
   <meta property="og:image" content="https://xaviertingai.com/og-image.png">
   <!-- META:END -->
   <meta name="author" content="Xavier Ting">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_SG">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -52,12 +54,24 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
       "@id": "https://xaviertingai.com/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President",
-      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
+      "description": "AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://xaviertingai.com/assets/portrait.jpg",
-      "url": "https://xaviertingai.com",
+      "url": "https://xaviertingai.com/curator.html",
+      "mainEntityOfPage": "https://xaviertingai.com/curator.html",
       "worksFor": {
         "@type": "Organization",
-        "name": "OCBC"
+        "name": "OCBC",
+        "sameAs": [
+          "https://www.ocbc.com/",
+          "https://en.wikipedia.org/wiki/OCBC_Bank"
+        ]
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SG"
+        }
       },
       "sameAs": [
         "https://www.linkedin.com/in/xavierting/",
@@ -65,23 +79,55 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
         "https://www.xavierting.com/"
       ],
       "knowsAbout": [
-        "Artificial Intelligence",
-        "Generative AI",
-        "AI Agents",
-        "Product Design",
-        "Design Systems",
-        "Prompt Engineering",
-        "User Experience",
-        "Product Management"
+        {
+          "@type": "Thing",
+          "name": "Artificial Intelligence",
+          "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "Generative AI",
+          "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Agents",
+          "sameAs": "https://en.wikipedia.org/wiki/Intelligent_agent"
+        },
+        {
+          "@type": "Thing",
+          "name": "Prompt Engineering",
+          "sameAs": "https://en.wikipedia.org/wiki/Prompt_engineering"
+        },
+        {
+          "@type": "Thing",
+          "name": "Product Design",
+          "sameAs": "https://en.wikipedia.org/wiki/Product_design"
+        },
+        {
+          "@type": "Thing",
+          "name": "User Experience",
+          "sameAs": "https://en.wikipedia.org/wiki/User_experience"
+        }
       ],
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Master Certified Nielsen Norman Group UX Specialist"
+          "name": "Master Certified Nielsen Norman Group UX Specialist",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Nielsen Norman Group",
+            "url": "https://www.nngroup.com/"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Certified Scrum Master and Product Owner"
+          "name": "Certified Scrum Master and Product Owner",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Scrum Alliance",
+            "url": "https://www.scrumalliance.org/"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
@@ -114,6 +160,9 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
         "@id": "https://xaviertingai.com/#website"
       },
       "about": {
+        "@id": "https://xaviertingai.com/#curator"
+      },
+      "author": {
         "@id": "https://xaviertingai.com/#curator"
       },
       "primaryImageOfPage": "https://xaviertingai.com/og-image.png",
@@ -687,25 +736,27 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="site-nav m" aria-label="Site sections">
         <a href="index.html" aria-current="page">The tools</a>
         <a href="ai-101.html">AI 101</a>
+        <a href="curator.html">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-label="Introduction">
-        <h1 class="headline">AI Resources</h1>
+        <h1 class="headline">AI Resources: the AI tools I use every day</h1>
 
         <p class="hero-sub">
           I build with AI every day, and this is where I curate the
           resources I personally use and find useful. Everything is free to
-          install.
+          install. New to the jargon? <a href="ai-101.html">Artificial
+          Intelligence 101</a> decodes the words in plain English first.
         </p>
 
         <p class="hero-sub hero-cta">
           Find the resources useful?
         </p>
         <p class="hero-sub hero-cta">
-          <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">Follow me on LinkedIn</a>
+          <a href="https://www.linkedin.com/in/xavierting/" rel="me noopener">Follow me on LinkedIn</a>
           for my latest AI thoughts and tips.<br>
           <a href="mailto:xavierting.pn@gmail.com">Email me</a>
           to go deeper with AI and build automations of your own.
@@ -718,9 +769,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <span class="byline-name">Curated by Xavier Ting</span>
             <span class="byline-role">Vice President at OCBC · AI &amp; Design Leader</span>
             <span class="byline-links m">
-              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
-              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
-              <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+              <a href="https://www.linkedin.com/in/xavierting/" rel="me noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="me noopener">X ↗</a>
+              <a href="https://www.xavierting.com/" rel="me noopener">xavierting.com ↗</a>
             </span>
           </span>
         </div>
@@ -939,9 +990,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <div>
             <p>Xavier Ting · Vice President at OCBC. I build with AI every day and curate the resources I personally use and find useful.</p>
             <p class="colophon-links m">
-              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
-              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
-              <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+              <a href="https://www.linkedin.com/in/xavierting/" rel="me noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="me noopener">X ↗</a>
+              <a href="https://www.xavierting.com/" rel="me noopener">xavierting.com ↗</a>
             </p>
           </div>
         </div>

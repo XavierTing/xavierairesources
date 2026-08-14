@@ -43,6 +43,10 @@
   var chapters = Array.prototype.slice.call(document.querySelectorAll(".chapter"));
   var slugs = chapters.map(function (c) { return c.getAttribute("data-slug"); });
   var dots = Array.prototype.slice.call(document.querySelectorAll(".chapbar-dots a"));
+  /* The stepper counts the eight numbered chapters and nothing else. The
+     closing section "Where to start" is still a routable chapter, so prev
+     and next reach it, but it has no step and no fraction of its own. */
+  var stepSlugs = dots.map(function (a) { return a.getAttribute("data-slug"); });
   var chapNow = document.getElementById("chapNow");
   var chapCount = document.getElementById("chapCount");
   var chapPrev = document.getElementById("chapPrev");
@@ -83,12 +87,16 @@
     remember(slug);
 
     var isCover = slug === "cover";
+    var step = stepSlugs.indexOf(slug); // -1 on the cover and on the closing section
+    /* Past the last step, so every marker reads as filled: the cover shows
+       none filled, and the closing section shows all eight. */
+    var filledTo = step === -1 ? (isCover ? -1 : stepSlugs.length) : step;
     document.body.setAttribute("data-ch", slug);
-    chapCount.textContent = isCover ? "" : i + " / " + (chapters.length - 1);
-    chapNow.textContent = isCover ? "Nine chapters" : titleOf(slug);
-    dots.forEach(function (a) {
-      var on = a.getAttribute("data-slug") === slug;
-      if (on) a.setAttribute("aria-current", "step"); else a.removeAttribute("aria-current");
+    chapCount.textContent = step === -1 ? "" : (step + 1) + " / " + stepSlugs.length;
+    chapNow.textContent = isCover ? "Eight chapters" : titleOf(slug);
+    dots.forEach(function (a, n) {
+      a.classList.toggle("done", n < filledTo);
+      if (n === step) a.setAttribute("aria-current", "step"); else a.removeAttribute("aria-current");
     });
     chapPrev.setAttribute("href", "#" + (i > 0 ? slugs[i - 1] : "cover"));
     chapPrev.setAttribute("aria-disabled", i === 0 ? "true" : "false");

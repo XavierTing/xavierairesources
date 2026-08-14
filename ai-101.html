@@ -9,12 +9,14 @@
   its own devices inside it — the 96×4 gold bar, chapter plates, the recap.
   STORY: "AI is one intimidating blob" becomes "AI is sixty-three words, and
   I have them" — and, in the two Builder chapters, "I can build with them".
-  Nine chapters: one to five decode the vocabulary; six and seven are the
+  Eight chapters: one to five decode the vocabulary; six and seven are the
   Builder pair, teaching the stack under a real app and how to ship it
   without handing strangers your keys; eight stays the directory to come
-  back to; nine is the on-ramp.
+  back to. After them sits "Where to start", an unnumbered closing section:
+  it carries the on-ramp, and it is deliberately outside the count and
+  outside the stepper.
   FIRST VIEWPORT: strip, site tabs, sticky chapter bar, then the cover:
-  masthead, gold bar, lede, the nine-chapter contents. Primary action:
+  masthead, gold bar, lede, the eight-chapter contents. Primary action:
   Start at the beginning.
   FORM: chaptered decoder, ported intact; hash router, prev/next, contents
   menu. Second tab of the log site — two pages, one shared tab bar.
@@ -30,7 +32,9 @@
   <meta name="description" content="Sixty-three words do most of the gatekeeping in AI. Here is what each one actually means, in plain English. Generative AI versus agents, what you are actually building, and how to ship it safely.">
   <link rel="canonical" href="https://xaviertingai.com/ai-101.html">
   <meta name="author" content="Xavier Ting">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_SG">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:title" content="Artificial Intelligence 101: a plain-English AI course for beginners">
   <meta property="og:description" content="Sixty-three words do most of the gatekeeping in AI. Here is what each one actually means, in plain English.">
@@ -57,14 +61,36 @@
       "@id": "https://xaviertingai.com/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President",
-      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
+      "description": "AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://xaviertingai.com/assets/portrait.jpg",
-      "url": "https://xaviertingai.com",
-      "worksFor": { "@type": "Organization", "name": "OCBC" },
+      "url": "https://xaviertingai.com/curator.html",
+      "mainEntityOfPage": "https://xaviertingai.com/curator.html",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OCBC",
+        "sameAs": ["https://www.ocbc.com/", "https://en.wikipedia.org/wiki/OCBC_Bank"]
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": { "@type": "PostalAddress", "addressCountry": "SG" }
+      },
       "sameAs": [
         "https://www.linkedin.com/in/xavierting/",
         "https://x.com/xaviertingai",
         "https://www.xavierting.com/"
+      ],
+      "knowsAbout": [
+        { "@type": "Thing", "name": "Artificial Intelligence", "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence" },
+        { "@type": "Thing", "name": "Generative AI", "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence" },
+        { "@type": "Thing", "name": "AI Agents", "sameAs": "https://en.wikipedia.org/wiki/Intelligent_agent" },
+        { "@type": "Thing", "name": "Prompt Engineering", "sameAs": "https://en.wikipedia.org/wiki/Prompt_engineering" },
+        { "@type": "Thing", "name": "Product Design", "sameAs": "https://en.wikipedia.org/wiki/Product_design" },
+        { "@type": "Thing", "name": "User Experience", "sameAs": "https://en.wikipedia.org/wiki/User_experience" }
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "Master Certified Nielsen Norman Group UX Specialist", "recognizedBy": { "@type": "Organization", "name": "Nielsen Norman Group", "url": "https://www.nngroup.com/" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Certified Scrum Master and Product Owner", "recognizedBy": { "@type": "Organization", "name": "Scrum Alliance", "url": "https://www.scrumalliance.org/" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Certified LEGO® SERIOUS PLAY® facilitator" }
       ]
     },
     {
@@ -73,6 +99,7 @@
       "url": "https://xaviertingai.com/",
       "name": "AI Resources",
       "alternateName": "AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
       "inLanguage": "en",
       "publisher": { "@id": "https://xaviertingai.com/#curator" },
       "creator": { "@id": "https://xaviertingai.com/#curator" }
@@ -81,7 +108,7 @@
       "@type": "LearningResource",
       "@id": "https://xaviertingai.com/ai-101.html#course",
       "name": "Artificial Intelligence 101",
-      "description": "A plain-English short course for people new to AI: sixty-three words decoded easiest first, across nine chapters, in about an hour.",
+      "description": "A plain-English short course for people new to AI: sixty-three words decoded easiest first, across eight chapters, in about an hour.",
       "url": "https://xaviertingai.com/ai-101.html",
       "learningResourceType": "Course",
       "educationalLevel": "Beginner",
@@ -116,6 +143,7 @@
       "description": "Sixty-three words do most of the gatekeeping in AI. Here is what each one actually means, in plain English.",
       "isPartOf": { "@id": "https://xaviertingai.com/#website" },
       "about": { "@id": "https://xaviertingai.com/ai-101.html#course" },
+      "author": { "@id": "https://xaviertingai.com/#curator" },
       "reviewedBy": { "@id": "https://xaviertingai.com/#curator" },
       "dateModified": "2026-08-14"
     },
@@ -149,6 +177,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="site-nav m" aria-label="Site sections">
         <a href="index.html">The tools</a>
         <a href="ai-101.html" aria-current="page">AI 101</a>
+        <a href="curator.html">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
       </nav>
     </header>
@@ -156,6 +185,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
     <div class="coursebar">
       <nav class="chapbar" id="chapbar" aria-label="Chapters">
         <a class="chapbar-home" href="#cover">Artificial Intelligence 101</a>
+        <!-- Eight numbered steps, the eight chapters. "Where to start" is the
+             unnumbered closing section: reachable from chapter 08 and by deep
+             link, but never a step, so it stays out of this list. -->
         <ol class="chapbar-dots">
           <li><a href="#basics" data-slug="basics"><span class="vh">The basics of AI</span></a></li>
           <li><a href="#layers" data-slug="layers"><span class="vh">Agents and agentic AI</span></a></li>
@@ -165,9 +197,8 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <li><a href="#stack" data-slug="stack"><span class="vh">The parts of a web app</span></a></li>
           <li><a href="#ship" data-slug="ship"><span class="vh">Debugging and security</span></a></li>
           <li><a href="#tools" data-slug="tools"><span class="vh">The tool directory</span></a></li>
-          <li><a href="#monday" data-slug="monday"><span class="vh">Where to start</span></a></li>
         </ol>
-        <p class="chapbar-now"><span class="chapbar-count" id="chapCount"></span><span id="chapNow">Nine chapters</span></p>
+        <p class="chapbar-now"><span class="chapbar-count" id="chapCount"></span><span id="chapNow">Eight chapters</span></p>
         <button class="chapbar-menu" id="chapMenuBtn" type="button" aria-expanded="false" aria-controls="chapmenu">Contents</button>
         <span class="chapbar-arrows">
           <a class="chapbar-a" id="chapPrev" href="#cover" rel="prev" aria-label="Previous chapter">&#8249;</a>
@@ -1004,7 +1035,7 @@ write "owner not yet agreed".
         <p>Every major AI company offers a range: a small fast cheap model, a balanced everyday one, and a large deep one. They differ enormously in cost and speed, and only somewhat in quality on ordinary work. Most people default to the most expensive option for tasks the small one would finish instantly.</p>
         <p style="margin-top:.9em">Most also offer a reasoning or extended thinking mode, where the model works through a problem step by step before answering. Slower, noticeably better on hard problems, wasted on easy ones.</p>
         <p style="margin-top:.9em">Once you are running agents rather than chatting, the same gears get names: cheap, middle, and frontier, frontier being the biggest model a company sells. A rough split to aim for is sixty per cent of the work on the cheap model, thirty on the middle one, and only the last ten, the actual decisions, on the frontier one.</p>
-        <p style="margin-top:.9em">The shape of the money, without the numbers that go stale. A chat subscription costs about what one streaming service costs. Running agents seriously sits on a higher paid plan and costs more than that. <a href="#monday">Chapter nine</a> puts a rough figure on it. And if you use a key of your own instead of a subscription, you are billed by the <a href="#e-token">token</a>, so the meter runs on every attempt, including the ones you throw away.</p></div>
+        <p style="margin-top:.9em">The shape of the money, without the numbers that go stale. A chat subscription costs about what one streaming service costs. Running agents seriously sits on a higher paid plan and costs more than that. The closing section, <a href="#monday">Where to start</a>, puts a rough figure on it. And if you use a key of your own instead of a subscription, you are billed by the <a href="#e-token">token</a>, so the meter runs on every attempt, including the ones you throw away.</p></div>
       <div class="field"><span class="label">For example</span>
         <p>Summarising this week's meeting notes: the small fast model, done in seconds. Checking the payment terms in a supplier contract: the deep one with thinking switched on. Same app, different gear.</p></div>
       </div>
@@ -2166,16 +2197,19 @@ write "owner not yet agreed".
     </div>
       <nav class="chapend" aria-label="Chapter navigation">
         <a class="chapend-a prev" href="#ship" rel="prev"><span class="label">Previous</span><span class="chapend-t">Debugging and security</span></a>
-        <a class="chapend-a next" href="#monday" rel="next"><span class="label">Next chapter</span><span class="chapend-t">Where to start</span></a>
+        <a class="chapend-a next" href="#monday" rel="next"><span class="label">To close</span><span class="chapend-t">Where to start</span></a>
       </nav>
     </section>
 
-    <!-- ════ 09 START HERE ON MONDAY ════ -->
+    <!-- ════ CLOSING · START HERE ON MONDAY ════
+         Unnumbered on purpose: the course counts eight chapters, and this
+         section closes it rather than adding to it. No plate number, and no
+         step in the chapter bar. -->
     <section class="chapter" id="ch-monday" data-slug="monday" data-title="Where to start" aria-labelledby="h-monday">
-      <div class="plate">
+      <div class="plate plate--closing">
         <img class="plate-art" src="assets/101/light/07-door.png" alt="" width="560" height="560" loading="lazy" decoding="async">
-        <span class="plate-num" aria-hidden="true">09</span>
         <div class="plate-body">
+          <p class="plate-tag">Closing</p>
           <h2 id="h-monday" tabindex="-1">Where to start</h2>
           <p>Reading about AI is not using AI. Three moves, whichever track you are on.</p>
         </div>
@@ -2321,9 +2355,9 @@ write "owner not yet agreed".
           <div>
             <p>Xavier Ting · Vice President at OCBC. I build with AI every day and curate the resources I personally use and find useful.</p>
             <p class="colophon-links m">
-              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
-              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
-              <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+              <a href="https://www.linkedin.com/in/xavierting/" rel="me noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="me noopener">X ↗</a>
+              <a href="https://www.xavierting.com/" rel="me noopener">xavierting.com ↗</a>
             </p>
           </div>
         </div>

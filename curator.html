@@ -22,10 +22,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The curator — Xavier Ting | AI Resources</title>
-  <meta name="description" content="Who curates AI Resources: Xavier Ting, Vice President at OCBC and AI &amp; Design Leader in Singapore. He builds with AI daily and shares what works — the tools tab is his stack, AI 101 is the on-ramp.">
+  <meta name="description" content="Who curates AI Resources: Xavier Ting, Vice President at OCBC and AI &amp; Design Leader in Singapore. He builds with AI daily and shares what works.">
   <link rel="canonical" href="https://xaviertingai.com/curator.html">
   <meta name="author" content="Xavier Ting">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta property="og:type" content="profile">
+  <meta property="og:locale" content="en_SG">
   <meta property="og:site_name" content="AI Resources">
   <meta property="og:title" content="The curator — Xavier Ting">
   <meta property="og:description" content="Vice President at OCBC · AI &amp; Design Leader. I build with AI daily and share what I learn — making AI accessible for everyone.">
@@ -51,18 +53,35 @@
       "@id": "https://xaviertingai.com/#curator",
       "name": "Xavier Ting",
       "jobTitle": "Vice President",
-      "description": "AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.",
+      "description": "AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.",
       "image": "https://xaviertingai.com/assets/portrait.jpg",
-      "url": "https://xaviertingai.com",
-      "worksFor": { "@type": "Organization", "name": "OCBC" },
+      "url": "https://xaviertingai.com/curator.html",
+      "mainEntityOfPage": "https://xaviertingai.com/curator.html",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OCBC",
+        "sameAs": ["https://www.ocbc.com/", "https://en.wikipedia.org/wiki/OCBC_Bank"]
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": { "@type": "PostalAddress", "addressCountry": "SG" }
+      },
       "sameAs": [
         "https://www.linkedin.com/in/xavierting/",
         "https://x.com/xaviertingai",
         "https://www.xavierting.com/"
       ],
+      "knowsAbout": [
+        { "@type": "Thing", "name": "Artificial Intelligence", "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence" },
+        { "@type": "Thing", "name": "Generative AI", "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence" },
+        { "@type": "Thing", "name": "AI Agents", "sameAs": "https://en.wikipedia.org/wiki/Intelligent_agent" },
+        { "@type": "Thing", "name": "Prompt Engineering", "sameAs": "https://en.wikipedia.org/wiki/Prompt_engineering" },
+        { "@type": "Thing", "name": "Product Design", "sameAs": "https://en.wikipedia.org/wiki/Product_design" },
+        { "@type": "Thing", "name": "User Experience", "sameAs": "https://en.wikipedia.org/wiki/User_experience" }
+      ],
       "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "Master Certified Nielsen Norman Group UX Specialist" },
-        { "@type": "EducationalOccupationalCredential", "name": "Certified Scrum Master and Product Owner" },
+        { "@type": "EducationalOccupationalCredential", "name": "Master Certified Nielsen Norman Group UX Specialist", "recognizedBy": { "@type": "Organization", "name": "Nielsen Norman Group", "url": "https://www.nngroup.com/" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Certified Scrum Master and Product Owner", "recognizedBy": { "@type": "Organization", "name": "Scrum Alliance", "url": "https://www.scrumalliance.org/" } },
         { "@type": "EducationalOccupationalCredential", "name": "Certified LEGO® SERIOUS PLAY® facilitator" }
       ]
     },
@@ -72,6 +91,7 @@
       "url": "https://xaviertingai.com/",
       "name": "AI Resources",
       "alternateName": "AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
       "inLanguage": "en",
       "publisher": { "@id": "https://xaviertingai.com/#curator" },
       "creator": { "@id": "https://xaviertingai.com/#curator" }
@@ -81,6 +101,9 @@
       "@id": "https://xaviertingai.com/curator.html#page",
       "url": "https://xaviertingai.com/curator.html",
       "name": "The curator — Xavier Ting",
+      "dateCreated": "2026-08-12",
+      "dateModified": "2026-08-14",
+      "author": { "@id": "https://xaviertingai.com/#curator" },
       "mainEntity": { "@id": "https://xaviertingai.com/#curator" },
       "isPartOf": { "@id": "https://xaviertingai.com/#website" }
     },
@@ -114,6 +137,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="site-nav m" aria-label="Site sections">
         <a href="index.html">The tools</a>
         <a href="ai-101.html">AI 101</a>
+        <a href="curator.html" aria-current="page">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
       </nav>
     </header>
@@ -135,9 +159,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <div><h2>Credentials</h2><p>Master Certified NN/g UX Specialist · Certified Scrum Master &amp; Product Owner · LEGO® SERIOUS PLAY® facilitator</p></div>
           <div><h2>Recognition</h2><p>OCBC Business App revamp — Best Corporate Mobile Initiative 2023 (The Asian Banker) · Singapore Good Design Award 2023</p></div>
           <div><h2>Elsewhere</h2><p>
-            <a class="repo-link" href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a><br>
-            <a class="repo-link" href="https://x.com/xaviertingai" rel="noopener">X ↗</a><br>
-            <a class="repo-link" href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+            <a class="repo-link" href="https://www.linkedin.com/in/xavierting/" rel="me noopener">LinkedIn ↗</a><br>
+            <a class="repo-link" href="https://x.com/xaviertingai" rel="me noopener">X ↗</a><br>
+            <a class="repo-link" href="https://www.xavierting.com/" rel="me noopener">xavierting.com ↗</a>
           </p></div>
         </aside>
 
@@ -162,10 +186,11 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <section class="section">
             <h2>Why this site</h2>
             <div class="body">The fastest way to make AI accessible is to show
-            your working. The tools tab is the stack I actually run — every entry in
-            daily use, nobody paid to be listed. AI 101 is the on-ramp: the
-            fifty-nine words that do most of the gatekeeping, decoded in
-            plain English. Start wherever fits.</div>
+            your working. The tools tab is what I actually use: most entries
+            are in daily use, the newest I have reviewed but not yet tried,
+            and nobody paid to be listed. AI 101 is the on-ramp: the
+            sixty-three words that do most of the gatekeeping, decoded in
+            plain English. Start wherever fits you.</div>
           </section>
         </div>
       </div>
@@ -183,7 +208,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <a class="card" href="ai-101.html">
             <span class="card-top"><span class="card-cat m">Course</span></span>
             <h3 class="card-name">Artificial Intelligence 101</h3>
-            <p class="card-tag">A plain-English short course for people new to AI: fifty-nine words decoded easiest first, in about an hour.</p>
+            <p class="card-tag">A plain-English short course for people new to AI: sixty-three words decoded easiest first, in about an hour.</p>
             <span class="card-open">Start the course</span>
           </a>
         </div>
@@ -200,16 +225,16 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <div>
             <p>Xavier Ting · Vice President at OCBC. I build with AI every day and curate the resources I personally use and find useful.</p>
             <p class="colophon-links m">
-              <a href="https://www.linkedin.com/in/xavierting/" rel="noopener">LinkedIn ↗</a>
-              <a href="https://x.com/xaviertingai" rel="noopener">X ↗</a>
-              <a href="https://www.xavierting.com/" rel="noopener">xavierting.com ↗</a>
+              <a href="https://www.linkedin.com/in/xavierting/" rel="me noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="me noopener">X ↗</a>
+              <a href="https://www.xavierting.com/" rel="me noopener">xavierting.com ↗</a>
             </p>
           </div>
         </div>
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated <span data-updated>09.08.2026</span></p>
+        <p>Last updated <span data-updated>14.08.2026</span></p>
       </div>
     </footer>
 
