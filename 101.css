@@ -608,7 +608,13 @@ body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
   white-space: nowrap;
 }
 .wall-note { margin-top: 26px; color: var(--body-ink); max-width: 46ch; }
-.contents-go { margin: 28px 0 0; }
+/* the two notes that used to sit here are gone, so the button carries the
+   separation itself: the page's standard big gap, not the old paragraph step */
+/* the button under the cover contents. Qualified with main#main because the
+   prose-rhythm rule up top (main#main p) outweighs a bare class and was
+   flattening this margin to the paragraph default, leaving the button sitting
+   on the last chapter row. */
+main#main .contents-go { margin: clamp(36px, 6vw, 64px) 0 0; }
 /* gold fill = action: the one solid-gold button on the cover */
 .btn-link {
   display: inline-block;
