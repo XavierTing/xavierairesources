@@ -6,7 +6,7 @@ Curated by Xavier Ting, Vice President at [object Object].
 AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.
 
 - Site: https://xaviertingai.com/
-- Course: https://xaviertingai.com/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 9 chapters, about an hour)
+- Course: https://xaviertingai.com/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 8 chapters, about an hour)
 - Curator: https://xaviertingai.com/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: https://www.linkedin.com/in/xavierting/
 - X: https://x.com/xaviertingai (@xaviertingai)

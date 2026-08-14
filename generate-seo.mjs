@@ -299,7 +299,6 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <nav class="site-nav m" aria-label="Site sections">
         <a href="../index.html">The tools</a>
         <a href="../ai-101.html">AI 101</a>
-        <a href="../curator.html">The curator</a>
         <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
       </nav>
     </header>
@@ -564,7 +563,7 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 9 chapters, about an hour)
+- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 8 chapters, about an hour)
 - Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})
