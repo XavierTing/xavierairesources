@@ -13,8 +13,9 @@ It is live at **https://xaviertingai.com** on Cloudflare Workers static assets,
 and a push to `main` deploys it. To preview the way the real host behaves,
 including the `.html` routing rules, run `npx wrangler dev` instead of the Python
 server. See the Deploying section of `README.md` before touching
-`wrangler.jsonc`, `_redirects`, `_headers` or `.assetsignore`: each one is
-load-bearing, and `.assetsignore` is what keeps `.git` out of the public site.
+`wrangler.jsonc`, `worker.js`, `_redirects`, `_headers` or `.assetsignore`:
+each one is load-bearing, and `.assetsignore` is what keeps `.git` out of the
+public site.
 
 ---
 

@@ -57,11 +57,12 @@ static assets. There is no build command and no output directory: the repo root
 is the deployable folder. Pushing to `main` triggers a Workers build, which runs
 `npx wrangler deploy`.
 
-Four files configure the hosting, and each one is load-bearing:
+Five files configure the hosting, and each one is load-bearing:
 
 | File | What it does |
 |---|---|
 | `wrangler.jsonc` | Names the Worker, points it at the repo root, and pins `html_handling: "none"` so `/ai-101.html` is served as asked instead of being redirected to `/ai-101`. |
+| `worker.js` | The only Worker code: 301s `www.xaviertingai.com` to the apex and passes everything else through to the assets. The www custom domain in `wrangler.jsonc` is what gives it a DNS record and certificate to answer on. |
 | `_redirects` | Rewrites `/` to `/index.html` with a 200. `html_handling: "none"` stops the bare root resolving on its own, so without this the homepage 404s. |
 | `.assetsignore` | Keeps `.git`, the docs and the art scripts out of the upload. Workers, unlike Pages, excludes nothing by default, so removing this publishes the whole git history. |
 | `_headers` | One day of caching for `assets/*`. The stylesheets and scripts are deliberately left on the revalidating default because their filenames carry no content hash. |

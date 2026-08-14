@@ -32,6 +32,9 @@ SEO.md
 # The generator itself: its output ships, it does not
 generate-seo.mjs
 
+# The Worker script is deployed as code, not served as a file
+worker.js
+
 # Art pipeline scripts and their notes. The .png/.webp they produce ship;
 # the scripts, prompts and parked-diagram list do not.
 assets/README.md
