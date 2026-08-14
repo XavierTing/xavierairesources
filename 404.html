@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+  The miss page. Kept deliberately small: brand, one plain-English line, the
+  two tabs. No colophon, because a page that does not exist has no "last
+  updated" to claim. Served by Cloudflare via not_found_handling: "404-page"
+  in wrangler.jsonc; before this file existed a miss returned a blank white
+  page with no way back, which is what every old Netlify-era link shape
+  (/tools/context7 without .html) landed on.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | AI Resources</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F2ECE0">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script>document.documentElement.classList.add("js");
+try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="site-head">
+      <a class="brand" href="/" aria-label="Xavier Ting — home">
+        <span class="brand-mark">Xavier Ting</span>
+        <span class="brand-sub m">AI for the rest of us</span>
+      </a>
+      <nav class="site-nav m" aria-label="Site sections">
+        <a href="/">The tools</a>
+        <a href="/ai-101.html">AI 101</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Page not found">
+        <h1 class="headline">No page here</h1>
+        <p class="hero-sub">
+          The address you followed does not match anything on this site. The
+          link may be old, or the page may have moved. Everything that exists
+          is one click away:
+        </p>
+        <p class="hero-sub">
+          <a href="/">Browse the tools</a> ·
+          <a href="/ai-101.html">Start Artificial Intelligence 101</a>
+        </p>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="/theme.js"></script>
+</body>
+</html>

@@ -28,8 +28,10 @@
     // for, which is what Netlify did.
     "html_handling": "none",
 
-    // No 404.html exists, so there is nothing to serve for a miss.
-    "not_found_handling": "none",
+    // A miss serves 404.html with a real 404 status, instead of the blank
+    // zero-byte response "none" produced. Old Netlify-era link shapes
+    // (extensionless /tools/context7) land somewhere human now.
+    "not_found_handling": "404-page",
 
     // How worker.js reaches the assets for everything that is not www.
     "binding": "ASSETS",
