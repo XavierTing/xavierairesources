@@ -597,6 +597,28 @@ const TOOLS = [
     commandTarget: "terminal",
     status: "Reviewed · Not tested",
     note: "Advanced and GPU-only. It downloads model-training data and attention kernels, then lets an agent repeatedly edit and execute training code, so use an isolated branch and review the output."
+  },
+  {
+    num: "27",
+    name: "Agent Skills",
+    category: "Workflow",
+    tagline: "Makes an AI follow a repeatable build process",
+    blurb: "Adds 24 step-by-step work routines to an AI that works on your project files, from defining an idea to testing and publishing it. Browse first, then install what you need.",
+    repo: "https://github.com/addyosmani/agent-skills",
+    repoLabel: "PROJECT PAGE",
+    needs: "An AI assistant that can change project files, Node.js (free software from nodejs.org; it includes npx)",
+    cost: "Free (your AI assistant has its own plan)",
+    why: "An AI that can change project files can write quickly and still skip the habits that keep the work healthy: agreeing on the requirement, making a small plan, testing the change and asking for a fresh review. Addy Osmani's Agent Skills packages those habits as 24 saved workflows, the step-by-step routines an AI follows for a particular job. They cover the path from defining an idea to publishing the finished work. These are instructions that shape how your AI works, not a replacement for your judgment or approval.",
+    when: "Use it when an AI is changing a software project large enough to need a repeatable process, especially a feature that crosses several files or a change you intend to publish. Start with one or two skills on an existing project rather than changing the whole workflow at once. Claude Code, Codex, Cursor and many other AI assistants can read the format, although the exact setup differs by assistant.",
+    how: [
+      "Open the Terminal app, the window where you type commands, in the folder that holds your project. Paste the command below and press Enter. npx arrives with Node.js and may download the open skills installer from Vercel Labs; --list tells that installer to show the 24 choices without adding Agent Skills yet.",
+      "Choose a skill by name. To install all 24, run the command again after deleting --list. To install one, replace --list with --skill and its name, for example --skill code-review-and-quality. A one-skill install can omit supporting checklists, so install all 24 when you want the complete material.",
+      "Try the installed skill on a duplicate of your project folder first, not on your only copy. Ask your AI assistant to use the skill you chose, read every command and file change it proposes, and keep only changes you understand. If anything goes wrong, delete the duplicate and your original stays untouched."
+    ],
+    command: "npx skills add addyosmani/agent-skills --list",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "A broad, MIT-licensed pack with a useful verification-first bias. Browse before installing, and watch the shared-reference gap when you add only one skill."
   }
 ];
 
