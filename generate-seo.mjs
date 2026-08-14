@@ -35,6 +35,19 @@ function loadGlobals(file, names) {
 const { SITE } = loadGlobals("site.js", ["SITE"]);
 const { TOOLS, LOG_UPDATED } = loadGlobals("tools.js", ["TOOLS", "LOG_UPDATED"]);
 
+/* Freshness is per entry, not global. One shared date stamped on every page
+   claims the whole site changed whenever anything did, and search engines
+   learn to ignore a lastmod that lies. Every entry must carry its own
+   added/updated pair; the generator refuses to run without them rather than
+   silently falling back to a fabricated date. */
+for (const t of TOOLS) {
+  for (const field of ["added", "updated"]) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(t[field] || "")) {
+      throw new Error(`tools.js entry ${t.num} (${t.name}): missing or malformed "${field}" (need YYYY-MM-DD)`);
+    }
+  }
+}
+
 const BASE = SITE.url.replace(/\/$/, "");
 const slug = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const esc = (s) => String(s)
@@ -49,8 +62,8 @@ const repoOwner = (u) => (u.match(/(?:github\.com|gist\.github\.com)\/([^/]+)/) 
 
 /* The one Person node. The bio page is the entity's home: url and
    mainEntityOfPage both point at curator.html so every mention of Xavier
-   resolves there, and the hand-owned pages carry this exact node (checked by
-   scripts/verify below, via the parse gate) rather than a drifted copy. */
+   resolves there. The hand-owned pages carry this exact node by convention;
+   keep them identical when either side changes. */
 const personNode = {
   "@type": "Person",
   "@id": `${BASE}/#curator`,
@@ -221,8 +234,8 @@ function detailPage(t, i) {
         author: { "@id": `${BASE}/#curator` },
         reviewedBy: { "@id": `${BASE}/#curator` },
         primaryImageOfPage: `${BASE}/og-image.png`,
-        datePublished: SITE.published,
-        dateModified: isoDate(LOG_UPDATED),
+        datePublished: t.added,
+        dateModified: t.updated,
       },
       {
         "@type": "BreadcrumbList",
@@ -261,6 +274,10 @@ function detailPage(t, i) {
   <link rel="canonical" href="${url}">
   <meta name="author" content="${esc(SITE.curator.name)}">
   <meta property="og:type" content="article">
+  <meta property="article:published_time" content="${t.added}">
+  <meta property="article:modified_time" content="${t.updated}">
+  <meta property="article:author" content="${BASE}/curator.html">
+  <meta property="article:section" content="${escAttr(t.category)}">
   <meta property="og:site_name" content="${esc(SITE.name)}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(desc)}">
@@ -458,6 +475,14 @@ const indexDesc =
   `${SITE.tagline}. ${TOOLS.length} AI tools curated by ${SITE.curator.name} for designing, ` +
   `building and writing: what each one does, when it is worth using, and how to set it up, ` +
   `explained without jargon.`;
+/* The visible "Last updated" line: app.js corrects it at runtime, but a
+   crawler without JavaScript reads the static text, so the generator owns it
+   too. Same source, same date, no contradiction between HTML and JSON-LD. */
+index = index.replace(
+  /<span data-updated>[^<]*<\/span>/,
+  `<span data-updated>${esc(LOG_UPDATED)}</span>`
+);
+
 index = index.replace(
   /(<!-- META:START -->)[\s\S]*?(<!-- META:END -->)/,
   `$1
@@ -476,13 +501,21 @@ console.log("✓ index.html — static cards + JSON-LD refreshed");
 
 /* ---------- 3. sitemap.xml ---------- */
 
-const lastmod = isoDate(LOG_UPDATED);
+/* Each URL carries its own honest lastmod. The two hand-owned pages are their
+   own source of truth: their dateModified is read out of the JSON-LD they
+   already declare, so the sitemap can never claim a different date than the
+   page itself does. */
+const handDate = (file) => {
+  const m = read(file).match(/"dateModified":\s*"(\d{4}-\d{2}-\d{2})"/);
+  if (!m) throw new Error(`${file}: no dateModified in JSON-LD for the sitemap to reuse`);
+  return m[1];
+};
+
 const urls = [
-  { loc: `${BASE}/`, pri: "1.0", freq: "weekly" },
-  /* ai-101.html and curator.html are hand-owned, not generated */
-  { loc: `${BASE}/ai-101.html`, pri: "0.9", freq: "monthly" },
-  { loc: `${BASE}/curator.html`, pri: "0.8", freq: "monthly" },
-  ...TOOLS.map((t) => ({ loc: toolUrl(t), pri: "0.8", freq: "monthly" })),
+  { loc: `${BASE}/`, mod: isoDate(LOG_UPDATED), pri: "1.0", freq: "weekly" },
+  { loc: `${BASE}/ai-101.html`, mod: handDate("ai-101.html"), pri: "0.9", freq: "monthly" },
+  { loc: `${BASE}/curator.html`, mod: handDate("curator.html"), pri: "0.8", freq: "monthly" },
+  ...TOOLS.map((t) => ({ loc: toolUrl(t), mod: t.updated, pri: "0.8", freq: "monthly" })),
 ];
 writeFileSync(
   join(ROOT, "sitemap.xml"),
@@ -490,14 +523,14 @@ writeFileSync(
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <lastmod>${u.mod}</lastmod>
     <changefreq>${u.freq}</changefreq>
     <priority>${u.pri}</priority>
   </url>`).join("\n")}
 </urlset>
 `
 );
-console.log(`✓ sitemap.xml — ${urls.length} URLs`);
+console.log(`✓ sitemap.xml — ${urls.length} URLs, per-page lastmod`);
 
 /* ---------- 4. robots.txt ---------- */
 

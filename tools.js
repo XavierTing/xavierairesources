@@ -44,6 +44,8 @@
 const TOOLS = [
   {
     num: "01",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Impeccable",
     category: "Design",
     tagline: "Stops AI building the same generic website",
@@ -65,6 +67,8 @@ const TOOLS = [
   },
   {
     num: "02",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Superpowers",
     category: "Workflow",
     tagline: "Makes Claude Code plan before it builds",
@@ -86,6 +90,8 @@ const TOOLS = [
   },
   {
     num: "03",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Spec-Kit",
     category: "Workflow",
     tagline: "Write down what you want, so the AI stops drifting",
@@ -107,6 +113,8 @@ const TOOLS = [
   },
   {
     num: "04",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Chrome DevTools MCP",
     category: "Connections",
     tagline: "Lets your AI assistant see the page it built",
@@ -128,6 +136,8 @@ const TOOLS = [
   },
   {
     num: "05",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Context7",
     category: "Connections",
     tagline: "Gives the AI today's documentation, not last year's",
@@ -149,6 +159,8 @@ const TOOLS = [
   },
   {
     num: "06",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Repomix",
     category: "Coding",
     tagline: "Packs your whole project into one file you can paste",
@@ -170,6 +182,8 @@ const TOOLS = [
   },
   {
     num: "07",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Agent-Reach",
     category: "Connections",
     tagline: "Gets your AI past sites that block it",
@@ -191,6 +205,8 @@ const TOOLS = [
   },
   {
     num: "08",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "LLM Wiki",
     category: "Knowledge",
     tagline: "Notes your AI writes and keeps up to date for you",
@@ -212,6 +228,8 @@ const TOOLS = [
   },
   {
     num: "09",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Humanizer",
     category: "Writing",
     tagline: "Takes the AI sound out of your writing",
@@ -233,6 +251,8 @@ const TOOLS = [
   },
   {
     num: "10",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Figma MCP",
     category: "Design",
     tagline: "Lets AI read your real design file, not a screenshot",
@@ -255,6 +275,8 @@ const TOOLS = [
   },
   {
     num: "11",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Obsidian Skills",
     category: "Knowledge",
     tagline: "Teaches your AI to work inside your Obsidian notes",
@@ -276,6 +298,8 @@ const TOOLS = [
   },
   {
     num: "12",
+    added: "2026-07-30",
+    updated: "2026-08-13",
     name: "Ralph Loop",
     category: "Workflow",
     tagline: "Runs Claude on the same task until it is done",
@@ -298,6 +322,8 @@ const TOOLS = [
   },
   {
     num: "13",
+    added: "2026-08-02",
+    updated: "2026-08-13",
     name: "Watch",
     category: "Connections",
     tagline: "Lets Claude actually watch a video and answer",
@@ -320,6 +346,8 @@ const TOOLS = [
   },
   {
     num: "14",
+    added: "2026-08-04",
+    updated: "2026-08-13",
     name: "Codex for Claude Code",
     category: "Coding",
     tagline: "Brings in OpenAI's Codex to review code or take on jobs",
@@ -342,6 +370,8 @@ const TOOLS = [
   },
   {
     num: "15",
+    added: "2026-08-05",
+    updated: "2026-08-13",
     name: "Apple Design",
     category: "Design",
     tagline: "Teaches your AI what makes Apple interfaces feel right",
@@ -364,6 +394,8 @@ const TOOLS = [
   },
   {
     num: "16",
+    added: "2026-08-05",
+    updated: "2026-08-13",
     name: "Notchi",
     category: "Workflow",
     tagline: "Shows what Claude Code is doing, up in the notch",
@@ -385,6 +417,8 @@ const TOOLS = [
   },
   {
     num: "17",
+    added: "2026-08-07",
+    updated: "2026-08-13",
     name: "OmniRoute",
     category: "Coding",
     tagline: "Keeps you working when your AI quota runs out",
@@ -406,6 +440,8 @@ const TOOLS = [
   },
   {
     num: "18",
+    added: "2026-08-07",
+    updated: "2026-08-13",
     name: "Claude Mem",
     category: "Knowledge",
     tagline: "Lets your assistant remember earlier sessions",
@@ -427,6 +463,8 @@ const TOOLS = [
   },
   {
     num: "19",
+    added: "2026-08-07",
+    updated: "2026-08-13",
     name: "Headroom",
     category: "Coding",
     tagline: "Shrinks what gets sent to the model, not the answers",
@@ -448,6 +486,8 @@ const TOOLS = [
   },
   {
     num: "20",
+    added: "2026-08-07",
+    updated: "2026-08-13",
     name: "Claude Code Setup",
     category: "Workflow",
     tagline: "Reads your project and suggests what to set up",
@@ -470,6 +510,8 @@ const TOOLS = [
   },
   {
     num: "21",
+    added: "2026-08-07",
+    updated: "2026-08-13",
     name: "Task Observer",
     category: "Workflow",
     tagline: "Watches how you work and improves your skills",
@@ -491,6 +533,8 @@ const TOOLS = [
   },
   {
     num: "22",
+    added: "2026-08-09",
+    updated: "2026-08-13",
     name: "Playwright CLI",
     category: "Connections",
     tagline: "Lets your AI drive a browser without filling up its memory",
@@ -513,6 +557,8 @@ const TOOLS = [
   },
   {
     num: "23",
+    added: "2026-08-09",
+    updated: "2026-08-13",
     name: "Supabase Plugin",
     category: "Connections",
     tagline: "Lets your AI work directly with your Supabase database",
@@ -535,6 +581,8 @@ const TOOLS = [
   },
   {
     num: "24",
+    added: "2026-08-09",
+    updated: "2026-08-13",
     name: "Strix",
     category: "Coding",
     tagline: "Sets an AI loose on your own app to find security holes",
@@ -557,6 +605,8 @@ const TOOLS = [
   },
   {
     num: "25",
+    added: "2026-08-09",
+    updated: "2026-08-13",
     name: "Skill UI",
     category: "Design",
     tagline: "Writes down your product's look so Claude can match it",
@@ -578,6 +628,8 @@ const TOOLS = [
   },
   {
     num: "26",
+    added: "2026-08-13",
+    updated: "2026-08-14",
     name: "Autoresearch",
     category: "Workflow",
     tagline: "Lets an AI agent run model experiments overnight",
@@ -600,6 +652,8 @@ const TOOLS = [
   },
   {
     num: "27",
+    added: "2026-08-14",
+    updated: "2026-08-14",
     name: "Agent Skills",
     category: "Workflow",
     tagline: "Makes an AI follow a repeatable build process",
