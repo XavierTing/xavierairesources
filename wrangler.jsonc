@@ -6,9 +6,11 @@
   "name": "xaviertingai",
   "compatibility_date": "2026-08-14",
 
-  // Keeps <name>.<subdomain>.workers.dev alive as a staging URL, which is how
-  // you check a deploy before DNS has finished moving.
-  "workers_dev": true,
+  // The site is reachable only at its custom domain. Turning this on would
+  // publish a second, identical copy at <name>.<subdomain>.workers.dev, which
+  // means a rival address for search engines to index and a first deploy that
+  // fails until the account registers an account-wide workers.dev subdomain.
+  "workers_dev": false,
 
   "assets": {
     "directory": ".",
