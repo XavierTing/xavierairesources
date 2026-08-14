@@ -1,0 +1,162 @@
+<!doctype html>
+<!--
+  og-image.html — the source of truth for og-image.png.
+
+  The share card used to be a hand-rendered PNG with no source file, and it
+  drifted twice: once on the tool count, once on the job title. This template
+  fixes both causes. It carries NO count of anything, so nothing on it can go
+  stale when an entry ships, and the identity line is the same "Vice President
+  at OCBC" the positioning rule in AGENTS.md requires everywhere.
+
+  Render (from the repo root, exactly 1200x630):
+
+    cd og && "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless=new --screenshot=../og-image.png --window-size=1200,630 \
+      --force-device-scale-factor=1 --hide-scrollbars \
+      --virtual-time-budget=8000 "file://$PWD/og-image.html"
+
+  Then verify the dimensions:
+
+    python3 -c "from PIL import Image; im=Image.open('og-image.png'); assert im.size==(1200,630), im.size"
+
+  The template ships in .assetsignore; only the PNG deploys.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Signal Field, Daylight rendition — the palette in AGENTS.md section 2. */
+  :root {
+    --linen: #F2ECE0;
+    --sand: #E7DECB;
+    --ink: #1A1815;
+    --body: #4F473D;
+    --muted: #665C4E;
+    --gold-text: #6F5631;
+    --gold-fill: #B6966F;
+    --ember: #B4512D;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: var(--linen);
+    font-family: "Poppins", sans-serif;
+    color: var(--body);
+    position: relative;
+  }
+
+  /* the sand field on the right, holding the portrait */
+  .field {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 420px;
+    background: var(--sand);
+  }
+
+  /* blueprint furniture from the card grammar: registration crosses */
+  .cross {
+    position: absolute;
+    width: 18px; height: 18px;
+  }
+  .cross::before, .cross::after {
+    content: "";
+    position: absolute;
+    background: var(--gold-fill);
+    opacity: 0.55;
+  }
+  .cross::before { left: 8px; top: 0; width: 2px; height: 18px; }
+  .cross::after  { left: 0; top: 8px; width: 18px; height: 2px; }
+
+  .frame {
+    position: absolute;
+    inset: 0;
+    padding: 72px 0 64px 84px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kicker {
+    font-family: "Fragment Mono", monospace;
+    font-size: 21px;
+    letter-spacing: 0.22em;
+    color: var(--gold-text);
+    text-transform: uppercase;
+  }
+  .bar {
+    width: 76px; height: 4px;
+    background: var(--ember);
+    margin: 26px 0 34px;
+  }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .role {
+    margin-top: 26px;
+    font-size: 31px;
+    font-weight: 500;
+    color: var(--body);
+    max-width: 640px;
+  }
+  .role .dot { color: var(--gold-fill); }
+  .tagline {
+    margin-top: 12px;
+    font-size: 27px;
+    color: var(--muted);
+  }
+  .url {
+    margin-top: auto;
+    font-family: "Fragment Mono", monospace;
+    font-size: 24px;
+    letter-spacing: 0.08em;
+    color: var(--gold-text);
+  }
+
+  .portrait-ring {
+    position: absolute;
+    top: 50%; right: 116px;
+    transform: translateY(-50%);
+    width: 264px; height: 264px;
+    border-radius: 50%;
+    padding: 8px;
+    background: var(--linen);
+    box-shadow: 0 0 0 3px var(--gold-fill);
+  }
+  .portrait-ring img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="field"></div>
+
+  <span class="cross" style="top:44px;  left:46px"></span>
+  <span class="cross" style="top:44px;  right:44px"></span>
+  <span class="cross" style="bottom:44px; right:44px"></span>
+  <span class="cross" style="bottom:44px; left:46px"></span>
+  <span class="cross" style="top:300px; right:398px"></span>
+
+  <div class="frame">
+    <div class="kicker">AI for the rest of us</div>
+    <div class="bar"></div>
+    <h1>Xavier Ting</h1>
+    <p class="role">Vice President at OCBC <span class="dot">·</span> AI &amp; Design Leader</p>
+    <p class="tagline">The AI tools he uses every day, explained without jargon.</p>
+    <div class="url">xaviertingai.com</div>
+  </div>
+
+  <div class="portrait-ring">
+    <img src="../assets/portrait.jpg" alt="">
+  </div>
+</body>
+</html>

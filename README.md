@@ -45,10 +45,14 @@ spec). Mechanically:
    node generate-seo.mjs
    ```
 
-3. Regenerate `og-image.png` if the tool count changed (it's a rendered card).
-
 Skipping step 2 leaves the static pages, sitemap and `llms.txt` stale — a new
 tool would be invisible to search.
+
+The share card `og-image.png` deliberately carries no tool count, so adding an
+entry does not stale it. It renders from `og/og-image.html` (the command is in
+that file's header comment); re-render only when the identity line or the
+portrait changes, and force a re-scrape in LinkedIn's Post Inspector afterwards
+because platforms cache the old card by URL.
 
 ## Deploying
 

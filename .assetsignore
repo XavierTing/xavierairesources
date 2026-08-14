@@ -32,6 +32,10 @@ SEO.md
 # The generator itself: its output ships, it does not
 generate-seo.mjs
 
+# The share-card source. og-image.png ships; the template that renders it
+# does not.
+og
+
 # The Worker script is deployed as code, not served as a file
 worker.js
 
