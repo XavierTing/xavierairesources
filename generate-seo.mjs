@@ -247,8 +247,16 @@ function detailPage(t, i) {
   const next = TOOLS[(i + 1) % TOOLS.length];
   const owner = t.maker || repoOwner(t.repo);
   const url = toolUrl(t);
-  const title = `${t.name} — ${t.tagline} | ${SITE.name}`;
-  const desc = (t.blurb || `${t.tagline}. ${t.why}`).slice(0, 300);
+  /* No "| AI Resources" suffix: it was the first thing search results
+     truncated, og:site_name already names the site on share cards, and
+     Google appends the site name to titles by itself. */
+  const title = `${t.name} — ${t.tagline}`;
+  /* Descriptions get one SERP line. Tagline first, then as much of the blurb
+     as fits 155 characters, cut at a word. */
+  const rawDesc = t.blurb ? `${t.tagline}. ${t.blurb}` : `${t.tagline}. ${t.why}`;
+  const desc = rawDesc.length <= 155
+    ? rawDesc
+    : rawDesc.slice(0, 154).replace(/\s+\S*$/, "").replace(/[,.;:]$/, "") + "…";
 
   /* Q&A shaped so answer engines can quote a whole answer verbatim */
   const faq = {
@@ -531,10 +539,10 @@ index = index.replace(
 /* Title and descriptions carry the tool count, so the generator owns them —
    hand-editing these is how the count went stale after tools 11 and 12. */
 const indexTitle = `${SITE.name} — ${TOOLS.length} curated AI tools | ${SITE.curator.name}`;
+/* One SERP line: the old version ran 188 characters and lost its tail. */
 const indexDesc =
-  `${SITE.tagline}. ${TOOLS.length} AI tools curated by ${SITE.curator.name} for designing, ` +
-  `building and writing: what each one does, when it is worth using, and how to set it up, ` +
-  `explained without jargon.`;
+  `${SITE.tagline}. ${TOOLS.length} AI tools curated by ${SITE.curator.name}: ` +
+  `what each one does, when it is worth using, and how to set it up, without jargon.`;
 /* The visible "Last updated" line: app.js corrects it at runtime, but a
    crawler without JavaScript reads the static text, so the generator owns it
    too. Same source, same date, no contradiction between HTML and JSON-LD. */
