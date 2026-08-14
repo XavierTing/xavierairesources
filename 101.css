@@ -492,21 +492,49 @@ body.chaptered .chapter.is-open { display: block; }
   white-space: nowrap; color: var(--ink);
 }
 .chapbar-home:hover { color: var(--accent); }
-.chapbar-dots { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.chapbar-dots a { display: block; width: 26px; height: 14px; padding: 5px 0; }
-.chapbar-dots a::before {
-  content: ""; display: block; height: 4px; border-radius: 2px;
-  background: var(--line-bright);
-  transition: background 0.16s ease-out;
+/* the eight steps: a ladder of numbered markers, one per chapter. The digit
+   is drawn by a counter, so the markup holds no numerals that could drift out
+   of step with the list, and the chapter's real name travels beside it in the
+   .vh label that screen readers announce. The closing section has no marker
+   here: it is not one of the eight (see 101.js). */
+.chapbar-dots {
+  counter-reset: step;
+  /* 6px keeps the row reading as one group while leaving the site's focus
+     ring (2px at a 3px offset) room to draw without sitting on a neighbour */
+  display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; flex: 0 0 auto;
 }
-.chapbar-dots a:hover::before { background: var(--ink); }
-.chapbar-dots a[aria-current]::before { background: var(--accent); box-shadow: 0 0 12px 1px var(--accent-soft); }
+.chapbar-dots li { counter-increment: step; display: flex; }
+.chapbar-dots a {
+  display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; flex: 0 0 auto;
+  /* the system's control corner, the same one the arrows and the Contents
+     button carry, so the whole bar rounds off in one language */
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-bright);
+  font-family: var(--font-mono); font-size: var(--m-size); line-height: 1;
+  color: var(--muted);
+  transition: background 0.16s ease-out, color 0.16s ease-out, border-color 0.16s ease-out;
+}
+.chapbar-dots a::before { content: counter(step); }
+.chapbar-dots a:hover { color: var(--ink); border-color: var(--ink); }
+/* behind you: filled in quietly, so the row reads as progress at a glance
+   without any marker competing with the one you are on */
+.chapbar-dots a.done { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.chapbar-dots a.done:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+/* where you are: the only solid tile in the row */
+.chapbar-dots a[aria-current],
+.chapbar-dots a[aria-current]:hover {
+  background: var(--accent-fill); border-color: var(--accent-fill); color: var(--on-accent);
+}
 .chapbar-now {
   margin: 0 auto 0 0; display: flex; gap: 10px; align-items: baseline; min-width: 0;
   font-family: var(--font-mono); font-size: var(--nav-size);
   letter-spacing: 0.08em; text-transform: uppercase;
 }
 .chapbar-count { color: var(--accent); flex: 0 0 auto; }
+/* the cover and the closing section carry no fraction, and an empty span
+   would still spend the flex gap on nothing */
+.chapbar-count:empty { display: none; }
 #chapNow { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .chapbar-arrows { display: flex; gap: 6px; flex: 0 0 auto; }
 .chapbar-a {
@@ -517,6 +545,10 @@ body.chaptered .chapter.is-open { display: block; }
 }
 .chapbar-a:hover { background: var(--accent-fill); color: var(--on-accent); border-color: var(--accent-fill); }
 .chapbar-a[aria-disabled="true"] { opacity: 0.28; pointer-events: none; }
+/* nothing sits before the cover, so the back arrow leaves rather than
+   lingering as a ghost. Contents stays, so the bar keeps a control at each
+   end on every view. */
+body[data-ch="cover"] #chapPrev { display: none; }
 .chapbar-menu {
   font-family: var(--font-mono); font-size: var(--nav-size);
   letter-spacing: 0.08em; text-transform: uppercase;
@@ -525,7 +557,6 @@ body.chaptered .chapter.is-open { display: block; }
   min-height: 36px; padding: 0 14px; cursor: pointer; flex: 0 0 auto;
   transition: background 0.16s ease-out, color 0.16s ease-out, border-color 0.16s ease-out;
 }
-body[data-ch="cover"] .chapbar-menu { visibility: hidden; }
 .chapbar-menu:hover,
 .chapbar-menu[aria-expanded="true"] { background: var(--accent-fill); color: var(--on-accent); border-color: var(--accent-fill); }
 

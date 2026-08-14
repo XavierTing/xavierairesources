@@ -164,6 +164,13 @@ memorable sentence, and the recap reuses it verbatim. Cross-link related
 entries with `<a href="#e-other">` (forward links are fine). Place the entry
 next to its conceptual sibling, not at the end of the chapter.
 
+The course counts eight chapters. The closing section "Where to start"
+(`data-slug="monday"`) sits after chapter 08 and is deliberately outside that
+count: it carries no plate number, it is absent from both contents lists, and
+it gets no step in the chapter bar's `.chapbar-dots`. It stays a routable
+chapter, so prev/next and the deep link `#monday` still reach it. Do not add
+it back to the stepper when the counts are next resynced.
+
 Each chapter opens with a `.plate`: number, tag, an `h2` title and a one
 sentence description. Both the title and the description must sit on a single
 line at every desktop width the container supports, down to 1180px, so keep
