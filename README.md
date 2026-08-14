@@ -52,13 +52,28 @@ tool would be invisible to search.
 
 ## Deploying
 
-Static upload — drag the folder into Netlify, or connect the repo to Vercel.
-No build command, no output directory.
+The site is live at **https://xaviertingai.com**, served by Cloudflare Workers
+static assets. There is no build command and no output directory: the repo root
+is the deployable folder. Pushing to `main` triggers a Workers build, which runs
+`npx wrangler deploy`.
 
-**One required step after your first deploy:** put the real URL in `SITE.url`
-inside `site.js` and re-run `node generate-seo.mjs`. Every canonical tag,
-`og:url`, sitemap entry and JSON-LD reference follows from it, and a wrong
-canonical URL actively suppresses search ranking.
+Four files configure the hosting, and each one is load-bearing:
+
+| File | What it does |
+|---|---|
+| `wrangler.jsonc` | Names the Worker, points it at the repo root, and pins `html_handling: "none"` so `/ai-101.html` is served as asked instead of being redirected to `/ai-101`. |
+| `_redirects` | Rewrites `/` to `/index.html` with a 200. `html_handling: "none"` stops the bare root resolving on its own, so without this the homepage 404s. |
+| `.assetsignore` | Keeps `.git`, the docs and the art scripts out of the upload. Workers, unlike Pages, excludes nothing by default, so removing this publishes the whole git history. |
+| `_headers` | One day of caching for `assets/*`. The stylesheets and scripts are deliberately left on the revalidating default because their filenames carry no content hash. |
+
+`netlify.toml` 301s the retired `xavierairesources.netlify.app` deploy to the
+new domain, so old links keep working.
+
+**If the domain ever changes:** put the new URL in `SITE.url` inside `site.js`,
+re-run `node generate-seo.mjs`, and hand-edit `ai-101.html` and `curator.html`,
+which the generator does not touch. Every canonical tag, `og:url`, sitemap entry
+and JSON-LD reference follows from `SITE.url`, and a wrong canonical URL
+actively suppresses search ranking.
 
 ## Docs
 

@@ -1,0 +1,33 @@
+{
+  // Cloudflare Workers static-asset hosting for xaviertingai.com.
+  // The site has no build step: the repo root IS the deployable directory,
+  // so `directory` is "." and .assetsignore carves out everything that is
+  // source, tooling or documentation rather than something a browser asks for.
+  "name": "xaviertingai",
+  "compatibility_date": "2026-08-14",
+
+  // Keeps <name>.<subdomain>.workers.dev alive as a staging URL, which is how
+  // you check a deploy before DNS has finished moving.
+  "workers_dev": true,
+
+  "assets": {
+    "directory": ".",
+
+    // Every internal link, every sitemap entry and every canonical tag on this
+    // site ends in .html. The default ("auto-trailing-slash") 307-redirects
+    // /ai-101.html to /ai-101, which would bounce every link the site ships and
+    // every URL already indexed. "none" serves the exact path that was asked
+    // for, which is what Netlify did.
+    "html_handling": "none",
+
+    // No 404.html exists, so there is nothing to serve for a miss.
+    "not_found_handling": "none"
+  },
+
+  "routes": [
+    // Requires the xaviertingai.com zone to be active on Cloudflare first.
+    // www is handled by a redirect rule to the apex, not by a second route,
+    // so the site is never served from two hostnames at once.
+    { "pattern": "xaviertingai.com", "custom_domain": true }
+  ]
+}

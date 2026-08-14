@@ -5,9 +5,9 @@
 Curated by Xavier Ting, Vice President at OCBC.
 AI & Design Leader. I build with AI daily and write up what works, so the tools stay usable by people who don't ship code for a living.
 
-- Site: https://xavierairesources.netlify.app/
-- Course: https://xavierairesources.netlify.app/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 9 chapters, about an hour)
-- Curator: https://xavierairesources.netlify.app/curator.html — who Xavier Ting is and why this site exists
+- Site: https://xaviertingai.com/
+- Course: https://xaviertingai.com/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, 9 chapters, about an hour)
+- Curator: https://xaviertingai.com/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: https://www.linkedin.com/in/xavierting/
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
@@ -23,7 +23,7 @@ Entries are independently curated and carry their own usage status. Nobody paid 
 - **Category:** Design
 - **Made by:** pbakaus
 - **Source:** https://github.com/pbakaus/impeccable
-- **Page:** https://xavierairesources.netlify.app/tools/impeccable.html
+- **Page:** https://xaviertingai.com/tools/impeccable.html
 - **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** In daily use
@@ -49,7 +49,7 @@ Any time you are building a web page or an app with an AI assistant. Check it be
 - **Category:** Workflow
 - **Made by:** obra
 - **Source:** https://github.com/obra/superpowers
-- **Page:** https://xavierairesources.netlify.app/tools/superpowers.html
+- **Page:** https://xaviertingai.com/tools/superpowers.html
 - **You'll need:** Claude Code
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -75,7 +75,7 @@ Anything bigger than a quick fix. It is most useful on projects you are starting
 - **Category:** Workflow
 - **Made by:** github
 - **Source:** https://github.com/github/spec-kit
-- **Page:** https://xavierairesources.netlify.app/tools/spec-kit.html
+- **Page:** https://xaviertingai.com/tools/spec-kit.html
 - **You'll need:** An AI coding assistant, the uv helper
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** In daily use
@@ -101,7 +101,7 @@ Projects that run across several sessions, work you share with other people, and
 - **Category:** Connections
 - **Made by:** ChromeDevTools
 - **Source:** https://github.com/ChromeDevTools/chrome-devtools-mcp
-- **Page:** https://xavierairesources.netlify.app/tools/chrome-devtools-mcp.html
+- **Page:** https://xaviertingai.com/tools/chrome-devtools-mcp.html
 - **You'll need:** Claude Code, Node.js (free, from nodejs.org), Chrome
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -127,7 +127,7 @@ Fixing anything that shows up in a browser, making a slow page faster, and any t
 - **Category:** Connections
 - **Made by:** upstash
 - **Source:** https://github.com/upstash/context7
-- **Page:** https://xavierairesources.netlify.app/tools/context7.html
+- **Page:** https://xaviertingai.com/tools/context7.html
 - **You'll need:** Claude Code, Node.js (free, from nodejs.org)
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -153,7 +153,7 @@ Working with software that changes quickly (web-building kits such as Next.js an
 - **Category:** Coding
 - **Made by:** yamadashy
 - **Source:** https://github.com/yamadashy/repomix
-- **Page:** https://xavierairesources.netlify.app/tools/repomix.html
+- **Page:** https://xaviertingai.com/tools/repomix.html
 - **You'll need:** Node.js (free, from nodejs.org), and any AI chat to paste into
 - **Cost:** Free
 - **Curator's status:** In daily use
@@ -179,7 +179,7 @@ Getting a second opinion from a different AI, having code reviewed by a model th
 - **Category:** Connections
 - **Made by:** Panniantong
 - **Source:** https://github.com/Panniantong/Agent-Reach
-- **Page:** https://xavierairesources.netlify.app/tools/agent-reach.html
+- **Page:** https://xaviertingai.com/tools/agent-reach.html
 - **You'll need:** Claude Code
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -205,7 +205,7 @@ Research where the assistant genuinely needs to read tweets, Reddit discussions 
 - **Category:** Knowledge
 - **Made by:** karpathy
 - **Source:** https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
-- **Page:** https://xavierairesources.netlify.app/tools/llm-wiki.html
+- **Page:** https://xaviertingai.com/tools/llm-wiki.html
 - **You'll need:** Nothing to install, a browser
 - **Cost:** Free
 - **Curator's status:** In daily use
@@ -230,7 +230,7 @@ Building a second brain out of notes, articles and bookmarks: a personal knowled
 - **Category:** Writing
 - **Made by:** blader
 - **Source:** https://github.com/blader/humanizer
-- **Page:** https://xavierairesources.netlify.app/tools/humanizer.html
+- **Page:** https://xaviertingai.com/tools/humanizer.html
 - **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** In daily use
@@ -256,7 +256,7 @@ The last thing you do before anything goes public: posts, documentation, emails,
 - **Category:** Design
 - **Made by:** Figma
 - **Source:** https://developers.figma.com/docs/figma-mcp-server/
-- **Page:** https://xavierairesources.netlify.app/tools/figma-mcp.html
+- **Page:** https://xaviertingai.com/tools/figma-mcp.html
 - **You'll need:** Claude Code, a Figma account
 - **Cost:** Free with your Figma account (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -282,7 +282,7 @@ Any build that starts from a design file, and any time the live product has drif
 - **Category:** Knowledge
 - **Made by:** kepano
 - **Source:** https://github.com/kepano/obsidian-skills
-- **Page:** https://xavierairesources.netlify.app/tools/obsidian-skills.html
+- **Page:** https://xaviertingai.com/tools/obsidian-skills.html
 - **You'll need:** An AI coding assistant, Obsidian
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** In daily use
@@ -308,7 +308,7 @@ Any time you want an assistant working inside your notes rather than in a chat w
 - **Category:** Workflow
 - **Made by:** Anthropic
 - **Source:** https://claude.com/plugins/ralph-loop
-- **Page:** https://xavierairesources.netlify.app/tools/ralph-loop.html
+- **Page:** https://xaviertingai.com/tools/ralph-loop.html
 - **You'll need:** Claude Code
 - **Cost:** Free; each attempt uses your Claude allowance
 - **Curator's status:** In daily use
@@ -334,7 +334,7 @@ Work where you can say plainly what finished looks like and something can check 
 - **Category:** Connections
 - **Made by:** Mathias Schusterman
 - **Source:** https://github.com/mathiaschu/watch
-- **Page:** https://xavierairesources.netlify.app/tools/watch.html
+- **Page:** https://xaviertingai.com/tools/watch.html
 - **You'll need:** Claude Code
 - **Cost:** Free; transcribes on your computer (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -360,7 +360,7 @@ Any time the answer sits inside a video rather than a page: a product demo you w
 - **Category:** Coding
 - **Made by:** OpenAI
 - **Source:** https://github.com/openai/codex-plugin-cc
-- **Page:** https://xavierairesources.netlify.app/tools/codex-for-claude-code.html
+- **Page:** https://xaviertingai.com/tools/codex-for-claude-code.html
 - **You'll need:** Claude Code, a ChatGPT account
 - **Cost:** Free plugin; uses your ChatGPT account's Codex allowance
 - **Curator's status:** In daily use
@@ -386,7 +386,7 @@ Straight after a change big enough that you would want someone else to look at i
 - **Category:** Design
 - **Made by:** Emil Kowalski
 - **Source:** https://github.com/emilkowalski/skills/tree/main/skills/apple-design
-- **Page:** https://xavierairesources.netlify.app/tools/apple-design.html
+- **Page:** https://xaviertingai.com/tools/apple-design.html
 - **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** In daily use
@@ -412,7 +412,7 @@ Anything a person touches and drags: panels that slide up from the bottom, side 
 - **Category:** Workflow
 - **Made by:** sk-ruban
 - **Source:** https://github.com/sk-ruban/notchi
-- **Page:** https://xavierairesources.netlify.app/tools/notchi.html
+- **Page:** https://xaviertingai.com/tools/notchi.html
 - **You'll need:** A MacBook with a notch, macOS 15 or newer
 - **Cost:** Free; the optional key spends your own credit
 - **Curator's status:** In daily use
@@ -437,7 +437,7 @@ Any time you set the assistant on something that will take minutes rather than s
 - **Category:** Coding
 - **Made by:** diegosouzapw
 - **Source:** https://github.com/diegosouzapw/OmniRoute
-- **Page:** https://xavierairesources.netlify.app/tools/omniroute.html
+- **Page:** https://xaviertingai.com/tools/omniroute.html
 - **You'll need:** Node.js (free, from nodejs.org), and an AI coding tool
 - **Cost:** Free; paid models still bill you as usual
 - **Curator's status:** In daily use
@@ -463,7 +463,7 @@ Long sessions where stopping is expensive, and any time you want to try a cheape
 - **Category:** Knowledge
 - **Made by:** thedotmack
 - **Source:** https://github.com/thedotmack/claude-mem
-- **Page:** https://xavierairesources.netlify.app/tools/claude-mem.html
+- **Page:** https://xaviertingai.com/tools/claude-mem.html
 - **You'll need:** An AI coding assistant, Node.js (free, from nodejs.org)
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** In daily use
@@ -489,7 +489,7 @@ Projects you return to across days or weeks, and any work where re-explaining th
 - **Category:** Coding
 - **Made by:** headroomlabs-ai
 - **Source:** https://github.com/headroomlabs-ai/headroom
-- **Page:** https://xavierairesources.netlify.app/tools/headroom.html
+- **Page:** https://xaviertingai.com/tools/headroom.html
 - **You'll need:** Python 3.10 or newer
 - **Cost:** Free
 - **Curator's status:** In daily use
@@ -515,7 +515,7 @@ Work that pushes a lot of material through the assistant: reading logs, handling
 - **Category:** Workflow
 - **Made by:** Anthropic
 - **Source:** https://claude.com/plugins/claude-code-setup
-- **Page:** https://xavierairesources.netlify.app/tools/claude-code-setup.html
+- **Page:** https://xaviertingai.com/tools/claude-code-setup.html
 - **You'll need:** Claude Code
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -541,7 +541,7 @@ Setting up a project you have just started working in, or returning to one where
 - **Category:** Workflow
 - **Made by:** rebelytics
 - **Source:** https://github.com/rebelytics/one-skill-to-rule-them-all
-- **Page:** https://xavierairesources.netlify.app/tools/task-observer.html
+- **Page:** https://xaviertingai.com/tools/task-observer.html
 - **You'll need:** Claude Code, and a few skills of your own
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -566,7 +566,7 @@ Once you have built a few skills and keep correcting the same things. The author
 - **Category:** Connections
 - **Made by:** Microsoft
 - **Source:** https://github.com/microsoft/playwright-cli
-- **Page:** https://xavierairesources.netlify.app/tools/playwright-cli.html
+- **Page:** https://xaviertingai.com/tools/playwright-cli.html
 - **You'll need:** Claude Code, Node.js 18 or newer (free, from nodejs.org)
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -592,7 +592,7 @@ Writing or repairing tests that click through a website, checking a sign-up or c
 - **Category:** Connections
 - **Made by:** Supabase
 - **Source:** https://supabase.com/docs/guides/ai-tools/plugins
-- **Page:** https://xavierairesources.netlify.app/tools/supabase-plugin.html
+- **Page:** https://xaviertingai.com/tools/supabase-plugin.html
 - **You'll need:** An AI coding assistant, a Supabase project
 - **Cost:** Free; Supabase and your AI assistant have their own plans
 - **Curator's status:** In daily use
@@ -618,7 +618,7 @@ Any project already using Supabase. It earns its place fastest on database struc
 - **Category:** Coding
 - **Made by:** Strix
 - **Source:** https://github.com/usestrix/strix
-- **Page:** https://xavierairesources.netlify.app/tools/strix.html
+- **Page:** https://xaviertingai.com/tools/strix.html
 - **You'll need:** A paid AI account key, software you own
 - **Cost:** Free; scans spend your AI account's credit
 - **Curator's status:** In daily use
@@ -644,7 +644,7 @@ Before putting something on the internet, and after any change to the parts that
 - **Category:** Design
 - **Made by:** amaancoderx
 - **Source:** https://github.com/amaancoderx/npxskillui
-- **Page:** https://xavierairesources.netlify.app/tools/skill-ui.html
+- **Page:** https://xaviertingai.com/tools/skill-ui.html
 - **You'll need:** Claude Code, Node.js 18 or newer (free, from nodejs.org)
 - **Cost:** Free (Claude Code has its own plan)
 - **Curator's status:** In daily use
@@ -670,7 +670,7 @@ Starting a new screen that has to sit alongside an existing product, or handing 
 - **Category:** Workflow
 - **Made by:** karpathy
 - **Source:** https://github.com/karpathy/autoresearch
-- **Page:** https://xavierairesources.netlify.app/tools/autoresearch.html
+- **Page:** https://xaviertingai.com/tools/autoresearch.html
 - **You'll need:** The uv helper, Python 3.10 or newer, an NVIDIA graphics card
 - **Cost:** Free (the coding agent you point at it has its own plan)
 - **Curator's status:** Reviewed · Not tested
@@ -696,7 +696,7 @@ Exploring autonomous AI research, teaching experiment design, or testing whether
 - **Category:** Workflow
 - **Made by:** addyosmani
 - **Source:** https://github.com/addyosmani/agent-skills
-- **Page:** https://xavierairesources.netlify.app/tools/agent-skills.html
+- **Page:** https://xaviertingai.com/tools/agent-skills.html
 - **You'll need:** An AI assistant that can change project files, Node.js (free software from nodejs.org; it includes npx)
 - **Cost:** Free (your AI assistant has its own plan)
 - **Curator's status:** Reviewed · Not tested
@@ -728,4 +728,4 @@ Use it when an AI is changing a software project large enough to need a repeatab
 
 ## Citation
 
-If you quote this list, please credit Xavier Ting (https://xavierairesources.netlify.app/).
+If you quote this list, please credit Xavier Ting (https://xaviertingai.com/).

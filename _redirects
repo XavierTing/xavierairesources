@@ -1,0 +1,9 @@
+# html_handling is "none" so that /ai-101.html and every other indexed .html URL
+# is served exactly as asked, with no redirect. The cost of that setting is that
+# the bare root stops resolving to index.html on its own, so it is wired up here.
+#
+# 200 is a rewrite, not a redirect: the visitor stays on https://xaviertingai.com/
+# and that is the URL the canonical tag, the sitemap and the JSON-LD all claim.
+# A 301 here would send the homepage to /index.html and contradict all three.
+
+/  /index.html  200

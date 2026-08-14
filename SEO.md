@@ -6,8 +6,8 @@ What is already built into the site, and what only you can do (accounts, DNS, mo
 
 ## 0. Do this first — one line, then one command
 
-The site is live at **https://xavierairesources.netlify.app** and `site.js` now
-declares that. If the domain ever changes, edit `SITE.url` and re-run the generator:
+The site is live at **https://xaviertingai.com** and `site.js` now declares that.
+If the domain ever changes, edit `SITE.url` and re-run the generator:
 
 ```bash
 # 1. edit SITE.url in site.js
@@ -15,7 +15,9 @@ node generate-seo.mjs
 ```
 
 That rewrites every canonical tag, `og:url`, `og:image`, the `sitemap.xml`,
-`robots.txt`, `llms.txt` and all JSON-LD references. **A wrong canonical URL
+`robots.txt`, `llms.txt` and all JSON-LD references. It does **not** touch
+`ai-101.html` or `curator.html`, which are hand-owned: their canonicals,
+`og:url` and JSON-LD ids have to be edited by hand in the same commit. **A wrong canonical URL
 actively suppresses ranking** — the site shipped for a day pointing at a dead
 Vercel URL, which is exactly how pages get dropped from an index.
 

@@ -33,4 +33,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://xavierairesources.netlify.app/sitemap.xml
+Sitemap: https://xaviertingai.com/sitemap.xml

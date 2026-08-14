@@ -1,0 +1,15 @@
+# Cloudflare serves assets with `public, max-age=3600` by default.
+#
+# The card art and course diagrams are addressed by slug and change only when a
+# diagram is redrawn, so an hour is short for them. The stylesheets and scripts
+# have no content hash in their filenames, so they keep the shorter default:
+# long-caching them would hide an edit from anyone who had already visited.
+
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/og-image.png
+  Cache-Control: public, max-age=86400
+
+/favicon.svg
+  Cache-Control: public, max-age=86400

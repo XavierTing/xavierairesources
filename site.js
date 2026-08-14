@@ -7,7 +7,7 @@
 
 const SITE = {
   /* Live canonical URL. Change this and re-run `node generate-seo.mjs`. */
-  url: "https://xavierairesources.netlify.app",
+  url: "https://xaviertingai.com",
 
   /* First published — feeds datePublished in structured data. */
   published: "2026-07-30",

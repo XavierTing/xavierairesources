@@ -19,3 +19,6 @@ node_modules/
 # Source of the AI 101 course page — the standalone light-theme build that
 # ai-101.html was ported from. Kept locally as reference; never deployed.
 xaviers-ai-101/
+
+# Wrangler local dev state
+.wrangler/

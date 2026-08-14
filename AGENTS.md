@@ -9,6 +9,13 @@ step: **The tools** (a curated directory of AI tools), **AI 101** (a 59-term
 plain-English course), and **The curator** (bio). Preview locally with
 `python3 -m http.server` from the repo root.
 
+It is live at **https://xaviertingai.com** on Cloudflare Workers static assets,
+and a push to `main` deploys it. To preview the way the real host behaves,
+including the `.html` routing rules, run `npx wrangler dev` instead of the Python
+server. See the Deploying section of `README.md` before touching
+`wrangler.jsonc`, `_redirects`, `_headers` or `.assetsignore`: each one is
+load-bearing, and `.assetsignore` is what keeps `.git` out of the public site.
+
 ---
 
 ## 1. Who owns which file
@@ -226,6 +233,10 @@ curved arrows, hand-lettered caps. Exactly five colours, the Daylight palette:
   copy may say so.
 - The nav tab label stays the short "AI 101" even though the course's full
   title is "Artificial Intelligence 101".
+- Page URLs keep the `.html` on the end (`/ai-101.html`, not `/ai-101`). Every
+  internal link, every sitemap entry and every canonical tag agrees on that
+  shape, and the host is configured to serve it literally. Dropping the
+  extension is a site-wide migration, not a per-page choice.
 - Commit messages: imperative subject, a prose body explaining why (not a
   bullet list of the diff), and the repo's existing Co-Authored-By trailer
   convention when an agent wrote it.

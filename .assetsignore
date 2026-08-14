@@ -1,0 +1,43 @@
+# Everything the browser never asks for.
+#
+# The deployable directory is the repo root, and Workers static assets (unlike
+# Pages) excludes nothing by default. Without this file the whole git history
+# and every authoring note would be uploaded and served publicly.
+
+# Version control, dependencies and local build state
+**/.git
+**/node_modules
+**/.DS_Store
+**/Thumbs.db
+**/*.swp
+.wrangler
+
+# Agent and tooling config
+.claude
+.codex
+.impeccable
+.gitignore
+.assetsignore
+wrangler.jsonc
+netlify.toml
+
+# The authoring contract and design docs, not site content
+AGENTS.md
+CLAUDE.md
+DESIGN.md
+PRODUCT.md
+README.md
+SEO.md
+
+# The generator itself: its output ships, it does not
+generate-seo.mjs
+
+# Art pipeline scripts and their notes. The .png/.webp they produce ship;
+# the scripts, prompts and parked-diagram list do not.
+assets/README.md
+assets/**/*.py
+assets/101/PENDING-DIAGRAMS.md
+assets/101/diagram-prompts.json
+
+# Local-only source of the course page (also gitignored)
+xaviers-ai-101
