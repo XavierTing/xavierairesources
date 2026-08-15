@@ -679,9 +679,34 @@ const TOOLS = [
     commandTarget: "terminal",
     status: "Reviewed · Not tested",
     note: "A broad, MIT-licensed pack with a useful verification-first bias. Browse before installing, and watch the shared-reference gap when you add only one skill."
+  },
+  {
+    num: "28",
+    added: "2026-08-15",
+    updated: "2026-08-15",
+    name: "Higgsfield CLI",
+    category: "Design",
+    maker: "Higgsfield",
+    tagline: "Makes images and videos from a line you type",
+    blurb: "Describe the picture or the clip you want and it arrives as a file on your computer, with no website or design app in between. It can send that description to about fifty different AI generators, covering images, video, 3D objects and sound, and each run spends credits from a paid Higgsfield account.",
+    repo: "https://github.com/higgsfield-ai/cli",
+    repoLabel: "GITHUB REPO",
+    needs: "Node.js (free from nodejs.org), a Higgsfield account with credits, and a coding assistant such as Claude Code for the third step. Runs on macOS, Linux or Windows",
+    cost: "Free to install, then credits for every picture or clip it makes. Credits are prepaid units: a plan hands you a monthly allowance, a still image spends fewer of them than a video, and the price climbs with resolution, meaning how large and sharp the result is. Plans start at roughly fifteen US dollars a month at the time of writing, so read higgsfield.ai/pricing for today's numbers. There is a free plan, and it stamps a watermark, a visible logo, across whatever it produces.",
+    why: "Making one image for a post is a small errand that quietly eats a morning: open a tab, pick a generator, wait, download the file, rename it, drag it into the right folder. Higgsfield CLI moves that errand into the terminal, the typed-command window on your computer. That matters because an AI coding agent, the kind of assistant that works on the files in a folder rather than only chatting with you, can then ask for the picture itself and save it where the page expects it. It reaches about fifty models, the individual AI generators that actually draw the picture or render the clip, across images, video, 3D objects and sound, and it can train a Soul ID, a saved likeness that holds one face steady from shot to shot. Be clear about what it is not: the program on your machine is free, but the drawing happens on Higgsfield's computers, so this is a paid service with a free tool as its front door.",
+    when: "Reach for it when the artwork belongs to work you are already doing in a folder: a header image for the post you are writing, a clip for a slide presentation, or twenty versions of one advertisement image you would rather not click through by hand. It runs on macOS, Linux and Windows, and Node.js has to be installed first. The free plan watermarks its output, so anything you mean to publish is a paid activity. What one run costs depends on the model and the resolution, so look the price up before you ask for many at once: an agent told to make ten videos spends ten videos' worth of credits and does not stop to ask a second time.",
+    how: [
+      "Install Node.js first if you do not have it: download the installer from nodejs.org and run it like any other app. Then open the Terminal app, the window where you type commands (on a Mac, hold Command and press the space bar, type Terminal, then press Enter). Paste the line below and press Enter. It fetches the tool from npm, the software library that arrives with Node.js, and the -g means install it for the whole computer rather than one folder.",
+      "Run higgsfield auth login. It opens your browser so you can sign in, then hands a pass back to the terminal. That pass is short lived, so expect to sign in again on another day. Run higgsfield account next and read your credit balance before you spend any of it.",
+      "Run npx skills add higgsfield-ai/skills. The npx part comes with Node.js and runs a helper once without installing it, and skills are written instructions that teach your coding assistant these commands. Then ask that assistant for one picture in plain words, for example: use Higgsfield to make a wide header image of a hawker centre at night. Look at what comes back before you ask for anything more, and approve requests one at a time rather than twenty at once, because each one spends real credits."
+    ],
+    command: "npm install -g @higgsfield/cli",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The tool on your machine is free and the model list is wide, but the meter runs on someone else's computer. Watch what an agent asks for before you let it generate unattended."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
-   Also regenerate og-image.png when the tool count changes. */
-const LOG_UPDATED = "14.08.2026";
+   og-image.png carries no tool count, so adding an entry does not stale it. */
+const LOG_UPDATED = "15.08.2026";

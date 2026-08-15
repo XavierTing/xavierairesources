@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 27 · Categories: 6 · Last updated: 14.08.2026
+- Tools listed: 28 · Categories: 6 · Last updated: 15.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -692,9 +692,35 @@ Use it when an AI is changing a software project large enough to need a repeatab
 
 ---
 
+## 28. Higgsfield CLI — Makes images and videos from a line you type
+
+- **Category:** Design
+- **Made by:** Higgsfield
+- **Source:** https://github.com/higgsfield-ai/cli
+- **Page:** https://xaviertingai.com/tools/higgsfield-cli.html
+- **You'll need:** Node.js (free from nodejs.org), a Higgsfield account with credits, and a coding assistant such as Claude Code for the third step. Runs on macOS, Linux or Windows
+- **Cost:** Free to install, then credits for every picture or clip it makes. Credits are prepaid units: a plan hands you a monthly allowance, a still image spends fewer of them than a video, and the price climbs with resolution, meaning how large and sharp the result is. Plans start at roughly fifteen US dollars a month at the time of writing, so read higgsfield.ai/pricing for today's numbers. There is a free plan, and it stamps a watermark, a visible logo, across whatever it produces.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npm install -g @higgsfield/cli`
+
+**Why use Higgsfield CLI?**
+Making one image for a post is a small errand that quietly eats a morning: open a tab, pick a generator, wait, download the file, rename it, drag it into the right folder. Higgsfield CLI moves that errand into the terminal, the typed-command window on your computer. That matters because an AI coding agent, the kind of assistant that works on the files in a folder rather than only chatting with you, can then ask for the picture itself and save it where the page expects it. It reaches about fifty models, the individual AI generators that actually draw the picture or render the clip, across images, video, 3D objects and sound, and it can train a Soul ID, a saved likeness that holds one face steady from shot to shot. Be clear about what it is not: the program on your machine is free, but the drawing happens on Higgsfield's computers, so this is a paid service with a free tool as its front door.
+
+**When should you use Higgsfield CLI?**
+Reach for it when the artwork belongs to work you are already doing in a folder: a header image for the post you are writing, a clip for a slide presentation, or twenty versions of one advertisement image you would rather not click through by hand. It runs on macOS, Linux and Windows, and Node.js has to be installed first. The free plan watermarks its output, so anything you mean to publish is a paid activity. What one run costs depends on the model and the resolution, so look the price up before you ask for many at once: an agent told to make ten videos spends ten videos' worth of credits and does not stop to ask a second time.
+
+**How do you install and use Higgsfield CLI?**
+1. Install Node.js first if you do not have it: download the installer from nodejs.org and run it like any other app. Then open the Terminal app, the window where you type commands (on a Mac, hold Command and press the space bar, type Terminal, then press Enter). Paste the line below and press Enter. It fetches the tool from npm, the software library that arrives with Node.js, and the -g means install it for the whole computer rather than one folder.
+2. Run higgsfield auth login. It opens your browser so you can sign in, then hands a pass back to the terminal. That pass is short lived, so expect to sign in again on another day. Run higgsfield account next and read your credit balance before you spend any of it.
+3. Run npx skills add higgsfield-ai/skills. The npx part comes with Node.js and runs a helper once without installing it, and skills are written instructions that teach your coding assistant these commands. Then ask that assistant for one picture in plain words, for example: use Higgsfield to make a wide header image of a hawker centre at night. Look at what comes back before you ask for anything more, and approve requests one at a time rather than twenty at once, because each one spends real credits.
+
+**Curator's note:** The tool on your machine is free and the model list is wide, but the meter runs on someone else's computer. Watch what an agent asks for before you let it generate unattended.
+
+---
+
 ## Categories
 
-- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI
+- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix

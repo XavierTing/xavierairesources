@@ -33,6 +33,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Skill UI](https://xaviertingai.com/tools/skill-ui.html): Writes down your product's look so Claude can match it
 - [Autoresearch](https://xaviertingai.com/tools/autoresearch.html): Lets an AI agent run model experiments overnight
 - [Agent Skills](https://xaviertingai.com/tools/agent-skills.html): Makes an AI follow a repeatable build process
+- [Higgsfield CLI](https://xaviertingai.com/tools/higgsfield-cli.html): Makes images and videos from a line you type
 
 ## Course
 
