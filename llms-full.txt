@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 28 · Categories: 6 · Last updated: 15.08.2026
+- Tools listed: 33 · Categories: 6 · Last updated: 15.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -718,9 +718,139 @@ Reach for it when the artwork belongs to work you are already doing in a folder:
 
 ---
 
+## 29. Taste Skill — Gives an AI assistant a point of view about design
+
+- **Category:** Design
+- **Made by:** Leon Lin and blueemi
+- **Source:** https://github.com/Leonxlnx/taste-skill
+- **Page:** https://xaviertingai.com/tools/taste-skill.html
+- **You'll need:** Node.js (free from nodejs.org), and a coding assistant that reads skills, such as Claude Code, Cursor, Codex or Gemini CLI
+- **Cost:** Free and open source. The assistant you point it at has its own plan.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx skills add Leonxlnx/taste-skill`
+
+**Why use Taste Skill?**
+An AI writes a page out of the average of everything it has seen, so the page looks like the average of everything it has seen: safe spacing, a gradient, three cards in a row, nothing that suggests a person made a decision. Taste Skill is a set of skills, written instructions an assistant reads before it starts work, aimed squarely at that problem. It ships thirteen of them: a default, several named looks such as minimalist and brutalist, a redesign pass for pages that already exist, and one that draws the design as a picture before writing any code. What it changes is what your assistant reaches for first. It is not a design system for your own product, and it has no opinion about whether the thing you are building is worth building.
+
+**When should you use Taste Skill?**
+Reach for it when you are building an interface with an assistant and the results keep coming out generic, or when you want a particular look often enough that naming it beats describing it every time. It works with Claude Code, Cursor, Codex, Gemini CLI and several other coding assistants. The default skill is labelled experimental by its authors. If you would rather have the steadier older version, put --skill design-taste-frontend-v1 at the end of the install line, which fetches that one instead of the whole pack.
+
+**How do you install and use Taste Skill?**
+1. Open the Terminal app, the window where you type commands, and move to your project folder. Paste the line below. It uses npx, the helper that arrives with Node.js, to copy the skills into the place your assistant looks for them.
+2. Ask for one screen and name a look, for example: rebuild this pricing page using the minimalist skill. Put it beside what the same assistant made before, because that comparison is your only evidence the skill actually took.
+3. Keep it on a duplicate of your project until you trust it. These skills rewrite layout and styling with a firm hand, which is the point of them, but a firm hand on your only copy makes for a bad afternoon.
+
+**Curator's note:** Opinionated on purpose, which is the whole value. Read what a named look does to your spacing before you let it near a page that already works.
+
+---
+
+## 30. 21st MCP — Builds an interface component from one sentence
+
+- **Category:** Design
+- **Made by:** 21st.dev
+- **Source:** https://21st.dev/mcp
+- **Page:** https://xaviertingai.com/tools/21st-mcp.html
+- **You'll need:** Node.js (free from nodejs.org), a free 21st.dev account for an API key, and an editor that speaks MCP such as Claude Code, Cursor, VS Code or Windsurf
+- **Cost:** Free plan gives a hundred credits a month, and a credit is spent each time you ask it to make something. Paid plans run about 20 US dollars a month, or 40 for the larger one, less if billed yearly, at the time of writing.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx @21st-dev/cli@latest init --client claude`
+
+**Why use 21st MCP?**
+Building the ordinary furniture of an interface is the part nobody enjoys: the date picker, the pricing table, the settings sidebar, each one an afternoon of fiddling that teaches you nothing. 21st MCP connects your editor to a catalogue of components other people have already built and published, using MCP, the standard way an assistant plugs into an outside service. You describe what you want in a sentence, it finds close matches, generates the code and writes it into your project. Two honest notes. The project used to be called Magic MCP, and that older name now does nothing but forward requests here, with the old keys switched off. And every component arrives under somebody else's licence, the terms setting out how you are allowed to reuse it, which is yours to read.
+
+**When should you use 21st MCP?**
+Reach for it when you need a standard interface piece quickly and would rather start from something real than from a blank file. It suits projects built with React, the most common way modern web interfaces are assembled, since that is what the catalogue is made of. Because each request spends a credit and the free plan holds a hundred a month, it rewards asking for one considered component over generating six variations to browse. Read the licence on anything that ends up in work you sell.
+
+**How do you install and use 21st MCP?**
+1. Make a free account at 21st.dev and generate an API key, the long password that proves the requests are yours. Keep it out of any file you upload to a shared code folder such as GitHub, because anyone who reads the key can spend your credits.
+2. Open the Terminal app, the window where you type commands, in your project folder and paste the line below. It sets up the connection for Claude Code; swap claude for cursor, vscode, windsurf or codex if you use one of those instead, and paste the key when it asks.
+3. Ask for a single component in plain words, for example: build me a pricing table with three tiers and a monthly toggle. Read the code it writes before you keep it, the same as you would read anything a stranger handed you.
+
+**Curator's note:** The catalogue is the real asset, not the generating. Check what licence a component carries before it ends up in something you charge for.
+
+---
+
+## 31. Web Design Guidelines — Reviews your interface against a published list of rules
+
+- **Category:** Design
+- **Made by:** Vercel
+- **Source:** https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+- **Page:** https://xaviertingai.com/tools/web-design-guidelines.html
+- **You'll need:** An AI assistant that can read the files in your project, Node.js for the install, and a working internet connection each time it runs
+- **Cost:** Free
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx skills add vercel-labs/agent-skills --skill web-design-guidelines`
+
+**Why use Web Design Guidelines?**
+Everyone means to check accessibility, whether the thing still works for a person moving by keyboard rather than mouse, or listening through a screen reader, the software that reads a page aloud. Almost nobody does check, because the checking is dull and the rules live somewhere else. This skill moves the rules to where the work is. It fetches Vercel's current Web Interface Guidelines, reads the files you name, and reports each problem as a file and a line number rather than as general advice you then have to locate. Two things to know. It reads code, so it catches missing focus states and unlabelled inputs but cannot tell you the page is ugly. And it downloads the rules fresh on every run, which keeps it current but means it needs a connection and can hand you a different answer next month.
+
+**When should you use Web Design Guidelines?**
+Run it when a screen is close to finished and before anyone else sees it, or on a page that has grown by accretion and has never been checked. It is at its most useful on forms, dialogs and anything with keyboard focus. Give it specific files rather than the whole project: a narrow review you act on beats a long list you skim.
+
+**How do you install and use Web Design Guidelines?**
+1. Open the Terminal app, the window where you type commands, in your project folder and paste the line below to install the skill where your assistant will find it.
+2. Ask your assistant to review specific files, for example: review my UI in app/checkout for the web design guidelines. Naming the files matters, because pointed at everything it returns more than anyone reads.
+3. Work through what it reports and fix things yourself, or approve its fixes one at a time. Treat each finding as a claim to check rather than an order: the rules are general, your screen is particular, and occasionally you will have had a reason.
+
+**Curator's note:** The rules are sound and worth reading yourself once. It catches the mechanical failures, which is most of them, and none of the judgment ones.
+
+---
+
+## 32. Image to Code — Draws the page as a picture before writing any code
+
+- **Category:** Design
+- **Made by:** Leon Lin
+- **Source:** https://github.com/Leonxlnx/taste-skill/tree/main/skills/image-to-code-skill
+- **Page:** https://xaviertingai.com/tools/image-to-code.html
+- **You'll need:** An assistant that can generate pictures, not only text. It was written for Codex, OpenAI's coding assistant. Node.js (free from nodejs.org) for the install
+- **Cost:** Free. The pictures come from your assistant, so they are drawn against whatever plan you already pay for there.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx skills add Leonxlnx/taste-skill --skill image-to-code-skill`
+
+**Why use Image to Code?**
+An assistant writing a page from a sentence is composing blind: it holds no picture of the result, so it falls back on the arrangement it has written a thousand times. This skill inserts a step. It draws the section as an image, looks hard at what it drew, writes down the spacing, the type scale (the set of text sizes a design uses) and the colours it can see, and only then writes the code to reproduce it. Working from a picture is what stops the layout drifting into the usual stack of boxes. Be clear on the direction of travel: the name sounds like you supply an image, but it produces its own, so this is for making something new rather than copying a design you already have.
+
+**When should you use Image to Code?**
+Reach for it when the look actually matters and a plain description keeps giving you the same page: a front page, a hero section at the top of it, a portfolio, a marketing site. Check before you install, because this ships as one of the thirteen skills inside Taste Skill: if you already added that pack, you already have this one and the command below is wasted. It was written for Codex, and an assistant that cannot generate pictures cannot follow the first half of it.
+
+**How do you install and use Image to Code?**
+1. Skip this step if you have already installed Taste Skill, since this skill came with it. Otherwise open the Terminal app, the window where you type commands, in your project folder and paste the line below. The --skill part fetches this one skill on its own rather than all thirteen.
+2. Ask for a section rather than a whole site, for example: design and build a hero section for a badminton club, images first. One section at a time keeps the drawing large enough to read and the code small enough to check.
+3. Look at the picture it generates before you accept the code. If the picture is wrong, the code will faithfully reproduce something wrong, and it is far cheaper to reject a drawing than to unpick a built page.
+
+**Curator's note:** The image-first idea is the good part and it survives being borrowed: ask any assistant to show you the layout before it builds. The name misleads, so read the blurb twice.
+
+---
+
+## 33. Awesome DESIGN.md — Hands your agent a written design system to follow
+
+- **Category:** Design
+- **Made by:** VoltAgent
+- **Source:** https://github.com/VoltAgent/awesome-design-md
+- **Page:** https://xaviertingai.com/tools/awesome-design-md.html
+- **You'll need:** Nothing beyond an AI assistant that can read the files in your project
+- **Cost:** Free. It carries the MIT licence, which means you may reuse and change the files, including at work, as long as the notice stays with them
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `git clone https://github.com/VoltAgent/awesome-design-md.git`
+
+**Why use Awesome DESIGN.md?**
+Telling an assistant to make something look considered gets you its idea of considered. Handing it a written specification gets you the specification. This is a collection of seventy-three such specifications, each one a single DESIGN.md file describing how a known site handles colour, type, spacing, depth (its use of shadow and layering) and components, with the do and do-not list spelled out. Each entry also ships two preview pages you can open in a browser to see the palette and the text sizes before choosing. Where this needs care: these describe other people's brands. Reading how Stripe, the payments company, handles spacing in order to learn from it is ordinary practice. Dressing your own product in Stripe's face is not, and the repository says plainly that it claims no ownership of any of these identities.
+
+**When should you use Awesome DESIGN.md?**
+Reach for it at the start of something new, when the look is undecided and a reference beats a blank page, or when an assistant keeps drifting off-style across a project and you want one written source to hold it steady. It is also a decent way to learn: reading three of these files side by side teaches more about design systems than most articles do. Treat a file as a starting point to adapt, not a costume to wear.
+
+**How do you install and use Awesome DESIGN.md?**
+1. Open the Terminal app, the window where you type commands, and paste the line below to download the whole collection into a folder. It uses git, the tool that copies code folders from the internet, which comes with macOS and is free for Windows from git-scm.com. The collection is text and preview pages, so it is small.
+2. Browse the folders and open a preview.html in your browser to see a system before choosing it. Copy the DESIGN.md you want into the top level of your own project.
+3. Tell your assistant to follow it, for example: read DESIGN.md and rebuild the settings page to match it. Then edit that file as your own decisions accumulate, because from here it should describe your product rather than someone else's.
+
+**Curator's note:** The most useful thing here is the shape of the file itself. Adapt one into a DESIGN.md of your own and your assistant stops guessing what your product looks like.
+
+---
+
 ## Categories
 
-- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI
+- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix

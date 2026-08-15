@@ -34,6 +34,11 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Autoresearch](https://xaviertingai.com/tools/autoresearch.html): Lets an AI agent run model experiments overnight
 - [Agent Skills](https://xaviertingai.com/tools/agent-skills.html): Makes an AI follow a repeatable build process
 - [Higgsfield CLI](https://xaviertingai.com/tools/higgsfield-cli.html): Makes images and videos from a line you type
+- [Taste Skill](https://xaviertingai.com/tools/taste-skill.html): Gives an AI assistant a point of view about design
+- [21st MCP](https://xaviertingai.com/tools/21st-mcp.html): Builds an interface component from one sentence
+- [Web Design Guidelines](https://xaviertingai.com/tools/web-design-guidelines.html): Reviews your interface against a published list of rules
+- [Image to Code](https://xaviertingai.com/tools/image-to-code.html): Draws the page as a picture before writing any code
+- [Awesome DESIGN.md](https://xaviertingai.com/tools/awesome-design-md.html): Hands your agent a written design system to follow
 
 ## Course
 
