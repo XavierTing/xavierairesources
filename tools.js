@@ -834,4 +834,4 @@ const TOOLS = [
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "15.08.2026";
+const LOG_UPDATED = "16.08.2026";
