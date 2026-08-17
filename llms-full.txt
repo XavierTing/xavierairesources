@@ -6,8 +6,8 @@ Curated by Xavier Ting, Vice President at OCBC.
 AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.
 
 - Site: https://xaviertingai.com/
-- Course: https://xaviertingai.com/ai-101.html. Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, about 75 minutes)
-- Curator: https://xaviertingai.com/curator.html. Who Xavier Ting is and why this site exists
+- Course: https://xaviertingai.com/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (63 terms, about 75 minutes)
+- Curator: https://xaviertingai.com/curator.html — who Xavier Ting is and why this site exists
 - LinkedIn: https://www.linkedin.com/in/xavierting/
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
@@ -18,7 +18,7 @@ Entries are independently curated and carry their own usage status. Nobody paid 
 
 ---
 
-## 01. Impeccable: Stops AI building the same generic website
+## 01. Impeccable — Stops AI building the same generic website
 
 - **Category:** Design
 - **Made by:** pbakaus
@@ -43,7 +43,7 @@ Any time you are building a web page or an app with an AI assistant. Check it be
 
 ---
 
-## 02. Superpowers: Makes Claude Code plan before it builds
+## 02. Superpowers — Makes Claude Code plan before it builds
 
 - **Category:** Workflow
 - **Made by:** obra
@@ -68,7 +68,7 @@ Anything bigger than a quick fix. It is most useful on projects you are starting
 
 ---
 
-## 03. Spec-Kit: Write down what you want, so the AI stops drifting
+## 03. Spec-Kit — Write down what you want, so the AI stops drifting
 
 - **Category:** Workflow
 - **Made by:** github
@@ -93,7 +93,7 @@ Projects that run across several sessions, work you share with other people, and
 
 ---
 
-## 04. Chrome DevTools MCP: Lets your AI assistant see the page it built
+## 04. Chrome DevTools MCP — Lets your AI assistant see the page it built
 
 - **Category:** Connections
 - **Made by:** ChromeDevTools
@@ -118,7 +118,7 @@ Fixing anything that shows up in a browser, making a slow page faster, and any t
 
 ---
 
-## 05. Context7: Gives the AI today's documentation, not last year's
+## 05. Context7 — Gives the AI today's documentation, not last year's
 
 - **Category:** Connections
 - **Made by:** upstash
@@ -143,7 +143,7 @@ Working with software that changes quickly (web-building kits such as Next.js an
 
 ---
 
-## 06. Repomix: Packs your whole project into one file you can paste
+## 06. Repomix — Packs your whole project into one file you can paste
 
 - **Category:** Coding
 - **Made by:** yamadashy
@@ -168,7 +168,7 @@ Getting a second opinion from a different AI, having code reviewed by a model th
 
 ---
 
-## 07. Agent-Reach: Gets your AI past sites that block it
+## 07. Agent-Reach — Gets your AI past sites that block it
 
 - **Category:** Connections
 - **Made by:** Panniantong
@@ -193,7 +193,7 @@ Research where the assistant genuinely needs to read tweets, Reddit discussions 
 
 ---
 
-## 08. LLM Wiki: Notes your AI writes and keeps up to date for you
+## 08. LLM Wiki — Notes your AI writes and keeps up to date for you
 
 - **Category:** Knowledge
 - **Made by:** karpathy
@@ -217,7 +217,7 @@ Building a second brain out of notes, articles and bookmarks: a personal knowled
 
 ---
 
-## 09. Humanizer: Takes the AI sound out of your writing
+## 09. Humanizer — Takes the AI sound out of your writing
 
 - **Category:** Writing
 - **Made by:** blader
@@ -242,7 +242,7 @@ The last thing you do before anything goes public: posts, documentation, emails,
 
 ---
 
-## 10. Figma MCP: Lets AI read your real design file, not a screenshot
+## 10. Figma MCP — Lets AI read your real design file, not a screenshot
 
 - **Category:** Design
 - **Made by:** Figma
@@ -267,7 +267,7 @@ Any build that starts from a design file, and any time the live product has drif
 
 ---
 
-## 11. Obsidian Skills: Teaches your AI to work inside your Obsidian notes
+## 11. Obsidian Skills — Teaches your AI to work inside your Obsidian notes
 
 - **Category:** Knowledge
 - **Made by:** kepano
@@ -292,7 +292,7 @@ Any time you want an assistant working inside your notes rather than in a chat w
 
 ---
 
-## 12. Ralph Loop: Runs Claude on the same task until it is done
+## 12. Ralph Loop — Runs Claude on the same task until it is done
 
 - **Category:** Workflow
 - **Made by:** Anthropic
@@ -317,7 +317,7 @@ Work where you can say plainly what finished looks like and something can check 
 
 ---
 
-## 13. Watch: Lets Claude actually watch a video and answer
+## 13. Watch — Lets Claude actually watch a video and answer
 
 - **Category:** Connections
 - **Made by:** Mathias Schusterman
@@ -342,7 +342,7 @@ Any time the answer sits inside a video rather than a page: a product demo you w
 
 ---
 
-## 14. Codex for Claude Code: Brings in OpenAI's Codex to review code or take on jobs
+## 14. Codex for Claude Code — Brings in OpenAI's Codex to review code or take on jobs
 
 - **Category:** Coding
 - **Made by:** OpenAI
@@ -367,7 +367,7 @@ Straight after a change big enough that you would want someone else to look at i
 
 ---
 
-## 15. Apple Design: Teaches your AI what makes Apple interfaces feel right
+## 15. Apple Design — Teaches your AI what makes Apple interfaces feel right
 
 - **Category:** Design
 - **Made by:** Emil Kowalski
@@ -392,7 +392,7 @@ Anything a person touches and drags: panels that slide up from the bottom, side 
 
 ---
 
-## 16. Notchi: Shows what Claude Code is doing, up in the notch
+## 16. Notchi — Shows what Claude Code is doing, up in the notch
 
 - **Category:** Workflow
 - **Made by:** sk-ruban
@@ -416,7 +416,7 @@ Any time you set the assistant on something that will take minutes rather than s
 
 ---
 
-## 17. OmniRoute: Keeps you working when your AI quota runs out
+## 17. OmniRoute — Keeps you working when your AI quota runs out
 
 - **Category:** Coding
 - **Made by:** diegosouzapw
@@ -441,7 +441,7 @@ Long sessions where stopping is expensive, and any time you want to try a cheape
 
 ---
 
-## 18. Claude Mem: Lets your assistant remember earlier sessions
+## 18. Claude Mem — Lets your assistant remember earlier sessions
 
 - **Category:** Knowledge
 - **Made by:** thedotmack
@@ -466,7 +466,7 @@ Projects you return to across days or weeks, and any work where re-explaining th
 
 ---
 
-## 19. Headroom: Shrinks what gets sent to the model, not the answers
+## 19. Headroom — Shrinks what gets sent to the model, not the answers
 
 - **Category:** Coding
 - **Made by:** headroomlabs-ai
@@ -491,7 +491,7 @@ Work that pushes a lot of material through the assistant: reading logs, handling
 
 ---
 
-## 20. Claude Code Setup: Reads your project and suggests what to set up
+## 20. Claude Code Setup — Reads your project and suggests what to set up
 
 - **Category:** Workflow
 - **Made by:** Anthropic
@@ -516,7 +516,7 @@ Setting up a project you have just started working in, or returning to one where
 
 ---
 
-## 21. Task Observer: Watches how you work and improves your skills
+## 21. Task Observer — Watches how you work and improves your skills
 
 - **Category:** Workflow
 - **Made by:** rebelytics
@@ -540,7 +540,7 @@ Once you have built a few skills and keep correcting the same things. The author
 
 ---
 
-## 22. Playwright CLI: Lets your AI drive a browser without filling up its memory
+## 22. Playwright CLI — Lets your AI drive a browser without filling up its memory
 
 - **Category:** Connections
 - **Made by:** Microsoft
@@ -565,7 +565,7 @@ Writing or repairing tests that click through a website, checking a sign-up or c
 
 ---
 
-## 23. Supabase Plugin: Lets your AI work directly with your Supabase database
+## 23. Supabase Plugin — Lets your AI work directly with your Supabase database
 
 - **Category:** Connections
 - **Made by:** Supabase
@@ -590,7 +590,7 @@ Any project already using Supabase. It earns its place fastest on database struc
 
 ---
 
-## 24. Strix: Sets an AI loose on your own app to find security holes
+## 24. Strix — Sets an AI loose on your own app to find security holes
 
 - **Category:** Coding
 - **Made by:** Strix
@@ -615,7 +615,7 @@ Before putting something on the internet, and after any change to the parts that
 
 ---
 
-## 25. Skill UI: Writes down your product's look so Claude can match it
+## 25. Skill UI — Writes down your product's look so Claude can match it
 
 - **Category:** Design
 - **Made by:** amaancoderx
@@ -640,7 +640,7 @@ Starting a new screen that has to sit alongside an existing product, or handing 
 
 ---
 
-## 26. Autoresearch: Lets an AI agent run model experiments overnight
+## 26. Autoresearch — Lets an AI agent run model experiments overnight
 
 - **Category:** Workflow
 - **Made by:** karpathy
@@ -666,7 +666,7 @@ Exploring autonomous AI research, teaching experiment design, or testing whether
 
 ---
 
-## 27. Agent Skills: Makes an AI follow a repeatable build process
+## 27. Agent Skills — Makes an AI follow a repeatable build process
 
 - **Category:** Workflow
 - **Made by:** addyosmani
@@ -692,7 +692,7 @@ Use it when an AI is changing a software project large enough to need a repeatab
 
 ---
 
-## 28. Higgsfield CLI: Makes images and videos from a line you type
+## 28. Higgsfield CLI — Makes images and videos from a line you type
 
 - **Category:** Design
 - **Made by:** Higgsfield
@@ -718,7 +718,7 @@ Reach for it when the artwork belongs to work you are already doing in a folder:
 
 ---
 
-## 29. Taste Skill: Gives an AI assistant a point of view about design
+## 29. Taste Skill — Gives an AI assistant a point of view about design
 
 - **Category:** Design
 - **Made by:** Leon Lin and blueemi
@@ -744,7 +744,7 @@ Reach for it when you are building an interface with an assistant and the result
 
 ---
 
-## 30. 21st MCP: Builds an interface component from one sentence
+## 30. 21st MCP — Builds an interface component from one sentence
 
 - **Category:** Design
 - **Made by:** 21st.dev
@@ -770,7 +770,7 @@ Reach for it when you need a standard interface piece quickly and would rather s
 
 ---
 
-## 31. Web Design Guidelines: Reviews your interface against a published list of rules
+## 31. Web Design Guidelines — Reviews your interface against a published list of rules
 
 - **Category:** Design
 - **Made by:** Vercel
@@ -796,7 +796,7 @@ Run it when a screen is close to finished and before anyone else sees it, or on 
 
 ---
 
-## 32. Image to Code: Draws the page as a picture before writing any code
+## 32. Image to Code — Draws the page as a picture before writing any code
 
 - **Category:** Design
 - **Made by:** Leon Lin
@@ -822,7 +822,7 @@ Reach for it when the look actually matters and a plain description keeps giving
 
 ---
 
-## 33. Awesome DESIGN.md: Hands your agent a written design system to follow
+## 33. Awesome DESIGN.md — Hands your agent a written design system to follow
 
 - **Category:** Design
 - **Made by:** VoltAgent
