@@ -1,4 +1,4 @@
-# AI Resources — AI for the rest of us
+# AI Resources: AI for the rest of us
 # Curated by Xavier Ting · https://www.linkedin.com/in/xavierting/
 
 User-agent: *

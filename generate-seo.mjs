@@ -250,7 +250,7 @@ function detailPage(t, i) {
   /* No "| AI Resources" suffix: it was the first thing search results
      truncated, og:site_name already names the site on share cards, and
      Google appends the site name to titles by itself. */
-  const title = `${t.name} — ${t.tagline}`;
+  const title = `${t.name}: ${t.tagline}`;
   /* Descriptions get one SERP line. Tagline first, then as much of the blurb
      as fits 155 characters, cut at a word. */
   const rawDesc = t.blurb ? `${t.tagline}. ${t.blurb}` : `${t.tagline}. ${t.why}`;
@@ -373,7 +373,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
   <div class="page">
 
     <header class="site-head">
-      <a class="brand" href="../index.html" aria-label="Xavier Ting — home">
+      <a class="brand" href="../index.html" aria-label="Xavier Ting, home">
         <span class="brand-mark">Xavier Ting</span>
         <span class="brand-sub m">AI for the rest of us</span>
       </a>
@@ -502,7 +502,7 @@ const indexGraph = {
       "@type": "CollectionPage",
       "@id": `${BASE}/#webpage`,
       url: `${BASE}/`,
-      name: `${SITE.name} — ${SITE.tagline}`,
+      name: `${SITE.name}: ${SITE.tagline}`,
       description: SITE.description,
       isPartOf: { "@id": `${BASE}/#website` },
       about: { "@id": `${BASE}/#curator` },
@@ -538,7 +538,7 @@ index = index.replace(
 
 /* Title and descriptions carry the tool count, so the generator owns them —
    hand-editing these is how the count went stale after tools 11 and 12. */
-const indexTitle = `${SITE.name} — ${TOOLS.length} curated AI tools | ${SITE.curator.name}`;
+const indexTitle = `${SITE.name}: ${TOOLS.length} curated AI tools | ${SITE.curator.name}`;
 /* One SERP line: the old version ran 188 characters and lost its tail. */
 const indexDesc =
   `${SITE.tagline}. ${TOOLS.length} AI tools curated by ${SITE.curator.name}: ` +
@@ -604,7 +604,7 @@ console.log(`✓ sitemap.xml — ${urls.length} URLs, per-page lastmod`);
 
 writeFileSync(
   join(ROOT, "robots.txt"),
-  `# ${SITE.name} — ${SITE.tagline}
+  `# ${SITE.name}: ${SITE.tagline}
 # Curated by ${SITE.curator.name} · ${SITE.curator.linkedin}
 
 User-agent: *
@@ -720,8 +720,8 @@ Curated by ${SITE.curator.name}, ${SITE.curator.jobTitle} at ${SITE.curator.work
 ${SITE.curator.summary}
 
 - Site: ${BASE}/
-- Course: ${BASE}/ai-101.html — Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (${TERM_COUNT} terms, about ${COURSE_MINUTES} minutes)
-- Curator: ${BASE}/curator.html — who Xavier Ting is and why this site exists
+- Course: ${BASE}/ai-101.html. Artificial Intelligence 101, a plain-English short course for people new to AI, through to building real digital products with agentic tools (${TERM_COUNT} terms, about ${COURSE_MINUTES} minutes)
+- Curator: ${BASE}/curator.html. Who Xavier Ting is and why this site exists
 - LinkedIn: ${SITE.curator.linkedin}
 - X: ${SITE.curator.x} (${SITE.curator.xHandle})
 - Portfolio: ${SITE.curator.portfolio}
@@ -732,7 +732,7 @@ Entries are independently curated and carry their own usage status. Nobody paid 
 
 ---
 
-${TOOLS.map((t) => `## ${t.num}. ${t.name} — ${t.tagline}
+${TOOLS.map((t) => `## ${t.num}. ${t.name}: ${t.tagline}
 
 - **Category:** ${t.category}
 - **Made by:** ${t.maker || repoOwner(t.repo) || "see source"}
