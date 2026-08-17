@@ -164,14 +164,14 @@
   var HOLDS = 6; // bubbles the window holds; older ones grey out
   var turns = 0;
   var SCRIPT = [
-    { u: "Group project on urban farming in Singapore. Help me plan it.",
+    { u: "Group project on rooftop farming in cities. Help me plan it.",
       a: "Sure. Three parts: research, a field visit, and the slides. Which one is due first?" },
     { u: "Research first. And we dropped the survey, the team voted it out.",
-      a: "Noted, no survey. Two local case studies instead: Citiponics in Ang Mo Kio and Edible Garden City." },
+      a: "Noted, no survey. Two case studies instead: a rooftop farm on a car park deck and one on a supermarket roof." },
     { u: "Write the intro paragraph.",
-      a: "Singapore imports most of what it eats. Urban farms are one answer, and two of them sit inside ordinary HDB estates." },
+      a: "Dense cities import most of what they eat. Rooftop farms are one answer, and some of them sit on ordinary housing blocks." },
     { u: "Now the field visit plan.",
-      a: "Book Citiponics for a weekday morning. Prepare five questions, bring a phone for photos, and put one person on notes so nothing gets lost." },
+      a: "Book the car park farm for a weekday morning. Prepare five questions, bring a phone for photos, and put one person on notes so nothing gets lost." },
     { u: "Tidy up the timeline.",
       a: "A clear timeline helps a lot. Set milestones, check in with each other regularly, and leave buffer time before the deadline." },
     { u: "What is left to do?",
