@@ -22,3 +22,11 @@ xaviers-ai-101/
 
 # Wrangler local dev state
 .wrangler/
+
+# Photography masters. 26MB PNGs straight out of the edit, kept beside the
+# site for convenience. Only the derived crops in assets/ ever ship.
+Xavier Profile Picture*/
+
+# The research artifact source: 200KB of embedded photography, published
+# to claude.ai rather than served from here.
+.landing-brief.html

@@ -48,3 +48,8 @@ assets/101/diagram-prompts.json
 
 # Local-only source of the course page (also gitignored)
 xaviers-ai-101
+
+# Photography masters live in the repo root for convenience but are not web
+# assets. Each is ~26MB, over Cloudflare's 25MiB per-file ceiling, so a deploy
+# that tried to upload them would fail outright.
+Xavier Profile Picture*
