@@ -83,6 +83,12 @@ figure .dg-cap, .note-card { max-width: calc(var(--measure) + 44px); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+  /* A label is one short line of caps, so it takes a tight leading rather
+     than the body's 1.7. Inherited leading padded roughly 6px of dead air
+     above the caps, which is invisible in the box model and obvious on the
+     page: every rule with a label under it read 26px above and 32px below.
+     The air scale measures to the rule; this makes the caps agree with it. */
+  line-height: 1.15;
   margin: 0 0 8px;
 }
 
