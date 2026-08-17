@@ -162,7 +162,11 @@ User-directed (2026-08-12): every page carries both themes, and **Daylight is th
 
 **One container, every surface.** All three tabs and the tool pages sit in `.page` at `--page-w` (clamp 1180–1440px, 90vw between), so their left and right edges are identical and nothing shifts as you cross tabs. Nothing sets a narrower inner column; prose is held by its own measure caps instead (`--measure` 66ch on the course, 34em lede / 820px sections on detail pages). Past 1440 the container stops growing and the card grid adds a column rather than widening cards.
 
-Index: hero (headline → sub → byline → counts) → filter row on a hairline (category tabs left, count right) → card grid (4 cols ≥1600px, 3 by default, 2 at ≤1020px, 1 at ≤640px; 20px gap, 14px at ≤640px) → colophon. The by-stage infographic was removed 2026-08-12. Detail (tool pages and the curator): breadcrumb/strip → two-column header (title + lede left, 300px meta panel right; stacks at ≤1020px) → full-width sections (110px label column, stacks at ≤640px) → colophon. Course: sticky chapter bar → chapter plate → entries, which split into prose + analogy/diagram rail (7fr/5fr) at ≥1240px and stack below. 8px rhythm; generous vertical clamp spacing.
+Index: hero (headline → sub → byline → counts) → filter row on a hairline (category tabs left, count right) → card grid (4 cols ≥1600px, 3 by default, 2 at ≤1020px, 1 at ≤640px; 20px gap, 14px at ≤640px) → colophon. The by-stage infographic was removed 2026-08-12. Detail (tool pages and the curator): breadcrumb/strip → two-column header (title + lede left, 300px meta panel right; stacks at ≤1020px) → full-width sections (110px label column, stacks at ≤640px) → colophon. Course: sticky chapter bar → chapter plate → entries, which split into prose + diagram rail (7fr/5fr) at ≥1240px and stack below. 8px rhythm; generous vertical clamp spacing.
+
+### Named Rules
+
+**The Even-Rule Rule.** Every 1px hairline on the site takes the same measure of air above it as below it, so a rule reads as one gap with a line through the middle rather than as two gaps of different sizes. The air is never a literal: it comes from the `--rule-air-*` scale in `styles.css`, which both stylesheets read from. The step says how loud the break is, never where the rule appears: `row` 10px (dense list rows) · `list` 16px (table cells, panel heads, tool rows) · `item` 20px (rows a person clicks) · `tight` 26px (a rule inside one block) · `block` 32px (one block from the next) · `section` clamp(36–56px) (a section or chapter break) · `page` clamp(44–72px) (a page-level break). Where two rules sit back to back with nothing between them, the band between them is one step, not two stacked: the second rule subtracts what the first already claimed (see `.onsite`). Adding a rule means picking a step, not typing a number.
 
 ## Elevation & Depth
 
@@ -212,6 +216,11 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 
 ### Curator's Note
 - Blue-less: ink mono italic behind a 2px ember left rule with an ember ✎ — the one place ember touches prose.
+
+### Gold-Barred Card (course)
+- Glass fill, 1px hairline, 10px radius, 22px padding, and a 3px gold bar drawn inset across the top edge, clipped by `overflow: hidden` so it meets the rounded corners. The course's own "this block matters" device — deliberately a top bar, not the stock left-stripe callout.
+- It carried the per-entry analogy blocks until 2026-08-17. Those were removed and the card passed to `figure .dg-cap`, the diagram caption, which is now the only copy in the entry rail. The one other holder is `.note-card`, the tool directory's not-paid-placement disclosure.
+- Carded blocks run `calc(var(--measure) + 44px)` wide so the 22px of padding on each side leaves the same reading measure as bare prose.
 
 ### Aurora (signature)
 - Fixed, `z-index:-1`, three blurred radial blobs on slow alternate drift loops. Static under `prefers-reduced-motion`; hidden in print.

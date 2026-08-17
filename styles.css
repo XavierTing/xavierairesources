@@ -66,6 +66,25 @@
      density is the wrong trade */
   --nav-size: 1rem;
 
+  /* Divider air. Every 1px rule on the site takes the same measure above it
+     as below it, so a rule reads as one gap with a line through the middle
+     rather than as two gaps of different sizes. The step says how loud the
+     break is; it never says where the rule appears. Both stylesheets read
+     from this scale, so a rhythm change is one line here. */
+  --rule-air-row: 10px;                       /* rows in a dense list */
+  --rule-air-list: 16px;                      /* table cells, panel heads, tool rows */
+  --rule-air-item: 20px;                      /* rows a person clicks */
+  --rule-air-tight: 26px;                     /* a rule inside one block */
+  --rule-air-block: 32px;                     /* one block from the next */
+  --rule-air-section: clamp(36px, 6vw, 56px); /* a section or chapter break */
+  --rule-air-page: clamp(44px, 7vw, 72px);    /* a page-level break */
+  /* A rule is often followed by a small mono label heading the block below
+     it. The label is what the rule's air below is measured to, so every one
+     of them sits the same distance off its own content: without this the
+     four label-led rules on the site drift apart (they ran 6, 10, 10 and
+     16px) and the blocks under them start at four different heights. */
+  --label-gap: 10px;
+
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -240,7 +259,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   align-items: baseline;
   justify-content: space-between;
   gap: 14px 28px;
-  padding: 26px 0 18px;
+  padding: 26px 0 var(--rule-air-block);
   border-bottom: 1px solid var(--line);
 }
 .brand {
@@ -319,7 +338,7 @@ html:not(.js) .theme-toggle { display: none; }
 /* Tight to the strip above it: the headline is the first thing on the page,
    so it sits close to the masthead rather than floating in open space. */
 .hero {
-  padding-block: clamp(24px, 4.5vh, 48px) clamp(40px, 6vh, 64px);
+  padding-block: var(--rule-air-block) clamp(40px, 6vh, 64px);
 }
 
 .headline {
@@ -467,7 +486,9 @@ html:not(.js) .theme-toggle { display: none; }
   background: transparent;
   border: none;
   position: relative;
-  padding: 10px 14px 14px;
+  /* the bottom step is the air over the tabs-row rule, so it reads off the
+     divider scale rather than the button's own padding */
+  padding: 10px 14px var(--rule-air-list);
   font-family: var(--font-mono);
   font-size: var(--nav-size);
   letter-spacing: 0.08em;
@@ -499,7 +520,7 @@ html:not(.js) .theme-toggle { display: none; }
 .tab-count {
   color: var(--muted);
   font-size: var(--nav-size);
-  padding-bottom: 12px;
+  padding-bottom: var(--rule-air-list);
 }
 
 
@@ -509,7 +530,8 @@ html:not(.js) .theme-toggle { display: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-block: 36px 8px;
+  /* the colophon rule below carries its own air, so the grid adds none */
+  padding-block: var(--rule-air-list) 0;
 }
 
 .card {
@@ -656,11 +678,13 @@ html:not(.js) .theme-toggle { display: none; }
   grid-template-columns: minmax(0, 1fr) 300px;
   grid-template-rows: auto auto;
   column-gap: clamp(28px, 3.5vw, 56px);
-  padding-block: clamp(24px, 4vh, 44px) 24px;
+  /* nothing at the bottom: .sections already closes on its last rule and
+     that rule's own air, so a second step here would stack on top of it */
+  padding-block: var(--rule-air-block) 0;
 }
 .detail-main { grid-column: 1; grid-row: 1; }
 .meta { grid-column: 2; grid-row: 1 / span 2; }
-.detail .sections { grid-column: 1; grid-row: 2; margin-top: 34px; }
+.detail .sections { grid-column: 1; grid-row: 2; margin-top: var(--rule-air-block); }
 
 .detail-art {
   display: block;
@@ -718,7 +742,9 @@ html:not(.js) .theme-toggle { display: none; }
 /* sections */
 .sections {
   border-top: 1px solid var(--line);
-  padding-block: 8px 24px;
+  /* no padding of its own at the top: the first .section's own step is the
+     air under this rule, and it has to match the margin above it */
+  padding-block: 0 var(--rule-air-block);
   /* was 72ch (~605px). The left column is the constraint below ~1440px, so
      this only binds on wider screens and keeps the measure sane there. */
   max-width: 820px;
@@ -728,7 +754,7 @@ html:not(.js) .theme-toggle { display: none; }
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 0 28px;
-  padding: 26px 0;
+  padding: var(--rule-air-block) 0;
   border-bottom: 1px solid var(--line);
 }
 .section h2 {
@@ -852,7 +878,10 @@ html:not(.js) .theme-toggle { display: none; }
   justify-content: space-between;
   gap: 16px;
   border-top: 1px solid var(--line);
-  padding-block: 26px 8px;
+  /* the back link above it carries no bottom margin of its own, so the rule
+     needs the matching step on this side as a margin */
+  margin-top: var(--rule-air-block);
+  padding-block: var(--rule-air-block) 0;
 }
 .pager a {
   font-family: var(--font-mono);
@@ -869,9 +898,9 @@ html:not(.js) .theme-toggle { display: none; }
    pushed to the far right. The who-block keeps a reading measure of its
    own so the wide left column does not stretch the sentence. */
 .colophon {
-  margin-top: clamp(64px, 10vh, 112px);
+  margin-top: var(--rule-air-page);
   border-top: 1px solid var(--line);
-  padding: 36px 0 56px;
+  padding: var(--rule-air-page) 0 56px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 32px 48px;
@@ -886,7 +915,7 @@ html:not(.js) .theme-toggle { display: none; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 10px;
+  margin-bottom: var(--label-gap);
 }
 
 .colophon p { font-size: 1rem; color: var(--body-ink); }
@@ -936,7 +965,9 @@ html:not(.js) .theme-toggle { display: none; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   /* one column: head, then meta, then sections, so the explicit placement
      from the two-column layout has to be released */
-  .detail { grid-template-columns: 1fr; row-gap: 36px; }
+  /* the row gap is now the air above the .sections rule, so it reads off
+     the divider scale and matches the step the first section puts below it */
+  .detail { grid-template-columns: 1fr; row-gap: var(--rule-air-block); }
   .detail-main,
   .meta,
   .detail .sections { grid-column: 1; grid-row: auto; }
@@ -948,7 +979,7 @@ html:not(.js) .theme-toggle { display: none; }
 
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; gap: 14px; }
-  .hero { padding-block: 48px 36px; }
+  .hero { padding-block: var(--rule-air-block) 36px; }
   /* the role wraps to 2–3 lines here, so top-align the portrait beside it */
   .hero-byline { align-items: flex-start; }
   .section { grid-template-columns: 1fr; gap: 6px 0; }
@@ -1011,9 +1042,13 @@ html:not(.js) .theme-toggle { display: none; }
 
 /* "On this site": a titled section after the bio, same register as the
    stack map's heading block */
+/* The block above this one ends on its own rule, and that rule has already
+   claimed a block step of air underneath it. This rule only adds the rest,
+   so the band between the two lines comes to one page step, not two gaps
+   stacked. */
 .onsite {
-  margin-top: clamp(48px, 8vh, 80px);
-  padding-top: clamp(36px, 5vh, 56px);
+  margin-top: calc(var(--rule-air-page) - var(--rule-air-block));
+  padding-top: var(--rule-air-page);
   border-top: 1px solid var(--line);
 }
 .onsite h2 {

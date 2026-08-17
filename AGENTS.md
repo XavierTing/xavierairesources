@@ -44,8 +44,10 @@ the default** (on `:root`, what crawlers and no-JS visitors get): linen
 localStorage and swaps the art directories (`assets/cards/` and `assets/101/`
 against their `light/` subfolders). Type: Montserrat display, Poppins body,
 Fragment Mono for labels. One container everywhere:
-`--page-w: clamp(1180px, 90vw, 1440px)`. Every change must be checked in BOTH
-themes at 1440px and 390px wide before it ships.
+`--page-w: clamp(1180px, 90vw, 1440px)`. Every 1px rule takes equal air above
+and below, drawn from the `--rule-air-*` scale in `styles.css` and never from a
+literal (see the Even-Rule Rule in `DESIGN.md`). Every change must be checked in
+BOTH themes at 1440px and 390px wide before it ships.
 
 ## 3. The voice, for all prose on the site
 
@@ -63,9 +65,24 @@ background. That reader is the bar every sentence has to clear.
 - Honesty over polish: name limitations ("GPU-only", "Reviewed · Not tested",
   "not a general-purpose training service"). Nothing on this site is paid
   placement and entries say so plainly.
-- Analogies come from everyday Singapore life: the hawker stall, the condo
-  guardhouse, the clinic's filing cabinet, the badminton group. One analogy
-  per concept, concrete and short.
+- **State the point. Never make the reader decode it.** Say what a thing is
+  before, or instead of, painting a picture of it. Copy that sets up a reveal,
+  poses a riddle or counts the contents without naming them ("Eleven words that
+  explain how AI behaves") fails this rule, however well it reads aloud.
+- The course carries no dedicated analogy block. It had one per entry until
+  2026-08-17, when all 63 were removed and the card they sat in was given to
+  the diagram caption instead. Where a comparison still earns its place inside
+  prose, it must **name what it explains, in one sentence**. "An LLM is the
+  engine and the chat app is the car built around it" works; "Nobody buys an
+  engine. You buy a car." does not, because the reader has to work out the
+  mapping. Draw it from ordinary life that reads the same anywhere: a taxi
+  meter, a whiteboard, a filing cabinet, a doorbell, a spare key. **The
+  audience is international.** No country-specific places, foods, names,
+  institutions, schemes or currency: a reader in Lagos, Lisbon or Lima should
+  never have to look something up to follow an example. Never write a
+  comparison that only repeats the entry's "In one line" in different words.
+- A chapter's `.plate` description and its row in both contents lists must name
+  what is actually in the chapter, not promise what it will do for you.
 - Second person, present tense. "You point them at your repository" rather
   than "users can configure".
 - Before shipping new copy, run a cold-read gate: have a fresh agent role-play
@@ -150,8 +167,7 @@ The course is `ai-101.html`, entirely hand-owned. An entry is an
       <p>…</p></div>
   </div>
   <div class="entry-rail">
-    <div class="analogy"><p>…</p></div>
-    <figure>…optional diagram…</figure>
+    <figure>…diagram; the figcaption renders as the gold-barred card…</figure>
   </div>
   <div class="oneline"><span class="label">In one line</span><p>…</p></div>
 </article>
@@ -212,10 +228,15 @@ curved arrows, hand-lettered caps. Exactly five colours, the Daylight palette:
   files; the script's bulk source directory is stale.
 - Markup: `img.dg-img` with exact width/height, `loading="lazy"
   decoding="async"`, a full descriptive alt, and a `figcaption.dg-cap` that
-  adds one insight rather than repeating the alt.
-- Every entry carries a diagram (58 of 59; dg-markdown parked 2026-08-14). A new entry should
-  ship with one; if art generation is unavailable, park the ready-to-paste
-  figure block in `assets/101/PENDING-DIAGRAMS.md` and its subject in
+  adds one insight rather than repeating the alt. Since 2026-08-17 the
+  figcaption renders as the gold-barred glass card the analogy blocks used to
+  occupy, so it is now the only piece of copy in the rail and carries the
+  emphasis on its own. Write it to be read, not skimmed past.
+- The diagram is what fills the rail, so an entry without one has an empty
+  right column at ≥1240px. 61 of the 63 entries carry a diagram; CLI and
+  Desktop app are still pending art. A new entry should ship with one; if art
+  generation is unavailable, park the ready-to-paste figure block in
+  `assets/101/PENDING-DIAGRAMS.md` and its subject in
   `assets/101/diagram-prompts.json`.
 - The pipeline is generate (Codex `image_gen`, on a ChatGPT subscription) →
   `assets/101/make-diagram.py` (trim, 1500px, snap to the five) →
