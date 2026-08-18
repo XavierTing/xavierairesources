@@ -879,6 +879,102 @@ const TOOLS = [
     commandTarget: "terminal",
     status: "Reviewed · Not tested",
     note: "The licence is the thing to check first, not the code. Remotion is free for one to three people and priced per seat above that, and that decision is much cheaper before a project depends on it."
+  },
+  {
+    num: "36",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "Claude Plugin Directory",
+    category: "Workflow",
+    maker: "Anthropic",
+    tagline: "The official list of what you can bolt onto Claude Code",
+    blurb: "Anthropic's own directory of Claude Code plugins, close to three hundred of them. Instead of hunting through other people's recommendations, you search one maintained list, read what each does, and install it with a single line. Several entries in this log live in here.",
+    repo: "https://github.com/anthropics/claude-plugins-official",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code",
+    cost: "Free. The directory itself costs nothing; individual plugins listed in it may have their own costs.",
+    why: "Finding a plugin usually means trusting a list some stranger assembled. This one is Anthropic's, and they manage what goes in it, which is the whole point: it is not a free-for-all. It currently holds close to three hundred plugins covering database access, code review, messaging, browser control and a great deal else, and each installs with one command. Several tools in this log are in here, including Superpowers, Ralph Loop and Claude Code Setup.",
+    when: "When you want to add something to Claude Code and would rather start from a maintained list than a search engine. Worth a slow browse if you are new and do not yet know what is even possible.",
+    how: [
+      "Browse the directory on GitHub, or ask Claude Code to search it for you.",
+      "Note the plugin name you want. Each one sits under plugins or external_plugins.",
+      "Install it with claude plugin install, naming the plugin and then claude-plugins-official."
+    ],
+    command: null,
+    commandTarget: null,
+    note: "Nothing to install. It is the shelf, not the thing on it."
+  },
+  {
+    num: "37",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "Telegram",
+    category: "Connections",
+    maker: "Anthropic",
+    tagline: "Lets you message Claude Code from Telegram",
+    blurb: "Pair a Telegram bot with your session and you can hand Claude Code work from your phone. It answers in the chat, and it only listens to people you have put on a list, so a message from a stranger goes nowhere.",
+    repo: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/telegram",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code, a Telegram account, and Bun (free, from bun.sh)",
+    cost: "Free. Creating a Telegram bot costs nothing, and Claude Code runs on its own plan.",
+    why: "Claude Code runs in a terminal on one machine, so ordinarily you have to be sitting at that machine. This connects a Telegram bot to your session. You message the bot, the message reaches Claude Code, and the answer comes back into the chat. It can reply, react and edit messages the way any other participant would. Access control comes built in: you pair the bot to yourself first, and there is a list of who is allowed to talk to it.",
+    when: "Starting something off, or checking on it, while away from your desk. Also good for long jobs where you would rather the result came to you than sit watching a terminal for it.",
+    how: [
+      "Message BotFather on Telegram and send /newbot. It asks for a name and a handle, then hands you a token.",
+      "Install the plugin, then run /telegram:configure with that token.",
+      "Restart your session with the channel flag the setup describes. It needs Bun, a JavaScript runtime, installed first."
+    ],
+    command: "claude plugin install telegram@claude-plugins-official",
+    commandTarget: "terminal",
+    note: "The allowlist is the part worth reading about. A bot anyone can message is a bot anyone can spend your tokens with."
+  },
+  {
+    num: "38",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "Discord",
+    category: "Connections",
+    maker: "Anthropic",
+    tagline: "Lets you message Claude Code from Discord",
+    blurb: "The same bridge as the Telegram one, for Discord instead. Make a bot, invite it to a server you are already in, and you can pass Claude Code work from a channel or a direct message, with a list controlling who may ask.",
+    repo: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/discord",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code, a Discord account with a server you can add a bot to, and Bun (free, from bun.sh)",
+    cost: "Free. Creating a Discord bot costs nothing, and Claude Code runs on its own plan.",
+    why: "Same idea as the Telegram bridge, on Discord instead. You create a bot in Discord's developer portal, invite it to a server you are already a member of, and it forwards what you send through to your Claude Code session, replying and reacting in the channel. One setting catches people out: the bot needs Message Content Intent switched on, or every message reaches it with the text stripped out and nothing appears to work.",
+    when: "Teams already living in Discord, and anyone who would rather reach their assistant from a chat window than a terminal. Discord will not let you message a bot unless you share a server with it, so there is a server step even for private use.",
+    how: [
+      "Create an application and bot in Discord's developer portal, and switch on Message Content Intent.",
+      "Reset the token to generate one, copy it, then invite the bot to a server you are in.",
+      "Install the plugin and configure it with that token. It needs Bun, a JavaScript runtime, installed first."
+    ],
+    command: "claude plugin install discord@claude-plugins-official",
+    commandTarget: "terminal",
+    note: "Message Content Intent is the one that wastes an evening. Without it the bot sees your messages as empty."
+  },
+  {
+    num: "39",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "Linear",
+    category: "Connections",
+    maker: "Linear",
+    tagline: "Lets your assistant work with your Linear issues",
+    blurb: "Linear is the issue tracker a lot of software teams run on. This connects your assistant to your workspace, so it can open issues, move them along, update a project and search the lot without you leaving what you were doing.",
+    repo: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code and a Linear account",
+    cost: "The plugin costs nothing. What you pay depends on your existing Linear plan rather than on this.",
+    why: "Work that falls out of a coding session usually needs writing down somewhere, and that somewhere is normally a different window you have to go and find. This wires your assistant straight into Linear, where many software teams track their issues. It can create issues, change their status, manage projects and search across workspaces. The plugin itself is thin, a small piece of configuration pointing Claude Code at Linear's own server, which is where the work actually happens.",
+    when: "Teams already on Linear. It earns its place right at the end of a working session, when there are three follow-ups you would otherwise mean to write up later and then not.",
+    how: [
+      "Install the plugin from the official marketplace.",
+      "Sign in to Linear when it asks. The plugin holds nothing itself, it points at Linear's own server.",
+      "Ask in plain words, along the lines of opening an issue for the thing you just found."
+    ],
+    command: "claude plugin install linear@claude-plugins-official",
+    commandTarget: "terminal",
+    note: "Made by Linear rather than by Anthropic, though it is listed in the official directory."
   }
 ];
 

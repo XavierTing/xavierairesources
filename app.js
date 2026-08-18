@@ -118,6 +118,9 @@
     art.alt = "";
     art.width = 512; art.height = 512;
     art.loading = "lazy"; art.decoding = "async";
+    /* a new entry can land before its hand-drawn monoline does; drop the
+       element rather than leave a broken-image icon on the card */
+    art.onerror = function () { this.remove(); };
     card.appendChild(art);
 
     var top = el("div", "card-top");

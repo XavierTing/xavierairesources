@@ -480,7 +480,10 @@ let index = read("index.html");
 
 const cards = TOOLS.map((t) => [
   `          <a class="card" href="tools/${slug(t.name)}.html" data-category="${escAttr(t.category)}">`,
-  `            <img class="card-art" src="assets/cards/light/${slug(t.name)}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">`,
+  /* onerror: art is drawn by hand and a new entry can land before its
+     monoline does. Without this the card shows a broken-image icon, which
+     reads as a bug rather than as art still to come. */
+  `            <img class="card-art" src="assets/cards/light/${slug(t.name)}.webp" alt="" width="512" height="512" loading="lazy" decoding="async" onerror="this.remove()">`,
   `            <span class="card-top"><span class="card-cat m">${esc(t.category)}</span></span>`,
   `            <h2 class="card-name">${esc(t.name)}</h2>`,
   `            <p class="card-tag">${esc(t.blurb || t.tagline)}</p>`,

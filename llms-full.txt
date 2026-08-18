@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 35 · Categories: 6 · Last updated: 18.08.2026
+- Tools listed: 39 · Categories: 6 · Last updated: 18.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -900,11 +900,110 @@ Reach for it when a video has to be made more than once: the same explainer with
 
 ---
 
+## 36. Claude Plugin Directory: The official list of what you can bolt onto Claude Code
+
+- **Category:** Workflow
+- **Made by:** Anthropic
+- **Source:** https://github.com/anthropics/claude-plugins-official
+- **Page:** https://xaviertingai.com/tools/claude-plugin-directory.html
+- **You'll need:** Claude Code
+- **Cost:** Free. The directory itself costs nothing; individual plugins listed in it may have their own costs.
+
+**Why use Claude Plugin Directory?**
+Finding a plugin usually means trusting a list some stranger assembled. This one is Anthropic's, and they manage what goes in it, which is the whole point: it is not a free-for-all. It currently holds close to three hundred plugins covering database access, code review, messaging, browser control and a great deal else, and each installs with one command. Several tools in this log are in here, including Superpowers, Ralph Loop and Claude Code Setup.
+
+**When should you use Claude Plugin Directory?**
+When you want to add something to Claude Code and would rather start from a maintained list than a search engine. Worth a slow browse if you are new and do not yet know what is even possible.
+
+**How do you install and use Claude Plugin Directory?**
+1. Browse the directory on GitHub, or ask Claude Code to search it for you.
+2. Note the plugin name you want. Each one sits under plugins or external_plugins.
+3. Install it with claude plugin install, naming the plugin and then claude-plugins-official.
+
+**Curator's note:** Nothing to install. It is the shelf, not the thing on it.
+
+---
+
+## 37. Telegram: Lets you message Claude Code from Telegram
+
+- **Category:** Connections
+- **Made by:** Anthropic
+- **Source:** https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/telegram
+- **Page:** https://xaviertingai.com/tools/telegram.html
+- **You'll need:** Claude Code, a Telegram account, and Bun (free, from bun.sh)
+- **Cost:** Free. Creating a Telegram bot costs nothing, and Claude Code runs on its own plan.
+- **Install / run:** `claude plugin install telegram@claude-plugins-official`
+
+**Why use Telegram?**
+Claude Code runs in a terminal on one machine, so ordinarily you have to be sitting at that machine. This connects a Telegram bot to your session. You message the bot, the message reaches Claude Code, and the answer comes back into the chat. It can reply, react and edit messages the way any other participant would. Access control comes built in: you pair the bot to yourself first, and there is a list of who is allowed to talk to it.
+
+**When should you use Telegram?**
+Starting something off, or checking on it, while away from your desk. Also good for long jobs where you would rather the result came to you than sit watching a terminal for it.
+
+**How do you install and use Telegram?**
+1. Message BotFather on Telegram and send /newbot. It asks for a name and a handle, then hands you a token.
+2. Install the plugin, then run /telegram:configure with that token.
+3. Restart your session with the channel flag the setup describes. It needs Bun, a JavaScript runtime, installed first.
+
+**Curator's note:** The allowlist is the part worth reading about. A bot anyone can message is a bot anyone can spend your tokens with.
+
+---
+
+## 38. Discord: Lets you message Claude Code from Discord
+
+- **Category:** Connections
+- **Made by:** Anthropic
+- **Source:** https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/discord
+- **Page:** https://xaviertingai.com/tools/discord.html
+- **You'll need:** Claude Code, a Discord account with a server you can add a bot to, and Bun (free, from bun.sh)
+- **Cost:** Free. Creating a Discord bot costs nothing, and Claude Code runs on its own plan.
+- **Install / run:** `claude plugin install discord@claude-plugins-official`
+
+**Why use Discord?**
+Same idea as the Telegram bridge, on Discord instead. You create a bot in Discord's developer portal, invite it to a server you are already a member of, and it forwards what you send through to your Claude Code session, replying and reacting in the channel. One setting catches people out: the bot needs Message Content Intent switched on, or every message reaches it with the text stripped out and nothing appears to work.
+
+**When should you use Discord?**
+Teams already living in Discord, and anyone who would rather reach their assistant from a chat window than a terminal. Discord will not let you message a bot unless you share a server with it, so there is a server step even for private use.
+
+**How do you install and use Discord?**
+1. Create an application and bot in Discord's developer portal, and switch on Message Content Intent.
+2. Reset the token to generate one, copy it, then invite the bot to a server you are in.
+3. Install the plugin and configure it with that token. It needs Bun, a JavaScript runtime, installed first.
+
+**Curator's note:** Message Content Intent is the one that wastes an evening. Without it the bot sees your messages as empty.
+
+---
+
+## 39. Linear: Lets your assistant work with your Linear issues
+
+- **Category:** Connections
+- **Made by:** Linear
+- **Source:** https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear
+- **Page:** https://xaviertingai.com/tools/linear.html
+- **You'll need:** Claude Code and a Linear account
+- **Cost:** The plugin costs nothing. What you pay depends on your existing Linear plan rather than on this.
+- **Install / run:** `claude plugin install linear@claude-plugins-official`
+
+**Why use Linear?**
+Work that falls out of a coding session usually needs writing down somewhere, and that somewhere is normally a different window you have to go and find. This wires your assistant straight into Linear, where many software teams track their issues. It can create issues, change their status, manage projects and search across workspaces. The plugin itself is thin, a small piece of configuration pointing Claude Code at Linear's own server, which is where the work actually happens.
+
+**When should you use Linear?**
+Teams already on Linear. It earns its place right at the end of a working session, when there are three follow-ups you would otherwise mean to write up later and then not.
+
+**How do you install and use Linear?**
+1. Install the plugin from the official marketplace.
+2. Sign in to Linear when it asks. The plugin holds nothing itself, it points at Linear's own server.
+3. Ask in plain words, along the lines of opening an issue for the thing you just found.
+
+**Curator's note:** Made by Linear rather than by Anthropic, though it is listed in the official directory.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills
-- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills
-- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin
+- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
+- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem
 - **Writing**: Humanizer
