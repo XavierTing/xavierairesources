@@ -975,7 +975,33 @@ const TOOLS = [
     command: "claude plugin install linear@claude-plugins-official",
     commandTarget: "terminal",
     note: "Made by Linear rather than by Anthropic, though it is listed in the official directory."
-  }
+  },
+  {
+    num: "40",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "OKF Graph Wiki",
+    category: "Knowledge",
+    maker: "Vivian Balakrishnan",
+    makerType: "person",
+    tagline: "Turns AI-written notes into a graph it can search properly",
+    blurb: "The LLM Wiki idea works until the pile gets big, then the assistant has to skim half of it to answer one question. This adds structure to each page and a small local index, so it can fetch the handful of pages that actually answer you.",
+    repo: "https://gist.github.com/VivianBalakrishnan/83d1ea5f929d0ae51bca7fe25129b0d7",
+    repoLabel: "READ THE SPEC",
+    needs: "An AI coding assistant, Bun (free, from bun.sh), Ollama running on your own machine for the search part",
+    cost: "Free (your AI assistant has its own plan)",
+    why: "Keeping AI-written notes works well until there are a few hundred of them. At that point the assistant either re-reads too much to answer one question, or picks a page that looks right and misses the one that was. This spec answers both by writing the facts down as structured fields at the top of each page, saying who says so and how much to trust it, then compiling all of that into a small database that gets rebuilt from the notes whenever they change. Questions are answered from the index rather than by reading. It is a written specification rather than an app you install, and it ships with finished code you can copy, so treat it as a plan to hand your assistant.",
+    when: "When a set of AI-maintained notes has grown past the point where the assistant can hold it all, and answers have started coming back plausible but wrong. Skip it while the notes are still small: the plain LLM Wiki approach is less work and enough.",
+    how: [
+      "Read the spec first. It is long and it is a build plan, not a product, so decide whether you want this before your assistant starts making files.",
+      "Give your assistant the address below and ask it to set up the folder structure and the schema notes in a fresh folder, so nothing existing is touched.",
+      "Feed it sources to read in, and have it rebuild the index after each batch. Ask questions of the notes and check what it pulled back before you trust the answer."
+    ],
+    command: "Set up an OKF graph wiki in this folder, following https://gist.github.com/VivianBalakrishnan/83d1ea5f929d0ae51bca7fe25129b0d7",
+    commandTarget: "assistant",
+    status: "Reviewed \u00b7 Not tested",
+    note: "The honest version of the second-brain idea: it names what breaks at scale and says what to do about it, rather than promising the pile will sort itself out."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.

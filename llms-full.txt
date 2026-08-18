@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 39 · Categories: 6 · Last updated: 18.08.2026
+- Tools listed: 40 · Categories: 6 · Last updated: 18.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -999,13 +999,39 @@ Teams already on Linear. It earns its place right at the end of a working sessio
 
 ---
 
+## 40. OKF Graph Wiki: Turns AI-written notes into a graph it can search properly
+
+- **Category:** Knowledge
+- **Made by:** Vivian Balakrishnan
+- **Source:** https://gist.github.com/VivianBalakrishnan/83d1ea5f929d0ae51bca7fe25129b0d7
+- **Page:** https://xaviertingai.com/tools/okf-graph-wiki.html
+- **You'll need:** An AI coding assistant, Bun (free, from bun.sh), Ollama running on your own machine for the search part
+- **Cost:** Free (your AI assistant has its own plan)
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `Set up an OKF graph wiki in this folder, following https://gist.github.com/VivianBalakrishnan/83d1ea5f929d0ae51bca7fe25129b0d7`
+
+**Why use OKF Graph Wiki?**
+Keeping AI-written notes works well until there are a few hundred of them. At that point the assistant either re-reads too much to answer one question, or picks a page that looks right and misses the one that was. This spec answers both by writing the facts down as structured fields at the top of each page, saying who says so and how much to trust it, then compiling all of that into a small database that gets rebuilt from the notes whenever they change. Questions are answered from the index rather than by reading. It is a written specification rather than an app you install, and it ships with finished code you can copy, so treat it as a plan to hand your assistant.
+
+**When should you use OKF Graph Wiki?**
+When a set of AI-maintained notes has grown past the point where the assistant can hold it all, and answers have started coming back plausible but wrong. Skip it while the notes are still small: the plain LLM Wiki approach is less work and enough.
+
+**How do you install and use OKF Graph Wiki?**
+1. Read the spec first. It is long and it is a build plan, not a product, so decide whether you want this before your assistant starts making files.
+2. Give your assistant the address below and ask it to set up the folder structure and the schema notes in a fresh folder, so nothing existing is touched.
+3. Feed it sources to read in, and have it rebuild the index after each batch. Ask questions of the notes and check what it pulled back before you trust the answer.
+
+**Curator's note:** The honest version of the second-brain idea: it names what breaks at scale and says what to do about it, rather than promising the pile will sort itself out.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
-- **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem
+- **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki
 - **Writing**: Humanizer
 
 ## Citation
