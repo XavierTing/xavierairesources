@@ -174,7 +174,7 @@ Depth comes from the aurora behind and glass in front. Cards: translucent fill +
 
 ## Shapes
 
-Rounded, in three steps: 16px cards and meta panels, 10px controls and command blocks, 999px category chips. Hairline 1px borders everywhere; the gold tab underline (2px), the note rule (2px), and the portrait ring (2px, 1px in the colophon) are the only heavier strokes. The portrait is the one circle in the system.
+Rounded, in three steps: 16px cards and meta panels, 10px controls and command blocks, 999px category chips. Hairline 1px borders everywhere; the gold tab underline (2px) and the note rule (2px) are the only heavier strokes drawn in CSS. The portrait ring is part of the photo rather than the stylesheet, and it scales with the image, so at the hero's 140px it reads heavier than either. That is deliberate: it is the one circle in the system and the only human element on the page.
 
 ## Components
 
@@ -203,8 +203,10 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 
 ### Portrait (signature)
 
-- One square photo, `assets/portrait.jpg`, circled and ringed in CSS: 68px in the hero byline (2px gold border, 3px padding), 44px in the colophon (1px border, 2px padding). Never cropped in code; swap the file to change the photo.
-- Sits beside a three-line byline: name (Ink, plain text — not a link, since two destinations exist), role, then labelled profile links (gold, mono label step, ↗). Name over role (body 1rem, Body Ink). The role is identity content, not a micro-label, so it stays on the body step — putting it on the label step made it illegible, and giving it its own step muddied the ramp.
+- One square photo, `assets/portrait.jpg`, clipped to a circle by `border-radius`. The gold ring is drawn into the file itself, not applied in CSS, so `.avatar` carries no border and no padding. See `assets/README.md` before swapping the photo: a plain unringed one needs those two properties added back, and doing both gives a double ring.
+- Three sizes: 140px in the hero author card and on the curator page, 44px in the colophon. `.colophon .avatar` and `.curator-portrait` both override the base rule, so changing the hero size touches the hero alone. Never cropped in code; swap the file to change the photo.
+- The hero byline is an author card, not a caption: the same glass panel as `.card` and `.meta`, capped at 37rem so it reads as a card rather than a banner across the full container. It carries the personal brand, which is why the portrait leads at a size the rest of the system does not use.
+- Beside the portrait sits a three-line byline: name (Ink, plain text — not a link, since two destinations exist), role, then labelled profile links (gold, mono label step, ↗). Name over role (body 1rem, Body Ink). The role is identity content, not a micro-label, so it stays on the body step — putting it on the label step made it illegible, and giving it its own step muddied the ramp.
 
 ### Card Illustrations (signature)
 
@@ -230,7 +232,7 @@ Rounded, in three steps: 16px cards and meta panels, 10px controls and command b
 ### Do:
 - **Do** let the aurora carry all atmosphere — content surfaces stay glass-neutral.
 - **Do** regenerate a card illustration rather than hand-edit it; the set is defined by one shared brief (see `assets/cards`).
-- **Do** keep the portrait as the one human element: a plain square photo, circled and gold-ringed in CSS (see `assets/README.md`).
+- **Do** keep the portrait as the one human element: a square photo, clipped to a circle, with the gold ring baked into the file (see `assets/README.md`).
 - **Do** keep hover physics consistent: lift + border-brighten + one soft glow, 0.25s ease-out.
 - **Do** respect `prefers-reduced-motion` everywhere: static aurora, no lifts, instant reveals.
 - **Do** keep every functional text at 0.85rem or above — there is no smaller step.

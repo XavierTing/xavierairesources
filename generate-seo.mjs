@@ -49,11 +49,13 @@ const assetHash = Object.fromEntries(
   ])
 );
 
-/* Rewrites src/href for the files above, in place, at any path depth. Anything
-   we do not hash (favicon.svg, the Google Fonts URL) is left untouched. */
+/* Rewrites src/href for the files above, in place. Handles the three prefixes
+   in use: bare from the root, ../ from tools/, and / from 404.html, which is
+   served at arbitrary depths so it cannot use a relative path. Anything we do
+   not hash (favicon.svg, the Google Fonts URL) is left untouched. */
 const stampAssets = (html) =>
   html.replace(
-    /((?:src|href)=")((?:\.\.\/)?)([A-Za-z0-9._-]+\.(?:css|js))(?:\?v=[a-f0-9]+)?(")/g,
+    /((?:src|href)=")((?:\.\.\/|\/)?)([A-Za-z0-9._-]+\.(?:css|js))(?:\?v=[a-f0-9]+)?(")/g,
     (whole, attr, prefix, file, close) =>
       assetHash[file] ? `${attr}${prefix}${file}?v=${assetHash[file]}${close}` : whole
   );
@@ -604,13 +606,19 @@ index = index.replace(
 writeFileSync(join(ROOT, "index.html"), stampAssets(index));
 console.log("✓ index.html — static cards + JSON-LD refreshed");
 
-/* ai-101.html is hand-written and the generator owns nothing in it except the
-   asset URLs, which it has to stamp for the same reason as everything else: it
-   loads the shared styles.css and theme.js. */
-const page101 = "ai-101.html";
-const stamped101 = stampAssets(read(page101));
-writeFileSync(join(ROOT, page101), stamped101);
-console.log(`✓ ${page101} — asset URLs stamped`);
+/* The hand-written pages. The generator owns nothing in them except the asset
+   URLs, which it has to stamp for the same reason as everything else: they load
+   the shared styles.css and theme.js, and an unstamped URL means a reader keeps
+   a stale copy for up to 25 hours. Anything here that gains a stylesheet or a
+   script later is covered automatically; a new page is not, so add it. */
+const HAND_WRITTEN = ["ai-101.html", "curator.html", "404.html", "tool.html"];
+
+for (const page of HAND_WRITTEN) {
+  const before = read(page);
+  const after = stampAssets(before);
+  if (after !== before) writeFileSync(join(ROOT, page), after);
+}
+console.log(`✓ ${HAND_WRITTEN.join(", ")} — asset URLs stamped`);
 
 console.log(
   "✓ cache busting — " +

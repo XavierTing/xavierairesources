@@ -337,8 +337,34 @@ html:not(.js) .theme-toggle { display: none; }
 
 /* Tight to the strip above it: the headline is the first thing on the page,
    so it sits close to the masthead rather than floating in open space. */
+/* Two columns from 1021px up: copy left, author card right. The hero used to
+   be plain block flow, which left roughly 690px of empty ground beside the
+   prose at 1920 while the card sat underneath it. The card fills that instead.
+   Below 1021 it stacks back, because neither column survives the squeeze. */
 .hero {
   padding-block: var(--rule-air-block) clamp(40px, 6vh, 64px);
+}
+
+/* The headline stays full width above; only the prose and the card share the
+   row. That is what lets their tops line up: aligning against a column that
+   began with a 5rem headline would have put the card level with the H1. */
+.hero-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(32px, 5vw, 72px);
+  margin-top: 26px;
+}
+.hero-copy { flex: 1 1 auto; min-width: 0; }
+/* the 26px now belongs to the row, so the paragraph's own top edge is the
+   thing the card aligns to rather than its margin box */
+.hero-copy > .hero-sub:first-child { margin-top: 0; }
+
+/* Stack below 1200. The container floors at 1180px, so past this point the two
+   columns are splitting a fixed width rather than a growing one, and the copy
+   drops under a comfortable measure while the card holds its own. */
+@media (max-width: 1200px) {
+  .hero-row { flex-direction: column; }
+  .hero-byline { margin-top: var(--rule-air-block); }
 }
 
 .headline {
@@ -367,23 +393,50 @@ html:not(.js) .theme-toggle { display: none; }
 }
 .hero-cta a:hover { text-decoration-color: currentColor; }
 
-/* the curator, present on the page: portrait in a gold ring + role */
+/* The curator, present on the page. This reads as an author card rather than a
+   caption: the portrait carries the personal brand, so it is sized to lead.
+   Same panel treatment as .card and .meta so it belongs to the system.
+
+   The width cap matters. .hero-byline has no intrinsic width and would
+   otherwise run the full 1440px container while the prose above it stops at
+   60-72ch, which reads as a banner rather than a card. */
 .hero-byline {
   display: flex;
+  /* portrait on the trailing edge: the eye lands on the name first and finishes
+     on the face, and the card's left edge stays aligned with the prose above it */
+  flex-direction: row-reverse;
   align-items: center;
-  gap: 16px;
-  margin-top: 30px;
+  gap: 24px;
+  /* sits in the hero's right column, so it needs no top margin of its own and
+     must not grow: the copy takes the slack */
+  flex: 0 0 auto;
+  /* The three profile links measure 275px plus two 12px gaps, so the text
+     column needs 299. 33rem gives it 312, which leaves enough headroom that a
+     different font rendering does not tip them onto a second row. */
+  max-width: 33rem;
+  padding: 22px 26px;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   color: var(--muted);
 }
 .hero-byline a { font-weight: 500; }
+
+/* takes the slack so the portrait is pushed hard against the trailing edge
+   rather than floating in the middle of the card */
+.byline-text { flex: 1 1 auto; min-width: 0; }
+
+/* the card is narrower in the hero's right column than it was full-width, and
+   at 18px the three links spill onto a second row by about ten pixels */
+.hero-byline .byline-links { gap: 12px; }
 
 /* The gold ring is drawn into portrait.jpg itself, so the CSS border and
    padding this rule used to carry are gone. Adding them back would read as a
    double ring. See assets/README.md before swapping the photo. */
 .avatar {
   flex-shrink: 0;
-  width: 68px;
-  height: 68px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--bg-raise);
@@ -399,6 +452,8 @@ html:not(.js) .theme-toggle { display: none; }
   display: block;
   color: var(--body-ink);
   margin-top: 2px;
+  /* two even lines in the card rather than a long one and an orphan */
+  text-wrap: balance;
 }
 
 /* profile links — gold, mono, on the label step */
@@ -1090,8 +1145,15 @@ html:not(.js) .tool-search { display: none; }
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; gap: 14px; }
   .hero { padding-block: var(--rule-air-block) 36px; }
-  /* the role wraps to 2–3 lines here, so top-align the portrait beside it */
-  .hero-byline { align-items: flex-start; }
+  /* the role wraps to 2–3 lines here, so top-align the portrait beside it.
+     140px would leave the text about 134px on a 390px screen, so the portrait
+     steps down and the card tightens. Still well clear of the old 68px. */
+  .hero-byline {
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 20px;
+  }
+  .hero-byline .avatar { width: 104px; height: 104px; }
   .section { grid-template-columns: 1fr; gap: 6px 0; }
   .section h2 { padding-top: 0; }
   .specimen { flex-direction: column; align-items: stretch; gap: 10px; }
@@ -1115,7 +1177,11 @@ html:not(.js) .tool-search { display: none; }
   .tab::after { left: 6px; right: 6px; }
 }
 
+/* Below this the portrait and the text cannot share a row: the text column
+   drops under 120px and the role breaks across four lines. Stack instead. */
 @media (max-width: 380px) {
+  .hero-byline { flex-direction: column; align-items: flex-start; gap: 14px; }
+
   .card { padding: 20px 18px 18px; }
   .card-name { font-size: 1.3rem; }
 }
@@ -1154,8 +1220,9 @@ html:not(.js) .tool-search { display: none; }
 
 /* ---------- the curator page ---------- */
 
-/* the one place the portrait runs large */
-.curator-portrait { width: 96px; height: 96px; margin-bottom: 22px; }
+/* Matches the hero author card. This is the page about him, so it cannot be
+   the smaller of the two. */
+.curator-portrait { width: 140px; height: 140px; margin-bottom: 22px; }
 
 /* "On this site": a titled section after the bio, same register as the
    stack map's heading block */
