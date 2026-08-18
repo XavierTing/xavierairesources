@@ -18,11 +18,45 @@
    ============================================================ */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const read = (f) => readFileSync(join(ROOT, f), "utf8");
+
+/* ---------- cache busting ----------
+
+   _headers gives HTML `max-age=0, must-revalidate` and scripts and stylesheets
+   an hour plus a day of stale-while-revalidate. Without a version in the URL
+   that split ships broken pages: a returning reader gets fresh HTML against an
+   asset up to 25 hours old. That is what happened when search shipped. The
+   markup arrived with a search box and the cached app.js had never heard of
+   it, so the box rendered and did nothing.
+
+   Stamping the URL with a hash of the file's own bytes fixes the mismatch at
+   the source. Change a file and its URL changes, so every reader fetches it on
+   the next navigation. Leave it alone and the URL holds still and keeps the
+   long cache. The pass is idempotent: an existing ?v= is replaced, not
+   appended to, so running the generator twice is a no-op. */
+
+const VERSIONED = ["styles.css", "101.css", "theme.js", "tools.js", "app.js", "101.js"];
+
+const assetHash = Object.fromEntries(
+  VERSIONED.map((f) => [
+    f,
+    createHash("md5").update(readFileSync(join(ROOT, f))).digest("hex").slice(0, 8),
+  ])
+);
+
+/* Rewrites src/href for the files above, in place, at any path depth. Anything
+   we do not hash (favicon.svg, the Google Fonts URL) is left untouched. */
+const stampAssets = (html) =>
+  html.replace(
+    /((?:src|href)=")((?:\.\.\/)?)([A-Za-z0-9._-]+\.(?:css|js))(?:\?v=[a-f0-9]+)?(")/g,
+    (whole, attr, prefix, file, close) =>
+      assetHash[file] ? `${attr}${prefix}${file}?v=${assetHash[file]}${close}` : whole
+  );
 
 /* ---------- load the plain data files ---------- */
 
@@ -470,7 +504,7 @@ function isoDate(d) {
 
 mkdirSync(join(ROOT, "tools"), { recursive: true });
 TOOLS.forEach((t, i) => {
-  writeFileSync(join(ROOT, "tools", `${slug(t.name)}.html`), detailPage(t, i));
+  writeFileSync(join(ROOT, "tools", `${slug(t.name)}.html`), stampAssets(detailPage(t, i)));
 });
 console.log(`✓ tools/*.html — ${TOOLS.length} indexable pages`);
 
@@ -567,8 +601,21 @@ index = index.replace(
   <!-- META:END -->`
 );
 
-writeFileSync(join(ROOT, "index.html"), index);
+writeFileSync(join(ROOT, "index.html"), stampAssets(index));
 console.log("✓ index.html — static cards + JSON-LD refreshed");
+
+/* ai-101.html is hand-written and the generator owns nothing in it except the
+   asset URLs, which it has to stamp for the same reason as everything else: it
+   loads the shared styles.css and theme.js. */
+const page101 = "ai-101.html";
+const stamped101 = stampAssets(read(page101));
+writeFileSync(join(ROOT, page101), stamped101);
+console.log(`✓ ${page101} — asset URLs stamped`);
+
+console.log(
+  "✓ cache busting — " +
+    VERSIONED.map((f) => `${f}?v=${assetHash[f]}`).join(", ")
+);
 
 /* ---------- 3. sitemap.xml ---------- */
 
