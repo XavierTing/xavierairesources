@@ -829,9 +829,59 @@ const TOOLS = [
     commandTarget: "terminal",
     status: "Reviewed · Not tested",
     note: "The most useful thing here is the shape of the file itself. Adapt one into a DESIGN.md of your own and your assistant stops guessing what your product looks like."
+  },
+  {
+    num: "34",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "Screenshot to Code",
+    category: "Design",
+    maker: "abi",
+    tagline: "Turns a screenshot of a page into working front-end code",
+    blurb: "Drop in a screenshot, a mockup or even a screen recording, and it writes the HTML and CSS that reproduces it. You pick what it writes in: plain HTML with Tailwind, React, Vue or Bootstrap. Seventy-four thousand people have starred it, which for a repository is roughly a review score.",
+    repo: "https://github.com/abi/screenshot-to-code",
+    repoLabel: "GITHUB REPO",
+    needs: "An API key from Google, OpenAI or Anthropic, and either Docker or Python and Node.js if you run it on your own machine",
+    cost: "The code is free under the MIT licence, which lets you use and change it, including at work. You pay the model for every conversion, so a busy afternoon costs real money. There is also a hosted version at screenshottocode.com if you would rather not install anything.",
+    why: "Copying a layout you can see is one of the slowest jobs in front-end work: you know exactly what you want, and the whole cost is typing it out. This takes the picture and writes the first version for you, then lets you point at what is wrong and ask again, so you correct rather than transcribe. It handles a screen recording too, which means a short interaction can come back as something that already moves. Where it needs care: what comes out is a faithful-looking copy, not your project. It does not know your design system, your components or your spacing scale, and it invents its own names for everything. Treat the output as a starting draft to fold into your own code, and remember that copying someone else's interface pixel for pixel is a decision about their design, not just yours.",
+    when: "Reach for it when a layout exists as a picture and you need it as markup: a design handed over as a flat image, a competitor's page you are studying, a whiteboard sketch, or an old internal tool nobody has the source for. It is also a fast way to get past the empty file at the start of a page. It is the wrong tool once a design system exists, because then you want your own components rather than a fresh set of class names. The log's Image to Code entry solves the neighbouring problem: that one draws the picture first and then writes the code, where this one starts from a picture you already have.",
+    how: [
+      "The quickest look costs nothing to set up: open screenshottocode.com, the hosted version, and try one screenshot to see whether the output is close enough to be worth installing.",
+      "To run it yourself, open the Terminal app, the window where you type commands, and paste the line below to download the project. It uses git, the tool that copies code folders from the internet, which comes with macOS and is free for Windows from git-scm.com.",
+      "Follow the README to add your API key, the secret pass that lets the app use a paid model, and start it with Docker if you have it. Then feed it one screenshot of a page you already know well, so you can judge how faithful the result really is before trusting it on something new."
+    ],
+    command: "git clone https://github.com/abi/screenshot-to-code.git",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "Judge it on a layout you know by heart. It is very good at looking right at a glance, and the gap between looking right and being right is the whole review."
+  },
+  {
+    num: "35",
+    added: "2026-08-18",
+    updated: "2026-08-18",
+    name: "Remotion Skills",
+    category: "Design",
+    maker: "Remotion",
+    tagline: "Teaches your assistant to build videos in code",
+    blurb: "Remotion makes videos by writing React code instead of dragging clips on a timeline, which is how you get a video that rebuilds itself when the data changes. This is the official pack of twelve skills that teaches an assistant how to do it properly: how to animate, how to add captions, how to render, how to upgrade.",
+    repo: "https://github.com/remotion-dev/remotion/tree/main/packages/skills",
+    repoLabel: "GITHUB REPO",
+    needs: "Node.js (free, from nodejs.org), an assistant that reads skills such as Claude Code, Codex or Cursor, and a Remotion project to point them at",
+    cost: "The skills are free. Remotion itself is free for individuals and companies of up to three people; past that it needs a paid company licence, which starts at $25 per seat per month, so check where your team sits before you build on it.",
+    why: "An assistant that has never been told how a framework wants to be used will still write code for it, confidently and wrongly, because it is predicting what such code usually looks like rather than following the framework's own rules. Video makes that worse: timing, frame rates and rendering all have exact answers that are easy to get plausibly wrong. This pack encodes those answers as skills, the saved instruction files an assistant loads when a job matches. There are twelve, split by job: creating a project, writing the animation markup, previewing in the Studio, rendering the file, captions, maps, interactivity, searching the documentation, upgrading, and building a product around it. Installing them is closer to handing over the manual than adding a feature.",
+    when: "Reach for it when a video has to be made more than once: the same explainer with next month's numbers, a hundred personalised clips, subtitles burned in from a transcript, or a chart that animates from data you already have. If you are cutting one video by hand, an ordinary editor is faster and this is the wrong shape of work.",
+    how: [
+      "Open the Terminal app, the window where you type commands, move into the project you want the skills in, and paste the line below. It installs all twelve at once.",
+      "Ask your assistant for something small and check it renders: a five-second title card that fades in. Rendering is what proves the timing is right, so do not judge it from the preview alone.",
+      "From then on name the job in your request, for example add captions from this transcript, so the assistant loads the skill built for it rather than guessing from the general one."
+    ],
+    command: "npx skills add remotion-dev/skills",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The licence is the thing to check first, not the code. Remotion is free for one to three people and priced per seat above that, and that decision is much cheaper before a project depends on it."
   }
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "16.08.2026";
+const LOG_UPDATED = "18.08.2026";

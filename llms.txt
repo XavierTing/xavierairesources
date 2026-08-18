@@ -39,6 +39,8 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Web Design Guidelines](https://xaviertingai.com/tools/web-design-guidelines.html): Reviews your interface against a published list of rules
 - [Image to Code](https://xaviertingai.com/tools/image-to-code.html): Draws the page as a picture before writing any code
 - [Awesome DESIGN.md](https://xaviertingai.com/tools/awesome-design-md.html): Hands your agent a written design system to follow
+- [Screenshot to Code](https://xaviertingai.com/tools/screenshot-to-code.html): Turns a screenshot of a page into working front-end code
+- [Remotion Skills](https://xaviertingai.com/tools/remotion-skills.html): Teaches your assistant to build videos in code
 
 ## Course
 
