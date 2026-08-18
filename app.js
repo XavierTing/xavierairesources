@@ -190,7 +190,12 @@
       return true;
     }
 
-    function apply() {
+    /* animate is false on first paint. card-in runs with fill-mode both, which
+       pins opacity at 1 and outranks .reveal's opacity 0, so stamping it before
+       initReveal ran left every card visible and the scroll reveal never
+       happened. There is nothing to re-reveal on first paint anyway: initReveal
+       owns that entrance, and this owns the one after a filter change. */
+    function apply(animate) {
       var query = searchEl ? searchEl.value.trim().toLowerCase() : "";
       var terms = query ? query.split(/\s+/) : [];
       var shown = 0;
@@ -199,7 +204,7 @@
         if (matches(card, terms)) {
           card.removeAttribute("data-filtered");
           /* re-reveal: surviving cards rise back in with a small stagger */
-          if (!reducedMotion) {
+          if (animate && !reducedMotion) {
             card.classList.remove("refilter");
             card.style.animationDelay = Math.min(shown * 35, 280) + "ms";
             void card.offsetWidth; /* restart the animation */
@@ -222,7 +227,7 @@
     function clearSearch() {
       if (!searchEl) return;
       searchEl.value = "";
-      apply();
+      apply(true);
       searchEl.focus();
     }
 
@@ -233,11 +238,13 @@
         t.setAttribute("aria-pressed", t === tab ? "true" : "false");
       });
       category = tab.dataset.category;
-      apply();
+      apply(true);
     });
 
     if (searchEl) {
-      searchEl.addEventListener("input", apply);
+      /* wrapped rather than passed straight through: the listener would hand
+         apply the Event as its animate argument, which is truthy by accident */
+      searchEl.addEventListener("input", function () { apply(true); });
       searchEl.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && searchEl.value) { e.preventDefault(); clearSearch(); }
       });
