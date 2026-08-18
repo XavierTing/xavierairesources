@@ -70,10 +70,15 @@
   .cross::before { left: 8px; top: 0; width: 2px; height: 18px; }
   .cross::after  { left: 0; top: 8px; width: 18px; height: 2px; }
 
+  /* The text column stops short of the sand panel. Without a right bound the
+     frame ran the full 1200px and the role line and tagline crossed the panel
+     edge at x=780, printing warm type over the darker ground behind the
+     portrait. 84px in from the left, 60px of clear air before the panel. */
   .frame {
     position: absolute;
     inset: 0;
     padding: 72px 0 64px 84px;
+    width: 748px;
     display: flex;
     flex-direction: column;
   }
@@ -100,7 +105,8 @@
   }
   .role {
     margin-top: 26px;
-    font-size: 31px;
+    /* one line: at 31px this broke after "AI & Design", orphaning "Leader" */
+    font-size: 28px;
     font-weight: 500;
     color: var(--body);
     max-width: 640px;
@@ -151,7 +157,7 @@
     <div class="bar"></div>
     <h1>Xavier Ting</h1>
     <p class="role">Vice President at OCBC <span class="dot">·</span> AI &amp; Design Leader</p>
-    <p class="tagline">The AI tools he uses every day, explained without jargon.</p>
+    <p class="tagline">The AI resources you need to be proficient in AI.</p>
     <div class="url">xaviertingai.com</div>
   </div>
 
