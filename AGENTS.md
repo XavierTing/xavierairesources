@@ -249,6 +249,11 @@ curved arrows, hand-lettered caps. Exactly five colours, the Daylight palette:
 - Xavier is positioned as "Vice President at OCBC", everywhere, with no
   department name. The bio page, footer, README and JSON-LD already comply.
 - Light mode is the default; dark is the opt-in.
+- The tools page filters client-side over the cards already in the DOM: the
+  category tabs and the search box compose, and each card's haystack is its own
+  text plus its tagline from `tools.js`. There is no search index and no fetch,
+  and adding one would be the wrong shape for a 35-entry list. Search is hidden
+  without JavaScript, where the full list is the honest answer.
 - Every page carries the same `footer.colophon`: a "Logged & maintained"
   block (portrait, one line on who Xavier is, the three profile links) on the
   left, and "Status" pushed to the right. Nothing else goes in it. Credentials

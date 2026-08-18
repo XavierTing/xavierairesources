@@ -158,15 +158,42 @@
       tabsEl.appendChild(tab);
     });
 
-    function updateCount(shown) {
-      countEl.textContent = "Showing " + pad(shown) + " / " + pad(TOOLS.length);
+    /* ---- search ----
+       Everything searchable is already in the DOM, so the haystack is read off
+       each card once: its name, category and blurb, plus the tagline from TOOLS
+       (which the card doesn't print). No index, no network, no fetch. */
+    var searchEl = document.getElementById("tool-search");
+    var clearEl = document.getElementById("tool-search-clear");
+    var emptyEl = document.getElementById("grid-empty");
+    var emptyQEl = document.getElementById("grid-empty-q");
+    var emptyClearEl = document.getElementById("grid-empty-clear");
+    var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
+    var taglines = {};
+    TOOLS.forEach(function (t) { taglines[slug(t.name)] = t.tagline || ""; });
+
+    cards.forEach(function (card) {
+      var key = (card.getAttribute("href") || "").split("/").pop().replace(".html", "");
+      card.searchText = (card.textContent + " " + (taglines[key] || "")).toLowerCase();
+    });
+
+    var category = "All";
+
+    function matches(card, terms) {
+      if (category !== "All" && card.dataset.category !== category) return false;
+      /* every word must appear somewhere, so "figma mcp" narrows rather than widens */
+      for (var i = 0; i < terms.length; i++) {
+        if (card.searchText.indexOf(terms[i]) === -1) return false;
+      }
+      return true;
     }
 
-    function applyFilter(category) {
+    function apply() {
+      var query = searchEl ? searchEl.value.trim().toLowerCase() : "";
+      var terms = query ? query.split(/\s+/) : [];
       var shown = 0;
-      grid.querySelectorAll(".card").forEach(function (card) {
-        var match = category === "All" || card.dataset.category === category;
-        if (match) {
+
+      cards.forEach(function (card) {
+        if (matches(card, terms)) {
           card.removeAttribute("data-filtered");
           /* re-reveal: surviving cards rise back in with a small stagger */
           if (!reducedMotion) {
@@ -180,7 +207,20 @@
           card.dataset.filtered = "out";
         }
       });
-      updateCount(shown);
+
+      countEl.textContent = "Showing " + pad(shown) + " / " + pad(cards.length);
+      if (clearEl) clearEl.hidden = query === "";
+      if (emptyEl) {
+        emptyEl.hidden = shown > 0;
+        if (shown === 0 && emptyQEl) emptyQEl.textContent = "“" + (query || category) + "”";
+      }
+    }
+
+    function clearSearch() {
+      if (!searchEl) return;
+      searchEl.value = "";
+      apply();
+      searchEl.focus();
     }
 
     tabsEl.addEventListener("click", function (e) {
@@ -189,10 +229,29 @@
       tabsEl.querySelectorAll(".tab").forEach(function (t) {
         t.setAttribute("aria-pressed", t === tab ? "true" : "false");
       });
-      applyFilter(tab.dataset.category);
+      category = tab.dataset.category;
+      apply();
     });
 
-    updateCount(TOOLS.length);
+    if (searchEl) {
+      searchEl.addEventListener("input", apply);
+      searchEl.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && searchEl.value) { e.preventDefault(); clearSearch(); }
+      });
+      clearEl.addEventListener("click", clearSearch);
+      emptyClearEl.addEventListener("click", clearSearch);
+      /* "/" is the search key everywhere else on the web; honour it here too */
+      document.addEventListener("keydown", function (e) {
+        if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+        var t = e.target;
+        if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+        e.preventDefault();
+        searchEl.focus();
+        searchEl.select();
+      });
+    }
+
+    apply();
     initReveal(grid.querySelectorAll(".card"));
   }
 

@@ -1187,9 +1187,30 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       <section id="log" aria-label="The tools">
         <div class="tabs-row">
           <div class="tabs" id="tabs" role="group" aria-label="Filter tools by category"></div>
-          <p class="tab-count m" id="tab-count" aria-live="polite"></p>
+          <div class="tabs-end">
+            <!-- Search filters the cards already on the page, so it needs no
+                 index and no network. Hidden without JavaScript, where the
+                 full list is the honest answer. -->
+            <div class="tool-search">
+              <svg class="tool-search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <circle cx="9" cy="9" r="6"></circle>
+                <line x1="13.5" y1="13.5" x2="18" y2="18"></line>
+              </svg>
+              <label class="visually-hidden" for="tool-search">Search the tools</label>
+              <input class="tool-search-input m" id="tool-search" type="search"
+                     placeholder="Search" autocomplete="off" spellcheck="false">
+              <button class="tool-search-clear" id="tool-search-clear" type="button"
+                      aria-label="Clear the search" hidden>&times;</button>
+            </div>
+            <p class="tab-count m" id="tab-count" aria-live="polite"></p>
+          </div>
         </div>
 
+
+        <p class="grid-empty" id="grid-empty" hidden>
+          Nothing here matches <span class="grid-empty-q" id="grid-empty-q"></span>.
+          <button class="grid-empty-clear" id="grid-empty-clear" type="button">Clear the search</button>
+        </p>
 
         <div class="grid" id="grid">
         <!-- CARDS:START -->
