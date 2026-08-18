@@ -535,12 +535,17 @@ html:not(.js) .theme-toggle { display: none; }
    Without it the page still lists every tool, which is the honest fallback. */
 html:not(.js) .tool-search { display: none; }
 
+/* The pill draws the control, but the input IS the control: the icon is lifted
+   out of flow and the field carries the pill's air as its own padding, so every
+   pixel inside the border is a click on the field. Held as a flex row with the
+   padding outside the input, only the bare 101x16 text box answered a click,
+   which made the whole thing read as broken. */
 .tool-search {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  cursor: text;
   margin-bottom: var(--rule-air-list);
-  padding: 0 10px 0 12px;
   min-height: 38px;
   background: var(--glass);
   border: 1px solid var(--line);
@@ -553,9 +558,15 @@ html:not(.js) .tool-search { display: none; }
   border-color: var(--accent);
   background: var(--glass-hover);
 }
+/* decoration, never a target: the click passes through to the input beneath.
+   Not z-index, which would drop it behind the pill's own glass. */
 .tool-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 15px; height: 15px;
-  flex: 0 0 auto;
+  pointer-events: none;
   fill: none;
   stroke: var(--muted);
   stroke-width: 1.6;
@@ -567,12 +578,20 @@ html:not(.js) .tool-search { display: none; }
   appearance: none;
   background: transparent;
   border: 0;
-  padding: 0;
+  /* content-box, against the global border-box, so 12ch keeps meaning twelve
+     characters: the 35px lead (pill air + icon + gap) and 10px tail sit outside
+     that measure, leaving the width transition and the 148px rest width intact */
+  box-sizing: content-box;
+  padding: 0 10px 0 35px;
   width: 12ch;
+  align-self: stretch;
   color: var(--ink);
   transition: width 0.2s var(--ease-out);
 }
-.tool-search-input:focus { outline: none; width: 18ch; }
+/* 16ch, not more: the clear button appears as soon as there is a query, and at
+   18ch the pill grew wide enough to push the whole group onto a second line
+   mid-keystroke, which moved the grid under the reader's hands */
+.tool-search-input:focus { outline: none; width: 16ch; }
 .tool-search-input::placeholder { color: var(--muted); opacity: 1; }
 /* the control carries its own clear button, so the native one would be a second */
 .tool-search-input::-webkit-search-cancel-button,
@@ -582,13 +601,18 @@ html:not(.js) .tool-search { display: none; }
   appearance: none;
   background: transparent;
   border: 0;
-  padding: 0 2px;
+  /* the trailing air belongs to the button, so the right end of the pill is
+     button rather than dead space: ~29x36 instead of ~13x18 */
+  padding: 0 10px;
+  align-self: stretch;
   font-size: 1.1rem;
   line-height: 1;
   color: var(--muted);
   cursor: pointer;
 }
 .tool-search-clear:hover { color: var(--ink); }
+/* the pill is the ring's shape, so the button's ring tucks inside it */
+.tool-search-clear:focus-visible { outline-offset: -3px; border-radius: 999px; }
 
 /* nothing matched: say so where the cards would have been */
 .grid-empty {
@@ -1101,6 +1125,13 @@ html:not(.js) .tool-search { display: none; }
 @media (pointer: coarse) {
   .tab { min-height: var(--tap); }
   .copy-btn { min-height: var(--tap); }
+  /* the pill takes the same 44px the tabs beside it take, and the input
+     stretches into it, so the whole pill is the tap target */
+  .tool-search { min-height: var(--tap); }
+  .tool-search-clear { min-width: var(--tap); }
+  /* iOS Safari zooms the page whenever a focused field sits under 16px, and
+     the zoom sticks. 16px is --nav-size, the step the tabs beside it use. */
+  .tool-search-input { font-size: max(16px, var(--m-size)); }
 }
 
 /* ---------- print ---------- */
