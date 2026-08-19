@@ -46,6 +46,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Discord](https://xaviertingai.com/tools/discord.html): Lets you message Claude Code from Discord
 - [Linear](https://xaviertingai.com/tools/linear.html): Lets your assistant work with your Linear issues
 - [OKF Graph Wiki](https://xaviertingai.com/tools/okf-graph-wiki.html): Turns AI-written notes into a graph it can search properly
+- [Notion Plugin for Claude Code](https://xaviertingai.com/tools/notion-plugin-for-claude-code.html): Connects Claude Code to your Notion workspace
 
 ## Course
 

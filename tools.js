@@ -1002,8 +1002,34 @@ const TOOLS = [
     status: "Reviewed \u00b7 Not tested",
     note: "The honest version of the second-brain idea: it names what breaks at scale and says what to do about it, rather than promising the pile will sort itself out."
   },
+  {
+    num: "41",
+    makerType: "org",
+    added: "2026-08-19",
+    updated: "2026-08-19",
+    name: "Notion Plugin for Claude Code",
+    category: "Connections",
+    maker: "Notion",
+    tagline: "Connects Claude Code to your Notion workspace",
+    blurb: "Claude Code cannot read your Notion workspace on its own. This official plugin from Notion adds a secure connection, four saved instruction packs and ten slash commands for searching, writing and turning pages into tasks.",
+    repo: "https://github.com/makenotion/claude-code-notion-plugin",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code and a Notion account",
+    cost: "The plugin is free. Claude Code and Notion have their own plans.",
+    why: "Claude Code can work with files on your computer, but it cannot see the decisions, specifications and notes stored in Notion by itself. This official plugin from Notion combines its hosted Model Context Protocol (MCP) server, a connection that Notion runs so Claude Code can use the service, with four skills, saved instruction packs that teach Claude how to handle common Notion work, and ten slash commands. After you sign in, it can search and read your workspace, create and update pages, append notes and add database rows. It is made specifically for Claude Code rather than as a general Notion connection for every assistant.",
+    when: "Use it when project specifications, meeting notes, research or tasks live in Notion and you want Claude Code to use or update them without copying between windows. Notion says the connection can work with content that your signed-in account can access, not only one selected page. Ask it to name the destination and proposed change before you let it write. Workspace owners can manage MCP client access under Settings, then Connections.",
+    how: [
+      "In Claude Code's prompt, the same place you normally type a request, paste the marketplace command below. This adds Notion's official plugin marketplace to the list Claude Code can install from.",
+      "In that same prompt, type /plugin install notion-workspace-plugin@notion-plugin-marketplace to install the Notion workspace plugin.",
+      "Close and reopen Claude Code so the connection starts correctly, follow the Notion sign-in in your browser, and try /Notion:search project brief with a title or phrase you recognise before asking it to make changes."
+    ],
+    command: "/plugin marketplace add makenotion/claude-code-notion-plugin",
+    commandTarget: "claude",
+    status: "Reviewed \u00b7 Not tested",
+    note: "The useful part is the complete package: the secure connection, written working methods and repeatable commands arrive together."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "18.08.2026";
+const LOG_UPDATED = "19.08.2026";

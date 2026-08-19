@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 40 · Categories: 6 · Last updated: 18.08.2026
+- Tools listed: 41 · Categories: 6 · Last updated: 19.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1025,11 +1025,37 @@ When a set of AI-maintained notes has grown past the point where the assistant c
 
 ---
 
+## 41. Notion Plugin for Claude Code: Connects Claude Code to your Notion workspace
+
+- **Category:** Connections
+- **Made by:** Notion
+- **Source:** https://github.com/makenotion/claude-code-notion-plugin
+- **Page:** https://xaviertingai.com/tools/notion-plugin-for-claude-code.html
+- **You'll need:** Claude Code and a Notion account
+- **Cost:** The plugin is free. Claude Code and Notion have their own plans.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `/plugin marketplace add makenotion/claude-code-notion-plugin`
+
+**Why use Notion Plugin for Claude Code?**
+Claude Code can work with files on your computer, but it cannot see the decisions, specifications and notes stored in Notion by itself. This official plugin from Notion combines its hosted Model Context Protocol (MCP) server, a connection that Notion runs so Claude Code can use the service, with four skills, saved instruction packs that teach Claude how to handle common Notion work, and ten slash commands. After you sign in, it can search and read your workspace, create and update pages, append notes and add database rows. It is made specifically for Claude Code rather than as a general Notion connection for every assistant.
+
+**When should you use Notion Plugin for Claude Code?**
+Use it when project specifications, meeting notes, research or tasks live in Notion and you want Claude Code to use or update them without copying between windows. Notion says the connection can work with content that your signed-in account can access, not only one selected page. Ask it to name the destination and proposed change before you let it write. Workspace owners can manage MCP client access under Settings, then Connections.
+
+**How do you install and use Notion Plugin for Claude Code?**
+1. In Claude Code's prompt, the same place you normally type a request, paste the marketplace command below. This adds Notion's official plugin marketplace to the list Claude Code can install from.
+2. In that same prompt, type /plugin install notion-workspace-plugin@notion-plugin-marketplace to install the Notion workspace plugin.
+3. Close and reopen Claude Code so the connection starts correctly, follow the Notion sign-in in your browser, and try /Notion:search project brief with a title or phrase you recognise before asking it to make changes.
+
+**Curator's note:** The useful part is the complete package: the secure connection, written working methods and repeatable commands arrive together.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
-- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear
+- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki
 - **Writing**: Humanizer
