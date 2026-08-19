@@ -96,5 +96,13 @@ brainstorm → plan → build flow. Chrome DevTools MCP verified every render.
 
 ## Licence
 
-Code: MIT — take the pattern and build your own list.
-Written content, curation and portrait: © Xavier Ting. Please credit if you quote it.
+Two licences, because this repo is code and writing in one place.
+
+- **Code — MIT** ([`LICENSE`](LICENSE)). The HTML, CSS, JavaScript, generator and
+  config. Take the pattern and build your own list. No attribution required.
+- **Written content, curation and art — © Xavier Ting**
+  ([`LICENSE-CONTENT`](LICENSE-CONTENT)). The tool write-ups, the AI 101 course
+  text, the choice of what made the list, the illustrations and the portrait.
+  Quote it freely, but please credit and link back to https://xaviertingai.com.
+
+So: fork the site, keep the machinery, bring your own words.
