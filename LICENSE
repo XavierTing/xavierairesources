@@ -19,3 +19,23 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+------------------------------------------------------------------------------
+SCOPE OF THIS LICENCE
+------------------------------------------------------------------------------
+
+"Software" above means the source code of this repository: HTML, CSS,
+JavaScript, build and generator scripts, and configuration. Take the pattern
+and build your own list.
+
+It does NOT cover:
+
+  - the written content (the tool write-ups and the Artificial Intelligence 101
+    course text),
+  - the curation itself (which tools are chosen and how they are grouped),
+  - the illustrations and card art,
+  - the portrait.
+
+Those remain (c) 2026 Xavier Ting, all rights reserved. Please credit if you
+quote them.
