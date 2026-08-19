@@ -118,7 +118,12 @@ const personNode = {
     "@type": "Place",
     address: { "@type": "PostalAddress", addressCountry: SITE.curator.country },
   },
-  sameAs: [SITE.curator.linkedin, SITE.curator.x, SITE.curator.portfolio],
+  sameAs: [
+    SITE.curator.linkedin,
+    SITE.curator.x,
+    SITE.curator.instagram,
+    SITE.curator.portfolio,
+  ],
   knowsAbout: SITE.curator.knowsAbout.map((k) => ({
     "@type": "Thing",
     name: k.name,
@@ -478,7 +483,8 @@ ${steps}
             <p class="colophon-links m">
               <a href="${SITE.curator.linkedin}" rel="me noopener">LinkedIn ↗</a>
               <a href="${SITE.curator.x}" rel="me noopener">X ↗</a>
-              <a href="${SITE.curator.portfolio}" rel="me noopener">xavierting.com ↗</a>
+              <a href="${SITE.curator.instagram}" rel="me noopener">Instagram ↗</a>
+              <a href="${SITE.curator.portfolio}" rel="me noopener">Personal website ↗</a>
             </p>
           </div>
         </div>

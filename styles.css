@@ -426,9 +426,10 @@ html:not(.js) .theme-toggle { display: none; }
    rather than floating in the middle of the card */
 .byline-text { flex: 1 1 auto; min-width: 0; }
 
-/* the card is narrower in the hero's right column than it was full-width, and
-   at 18px the three links spill onto a second row by about ten pixels */
-.hero-byline .byline-links { gap: 12px; }
+/* Four links need 422px and the card's text column is 310, so they sit three
+   and one. The row gap is tighter than the column gap because each link is
+   already a 24px box from the tap-target floor, which pads the rows on its own. */
+.hero-byline .byline-links { gap: 4px 12px; }
 
 /* The gold ring is drawn into portrait.jpg itself, so the CSS border and
    padding this rule used to carry are gone. Adding them back would read as a

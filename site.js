@@ -36,6 +36,7 @@ const SITE = {
     linkedin: "https://www.linkedin.com/in/xavierting/",
     x: "https://x.com/xaviertingai",
     xHandle: "@xaviertingai",
+    instagram: "https://www.instagram.com/xaviertingai/",
     portfolio: "https://www.xavierting.com/",
     /* recognizedBy makes a credential checkable. Only bodies that are certain
        from the credential's own name carry one; better absent than invented. */
