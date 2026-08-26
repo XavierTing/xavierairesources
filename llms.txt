@@ -18,7 +18,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Figma MCP](https://xaviertingai.com/tools/figma-mcp.html): Lets AI read your real design file, not a screenshot
 - [Obsidian Skills](https://xaviertingai.com/tools/obsidian-skills.html): Teaches your AI to work inside your Obsidian notes
 - [Ralph Loop](https://xaviertingai.com/tools/ralph-loop.html): Runs Claude on the same task until it is done
-- [Watch](https://xaviertingai.com/tools/watch.html): Lets Claude actually watch a video and answer
+- [Watch](https://xaviertingai.com/tools/watch.html): Gives Claude selected video stills and transcript text
 - [Codex for Claude Code](https://xaviertingai.com/tools/codex-for-claude-code.html): Brings in OpenAI's Codex to review code or take on jobs
 - [Apple Design](https://xaviertingai.com/tools/apple-design.html): Teaches your AI what makes Apple interfaces feel right
 - [Notchi](https://xaviertingai.com/tools/notchi.html): Shows what Claude Code is doing, up in the notch

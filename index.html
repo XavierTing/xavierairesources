@@ -171,7 +171,7 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
       },
       "primaryImageOfPage": "https://xaviertingai.com/og-image.png",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-19"
+      "dateModified": "2026-08-26"
     },
     {
       "@type": "ItemList",
@@ -510,11 +510,11 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             "@type": "SoftwareApplication",
             "@id": "https://xaviertingai.com/tools/watch.html#tool",
             "name": "Watch",
-            "description": "Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads the video, takes still pictures through it, and turns the speech into text on your own computer.",
+            "description": "Watch does not stream a whole video into Claude. It checks captions, selects still images from different moments and pairs both with time labels. The default keeps up to 100 images, so events between them can be missed.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "url": "https://xaviertingai.com/tools/watch.html",
-            "sameAs": "https://github.com/mathiaschu/watch",
+            "sameAs": "https://github.com/bradautomates/claude-video",
             "image": "https://xaviertingai.com/assets/cards/light/watch.webp",
             "offers": {
               "@type": "Offer",
@@ -523,10 +523,10 @@ FORM: User-pinned direction (claude.com/plugins layout, dark, aurora)
             },
             "author": {
               "@type": "Person",
-              "name": "Mathias Schusterman"
+              "name": "Brad Bonanno"
             },
-            "installUrl": "https://github.com/mathiaschu/watch",
-            "softwareHelp": "https://github.com/mathiaschu/watch"
+            "installUrl": "https://github.com/bradautomates/claude-video",
+            "softwareHelp": "https://github.com/bradautomates/claude-video"
           }
         },
         {
@@ -1468,7 +1468,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <img class="card-art" src="assets/cards/light/watch.webp" alt="" width="512" height="512" loading="lazy" decoding="async" onerror="this.remove()">
             <span class="card-top"><span class="card-cat m">Connections</span></span>
             <h2 class="card-name">Watch</h2>
-            <p class="card-tag">Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads the video, takes still pictures through it, and turns the speech into text on your own computer.</p>
+            <p class="card-tag">Watch does not stream a whole video into Claude. It checks captions, selects still images from different moments and pairs both with time labels. The default keeps up to 100 images, so events between them can be missed.</p>
             <span class="card-open">Read entry</span>
           </a>
           <a class="card" href="tools/codex-for-claude-code.html" data-category="Coding">
@@ -1691,14 +1691,14 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated <span data-updated>19.08.2026</span></p>
+        <p>Last updated <span data-updated>26.08.2026</span></p>
       </div>
     </footer>
 
   </div>
 
   <script src="theme.js?v=03b89248"></script>
-  <script src="tools.js?v=504b1f38"></script>
+  <script src="tools.js?v=9312c9a2"></script>
   <script src="app.js?v=bd92a1d1"></script>
 </body>
 </html>

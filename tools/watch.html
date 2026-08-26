@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Watch: Lets Claude actually watch a video and answer</title>
-  <meta name="description" content="Lets Claude actually watch a video and answer. Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads…">
+  <title>Watch: Gives Claude selected video stills and transcript text</title>
+  <meta name="description" content="Gives Claude selected video stills and transcript text. Watch does not stream a whole video into Claude. It checks captions, selects still images from…">
   <link rel="canonical" href="https://xaviertingai.com/tools/watch.html">
   <meta name="author" content="Xavier Ting">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="2026-08-02">
-  <meta property="article:modified_time" content="2026-08-13">
+  <meta property="article:modified_time" content="2026-08-26">
   <meta property="article:author" content="https://xaviertingai.com/curator.html">
   <meta property="article:section" content="Connections">
   <meta property="og:site_name" content="AI Resources">
-  <meta property="og:title" content="Watch: Lets Claude actually watch a video and answer">
-  <meta property="og:description" content="Lets Claude actually watch a video and answer. Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads…">
+  <meta property="og:title" content="Watch: Gives Claude selected video stills and transcript text">
+  <meta property="og:description" content="Gives Claude selected video stills and transcript text. Watch does not stream a whole video into Claude. It checks captions, selects still images from…">
   <meta property="og:url" content="https://xaviertingai.com/tools/watch.html">
   <meta property="og:image" content="https://xaviertingai.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -141,11 +141,11 @@
       "@type": "SoftwareApplication",
       "@id": "https://xaviertingai.com/tools/watch.html#tool",
       "name": "Watch",
-      "description": "Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads the video, takes still pictures through it, and turns the speech into text on your own computer.",
+      "description": "Watch does not stream a whole video into Claude. It checks captions, selects still images from different moments and pairs both with time labels. The default keeps up to 100 images, so events between them can be missed.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Cross-platform",
       "url": "https://xaviertingai.com/tools/watch.html",
-      "sameAs": "https://github.com/mathiaschu/watch",
+      "sameAs": "https://github.com/bradautomates/claude-video",
       "image": "https://xaviertingai.com/assets/cards/light/watch.webp",
       "offers": {
         "@type": "Offer",
@@ -154,17 +154,17 @@
       },
       "author": {
         "@type": "Person",
-        "name": "Mathias Schusterman"
+        "name": "Brad Bonanno"
       },
-      "installUrl": "https://github.com/mathiaschu/watch",
-      "softwareHelp": "https://github.com/mathiaschu/watch"
+      "installUrl": "https://github.com/bradautomates/claude-video",
+      "softwareHelp": "https://github.com/bradautomates/claude-video"
     },
     {
       "@type": "WebPage",
       "@id": "https://xaviertingai.com/tools/watch.html#page",
       "url": "https://xaviertingai.com/tools/watch.html",
-      "name": "Watch: Lets Claude actually watch a video and answer",
-      "description": "Lets Claude actually watch a video and answer. Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads…",
+      "name": "Watch: Gives Claude selected video stills and transcript text",
+      "description": "Gives Claude selected video stills and transcript text. Watch does not stream a whole video into Claude. It checks captions, selects still images from…",
       "isPartOf": {
         "@id": "https://xaviertingai.com/#website"
       },
@@ -179,7 +179,7 @@
       },
       "primaryImageOfPage": "https://xaviertingai.com/og-image.png",
       "datePublished": "2026-08-02",
-      "dateModified": "2026-08-13"
+      "dateModified": "2026-08-26"
     },
     {
       "@type": "BreadcrumbList",
@@ -211,7 +211,7 @@
       "name": "Why use Watch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute."
+        "text": "A transcript tells you what was said but not what appeared on screen. Watch checks for captions already attached to the video, selects still images and pairs both with time labels so Claude can reason from more than the title. It samples rather than continuously watches the video, never taking more than two images per second, so it can miss events between images and captions can be wrong. If captions are missing and you enable the optional fallback, it sends an extracted audio clip to Groq or OpenAI for Whisper speech-to-text transcription. Whenever it downloads media, the video and extracted files stay in a temporary working folder on your computer."
       }
     },
     {
@@ -219,7 +219,7 @@
       "name": "When should you use Watch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down."
+        "text": "Use it for product demos, tutorials, screen recordings, social videos and local MP4 or MOV files when the visuals matter as much as the words. By default it keeps up to 100 still images selected around scene changes, so videos longer than about ten minutes get a sparse scan. Use only videos you have permission to process. The selected images and transcript text go to Claude. A captionless video's extracted audio also goes to Groq or OpenAI only when you enable that optional speech-to-text service."
       }
     },
     {
@@ -227,7 +227,7 @@
       "name": "How do you install and use Watch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Type the command below inside Claude Code. It adds the catalogue the tool lives in. Then install the tool itself by typing /plugin install watch@claude-video Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute. Command: /plugin marketplace add mathiaschu/watch"
+        "text": "In the Claude Code prompt, where you normally type requests rather than in the Terminal app, paste the marketplace command below. Then type /plugin install watch@claude-video in the same Claude Code prompt. Run /watch with a short video you have permission to process and ask a question. On macOS, the first run can install ffmpeg and yt-dlp through Homebrew; on Linux or Windows, run the installation commands it prints. Add an optional Groq or OpenAI API key, a secret that authorises access to that service, only if you accept sending captionless audio to that provider. Store it in ~/.config/watch/.env, the hidden settings file the tool creates in your home folder. Check important answers against the original video, time labels and still images because selected images and speech-to-text output can miss details. For a long video, focus the scan by typing a request such as /watch VIDEO-URL --start 2:00 --end 3:00. The tool prints the temporary working folder it used; check that Claude removes it after your final question, or delete it yourself. Command: /plugin marketplace add bradautomates/claude-video"
       }
     }
   ]
@@ -268,39 +268,39 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="detail-main">
           <img class="detail-art" src="../assets/cards/light/watch.webp" alt="" width="512" height="512" decoding="async">
           <h1 class="detail-title">Watch</h1>
-          <p class="detail-lede">Lets Claude actually watch a video and answer.</p>
+          <p class="detail-lede">Gives Claude selected video stills and transcript text.</p>
         </div>
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Connections</p></div>
-          <div><h2>Made by</h2><p>Mathias Schusterman</p></div>
-          <div><h2>You'll need</h2><p>Claude Code</p></div>
+          <div><h2>Made by</h2><p>Brad Bonanno</p></div>
+          <div><h2>You'll need</h2><p>Claude Code and Python 3, the free software that runs Watch. On macOS, the first run can use Homebrew, a software installer, to add ffmpeg for extracting video and audio and yt-dlp for downloading supported video links. On Linux and Windows, it prints installation commands for you to run.</p></div>
 
-          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/mathiaschu/watch" target="_blank" rel="noopener">PROJECT PAGE ↗</a></p></div>
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/bradautomates/claude-video" target="_blank" rel="noopener">GITHUB REPO ↗</a></p></div>
         </aside>
 
         <div class="sections">
         <section class="section">
           <h2>Why use Watch?</h2>
-          <div class="body">Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute.</div>
+          <div class="body">A transcript tells you what was said but not what appeared on screen. Watch checks for captions already attached to the video, selects still images and pairs both with time labels so Claude can reason from more than the title. It samples rather than continuously watches the video, never taking more than two images per second, so it can miss events between images and captions can be wrong. If captions are missing and you enable the optional fallback, it sends an extracted audio clip to Groq or OpenAI for Whisper speech-to-text transcription. Whenever it downloads media, the video and extracted files stay in a temporary working folder on your computer.</div>
         </section>
         <section class="section">
           <h2>When should you use Watch?</h2>
-          <div class="body">Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down.</div>
+          <div class="body">Use it for product demos, tutorials, screen recordings, social videos and local MP4 or MOV files when the visuals matter as much as the words. By default it keeps up to 100 still images selected around scene changes, so videos longer than about ten minutes get a sparse scan. Use only videos you have permission to process. The selected images and transcript text go to Claude. A captionless video's extracted audio also goes to Groq or OpenAI only when you enable that optional speech-to-text service.</div>
         </section>
         <section class="section">
           <h2>How do you install and use Watch?</h2>
           <div class="body">
             <ol>
-            <li>Type the command below inside Claude Code. It adds the catalogue the tool lives in.</li>
-            <li>Then install the tool itself by typing /<a href="../ai-101.html#e-plugins">plugin</a> install watch@claude-video</li>
-            <li>Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute.</li>
+            <li>In the Claude Code prompt, where you normally type requests rather than in the <a href="../ai-101.html#e-terminal">Terminal</a> app, paste the marketplace command below. Then type /<a href="../ai-101.html#e-plugins">plugin</a> install watch@claude-video in the same Claude Code prompt.</li>
+            <li>Run /watch with a short video you have permission to process and ask a question. On macOS, the first run can install ffmpeg and yt-dlp through Homebrew; on Linux or Windows, run the installation commands it prints. Add an optional Groq or OpenAI <a href="../ai-101.html#e-apikey">API key</a>, a <a href="../ai-101.html#e-secrets">secret</a> that authorises access to that service, only if you accept sending captionless audio to that provider. Store it in ~/.config/watch/.env, the hidden settings file the tool creates in your home folder.</li>
+            <li>Check important answers against the original video, time labels and still images because selected images and speech-to-text output can miss details. For a long video, focus the scan by typing a request such as /watch VIDEO-URL --start 2:00 --end 3:00. The tool prints the temporary working folder it used; check that Claude removes it after your final question, or delete it yourself.</li>
             </ol>
           <div class="specimen">
             <span class="specimen-where m">Type inside Claude Code</span>
-            <code>/plugin marketplace add mathiaschu/watch</code>
-            <button class="copy-btn" type="button" data-command="/plugin marketplace add mathiaschu/watch"
-                    aria-label="Copy command: /plugin marketplace add mathiaschu/watch">Copy</button>
+            <code>/plugin marketplace add bradautomates/claude-video</code>
+            <button class="copy-btn" type="button" data-command="/plugin marketplace add bradautomates/claude-video"
+                    aria-label="Copy command: /plugin marketplace add bradautomates/claude-video">Copy</button>
           </div>
           </div>
         </section>
@@ -333,14 +333,14 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
       </div>
       <div>
         <h2>Status</h2>
-        <p>Last updated 19.08.2026</p>
+        <p>Last updated 26.08.2026</p>
       </div>
     </footer>
 
   </div>
 
   <script src="../theme.js?v=03b89248"></script>
-  <script src="../tools.js?v=504b1f38"></script>
+  <script src="../tools.js?v=9312c9a2"></script>
   <script src="../app.js?v=bd92a1d1"></script>
 </body>
 </html>

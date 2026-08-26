@@ -326,27 +326,28 @@ const TOOLS = [
   {
     num: "13",
     added: "2026-08-02",
-    updated: "2026-08-13",
+    updated: "2026-08-26",
     name: "Watch",
     category: "Connections",
-    tagline: "Lets Claude actually watch a video and answer",
-    blurb: "Ask an assistant about a video and it answers from the title, because it never saw it. This one downloads the video, takes still pictures through it, and turns the speech into text on your own computer.",
-    repo: "https://github.com/mathiaschu/watch",
-    repoLabel: "PROJECT PAGE",
-    maker: "Mathias Schusterman",
+    tagline: "Gives Claude selected video stills and transcript text",
+    blurb: "Watch does not stream a whole video into Claude. It checks captions, selects still images from different moments and pairs both with time labels. The default keeps up to 100 images, so events between them can be missed.",
+    repo: "https://github.com/bradautomates/claude-video",
+    repoLabel: "GITHUB REPO",
+    maker: "Brad Bonanno",
     makerType: "person",
-    needs: "Claude Code",
-    cost: "Free; transcribes on your computer (Claude Code has its own plan)",
-    why: "Ask an assistant about a video and it will usually answer from the title and the description, because it never watched anything. This one does. It downloads the file, saves still pictures from across its length, and turns the speech into written text, then answers from those two things together. Videos that already carry subtitles use them straight away. The rest are transcribed on your own computer, so there is no account to open, no key to paste in, and no fee per minute.",
-    when: "Any time the answer sits inside a video rather than a page: a product demo you want the gist of, an hour long talk you cannot sit through, a specific moment you need found and described. It is also the quickest way to get the steps out of a tutorial that nobody ever wrote down.",
+    needs: "Claude Code and Python 3, the free software that runs Watch. On macOS, the first run can use Homebrew, a software installer, to add ffmpeg for extracting video and audio and yt-dlp for downloading supported video links. On Linux and Windows, it prints installation commands for you to run.",
+    cost: "Free for captions already attached to a video and for selecting still images. Claude Code has its own plan. Optional Groq or OpenAI speech-to-text may use credits or incur charges under that provider's plan.",
+    why: "A transcript tells you what was said but not what appeared on screen. Watch checks for captions already attached to the video, selects still images and pairs both with time labels so Claude can reason from more than the title. It samples rather than continuously watches the video, never taking more than two images per second, so it can miss events between images and captions can be wrong. If captions are missing and you enable the optional fallback, it sends an extracted audio clip to Groq or OpenAI for Whisper speech-to-text transcription. Whenever it downloads media, the video and extracted files stay in a temporary working folder on your computer.",
+    when: "Use it for product demos, tutorials, screen recordings, social videos and local MP4 or MOV files when the visuals matter as much as the words. By default it keeps up to 100 still images selected around scene changes, so videos longer than about ten minutes get a sparse scan. Use only videos you have permission to process. The selected images and transcript text go to Claude. A captionless video's extracted audio also goes to Groq or OpenAI only when you enable that optional speech-to-text service.",
     how: [
-      "Type the command below inside Claude Code. It adds the catalogue the tool lives in.",
-      "Then install the tool itself by typing /plugin install watch@claude-video",
-      "Type /watch, paste a video link, and ask your question. The first run fetches the few pieces it needs, so allow it a minute."
+      "In the Claude Code prompt, where you normally type requests rather than in the Terminal app, paste the marketplace command below. Then type /plugin install watch@claude-video in the same Claude Code prompt.",
+      "Run /watch with a short video you have permission to process and ask a question. On macOS, the first run can install ffmpeg and yt-dlp through Homebrew; on Linux or Windows, run the installation commands it prints. Add an optional Groq or OpenAI API key, a secret that authorises access to that service, only if you accept sending captionless audio to that provider. Store it in ~/.config/watch/.env, the hidden settings file the tool creates in your home folder.",
+      "Check important answers against the original video, time labels and still images because selected images and speech-to-text output can miss details. For a long video, focus the scan by typing a request such as /watch VIDEO-URL --start 2:00 --end 3:00. The tool prints the temporary working folder it used; check that Claude removes it after your final question, or delete it yourself."
     ],
-    command: "/plugin marketplace add mathiaschu/watch",
+    command: "/plugin marketplace add bradautomates/claude-video",
     commandTarget: "claude",
-    note: "It answers from what is on the screen rather than from the title. The difference shows up on the first question."
+    status: "Reviewed \u00b7 Not tested",
+    note: "Captions already attached to a video are the lower-cost path. Selected still images use part of the information Claude can process in one request, so focus long videos on the part that matters."
   },
   {
     num: "14",
@@ -1032,4 +1033,4 @@ const TOOLS = [
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "19.08.2026";
+const LOG_UPDATED = "26.08.2026";
