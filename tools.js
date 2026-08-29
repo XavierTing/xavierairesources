@@ -29,6 +29,10 @@
                 If needs names an assistant, say the plan is separate too, in
                 the house shape: "Free (Claude Code has its own plan)" or
                 "Free (your AI assistant has its own plan)".
+     schemaPrice — optional numeric string for a paid entry's current USD price.
+                Omit for free entries; the generator defaults their offer to 0.
+     schemaType — optional Schema.org type override for a non-software entry.
+                Currently supports "Course"; omit for software applications.
      why      — the argument (2–4 sentences, plain language)
      when     — concrete reach-for-it scenarios
      how      — numbered steps
@@ -1029,8 +1033,61 @@ const TOOLS = [
     status: "Reviewed \u00b7 Not tested",
     note: "The useful part is the complete package: the secure connection, written working methods and repeatable commands arrive together."
   },
+  {
+    num: "42",
+    makerType: "org",
+    added: "2026-08-28",
+    updated: "2026-08-28",
+    name: "SkillSpector",
+    category: "Coding",
+    tagline: "Checks an AI skill before you install it",
+    blurb: "An agent skill is a saved set of instructions that tells an AI assistant how to do a task. SkillSpector checks a repository, the online project folder holding the skill's files, as well as links, zip files and folders on your computer against 71 warning patterns, then gives a risk score from 0 to 100.",
+    repo: "https://github.com/NVIDIA/skillspector",
+    repoLabel: "GITHUB REPO",
+    needs: "The uv Python package installer (free, from docs.astral.sh/uv), Python 3.12 or newer, and the skill's repository, or repo, its online project folder",
+    cost: "The fixed-pattern check, called a static scan, is free. Optional AI analysis may send the skill text to the company or service running the AI, called the provider, and may use paid credits or your local Claude or Codex allowance.",
+    why: "An agent skill is a saved set of instructions that tells an AI assistant how to do a task, and it may let that assistant use your files and tools. A repository, or repo, is the online project folder that holds the skill's files. Reading every line yourself is easy to skip and hard to do consistently. NVIDIA's SkillSpector checks for hidden instructions that try to override your request, called prompt injection, attempts to send private information elsewhere, called data exfiltration, excessive permissions, dangerous code and other risks. It then reports severity levels and a score, but its fixed-pattern check, called a static scan, is only a useful gate, not proof that a skill is safe, and false positives still need human review.",
+    when: "Run it before installing or updating a skill from outside a catalogue you already trust, or when reviewing a folder of skills used by Claude Code, Codex or another AI assistant. It can scan a GitHub project address, a folder on your computer, a zip file or one SKILL.md file. The quick install requires Python 3.12 or newer and uv, a free Python package installer.",
+    how: [
+      "Install uv from docs.astral.sh/uv if you do not already have it, then paste the command below into the Terminal app. uv installs SkillSpector separately from your project.",
+      "Run this exact example: `skillspector scan https://github.com/NVIDIA/skillspector --no-llm`. It checks NVIDIA's own project without sending the skill text to an AI provider, the company or service running the model. It still sends declared dependency package names, their software ecosystem and exact versions when present to OSV.dev to look for known vulnerabilities; if OSV.dev is unavailable, it falls back to local data. Replace `https://github.com/NVIDIA/skillspector` with the GitHub address or other location of the skill you want to check.",
+      "Read each finding and inspect the named file before deciding. Optional AI analysis can catch meaning that fixed patterns miss, but it sends the skill text to the AI provider and may use paid credits. A clean report lowers risk; it does not guarantee safety."
+    ],
+    command: "uv tool install git+https://github.com/NVIDIA/skillspector.git",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The static scan is the sensible default. Turn on AI analysis only when the extra review is worth sending the skill text to another provider."
+  },
+  {
+    num: "43",
+    added: "2026-08-28",
+    updated: "2026-08-28",
+    name: "Maker School: AI Automation",
+    category: "Workflow",
+    maker: "Nick Saraev",
+    makerType: "person",
+    tagline: "Teaches you to build and sell AI automation",
+    blurb: "A paid community built around landing a first AI automation client. Its page lists 218 videos and guides, more than 50 templates, daily coaching and a 90-day client-or-refund promise.",
+    repo: "https://www.skool.com/makerschool/about",
+    repoLabel: "PROJECT PAGE",
+    needs: "A Skool account, time to follow a daily roadmap, and a real business problem to practise on",
+    cost: "US$184 per month when checked on 28 August 2026",
+    schemaPrice: "184",
+    schemaType: "Course",
+    why: "Learning Claude Code, Codex and n8n is one job; turning that knowledge into a service a business will pay for is another. Maker School combines technical lessons with proposals, lead generation, sales material, coaching and a day-by-day route towards a first client. The provider advertises a full refund if you do not get a paying client within 90 days. That promise depends on its terms, so confirm the eligibility rules and evidence required before paying.",
+    when: "Use it when you want a structured path from building automations to finding and delivering work for a client, and you will use the coaching and community rather than only watch videos. It is a recurring paid membership, not a free tool. If you only need to learn one technical workflow, official documentation and a small practice project may be enough.",
+    how: [
+      "Open the project page and read the current curriculum, monthly price and written refund terms. Ask the provider to confirm the 90-day guarantee's eligibility and evidence requirements before you pay.",
+      "Choose one real business process you can practise on safely, with test data rather than client information, and check that the roadmap covers both delivery and finding a buyer.",
+      "Join only if the recurring cost and daily schedule fit. Treat templates as starting points, and test every automation before it touches a client's accounts or data."
+    ],
+    command: null,
+    commandTarget: null,
+    status: "Reviewed · Not tested",
+    note: "This is a paid course and community, not a free software tool. The link carries no referral code."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "26.08.2026";
+const LOG_UPDATED = "28.08.2026";

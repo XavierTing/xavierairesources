@@ -157,8 +157,9 @@ const siteNode = {
 };
 
 /* Google's software rich result wants the category to mean something and the
-   node to carry offers or ratings. Ratings would be invented; a zero-price
-   offer is simply true, every entry is free. */
+   node to carry offers or ratings. Ratings would be invented. Free entries
+   default to a zero-price offer; paid entries must set schemaPrice. The Course
+   branch uses the same explicit offer rule. */
 const APP_CATEGORY = {
   Design: "DesignApplication",
   Coding: "DeveloperApplication",
@@ -176,6 +177,21 @@ function toolNode(t) {
   const makerIsPerson = t.makerType
     ? t.makerType === "person"
     : !t.maker && !!repoOwner(t.repo);
+  if (t.schemaType === "Course") {
+    return {
+      "@type": "Course",
+      "@id": `${toolUrl(t)}#tool`,
+      name: t.name,
+      description: t.blurb || t.tagline,
+      url: toolUrl(t),
+      sameAs: t.repo,
+      image: `${BASE}/assets/cards/light/${slug(t.name)}.webp`,
+      offers: { "@type": "Offer", price: t.schemaPrice || "0", priceCurrency: "USD" },
+      ...(owner
+        ? { provider: { "@type": makerIsPerson ? "Person" : "Organization", name: owner } }
+        : {}),
+    };
+  }
   return {
     "@type": "SoftwareApplication",
     "@id": `${toolUrl(t)}#tool`,
@@ -188,7 +204,7 @@ function toolNode(t) {
     url: toolUrl(t),
     sameAs: t.repo,
     image: `${BASE}/assets/cards/light/${slug(t.name)}.webp`,
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    offers: { "@type": "Offer", price: t.schemaPrice || "0", priceCurrency: "USD" },
     ...(owner
       ? { author: { "@type": makerIsPerson ? "Person" : "Organization", name: owner } }
       : {}),

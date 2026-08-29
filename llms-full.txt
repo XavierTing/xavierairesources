@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 41 · Categories: 6 · Last updated: 26.08.2026
+- Tools listed: 43 · Categories: 6 · Last updated: 28.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1052,12 +1052,63 @@ Use it when project specifications, meeting notes, research or tasks live in Not
 
 ---
 
+## 42. SkillSpector: Checks an AI skill before you install it
+
+- **Category:** Coding
+- **Made by:** NVIDIA
+- **Source:** https://github.com/NVIDIA/skillspector
+- **Page:** https://xaviertingai.com/tools/skillspector.html
+- **You'll need:** The uv Python package installer (free, from docs.astral.sh/uv), Python 3.12 or newer, and the skill's repository, or repo, its online project folder
+- **Cost:** The fixed-pattern check, called a static scan, is free. Optional AI analysis may send the skill text to the company or service running the AI, called the provider, and may use paid credits or your local Claude or Codex allowance.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `uv tool install git+https://github.com/NVIDIA/skillspector.git`
+
+**Why use SkillSpector?**
+An agent skill is a saved set of instructions that tells an AI assistant how to do a task, and it may let that assistant use your files and tools. A repository, or repo, is the online project folder that holds the skill's files. Reading every line yourself is easy to skip and hard to do consistently. NVIDIA's SkillSpector checks for hidden instructions that try to override your request, called prompt injection, attempts to send private information elsewhere, called data exfiltration, excessive permissions, dangerous code and other risks. It then reports severity levels and a score, but its fixed-pattern check, called a static scan, is only a useful gate, not proof that a skill is safe, and false positives still need human review.
+
+**When should you use SkillSpector?**
+Run it before installing or updating a skill from outside a catalogue you already trust, or when reviewing a folder of skills used by Claude Code, Codex or another AI assistant. It can scan a GitHub project address, a folder on your computer, a zip file or one SKILL.md file. The quick install requires Python 3.12 or newer and uv, a free Python package installer.
+
+**How do you install and use SkillSpector?**
+1. Install uv from docs.astral.sh/uv if you do not already have it, then paste the command below into the Terminal app. uv installs SkillSpector separately from your project.
+2. Run this exact example: `skillspector scan https://github.com/NVIDIA/skillspector --no-llm`. It checks NVIDIA's own project without sending the skill text to an AI provider, the company or service running the model. It still sends declared dependency package names, their software ecosystem and exact versions when present to OSV.dev to look for known vulnerabilities; if OSV.dev is unavailable, it falls back to local data. Replace `https://github.com/NVIDIA/skillspector` with the GitHub address or other location of the skill you want to check.
+3. Read each finding and inspect the named file before deciding. Optional AI analysis can catch meaning that fixed patterns miss, but it sends the skill text to the AI provider and may use paid credits. A clean report lowers risk; it does not guarantee safety.
+
+**Curator's note:** The static scan is the sensible default. Turn on AI analysis only when the extra review is worth sending the skill text to another provider.
+
+---
+
+## 43. Maker School: AI Automation: Teaches you to build and sell AI automation
+
+- **Category:** Workflow
+- **Made by:** Nick Saraev
+- **Source:** https://www.skool.com/makerschool/about
+- **Page:** https://xaviertingai.com/tools/maker-school-ai-automation.html
+- **You'll need:** A Skool account, time to follow a daily roadmap, and a real business problem to practise on
+- **Cost:** US$184 per month when checked on 28 August 2026
+- **Curator's status:** Reviewed · Not tested
+
+**Why use Maker School: AI Automation?**
+Learning Claude Code, Codex and n8n is one job; turning that knowledge into a service a business will pay for is another. Maker School combines technical lessons with proposals, lead generation, sales material, coaching and a day-by-day route towards a first client. The provider advertises a full refund if you do not get a paying client within 90 days. That promise depends on its terms, so confirm the eligibility rules and evidence required before paying.
+
+**When should you use Maker School: AI Automation?**
+Use it when you want a structured path from building automations to finding and delivering work for a client, and you will use the coaching and community rather than only watch videos. It is a recurring paid membership, not a free tool. If you only need to learn one technical workflow, official documentation and a small practice project may be enough.
+
+**How do you install and use Maker School: AI Automation?**
+1. Open the project page and read the current curriculum, monthly price and written refund terms. Ask the provider to confirm the 90-day guarantee's eligibility and evidence requirements before you pay.
+2. Choose one real business process you can practise on safely, with test data rather than client information, and check that the roadmap covers both delivery and finding a buyer.
+3. Join only if the recurring cost and daily schedule fit. Treat templates as starting points, and test every automation before it touches a client's accounts or data.
+
+**Curator's note:** This is a paid course and community, not a free software tool. The link carries no referral code.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills
-- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
+- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory, Maker School: AI Automation
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code
-- **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix
+- **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki
 - **Writing**: Humanizer
 
