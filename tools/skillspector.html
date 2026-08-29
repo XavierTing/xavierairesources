@@ -211,7 +211,7 @@
       "name": "Why use SkillSpector?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An agent skill is a saved set of instructions that tells an AI assistant how to do a task, and it may let that assistant use your files and tools. A repository, or repo, is the online project folder that holds the skill's files. Reading every line yourself is easy to skip and hard to do consistently. NVIDIA's SkillSpector checks for hidden instructions that try to override your request, called prompt injection, attempts to send private information elsewhere, called data exfiltration, excessive permissions, dangerous code and other risks. It then reports severity levels and a score, but its fixed-pattern check, called a static scan, is only a useful gate, not proof that a skill is safe, and false positives still need human review."
+        "text": "An agent skill is a saved set of instructions that tells an AI assistant how to do a task, and it may let that assistant use your files and tools. A repository, or repo, is the online project folder that holds the skill's files. Reading every line yourself is easy to skip and hard to do consistently. NVIDIA's SkillSpector checks for hidden instructions that try to override your request, called prompt injection, attempts to send private information elsewhere, called data exfiltration, excessive permissions, dangerous code and other risks. It then reports severity levels and a score, but its non-AI check, called a static scan, is only a useful gate, not proof that a skill is safe. Harmless items can be flagged by mistake, called false positives, so every finding still needs human review."
       }
     },
     {
@@ -219,7 +219,7 @@
       "name": "When should you use SkillSpector?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Run it before installing or updating a skill from outside a catalogue you already trust, or when reviewing a folder of skills used by Claude Code, Codex or another AI assistant. It can scan a GitHub project address, a folder on your computer, a zip file or one SKILL.md file. The quick install requires Python 3.12 or newer and uv, a free Python package installer."
+        "text": "Run it before installing or updating a skill from outside a catalogue you already trust, or when reviewing a folder of skills used by Claude Code, Codex or another AI assistant. It can scan a GitHub project address, a folder on your computer, a zip file or one SKILL.md file, the main instruction file inside a skill. The quick install requires Python 3.12 or newer and uv, a free Python package installer."
       }
     },
     {
@@ -227,7 +227,7 @@
       "name": "How do you install and use SkillSpector?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install uv from docs.astral.sh/uv if you do not already have it, then paste the command below into the Terminal app. uv installs SkillSpector separately from your project. Run this exact example: `skillspector scan https://github.com/NVIDIA/skillspector --no-llm`. It checks NVIDIA's own project without sending the skill text to an AI provider, the company or service running the model. It still sends declared dependency package names, their software ecosystem and exact versions when present to OSV.dev to look for known vulnerabilities; if OSV.dev is unavailable, it falls back to local data. Replace `https://github.com/NVIDIA/skillspector` with the GitHub address or other location of the skill you want to check. Read each finding and inspect the named file before deciding. Optional AI analysis can catch meaning that fixed patterns miss, but it sends the skill text to the AI provider and may use paid credits. A clean report lowers risk; it does not guarantee safety. Command: uv tool install git+https://github.com/NVIDIA/skillspector.git"
+        "text": "Install uv from docs.astral.sh/uv if you do not already have it, then paste the command below into the Terminal app. uv installs SkillSpector separately from your project. In the Terminal app, run this exact example: `skillspector scan https://github.com/NVIDIA/skillspector --no-llm`. It checks NVIDIA's own project without sending the skill text to an AI provider, the company or service running the model. It still sends declared dependency package names, their software ecosystem and exact versions when present to OSV.dev to look for known vulnerabilities; if OSV.dev is unavailable, it falls back to local data. Replace `https://github.com/NVIDIA/skillspector` with the GitHub address or other location of the skill you want to check. Read each finding and inspect the named file before deciding. Optional AI analysis can catch meaning that automated checks miss, but it sends the skill text to the AI provider and may use paid credits. A clean report lowers risk; it does not guarantee safety. Command: uv tool install git+https://github.com/NVIDIA/skillspector.git"
       }
     }
   ]
@@ -282,19 +282,19 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why use SkillSpector?</h2>
-          <div class="body">An <a href="../ai-101.html#e-agent">agent</a> <a href="../ai-101.html#e-skills">skill</a> is a saved set of instructions that tells an AI assistant how to do a task, and it may let that assistant use your files and tools. A repository, or repo, is the online project folder that holds the skill's files. Reading every line yourself is easy to skip and hard to do consistently. NVIDIA's SkillSpector checks for hidden instructions that try to override your request, called prompt injection, attempts to send private information elsewhere, called data exfiltration, excessive permissions, dangerous code and other risks. It then reports severity levels and a score, but its fixed-pattern check, called a static scan, is only a useful gate, not proof that a skill is safe, and false positives still need human review.</div>
+          <div class="body">An <a href="../ai-101.html#e-agent">agent</a> <a href="../ai-101.html#e-skills">skill</a> is a saved set of instructions that tells an AI assistant how to do a task, and it may let that assistant use your files and tools. A repository, or repo, is the online project folder that holds the skill's files. Reading every line yourself is easy to skip and hard to do consistently. NVIDIA's SkillSpector checks for hidden instructions that try to override your request, called prompt injection, attempts to send private information elsewhere, called data exfiltration, excessive permissions, dangerous code and other risks. It then reports severity levels and a score, but its non-AI check, called a static scan, is only a useful gate, not proof that a skill is safe. Harmless items can be flagged by mistake, called false positives, so every finding still needs human review.</div>
         </section>
         <section class="section">
           <h2>When should you use SkillSpector?</h2>
-          <div class="body">Run it before installing or updating a skill from outside a catalogue you already trust, or when reviewing a folder of skills used by Claude Code, Codex or another AI assistant. It can scan a <a href="../ai-101.html#e-github">GitHub</a> project address, a folder on your computer, a zip file or one SKILL.md file. The quick install requires Python 3.12 or newer and uv, a free Python package installer.</div>
+          <div class="body">Run it before installing or updating a skill from outside a catalogue you already trust, or when reviewing a folder of skills used by Claude Code, Codex or another AI assistant. It can scan a <a href="../ai-101.html#e-github">GitHub</a> project address, a folder on your computer, a zip file or one SKILL.md file, the main instruction file inside a skill. The quick install requires Python 3.12 or newer and uv, a free Python package installer.</div>
         </section>
         <section class="section">
           <h2>How do you install and use SkillSpector?</h2>
           <div class="body">
             <ol>
             <li>Install uv from docs.astral.sh/uv if you do not already have it, then paste the command below into the <a href="../ai-101.html#e-terminal">Terminal</a> app. uv installs SkillSpector separately from your project.</li>
-            <li>Run this exact example: `skillspector scan https://github.com/NVIDIA/skillspector --no-llm`. It checks NVIDIA's own project without sending the skill text to an AI provider, the company or service running the model. It still sends declared dependency package names, their software ecosystem and exact versions when present to OSV.dev to look for known vulnerabilities; if OSV.dev is unavailable, it falls back to local data. Replace `https://github.com/NVIDIA/skillspector` with the GitHub address or other location of the skill you want to check.</li>
-            <li>Read each finding and inspect the named file before deciding. Optional AI analysis can catch meaning that fixed patterns miss, but it sends the skill text to the AI provider and may use paid credits. A clean report lowers risk; it does not guarantee safety.</li>
+            <li>In the Terminal app, run this exact example: `skillspector scan https://github.com/NVIDIA/skillspector --no-llm`. It checks NVIDIA's own project without sending the skill text to an AI provider, the company or service running the model. It still sends declared dependency package names, their software ecosystem and exact versions when present to OSV.dev to look for known vulnerabilities; if OSV.dev is unavailable, it falls back to local data. Replace `https://github.com/NVIDIA/skillspector` with the GitHub address or other location of the skill you want to check.</li>
+            <li>Read each finding and inspect the named file before deciding. Optional AI analysis can catch meaning that automated checks miss, but it sends the skill text to the AI provider and may use paid credits. A clean report lowers risk; it does not guarantee safety.</li>
             </ol>
           <div class="specimen">
             <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
@@ -340,7 +340,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
   </div>
 
   <script src="../theme.js?v=03b89248"></script>
-  <script src="../tools.js?v=985f143f"></script>
+  <script src="../tools.js?v=954ab5cb"></script>
   <script src="../app.js?v=bd92a1d1"></script>
 </body>
 </html>
