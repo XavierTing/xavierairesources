@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 43 · Categories: 6 · Last updated: 28.08.2026
+- Tools listed: 42 · Categories: 6 · Last updated: 29.08.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1078,35 +1078,10 @@ Run it before installing or updating a skill from outside a catalogue you alread
 
 ---
 
-## 43. Maker School: AI Automation: Teaches you to build and sell AI automation
-
-- **Category:** Workflow
-- **Made by:** Nick Saraev
-- **Source:** https://www.skool.com/makerschool/about
-- **Page:** https://xaviertingai.com/tools/maker-school-ai-automation.html
-- **You'll need:** A Skool account, time to follow a daily roadmap, and a real business problem to practise on
-- **Cost:** US$184 per month when checked on 28 August 2026
-- **Curator's status:** Reviewed · Not tested
-
-**Why use Maker School: AI Automation?**
-Learning Claude Code, Codex and n8n is one job; turning that knowledge into a service a business will pay for is another. Maker School combines technical lessons with proposals, lead generation, sales material, coaching and a day-by-day route towards a first client. The provider advertises a full refund if you do not get a paying client within 90 days. That promise depends on its terms, so confirm the eligibility rules and evidence required before paying.
-
-**When should you use Maker School: AI Automation?**
-Use it when you want a structured path from building automations to finding and delivering work for a client, and you will use the coaching and community rather than only watch videos. It is a recurring paid membership, not a free tool. If you only need to learn one technical workflow, official documentation and a small practice project may be enough.
-
-**How do you install and use Maker School: AI Automation?**
-1. Open the project page and read the current curriculum, monthly price and written refund terms. Ask the provider to confirm the 90-day guarantee's eligibility and evidence requirements before you pay.
-2. Choose one real business process you can practise on safely, with test data rather than client information, and check that the roadmap covers both delivery and finding a buyer.
-3. Join only if the recurring cost and daily schedule fit. Treat templates as starting points, and test every automation before it touches a client's accounts or data.
-
-**Curator's note:** This is a paid course and community, not a free software tool. The link carries no referral code.
-
----
-
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills
-- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory, Maker School: AI Automation
+- **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki

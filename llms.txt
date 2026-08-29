@@ -48,7 +48,6 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [OKF Graph Wiki](https://xaviertingai.com/tools/okf-graph-wiki.html): Turns AI-written notes into a graph it can search properly
 - [Notion Plugin for Claude Code](https://xaviertingai.com/tools/notion-plugin-for-claude-code.html): Connects Claude Code to your Notion workspace
 - [SkillSpector](https://xaviertingai.com/tools/skillspector.html): Checks an AI skill before you install it
-- [Maker School: AI Automation](https://xaviertingai.com/tools/maker-school-ai-automation.html): Teaches you to build and sell AI automation
 
 ## Course
 

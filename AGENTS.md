@@ -104,7 +104,6 @@ Append one object to `TOOLS` and bump `LOG_UPDATED` (DD.MM.YYYY). Fields:
 | `maker` | Optional. Omit when the GitHub URL owner is the right answer (the site derives it). |
 | `needs` | Prerequisites in plain English, jargon glossed: "The uv helper, Python 3.10 or newer, an NVIDIA graphics card". |
 | `cost` | Honest, including the indirect part: "Free (the coding agent you point at it has its own plan)". Surfaces in `llms.txt` only; the tool page meta card deliberately does not show it. |
-| `schemaPrice` | Optional numeric string for a paid entry's current USD price in JSON-LD, such as `"184"`. Omit for a free entry, where the generator uses `0`. Keep the dated human-readable amount in `cost`. |
 | `why` | One paragraph. The problem a person actually has, then how this tool answers it, then honest scoping of what it is not. |
 | `when` | The situations you would reach for it, plus hard requirements and platform caveats. |
 | `how` | Exactly 3 imperative steps. Safety caveats live inside the step they belong to (fresh folder, disposable branch, review before keeping). |
