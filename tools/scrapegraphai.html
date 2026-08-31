@@ -211,7 +211,7 @@
       "name": "Why use ScrapeGraphAI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Copying facts from many web pages by hand is slow, while a scraper, code that collects data from pages, can stop working when a page layout changes. ScrapeGraphAI lets you describe the information you want, then combines a browser with a large language model (LLM), the AI system that interprets your request and the page, to produce organised results. It can also read web pages and text-based files stored on your computer. It does not make every site accessible or every result correct: you still manage browser setup, blocked-site handling, proxy servers that pass requests through another address, running many jobs and review of the extracted data."
+        "text": "Copying facts from many web pages by hand is slow, while a scraper, code that collects data from pages, can stop working when a page layout changes. ScrapeGraphAI lets you describe the information you want, then combines a browser with a large language model (LLM), the AI system that interprets your request and the page, to produce organised results. It can also read web pages and text-based files stored on your computer. It does not make every site accessible or every result correct: you still manage browser setup, blocked-site handling, proxy servers that pass requests through another address, running many jobs and review of the extracted data. Its current code enables telemetry, automatic usage reporting, by default and can send your prompt, requested output structure, page address, page content, model name and model response to ScrapeGraphAI's telemetry server."
       }
     },
     {
@@ -227,7 +227,7 @@
       "name": "How do you install and use ScrapeGraphAI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Check that Python 3.12 or newer is installed. Use Python's virtual-environment guide at https://docs.python.org/3/library/venv.html for your computer to create and activate a virtual environment, an isolated folder for this project's Python packages, so the install does not conflict with other projects. With that environment active, paste the command below into the Terminal app, the window where you type commands. It installs ScrapeGraphAI and Playwright's browser files for opening websites. Choose a local Ollama model or configure an outside AI provider. Before you run a test, check the website's terms and robots.txt instructions, use a public page you have permission to collect, and do not gather personal or restricted data or bypass access controls. An outside provider may receive your request and page content and may charge for usage. Check the result against the page before saving or acting on it. Command: pip install scrapegraphai && playwright install"
+        "text": "Check that Python 3.12 or a later 3.x release is installed. Use Python's virtual-environment guide at https://docs.python.org/3/library/venv.html for your computer to create and activate a virtual environment, an isolated folder for this project's Python packages, so the install does not conflict with other projects. With that environment active, paste the command below into the Terminal app, the window where you type commands. It installs ScrapeGraphAI and Playwright's browser files for opening websites. Choose a local Ollama model or configure an outside AI provider. Before you run a test, check the website's terms and robots.txt instructions, use a public page you have permission to collect, and do not gather personal or restricted data or bypass access controls. Telemetry starts enabled. To turn it off for the current run, put `from scrapegraphai.telemetry.telemetry import disable_telemetry` and then `disable_telemetry()` before the code that starts a graph. The README's `SCRAPEGRAPHAI_TELEMETRY_ENABLED=false` setting does not disable telemetry in the current code, so do not rely on it without checking a later release. An outside AI provider may also receive your request and page content and may charge for usage. Check the result against the page before saving or acting on it. Command: pip install scrapegraphai && playwright install"
       }
     }
   ]
@@ -274,7 +274,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Connections</p></div>
           <div><h2>Made by</h2><p>ScrapeGraphAI</p></div>
-          <div><h2>You'll need</h2><p>Python, a programming language, version 3.12 or newer; pip (Python's package installer); Playwright (a tool that opens websites for code); and either Ollama (an app that runs an AI model on your computer) or an account and API key (a secret access code) for an outside AI provider, a company or service that runs the model</p></div>
+          <div><h2>You'll need</h2><p>Python, a programming language, version 3.12 or a later 3.x release (the current package excludes Python 4); pip (Python's package installer); Playwright (a tool that opens websites for code); and either Ollama (an app that runs an AI model on your computer) or an account and API key (a secret access code) for an outside AI provider, a company or service that runs the model</p></div>
 
           <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/ScrapeGraphAI/Scrapegraph-ai#-quick-install" target="_blank" rel="noopener">GITHUB REPO ↗</a></p></div>
         </aside>
@@ -282,7 +282,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         <div class="sections">
         <section class="section">
           <h2>Why use ScrapeGraphAI?</h2>
-          <div class="body">Copying facts from many web pages by hand is slow, while a scraper, code that collects data from pages, can stop working when a page layout changes. ScrapeGraphAI lets you describe the information you want, then combines a browser with a large language model (LLM), the AI system that interprets your request and the page, to produce organised results. It can also read web pages and text-based files stored on your computer. It does not make every site accessible or every result correct: you still manage browser setup, blocked-site handling, proxy servers that pass requests through another address, running many jobs and review of the extracted data.</div>
+          <div class="body">Copying facts from many web pages by hand is slow, while a scraper, code that collects data from pages, can stop working when a page layout changes. ScrapeGraphAI lets you describe the information you want, then combines a browser with a large language model (LLM), the AI system that interprets your request and the page, to produce organised results. It can also read web pages and text-based files stored on your computer. It does not make every site accessible or every result correct: you still manage browser setup, blocked-site handling, proxy servers that pass requests through another address, running many jobs and review of the extracted data. Its current code enables telemetry, automatic usage reporting, by default and can send your prompt, requested output structure, page address, page content, model name and model response to ScrapeGraphAI's telemetry server.</div>
         </section>
         <section class="section">
           <h2>When should you use ScrapeGraphAI?</h2>
@@ -292,9 +292,9 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
           <h2>How do you install and use ScrapeGraphAI?</h2>
           <div class="body">
             <ol>
-            <li>Check that Python 3.12 or newer is installed. Use Python's virtual-environment guide at https://docs.python.org/3/library/venv.html for your computer to create and activate a virtual environment, an isolated folder for this project's Python packages, so the install does not conflict with other projects.</li>
+            <li>Check that Python 3.12 or a later 3.x release is installed. Use Python's virtual-environment guide at https://docs.python.org/3/library/venv.html for your computer to create and activate a virtual environment, an isolated folder for this project's Python packages, so the install does not conflict with other projects.</li>
             <li>With that environment active, paste the command below into the <a href="../ai-101.html#e-terminal">Terminal</a> app, the window where you type commands. It installs ScrapeGraphAI and Playwright's browser files for opening websites.</li>
-            <li>Choose a local Ollama model or configure an outside AI provider. Before you run a test, check the website's terms and robots.txt instructions, use a public page you have permission to collect, and do not gather personal or restricted data or bypass access controls. An outside provider may receive your request and page content and may charge for usage. Check the result against the page before saving or acting on it.</li>
+            <li>Choose a local Ollama model or configure an outside AI provider. Before you run a test, check the website's terms and robots.txt instructions, use a public page you have permission to collect, and do not gather personal or restricted data or bypass access controls. Telemetry starts enabled. To turn it off for the current run, put `from scrapegraphai.telemetry.telemetry import disable_telemetry` and then `disable_telemetry()` before the code that starts a graph. The README's `SCRAPEGRAPHAI_TELEMETRY_ENABLED=false` setting does not disable telemetry in the current code, so do not rely on it without checking a later release. An outside AI provider may also receive your request and page content and may charge for usage. Check the result against the page before saving or acting on it.</li>
             </ol>
           <div class="specimen">
             <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
@@ -340,7 +340,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
   </div>
 
   <script src="../theme.js?v=03b89248"></script>
-  <script src="../tools.js?v=7b52547e"></script>
+  <script src="../tools.js?v=d92c90e4"></script>
   <script src="../app.js?v=bd92a1d1"></script>
 </body>
 </html>
