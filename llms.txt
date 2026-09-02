@@ -49,6 +49,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Notion Plugin for Claude Code](https://xaviertingai.com/tools/notion-plugin-for-claude-code.html): Connects Claude Code to your Notion workspace
 - [SkillSpector](https://xaviertingai.com/tools/skillspector.html): Checks an AI skill before you install it
 - [ScrapeGraphAI](https://xaviertingai.com/tools/scrapegraphai.html): Turns websites and local files into the information you ask for
+- [HyperFrames](https://xaviertingai.com/tools/hyperframes.html): Builds a video out of a web page you can edit
 
 ## Course
 

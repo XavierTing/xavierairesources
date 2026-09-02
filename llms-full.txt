@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 43 · Categories: 6 · Last updated: 31.08.2026
+- Tools listed: 44 · Categories: 6 · Last updated: 02.09.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1104,9 +1104,35 @@ Use it when you need repeatable extraction from public pages or local files and 
 
 ---
 
+## 44. HyperFrames: Builds a video out of a web page you can edit
+
+- **Category:** Design
+- **Made by:** heygen-com
+- **Source:** https://github.com/heygen-com/hyperframes
+- **Page:** https://xaviertingai.com/tools/hyperframes.html
+- **You'll need:** Node.js version 22 or later, the free runtime from nodejs.org that lets your computer run JavaScript outside a browser; and FFmpeg, a free program that encodes video, which the renderer calls to write the MP4 file
+- **Cost:** Free and open source under the Apache 2.0 licence, which lets you use, change and ship the code. Rendering on your own computer costs nothing beyond the electricity it uses. HeyGen sells optional cloud rendering and there is a path that renders on Amazon's servers and bills to your own Amazon account, but neither is needed to use it.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx hyperframes init my-video`
+
+**Why use HyperFrames?**
+Making a short video usually means an editing app, where the work lives in a timeline nobody else can read and every change is made by hand. HyperFrames takes the opposite route: you write a web page, and it photographs that page frame by frame in a hidden browser, then encodes those frames into a video. The useful part is what that makes possible for an AI assistant, which already writes HTML well and cannot drive a timeline at all. It also renders the same input to the same file every time, so a video can be rebuilt automatically when the numbers behind it change. It is not an editing app and will not replace one for filmed footage: it is for pieces assembled out of text, data and motion.
+
+**When should you use HyperFrames?**
+Reach for it when the video is made of things you already hold as text or data: a product announcement, a chart that animates, release notes over captions, or one template rendered twenty times with different numbers. It suits work you want repeated on a schedule rather than crafted once. Skip it when the job is cutting real footage. Note that rendering runs on your own machine, so a long video takes real time and processing power.
+
+**How do you install and use HyperFrames?**
+1. Install Node.js version 22 or later from nodejs.org, and FFmpeg using the instructions at ffmpeg.org for your computer. Both are free.
+2. Paste the command below into the Terminal app, the window where you type commands. It creates a new folder called my-video with a working example inside, so nothing you already have is touched.
+3. Move into that folder and run npx hyperframes preview to watch it in a browser while you edit, then npx hyperframes render to write the MP4 file. If you would rather your assistant do the writing, run npx hyperframes skills update inside the folder to teach it the workflow, then ask in plain words for the video you want.
+
+**Curator's note:** The closest thing to a spreadsheet for video: the source is readable, a change is one edit, and the same input always produces the same file. It is inspired by Remotion but bets on plain HTML rather than React, which is exactly why an agent can write it.
+
+---
+
 ## Categories
 
-- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills
+- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills, HyperFrames
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code, ScrapeGraphAI
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector

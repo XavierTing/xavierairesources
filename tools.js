@@ -1079,8 +1079,33 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The open-source version gives you control, but its current telemetry default can send page content and results to ScrapeGraphAI. Disable that reporting before handling sensitive material, then start with one permitted page and measure accuracy and model cost before you scale it."
   },
+  {
+    num: "44",
+    makerType: "org",
+    added: "2026-09-02",
+    updated: "2026-09-02",
+    name: "HyperFrames",
+    category: "Design",
+    tagline: "Builds a video out of a web page you can edit",
+    blurb: "HyperFrames renders an ordinary HTML page, the same markup a website is built from, into an MP4 video file. Because the source is a page rather than a timeline inside an editing app, an AI agent can write it, change one line, and render it again.",
+    repo: "https://github.com/heygen-com/hyperframes",
+    repoLabel: "GITHUB REPO",
+    needs: "Node.js version 22 or later, the free runtime from nodejs.org that lets your computer run JavaScript outside a browser; and FFmpeg, a free program that encodes video, which the renderer calls to write the MP4 file",
+    cost: "Free and open source under the Apache 2.0 licence, which lets you use, change and ship the code. Rendering on your own computer costs nothing beyond the electricity it uses. HeyGen sells optional cloud rendering and there is a path that renders on Amazon's servers and bills to your own Amazon account, but neither is needed to use it.",
+    why: "Making a short video usually means an editing app, where the work lives in a timeline nobody else can read and every change is made by hand. HyperFrames takes the opposite route: you write a web page, and it photographs that page frame by frame in a hidden browser, then encodes those frames into a video. The useful part is what that makes possible for an AI assistant, which already writes HTML well and cannot drive a timeline at all. It also renders the same input to the same file every time, so a video can be rebuilt automatically when the numbers behind it change. It is not an editing app and will not replace one for filmed footage: it is for pieces assembled out of text, data and motion.",
+    when: "Reach for it when the video is made of things you already hold as text or data: a product announcement, a chart that animates, release notes over captions, or one template rendered twenty times with different numbers. It suits work you want repeated on a schedule rather than crafted once. Skip it when the job is cutting real footage. Note that rendering runs on your own machine, so a long video takes real time and processing power.",
+    how: [
+      "Install Node.js version 22 or later from nodejs.org, and FFmpeg using the instructions at ffmpeg.org for your computer. Both are free.",
+      "Paste the command below into the Terminal app, the window where you type commands. It creates a new folder called my-video with a working example inside, so nothing you already have is touched.",
+      "Move into that folder and run npx hyperframes preview to watch it in a browser while you edit, then npx hyperframes render to write the MP4 file. If you would rather your assistant do the writing, run npx hyperframes skills update inside the folder to teach it the workflow, then ask in plain words for the video you want."
+    ],
+    command: "npx hyperframes init my-video",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The closest thing to a spreadsheet for video: the source is readable, a change is one edit, and the same input always produces the same file. It is inspired by Remotion but bets on plain HTML rather than React, which is exactly why an agent can write it."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "31.08.2026";
+const LOG_UPDATED = "02.09.2026";
