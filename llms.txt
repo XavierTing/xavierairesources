@@ -50,6 +50,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [SkillSpector](https://xaviertingai.com/tools/skillspector.html): Checks an AI skill before you install it
 - [ScrapeGraphAI](https://xaviertingai.com/tools/scrapegraphai.html): Turns websites and local files into the information you ask for
 - [HyperFrames](https://xaviertingai.com/tools/hyperframes.html): Builds a video out of a web page you can edit
+- [Google Maps Scraper Kit](https://xaviertingai.com/tools/google-maps-scraper-kit.html): Turns Google Maps searches into business contact lists
 
 ## Course
 

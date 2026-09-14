@@ -1104,8 +1104,32 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The closest thing to a spreadsheet for video: the source is readable, a change is one edit, and the same input always produces the same file. It is inspired by Remotion but bets on plain HTML rather than React, which is exactly why an agent can write it."
   },
+  {
+    num: "45",
+    added: "2026-09-14",
+    updated: "2026-09-14",
+    name: "Google Maps Scraper Kit",
+    category: "Connections",
+    tagline: "Turns Google Maps searches into business contact lists",
+    blurb: "Give it a business type and city. It runs a scraper on your computer and saves names, phones, websites, ratings and addresses to a spreadsheet file. Google may block heavy use.",
+    repo: "https://github.com/Mahanaicoach/google-maps-scraper-kit",
+    repoLabel: "GITHUB REPO",
+    needs: "Docker Desktop (free from docker.com), Python 3 (free from python.org) and Git (free from git-scm.com). Claude Code is optional",
+    cost: "Free under the MIT licence. Claude Code has its own plan, and proxy services for large or repeated jobs may cost extra.",
+    why: "Finding a list of local businesses normally means copying one Google Maps result at a time or paying for a lead database. Google Maps Scraper Kit uses Docker Desktop, software that runs the scraper separately from your other apps, and gives Claude Code a saved skill for starting searches, waiting for results and saving spreadsheet files. It can also visit each business website to look for an email address. It is not an official Google tool. The repository says scraping Google Maps is against Google's terms, and Google may temporarily block your internet address if you run too much at once.",
+    when: "Use it for a small, focused list of public business details, such as finding nearby suppliers or building an outreach list you will check before contacting anyone. Start with one search at depth 5, which tells the scraper to scroll through a small number of result pages, because large or repeated jobs can be blocked. On Macs with M-series chips, the current scraper may run more slowly because it was built for a different processor. On Windows, use the included Python script rather than the shell script. Email collection visits the businesses' own websites and is enabled automatically after the first test unless you keep the `--no-email` option. Treat phone numbers and email addresses as personal data. Do not use the tool to collect information about individuals, send spam or bypass access controls. Follow the website's terms and the privacy and marketing laws that apply to your use.",
+    how: [
+      "Install Docker Desktop from docker.com/products/docker-desktop, Python 3 from python.org/downloads and Git from git-scm.com/downloads. Open the Terminal app, the window where you type commands, and run `docker --version`, `docker compose version`, `python3 --version` and `git --version`. On Windows, use `py --version` if `python3 --version` is not recognised. Open Docker Desktop and wait until it says the engine is running, then run `docker info`. Continue only if the version checks and `docker info` finish without an error.",
+      "Paste the command below to copy the repository into a fresh folder. Then run `cd google-maps-scraper-kit`, followed by `docker compose up -d`. Open `http://localhost:8080/api/v1/jobs` in your browser and continue only if it shows a JSON list, a line of structured text inside square brackets. The file named docker-compose.yml must keep `127.0.0.1:8080:8080`; this prevents the service, which has no login, from being opened to the public internet.",
+      "Run `python3 scripts/scrape.py \"coffee shops\" --city \"Austin, TX\" --depth 5 --no-email` for a small first test. On Windows, replace `python3` with `py` if that is the command that passed the version check. The place name goes to OpenStreetMap's Nominatim service to find its coordinates, then the scraper searches Google Maps and saves a spreadsheet file named `results-<job>.csv` in the project folder. Check a sample against the original listings. Remove `--no-email` only when you need public business emails and can handle that personal data lawfully. Stop the service afterwards with `docker compose down`."
+    ],
+    command: "git clone https://github.com/Mahanaicoach/google-maps-scraper-kit.git",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "A useful local wrapper around gosom's scraper, with a ready-made Claude skill and spreadsheet output. Start without email collection, keep it on your own computer and check every result. The repository itself says Maps scraping is against Google's terms."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "02.09.2026";
+const LOG_UPDATED = "14.09.2026";
