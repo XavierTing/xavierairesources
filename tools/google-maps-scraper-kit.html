@@ -154,7 +154,7 @@
       },
       "author": {
         "@type": "Person",
-        "name": "Mahanaicoach"
+        "name": "Mahan Ai"
       },
       "installUrl": "https://github.com/Mahanaicoach/google-maps-scraper-kit",
       "softwareHelp": "https://github.com/Mahanaicoach/google-maps-scraper-kit"
@@ -219,7 +219,7 @@
       "name": "When should you use Google Maps Scraper Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use it for a small, focused list of public business details, such as finding nearby suppliers or building an outreach list you will check before contacting anyone. Start with one search at depth 5, which tells the scraper to scroll through a small number of result pages, because large or repeated jobs can be blocked. On Macs with M-series chips, the current scraper may run more slowly because it was built for a different processor. On Windows, use the included Python script rather than the shell script. Email collection visits the businesses' own websites and is enabled automatically after the first test unless you keep the `--no-email` option. Treat phone numbers and email addresses as personal data. Do not use the tool to collect information about individuals, send spam or bypass access controls. Follow the website's terms and the privacy and marketing laws that apply to your use."
+        "text": "Use it for a small, focused list of public business details, such as finding nearby suppliers or building an outreach list you will check before contacting anyone. Start with one search at depth 5, which tells the scraper to scroll through a small number of result pages, because large or repeated jobs can be blocked. On Macs with M-series chips, the current scraper may run more slowly because it was built for a different processor. On Windows, use the included Python script rather than the shell script. Email collection visits the businesses' own websites and is enabled automatically after the first test unless you keep the `--no-email` option. Treat phone numbers and email addresses as personal data, use them only with a lawful reason and honour requests not to be contacted. Do not use the tool to collect information about individuals, send spam or bypass access controls. Follow the website's terms and the privacy and marketing laws that apply to your use."
       }
     },
     {
@@ -227,7 +227,7 @@
       "name": "How do you install and use Google Maps Scraper Kit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install Docker Desktop from docker.com/products/docker-desktop, Python 3 from python.org/downloads and Git from git-scm.com/downloads. Open the Terminal app, the window where you type commands, and run `docker --version`, `docker compose version`, `python3 --version` and `git --version`. On Windows, use `py --version` if `python3 --version` is not recognised. Open Docker Desktop and wait until it says the engine is running, then run `docker info`. Continue only if the version checks and `docker info` finish without an error. Paste the command below to copy the repository into a fresh folder. Then run `cd google-maps-scraper-kit`, followed by `docker compose up -d`. Open `http://localhost:8080/api/v1/jobs` in your browser and continue only if it shows a JSON list, a line of structured text inside square brackets. The file named docker-compose.yml must keep `127.0.0.1:8080:8080`; this prevents the service, which has no login, from being opened to the public internet. Run `python3 scripts/scrape.py \"coffee shops\" --city \"Austin, TX\" --depth 5 --no-email` for a small first test. On Windows, replace `python3` with `py` if that is the command that passed the version check. The place name goes to OpenStreetMap's Nominatim service to find its coordinates, then the scraper searches Google Maps and saves a spreadsheet file named `results-\u003cjob>.csv` in the project folder. Check a sample against the original listings. Remove `--no-email` only when you need public business emails and can handle that personal data lawfully. Stop the service afterwards with `docker compose down`. Command: git clone https://github.com/Mahanaicoach/google-maps-scraper-kit.git"
+        "text": "Install Docker Desktop from docker.com/products/docker-desktop, Python 3 from python.org/downloads and Git from git-scm.com/downloads. Open the Terminal app, the window where you type commands, and run `docker --version`, `docker compose version`, `python3 --version` and `git --version`. On Windows, use `py --version` if `python3 --version` is not recognised. Open Docker Desktop and wait until it says the engine is running, then run `docker info`. Continue only if the version checks and `docker info` finish without an error. Paste the command below to copy the repository into a fresh folder. Then run `cd google-maps-scraper-kit`, followed by `docker compose up -d`. Open `http://localhost:8080/api/v1/jobs` in your browser and continue only if it shows a JSON list, a line of structured text inside square brackets. The file named docker-compose.yml must keep `127.0.0.1:8080:8080`; this prevents the service, which has no login, from being opened to the public internet. Run `python3 scripts/scrape.py \"coffee shops\" --city \"Austin, TX\" --depth 5 --no-email` for a small first test. On Windows, replace `python3` with `py` if that is the command that passed the version check. The place name goes to OpenStreetMap's Nominatim service to find its coordinates, then the scraper searches Google Maps and saves a spreadsheet file named `results-\u003cjob>.csv` in the project folder. Check a sample against the original listings. Remove `--no-email` only when you need public business emails and can handle that personal data lawfully. Run `docker compose down` when finished. Job data remains in the Docker storage volume; the project's SETUP guide shows how to delete one job, or you can run `docker compose down -v` instead when you intend to erase every saved scraper job. Command: git clone https://github.com/Mahanaicoach/google-maps-scraper-kit.git"
       }
     }
   ]
@@ -273,7 +273,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
 
         <aside class="meta">
           <div><h2>Category</h2><p class="meta-cat">Connections</p></div>
-          <div><h2>Made by</h2><p>Mahanaicoach</p></div>
+          <div><h2>Made by</h2><p>Mahan Ai</p></div>
           <div><h2>You'll need</h2><p>Docker Desktop (free from docker.com), Python 3 (free from python.org) and Git (free from git-scm.com). Claude Code is optional</p></div>
 
           <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/Mahanaicoach/google-maps-scraper-kit" target="_blank" rel="noopener">GITHUB REPO ↗</a></p></div>
@@ -286,7 +286,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
         </section>
         <section class="section">
           <h2>When should you use Google Maps Scraper Kit?</h2>
-          <div class="body">Use it for a small, focused list of public business details, such as finding nearby suppliers or building an outreach list you will check before contacting anyone. Start with one search at depth 5, which tells the scraper to scroll through a small number of result pages, because large or repeated jobs can be blocked. On Macs with M-series chips, the current scraper may run more slowly because it was built for a different processor. On Windows, use the included Python script rather than the shell script. Email collection visits the businesses' own websites and is enabled automatically after the first test unless you keep the `--no-email` option. Treat phone numbers and email addresses as personal data. Do not use the tool to collect information about individuals, send spam or bypass access controls. Follow the website's terms and the privacy and marketing laws that apply to your use.</div>
+          <div class="body">Use it for a small, focused list of public business details, such as finding nearby suppliers or building an outreach list you will check before contacting anyone. Start with one search at depth 5, which tells the scraper to scroll through a small number of result pages, because large or repeated jobs can be blocked. On Macs with M-series chips, the current scraper may run more slowly because it was built for a different processor. On Windows, use the included Python script rather than the shell script. Email collection visits the businesses' own websites and is enabled automatically after the first test unless you keep the `--no-email` option. Treat phone numbers and email addresses as personal data, use them only with a lawful reason and honour requests not to be contacted. Do not use the tool to collect information about individuals, send spam or bypass access controls. Follow the website's terms and the privacy and marketing laws that apply to your use.</div>
         </section>
         <section class="section">
           <h2>How do you install and use Google Maps Scraper Kit?</h2>
@@ -294,7 +294,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
             <ol>
             <li>Install Docker Desktop from docker.com/products/docker-desktop, Python 3 from python.org/downloads and Git from git-scm.com/downloads. Open the <a href="../ai-101.html#e-terminal">Terminal</a> app, the window where you type commands, and run `docker --version`, `docker compose version`, `python3 --version` and `git --version`. On Windows, use `py --version` if `python3 --version` is not recognised. Open Docker Desktop and wait until it says the engine is running, then run `docker info`. Continue only if the version checks and `docker info` finish without an error.</li>
             <li>Paste the command below to copy the repository into a fresh folder. Then run `cd google-maps-scraper-kit`, followed by `docker compose up -d`. Open `http://localhost:8080/api/v1/jobs` in your browser and continue only if it shows a JSON list, a line of structured text inside square brackets. The file named docker-compose.yml must keep `127.0.0.1:8080:8080`; this prevents the service, which has no login, from being opened to the public internet.</li>
-            <li>Run `python3 scripts/scrape.py &quot;coffee shops&quot; --city &quot;Austin, TX&quot; --depth 5 --no-email` for a small first test. On Windows, replace `python3` with `py` if that is the command that passed the version check. The place name goes to OpenStreetMap's Nominatim service to find its coordinates, then the scraper searches Google Maps and saves a spreadsheet file named `results-&lt;job&gt;.csv` in the project folder. Check a sample against the original listings. Remove `--no-email` only when you need public business emails and can handle that personal data lawfully. Stop the service afterwards with `docker compose down`.</li>
+            <li>Run `python3 scripts/scrape.py &quot;coffee shops&quot; --city &quot;Austin, TX&quot; --depth 5 --no-email` for a small first test. On Windows, replace `python3` with `py` if that is the command that passed the version check. The place name goes to OpenStreetMap's Nominatim service to find its coordinates, then the scraper searches Google Maps and saves a spreadsheet file named `results-&lt;job&gt;.csv` in the project folder. Check a sample against the original listings. Remove `--no-email` only when you need public business emails and can handle that personal data lawfully. Run `docker compose down` when finished. Job data remains in the Docker storage volume; the project's SETUP guide shows how to delete one job, or you can run `docker compose down -v` instead when you intend to erase every saved scraper job.</li>
             </ol>
           <div class="specimen">
             <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
@@ -340,7 +340,7 @@ try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttrib
   </div>
 
   <script src="../theme.js?v=03b89248"></script>
-  <script src="../tools.js?v=fc4ae645"></script>
+  <script src="../tools.js?v=66375a93"></script>
   <script src="../app.js?v=bd92a1d1"></script>
 </body>
 </html>
