@@ -4,6 +4,18 @@
 # search engines the move is permanent, so the ranking the netlify.app URL has
 # earned transfers to the new domain instead of competing with it. :splat keeps
 # the path, so an existing link to /tools/context7.html lands on the same page.
+#
+# The bare root needs its own rule, listed first. Netlify resolves "/" to the
+# published index.html before the redirect engine runs, so the /* splat below
+# redirects every path except the one Google actually has indexed. Confirmed
+# live on 2026-09-18: /index.html and /tools/context7.html both 301 correctly;
+# only / served 200, still showing the July snapshot search engines rank.
+
+[[redirects]]
+  from = "/"
+  to = "https://xaviertingai.com/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
