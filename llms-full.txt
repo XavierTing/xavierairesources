@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 45 · Categories: 6 · Last updated: 14.09.2026
+- Tools listed: 46 · Categories: 6 · Last updated: 02.10.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1156,11 +1156,37 @@ Use it for a small, focused list of public business details, such as finding nea
 
 ---
 
+## 46. DaVinci Resolve MCP Bridge: Lets your AI assistant edit video inside DaVinci Resolve
+
+- **Category:** Connections
+- **Made by:** hiteshK03
+- **Source:** https://github.com/hiteshK03/davinci-resolve-mcp
+- **Page:** https://xaviertingai.com/tools/davinci-resolve-mcp-bridge.html
+- **You'll need:** DaVinci Resolve 18 or later, the video editor (the free version works, from blackmagicdesign.com); Python 3.9 or later, the free programming language the bridge runs on (from python.org); Git, the free tool that copies the project to your computer (from git-scm.com); and Claude Desktop, Claude Code or Cursor. The ChatGPT and Claude websites cannot connect to apps on your computer, so they will not work
+- **Cost:** Free under the MIT licence, which lets you use and change the code. Resolve's free version is enough. The voice separation, subtitles and background removal run on your own computer with no account or usage fee. Your AI assistant has its own plan.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `git clone https://github.com/hiteshK03/davinci-resolve-mcp.git`
+
+**Why use DaVinci Resolve MCP Bridge?**
+Editing in DaVinci Resolve means a lot of clicking through deep menus for jobs that are easy to describe: add a marker wherever someone speaks, put one colour look on every clip, export the timeline as an MP4 video file. The bridge lets your assistant do those jobs for you. It comes in two pieces. The first, a file called CursorBridge.py, runs inside Resolve from its Scripts menu and listens for instructions that only your own computer can send. The second, resolve_mcp_bridge.py, runs alongside your assistant and passes its requests to the first piece using MCP, the standard way to plug an assistant into another app. Working from inside Resolve is why it runs on the free version; similar tools rely on a feature only the paid Studio edition unlocks. Seven of its 162 actions normally need Studio's built-in AI, and for those it uses free AI models that run on your own computer instead, which still work but are slower. It is one developer's project, released in a single batch in March 2026 and not updated since, so a later Resolve release could break it.
+
+**When should you use DaVinci Resolve MCP Bridge?**
+Reach for it on repetitive jobs you can describe in a sentence: marking every mention of a topic, turning speech into subtitles, separating a voice from background music, applying one look to many clips, or exporting several versions. It suits people who already know Resolve and want to skip the menus, not people learning to edit. It runs on Windows, Mac and Linux, but the developer built it on Windows and some of its actions expect Windows-style file locations, so on a Mac try importing and exporting one short clip before relying on it. The voice, subtitle and background tools download a large AI library and models the first time you use them, often several gigabytes, so start on a good connection with free disk space.
+
+**How do you install and use DaVinci Resolve MCP Bridge?**
+1. Install DaVinci Resolve, Python and Git. Open the Terminal app, the window where you type commands, paste the command below and press Enter: it copies the project into a new folder called davinci-resolve-mcp. Then type each of these, pressing Enter after each one: `cd davinci-resolve-mcp` to move into that folder, `python3 -m venv venv` to make a private folder for the bridge's add-on code, `source venv/bin/activate` to switch to it (on Windows, type `venv\Scripts\activate` and use `py` wherever you see `python3`), and `pip install -r requirements.txt` to install that code. It is finished when the Terminal shows a new line ready for typing and no red error text.
+2. Copy the first piece, the file src/CursorBridge.py inside the new folder, into Resolve's scripts folder. On a Mac that is ~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Utility/ (in Finder choose Go, then Go to Folder, and paste it); the Windows and Linux locations are in the project's README file. Then connect the second piece to your assistant. In Claude Desktop, open Settings, then Developer, then Edit Config, and add a server named davinci-resolve whose command is the Python inside the venv folder and whose argument is src/resolve_mcp_bridge.py. Use full locations for both: drag each file onto the Terminal window and it prints its full location for you to copy. Restart Claude Desktop afterwards.
+3. Open a copy of a project rather than your only copy of real work, because the assistant can delete clips, timelines and whole projects. In Resolve choose Workspace, then Scripts, then CursorBridge; a small console window opens and says the bridge is running. Repeat this each time you open Resolve. Then, in your assistant's chat, ask in plain words for something you can check, such as adding a marker at five seconds, before you trust it with anything larger.
+
+**Curator's note:** Running the first piece inside Resolve is what gets it past the Studio-only restriction that stops similar tools on the free version. It is also a single release from one developer with full delete access to your projects, so test it on a copy and keep your own backups.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills, HyperFrames
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
-- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code, ScrapeGraphAI, Google Maps Scraper Kit
+- **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code, ScrapeGraphAI, Google Maps Scraper Kit, DaVinci Resolve MCP Bridge
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki
 - **Writing**: Humanizer
