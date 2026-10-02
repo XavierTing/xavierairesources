@@ -1154,6 +1154,30 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "Running the first piece inside Resolve is what gets it past the Studio-only restriction that stops similar tools on the free version. It is also a single release from one developer with full delete access to your projects, so test it on a copy and keep your own backups."
   },
+  {
+    num: "47",
+    added: "2026-10-02",
+    updated: "2026-10-02",
+    name: "OpenMontage",
+    category: "Design",
+    tagline: "Turns your coding assistant into a video production crew",
+    blurb: "You describe a video in plain words and your coding assistant takes it through seven stages, from research and script to a finished MP4 file, stopping for your approval at each creative decision. With no paid accounts at all it narrates with a free offline voice and cuts real footage from open archives such as NASA and Wikimedia Commons.",
+    repo: "https://github.com/calesthio/OpenMontage",
+    repoLabel: "GITHUB REPO",
+    needs: "Python 3.10 or newer, the free programming language most of it runs on (from python.org); Node.js 18 or newer, the free program that lets your computer run JavaScript, the language of web pages, outside a browser (from nodejs.org); FFmpeg, a free program that writes the finished video file (from ffmpeg.org); Git, the free tool that copies the project to your computer (from git-scm.com); and a coding assistant that can read files and run commands on your computer, such as Claude Code, Cursor or Codex",
+    cost: "Free under the AGPLv3 licence, which lets you use and change the code but requires you to share your changed version if you let other people use it over the internet. Without any service keys, the private passwords that paid online services issue so a program can bill your account, it costs nothing: free voice, open archive footage, free rendering on your own computer. Paid image, video, voice and music services are optional, and the project's own example videos cost about one to five US dollars each in those services. Your coding assistant has its own plan, and one full production runs many steps on it.",
+    why: "Making even a short explainer video means a pile of separate jobs: finding facts, writing a script, finding or making pictures, recording a voice, adding music and captions, then editing it all together. OpenMontage hands that whole chain to your coding assistant. There is no app to click through: the project is a folder of instruction files, which it calls director skills, one for each stage (research, proposal, script, scene plan, assets, edit, compose), plus more than a hundred small tools the assistant runs. The assistant reads the instructions for each stage, does the work, checks its own result and asks you before every creative choice. It also shows you a cost estimate before it spends anything on paid services, and opens a local page called Backlot where you watch the stages fill in and approve each scene before the final render, the step where everything is combined into the video file. It is not a video editor you work in by hand, and how good the result is depends on how well your assistant follows a long set of instructions.",
+    when: "Reach for it when you want a whole video made from an idea: an explainer for a class, a short documentary cut from archive footage, captions and a voice added to a talk, or one long recording cut into short clips. It also works from a video you like: give it a YouTube link and it proposes two or three original versions with the same pacing. Skip it when you need precise control over every cut, where an ordinary editor is faster. It runs on Windows, Mac and Linux. Setup downloads a large amount of add-on code and some paths fetch more the first time you use them, so start on a good connection with free disk space, and a long video takes real time to build into its final file on your own computer.",
+    how: [
+      "Install Python, Node.js, FFmpeg and Git. Open the Terminal app, the window where you type commands, paste the command below and press Enter: it copies the project into a new folder called OpenMontage. Then type `cd OpenMontage` and press Enter to move into that folder.",
+      "Type `make setup` and press Enter to install everything the project needs into that folder. It is finished when the Terminal shows a new line ready for typing and no red error text. On Windows, which usually lacks the make command, the README file, the introduction page shown on the project's GitHub page, gives one longer line to paste instead. Setup also creates a file called .env inside the folder for service keys, the private passwords that paid services such as image or voice makers give you; your computer may hide it because its name starts with a dot. Leave it empty for now: everything you need for a first video is free.",
+      "Open the OpenMontage folder in your coding assistant (in Claude Code, type `claude` in the Terminal while inside the folder) and ask in plain words for something short, such as a 30-second explainer about why the sky is blue. Read and approve each stage as it asks, and only add paid service keys to the .env file once you have seen what the free path produces and checked the cost estimate it shows you."
+    ],
+    command: "git clone https://github.com/calesthio/OpenMontage.git",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The most complete attempt yet at making a coding assistant do a production team's job, and the real-footage path makes a proper video without any paid service. It is a large, fast-moving project carrying sponsor messages in its README, so expect long runs, and check facts in the research stage before you publish."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
