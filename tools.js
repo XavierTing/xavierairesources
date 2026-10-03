@@ -1178,8 +1178,33 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The most complete attempt yet at making a coding assistant do a production team's job, and the real-footage path makes a proper video without any paid service. It is a large, fast-moving project carrying sponsor messages in its README, so expect long runs, and check facts in the research stage before you publish."
   },
+  {
+    num: "48",
+    added: "2026-10-03",
+    updated: "2026-10-03",
+    name: "CLI-Anything",
+    makerType: "org",
+    category: "Connections",
+    tagline: "Builds a typed-command remote control for open-source apps",
+    blurb: "Install it inside Claude Code and point it at an app's source code. Claude then writes a command-line tool for that app: typed commands such as open, filter and export, which your assistant can run instead of clicking. About 80 apps, including Blender and LibreOffice, already have one.",
+    repo: "https://github.com/HKUDS/CLI-Anything#-claude-code",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code, Anthropic's coding assistant that you talk to in a typed-command window; Python 3.10 or later (free from python.org); and the source code of the app you want to control, meaning the human-readable files it was built from, which open-source apps publish for free. The app itself must be installed too, because the commands drive the real program. Macs need nothing extra. On Windows, also install Git for Windows (free from git-scm.com), which supplies the command tools it relies on",
+    cost: "Free and open source under the Apache 2.0 licence. Building a new tool is a long session with your most capable model, so it uses a large share of your Claude plan's usage; the ready-made tools in its marketplace cost nothing to install.",
+    why: "AI assistants are good at typing commands and poor at clicking through an app's screens, so most desktop software stays out of their reach. CLI-Anything gives an app a command-line tool, a set of typed commands such as one to open a project, one to apply a filter and one to export the result. With one in place you can ask your assistant to brighten fifty photos and save them as JPGs, and it does the job in the photo editor without you touching it. To build a tool, it reads the app's source code, designs and writes the commands, tests them against the real program, and installs the result. It needs that source code, not screenshots, so it suits open-source apps and your own projects, not most commercial software. Its own documentation says a first build often misses features and needs another pass, and that it needs a top model such as Claude Opus or Sonnet; a smaller model produces commands you will have to fix.",
+    when: "Reach for it when you want your assistant to operate an open-source desktop app you use often, such as an image editor, a 3D tool, an office suite or a diagram tool, and take repetitive work off your hands. Check its marketplace first, because about 80 apps already have a finished tool you can install with one command. Build your own only when yours is missing, and set aside a long session for it. It is not for closed-source apps you only have as a finished download.",
+    how: [
+      "Open Claude Code and type the command below to add the CLI-Anything marketplace, a free catalogue of add-ons. Then type `/plugin install cli-anything` to install the add-on itself.",
+      "Install the app you want to control. Then, in the Terminal app, the window where you type commands, copy its source code from its GitHub page by typing `git clone` followed by that page's address. This makes a new folder named after the app, for example gimp.",
+      "Back in Claude Code, from the folder that holds the new one, type `/cli-anything ./gimp` (the ./ means the gimp folder right here) and let it work through its build. Then ask in plain words for a small job, such as resizing one picture, and use copies of your files: the commands change real files, so a mistake would change your originals. If a feature is missing, type `/cli-anything:refine ./gimp` to add it."
+    ],
+    command: "/plugin marketplace add HKUDS/CLI-Anything",
+    commandTarget: "claude",
+    status: "Reviewed · Not tested",
+    note: "The marketplace is as useful as the generator: check it first, because installing a finished, tested tool beats spending a long session building one that already exists."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "02.10.2026";
+const LOG_UPDATED = "03.10.2026";

@@ -53,6 +53,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Google Maps Scraper Kit](https://xaviertingai.com/tools/google-maps-scraper-kit.html): Turns Google Maps searches into business contact lists
 - [DaVinci Resolve MCP Bridge](https://xaviertingai.com/tools/davinci-resolve-mcp-bridge.html): Lets your AI assistant edit video inside DaVinci Resolve
 - [OpenMontage](https://xaviertingai.com/tools/openmontage.html): Turns your coding assistant into a video production crew
+- [CLI-Anything](https://xaviertingai.com/tools/cli-anything.html): Builds a typed-command remote control for open-source apps
 
 ## Course
 
