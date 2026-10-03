@@ -1203,6 +1203,58 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The marketplace is as useful as the generator: check it first, because installing a finished, tested tool beats spending a long session building one that already exists."
   },
+  {
+    num: "49",
+    added: "2026-10-03",
+    updated: "2026-10-03",
+    name: "prompts.chat",
+    category: "Website",
+    maker: "Fatih Kadir Akın",
+    makerType: "person",
+    tagline: "Gives you thousands of shared prompts to copy and adapt",
+    blurb: "A free library of prompts, the written instructions you give an AI, shared by thousands of people and sorted by task. It began in 2022 as Awesome ChatGPT Prompts and is one of the most popular collections of its kind. No account is needed to browse or copy.",
+    repo: "https://prompts.chat/",
+    repoLabel: "VISIT SITE",
+    needs: "A web browser. An account is optional and only needed to save your own collections",
+    cost: "Free, with no account needed to browse or copy. The code behind it is open source, so an organisation can also run its own private copy.",
+    why: "A blank chat box is the hardest place to start: you know roughly what you want but not how to ask for it. prompts.chat is a shared library of prompts that other people have already written and used, grouped by job, such as coding, writing, images and research. Many ask the AI to take on a role, like a careful editor or a patient tutor. You find one close to your task, copy it, and change the details to fit. Reading a few good prompts is also the quickest way to learn how they are put together. It is a community collection rather than a checked one, so quality varies from entry to entry, and a prompt written for one AI app can behave differently in another.",
+    when: "Reach for it when you are starting a new kind of task and want a working example of how to ask, or when an answer keeps missing the mark and you want to see how someone else framed the same request. It is most useful early on, while you are still learning what a precise prompt looks like.",
+    how: [
+      "Open prompts.chat and search for the job you have in mind, such as code review, product description or interview practice, or browse a category.",
+      "Read the prompt in full before you copy it. Swap its placeholders, the parts in brackets such as [your topic], for your own details, and remove any part that does not fit your task.",
+      "Paste it into the AI you use and judge the answer, not the prompt's popularity. If it is close but not right, change one instruction at a time and try again."
+    ],
+    command: null,
+    commandTarget: null,
+    status: "Reviewed · Not tested",
+    note: "Best read as a set of worked examples rather than a shelf of finished answers: the value is seeing how good prompts are structured, then writing your own."
+  },
+  {
+    num: "50",
+    added: "2026-10-03",
+    updated: "2026-10-03",
+    name: "Refero Styles",
+    category: "Website",
+    maker: "Refero",
+    makerType: "org",
+    tagline: "Gives your AI the design rulebook of a site you admire",
+    blurb: "More than 2,000 design systems, each a site's rulebook for colours, fonts and spacing, taken from the websites of well-known products. Each comes as a plain text file called DESIGN.md that an AI can follow when it builds your page.",
+    repo: "https://styles.refero.design/",
+    repoLabel: "VISIT SITE",
+    needs: "A web browser, and an AI to build with. A coding assistant such as Claude Code, Cursor or Codex can use the file directly; with ChatGPT or Claude in a browser, paste the file's text into the chat instead",
+    cost: "Free to browse and copy with no account, as of October 2026. The site is labelled beta, so this may change.",
+    why: "Ask an AI to build a web page and it reaches for the same safe look every time, because a description like modern and clean gives it nothing specific to work with. Refero Styles gives it something specific instead. Each entry is the visual system of a real product website, written out as a DESIGN.md file, a plain text file anyone can open: the exact colour codes and where each one is used, the fonts and their sizes, the spacing, and how buttons and cards are drawn. You copy that file into your project and your assistant designs to it. The same styles also come as ready-made code settings for developers. These are other companies' designs, so treat one as a starting point to adapt, not a brand identity to copy whole.",
+    when: "Reach for it at the start of a project, before your assistant builds anything, when you can point to a site whose feel you want and cannot describe it in words. It suits landing pages, dashboards and prototypes. Skip it if you already have a design system of your own.",
+    how: [
+      "Open styles.refero.design and browse or search for a site whose look is close to what you want.",
+      "Open that style and copy its DESIGN.md text. Paste it into your coding assistant and ask it to save the text as a file called DESIGN.md in your project, the folder your website's files live in. With ChatGPT or Claude in a browser, paste it straight into the chat instead.",
+      "Ask the AI to build your page following DESIGN.md. Then change the colours, fonts or details that belong to the original brand, so the result looks like yours rather than theirs."
+    ],
+    command: null,
+    commandTarget: null,
+    status: "Reviewed · Not tested",
+    note: "The fastest way past the generic look AI design falls into, as long as you adapt rather than clone: a borrowed brand is still someone else's brand."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.

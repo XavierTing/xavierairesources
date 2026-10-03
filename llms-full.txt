@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 48 · Categories: 6 · Last updated: 03.10.2026
+- Tools listed: 50 · Categories: 7 · Last updated: 03.10.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1234,6 +1234,56 @@ Reach for it when you want your assistant to operate an open-source desktop app 
 
 ---
 
+## 49. prompts.chat: Gives you thousands of shared prompts to copy and adapt
+
+- **Category:** Website
+- **Made by:** Fatih Kadir Akın
+- **Source:** https://prompts.chat/
+- **Page:** https://xaviertingai.com/tools/prompts-chat.html
+- **You'll need:** A web browser. An account is optional and only needed to save your own collections
+- **Cost:** Free, with no account needed to browse or copy. The code behind it is open source, so an organisation can also run its own private copy.
+- **Curator's status:** Reviewed · Not tested
+
+**Why use prompts.chat?**
+A blank chat box is the hardest place to start: you know roughly what you want but not how to ask for it. prompts.chat is a shared library of prompts that other people have already written and used, grouped by job, such as coding, writing, images and research. Many ask the AI to take on a role, like a careful editor or a patient tutor. You find one close to your task, copy it, and change the details to fit. Reading a few good prompts is also the quickest way to learn how they are put together. It is a community collection rather than a checked one, so quality varies from entry to entry, and a prompt written for one AI app can behave differently in another.
+
+**When should you use prompts.chat?**
+Reach for it when you are starting a new kind of task and want a working example of how to ask, or when an answer keeps missing the mark and you want to see how someone else framed the same request. It is most useful early on, while you are still learning what a precise prompt looks like.
+
+**How do you install and use prompts.chat?**
+1. Open prompts.chat and search for the job you have in mind, such as code review, product description or interview practice, or browse a category.
+2. Read the prompt in full before you copy it. Swap its placeholders, the parts in brackets such as [your topic], for your own details, and remove any part that does not fit your task.
+3. Paste it into the AI you use and judge the answer, not the prompt's popularity. If it is close but not right, change one instruction at a time and try again.
+
+**Curator's note:** Best read as a set of worked examples rather than a shelf of finished answers: the value is seeing how good prompts are structured, then writing your own.
+
+---
+
+## 50. Refero Styles: Gives your AI the design rulebook of a site you admire
+
+- **Category:** Website
+- **Made by:** Refero
+- **Source:** https://styles.refero.design/
+- **Page:** https://xaviertingai.com/tools/refero-styles.html
+- **You'll need:** A web browser, and an AI to build with. A coding assistant such as Claude Code, Cursor or Codex can use the file directly; with ChatGPT or Claude in a browser, paste the file's text into the chat instead
+- **Cost:** Free to browse and copy with no account, as of October 2026. The site is labelled beta, so this may change.
+- **Curator's status:** Reviewed · Not tested
+
+**Why use Refero Styles?**
+Ask an AI to build a web page and it reaches for the same safe look every time, because a description like modern and clean gives it nothing specific to work with. Refero Styles gives it something specific instead. Each entry is the visual system of a real product website, written out as a DESIGN.md file, a plain text file anyone can open: the exact colour codes and where each one is used, the fonts and their sizes, the spacing, and how buttons and cards are drawn. You copy that file into your project and your assistant designs to it. The same styles also come as ready-made code settings for developers. These are other companies' designs, so treat one as a starting point to adapt, not a brand identity to copy whole.
+
+**When should you use Refero Styles?**
+Reach for it at the start of a project, before your assistant builds anything, when you can point to a site whose feel you want and cannot describe it in words. It suits landing pages, dashboards and prototypes. Skip it if you already have a design system of your own.
+
+**How do you install and use Refero Styles?**
+1. Open styles.refero.design and browse or search for a site whose look is close to what you want.
+2. Open that style and copy its DESIGN.md text. Paste it into your coding assistant and ask it to save the text as a file called DESIGN.md in your project, the folder your website's files live in. With ChatGPT or Claude in a browser, paste it straight into the chat instead.
+3. Ask the AI to build your page following DESIGN.md. Then change the colours, fonts or details that belong to the original brand, so the result looks like yours rather than theirs.
+
+**Curator's note:** The fastest way past the generic look AI design falls into, as long as you adapt rather than clone: a borrowed brand is still someone else's brand.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills, HyperFrames, OpenMontage
@@ -1242,6 +1292,7 @@ Reach for it when you want your assistant to operate an open-source desktop app 
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki
 - **Writing**: Humanizer
+- **Website**: prompts.chat, Refero Styles
 
 ## Citation
 

@@ -166,6 +166,7 @@ const APP_CATEGORY = {
   Connections: "DeveloperApplication",
   Knowledge: "ReferenceApplication",
   Writing: "UtilitiesApplication",
+  Website: "ReferenceApplication",
 };
 
 function toolNode(t) {
@@ -177,7 +178,9 @@ function toolNode(t) {
     ? t.makerType === "person"
     : !t.maker && !!repoOwner(t.repo);
   return {
-    "@type": "SoftwareApplication",
+    /* a Website entry is used in a browser, not installed, and WebApplication
+       is the schema.org type for exactly that */
+    "@type": t.category === "Website" ? "WebApplication" : "SoftwareApplication",
     "@id": `${toolUrl(t)}#tool`,
     name: t.name,
     description: t.blurb || t.tagline,

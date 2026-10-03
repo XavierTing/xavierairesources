@@ -54,6 +54,8 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [DaVinci Resolve MCP Bridge](https://xaviertingai.com/tools/davinci-resolve-mcp-bridge.html): Lets your AI assistant edit video inside DaVinci Resolve
 - [OpenMontage](https://xaviertingai.com/tools/openmontage.html): Turns your coding assistant into a video production crew
 - [CLI-Anything](https://xaviertingai.com/tools/cli-anything.html): Builds a typed-command remote control for open-source apps
+- [prompts.chat](https://xaviertingai.com/tools/prompts-chat.html): Gives you thousands of shared prompts to copy and adapt
+- [Refero Styles](https://xaviertingai.com/tools/refero-styles.html): Gives your AI the design rulebook of a site you admire
 
 ## Course
 

@@ -97,7 +97,7 @@ Append one object to `TOOLS` and bump `LOG_UPDATED` (DD.MM.YYYY). Fields:
 |---|---|
 | `num` | Next two-digit string ("27"). |
 | `name` | Product name as its maker writes it. |
-| `category` | One of exactly six. Design (making interfaces and visuals) · Workflow (ways of working with agents: planning, specs, loops, observation) · Connections (plugging an assistant into something real: browser, database, docs, device) · Coding (utilities in the build stack: packers, routers, context tools, security) · Knowledge (notes, memory, personal knowledge bases) · Writing (prose tools). Choose by what the reader is trying to do, not by what the tool is built on. |
+| `category` | One of exactly seven. Design (making interfaces and visuals) · Workflow (ways of working with agents: planning, specs, loops, observation) · Connections (plugging an assistant into something real: browser, database, docs, device) · Coding (utilities in the build stack: packers, routers, context tools, security) · Knowledge (notes, memory, personal knowledge bases) · Writing (prose tools) · Website (a site you use in the browser while building with AI, with nothing to install: prompt libraries, design references). Choose by what the reader is trying to do, not by what the tool is built on. |
 | `tagline` | Verb-first, present tense, one line, no trailing period: "Lets an AI agent run model experiments overnight". It answers "what does this do for me". |
 | `blurb` | 2–3 sentences for the card. Concrete, second person, one specific detail that proves you looked (a number, a mechanism, a limit). |
 | `repo` + `repoLabel` | The canonical link. Label is uppercase: "GITHUB REPO", "PROJECT PAGE", "DOCS". |
@@ -107,7 +107,7 @@ Append one object to `TOOLS` and bump `LOG_UPDATED` (DD.MM.YYYY). Fields:
 | `why` | One paragraph. The problem a person actually has, then how this tool answers it, then honest scoping of what it is not. |
 | `when` | The situations you would reach for it, plus hard requirements and platform caveats. |
 | `how` | Exactly 3 imperative steps. Safety caveats live inside the step they belong to (fresh folder, disposable branch, review before keeping). |
-| `command` + `commandTarget` | One copy-paste line. Target is `"terminal"`, `"claude"` or `"assistant"`; it renders the location label ("Paste into the Terminal app" etc.). Omit both only if there is genuinely nothing to paste. |
+| `command` + `commandTarget` | One copy-paste line. Website entries set both to `null` and use the repoLabel "VISIT SITE". Target is `"terminal"`, `"claude"` or `"assistant"`; it renders the location label ("Paste into the Terminal app" etc.). Omit both only if there is genuinely nothing to paste. |
 | `status` | Optional. Defaults to "In daily use". If you have not run it, say so: "Reviewed · Not tested". Never claim daily use falsely. Surfaces in `llms.txt` only, same as `cost`. |
 | `note` | Curator's note, one or two sentences of judgment or warning. Surfaces in `llms.txt` only. |
 
