@@ -918,8 +918,8 @@ html:not(.js) .tool-search { display: none; }
 
 .section {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 0 28px;
+  grid-template-columns: 144px 1fr;
+  gap: 0 36px;
   padding: var(--rule-air-block) 0;
   border-bottom: 1px solid var(--line);
 }
@@ -931,6 +931,8 @@ html:not(.js) .tool-search { display: none; }
   text-transform: uppercase;
   color: var(--accent);
   padding-top: 6px;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .section .body { font-size: 1rem; }
 
