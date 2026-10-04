@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 50 · Categories: 7 · Last updated: 03.10.2026
+- Tools listed: 51 · Categories: 7 · Last updated: 04.10.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1284,12 +1284,38 @@ Reach for it at the start of a project, before your assistant builds anything, w
 
 ---
 
+## 51. Security Audit Skill: Has your coding agent check your code for security holes
+
+- **Category:** Coding
+- **Made by:** Cloudflare
+- **Source:** https://github.com/cloudflare/security-audit-skill
+- **Page:** https://xaviertingai.com/tools/security-audit-skill.html
+- **You'll need:** A coding agent that can run several helper agents at once, such as Claude Code or Codex; Node.js (free, from nodejs.org), a program that runs small tools on your computer and supplies the npx command used to install this one; and the codebase, the folder of source files, you want checked
+- **Cost:** Free and open source under the MIT licence. A full audit runs many agents for a long time, so it uses up a large share of the monthly allowance on your coding agent's paid plan.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit`
+
+**Why use Security Audit Skill?**
+Code written quickly, by you or by an AI, often has vulnerabilities: weak spots that let someone read data or do things they should not be able to. Ask an assistant to check for security issues and you usually get a long list of guesses, many of them wrong. This skill, a saved set of instructions your agent loads when you ask for a security audit, makes the review stricter. It first maps how the project fits together, then sends separate helper agents, each with its own narrow area, to hunt for problems. Every possible problem goes to a fresh agent whose job is to disprove it. Only the ones that survive are marked confirmed; the rest are marked rejected, or needs validation when a fact is still missing. You get a written report with the evidence and the smallest fix for each. Cloudflare grew its larger bug-hunting system from this skill. It is a review, not a guarantee: in Cloudflare's tests one run found roughly half of what repeated runs found. Without a sandbox, a sealed-off test space with no internet access, it only reads your code and does not run it, so it can miss problems that show up only when the code runs.
+
+**When should you use Security Audit Skill?**
+Reach for it before you put something live that handles logins, payments, uploads or other people's data, or after an AI has written a large part of your code. Only point it at code you own or have permission to test. A quick security question gets a quick answer. Ask for a security audit to get the full review, which writes its report to a new folder outside your project: security-audit-skill, inside your home folder (the folder named after you on your computer). Run it more than once, because each run builds on the last and fills in gaps.
+
+**How do you install and use Security Audit Skill?**
+1. Install Node.js first if you do not have it. Open the Terminal app, the window where you type commands, type `cd` and a space, drag your project's folder into the window to fill in its location, and press Enter. Then paste the command below and pick your coding agent when it asks. Add `--global` to the end if you want the skill in every project instead.
+2. Start your coding agent in that folder (for Claude Code, type `claude` in the same Terminal window and press Enter), then type `security audit this codebase`. The full audit works through six stages and can take a long time, so let it finish.
+3. Open REPORT.md, a plain text file any text editor can open, from the security-audit-skill folder in your home folder (inside it, open your project's name, then run-1 for the first run), and start with the confirmed findings. Ask your agent to apply one fix at a time and check each change before you keep it. Treat needs-validation items as open questions to check, not proven problems.
+
+**Curator's note:** The disprove-it step is the point: most AI security reviews bury you in guesses, and this one makes a second agent argue against each finding before you see it.
+
+---
+
 ## Categories
 
 - **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills, HyperFrames, OpenMontage
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code, ScrapeGraphAI, Google Maps Scraper Kit, DaVinci Resolve MCP Bridge, CLI-Anything
-- **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector
+- **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector, Security Audit Skill
 - **Knowledge**: LLM Wiki, Obsidian Skills, Claude Mem, OKF Graph Wiki
 - **Writing**: Humanizer
 - **Website**: prompts.chat, Refero Styles

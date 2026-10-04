@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Audit Skill: Has your coding agent check your code for security holes</title>
+  <meta name="description" content="Has your coding agent check your code for security holes. Cloudflare's own method for reviewing code security, packaged as a skill, a saved set of…">
+  <link rel="canonical" href="https://xaviertingai.com/tools/security-audit-skill.html">
+  <meta name="author" content="Xavier Ting">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-04">
+  <meta property="article:modified_time" content="2026-10-04">
+  <meta property="article:author" content="https://xaviertingai.com/curator.html">
+  <meta property="article:section" content="Coding">
+  <meta property="og:site_name" content="AI Resources">
+  <meta property="og:title" content="Security Audit Skill: Has your coding agent check your code for security holes">
+  <meta property="og:description" content="Has your coding agent check your code for security holes. Cloudflare's own method for reviewing code security, packaged as a skill, a saved set of…">
+  <meta property="og:url" content="https://xaviertingai.com/tools/security-audit-skill.html">
+  <meta property="og:image" content="https://xaviertingai.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Xavier Ting, curator of AI Resources: AI for the rest of us">
+  <meta property="og:locale" content="en_SG">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@xaviertingai">
+  <meta name="twitter:site" content="@xaviertingai">
+  <meta name="theme-color" content="#F2ECE0">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Montserrat:wght@700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=02f931aa">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://xaviertingai.com/#curator",
+      "name": "Xavier Ting",
+      "jobTitle": "Vice President",
+      "description": "AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes up what works, so the tools stay usable by people who don't ship code for a living.",
+      "image": "https://xaviertingai.com/assets/portrait.jpg",
+      "url": "https://xaviertingai.com/curator.html",
+      "mainEntityOfPage": "https://xaviertingai.com/curator.html",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OCBC",
+        "sameAs": [
+          "https://www.ocbc.com/",
+          "https://en.wikipedia.org/wiki/OCBC_Bank"
+        ]
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SG"
+        }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/xavierting/",
+        "https://x.com/xaviertingai",
+        "https://www.instagram.com/xaviertingai/",
+        "https://www.xavierting.com/"
+      ],
+      "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Artificial Intelligence",
+          "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "Generative AI",
+          "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Agents",
+          "sameAs": "https://en.wikipedia.org/wiki/Intelligent_agent"
+        },
+        {
+          "@type": "Thing",
+          "name": "Prompt Engineering",
+          "sameAs": "https://en.wikipedia.org/wiki/Prompt_engineering"
+        },
+        {
+          "@type": "Thing",
+          "name": "Product Design",
+          "sameAs": "https://en.wikipedia.org/wiki/Product_design"
+        },
+        {
+          "@type": "Thing",
+          "name": "User Experience",
+          "sameAs": "https://en.wikipedia.org/wiki/User_experience"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Master Certified Nielsen Norman Group UX Specialist",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Nielsen Norman Group",
+            "url": "https://www.nngroup.com/"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Scrum Master and Product Owner",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Scrum Alliance",
+            "url": "https://www.scrumalliance.org/"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified LEGO® SERIOUS PLAY® facilitator"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://xaviertingai.com/#website",
+      "url": "https://xaviertingai.com/",
+      "name": "AI Resources",
+      "alternateName": "AI for the rest of us",
+      "description": "The AI tools Xavier Ting uses every day to design, build and write. What each one does, when it is worth using, and how to set it up, explained without jargon.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://xaviertingai.com/#curator"
+      },
+      "creator": {
+        "@id": "https://xaviertingai.com/#curator"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://xaviertingai.com/tools/security-audit-skill.html#tool",
+      "name": "Security Audit Skill",
+      "description": "Cloudflare's own method for reviewing code security, packaged as a skill, a saved set of instructions your coding agent follows. Separate helper agents hunt for weak spots, then a fresh agent tries to disprove each one, so every finding ends up marked confirmed, rejected or needs validation.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cross-platform",
+      "url": "https://xaviertingai.com/tools/security-audit-skill.html",
+      "sameAs": "https://github.com/cloudflare/security-audit-skill",
+      "image": "https://xaviertingai.com/assets/cards/light/security-audit-skill.webp",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Cloudflare"
+      },
+      "installUrl": "https://github.com/cloudflare/security-audit-skill",
+      "softwareHelp": "https://github.com/cloudflare/security-audit-skill"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://xaviertingai.com/tools/security-audit-skill.html#page",
+      "url": "https://xaviertingai.com/tools/security-audit-skill.html",
+      "name": "Security Audit Skill: Has your coding agent check your code for security holes",
+      "description": "Has your coding agent check your code for security holes. Cloudflare's own method for reviewing code security, packaged as a skill, a saved set of…",
+      "isPartOf": {
+        "@id": "https://xaviertingai.com/#website"
+      },
+      "about": {
+        "@id": "https://xaviertingai.com/tools/security-audit-skill.html#tool"
+      },
+      "author": {
+        "@id": "https://xaviertingai.com/#curator"
+      },
+      "reviewedBy": {
+        "@id": "https://xaviertingai.com/#curator"
+      },
+      "primaryImageOfPage": "https://xaviertingai.com/og-image.png",
+      "datePublished": "2026-10-04",
+      "dateModified": "2026-10-04"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Resources",
+          "item": "https://xaviertingai.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security Audit Skill",
+          "item": "https://xaviertingai.com/tools/security-audit-skill.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why use Security Audit Skill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code written quickly, by you or by an AI, often has vulnerabilities: weak spots that let someone read data or do things they should not be able to. Ask an assistant to check for security issues and you usually get a long list of guesses, many of them wrong. This skill, a saved set of instructions your agent loads when you ask for a security audit, makes the review stricter. It first maps how the project fits together, then sends separate helper agents, each with its own narrow area, to hunt for problems. Every possible problem goes to a fresh agent whose job is to disprove it. Only the ones that survive are marked confirmed; the rest are marked rejected, or needs validation when a fact is still missing. You get a written report with the evidence and the smallest fix for each. Cloudflare grew its larger bug-hunting system from this skill. It is a review, not a guarantee: in Cloudflare's tests one run found roughly half of what repeated runs found. Without a sandbox, a sealed-off test space with no internet access, it only reads your code and does not run it, so it can miss problems that show up only when the code runs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should you use Security Audit Skill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reach for it before you put something live that handles logins, payments, uploads or other people's data, or after an AI has written a large part of your code. Only point it at code you own or have permission to test. A quick security question gets a quick answer. Ask for a security audit to get the full review, which writes its report to a new folder outside your project: security-audit-skill, inside your home folder (the folder named after you on your computer). Run it more than once, because each run builds on the last and fills in gaps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you install and use Security Audit Skill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Install Node.js first if you do not have it. Open the Terminal app, the window where you type commands, type `cd` and a space, drag your project's folder into the window to fill in its location, and press Enter. Then paste the command below and pick your coding agent when it asks. Add `--global` to the end if you want the skill in every project instead. Start your coding agent in that folder (for Claude Code, type `claude` in the same Terminal window and press Enter), then type `security audit this codebase`. The full audit works through six stages and can take a long time, so let it finish. Open REPORT.md, a plain text file any text editor can open, from the security-audit-skill folder in your home folder (inside it, open your project's name, then run-1 for the first run), and start with the confirmed findings. Ask your agent to apply one fix at a time and check each change before you keep it. Treat needs-validation items as open questions to check, not proven problems. Command: npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit"
+      }
+    }
+  ]
+}
+  </script>
+  <script>document.documentElement.classList.add("js");
+try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#tool-root">Skip to content</a>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="site-head">
+      <a class="brand" href="../index.html" aria-label="Xavier Ting, home">
+        <span class="brand-mark">Xavier Ting</span>
+        <span class="brand-sub m">AI for the rest of us</span>
+      </a>
+      <nav class="site-nav m" aria-label="Site sections">
+        <a href="../index.html">The tools</a>
+        <a href="../ai-101.html">AI 101</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
+      </nav>
+    </header>
+
+    <main id="tool-root">
+      <nav class="crumbs m" aria-label="Breadcrumb">
+        <a href="../index.html">The tools</a>
+        <span class="sep">/</span>
+        <span class="here">Security Audit Skill</span>
+      </nav>
+
+      <div class="detail">
+        <div class="detail-main">
+          <img class="detail-art" src="../assets/cards/light/security-audit-skill.webp" alt="" width="512" height="512" decoding="async">
+          <h1 class="detail-title">Security Audit Skill</h1>
+          <p class="detail-lede">Has your coding agent check your code for security holes.</p>
+        </div>
+
+        <aside class="meta">
+          <div><h2>Category</h2><p class="meta-cat">Coding</p></div>
+          <div><h2>Made by</h2><p>Cloudflare</p></div>
+          <div><h2>You'll need</h2><p>A coding agent that can run several helper agents at once, such as Claude Code or Codex; Node.js (free, from nodejs.org), a program that runs small tools on your computer and supplies the npx command used to install this one; and the codebase, the folder of source files, you want checked</p></div>
+
+          <div><h2>Source</h2><p><a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener">GITHUB REPO ↗</a></p></div>
+        </aside>
+
+        <div class="sections">
+        <section class="section">
+          <h2>Why use Security Audit Skill?</h2>
+          <div class="body">Code written quickly, by you or by an AI, often has vulnerabilities: weak spots that let someone read data or do things they should not be able to. Ask an assistant to check for security issues and you usually get a long list of guesses, many of them wrong. This <a href="../ai-101.html#e-skills">skill</a>, a saved set of instructions your <a href="../ai-101.html#e-agent">agent</a> loads when you ask for a <a href="../ai-101.html#e-securityaudit">security audit</a>, makes the review stricter. It first maps how the project fits together, then sends separate helper agents, each with its own narrow area, to hunt for problems. Every possible problem goes to a fresh agent whose job is to disprove it. Only the ones that survive are marked confirmed; the rest are marked rejected, or needs validation when a fact is still missing. You get a written report with the evidence and the smallest fix for each. Cloudflare grew its larger bug-hunting system from this skill. It is a review, not a guarantee: in Cloudflare's tests one run found roughly half of what repeated runs found. Without a sandbox, a sealed-off test space with no internet access, it only reads your code and does not run it, so it can miss problems that show up only when the code runs.</div>
+        </section>
+        <section class="section">
+          <h2>When should you use Security Audit Skill?</h2>
+          <div class="body">Reach for it before you put something live that handles logins, payments, uploads or other people's data, or after an AI has written a large part of your code. Only point it at code you own or have permission to test. A quick security question gets a quick answer. Ask for a security audit to get the full review, which writes its report to a new folder outside your project: security-audit-skill, inside your home folder (the folder named after you on your computer). Run it more than once, because each run builds on the last and fills in gaps.</div>
+        </section>
+        <section class="section">
+          <h2>How do you install and use Security Audit Skill?</h2>
+          <div class="body">
+            <ol>
+            <li>Install Node.js first if you do not have it. Open the <a href="../ai-101.html#e-terminal">Terminal</a> app, the window where you type commands, type `cd` and a space, drag your project's folder into the window to fill in its location, and press Enter. Then paste the command below and pick your coding agent when it asks. Add `--global` to the end if you want the skill in every project instead.</li>
+            <li>Start your coding agent in that folder (for Claude Code, type `claude` in the same Terminal window and press Enter), then type `security audit this codebase`. The full audit works through six stages and can take a long time, so let it finish.</li>
+            <li>Open REPORT.md, a plain text file any text editor can open, from the security-audit-skill folder in your home folder (inside it, open your project's name, then run-1 for the first run), and start with the confirmed findings. Ask your agent to apply one fix at a time and check each change before you keep it. Treat needs-validation items as open questions to check, not proven problems.</li>
+            </ol>
+          <div class="specimen">
+            <span class="specimen-where m">Paste into the <a href="../ai-101.html#e-terminal">Terminal app</a></span>
+            <code>npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit</code>
+            <button class="copy-btn" type="button" data-command="npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit"
+                    aria-label="Copy command: npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit">Copy</button>
+          </div>
+          </div>
+        </section>
+        </div>
+      </div>
+
+      <a class="back-link" href="../index.html">← Back to the tools</a>
+
+      <nav class="pager" aria-label="More tools">
+        <a href="refero-styles.html">← Refero Styles</a>
+        <a href="impeccable.html">Impeccable →</a>
+      </nav>
+    </main>
+
+    <footer class="colophon">
+      <div>
+        <h2>Logged &amp; maintained</h2>
+        <div class="colophon-who">
+          <img class="avatar" src="../assets/portrait.jpg" width="44" height="44" alt="Xavier Ting" loading="lazy">
+          <div>
+            <p>Xavier Ting · Vice President at OCBC. I build with AI every day and curate the resources I personally use and find useful.</p>
+            <p class="colophon-links m">
+              <a href="https://www.linkedin.com/in/xavierting/" rel="me noopener">LinkedIn ↗</a>
+              <a href="https://x.com/xaviertingai" rel="me noopener">X ↗</a>
+              <a href="https://www.instagram.com/xaviertingai/" rel="me noopener">Instagram ↗</a>
+              <a href="https://www.xavierting.com/" rel="me noopener">Personal website ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Status</h2>
+        <p>Last updated 04.10.2026</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../theme.js?v=03b89248"></script>
+  <script src="../tools.js?v=0bcfffff"></script>
+  <script src="../app.js?v=bd92a1d1"></script>
+</body>
+</html>

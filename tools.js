@@ -1255,8 +1255,34 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The fastest way past the generic look AI design falls into, as long as you adapt rather than clone: a borrowed brand is still someone else's brand."
   },
+  {
+    num: "51",
+    added: "2026-10-04",
+    updated: "2026-10-04",
+    name: "Security Audit Skill",
+    category: "Coding",
+    maker: "Cloudflare",
+    makerType: "org",
+    tagline: "Has your coding agent check your code for security holes",
+    blurb: "Cloudflare's own method for reviewing code security, packaged as a skill, a saved set of instructions your coding agent follows. Separate helper agents hunt for weak spots, then a fresh agent tries to disprove each one, so every finding ends up marked confirmed, rejected or needs validation.",
+    repo: "https://github.com/cloudflare/security-audit-skill",
+    repoLabel: "GITHUB REPO",
+    needs: "A coding agent that can run several helper agents at once, such as Claude Code or Codex; Node.js (free, from nodejs.org), a program that runs small tools on your computer and supplies the npx command used to install this one; and the codebase, the folder of source files, you want checked",
+    cost: "Free and open source under the MIT licence. A full audit runs many agents for a long time, so it uses up a large share of the monthly allowance on your coding agent's paid plan.",
+    why: "Code written quickly, by you or by an AI, often has vulnerabilities: weak spots that let someone read data or do things they should not be able to. Ask an assistant to check for security issues and you usually get a long list of guesses, many of them wrong. This skill, a saved set of instructions your agent loads when you ask for a security audit, makes the review stricter. It first maps how the project fits together, then sends separate helper agents, each with its own narrow area, to hunt for problems. Every possible problem goes to a fresh agent whose job is to disprove it. Only the ones that survive are marked confirmed; the rest are marked rejected, or needs validation when a fact is still missing. You get a written report with the evidence and the smallest fix for each. Cloudflare grew its larger bug-hunting system from this skill. It is a review, not a guarantee: in Cloudflare's tests one run found roughly half of what repeated runs found. Without a sandbox, a sealed-off test space with no internet access, it only reads your code and does not run it, so it can miss problems that show up only when the code runs.",
+    when: "Reach for it before you put something live that handles logins, payments, uploads or other people's data, or after an AI has written a large part of your code. Only point it at code you own or have permission to test. A quick security question gets a quick answer. Ask for a security audit to get the full review, which writes its report to a new folder outside your project: security-audit-skill, inside your home folder (the folder named after you on your computer). Run it more than once, because each run builds on the last and fills in gaps.",
+    how: [
+      "Install Node.js first if you do not have it. Open the Terminal app, the window where you type commands, type `cd` and a space, drag your project's folder into the window to fill in its location, and press Enter. Then paste the command below and pick your coding agent when it asks. Add `--global` to the end if you want the skill in every project instead.",
+      "Start your coding agent in that folder (for Claude Code, type `claude` in the same Terminal window and press Enter), then type `security audit this codebase`. The full audit works through six stages and can take a long time, so let it finish.",
+      "Open REPORT.md, a plain text file any text editor can open, from the security-audit-skill folder in your home folder (inside it, open your project's name, then run-1 for the first run), and start with the confirmed findings. Ask your agent to apply one fix at a time and check each change before you keep it. Treat needs-validation items as open questions to check, not proven problems."
+    ],
+    command: "npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The disprove-it step is the point: most AI security reviews bury you in guesses, and this one makes a second agent argue against each finding before you see it."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "03.10.2026";
+const LOG_UPDATED = "04.10.2026";

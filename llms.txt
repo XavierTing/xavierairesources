@@ -56,6 +56,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [CLI-Anything](https://xaviertingai.com/tools/cli-anything.html): Builds a typed-command remote control for open-source apps
 - [prompts.chat](https://xaviertingai.com/tools/prompts-chat.html): Gives you thousands of shared prompts to copy and adapt
 - [Refero Styles](https://xaviertingai.com/tools/refero-styles.html): Gives your AI the design rulebook of a site you admire
+- [Security Audit Skill](https://xaviertingai.com/tools/security-audit-skill.html): Has your coding agent check your code for security holes
 
 ## Course
 
