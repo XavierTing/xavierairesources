@@ -1281,8 +1281,86 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The disprove-it step is the point: most AI security reviews bury you in guesses, and this one makes a second agent argue against each finding before you see it."
   },
+  {
+    num: "52",
+    added: "2026-10-05",
+    updated: "2026-10-05",
+    name: "Knowledge Work Plugins",
+    category: "Workflow",
+    maker: "Anthropic",
+    makerType: "org",
+    tagline: "Sets Claude up for your job, from sales and legal to finance",
+    blurb: "Anthropic's free set of plugins, add-on bundles that make Claude a specialist for one kind of work. There is one each for sales, legal, finance, marketing, customer support, data and about ten other jobs, each with ready-made commands such as /sales:call-prep. The same catalogue also lists more than a hundred plugins from other companies.",
+    repo: "https://github.com/anthropics/knowledge-work-plugins#getting-started",
+    repoLabel: "GITHUB REPO",
+    needs: "A paid Claude plan; the Claude desktop app with Cowork, the part where Claude works through a task for you, reading and making files on your computer (Claude Code, Anthropic's assistant for the typed-command window, works too); and accounts for any apps you want to connect, such as Slack or Notion",
+    cost: "Free and open source under the Apache 2.0 licence. You need a paid Claude plan to use them, and any apps you connect keep their own pricing.",
+    why: "Out of the box, Claude knows a little about every job and nothing about how yours is done, so you end up explaining the same steps every time. A plugin fixes that by bundling everything for one role in one install. It holds three things. Skills are saved instructions that Claude follows when a task calls for them. Commands are shortcuts you type with a slash, such as /legal:review-contract. Connectors are links that let Claude read from the apps you already use, such as Slack, Notion or Microsoft 365. Anthropic built them from its own teams' work, and they are written in plain text files rather than code, so you can open one and change it to use your company's terms and steps. They are general starting points, not experts: a contract review or a set of accounts still needs a qualified person to check it.",
+    when: "Reach for it when you use Claude for everyday office work, such as preparing for sales calls, sorting support tickets, drafting marketing copy, reviewing contracts or reading spreadsheets, and want it to follow a steady method instead of improvising each time. It is built for Claude Cowork and also works in Claude Code.",
+    how: [
+      "For Cowork, open claude.com/plugins in your web browser and install the plugin named after your job, such as sales, legal, finance or data. If you already use Claude Code, run two commands in the Terminal app, the window where you type commands: first the one shown below, which adds this catalogue (Claude calls it a marketplace), then `claude plugin install sales@knowledge-work-plugins`. Swap sales for the plugin you want; the part after the @ names the catalogue it comes from.",
+      "Connect only the apps you actually use when it asks, then type a slash in the chat to see the plugin's commands and try one, such as `/sales:call-prep` or `/data:write-query`.",
+      "Check the first few results closely before you rely on them, especially legal and finance work. Then make it yours: install the plugin called cowork-plugin-management the same way, and ask Claude to add your company's terms and steps to your job plugin."
+    ],
+    command: "claude plugin marketplace add anthropics/knowledge-work-plugins",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The first plugin to install if you use Claude for office work rather than code. The value grows once you edit it with your own team's way of working."
+  },
+  {
+    num: "53",
+    added: "2026-10-05",
+    updated: "2026-10-05",
+    name: "Voicebox",
+    category: "Design",
+    maker: "Jamie Pine",
+    makerType: "person",
+    tagline: "Turns typed text into speech, and your speech into text, on your own computer",
+    blurb: "A free desktop app that reads any text aloud in a voice you choose, including a copy of your own made from a few seconds of recording, in 23 languages. Hold a key to dictate into any app instead of typing. It can also let Claude Code talk to you out loud, and nothing you record leaves your computer.",
+    repo: "https://github.com/jamiepine/voicebox",
+    repoLabel: "GITHUB REPO",
+    needs: "Any Mac, or a Windows PC. It is fastest on a computer with a graphics card, a chip that speeds up AI; without one it still works, just slower. There is no ready-made Linux download yet. Claude Code, Anthropic's coding assistant, only if you want it to talk to you",
+    cost: "Free and open source under the MIT licence, with no account or subscription. Everything runs on your own computer, so the only cost is disk space for the AI programs it downloads to make the voices.",
+    why: "Recording a voiceover, or typing long notes and messages, takes time, and the usual paid voice services send your recordings to their own computers. Voicebox does both jobs on your machine. Type a script and it reads it aloud in one of more than 50 ready-made voices, or in a voice clone, a copy of a voice made from a short recording; it can add pauses, laughs and effects such as an echo. For the other direction, hold a key in any app, speak, and it types what you said, with the ums taken out. It also includes an MCP server, a standard plug that lets AI assistants use other apps, so Claude Code can tell you out loud when a long task is done. Quality varies between its seven speech engines, the different AI programs it can use to make speech, and between languages, it is slower on a computer without a graphics card, and you should only clone a voice when you have that person's permission, which is easiest when the voice is your own.",
+    when: "Reach for it when you need narration for a video or a presentation, want to hear a draft read back to you, would rather speak than type, or want your coding assistant to call out when it finishes. It suits anyone who wants voice tools without paying for a service or uploading their recordings. Automatic pasting of dictated text into other apps works on Mac only for now.",
+    how: [
+      "Download the app for Mac or Windows from voicebox.sh, open it, and let it download a speech engine the first time. On a Mac, allow the Accessibility and Input Monitoring permissions it asks for: they let dictation type into other apps.",
+      "Pick a ready-made voice, or make a voice profile, the app's name for a voice clone, by recording a few seconds of yourself reading aloud. Type a sentence, generate it, and listen. Use only your own voice, or one you have permission to copy.",
+      "If you use Claude Code, keep Voicebox open, paste the command below into the Terminal app, the window where you type commands, and press Enter. Then type `claude` in the same window to start Claude Code, and ask it to tell you out loud when it finishes a task. When it works, you hear it speak and a small floating label appears on screen."
+    ],
+    command: "claude mcp add --transport http voicebox http://127.0.0.1:17493/mcp",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "Two paid services in one free app, with recordings that never leave your machine. Clone your own voice, not someone else's."
+  },
+  {
+    num: "54",
+    added: "2026-10-06",
+    updated: "2026-10-06",
+    name: "LinkedIn Agent Skill",
+    category: "Writing",
+    maker: "Jake Schincariol",
+    makerType: "person",
+    tagline: "Drafts your LinkedIn posts, comments and replies for you to post",
+    blurb: "Eleven skills, saved instruction sets for Claude, that each handle one LinkedIn job: turning an idea into a post, commenting, replying, scoring your profile out of 100 and planning your week. A built-in checker strips common AI phrasing and scores each draft first. It never posts anything itself; you copy and paste.",
+    repo: "https://github.com/Jakeschincariol/linkedin-agent-skill",
+    repoLabel: "GITHUB REPO",
+    needs: "Claude Code, Anthropic's assistant that you run in a typed-command window, and Python 3 (free, from python.org), which the two checking programs need. Without Claude Code you can paste one skill's text into a Claude chat, but the checking programs will not run",
+    cost: "Free and open source under the MIT licence, with no sign-up and no connection to your LinkedIn account. Your Claude plan covers the writing.",
+    why: "Keeping up on LinkedIn means writing posts, answering comments and replying to messages week after week, and drafts from a plain AI chat tend to sound alike: stock words such as delve and leverage, long dashes, the same three-part rhythm. This set splits the work into eleven commands you type with a slash. /li-post turns one idea into a post with three opening lines to choose from, /li-profile scores your profile and rewrites the weakest parts, and /li-plan sets out the week. Every draft first goes through /li-human, which runs two small programs on your computer. They remove 113 stock phrases and the invisible characters AI text sometimes carries through a copy and paste, then score out of 100 how human the draft reads. All of them read a voice file you fill in once, a page describing how you write, so the drafts sound like you. The score is the tool's own estimate, not a result from the AI detectors other sites use. The tool also never makes up numbers or results: where a draft needs a figure you have not given, it leaves a gap marked {{your number}}.",
+    when: "Reach for it when you want to post on LinkedIn regularly but writing each post from scratch keeps getting pushed back, or when you want a second opinion on your profile. It does not post, schedule or log in for you: LinkedIn's rules forbid automated posting from a personal account, so every skill ends with text you copy and paste yourself.",
+    how: [
+      "Install Python 3 from python.org if you do not have it. Then open Claude Code and type the command below, which adds the author's catalogue (Claude calls it a marketplace), and then `/plugin install linkedin-agent`, which installs all eleven skills as one plugin, an add-on bundle.",
+      "Fill in your voice file before anything else: paste three posts you have written into Claude Code and type `write my voice.md from these`. No posts yet? Describe in a few sentences how you talk and write instead. Skip this and the drafts sound like everyone else's.",
+      "Type `/li-post` followed by one idea, pick an opening line, and read the draft closely before you paste it into LinkedIn. Replace any {{your number}} gap with a real figure, and change anything you would not say yourself."
+    ],
+    command: "/plugin marketplace add Jakeschincariol/linkedin-agent-skill",
+    commandTarget: "claude",
+    status: "Reviewed · Not tested",
+    note: "The useful part is the restraint: it writes, you post, and it refuses to invent results under your name. Feed it your own experience; it cannot supply that."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "04.10.2026";
+const LOG_UPDATED = "06.10.2026";

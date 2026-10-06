@@ -57,6 +57,9 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [prompts.chat](https://xaviertingai.com/tools/prompts-chat.html): Gives you thousands of shared prompts to copy and adapt
 - [Refero Styles](https://xaviertingai.com/tools/refero-styles.html): Gives your AI the design rulebook of a site you admire
 - [Security Audit Skill](https://xaviertingai.com/tools/security-audit-skill.html): Has your coding agent check your code for security holes
+- [Knowledge Work Plugins](https://xaviertingai.com/tools/knowledge-work-plugins.html): Sets Claude up for your job, from sales and legal to finance
+- [Voicebox](https://xaviertingai.com/tools/voicebox.html): Turns typed text into speech, and your speech into text, on your own computer
+- [LinkedIn Agent Skill](https://xaviertingai.com/tools/linkedin-agent-skill.html): Drafts your LinkedIn posts, comments and replies for you to post
 
 ## Course
 
