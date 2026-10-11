@@ -1359,8 +1359,34 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The useful part is the restraint: it writes, you post, and it refuses to invent results under your name. Feed it your own experience; it cannot supply that."
   },
+  {
+    num: "55",
+    added: "2026-10-11",
+    updated: "2026-10-11",
+    name: "REA",
+    category: "Coding",
+    maker: "morluto",
+    makerType: "person",
+    tagline: "Lets your AI agent take an app apart to see how a feature works",
+    blurb: "Short for Reverse Engineer Anything. It gives your coding agent tools to inspect an app without its source code, meaning the human-readable files it was built from, and to explain how a feature works with the evidence. It covers desktop programs, Electron apps, Android apps and websites, and runs on your own computer.",
+    repo: "https://github.com/morluto/rea",
+    repoLabel: "GITHUB REPO",
+    needs: "Node.js (free, from nodejs.org), a program that runs small tools on your computer and supplies the npx command used to install this one, and a coding agent, an AI assistant that works on your computer, such as Claude Code or Codex. To study desktop programs you also need one of Hopper, Ghidra or IDA, tools for reading finished programs; Ghidra is free and the others cost money. JavaScript apps, the kind built with web technology such as Electron, need none of them",
+    cost: "Free and open source under the MIT licence. Hopper and IDA are separate products with their own prices (Ghidra is free), and your coding agent has its own plan.",
+    why: "Say you use an app and like how one of its features behaves. You cannot see how it was built, because you only have the finished program and not the source code. Reverse engineering means working that out by inspecting the finished program, which normally takes years of specialist training. REA connects your coding agent to inspection tools through MCP, a standard plug that lets an AI assistant use other programs. You ask a question such as how search works in an app. The agent traces the relevant parts and reports what it found, with the evidence and what it could not tell. The analysis runs on your computer, but whatever results the agent receives are also seen by the company that runs its AI. Reading compiled programs gives rough, partly guessed code rather than the original, and apps often protect themselves, so expect gaps and check what the agent claims against the evidence.",
+    when: "Reach for it when you want to understand how a program you have the right to inspect does something: studying your own app or an old one you no longer have the source for, checking what a downloaded app contacts, learning from open-source or sample programs, or security research you are authorised to do. Check the app's licence and your local law first, because copying someone else's product from its internals can be illegal. The project's own disclaimer says you are responsible for having permission.",
+    how: [
+      "Install Node.js from nodejs.org if you do not have it. Open the Terminal app, the window where you type commands, and paste the command shown below these steps. It asks which of your coding agents to set it up for and shows its changes first, so read them before you approve. Then close your agent and open it again.",
+      "Start your coding agent and name something you are allowed to study, for example `Understand how search works in this app, show me the evidence, and explain it in plain words`, adding the app's folder or name.",
+      "Read the evidence the agent shows, such as the exact pieces of code it points to, not just its summary. Ask it what it could not confirm, and keep the work to programs you own or have permission to examine."
+    ],
+    command: "npx rea-agents setup",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "A specialist's tool made usable by an agent. The limits matter: it explains how something works, but that does not give you the right to copy it."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "06.10.2026";
+const LOG_UPDATED = "11.10.2026";
