@@ -60,7 +60,7 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Knowledge Work Plugins](https://xaviertingai.com/tools/knowledge-work-plugins.html): Sets Claude up for your job, from sales and legal to finance
 - [Voicebox](https://xaviertingai.com/tools/voicebox.html): Turns typed text into speech, and your speech into text, on your own computer
 - [LinkedIn Agent Skill](https://xaviertingai.com/tools/linkedin-agent-skill.html): Drafts your LinkedIn posts, comments and replies for you to post
-- [REA](https://xaviertingai.com/tools/rea.html): Lets your AI agent take an app apart to see how a feature works
+- [Reverse Engineer Anything](https://xaviertingai.com/tools/reverse-engineer-anything.html): Lets your AI agent take an app apart to see how a feature works
 
 ## Course
 
