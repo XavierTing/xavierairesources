@@ -1385,8 +1385,34 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "A specialist's tool made usable by an agent. The limits matter: it explains how something works, but that does not give you the right to copy it."
   },
+  {
+    num: "56",
+    added: "2026-10-19",
+    updated: "2026-10-19",
+    name: "Hairline",
+    category: "Design",
+    maker: "Lucas Marques",
+    makerType: "person",
+    tagline: "Adds line drawings that move with the pointer",
+    blurb: "Thirty-three line drawings react when the pointer, the arrow you move across the page, passes over them: a card stands up, pillars rise, a drawer slides out. Each is drawn in thin lines as if seen from a corner, and it fills the box you give it, five wide for every four tall. The package installs on its own, with no other software required.",
+    repo: "https://github.com/lucasmarkes/hairline",
+    repoLabel: "GITHUB REPO",
+    needs: "Node.js (free, from nodejs.org), a program that runs small tools on your computer and supplies npm, the command that installs this package, and a web page you can add code to. React 18 or later only if you use the React version of the pictures. The plain version needs no React. A coding agent, an assistant that edits files on your computer, only if you want the optional skill to draw a new figure",
+    cost: "Free and open source under the MIT licence, which lets anyone use the figures and share them. The thirty-three figures have no account and no fee. The optional skill that draws a new figure runs in a coding agent, which has its own plan.",
+    why: "A page often needs a small picture that does something when a person moves across it, and drawing that by hand takes longer than the picture is worth. Hairline is a set of thirty-three of those pictures. Each one is an isometric figure, a line drawing shown from a corner so you see the top and two sides, and it follows the pointer: the card under it stands up, a field of pillars rises around it, a drawer slides out. It draws itself in the browser as SVG, a picture made of lines that stays sharp at any size. Every figure shares the same five settings, all optional. The one you change first is intensity, a number from 0 (a small reaction) to 1 (a strong one). The package depends on no other software. React, a common toolkit for building web pages, is needed only for the React version, and only at version 18 or later. It is a fixed set of objects, not a tool that draws whatever you describe. A separate skill, a saved set of instructions, can ask a coding agent, an assistant that edits files on your computer, to draft a new figure as one file. That skill uses your agent's plan. The thirty-three figures do not.",
+    when: "Reach for it when a page needs a picture that responds to the visitor, such as an empty search result, the top of a page, or a spot that would otherwise be a plain icon. The project's own docs show the figures used small, about 160 to 240 pixels wide, above a heading. You need a page you can add code to, and Node.js, free from nodejs.org, which includes npm, the command that installs this package. React 18 or later matters only if you use the React version of the pictures. The install section of its GitHub page also has a command for shadcn, a kit of ready-made interface pieces, which adds the package and a wrapper, an extra file around it that follows your theme's colours. If the page background is neither white nor the near-black the dark theme uses, set the plate colour, the filled surface each figure sits on, to that background, or the plates show as a rectangle of the wrong colour. If a visitor has turned on reduced motion, a setting that limits animation, the two figures that move on their own hold still, and every figure still follows the pointer.",
+    how: [
+      "Install Node.js from nodejs.org if you do not already have it. Open the Terminal app, the window where you type commands, go to your project folder (type cd, a space, drag the folder onto the window, and press Enter), then paste the command below and press Enter. The i in that command is short for install. It installs this package and nothing else. You need React 18 or later only when the page is built with React.",
+      "Open the file for the page where you want the picture. If that page is built with React, add this line at the top with the other import lines, where import means bring something into the file: `import { Terrain } from \"@lucasmarkes/hairline/react\"`. Then put `<Terrain />` where the picture should appear. Terrain is the drawing of the pillars, and that tag is the picture itself. It uses the full width of the box around it, five wide for every four tall. If the page is not built with React, open the README and copy its plain-page example: a blank box named figure, and a short script under it that tells that box to draw the pillars. Copy that example rather than trying to retype it. The package loads only as a module, the modern kind of JavaScript file, which is why the example uses a module script.",
+      "Move the pointer across the figure. If the reaction is too strong or too slight, set intensity to a number from 0 to 1. In React that looks like `<Terrain intensity={0.8} />`, where 0.8 is the strength. If the filled plates are the wrong colour, set `--hairline-plate`, a colour setting you put on the figure or on the page around it, to your background colour. The plates are solid and cover whatever is behind them."
+    ],
+    command: "npm i @lucasmarkes/hairline",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "The filled plates are the easy thing to miss: on a background that is not white or near-black, set the plate colour or the figure sits in a rectangle. The thirty-three figures are a set of drawings. A new one is a separate step, through the skill."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "11.10.2026";
+const LOG_UPDATED = "19.10.2026";
