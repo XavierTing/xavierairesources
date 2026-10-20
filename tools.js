@@ -1411,8 +1411,34 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "The filled plates are the easy thing to miss: on a background that is not white or near-black, set the plate colour or the figure sits in a rectangle. The thirty-three figures are a set of drawings. A new one is a separate step, through the skill."
   },
+  {
+    num: "57",
+    added: "2026-10-20",
+    updated: "2026-10-20",
+    name: "Awesome Opus 5.5 Videos",
+    category: "Design",
+    maker: "Yihui",
+    makerType: "person",
+    tagline: "Shows you short videos made with Claude Opus 5.5 and the prompts behind them",
+    blurb: "A collection of short animated videos people made by asking Claude Opus 5.5 to write the animation as code, each linked to its creator's post and, where they shared it, the prompt they used. It holds 703 prompts, and 418 have a remake, a copy rebuilt from the same prompt, that you can watch beside the original on Skillry, a website the list links to.",
+    repo: "https://github.com/yihui-dev/awesome-opus5-5-videos",
+    repoLabel: "GITHUB REPO",
+    needs: "A web browser to look. To make one yourself, Claude Opus 5.5, the Claude model these prompts were written for, in the Claude app or in Claude Code, a separate Claude app that works with files on your computer. Open the model menu in the Claude app: if Opus 5.5 is not listed, your plan does not include it",
+    cost: "Free to browse. The list itself is under the MIT licence, which lets anyone reuse the list, but each video and prompt still belongs to its creator. Running a prompt uses your Claude plan, and some prompts also call paid image or video services that the creator had.",
+    why: "You have seen an AI-made animation go round online and want to know how it was asked for. This list puts those videos beside the prompt, the written instructions the creator gave the AI. Every video here began as code: the creator asked Claude Opus 5.5 to write the animation as a web page, using HTML, the language web pages are written in, and drawing tools that run in the browser such as Canvas and SVG, then recorded the screen while it played. The videos are sorted into motion graphics, explainers, 3D scenes and games, so you can find the kind you want and see how it was asked for. Where this needs care: some creators shared only part of their prompt, or only a description of the result, and those files say so. Some prompts also lean on things only the creator had, such as their own folders, API keys (private passwords that let a program use a paid service) or paid video generators, so they will not run as written. It is a gallery of examples, not a tool that makes videos for you.",
+    when: "Reach for it when you want a short animated clip for a post, a lesson or a product page and would rather start from a prompt that already worked. It is also a quick way to see what Opus 5.5 can draw in code before you spend your own plan's usage on it. The prompts were written for Opus 5.5, so another model may give a different result. To turn the page into a proper video file rather than a screen recording, pair it with HyperFrames, which turns a web page into an MP4 video file, or Remotion Skills, which teaches your assistant to build videos in code. Both are in this log.",
+    how: [
+      "Open the GitHub page and scroll the gallery. Click a preview to watch the original next to its remake on Skillry, or click Prompt under it to read the instructions the creator used.",
+      "Pick one whose file does not say the prompt is partial, and that does not ask for the creator's own files or keys. Copy the block under Prompt, paste it into Claude Opus 5.5, and add: build this as a single HTML file I can open in my browser. If you use Claude Code, you can paste the line below instead and it picks a prompt from the list for you.",
+      "Get the page onto your computer and open it. In the Claude app it usually appears as a preview beside the chat with a download option; otherwise copy the code into a plain text file saved with a name ending in .html. Double-click that file and it plays in your browser. Ask for one change at a time until it looks right. To make a video, record the screen (on a Mac press Shift, Command and 5; on Windows the Snipping Tool records too), and credit the creator whose prompt you started from when you post it."
+    ],
+    command: "Open https://github.com/yihui-dev/awesome-opus5-5-videos, pick one complete prompt from the Explainers section that needs no API keys, and build it as a single HTML file I can open in my browser",
+    commandTarget: "claude",
+    status: "Reviewed · Not tested",
+    note: "Read the prompts as worked examples of how to ask for motion, not as recipes. The ones that reproduce well spell out timing and layout; the ones that lean on a creator's private files will not."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "19.10.2026";
+const LOG_UPDATED = "20.10.2026";

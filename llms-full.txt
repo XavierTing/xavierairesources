@@ -12,7 +12,7 @@ AI & Design Leader at OCBC in Singapore. He builds with AI every day and writes 
 - X: https://x.com/xaviertingai (@xaviertingai)
 - Portfolio: https://www.xavierting.com/
 - Credentials: Master Certified Nielsen Norman Group UX Specialist; Certified Scrum Master and Product Owner; Certified LEGO® SERIOUS PLAY® facilitator
-- Tools listed: 56 · Categories: 7 · Last updated: 19.10.2026
+- Tools listed: 57 · Categories: 7 · Last updated: 20.10.2026
 
 Entries are independently curated and carry their own usage status. Nobody paid to be on this list.
 
@@ -1440,9 +1440,35 @@ Reach for it when a page needs a picture that responds to the visitor, such as a
 
 ---
 
+## 57. Awesome Opus 5.5 Videos: Shows you short videos made with Claude Opus 5.5 and the prompts behind them
+
+- **Category:** Design
+- **Made by:** Yihui
+- **Source:** https://github.com/yihui-dev/awesome-opus5-5-videos
+- **Page:** https://xaviertingai.com/tools/awesome-opus-5-5-videos.html
+- **You'll need:** A web browser to look. To make one yourself, Claude Opus 5.5, the Claude model these prompts were written for, in the Claude app or in Claude Code, a separate Claude app that works with files on your computer. Open the model menu in the Claude app: if Opus 5.5 is not listed, your plan does not include it
+- **Cost:** Free to browse. The list itself is under the MIT licence, which lets anyone reuse the list, but each video and prompt still belongs to its creator. Running a prompt uses your Claude plan, and some prompts also call paid image or video services that the creator had.
+- **Curator's status:** Reviewed · Not tested
+- **Install / run:** `Open https://github.com/yihui-dev/awesome-opus5-5-videos, pick one complete prompt from the Explainers section that needs no API keys, and build it as a single HTML file I can open in my browser`
+
+**Why use Awesome Opus 5.5 Videos?**
+You have seen an AI-made animation go round online and want to know how it was asked for. This list puts those videos beside the prompt, the written instructions the creator gave the AI. Every video here began as code: the creator asked Claude Opus 5.5 to write the animation as a web page, using HTML, the language web pages are written in, and drawing tools that run in the browser such as Canvas and SVG, then recorded the screen while it played. The videos are sorted into motion graphics, explainers, 3D scenes and games, so you can find the kind you want and see how it was asked for. Where this needs care: some creators shared only part of their prompt, or only a description of the result, and those files say so. Some prompts also lean on things only the creator had, such as their own folders, API keys (private passwords that let a program use a paid service) or paid video generators, so they will not run as written. It is a gallery of examples, not a tool that makes videos for you.
+
+**When should you use Awesome Opus 5.5 Videos?**
+Reach for it when you want a short animated clip for a post, a lesson or a product page and would rather start from a prompt that already worked. It is also a quick way to see what Opus 5.5 can draw in code before you spend your own plan's usage on it. The prompts were written for Opus 5.5, so another model may give a different result. To turn the page into a proper video file rather than a screen recording, pair it with HyperFrames, which turns a web page into an MP4 video file, or Remotion Skills, which teaches your assistant to build videos in code. Both are in this log.
+
+**How do you install and use Awesome Opus 5.5 Videos?**
+1. Open the GitHub page and scroll the gallery. Click a preview to watch the original next to its remake on Skillry, or click Prompt under it to read the instructions the creator used.
+2. Pick one whose file does not say the prompt is partial, and that does not ask for the creator's own files or keys. Copy the block under Prompt, paste it into Claude Opus 5.5, and add: build this as a single HTML file I can open in my browser. If you use Claude Code, you can paste the line below instead and it picks a prompt from the list for you.
+3. Get the page onto your computer and open it. In the Claude app it usually appears as a preview beside the chat with a download option; otherwise copy the code into a plain text file saved with a name ending in .html. Double-click that file and it plays in your browser. Ask for one change at a time until it looks right. To make a video, record the screen (on a Mac press Shift, Command and 5; on Windows the Snipping Tool records too), and credit the creator whose prompt you started from when you post it.
+
+**Curator's note:** Read the prompts as worked examples of how to ask for motion, not as recipes. The ones that reproduce well spell out timing and layout; the ones that lean on a creator's private files will not.
+
+---
+
 ## Categories
 
-- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills, HyperFrames, OpenMontage, Voicebox, Hairline
+- **Design**: Impeccable, Figma MCP, Apple Design, Skill UI, Higgsfield CLI, Taste Skill, 21st MCP, Web Design Guidelines, Image to Code, Awesome DESIGN.md, Screenshot to Code, Remotion Skills, HyperFrames, OpenMontage, Voicebox, Hairline, Awesome Opus 5.5 Videos
 - **Workflow**: Superpowers, Spec-Kit, Ralph Loop, Notchi, Claude Code Setup, Task Observer, Autoresearch, Agent Skills, Claude Plugin Directory, Knowledge Work Plugins
 - **Connections**: Chrome DevTools MCP, Context7, Agent-Reach, Watch, Playwright CLI, Supabase Plugin, Telegram, Discord, Linear, Notion Plugin for Claude Code, ScrapeGraphAI, Google Maps Scraper Kit, DaVinci Resolve MCP Bridge, CLI-Anything
 - **Coding**: Repomix, Codex for Claude Code, OmniRoute, Headroom, Strix, SkillSpector, Security Audit Skill, Reverse Engineer Anything
