@@ -63,6 +63,8 @@ Curated by Xavier Ting, Vice President at OCBC, Singapore. Nobody paid to be on 
 - [Reverse Engineer Anything](https://xaviertingai.com/tools/reverse-engineer-anything.html): Lets your AI agent take an app apart to see how a feature works
 - [Hairline](https://xaviertingai.com/tools/hairline.html): Adds line drawings that move with the pointer
 - [Awesome Opus 5.5 Videos](https://xaviertingai.com/tools/awesome-opus-5-5-videos.html): Shows you short videos made with Claude Opus 5.5 and the prompts behind them
+- [Adobe Creative Suite Alternatives / ArtCraft](https://xaviertingai.com/tools/adobe-creative-suite-alternatives-artcraft.html): Gives you free, open-source stand-ins for Adobe's creative apps
+- [ARTEMIS](https://xaviertingai.com/tools/artemis.html): Lets your AI assistant use a real Android phone the way you would
 
 ## Course
 

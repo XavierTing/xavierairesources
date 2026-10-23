@@ -110,6 +110,7 @@ Append one object to `TOOLS` and bump `LOG_UPDATED` (DD.MM.YYYY). Fields:
 | `command` + `commandTarget` | One copy-paste line. Website entries set both to `null` and use the repoLabel "VISIT SITE". Target is `"terminal"`, `"claude"` or `"assistant"`; it renders the location label ("Paste into the Terminal app" etc.). Omit both only if there is genuinely nothing to paste. |
 | `status` | Optional. Defaults to "In daily use". If you have not run it, say so: "Reviewed · Not tested". Never claim daily use falsely. Surfaces in `llms.txt` only, same as `cost`. |
 | `note` | Curator's note, one or two sentences of judgment or warning. Surfaces in `llms.txt` only. |
+| `links` | Optional, only for an entry that covers a family of apps. An array of `{ name, url, note }`; the tool page renders it as a "What is in …?" section, one linked line per app, and `llms-full.txt` lists it too. Write each `note` as a lowercase verb phrase that finishes the sentence after the name ("edits video, in place of Premiere Pro."). Prose fields are escaped, so this is the only place an entry can carry more than one link. |
 
 The generator auto-links the first occurrence of AI 101 terms (agent, tokens,
 MCP, RAG, cron, GitHub and the rest of `AI101_TERMS` in `generate-seo.mjs`) on

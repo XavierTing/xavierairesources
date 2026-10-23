@@ -358,6 +358,22 @@ function detailPage(t, i) {
   const whyHtml = linkTerms(esc(t.why));
   const whenHtml = linkTerms(esc(t.when));
   const steps = t.how.map((s) => `            <li>${linkTerms(esc(s))}</li>`).join("\n");
+  /* Optional: an entry that covers a family of apps lists each one with its
+     own link. Prose is escaped, so links cannot live inside why/when/how. */
+  const setLinks = (t.links || [])
+    .map((l) => `            <li><a href="${escAttr(l.url)}" target="_blank" rel="noopener">${esc(l.name)} ↗</a> ${esc(l.note)}</li>`)
+    .join("\n");
+  const setSection = setLinks
+    ? `
+        <section class="section">
+          <h2>What is in ${esc(t.name)}?</h2>
+          <div class="body">
+            <ul class="set-links">
+${setLinks}
+            </ul>
+          </div>
+        </section>`
+    : "";
   const whereLabel = COMMAND_TARGETS[t.commandTarget];
   const specimen = t.command
     ? `
@@ -464,7 +480,7 @@ ${owner ? `          <div><h2>Made by</h2><p>${esc(owner)}</p></div>\n` : ""}${t
 ${steps}
             </ol>${specimen}
           </div>
-        </section>
+        </section>${setSection}
         </div>
       </div>
 
@@ -814,7 +830,7 @@ ${t.when}
 
 **How do you install and use ${t.name}?**
 ${t.how.map((s, i) => `${i + 1}. ${s}`).join("\n")}
-
+${t.links ? `\n**What is in ${t.name}?**\n${t.links.map((l) => `- [${l.name}](${l.url}): ${l.note}`).join("\n")}\n` : ""}
 **Curator's note:** ${t.note}
 `).join("\n---\n\n")}
 ---

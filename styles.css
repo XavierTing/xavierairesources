@@ -957,6 +957,10 @@ html:not(.js) .tool-search { display: none; }
   font-size: var(--m-size);
   color: var(--muted);
 }
+/* A family entry's app list: one app per line, link first. Plain block
+   flow for the same reason as the steps above. */
+.section ul.set-links { list-style: none; }
+.section ul.set-links li { padding: 4px 0; }
 
 
 /* command block */

@@ -1437,8 +1437,70 @@ const TOOLS = [
     status: "Reviewed · Not tested",
     note: "Read the prompts as worked examples of how to ask for motion, not as recipes. The ones that reproduce well spell out timing and layout; the ones that lean on a creator's private files will not."
   },
+  {
+    num: "58",
+    added: "2026-10-20",
+    updated: "2026-10-20",
+    name: "Adobe Creative Suite Alternatives / ArtCraft",
+    category: "Design",
+    maker: "ArtCraft",
+    makerType: "org",
+    tagline: "Gives you free, open-source stand-ins for Adobe's creative apps",
+    blurb: "The ArtCraft team makes seven free desktop apps, each modelled on an Adobe app: video editing, photo editing, illustration, batch photo adjusting, motion graphics, page layout and PDFs. If you know the Adobe version, the menus and shortcuts feel familiar. The team also makes a separate AI image and video app, also called ArtCraft.",
+    repo: "https://getartcraft.com/apps",
+    repoLabel: "PROJECT PAGE",
+    links: [
+      { name: "FilmCraft", url: "https://github.com/storytold/filmcraft", note: "edits video, in place of Premiere Pro." },
+      { name: "PhotoCraft", url: "https://github.com/storytold/photocraft", note: "edits photos and opens real Photoshop (PSD) files, in place of Photoshop." },
+      { name: "VectorCraft", url: "https://github.com/storytold/vectorcraft", note: "draws logos and illustrations that stay sharp at any size, in place of Illustrator." },
+      { name: "LightCraft", url: "https://github.com/storytold/lightcraft", note: "sorts large batches of photos and fixes their colour and light without changing the originals, in place of Lightroom. Pick PhotoCraft instead for detailed work on a single image." },
+      { name: "EffectCraft", url: "https://github.com/storytold/effectcraft", note: "animates titles and graphics and layers them over video, in place of After Effects." },
+      { name: "DesignCraft", url: "https://github.com/storytold/designcraft", note: "lays out pages for print or screen, such as posters and booklets, in place of InDesign." },
+      { name: "PdfCraft", url: "https://github.com/storytold/pdfcraft", note: "reads and edits PDF files, in place of Acrobat." },
+      { name: "ArtCraft", url: "https://github.com/storytold/artcraft", note: "the team's AI studio for making images and video, where you arrange a scene yourself before the AI draws it." }
+    ],
+    needs: "A Mac, Windows or Linux computer. The seven apps are separate downloads, so install only the ones you need. ArtCraft's AI studio also needs an account and credits to make images and video",
+    cost: "The seven apps are free and open source, meaning the code they are built from is public, with no subscription. ArtCraft's AI studio is free to download, but making images and video uses credits: paid plans start at about 8 US dollars a month, or you can connect accounts you already pay for elsewhere, such as Midjourney or Grok, instead.",
+    why: "Adobe's creative apps are the standard in design and video work, and they cost a monthly subscription that adds up, especially for a student or someone just starting out. The ArtCraft team is rebuilding each one as a free app you download and keep: FilmCraft for video, PhotoCraft for photos, VectorCraft for illustration, LightCraft for adjusting colour and light across many photos, EffectCraft for motion graphics, DesignCraft for page layout and PdfCraft for PDFs. They are open source, meaning the code they are built from is public. They copy Adobe's layout and keyboard shortcuts on purpose, so what you already know carries over, and PhotoCraft opens real Photoshop files. Each app also has an MCP server, a standard plug that lets an AI assistant such as Claude use other programs, so you can connect an assistant and have it carry out repeated edits for you, like applying the same change to a folder of photos. Each app's GitHub page explains how to connect it. ArtCraft itself is different: an AI studio where you place people, objects and the camera in a rough 3D scene, then let an AI model render the final image or video. The seven apps are new and every one is marked alpha, an early test version, so expect missing features and bugs, and do not rely on them for paid client work yet.",
+    when: "Reach for them when you want to learn design, photo or video editing without paying for Adobe, when you only need one of these jobs now and then, or when you want an AI assistant to carry out repetitive edits for you. Keep a copy of every file before you edit it in an alpha app. If your school or employer sends you Adobe files to work on, check that the app opens them properly before you commit to it.",
+    how: [
+      "Open getartcraft.com/apps, pick the app that matches the job you want to do, and download the version for your computer. Each app is a separate download. The app links below go to each app's GitHub page, its public code and documentation, which you do not need just to install it.",
+      "Open a copy of a file, not the original, and try one simple job, such as cropping a photo or trimming a video clip. If you have used Adobe before, its menus and shortcuts work here too.",
+      "For AI images and video, download ArtCraft from getartcraft.com, sign in, and arrange your scene before you generate. Check the credit cost shown before each generation, because every one uses up part of your plan."
+    ],
+    command: null,
+    commandTarget: null,
+    status: "Reviewed · Not tested",
+    note: "Ambitious and very new: all seven apps are early tests. Worth trying for learning and personal work, but keep Adobe or a stable alternative for anything with a deadline."
+  },
+  {
+    num: "59",
+    added: "2026-10-23",
+    updated: "2026-10-23",
+    name: "ARTEMIS",
+    category: "Connections",
+    maker: "Google",
+    makerType: "org",
+    tagline: "Lets your AI assistant use a real Android phone the way you would",
+    blurb: "Describe a task in plain words and it taps, types and swipes through apps on a connected Android phone or a phone simulator on your computer, taking screenshots as it goes. It plugs into Claude Code, Codex and other assistants, so they can test an app you are building on a real device.",
+    repo: "https://github.com/google/artemis",
+    repoLabel: "GITHUB REPO",
+    needs: "An Android phone with USB debugging switched on (a developer setting that lets a computer control the phone over a cable), or a phone simulator on your computer; a Mac, Windows or Linux computer with Git, the tool that downloads code (a Mac offers to install it the first time; on Windows get it free from git-scm.com); and an API key, a password-like code from an AI service such as Gemini, Claude or OpenAI that lets a program use it and bills you. The start script installs the other helper programs for you",
+    cost: "Free and open source under the Apache 2.0 licence. ARTEMIS itself is free, but the AI service you connect (Gemini, Claude or OpenAI) bills you a small amount for each task.",
+    why: "If you are building a phone app with an AI coding assistant, the assistant can write the code but cannot pick up a phone and check that the login screen works. Testing by hand means tapping through the same screens after every change. ARTEMIS lets the assistant do it. You give an instruction such as open Settings, find Battery and tell me the level, and it looks at the screen, decides what to tap, and repeats until the job is done, usually taking three to five seconds a step. It records screenshots and the phone's own error log as it goes, so you can see what happened. It connects to Claude Code, Codex and other assistants through MCP, a standard plug that lets an AI assistant use other programs, and it also has a web page where you watch the phone's screen live. It works only with Android for now, and every step sends a picture of the phone's screen to the AI service you chose.",
+    when: "Reach for it when you are building an Android app and want your assistant to install it and check a flow, such as sign-up or checkout, after every change, or when you want to repeat a long series of taps across apps. Use a spare phone or a simulator rather than your personal phone: it can tap anything on the screen, and every step sends a screenshot to an outside AI service. It does not work with iPhones yet.",
+    how: [
+      "On the Android phone, open Settings, go to About phone and tap Build number seven times to reveal Developer options (the exact place varies by phone brand). In Developer options, turn on USB debugging, then connect the phone with a USB cable that carries data, not just charge. A phone simulator, a pretend phone that runs on your computer (Android Studio includes one), works too.",
+      "Open the Terminal app, the window where you type commands, paste the command below and press Enter. On Windows, use PowerShell and run the same command with `.\\start.bat` in place of `./start.sh`. It downloads ARTEMIS, installs what it needs and opens a setup page in your web browser. Get an API key from your AI service's website first (for Gemini, aistudio.google.com), paste it in when asked, and say yes when it offers to connect to your coding assistant, such as Claude Code.",
+      "Start with a harmless job, such as `Open Settings, find Battery and tell me the current level`, typed into the setup page's task box or asked of your coding assistant, and watch the phone while it works. The setup page replays each run step by step with its screenshots, so check those rather than trusting the summary."
+    ],
+    command: "git clone https://github.com/google/artemis.git && cd artemis && ./start.sh",
+    commandTarget: "terminal",
+    status: "Reviewed · Not tested",
+    note: "Your assistant can now test a phone app on a real phone, not just write it. Keep it on a test phone: it can press anything a person can."
+  },
 ];
 
 /* Bump this when you edit the log — it feeds the colophon status line.
    og-image.png carries no tool count, so adding an entry does not stale it. */
-const LOG_UPDATED = "20.10.2026";
+const LOG_UPDATED = "23.10.2026";
